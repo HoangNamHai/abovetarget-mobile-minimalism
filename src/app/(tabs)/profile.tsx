@@ -1,5 +1,5 @@
-import { Txt } from '../../components/primitives/Txt';
+import { TakeawaysScreen } from '../../components/takeaways/TakeawaysScreen';
 
 export default function Profile() {
-  return <Txt variant="display">PROFILE</Txt>;
+  return <TakeawaysScreen />;
 }

@@ -55,30 +55,43 @@ jest.mock('expo-image', () => {
   };
 });
 
-// Mock expo-router so router.navigate doesn't crash in tests
-jest.mock('expo-router', () => ({
-  router: {
-    navigate: jest.fn(),
-    push: jest.fn(),
-    replace: jest.fn(),
-  },
-  useRouter: () => ({
-    navigate: jest.fn(),
-    push: jest.fn(),
-    replace: jest.fn(),
-  }),
-}));
+// Mock FlashList with a FlatList-like implementation
+jest.mock('@shopify/flash-list', () => {
+  const React = require('react');
+  const { View } = require('react-native');
+  return {
+    FlashList: ({ data, renderItem, keyExtractor, ...rest }: any) => {
+      return React.createElement(
+        View,
+        null,
+        (data || []).map((item: any, index: number) => {
+          const key = keyExtractor ? keyExtractor(item, index) : String(index);
+          return React.createElement(View, { key }, renderItem({ item, index }));
+        }),
+      );
+    },
+  };
+});
+
+// Mock react-native-color-matrix-image-filters (native; not available in Jest)
+jest.mock('react-native-color-matrix-image-filters', () => {
+  const React = require('react');
+  const { View } = require('react-native');
+  return {
+    Grayscale: ({ children }: any) => React.createElement(View, null, children),
+  };
+});
 
 import { render, screen } from '@testing-library/react-native';
 import { TestProviders } from '../../../test-utils';
-import Home from '../home';
+import Profile from '../profile';
 
-test('home tab renders dashboard screen', async () => {
+test('brand switch flips profile takeaways styling without crashing', async () => {
   await render(
     <TestProviders>
-      <Home />
+      <Profile />
     </TestProviders>,
   );
-  // MonographDashboard renders "CURRENT STREAK" header
-  expect(screen.getByText(/CURRENT STREAK/i)).toBeTruthy();
+  // Default brand is 'monograph' so MonographTakeaways renders "Projects are Temporary"
+  expect(screen.getByText(/Structural Brutalism|Projects are Temporary/i)).toBeTruthy();
 });

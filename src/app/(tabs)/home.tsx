@@ -1,5 +1,11 @@
-import { Txt } from '../../components/primitives/Txt';
+import { router } from 'expo-router';
+import { DashboardScreen } from '../../components/dashboard/DashboardScreen';
 
 export default function Home() {
-  return <Txt variant="display">HOME</Txt>;
+  return (
+    <DashboardScreen
+      onStartStudy={() => router.navigate('/(tabs)/study')}
+      onJoinArena={() => router.navigate('/(tabs)/metrics')}
+    />
+  );
 }
