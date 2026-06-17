@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Brand } from '../../theme/brand-context';
+import { cardVariants } from '../../theme/variants';
 import { TOKENS } from '../../theme/tokens';
 import { PressableFeedback } from '../primitives/PressableFeedback';
 import { Txt } from '../primitives/Txt';
@@ -21,9 +22,9 @@ type Props = {
 export function QuizOption({ option, selected, brand, onPress }: Props) {
   const isElite = brand === 'elite';
 
+  const baseClassName = cardVariants({ brand });
   const containerStyle = [
     styles.base,
-    isElite ? styles.eliteBase : styles.monographBase,
     selected ? styles.selected : styles.unselected,
   ];
 
@@ -32,7 +33,7 @@ export function QuizOption({ option, selected, brand, onPress }: Props) {
 
   return (
     <PressableFeedback onPress={onPress}>
-      <View style={containerStyle}>
+      <View className={baseClassName} style={containerStyle}>
         <View style={styles.row}>
           {isElite && (
             <Txt variant="label" style={[styles.optionKey, { color: keyColor }]}>
@@ -53,18 +54,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 18,
     marginBottom: 8,
-  },
-  monographBase: {
-    borderWidth: 1,
-    borderColor: TOKENS['outline-variant'],
-    borderRadius: 2,
-    backgroundColor: TOKENS['surface-container-lowest'],
-  },
-  eliteBase: {
-    borderWidth: 2,
-    borderColor: TOKENS['outline-variant'],
-    borderRadius: 0,
-    backgroundColor: TOKENS['surface-container-lowest'],
   },
   selected: {
     backgroundColor: TOKENS.primary,

@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { QuizScreen } from '../../components/quiz/QuizScreen';
 import { Txt } from '../../components/primitives/Txt';
 import { Hairline } from '../../components/primitives/Hairline';
-import { ELITE_BRUTALISM_QUIZ, ELITE_LUXURY_QUIZ } from '../../data/questions';
+import { ELITE_BRUTALISM_QUIZ, MONOGRAPH_QUIZ_1 } from '../../data/questions';
 import { useSession } from '../../contexts/session-context';
 import { useBrand } from '../../theme/brand-context';
 import { TOKENS } from '../../theme/tokens';
@@ -12,7 +12,7 @@ export default function Metrics() {
   const { brand } = useBrand();
   const { state } = useSession();
 
-  const question = brand === 'elite' ? ELITE_BRUTALISM_QUIZ : ELITE_LUXURY_QUIZ;
+  const question = brand === 'elite' ? ELITE_BRUTALISM_QUIZ : MONOGRAPH_QUIZ_1;
 
   return (
     <View style={styles.container}>

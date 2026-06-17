@@ -17,6 +17,10 @@ const MAP: Record<string, string> = {
   person: 'person',
   check_circle: 'check-circle',
   cancel: 'cancel',
+  bolt: 'bolt',
+  import_contacts: 'import-contacts',
+  swap_horiz: 'swap-horiz',
+  model_training: 'model-training',
 };
 
 export function iconFor(symbol: string): { set: 'material'; name: string } {
