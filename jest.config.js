@@ -6,4 +6,9 @@ module.exports = {
     '/node_modules/react-native-reanimated/plugin/',
     '/node_modules/@react-native/babel-preset/',
   ],
+  moduleNameMapper: {
+    '^react-native-reanimated$': '<rootDir>/__mocks__/react-native-reanimated.js',
+    '^react-native-worklets$': '<rootDir>/__mocks__/react-native-worklets.js',
+    '^react-native-worklets/(.*)$': '<rootDir>/__mocks__/react-native-worklets.js',
+  },
 };
