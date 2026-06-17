@@ -1,4 +1,4 @@
-import { sessionReducer, initialSessionState } from '../session-reducer';
+import { sessionReducer, initialSessionState, SessionState } from '../session-reducer';
 
 test('select records answer for a question', () => {
   const s = sessionReducer(initialSessionState, { type: 'SELECT', questionId: 'q1', key: 'B' });
@@ -6,7 +6,7 @@ test('select records answer for a question', () => {
 });
 
 test('correct check adds points and increments streak', () => {
-  let s = { ...initialSessionState, streak: 2, points: 50, selected: { q1: 'B' } };
+  let s: SessionState = { ...initialSessionState, streak: 2, points: 50, selected: { q1: 'B' } };
   s = sessionReducer(s, { type: 'CHECK', questionId: 'q1', correctKey: 'B' });
   expect(s.result).toBe('correct');
   expect(s.points).toBe(60);
@@ -14,7 +14,7 @@ test('correct check adds points and increments streak', () => {
 });
 
 test('incorrect check resets streak and keeps points', () => {
-  let s = { ...initialSessionState, streak: 5, points: 50, selected: { q1: 'A' } };
+  let s: SessionState = { ...initialSessionState, streak: 5, points: 50, selected: { q1: 'A' } };
   s = sessionReducer(s, { type: 'CHECK', questionId: 'q1', correctKey: 'B' });
   expect(s.result).toBe('incorrect');
   expect(s.points).toBe(50);
@@ -22,7 +22,7 @@ test('incorrect check resets streak and keeps points', () => {
 });
 
 test('dismiss clears result only', () => {
-  let s = { ...initialSessionState, result: 'correct' as const };
+  let s: SessionState = { ...initialSessionState, result: 'correct' };
   s = sessionReducer(s, { type: 'DISMISS_RESULT' });
   expect(s.result).toBeNull();
 });
