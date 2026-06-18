@@ -1,0 +1,705 @@
+{
+  "lessonId": "B2L2",
+  "lessonTitle": "Building High-Performance Teams",
+  "courseId": "B2",
+  "courseName": "Team Leadership & Development",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Recognize the 5 characteristics of high-performance teams: Trust, Clear Goals, Psychological Safety, Shared Accountability, Continuous Improvement",
+    "Understand psychological safety as the #1 factor for high-performance teams (Google Project Aristotle)",
+    "Build trust through vulnerability-based leadership and joint problem-solving",
+    "Transform blame culture into shared accountability using root cause analysis",
+    "Apply strategies to sustain high performance through continuous improvement practices"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "dr_amelia_foster",
+    "maya_rodriguez",
+    "devon_brown",
+    "taylor_kim"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Underperforming Team: 30% Below Velocity, 15% Defect Rate, 3.2/10 Morale",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. The Mexico City kitchen team is struggling badly — velocity 30% below target, 15% defect rate, and morale at a dismal 3.2 out of 10. Carlos wants to fire the underperformers, but you believe the problem isn't the PEOPLE — it's the TEAM DYNAMICS. Can you transform this struggling team into a high-performance powerhouse?",
+        "failure_cards": [
+          {
+            "id": "blame_culture",
+            "icon": "📋",
+            "title": "Blame Culture",
+            "summary": "Roberto blames Diego for every defect — nobody takes ownership",
+            "image": "/images/B2L2_comic_blame.webp",
+            "details": "15% of meals have defects. Roberto (Senior Chef): \"QA didn't catch it — that's Diego's fault.\" Diego (QA Lead): \"Kitchen didn't follow the portioning guide — that's Roberto's fault.\" No one takes ownership. Everyone points fingers. Maya tells Alex: \"This blame loop has been going on for weeks. Nothing gets fixed because everyone is too busy defending themselves.\""
+          },
+          {
+            "id": "fear_of_asking_questions",
+            "icon": "⚠️",
+            "title": "Fear of Asking Questions",
+            "summary": "Lucia makes mistakes rather than ask for help",
+            "image": "/images/B2L2_comic_fear.webp",
+            "details": "Lucia (Junior Chef) made 3 mistakes in one shift — wrong portions, incorrect temperature, missing labels. Maya asks: \"Why didn't you ask for help?\" Lucia confesses: \"I didn't want to look incompetent. Roberto got angry last week when someone asked a 'stupid question.'\" The team culture punishes questions. Fear creates mistakes. Mistakes create blame. Blame creates more fear."
+          },
+          {
+            "id": "no_shared_goals",
+            "icon": "💡",
+            "title": "No Shared Goals",
+            "summary": "Everyone defines success differently — the team pulls in all directions",
+            "image": "/images/B2L2_comic_goals.webp",
+            "details": "Alex asks the team: \"What's your goal for this sprint?\" Roberto: \"Cook good food.\" Lucia: \"Don't make mistakes.\" Diego: \"Catch defects before shipping.\" Maya: \"I thought our goal was 300 meals/day?\" No one agrees on what success looks like. The team works hard but in completely different directions. Without a shared target, effort is wasted."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Fire the underperformers and hire better people! We can't afford another month of 15% defect rates and missed targets."
+        },
+        "learning_hook": "**The problem isn't the people — it's the team dynamics.** Google's Project Aristotle studied 180+ teams and found that psychological safety is the #1 predictor of high-performance teams — more important than individual talent, resources, or workload. Let's learn how to build it."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "transform_the_underperforming_team",
+        "title": "Transform the Underperforming Team",
+        "description": "Dr. Foster coaches you through the transformation. \"High-performance teams aren't born — they're BUILT. Let's address each dysfunction, one at a time.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What should Alex do FIRST to build psychological safety?",
+            "points": 100,
+            "scenario_name": "Building Psychological Safety",
+            "situation": "Lucia made 3 mistakes in one shift because she was afraid to ask for help. Roberto got angry last week when someone asked a \"stupid question.\" The team culture punishes questions — fear creates mistakes, mistakes create blame, and blame creates more fear.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Discipline Roberto for discouraging questions",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Create a \"No Stupid Questions\" policy document",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Model vulnerability by sharing own mistakes, celebrate questions, implement \"Question of the Week\" recognition",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Remove Lucia from the team since she's making too many mistakes",
+                "correct": false
+              }
+            ],
+            "explanation": "Psychological safety means team members feel safe to take risks, voice concerns, and admit mistakes WITHOUT fear of punishment. Leaders must MODEL vulnerability first — when Alex shares his own mistakes, it signals that imperfection is acceptable. Celebrating questions transforms the culture from fear to curiosity.",
+            "correctFeedback": {
+              "text": "Psychological safety means team members feel safe to take risks, voice concerns, and admit mistakes WITHOUT fear of punishment. Leaders must MODEL vulnerability first — when Alex shares his own mistakes, it signals that imperfection is acceptable. Celebrating questions transforms the culture from fear to curiosity.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Safety is built from the top down. When leaders show vulnerability, teams feel permission to be human. That's when real learning begins."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I've seen teams with perfect policies and toxic cultures. Culture eats policy for breakfast. Model the behavior you want to see.",
+              "character": "Taylor Kim",
+              "characterQuote": "I've seen teams with perfect policies and toxic cultures. Culture eats policy for breakfast. Model the behavior you want to see."
+            },
+            "retryHint": "Think about what ACTUALLY changes behavior. Is it rules and punishment? Or is it seeing leaders model the behavior themselves?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "How should Alex transform this blame culture into shared accountability?",
+            "points": 100,
+            "scenario_name": "Transforming Blame to Shared Accountability",
+            "situation": "Roberto (Senior Chef): \"QA didn't catch the defect — that's Diego's fault.\" Diego (QA Lead): \"Kitchen didn't follow the portioning guide — that's Roberto's fault.\" 15% of meals have defects. Team members blame EACH OTHER instead of solving the PROBLEM together.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Identify who's at fault and discipline them",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Facilitate joint problem-solving (5 Whys root cause analysis), establish team ownership: \"We all own quality\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Separate teams so Kitchen and QA don't interact",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Fire both Roberto and Diego to reset the culture",
+                "correct": false
+              }
+            ],
+            "explanation": "Shared accountability means the team collectively owns outcomes — nobody is individually blamed. Joint root cause analysis (5 Whys) reveals systemic issues, not individual faults. When Roberto and Diego discover together that the portioning scales were uncalibrated, there is no one to blame — just a system to fix.",
+            "correctFeedback": {
+              "text": "Shared accountability means the team collectively owns outcomes — nobody is individually blamed. Joint root cause analysis (5 Whys) reveals systemic issues, not individual faults. When Roberto and Diego discover together that the portioning scales were uncalibrated, there is no one to blame — just a system to fix.",
+              "character": "Devon Brown",
+              "characterQuote": "That 5 Whys session changed everything. When we found the root cause together, there was no one to blame. Just a problem to fix. As a team."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Blame looks for a person to punish. Accountability looks for a system to improve. The first creates fear. The second creates learning.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Blame looks for a person to punish. Accountability looks for a system to improve. The first creates fear. The second creates learning."
+            },
+            "retryHint": "What's the difference between finding WHO to blame and finding WHAT to fix? Which approach helps the team improve?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "How should Alex establish clear, shared goals?",
+            "points": 100,
+            "scenario_name": "Setting Clear, Shared Goals",
+            "situation": "Alex asks the team: \"What's your goal for this sprint?\" Roberto: \"Cook good food.\" Lucia: \"Don't make mistakes.\" Diego: \"Catch defects.\" Maya: \"300 meals/day?\" No shared understanding of success — the team works hard but in completely different directions.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Tell the team the goal and expect compliance",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Facilitate a SMART goal workshop, create a visible dashboard, align individual contributions to the team goal",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Let each team member define their own goals independently",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Remove goals entirely to reduce pressure on the team",
+                "correct": false
+              }
+            ],
+            "explanation": "High-performance teams have CLEAR, SHARED goals that everyone understands and can articulate. SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound) give the team a unified target. A visible dashboard creates transparency, and aligning individual contributions shows each person how their work connects to team success.",
+            "correctFeedback": {
+              "text": "High-performance teams have CLEAR, SHARED goals that everyone understands and can articulate. SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound) give the team a unified target. A visible dashboard creates transparency, and aligning individual contributions shows each person how their work connects to team success.",
+              "character": "Taylor Kim",
+              "characterQuote": "When everyone can look at the board and see how THEIR work connects to the team goal, alignment happens naturally. Visibility creates accountability."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "'Cook good food' meant something different to everyone. We needed a shared target — same number, same language, same board.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "'Cook good food' meant something different to everyone. We needed a shared target — same number, same language, same board."
+            },
+            "retryHint": "What makes a goal \"shared\"? Is it just telling people, or does it require collaboration, visibility, and individual alignment?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "How should Alex enable collaboration across locations?",
+            "points": 100,
+            "scenario_name": "Enabling Distributed Team Collaboration",
+            "situation": "Mexico City team (5 people) works separately from San Francisco HQ team (3 people). Time zone difference: 2 hours. No knowledge sharing — SF solved a menu optimization problem (saved 15 min/shift) but Mexico doesn't know. Mexico solved a portioning issue (calibrated scales) but SF doesn't know. Both teams reinvent solutions the other already found.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Require daily video calls for all 8 people, 1 hour each",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Implement async knowledge sharing (Slack \"Wins & Lessons\" channel) plus bi-weekly sync (30 min) for deep dives",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Consolidate both teams in one location",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Accept that distributed teams naturally work in silos",
+                "correct": false
+              }
+            ],
+            "explanation": "Distributed teams need HYBRID collaboration: asynchronous primary (respects time zones, documents learning) plus synchronous strategic (deep dives, relationship building). Async-first creates persistent documentation while sync sessions are reserved for conversations that need real-time back-and-forth.",
+            "correctFeedback": {
+              "text": "Distributed teams need HYBRID collaboration: asynchronous primary (respects time zones, documents learning) plus synchronous strategic (deep dives, relationship building). Async-first creates persistent documentation while sync sessions are reserved for conversations that need real-time back-and-forth.",
+              "character": "Taylor Kim",
+              "characterQuote": "Async-first respects everyone's time and documents learning. Sync sessions are for the conversations that need back-and-forth. Best of both worlds."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Over-meeting kills productivity. Under-communicating kills collaboration. The sweet spot is async documentation plus focused synchronous sessions.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Over-meeting kills productivity. Under-communicating kills collaboration. The sweet spot is async documentation plus focused synchronous sessions."
+            },
+            "retryHint": "Think about efficiency. What's the best way to share knowledge across locations WITHOUT excessive meetings?"
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "What should Alex do to SUSTAIN high performance?",
+            "points": 100,
+            "scenario_name": "Sustaining High Performance",
+            "situation": "After 4 weeks, the Mexico City team shows improvement: velocity up 50%, defects down to 3%, morale improved to 6.5/10. Carlos congratulates: \"You've become a high-performance team!\" But Alex notices warning signs: the team stopped holding retrospectives (\"we're too busy\"), no one is tracking metrics anymore, and defects slightly increased last sprint.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accept the compliment — the team has achieved high performance",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Reinforce that high performance requires CONTINUOUS improvement — restart retrospectives, track metrics, keep experimenting",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Let the team self-manage since they've proven themselves",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Add more team members to handle the increased workload",
+                "correct": false
+              }
+            ],
+            "explanation": "High performance is SUSTAINED through continuous improvement, not achieved once and maintained automatically. \"Too busy for retrospectives\" is exactly when retrospectives matter most. Retrospectives, visible metrics, and experimentation are the practices that built high performance — abandoning them starts the decline.",
+            "correctFeedback": {
+              "text": "High performance is SUSTAINED through continuous improvement, not achieved once and maintained automatically. \"Too busy for retrospectives\" is exactly when retrospectives matter most. Retrospectives, visible metrics, and experimentation are the practices that built high performance — abandoning them starts the decline.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "High-performance teams don't coast. They're always asking 'How can we get better?' The practices that got you here are the practices that keep you here."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I've seen teams go from top performers to struggling in 3 months because they stopped doing retrospectives. Continuous improvement isn't optional — it's essential.",
+              "character": "Taylor Kim",
+              "characterQuote": "I've seen teams go from top performers to struggling in 3 months because they stopped doing retrospectives. Continuous improvement isn't optional — it's essential."
+            },
+            "retryHint": "Is high performance something you achieve once, or something you must continuously maintain? What happens when improvement practices stop?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The High-Performance Team Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "5 Characteristics of High-Performance Teams",
+            "subtitle": "",
+            "content": "High-performance teams share **5 key characteristics** that work together as a system:\n\n**1. TRUST** — Team members rely on each other and assume positive intent\n- Indicator: Share mistakes openly, ask for help, no finger-pointing\n- How to build: Leaders model vulnerability first, celebrate helping behaviors\n\n**2. CLEAR GOALS** — Shared understanding of success using SMART criteria\n- Indicator: Anyone can articulate the team goal without prompting\n- How to build: Facilitate goal-setting workshops, create visible dashboards\n\n**3. PSYCHOLOGICAL SAFETY** — Safe to take risks, voice concerns, admit mistakes without fear\n- Indicator: Questions asked freely, disagreements are constructive\n- How to build: Leaders model openness, celebrate questions, respond to mistakes with curiosity\n\n**4. SHARED ACCOUNTABILITY** — Team collectively owns outcomes, not individuals blamed\n- Indicator: \"We\" language, joint problem-solving, celebrate team wins\n- How to build: Root cause analysis together, establish team ownership\n\n**5. CONTINUOUS IMPROVEMENT** — Regular reflection, feedback loops, implemented learnings\n- Indicator: Retrospectives every sprint, action items tracked and completed\n- How to build: Retrospectives, experiments, visible metrics",
+            "diagram": {
+              "image": "/images/B2L2_diagram_team_characteristics.webp",
+              "alt": "Five characteristics of high-performance teams"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Psychological Safety",
+            "subtitle": "The #1 Factor",
+            "content": "**Google's Project Aristotle** studied 180+ teams to identify what makes teams effective. The #1 factor was NOT individual talent, resources, or workload — it was **psychological safety**.\n\n**What is Psychological Safety?**\n- Team members feel safe to take interpersonal risks\n- Can ask \"dumb\" questions without judgment\n- Can admit mistakes without punishment\n- Can disagree constructively without retaliation\n\n**Why It Matters:**\n- Safe teams LEARN faster (mistakes become lessons, not blame)\n- Safe teams INNOVATE more (people share risky ideas)\n- Safe teams RETAIN talent (people don't want to leave)\n\n**How Leaders Build It:**\n1. **Model vulnerability:** Share your own mistakes first\n2. **Celebrate questions:** \"Great question!\" not \"You should know this\"\n3. **Respond to mistakes with curiosity:** \"What can we learn?\" not \"Who messed up?\"\n4. **Reward speaking up:** \"Thank you for raising this concern\""
+          },
+          {
+            "id": "tab3",
+            "title": "Blame Culture vs. Shared Accountability",
+            "subtitle": "",
+            "content": "| Blame Culture | Shared Accountability |\n|---------------|----------------------|\n| \"That's YOUR fault\" | \"What can WE learn?\" |\n| \"Not my job\" | \"How can I help?\" |\n| Individual heroes | Team celebrations |\n| Information hoarding | Knowledge sharing |\n| Defensive posture | Problem-solving posture |\n\n**How to Transform:**\n1. **Joint problem-solving:** 5 Whys root cause analysis TOGETHER reveals systemic issues, not individual faults\n2. **Establish team ownership:** \"We ALL own quality\" — success and failure belong to the team\n3. **Celebrate team wins:** When defects drop, the TEAM celebrates together\n4. **Use \"We\" language:** \"We missed the deadline\" not \"Roberto missed it\""
+          },
+          {
+            "id": "tab4",
+            "title": "Sustaining Performance",
+            "subtitle": "",
+            "content": "**High performance is SUSTAINED, not achieved once.**\n\n**Warning Signs Performance Is Slipping:**\n- \"We're too busy for retrospectives\"\n- Metrics no longer tracked or visible\n- Improvements discussed but never implemented\n- Team stops experimenting with new approaches\n\n**Practices That Sustain Performance:**\n1. **Regular Retrospectives** — What went well? What could improve? What will we try differently?\n2. **Visible Metrics** — Dashboard everyone can see, trends tracked over time\n3. **Experimentation** — Try small changes, measure results, keep what works\n4. **Feedback Loops** — Customer feedback incorporated, team member input valued"
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:**\n- Section 3.4: Project Team Management\n- Page 96: High-Performance Team Characteristics\n- Page 97: Psychological Safety\n\n**Agile Practice Guide:**\n- Page 38: Self-Organizing Teams\n- Page 41: Distributed Team Considerations\n\n**PMP Exam Tips:**\n- High-performance team questions appear across People domain (~42% of exam)\n- Key concept: Psychological safety is the FOUNDATION — without it, other characteristics cannot develop\n- Common trap: \"Fire underperformers\" is almost never the right PMI answer — fix the environment first"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Toronto Team Assessment",
+        "scenario": {
+          "title": "Toronto Team Assessment",
+          "description": "The Toronto expansion team (6 members) has completed 3 sprints. Their metrics look promising on the surface, but Alex discovers two concerning survey results:",
+          "images": [
+            {
+              "src": "/images/B2L2_comic_transfer.webp",
+              "alt": "Toronto expansion team assessment scenario"
+            }
+          ],
+          "details": [
+            "**Velocity:** 28/30 story points (93% of target)",
+            "**Quality:** 3% defect rate (target: less than 2%)",
+            "**Morale:** Team satisfaction 7.5/10",
+            "**Survey Finding 1:** \"I don't feel safe admitting mistakes\" — Psychological Safety Gap",
+            "**Survey Finding 2:** \"I don't know what others are working on\" — Visibility Gap"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Based on the survey results, which high-performance characteristic needs the MOST improvement?",
+            "points": 100,
+            "scenario_name": "Identify the Priority Gap",
+            "situation": "The Toronto team's survey reveals two concerns: \"I don't feel safe admitting mistakes\" and \"I don't know what others are working on.\" Alex needs to determine which high-performance characteristic needs the MOST urgent improvement.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Trust — team members don't rely on each other",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Clear Goals — team doesn't understand objectives",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Psychological Safety — team members are afraid to admit mistakes",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Shared Accountability — blame culture is present",
+                "correct": false
+              }
+            ],
+            "explanation": "\"I don't feel safe admitting mistakes\" is the textbook definition of a psychological safety gap. Team members fear judgment or punishment for errors, which prevents learning and transparency. The visibility gap is also real, but psychological safety is the deeper, foundational issue.",
+            "correctFeedback": {
+              "text": "\"I don't feel safe admitting mistakes\" is the textbook definition of a psychological safety gap. Team members fear judgment or punishment for errors, which prevents learning and transparency. The visibility gap is also real, but psychological safety is the deeper, foundational issue.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When people hide mistakes, small problems become big ones. Psychological safety must be addressed first — it's the foundation for everything else."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The words matter. 'Safe to admit mistakes' maps directly to psychological safety. That's different from trust, goals, or accountability — though they're all connected.",
+              "character": "Taylor Kim",
+              "characterQuote": "The words matter. 'Safe to admit mistakes' maps directly to psychological safety. That's different from trust, goals, or accountability — though they're all connected."
+            },
+            "retryHint": "Re-read the survey concern. Which of the 5 characteristics directly relates to \"feeling safe to admit mistakes\"?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "drag_drop",
+            "question": "Drag each intervention to the gap it addresses:",
+            "points": 200,
+            "scenario_name": "Build the Improvement Plan",
+            "situation": "Alex needs to address both the Psychological Safety Gap and the Visibility Gap. He has six interventions available. Each intervention targets one specific gap.",
+            "chips": [
+              {
+                "id": "alex_shares_his_own_mistakes_at_retrospective",
+                "label": "Alex shares his own mistakes at retrospective",
+                "correctZone": "psychological_safety_gap"
+              },
+              {
+                "id": "implement_question_of_the_week_recognition",
+                "label": "Implement \"Question of the Week\" recognition",
+                "correctZone": "psychological_safety_gap"
+              },
+              {
+                "id": "respond_to_errors_with_what_can_we_learn",
+                "label": "Respond to errors with \"What can we learn?\"",
+                "correctZone": "psychological_safety_gap"
+              },
+              {
+                "id": "create_visible_kanban_board_showing_all_work",
+                "label": "Create visible Kanban board showing all work",
+                "correctZone": "visibility_gap"
+              },
+              {
+                "id": "daily_async_checkins_showing_whos_working_on_what",
+                "label": "Daily async check-ins showing who's working on what",
+                "correctZone": "visibility_gap"
+              },
+              {
+                "id": "weekly_team_demo_where_everyone_shows_their_progress",
+                "label": "Weekly team demo where everyone shows their progress",
+                "correctZone": "visibility_gap"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "psychological_safety_gap",
+                "label": "Psychological Safety Gap",
+                "detail": "Modeling vulnerability signals that imperfection is acceptable"
+              },
+              {
+                "id": "visibility_gap",
+                "label": "Visibility Gap",
+                "detail": "Makes everyone's work status transparent to the whole team"
+              }
+            ],
+            "explanation": "Psychological Safety interventions change how people FEEL about making mistakes — they address fear. Visibility interventions change what people can SEE about work — they address information gaps. Both are needed, but psychological safety is the foundation that must be built first.",
+            "correctFeedback": {
+              "text": "Psychological Safety interventions change how people FEEL about making mistakes — they address fear. Visibility interventions change what people can SEE about work — they address information gaps. Both are needed, but psychological safety is the foundation that must be built first.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Great strategy. Address safety first — when people feel safe, they'll naturally share more. Visibility tools then make sharing easy and systematic."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "A Kanban board doesn't help people feel safe. Modeling vulnerability doesn't show what people are working on. Match the solution to the problem it actually solves.",
+              "character": "Taylor Kim",
+              "characterQuote": "A Kanban board doesn't help people feel safe. Modeling vulnerability doesn't show what people are working on. Match the solution to the problem it actually solves."
+            },
+            "retryHint": "Safety interventions address FEAR of judgment. Visibility interventions address LACK OF INFORMATION. Which is which?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to build **high-performance teams** through the 5 key characteristics: Trust, Clear Goals, Psychological Safety, Shared Accountability, and Continuous Improvement. The problem is rarely the people — it's the team dynamics. Fix the environment, and performance follows.",
+        "key_takeaways": [
+          "5 Characteristics: Trust, Clear Goals, Psychological Safety, Shared Accountability, Continuous Improvement — all five work together as a system",
+          "Psychological Safety = #1: Google's Project Aristotle proved it matters more than individual talent, resources, or workload",
+          "Leaders model vulnerability: Share your mistakes FIRST to signal that imperfection is acceptable",
+          "Transform blame to ownership: Joint root cause analysis (5 Whys) reveals systemic issues, not individual faults",
+          "Sustain, don't coast: \"Too busy for retrospectives\" is exactly when retrospectives matter most — continuous improvement is not optional",
+          "Distributed teams: Async primary + sync strategic — don't over-meet, but don't under-communicate"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think team performance was about having the right people. Now I know it's about creating the right environment — trust, safety, shared goals, accountability, and constant improvement. Build the dynamics, and performance follows."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L3",
+          "title": "Conflict Resolution Strategies",
+          "description": "Now that you understand high-performance team dynamics, learn how to handle conflict constructively — because healthy conflict actually BUILDS trust and performance."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What is the MOST likely root cause of this team behavior?",
+            "points": 50,
+            "scenario_name": "Identifying Low Psychological Safety",
+            "situation": "A project manager notices that team members rarely ask questions during meetings, and mistakes are often discovered late because people don't report problems early. The team has strong individual performers, but collaboration is minimal.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Insufficient technical training",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Lack of psychological safety",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Poor project planning",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Inadequate team size",
+                "correct": false
+              }
+            ],
+            "explanation": "Reluctance to ask questions and late problem reporting are classic indicators of low psychological safety — team members fear judgment or negative consequences for appearing imperfect. The team has strong individual performers, so the issue is behavioral (fear of vulnerability), not technical (lack of knowledge).",
+            "correctFeedback": {
+              "text": "Reluctance to ask questions and late problem reporting are classic indicators of low psychological safety — team members fear judgment or negative consequences for appearing imperfect. The team has strong individual performers, so the issue is behavioral (fear of vulnerability), not technical (lack of knowledge).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When smart people stay silent, it's not an IQ problem — it's a safety problem. They know the answers but fear the judgment."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If it were a training issue, they wouldn't be strong performers. This is about feeling safe to be imperfect in front of others.",
+              "character": "Taylor Kim",
+              "characterQuote": "If it were a training issue, they wouldn't be strong performers. This is about feeling safe to be imperfect in front of others."
+            },
+            "retryHint": "What would cause skilled individuals to avoid asking questions and hide problems? Is it lack of knowledge or fear of something?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST approach to improve communication?",
+            "points": 50,
+            "scenario_name": "Distributed Team Communication",
+            "situation": "A project team is distributed across three time zones with a 6-hour difference between the earliest and latest. The team is experiencing communication breakdowns, with critical information not reaching all team members in time.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Schedule daily synchronous meetings that all team members must attend",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Implement asynchronous communication as the primary method with periodic synchronous sessions",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Relocate all team members to a single location",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Assign a single point of contact to relay all information",
+                "correct": false
+              }
+            ],
+            "explanation": "Distributed teams with significant time zone differences should default to asynchronous communication (written updates, shared documentation, recorded demos), with synchronous meetings reserved for complex discussions that truly require real-time interaction. This respects all time zones while ensuring persistent, accessible knowledge sharing.",
+            "correctFeedback": {
+              "text": "Distributed teams with significant time zone differences should default to asynchronous communication (written updates, shared documentation, recorded demos), with synchronous meetings reserved for complex discussions that truly require real-time interaction. This respects all time zones while ensuring persistent, accessible knowledge sharing.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The best distributed teams write more than they meet. Documentation beats synchronization for most communication needs."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I've seen teams burn out from 'just one more meeting' culture. Async-first is how high-performing distributed teams actually work.",
+              "character": "Taylor Kim",
+              "characterQuote": "I've seen teams burn out from 'just one more meeting' culture. Async-first is how high-performing distributed teams actually work."
+            },
+            "retryHint": "With 6 hours of time zone difference, what's the fairest and most sustainable way to ensure everyone gets critical information?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Blame Culture in Retrospectives",
+            "situation": "During a project retrospective, team members repeatedly point fingers at each other when discussing what went wrong. The project manager notices that the same issues keep recurring because the team focuses on WHO caused problems rather than WHY they occurred.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Identify the team members causing the most problems and address them individually",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Cancel retrospectives since they're causing conflict",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Facilitate root cause analysis techniques that focus on systemic issues rather than individual blame",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Escalate the team conflicts to senior management",
+                "correct": false
+              }
+            ],
+            "explanation": "Blame-focused retrospectives don't produce improvement — they produce defensiveness. Facilitating root cause analysis (like 5 Whys) shifts focus from \"Who messed up?\" to \"What system allowed this to happen?\" When the team discovers systemic issues together, there is no one to blame — just processes to improve.",
+            "correctFeedback": {
+              "text": "Blame-focused retrospectives don't produce improvement — they produce defensiveness. Facilitating root cause analysis (like 5 Whys) shifts focus from \"Who messed up?\" to \"What system allowed this to happen?\" When the team discovers systemic issues together, there is no one to blame — just processes to improve.",
+              "character": "Taylor Kim",
+              "characterQuote": "The first time I facilitated 5 Whys, the team was shocked. They came in wanting to blame someone and left wanting to fix the system."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Blame looks for a person. Root cause analysis looks for a system. One creates defensiveness. The other creates learning.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Blame looks for a person. Root cause analysis looks for a system. One creates defensiveness. The other creates learning."
+            },
+            "retryHint": "What changes the conversation from \"Who did this?\" to \"Why did this happen?\" Which technique redirects focus from people to systems?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the MOST appropriate response?",
+            "points": 50,
+            "scenario_name": "Sustaining High Performance",
+            "situation": "A project team achieved high-performance status six months ago — exceeding all targets, high morale, strong collaboration. Recently, the team lead reports that retrospectives have been skipped for \"efficiency,\" metrics are no longer being tracked, and there has been a slight decline in quality.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accept that some performance decline is natural over time",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Reinstate the improvement practices (retrospectives, metrics) that built high performance",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Celebrate past success and shift focus to new challenges",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Replace team members who are no longer performing at previous levels",
+                "correct": false
+              }
+            ],
+            "explanation": "High performance requires continuous maintenance. Skipping retrospectives and ignoring metrics are classic warning signs that performance will decline. The practices that BUILT high performance are the same practices that SUSTAIN it. Reinstating them will reverse the decline.",
+            "correctFeedback": {
+              "text": "High performance requires continuous maintenance. Skipping retrospectives and ignoring metrics are classic warning signs that performance will decline. The practices that BUILT high performance are the same practices that SUSTAIN it. Reinstating them will reverse the decline.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The practices that got you there are the practices that keep you there. The moment you abandon them for 'efficiency,' decline begins."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I've seen this pattern many times. Teams get good, think they don't need the practices anymore, and slowly slide back. The cure is simple: restart what you stopped.",
+              "character": "Taylor Kim",
+              "characterQuote": "I've seen this pattern many times. Teams get good, think they don't need the practices anymore, and slowly slide back. The cure is simple: restart what you stopped."
+            },
+            "retryHint": "What changed between high performance and declining performance? What practices were abandoned, and what would restore them?"
+          }
+        ]
+      }
+    }
+  ]
+}

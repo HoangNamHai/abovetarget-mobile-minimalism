@@ -1,0 +1,708 @@
+{
+  "lessonId": "C1L6",
+  "lessonTitle": "Integrated Change Control",
+  "courseId": "C1",
+  "courseName": "Integration Management",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand Integrated Change Control as the formal APPROVAL process for all change requests affecting baselines",
+    "Sequence the 5-step change control process: Receive, Log, Assess, CCB Decision, Update & Communicate",
+    "Distinguish baseline changes (CCB approval required) from within-baseline changes (PM can approve directly)",
+    "Identify Change Control Board (CCB) role, membership, and decision authority — including the power to modify or defer",
+    "Recognize integrated impact assessment across ALL baselines (scope, schedule, cost, quality, risk)",
+    "Understand the consequences of bypassing change control governance"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "dr_amelia_foster",
+    "elena_vasquez",
+    "maya_rodriguez",
+    "jordan_liu"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "One Great Idea, Five Broken Baselines: Can Carlos Just Say Yes?",
+        "intro": "You're **Alex Mitchell**, managing the Riverside Plaza build for Savory & Co. — now 85% complete. Jordan Liu bursts in with a game-changing idea: an exclusive 8-seat chef's table where Marco prepares dishes in front of diners. Carlos loves it and wants to approve it on the spot. But Dr. Foster stops him cold: \"This isn't a menu tweak — it touches scope, schedule, cost, quality, AND risk. It needs formal change control.\"",
+        "failure_cards": [
+          {
+            "id": "the_bypass_temptation",
+            "icon": "📋",
+            "title": "The Bypass Temptation",
+            "summary": "Carlos wants to skip the process and approve Jordan's idea immediately",
+            "image": "/images/C1L6_comic_bypass.webp",
+            "details": "Jordan presents the chef's table concept — an exclusive 8-seat counter where Marco prepares dishes in front of diners. Carlos is instantly sold: \"This will differentiate us from every competitor on the block. Just add it to the plan!\" Alex hesitates, knowing that adding 200 square feet of chef's table counter affects the construction timeline, the budget, Maya's kitchen capacity, and the permit schedule. Dr. Foster appears: \"Not so fast, Carlos. Enthusiasm is not a substitute for impact assessment.\""
+          },
+          {
+            "id": "goldplating_disguised_as_innovation",
+            "icon": "⚠️",
+            "title": "Gold-Plating Disguised as Innovation",
+            "summary": "One change cascades across five baselines — scope, schedule, cost, quality, and risk",
+            "image": "/images/C1L6_comic_goldplating.webp",
+            "details": "Alex pulls up the whiteboard and starts mapping impacts: +200 sq ft of construction (scope), +2 weeks of build time (schedule), +$25K for counter, equipment, and lighting (cost), Maya's time split 80/20 between kitchen and table (quality), and permit re-inspection risk (risk). Carlos's enthusiasm fades as the cascade becomes visible. Maya adds: \"I'd need to be at that table 3 hours every night — that's 3 hours I'm NOT running the kitchen.\" What looked like a simple add is actually a five-baseline disruption."
+          },
+          {
+            "id": "ccb_chaos_who_decides",
+            "icon": "💡",
+            "title": "CCB Chaos — Who Decides?",
+            "summary": "Without formal change control, nobody knows who has authority to approve what",
+            "image": "/images/C1L6_comic_ccb_chaos.webp",
+            "details": "Dr. Foster asks the critical question: \"Who has the authority to approve a change that affects frozen baselines?\" Carlos assumes he does as sponsor. Alex thinks the PM handles it. Elena points out that budget changes require financial review. The confusion reveals why formal governance matters — without a Change Control Board and a defined process, baseline changes get approved by whoever is loudest, not whoever has the data. Dr. Foster draws the line: \"Baseline changes need the CCB. Period.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Jordan's chef's table idea is brilliant! But Dr. Foster says we can't just add it — even though it's clearly valuable. Why do we need all this process? Can't I just approve it as the sponsor?"
+        },
+        "learning_hook": "**Not all changes are equal.** Changes within approved baselines can be PM-approved. But changes that affect FROZEN baselines — scope, schedule, cost — require formal Change Control Board approval. Alex must assess integrated impacts across ALL knowledge areas before the CCB can decide."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "build_the_change_control_process",
+        "title": "Build the Change Control Process",
+        "description": "Dr. Foster stands at the whiteboard. \"Before we can evaluate Jordan's chef's table request, Alex needs to understand the Integrated Change Control process. Let's build it step by step.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag the 5 change control steps into the correct sequence:",
+            "points": 100,
+            "scenario_name": "Change Control Process Sequence",
+            "situation": "Dr. Foster has written the 5 steps of the Integrated Change Control process on index cards and shuffled them. She places an empty timeline on the whiteboard with 5 positions. \"Every change request follows the same governance path. Put these steps in the correct order.\"",
+            "chips": [
+              {
+                "id": "receive_change_request",
+                "label": "Receive Change Request",
+                "correctZone": "step_1"
+              },
+              {
+                "id": "log_in_change_register",
+                "label": "Log in Change Register",
+                "correctZone": "step_2"
+              },
+              {
+                "id": "conduct_impact_assessment",
+                "label": "Conduct Impact Assessment",
+                "correctZone": "step_3"
+              },
+              {
+                "id": "ccb_reviews_decides",
+                "label": "CCB Reviews & Decides",
+                "correctZone": "step_4"
+              },
+              {
+                "id": "update_baselines_communicate",
+                "label": "Update Baselines & Communicate",
+                "correctZone": "step_5"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "step_1",
+                "label": "Step 1",
+                "detail": "The process begins when a change request arrives from any source — stakeholder, team member, corrective action, or defect repair"
+              },
+              {
+                "id": "step_2",
+                "label": "Step 2",
+                "detail": "Document the request in the change register BEFORE analysis — this creates traceability and an audit trail"
+              },
+              {
+                "id": "step_3",
+                "label": "Step 3",
+                "detail": "The PM analyzes integrated impacts across all knowledge areas — scope, schedule, cost, quality, risk"
+              },
+              {
+                "id": "step_4",
+                "label": "Step 4",
+                "detail": "The Change Control Board reviews the assessment and approves, rejects, modifies, or defers"
+              },
+              {
+                "id": "step_5",
+                "label": "Step 5",
+                "detail": "Approved changes are implemented — baselines are updated and all stakeholders are notified"
+              }
+            ],
+            "explanation": "Change requests follow a strict governance sequence: Receive, Log, Assess, Decide, Update. Logging comes BEFORE assessment to ensure traceability. Assessment comes BEFORE the CCB meeting so the board has data for informed decisions. Baselines are updated only AFTER approval — never before.",
+            "correctFeedback": {
+              "text": "Change requests follow a strict governance sequence: Receive, Log, Assess, Decide, Update. Logging comes BEFORE assessment to ensure traceability. Assessment comes BEFORE the CCB meeting so the board has data for informed decisions. Baselines are updated only AFTER approval — never before.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect sequence. Notice how assessment comes BEFORE the CCB meeting. Alex brings data, not just enthusiasm. That's the difference between governance and guessing."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: What must happen BEFORE the CCB can make an informed decision? And what can only happen AFTER they approve?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: What must happen BEFORE the CCB can make an informed decision? And what can only happen AFTER they approve?"
+            },
+            "retryHint": "The first step is always receiving the request. The last step is always implementing the decision. What three things happen in between — and in what order?"
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Drag each change request to the correct approval authority:",
+            "points": 100,
+            "scenario_name": "Baseline vs Within-Baseline Classification",
+            "situation": "Alex receives several change requests in one week. Dr. Foster challenges him: \"Not every change needs CCB approval. The key question is: Does this change affect a frozen baseline?\" Sort these changes into the correct approval path.",
+            "chips": [
+              {
+                "id": "add_200_sq_ft_chefs_table_counter_25k_2_weeks",
+                "label": "Add 200 sq ft chef's table counter (+$25K, +2 weeks)",
+                "correctZone": "ccb_approval_required"
+              },
+              {
+                "id": "swap_tilapia_for_salmon_on_the_appetizer_menu_same_cost",
+                "label": "Swap tilapia for salmon on the appetizer menu (same cost)",
+                "correctZone": "pm_can_approve_directly"
+              },
+              {
+                "id": "extend_construction_by_3_weeks_for_premium_flooring_15k",
+                "label": "Extend construction by 3 weeks for premium flooring (+$15K)",
+                "correctZone": "ccb_approval_required"
+              },
+              {
+                "id": "move_tuesday_team_meeting_to_wednesday_same_duration",
+                "label": "Move Tuesday team meeting to Wednesday (same duration)",
+                "correctZone": "pm_can_approve_directly"
+              },
+              {
+                "id": "add_new_exhaust_ventilation_system_required_by_code_update_8k",
+                "label": "Add new exhaust ventilation system required by code update (+$8K)",
+                "correctZone": "ccb_approval_required"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "ccb_approval_required",
+                "label": "CCB Approval Required",
+                "detail": "Affects scope, cost, AND schedule baselines — requires formal CCB review"
+              },
+              {
+                "id": "pm_can_approve_directly",
+                "label": "PM Can Approve Directly",
+                "detail": "Within approved scope and budget — no baseline impact"
+              }
+            ],
+            "explanation": "The dividing line is simple: Does the change affect a frozen baseline (scope, schedule, or cost)? If yes, it needs CCB approval. If the change stays within approved baselines — like swapping menu items at the same cost or rescheduling a meeting — the PM has authority to approve directly. Even small-dollar changes that cross a baseline boundary need formal review.",
+            "correctFeedback": {
+              "text": "The dividing line is simple: Does the change affect a frozen baseline (scope, schedule, or cost)? If yes, it needs CCB approval. If the change stays within approved baselines — like swapping menu items at the same cost or rescheduling a meeting — the PM has authority to approve directly. Even small-dollar changes that cross a baseline boundary need formal review.",
+              "character": "Alex Mitchell",
+              "characterQuote": "The key question is always: Does this touch a frozen baseline? If yes, it goes to the CCB. If I can handle it within approved scope, schedule, and cost, I approve it directly."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Don't think about whether the change is 'big' or 'small.' Think about whether it changes the approved scope, schedule, or cost baseline. That's the only question that matters.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Don't think about whether the change is 'big' or 'small.' Think about whether it changes the approved scope, schedule, or cost baseline. That's the only question that matters."
+            },
+            "retryHint": "For each change, ask: Does this add cost? Does this extend the schedule? Does this change what we're building? If any answer is yes, it's a baseline change."
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What is the BEST action for the CCB to take?",
+            "points": 100,
+            "scenario_name": "CCB Decision Authority",
+            "situation": "Alex has completed the integrated impact assessment for Jordan's chef's table request. The assessment shows: Scope +200 sq ft, Schedule +2 weeks, Cost +$25K, Quality impact on Maya's kitchen time, Risk of permit re-inspection delays. Alex presents this to the CCB (Carlos, Elena, and Dr. Foster). Carlos says: \"OK, the impacts are clear. Let's just approve it — the value is worth it.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Approve as-is — the chef's table has clear business value",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Reject entirely — the schedule and cost impacts are too high",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Approve with modifications — reduce to 6 seats, defer launch to 3 weeks post-opening",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Defer indefinitely until the project is complete",
+                "correct": false
+              }
+            ],
+            "explanation": "The CCB's most powerful option is MODIFICATION. Approving with modifications captures the business value (chef's table differentiation) while reducing risk: fewer seats saves 1 week and $7K, deferring launch protects the grand opening date, and weekly construction reviews prevent cascade delays. This balances value capture with risk management — the hallmark of effective CCB governance.",
+            "correctFeedback": {
+              "text": "The CCB's most powerful option is MODIFICATION. Approving with modifications captures the business value (chef's table differentiation) while reducing risk: fewer seats saves 1 week and $7K, deferring launch protects the grand opening date, and weekly construction reviews prevent cascade delays. This balances value capture with risk management — the hallmark of effective CCB governance.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The CCB isn't a rubber stamp and it isn't a roadblock. It's a governance body that OPTIMIZES changes. Modify, phase, mitigate — that's where the real value of change control lives."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The CCB has four options: approve, reject, modify, or defer. Which option captures the most value while managing the most risk? Think about the middle path.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The CCB has four options: approve, reject, modify, or defer. Which option captures the most value while managing the most risk? Think about the middle path."
+            },
+            "retryHint": "The CCB has more options than yes or no. What if they could capture the value of the chef's table while reducing the schedule and cost impact?"
+          },
+          {
+            "q_id": "q4",
+            "type": "drag_drop",
+            "question": "Drag each impact to the knowledge area it affects:",
+            "points": 100,
+            "scenario_name": "Integrated Impact Assessment",
+            "situation": "Alex is preparing the impact assessment for the chef's table change request. Dr. Foster emphasizes: \"This is called INTEGRATED change control because you assess impact across ALL knowledge areas — not just the area where the change originated.\" Match each impact to the correct knowledge area.",
+            "chips": [
+              {
+                "id": "200_sq_ft_chefs_table_counter_area",
+                "label": "+200 sq ft chef's table counter area",
+                "correctZone": "scope"
+              },
+              {
+                "id": "2_weeks_construction_timeline",
+                "label": "+2 weeks construction timeline",
+                "correctZone": "schedule"
+              },
+              {
+                "id": "25k_for_counter_equipment_lighting",
+                "label": "+$25K for counter, equipment, lighting",
+                "correctZone": "cost"
+              },
+              {
+                "id": "mayas_time_split_80_kitchen_20_table",
+                "label": "Maya's time split 80% kitchen / 20% table",
+                "correctZone": "quality"
+              },
+              {
+                "id": "permit_reinspection_may_delay_occupancy",
+                "label": "Permit re-inspection may delay occupancy",
+                "correctZone": "risk"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "scope",
+                "label": "Scope",
+                "detail": "Adding physical deliverables changes what the project is building — a scope baseline change"
+              },
+              {
+                "id": "schedule",
+                "label": "Schedule",
+                "detail": "Extending the build duration changes when the project delivers — a schedule baseline change"
+              },
+              {
+                "id": "cost",
+                "label": "Cost",
+                "detail": "Adding budget for materials and labor changes the project spend — a cost baseline change"
+              },
+              {
+                "id": "quality",
+                "label": "Quality",
+                "detail": "Splitting the lead chef's attention between two stations affects food quality and consistency"
+              },
+              {
+                "id": "risk",
+                "label": "Risk",
+                "detail": "New construction layout triggers regulatory review — a new risk to the project timeline"
+              }
+            ],
+            "explanation": "Jordan's marketing idea (chef's table) originated in ONE area but cascades across FIVE knowledge areas. This is precisely why the process is called INTEGRATED Change Control — every change must be assessed across all baselines and plans, not just the originating domain.",
+            "correctFeedback": {
+              "text": "Jordan's marketing idea (chef's table) originated in ONE area but cascades across FIVE knowledge areas. This is precisely why the process is called INTEGRATED Change Control — every change must be assessed across all baselines and plans, not just the originating domain.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "THIS is why it's called INTEGRATED change control. Jordan proposed a marketing idea, but it affects scope, schedule, cost, quality, AND risk. One change, five baselines. Miss any of these and you get surprises."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what each impact actually changes. Does adding square footage change what you're building, when you finish, or how much you spend? Each impact maps to a specific knowledge area.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what each impact actually changes. Does adding square footage change what you're building, when you finish, or how much you spend? Each impact maps to a specific knowledge area."
+            },
+            "retryHint": "Scope = what you're building. Schedule = when you'll finish. Cost = how much you'll spend. Quality = how well it performs. Risk = what might go wrong."
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "Who should approve Maya's plating style change?",
+            "points": 100,
+            "scenario_name": "Who Approves What?",
+            "situation": "After the CCB meeting, Alex needs to handle three more change requests that came in during the week. He needs to determine the correct approval path for each. One request is from Maya: \"Can we change the dessert plating style from square plates to round plates? Same supplier, same cost, no timeline impact.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "The CCB must review all changes regardless of size",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Alex (PM) can approve directly — it doesn't affect any baseline",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Carlos (Sponsor) must approve all design-related changes",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "No approval is needed — Maya can just make the switch",
+                "correct": false
+              }
+            ],
+            "explanation": "Maya's request changes plate shape but keeps the same supplier, same cost, and same timeline. No baseline is affected: scope (plates are still plates), schedule (no delay), cost (same supplier, same price). When a change doesn't touch any frozen baseline, the PM has delegated authority to approve it directly. Still log it — but no CCB escalation needed.",
+            "correctFeedback": {
+              "text": "Maya's request changes plate shape but keeps the same supplier, same cost, and same timeline. No baseline is affected: scope (plates are still plates), schedule (no delay), cost (same supplier, same price). When a change doesn't touch any frozen baseline, the PM has delegated authority to approve it directly. Still log it — but no CCB escalation needed.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I always ask one question: Does this change a frozen baseline? Round plates vs square plates at the same cost and timeline? That's a PM-level decision. Log it, approve it, move on."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what actually changes here. Does the plate shape affect the construction scope? The schedule? The budget? If none of those baselines move, who has authority?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about what actually changes here. Does the plate shape affect the construction scope? The schedule? The budget? If none of those baselines move, who has authority?"
+            },
+            "retryHint": "The key question: Does changing plate shape affect scope, schedule, or cost baselines? If not, what does that tell you about who can approve it?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Integrated Change Control: The Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "What Is Integrated Change Control?",
+            "subtitle": "",
+            "content": "**Perform Integrated Change Control** is the process of reviewing all change requests, approving or rejecting changes, managing changes to deliverables and baselines, and communicating decisions to all stakeholders.\n\n**Key Characteristics:**\n- **Process Group:** Monitoring & Controlling (ongoing throughout the project lifecycle)\n- **Trigger:** Change requests from ANY source — stakeholders, team members, corrective actions, defect repairs\n- **Decision Body:** Change Control Board (CCB) for baseline changes; PM for within-baseline changes\n- **Scope:** ALL baseline changes must flow through this process without exception\n\n**Why \"Integrated\"?**\nBecause a change in ONE area cascades across MULTIPLE knowledge areas. Jordan's chef's table (a marketing idea) affected scope, schedule, cost, quality, and risk. The PM must analyze cascade effects across ALL baselines BEFORE the CCB can make an informed decision.\n\n**The 5-Step Process:**\n1. **Receive** — Change request arrives from any source\n2. **Log** — Document in the change register for traceability\n3. **Assess** — PM analyzes integrated impacts across all knowledge areas\n4. **Decide** — CCB approves, rejects, modifies, or defers (baseline changes); PM approves directly (within-baseline changes)\n5. **Update** — Implement approved changes, update baselines, communicate to stakeholders\n\n**PMBOK Reference:** PMBOK 7th Edition, pages 102-105; PMBOK 6th Edition, Section 4.6",
+            "diagram": {
+              "image": "/images/C1L6_diagram_change_process.webp",
+              "alt": "Change control process flow diagram"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "CCB vs PM Authority",
+            "subtitle": "",
+            "content": "The **Change Control Board (CCB)** is a formally chartered group responsible for reviewing, evaluating, approving, modifying, deferring, or rejecting changes to baselines.\n\n**CCB Approves:**\n- Changes affecting FROZEN baselines (scope, schedule, cost)\n- Changes requiring additional budget or timeline extension\n- Changes that alter project objectives or success criteria\n\n**PM Can Approve Directly:**\n- Changes WITHIN approved baselines (menu item swap, meeting reschedule)\n- Administrative changes (document updates, minor process adjustments)\n- Risk register updates that do not trigger baseline changes\n\n**The Key Question:** \"Does this change affect a frozen baseline?\"\n- If YES — Formal change control, CCB approval required\n- If NO — PM can approve within delegated authority\n\n**CCB Decision Options (Four, not two):**\n\n| Decision | When to Use | Example |\n|----------|-------------|---------|\n| **Approve as-is** | Benefits clearly outweigh risks, impacts acceptable | Low-cost enhancement within contingency |\n| **Approve with modifications** | Value exists but needs adjustment to reduce risk | Reduce scope, phase implementation, add mitigation |\n| **Reject** | Costs or risks outweigh benefits | Doesn't align with project objectives |\n| **Defer** | Timing not right or more information needed | Revisit after a milestone or when data is available |\n\n**Best Practice:** The CCB often MODIFIES rather than fully approving or rejecting. Modification balances value capture with risk mitigation — exactly what happened with Jordan's chef's table (reduced to 6 seats, deferred launch)."
+          },
+          {
+            "id": "tab3",
+            "title": "Integrated Impact Assessment",
+            "subtitle": "",
+            "content": "When Alex received Jordan's chef's table request, he assessed impacts across ALL knowledge areas:\n\n| Knowledge Area | Impact | Severity |\n|----------------|--------|----------|\n| Scope | +200 sq ft chef's table counter | Medium |\n| Schedule | +2 weeks construction | High |\n| Cost | +$25K (counter, equipment, lighting) | Medium |\n| Quality | Maya's time split (kitchen 80%, table 20%) | Medium |\n| Risk | Permit delay cascade, kitchen capacity | High |\n| Communications | Marketing messaging changes | Low |\n\n**Integration Principle:** One change (chef's table) cascades through SIX different plans and baselines. This is WHY the process is called \"Integrated\" Change Control — you assess the full cascade, not just the originating area.\n\n**Configuration Management:** After CCB approval, baselines are versioned:\n- v1.0 — Original approved baseline\n- v1.1 — Minor within-baseline changes (PM approved)\n- v2.0 — Major baseline changes (CCB approved)\n\nEvery change gets a log entry: Change ID, requestor, date, description, impact assessment, decision, rationale, and updated baseline version."
+          },
+          {
+            "id": "tab4",
+            "title": "Common Mistakes",
+            "subtitle": "",
+            "content": "**Mistake 1: \"Good ideas should be added immediately\"**\n- Truth: Enthusiasm is not a substitute for impact assessment. Even great ideas need integrated analysis before baseline changes are approved. Carlos learned this with the chef's table.\n\n**Mistake 2: \"The PM approves all changes\"**\n- Truth: PMs have delegated authority for within-baseline changes only. Baseline changes require CCB governance. Overstepping this authority erodes stakeholder trust and PM credibility.\n\n**Mistake 3: \"Just assess the affected area\"**\n- Truth: INTEGRATED means ALL knowledge areas. Jordan's marketing idea affected scope, schedule, cost, quality, and risk. Assessing only the marketing impact misses the cascade.\n\n**Mistake 4: \"Reject all changes to protect the baseline\"**\n- Truth: Rigidity kills value. The CCB should approve valuable changes WITH appropriate mitigation. The chef's table was a good idea — it just needed proper governance.\n\n**Mistake 5: \"Change control is bureaucracy that slows projects\"**\n- Truth: Change control ENABLES valuable changes by ensuring they're properly assessed and governed. Without it, you get surprises, trust erosion, and authority restrictions — as the bypass scenario demonstrates."
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:** Integrated Change Control is part of the **Project Work Performance Domain**. It supports Principle 5 (systems thinking) by ensuring changes are assessed holistically across all project dimensions.\n\n**PMP Exam Tips:**\n- Change control questions appear frequently — understand the process flow and decision authority\n- Key distinction: Baseline changes (CCB) vs within-baseline changes (PM)\n- The CCB can modify and defer — not just approve or reject\n- Impact assessment is INTEGRATED — across all knowledge areas, not just the originating area\n- Configuration management and change logging are essential for audit trails"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "What If Alex Bypassed the CCB?",
+        "scenario": {
+          "title": "What If Alex Bypassed the CCB?",
+          "description": "Imagine an alternate scenario: Carlos's enthusiasm is infectious, and Alex — under pressure to keep the sponsor happy — approves the chef's table change without CCB review. \"It's a great idea, Carlos is the sponsor, what could go wrong?\" Watch the consequences unfold over 5 weeks.",
+          "images": [
+            {
+              "src": "/images/C1L6_comic_transfer.webp",
+              "alt": "Alex faces the consequences of bypassing change control"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What was the ROOT CAUSE of this cascade of problems?",
+            "points": 100,
+            "scenario_name": "Root Cause of the Cascade",
+            "situation": "Week 1: Alex approves the chef's table without CCB review. Week 2: Electrical rework costs $15K nobody budgeted for. Week 3: City requires permit re-inspection — schedule slips 2 weeks. Week 4: Elena discovers the unauthorized $15K overrun and demands answers. Week 5: Ava (investor) restricts Alex's approval authority entirely.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Carlos pressured Alex too much",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Alex bypassed the CCB for a baseline change",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The electrical requirements were unforeseen",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The schedule was too aggressive from the start",
+                "correct": false
+              }
+            ],
+            "explanation": "Every problem in the cascade traces back to one governance failure: Alex approved a baseline change without CCB review. The electrical costs would have been identified in a proper impact assessment. The permit delay would have been flagged as a risk. Elena would have been informed as a CCB member. The root cause is not the change itself — it's the bypass of the process designed to manage it.",
+            "correctFeedback": {
+              "text": "Every problem in the cascade traces back to one governance failure: Alex approved a baseline change without CCB review. The electrical costs would have been identified in a proper impact assessment. The permit delay would have been flagged as a risk. Elena would have been informed as a CCB member. The root cause is not the change itself — it's the bypass of the process designed to manage it.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Every surprise in this cascade — electrical costs, permit delays, trust erosion — would have been identified in the impact assessment. The CCB process exists precisely to catch these cascade effects BEFORE they become reality."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look past the symptoms. Electrical costs, permit delays, stakeholder anger — these are all EFFECTS. What single decision caused ALL of them?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Look past the symptoms. Electrical costs, permit delays, stakeholder anger — these are all EFFECTS. What single decision caused ALL of them?"
+            },
+            "retryHint": "Every consequence traces back to one decision. What did Alex do (or fail to do) that started the entire cascade?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "If Alex HAD followed proper change control, what would the MOST LIKELY outcome have been?",
+            "points": 100,
+            "scenario_name": "The Alternative Path",
+            "situation": "Now compare: WITHOUT change control, the project ended up $15K over budget, 2 weeks behind schedule, with stakeholder trust at 20% and Alex's authority formally restricted. Dr. Foster asks you to consider what would have happened WITH proper change control.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The chef's table idea would have been rejected entirely",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The CCB would have approved a modified version with known costs and mitigated risks",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The project would have stayed exactly on the original plan with no changes",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The process would have taken so long that the idea would be irrelevant",
+                "correct": false
+              }
+            ],
+            "explanation": "With proper change control, Alex's impact assessment would have identified the electrical requirements, permit implications, and resource impacts BEFORE approval. The CCB would then decide with full information. In fact, the CCB did approve a modified version: 6 seats instead of 8, deferred launch to protect the grand opening, and weekly reviews. The result: +$18K planned cost (vs $15K surprise), +1 week (vs 2 weeks surprise), trust maintained, authority intact.",
+            "correctFeedback": {
+              "text": "With proper change control, Alex's impact assessment would have identified the electrical requirements, permit implications, and resource impacts BEFORE approval. The CCB would then decide with full information. In fact, the CCB did approve a modified version: 6 seats instead of 8, deferred launch to protect the grand opening, and weekly reviews. The result: +$18K planned cost (vs $15K surprise), +1 week (vs 2 weeks surprise), trust maintained, authority intact.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I would have rather waited one week for an assessment than faced the board explaining why we're $15K over and 2 weeks late with no warning."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Change control doesn't prevent changes — it manages them. Think about what the CCB actually did when they reviewed the chef's table properly.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Change control doesn't prevent changes — it manages them. Think about what the CCB actually did when they reviewed the chef's table properly."
+            },
+            "retryHint": "The CCB has four options: approve, reject, modify, defer. Which option balances capturing the chef's table value with managing the risks?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What is the MOST important difference between these two paths?",
+            "points": 100,
+            "scenario_name": "Bypass vs Governance Comparison",
+            "situation": "Dr. Foster shows a side-by-side comparison of both paths:",
+            "options": [
+              {
+                "id": "A",
+                "text": "The WITH path costs more ($18K vs $15K), so the bypass was actually cheaper",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The WITHOUT path was faster initially, so bypass saved time in the short term",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "The WITH path maintains stakeholder trust and enables informed decision-making",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Both paths end with the chef's table built, so the outcomes are essentially the same",
+                "correct": false
+              }
+            ],
+            "explanation": "The critical difference is not cost or timeline — it's stakeholder trust and decision quality. With proper governance, the CCB made an INFORMED decision with full impact visibility. Costs were PLANNED, not surprises. Risks were MITIGATED, not discovered. Trust was MAINTAINED because stakeholders were involved in the decision. Without governance, every surprise eroded trust further until Alex lost authority entirely.",
+            "correctFeedback": {
+              "text": "The critical difference is not cost or timeline — it's stakeholder trust and decision quality. With proper governance, the CCB made an INFORMED decision with full impact visibility. Costs were PLANNED, not surprises. Risks were MITIGATED, not discovered. Trust was MAINTAINED because stakeholders were involved in the decision. Without governance, every surprise eroded trust further until Alex lost authority entirely.",
+              "character": "Elena Vasquez",
+              "characterQuote": "I would have approved the modified version! What I couldn't accept was being surprised by $15K in unplanned costs. The issue was never the money — it was the governance failure."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Don't compare the dollar amounts. Compare HOW the decisions were made. In one path, stakeholders were informed and involved. In the other, they were blindsided.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Don't compare the dollar amounts. Compare HOW the decisions were made. In one path, stakeholders were informed and involved. In the other, they were blindsided."
+            },
+            "retryHint": "Look beyond dollars and days. What was destroyed in the bypass path that was preserved in the governance path? What can't be rebuilt easily?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered **Integrated Change Control** — the process that ensures all baseline changes are properly assessed, routed, and governed. The key insight: one change cascades across multiple baselines. That's why we assess INTEGRATED impact — not just the originating area.",
+        "key_takeaways": [
+          "5-Step Process: Receive, Log, Assess, CCB Decision, Update & Communicate — every baseline change follows this path",
+          "Baseline vs Within-Baseline: CCB approves baseline changes (scope, schedule, cost); PM approves within-baseline changes directly",
+          "Integrated Assessment: Assess impact across ALL knowledge areas — one change can cascade through scope, schedule, cost, quality, and risk",
+          "CCB Has Four Options: Approve, reject, modify, or defer — modification is often the best path for balancing value and risk",
+          "Bypass Consequences: Skipping the CCB leads to surprise costs, schedule delays, trust erosion, and authority restrictions",
+          "Configuration Management: Version your baselines, maintain the change log, trace every decision for audit readiness"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L7",
+          "title": "Project Closure",
+          "description": "The project is complete — deliverables accepted, opening successful. But closure isn't just \"done.\" It's formal acceptance, lessons learned, and transition to operations."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Who should approve this change request?",
+            "points": 100,
+            "scenario_name": "Change Request Authority",
+            "situation": "A project manager is overseeing an office renovation. The facilities manager requests moving two desks from the east side to the west side of the open floor plan. The move is within the approved floor plan scope and requires no additional budget or timeline extension. The facilities manager asks who can approve this change.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The Change Control Board must review all changes regardless of size",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The project manager can approve directly since it doesn't affect baselines",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The project sponsor must approve all physical layout changes",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "No approval is needed for minor changes within scope",
+                "correct": false
+              }
+            ],
+            "explanation": "The key question is: \"Does this change affect a baseline?\" Moving desks within an approved floor plan doesn't change scope, schedule, or cost baselines. The PM has delegated authority to approve within-baseline changes directly — while still logging the change for traceability.",
+            "correctFeedback": {
+              "text": "The key question is: \"Does this change affect a baseline?\" Moving desks within an approved floor plan doesn't change scope, schedule, or cost baselines. The PM has delegated authority to approve within-baseline changes directly — while still logging the change for traceability.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I always ask: Does this change our frozen baselines? If not, I can approve it directly while still logging it for traceability. Not everything needs the CCB."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Focus on baselines. Does moving desks within an approved floor plan change what we're building, when we finish, or how much we spend?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Focus on baselines. Does moving desks within an approved floor plan change what we're building, when we finish, or how much we spend?"
+            },
+            "retryHint": "Baseline impact determines the approval path. If no baseline is affected, the PM has delegated authority. But even PM-approved changes must be logged."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST action for the CCB to take?",
+            "points": 100,
+            "scenario_name": "CCB Decision Making",
+            "situation": "A software development project's CCB is reviewing a change request to add a new reporting feature. The impact assessment shows: +3 weeks schedule, +$45K budget, high customer value, moderate technical risk. The project has 4 weeks of schedule contingency and $60K budget reserve.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Reject the change because it uses contingency reserves",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Approve as-is since reserves can cover the impact",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Approve with modifications — phase the feature to reduce immediate schedule impact while capturing core value",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Defer until more analysis is completed on the technical risk",
+                "correct": false
+              }
+            ],
+            "explanation": "The CCB's best practice is to consider MODIFICATIONS that balance value and risk. Phasing the feature captures core customer value while reducing immediate schedule and budget impact, preserving contingency reserves for other uncertainties. This is better than approve as-is (depletes reserves), reject (loses high-value feature), or defer (delays value without clear justification).",
+            "correctFeedback": {
+              "text": "The CCB's best practice is to consider MODIFICATIONS that balance value and risk. Phasing the feature captures core customer value while reducing immediate schedule and budget impact, preserving contingency reserves for other uncertainties. This is better than approve as-is (depletes reserves), reject (loses high-value feature), or defer (delays value without clear justification).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "CCB governance isn't about yes or no — it's about finding the optimal path forward. Phasing captures value while preserving reserves for future unknowns."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The CCB has four options. Which one captures customer value while reducing schedule and budget risk? Think about the middle path between approve-everything and reject-everything.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The CCB has four options. Which one captures customer value while reducing schedule and budget risk? Think about the middle path between approve-everything and reject-everything."
+            },
+            "retryHint": "The CCB can modify requests, not just approve or reject. How could they capture the feature's value while using less contingency?"
+          }
+        ]
+      }
+    }
+  ]
+}

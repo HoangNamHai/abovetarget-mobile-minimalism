@@ -1,0 +1,662 @@
+{
+  "lessonId": "D1L8",
+  "lessonTitle": "Predictive vs Adaptive",
+  "courseId": "D1",
+  "courseName": "Agile Mindset & Frameworks",
+  "pathId": "D",
+  "pathName": "Adaptive & Hybrid Delivery",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Select the appropriate development approach (predictive, adaptive, hybrid) based on project characteristics",
+    "Evaluate project dimensions to determine optimal life cycle approach",
+    "Understand the key differences between change control (predictive) vs change embrace (adaptive)",
+    "Apply hybrid strategies for projects with mixed requirements",
+    "Recognize PMI's life cycle continuum and tailoring principles"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "ava_thompson",
+    "dr_amelia_foster",
+    "carlos_mendez",
+    "morgan_lee"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Ava Wants Agile Everywhere — But Should She?",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. After 15 years of traditional project management, investor Ava Thompson returns from a conference excited about \"agile transformation.\" She wants ALL three upcoming projects to use Agile. But the three projects are radically different: a creative menu sprint, a compliance-driven kitchen renovation, and a mixed catering launch. Dr. Foster arrives with a key insight: \"The answer isn't 'which is better.' It's 'which fits the context.'\"",
+        "failure_cards": [
+          {
+            "id": "agile_on_a_construction_site",
+            "icon": "📋",
+            "title": "Agile on a Construction Site",
+            "summary": "Alex runs the kitchen renovation with Agile sprints — and fails the health inspection",
+            "image": "/images/D1L8_comic_agile_construction.webp",
+            "details": "Ava insisted on Agile for the $850K kitchen renovation. The team iterated on wall placement, changed the layout after framing ($45K rework), and skipped detailed compliance docs. When the health inspector arrived: \"Where are the approved plans? You can't iterate on building codes.\" The project was halted, permits revoked, and the renovation delayed 3 months. Building codes don't care about sprints."
+          },
+          {
+            "id": "waterfall_on_a_creative_sprint",
+            "icon": "⚠️",
+            "title": "Waterfall on a Creative Sprint",
+            "summary": "Alex uses predictive planning for the menu innovation — and delivers dishes nobody wants",
+            "image": "/images/D1L8_comic_waterfall_menu.webp",
+            "details": "Carlos insisted on the traditional approach for menu innovation: define all 12 recipes upfront, get sign-off, then execute. Six months later, all 12 dishes were complete — and customers hated 9 of them. Maya: \"We needed taste tests along the way! You can't plan creativity in a spreadsheet.\" Without customer feedback loops, the team delivered on time and on budget — but created zero value."
+          },
+          {
+            "id": "no_framework_no_logic",
+            "icon": "💡",
+            "title": "No Framework, No Logic",
+            "summary": "Alex picks approaches randomly — and every project suffers",
+            "image": "/images/D1L8_comic_no_framework.webp",
+            "details": "Without a decision framework, Alex used Agile for renovation (failed inspections), Waterfall for menu innovation (dishes nobody wanted), and couldn't decide on catering (paralysis). Ava: \"I thought you were the expert!\" Dr. Foster: \"The issue isn't Agile OR Waterfall — it's that Alex had no framework for deciding WHEN to use WHAT.\" Every project paid the price for mismatched approaches."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Leadership Consultant",
+          "quote": "The worst mistake is forcing one approach on all projects because it's trendy — or because it's familiar. PMI says to match the approach to the context. Let me show you how."
+        },
+        "learning_hook": "PMI's Agile Practice Guide defines a **life cycle continuum**: Predictive on one end, Adaptive on the other, and Hybrid in between. The right approach depends on project characteristics — requirements clarity, change likelihood, stakeholder engagement, risk profile, and regulatory needs. Let's learn the evaluation framework."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "evaluate_the_right_approach",
+        "title": "Evaluate the Right Approach",
+        "description": "Dr. Foster presents the evaluation framework to Alex. \"Each project has different characteristics. Evaluate the dimensions and match the approach to the context.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each dimension to the approach it favors for the Menu Innovation Sprint:",
+            "points": 200,
+            "scenario_name": "Classify Menu Innovation Dimensions",
+            "situation": "The Menu Innovation Sprint aims to create 12 new seasonal dishes over 3 months ($25K budget). Recipes need customer taste tests to validate, chefs may pivot based on weekly feedback, and dishes will be released incrementally as validated. Dr. Foster asks Alex to classify each project dimension.",
+            "chips": [
+              {
+                "id": "requirements_clarity_we_dont_know_which_flavors_will_resonate",
+                "label": "Requirements Clarity: \"We don't know which flavors will resonate\"",
+                "correctZone": "adaptive"
+              },
+              {
+                "id": "change_likelihood_chef_may_pivot_based_on_weekly_taste_tests",
+                "label": "Change Likelihood: \"Chef may pivot based on weekly taste tests\"",
+                "correctZone": "adaptive"
+              },
+              {
+                "id": "stakeholder_engagement_customers_chefs_marketing_need_continuous_involvement",
+                "label": "Stakeholder Engagement: \"Customers, chefs, marketing need continuous involvement\"",
+                "correctZone": "adaptive"
+              },
+              {
+                "id": "risk_profile_low_technical_risk_creative_exploration_adjustments_are_lowcost",
+                "label": "Risk Profile: \"Low technical risk — creative exploration, adjustments are low-cost\"",
+                "correctZone": "adaptive"
+              },
+              {
+                "id": "delivery_preference_release_dishes_incrementally_as_validated",
+                "label": "Delivery Preference: \"Release dishes incrementally as validated\"",
+                "correctZone": "adaptive"
+              },
+              {
+                "id": "regulatory_requirements_standard_food_safety_no_complex_compliance_docs",
+                "label": "Regulatory Requirements: \"Standard food safety — no complex compliance docs\"",
+                "correctZone": "adaptive"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "adaptive",
+                "label": "Adaptive",
+                "detail": "Can't define all recipes upfront without customer experimentation"
+              }
+            ],
+            "explanation": "All six dimensions favor Adaptive for Menu Innovation. Requirements are uncertain (can't predict customer preferences), change is expected and low-cost (pivot on taste tests), stakeholders need continuous involvement (weekly tastings), risk is low (creative exploration), delivery is incremental (one dish at a time), and regulatory needs are standard. This is a textbook Adaptive project.",
+            "correctFeedback": {
+              "text": "All six dimensions favor Adaptive for Menu Innovation. Requirements are uncertain (can't predict customer preferences), change is expected and low-cost (pivot on taste tests), stakeholders need continuous involvement (weekly tastings), risk is low (creative exploration), delivery is incremental (one dish at a time), and regulatory needs are standard. This is a textbook Adaptive project.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Every dimension points to Adaptive. Uncertain requirements, expected change, continuous feedback, incremental delivery — this project is ideal for Agile sprints."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about each dimension carefully. Can you define all 12 recipes upfront? Does the chef need permission from a change board to adjust a recipe? Match the dimension to how the project actually works.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about each dimension carefully. Can you define all 12 recipes upfront? Does the chef need permission from a change board to adjust a recipe? Match the dimension to how the project actually works."
+            },
+            "retryHint": "For each dimension, ask: \"Does this project need upfront planning and formal change control (Predictive), or experimentation and continuous feedback (Adaptive)?\""
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Why is Adaptive (Agile) the RIGHT approach for Menu Innovation?",
+            "points": 150,
+            "scenario_name": "Why Adaptive Fits Menu Innovation",
+            "situation": "Alex has evaluated all dimensions for the Menu Innovation Sprint and they all favor Adaptive. Ava asks: \"Okay, but WHY is Agile the right choice here? Convince me it's not just because Agile is trendy.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Agile is modern and trendy, so it's always better for creative projects",
+                "correct": false,
+                "whyWrong": "Agile isn't \"better\" because it's trendy — it's appropriate because the project characteristics (uncertain requirements, need for feedback) align with adaptive principles. Trend-based selection is the exact mistake Ava made."
+              },
+              {
+                "id": "B",
+                "text": "Requirements are uncertain (recipes need experimentation), change is expected (pivots on taste tests), and customers must be continuously involved — all dimensions favor iteration",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Agile is faster than Predictive, so the team will finish the 12 dishes sooner",
+                "correct": false,
+                "whyWrong": "Agile isn't inherently faster. It delivers VALUE incrementally (validate dishes earlier), but total duration depends on iteration cycles. Speed is an outcome, not a selection criterion."
+              },
+              {
+                "id": "D",
+                "text": "The kitchen team prefers Agile, so it will be easier to manage",
+                "correct": false,
+                "whyWrong": "Team preference matters but should not DRIVE selection. Project characteristics (requirements, change, risk) should be the primary driver. Here the characteristics genuinely favor Adaptive."
+              }
+            ],
+            "explanation": "The correct answer connects approach selection to PROJECT CHARACTERISTICS, not trends, speed claims, or team preference. Requirements are uncertain (can't predict which flavors customers will love), change is expected and low-cost (pivot based on taste tests), and stakeholders need continuous involvement (weekly tastings). These concrete characteristics make Adaptive the right fit.",
+            "correctFeedback": {
+              "text": "The correct answer connects approach selection to PROJECT CHARACTERISTICS, not trends, speed claims, or team preference. Requirements are uncertain (can't predict which flavors customers will love), change is expected and low-cost (pivot based on taste tests), and stakeholders need continuous involvement (weekly tastings). These concrete characteristics make Adaptive the right fit.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You've grasped the key principle: match approach to context. Innovation requires experimentation, not upfront planning. The characteristics drove your decision, not the hype."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Don't choose Agile because it sounds good. Connect your choice to specific project characteristics. What makes THIS project need iteration?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Don't choose Agile because it sounds good. Connect your choice to specific project characteristics. What makes THIS project need iteration?"
+            },
+            "retryHint": "PMI says to select approach based on project characteristics, not trends or preferences. What specific characteristics of Menu Innovation point to Adaptive?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What approach should Alex recommend for the Catering Service Launch?",
+            "points": 150,
+            "scenario_name": "Identify the Catering Launch Approach",
+            "situation": "The Catering Service Launch has a fixed business model (contracts, pricing, compliance requirements) but an evolving service model (customer preferences, menu customization, delivery logistics need iteration). Some dimensions favor Predictive (contracts, compliance) while others favor Adaptive (service design, customer feedback).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Pure Predictive — plan everything upfront since contracts are involved",
+                "correct": false,
+                "whyWrong": "Pure Predictive ignores that the service model needs customer feedback and iteration. Planning everything upfront would miss evolving customer preferences."
+              },
+              {
+                "id": "B",
+                "text": "Pure Adaptive — iterate on everything since customer preferences matter",
+                "correct": false,
+                "whyWrong": "Pure Adaptive ignores that contracts and compliance require upfront planning and formal documentation. You can't iterate on legal agreements."
+              },
+              {
+                "id": "C",
+                "text": "Hybrid — plan predictively for fixed elements (contracts, compliance) and execute adaptively for evolving elements (service design, customer preferences)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Let the team decide which approach they prefer and use that",
+                "correct": false,
+                "whyWrong": "Team preference should not drive approach selection. Project characteristics (mix of fixed and evolving elements) determine that Hybrid is appropriate."
+              }
+            ],
+            "explanation": "Hybrid is the right choice when SOME dimensions favor Predictive (contracts, compliance, pricing are fixed) and others favor Adaptive (service model, customer preferences need iteration). Hybrid strategically blends both: plan predictively for governance and fixed requirements, execute adaptively for features and customer-facing elements. It's not a compromise — it's a strategic blend.",
+            "correctFeedback": {
+              "text": "Hybrid is the right choice when SOME dimensions favor Predictive (contracts, compliance, pricing are fixed) and others favor Adaptive (service model, customer preferences need iteration). Hybrid strategically blends both: plan predictively for governance and fixed requirements, execute adaptively for features and customer-facing elements. It's not a compromise — it's a strategic blend.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Now that makes sense. The business side needs structure — contracts and compliance don't iterate. But the customer-facing side needs flexibility. Hybrid gives us both."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at the dimensions carefully. Some are fixed (contracts, compliance), some are evolving (service design, preferences). What approach handles BOTH?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Look at the dimensions carefully. Some are fixed (contracts, compliance), some are evolving (service design, preferences). What approach handles BOTH?"
+            },
+            "retryHint": "When some dimensions favor Predictive and others favor Adaptive, what approach strategically blends both?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Life Cycle Decision Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "PMI's Life Cycle Continuum",
+            "subtitle": "",
+            "content": "PMI doesn't mandate ONE approach. Projects exist on a **continuum** from fully predictive to fully adaptive, with hybrid in between.\n\n```\nPREDICTIVE ←―――――――――― HYBRID ――――――――――→ ADAPTIVE\n(Waterfall)                                  (Agile)\n\nSequential          Blended Approaches        Iterative\nUpfront Planning    Phased + Iterative        Continuous Planning\nChange Control      Moderate Flexibility      Change Embraced\nCCB manages change  CCB for core only         No CCB needed\n```\n\n**Key Insight:** The \"best\" approach depends on project characteristics, not personal preference or industry trends.\n\n**PMBOK Reference:** PMBOK 7th Ed, Delivery Performance Domain; Agile Practice Guide, pages 9-12"
+          },
+          {
+            "id": "tab2",
+            "title": "When to Use Predictive",
+            "subtitle": "",
+            "content": "**Use Predictive when:**\n- Requirements are CLEAR and STABLE (can be defined upfront)\n- Change is COSTLY (construction, compliance, regulatory)\n- Deliverable is WELL-UNDERSTOOD (similar to past projects)\n- Stakeholders approve upfront, review at milestones\n\n**Change Management:** Uses Change Control Board (CCB) — formal process to evaluate every change request against impact on scope, schedule, and cost.\n\n**Example:** Kitchen Renovation — building codes don't iterate, permits require approved plans, moving walls after framing costs $45K in rework.",
+            "diagram": {
+              "image": "/images/D1L8_diagram_decision_framework.webp",
+              "alt": "Decision framework diagram"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "When to Use Adaptive",
+            "subtitle": "",
+            "content": "**Use Adaptive when:**\n- Requirements are UNCERTAIN or EVOLVING (need experimentation)\n- Change is EXPECTED and LOW-COST (adjust based on feedback)\n- Deliverable requires INNOVATION (novel solutions)\n- Stakeholders involved CONTINUOUSLY (every sprint/iteration)\n\n**Change Management:** NO CCB — Product Owner manages backlog directly from customer feedback. Change is embraced, not controlled through formal boards.\n\n**Example:** Menu Innovation — can't predict customer preferences without taste tests. Chef pivots based on weekly feedback."
+          },
+          {
+            "id": "tab4",
+            "title": "When to Use Hybrid",
+            "subtitle": "",
+            "content": "**Use Hybrid when:**\n- SOME requirements are clear (contracts, compliance), others uncertain (features, service model)\n- Need PREDICTABLE governance for big decisions + FLEXIBILITY for execution\n- Organization is transitioning from predictive to adaptive\n\n**Pattern:** Plan predictively (upfront business case, compliance), Execute adaptively (iterate on features, user experience).\n\n**Example:** Catering Launch — business model fixed (contracts, pricing), service model flexible (customer preferences, delivery logistics)."
+          },
+          {
+            "id": "tab5",
+            "title": "The Evaluation Dimensions",
+            "subtitle": "",
+            "content": "| Dimension | Favors Predictive | Favors Adaptive |\n|-----------|-------------------|-----------------|\n| **Requirements Clarity** | Clear, stable, defined upfront | Uncertain, need experimentation |\n| **Change Likelihood** | Low — change is costly/disruptive | High — change is expected |\n| **Stakeholder Engagement** | Upfront approval + milestone reviews | Continuous collaboration |\n| **Risk Profile** | High technical/regulatory risk | Low risk, learning acceptable |\n| **Team Experience** | New to domain, need detailed plans | Experienced, can self-organize |\n| **Delivery Preference** | Big bang (all at once at end) | Incremental (frequent releases) |\n| **Documentation Needs** | Heavy compliance/audit requirements | Light, working software over docs |\n| **Regulatory Requirements** | Strict compliance (health, safety, finance) | Flexible, standard procedures |\n\n**PMI Tailoring Principle:** Always start with project characteristics. The approach should fit the work, not the other way around.",
+            "diagram": {
+              "image": "/images/D1L8_diagram_evaluation_dimensions.webp",
+              "alt": "Evaluation dimensions comparison"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "A New Project, Same Framework",
+        "scenario": {
+          "title": "A New Project, Same Framework",
+          "description": "Alex must now evaluate the Kitchen Renovation project using the same framework — but this time, the dimensions favor a completely different approach. The renovation costs $850K, must pass health department inspections, and has requirements defined by building codes and regulations.",
+          "images": [
+            {
+              "src": "/images/D1L8_comic_transfer.webp",
+              "alt": "Alex and contractor reviewing renovation blueprints"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What does this requirements profile indicate about approach selection?",
+            "points": 100,
+            "scenario_name": "Requirements Drive the Approach",
+            "situation": "For the Kitchen Renovation project, requirements are defined by building codes and health regulations. Every specification — from ventilation airflow rates to grease trap capacity — is mandated by law. The health department requires approved plans BEFORE construction begins.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Adaptive — regulations can be negotiated through iteration",
+                "correct": false,
+                "whyWrong": "Health codes are NON-NEGOTIABLE. You can't iterate with a health inspector. Requirements are FIXED by law, not by customer preference. Agile sprints don't change building codes."
+              },
+              {
+                "id": "B",
+                "text": "Predictive — requirements are fixed by regulation and must be planned upfront",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Hybrid — some codes are fixed, others are flexible",
+                "correct": false,
+                "whyWrong": "Building codes and health regulations don't have \"flexible\" portions. ALL requirements are fixed by law. There's no adaptive element when every specification is mandated."
+              }
+            ],
+            "explanation": "Health codes and building regulations are NON-NEGOTIABLE. Every requirement is defined by law before work begins. This is textbook Predictive: requirements are clear, stable, and must be documented upfront for inspection approval. You cannot iterate your way through a health inspection.",
+            "correctFeedback": {
+              "text": "Health codes and building regulations are NON-NEGOTIABLE. Every requirement is defined by law before work begins. This is textbook Predictive: requirements are clear, stable, and must be documented upfront for inspection approval. You cannot iterate your way through a health inspection.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I learned this the hard way. Inspectors don't care about agile ceremonies — they care about approved plans and compliance documentation."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Building codes are LAW. You can't negotiate, iterate, or pivot on them. What approach works when requirements are completely fixed?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Building codes are LAW. You can't negotiate, iterate, or pivot on them. What approach works when requirements are completely fixed?"
+            },
+            "retryHint": "When requirements are defined by law and cannot change, which approach plans everything upfront?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What does this high change cost indicate about approach selection?",
+            "points": 100,
+            "scenario_name": "High Change Cost Signals Predictive",
+            "situation": "The contractor warns Alex: \"Moving walls after framing costs $45,000 in rework. Changing electrical routing after walls are closed adds $30,000. Every change after construction starts is expensive.\" The project budget is $850K with no contingency for rework.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Adaptive — embrace change and iterate on wall placement through sprints",
+                "correct": false,
+                "whyWrong": "When change costs $45K, you don't \"embrace\" it — you PREVENT it through upfront planning. This is exactly why predictive uses detailed plans and formal change control."
+              },
+              {
+                "id": "B",
+                "text": "Hybrid — plan walls predictively, iterate on paint colors adaptively",
+                "correct": false,
+                "whyWrong": "Paint color flexibility doesn't change the fundamental approach. The high-cost structural work dominates approach selection. You wouldn't choose Hybrid just because you can change paint colors."
+              },
+              {
+                "id": "C",
+                "text": "Predictive — high change cost requires detailed upfront planning to avoid costly rework",
+                "correct": true
+              }
+            ],
+            "explanation": "When changes cost $30K-$45K each, you PREVENT change through detailed upfront planning rather than embracing it. High change cost is a primary indicator for Predictive approaches. Every wall, outlet, and pipe must be planned before construction begins because rework is prohibitively expensive.",
+            "correctFeedback": {
+              "text": "When changes cost $30K-$45K each, you PREVENT change through detailed upfront planning rather than embracing it. High change cost is a primary indicator for Predictive approaches. Every wall, outlet, and pipe must be planned before construction begins because rework is prohibitively expensive.",
+              "character": "Alex Mitchell",
+              "characterQuote": "This is the opposite of menu innovation. There, changes cost almost nothing — pivot a recipe, no big deal. Here, moving one wall costs $45K. Plan first, build once."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When change costs $45K, you don't 'embrace' it — you PREVENT it. What approach focuses on detailed upfront planning?",
+              "character": "Carlos Mendez",
+              "characterQuote": "When change costs $45K, you don't 'embrace' it — you PREVENT it. What approach focuses on detailed upfront planning?"
+            },
+            "retryHint": "When changes are extremely expensive, do you embrace change (Adaptive) or prevent it with detailed planning (Predictive)?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What approach does this inspection model mandate?",
+            "points": 100,
+            "scenario_name": "Regulatory Governance Model",
+            "situation": "The health inspector tells Alex: \"I need approved plans BEFORE you start construction. I'll inspect at 4 fixed milestones: foundation, framing, mechanical, and final. Each milestone must pass before you proceed to the next phase. No exceptions.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Adaptive — show the inspector working kitchen sections each sprint",
+                "correct": false,
+                "whyWrong": "Inspectors don't do \"sprint reviews.\" They require APPROVED PLANS before work starts, then inspect at FIXED milestones. You can't show partial kitchen sections and ask for iterative feedback."
+              },
+              {
+                "id": "B",
+                "text": "Predictive — upfront plan approval and milestone inspections align with predictive phase gates",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Hybrid — agile execution within predictive phase gates",
+                "correct": false,
+                "whyWrong": "There's no iterative element here. Every phase requires plan approval before work begins. The inspector mandates a sequential, phase-gated process — pure Predictive."
+              }
+            ],
+            "explanation": "The inspector's requirements perfectly describe Predictive governance: approved plans BEFORE work starts, then fixed milestone inspections (phase gates) before proceeding. This is sequential, plan-driven, and milestone-gated — the definition of a predictive life cycle. There is no iterative element.",
+            "correctFeedback": {
+              "text": "The inspector's requirements perfectly describe Predictive governance: approved plans BEFORE work starts, then fixed milestone inspections (phase gates) before proceeding. This is sequential, plan-driven, and milestone-gated — the definition of a predictive life cycle. There is no iterative element.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Foundation, framing, mechanical, final — that's a predictive sequence. Each phase must pass inspection before the next one starts. No sprints, no iterations, no pivots."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The inspector requires approved plans upfront and inspects at fixed milestones. What approach uses upfront planning and phase gates?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The inspector requires approved plans upfront and inspects at fixed milestones. What approach uses upfront planning and phase gates?"
+            },
+            "retryHint": "The inspector requires: (1) approved plans BEFORE work starts, (2) fixed milestone inspections. What approach uses upfront planning and phase gates?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to evaluate project dimensions and match them to the right development approach. The key insight: there's no \"best\" approach — only the RIGHT approach for the project context.",
+        "key_takeaways": [
+          "Life Cycle Continuum: Predictive, Hybrid, and Adaptive exist on a spectrum. Projects are placed based on characteristics, not preferences.",
+          "Predictive (Waterfall): Use when requirements are FIXED, change is COSTLY, and compliance requires upfront planning. Change Control Board (CCB) manages changes formally.",
+          "Adaptive (Agile): Use when requirements are UNCERTAIN, change is EXPECTED, and continuous stakeholder involvement is needed. NO CCB — Product Owner manages backlog directly.",
+          "Hybrid: Use when SOME dimensions favor Predictive (compliance, contracts) and others favor Adaptive (features, user experience). Strategic blend, not compromise.",
+          "Evaluation Dimensions: Requirements clarity, change likelihood, stakeholder engagement, risk profile, team experience, delivery preference, documentation needs, regulatory requirements.",
+          "PMI Tailoring Principle: Select approach based on PROJECT CHARACTERISTICS, not trends, team preference, or organizational pressure."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think one approach was always better. Now I evaluate each project's characteristics: requirements clarity, change cost, stakeholder needs, regulatory requirements. Menu Innovation needed Agile because you can't plan creativity. Kitchen Renovation needed Predictive because you can't iterate with inspectors. And Catering Launch needed Hybrid because the business model was fixed but the service model needed iteration. Match the approach to the context — every time."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L1",
+          "title": "User Story Writing & INVEST",
+          "description": "You've learned WHEN to use Agile. Now learn HOW to write effective user stories using the INVEST criteria — the building blocks of every Agile backlog."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager recommend regarding change management?",
+            "points": 50,
+            "scenario_name": "Change Management in Agile",
+            "situation": "A project manager is leading a software development project using Scrum. During Sprint 3, the Product Owner receives customer feedback requesting a new feature. The team has capacity to add it to the backlog for a future sprint.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Submit the change to the Change Control Board for formal approval before adding to the sprint",
+                "correct": false,
+                "whyWrong": "Agile approaches don't use CCB for backlog changes. The Product Owner has authority to prioritize the backlog directly. Customer feedback drives scope without formal change control."
+              },
+              {
+                "id": "B",
+                "text": "The Product Owner can add the feature to the backlog and prioritize it — Agile embraces change without formal CCB",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Reject the change because the sprint scope is locked once planning is complete",
+                "correct": false,
+                "whyWrong": "While sprint COMMITMENT is protected during execution, the BACKLOG is continuously refined. Features can be added to the backlog and prioritized for current or future sprints."
+              },
+              {
+                "id": "D",
+                "text": "Document the change request and defer to the sponsor for approval",
+                "correct": false,
+                "whyWrong": "In Scrum, the Product Owner — not the sponsor — owns backlog prioritization. Backlog changes don't require escalation to sponsors or formal documentation."
+              }
+            ],
+            "explanation": "In Adaptive (Agile) approaches, there is NO Change Control Board. The Product Owner has authority to prioritize the backlog based on customer feedback. Change is EMBRACED, not controlled through formal boards. This is a fundamental difference from Predictive approaches where every change goes through a CCB.",
+            "correctFeedback": {
+              "text": "In Adaptive (Agile) approaches, there is NO Change Control Board. The Product Owner has authority to prioritize the backlog based on customer feedback. Change is EMBRACED, not controlled through formal boards. This is a fundamental difference from Predictive approaches where every change goes through a CCB.",
+              "character": "Morgan Lee",
+              "characterQuote": "That's exactly how it works. I prioritize the backlog based on value. No CCB needed — just good judgment about what customers need most."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "In Scrum, I own the backlog. Customer feedback goes directly to prioritization decisions. No formal change board required.",
+              "character": "Morgan Lee",
+              "characterQuote": "In Scrum, I own the backlog. Customer feedback goes directly to prioritization decisions. No formal change board required."
+            },
+            "retryHint": "Key difference: Predictive uses CCB for change control. Agile lets the Product Owner prioritize the backlog directly from customer feedback."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What approach should the PMO recommend for initial projects?",
+            "points": 50,
+            "scenario_name": "Organizational Transition Strategy",
+            "situation": "A company with a strong predictive culture wants to adopt Agile practices. Senior leadership is risk-averse and uncomfortable with \"no detailed upfront plan.\" Teams are skeptical about self-organization. The PMO is selecting an approach for initial pilot projects.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Full Agile transformation immediately — the benefits will convince skeptics",
+                "correct": false,
+                "whyWrong": "Forcing Agile on a risk-averse culture creates resistance and failure. Culture change takes time; immediate full transformation rarely succeeds without organizational readiness."
+              },
+              {
+                "id": "B",
+                "text": "Stick with Predictive — Agile won't work in traditional cultures",
+                "correct": false,
+                "whyWrong": "Traditional cultures CAN adopt Agile, but need gradual transition through pilot projects. Abandoning the goal entirely wastes the opportunity."
+              },
+              {
+                "id": "C",
+                "text": "Hybrid — predictive governance for leadership comfort, agile execution for team agility",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Train all staff on Agile principles before starting any projects",
+                "correct": false,
+                "whyWrong": "Training alone won't change culture. People learn by doing. Hybrid projects let teams experience Agile practices while maintaining leadership's governance comfort."
+              }
+            ],
+            "explanation": "Hybrid approaches are ideal for organizational transitions. They provide PREDICTIVE governance (upfront planning, phase gates) that risk-averse leadership understands, while introducing AGILE execution (sprints, retrospectives) that teams can learn gradually. This reduces resistance and builds confidence over time.",
+            "correctFeedback": {
+              "text": "Hybrid approaches are ideal for organizational transitions. They provide PREDICTIVE governance (upfront planning, phase gates) that risk-averse leadership understands, while introducing AGILE execution (sprints, retrospectives) that teams can learn gradually. This reduces resistance and builds confidence over time.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Hybrid isn't a compromise — it's a bridge. You meet the organization where it is, then gradually shift the balance toward agile as comfort grows."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Culture change is gradual. How can you introduce Agile while respecting leadership's need for governance? What approach bridges both worlds?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Culture change is gradual. How can you introduce Agile while respecting leadership's need for governance? What approach bridges both worlds?"
+            },
+            "retryHint": "Hybrid approaches let organizations maintain predictive governance (leadership comfort) while experimenting with agile execution (team learning)."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which Lean principle supports the developer's suggestion?",
+            "points": 50,
+            "scenario_name": "Lean Decision Principle",
+            "situation": "A project team is planning a new mobile app for restaurant reservations. The PM wants to finalize all UI wireframes before starting development. The lead developer suggests waiting to design screens until user research is complete, arguing that designing now would lock in assumptions.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Deliver as fast as possible — skip wireframes entirely to save time",
+                "correct": false,
+                "whyWrong": "Lean encourages speed, but not recklessness. The principle here is about TIMING decisions, not skipping them. Wireframes are valuable — just not before user research provides insights."
+              },
+              {
+                "id": "B",
+                "text": "Decide as late as possible — keep options open until you have enough information",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Eliminate waste — wireframes are documentation waste that should be removed",
+                "correct": false,
+                "whyWrong": "Wireframes aren't waste — they're valuable design artifacts. The question is WHEN to create them. Creating wireframes after research produces better results than creating them on assumptions."
+              },
+              {
+                "id": "D",
+                "text": "Build quality in — finalize wireframes upfront to ensure design quality",
+                "correct": false,
+                "whyWrong": "Quality comes from informed decisions, not early decisions. Wireframes based on user research will have HIGHER quality than wireframes based on untested assumptions."
+              }
+            ],
+            "explanation": "The Lean principle \"Decide as late as possible\" (also called \"defer commitment\") means keeping options open until you have the information needed to make good decisions. Finalizing UI wireframes before user research locks in assumptions that may be wrong. Waiting preserves flexibility.",
+            "correctFeedback": {
+              "text": "The Lean principle \"Decide as late as possible\" (also called \"defer commitment\") means keeping options open until you have the information needed to make good decisions. Finalizing UI wireframes before user research locks in assumptions that may be wrong. Waiting preserves flexibility.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I used to rush decisions to feel productive. Now I know: deciding late with information beats deciding early with assumptions."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Lean has specific principles about when to make decisions. The developer isn't saying skip wireframes — just delay them until research provides real data.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Lean has specific principles about when to make decisions. The developer isn't saying skip wireframes — just delay them until research provides real data."
+            },
+            "retryHint": "The developer isn't saying \"skip wireframes.\" They're saying \"wait until we have user research.\" Which Lean principle is about timing your decisions?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What should PRIMARILY drive the approach selection decision?",
+            "points": 50,
+            "scenario_name": "Primary Selection Criterion",
+            "situation": "A PM is selecting a development approach for a regulatory compliance project. The compliance officer insists on detailed documentation and audit trails. The development team wants Scrum for faster delivery. The sponsor wants the \"most efficient\" approach. Three stakeholders, three different priorities.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Team preference for Scrum — engaged teams are more productive",
+                "correct": false,
+                "whyWrong": "Team preference matters, but PROJECT CHARACTERISTICS (regulatory requirements, documentation needs) should drive selection. The team can adapt to the appropriate approach."
+              },
+              {
+                "id": "B",
+                "text": "Sponsor's efficiency preference — leadership sets project direction",
+                "correct": false,
+                "whyWrong": "\"Efficient\" isn't a project characteristic — it's a goal. The approach that's efficient depends on matching it to project needs. Efficiency follows from correct approach selection."
+              },
+              {
+                "id": "C",
+                "text": "Project characteristics — regulatory requirements and documentation needs favor predictive",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Industry trends — most companies are moving to Agile",
+                "correct": false,
+                "whyWrong": "Trends don't determine appropriateness. A compliance project with heavy documentation needs won't succeed with pure Agile just because it's popular."
+              }
+            ],
+            "explanation": "PMI emphasizes TAILORING — selecting approach based on PROJECT CHARACTERISTICS, not preferences or trends. A regulatory compliance project with heavy documentation and audit trail requirements has characteristics that favor Predictive: fixed requirements (regulations), high documentation needs (audit trails), and formal governance (compliance reviews).",
+            "correctFeedback": {
+              "text": "PMI emphasizes TAILORING — selecting approach based on PROJECT CHARACTERISTICS, not preferences or trends. A regulatory compliance project with heavy documentation and audit trail requirements has characteristics that favor Predictive: fixed requirements (regulations), high documentation needs (audit trails), and formal governance (compliance reviews).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Always start with project characteristics. The approach should fit the work, not the other way around. Preferences and trends are inputs, but characteristics drive the decision."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "What should PRIMARILY drive approach selection? Not preferences, not trends — but the actual characteristics of the project itself.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "What should PRIMARILY drive approach selection? Not preferences, not trends — but the actual characteristics of the project itself."
+            },
+            "retryHint": "PMI's tailoring guidance: Match approach to project characteristics (requirements, compliance, documentation needs), not to preferences or trends."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+{
+  "lessonId": "D1L2",
+  "lessonTitle": "Agile Team Formation & Dynamics",
+  "courseId": "D1",
+  "courseName": "Agile Mindset & Frameworks",
+  "pathId": "D",
+  "pathName": "Adaptive & Hybrid Delivery",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Apply the optimal Agile team size principle (5-9 members, the 7±2 rule)",
+    "Distinguish cross-functional teams (T-shaped members) from specialist teams (I-shaped)",
+    "Recognize characteristics of self-organizing teams and information radiators",
+    "Calculate and interpret team velocity correctly (completed work only)",
+    "Understand why velocity should NOT be used for comparing teams"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "taylor_kim",
+    "carlos_mendez",
+    "ava_thompson",
+    "dr_amelia_foster",
+    "maya_rodriguez",
+    "devon_brown"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "12 People or 4? Carlos and Ava Can't Agree — and Both Are Wrong",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. The company is launching the Menu Innovation Lab — an Agile team for experimental fusion cuisine. Carlos wants 12 specialists: \"More hands = faster innovation!\" Ava insists on 4: \"Small teams move fast. Overhead kills Agile.\" Taylor Kim (Scrum Master) knows both extremes will cause problems. Dr. Foster arrives with research data: \"Get team size wrong, and you'll lose months to dysfunction.\" Who's right — and what does the science say?",
+        "failure_cards": [
+          {
+            "id": "communication_chaos",
+            "icon": "📋",
+            "title": "Communication Chaos",
+            "summary": "Carlos's 12-person team drowns in communication overhead",
+            "image": "/images/D1L2_comic_communication_chaos.webp",
+            "details": "Carlos assigned 12 specialists — 8 chefs, 2 designers, 1 marketer, 1 nutritionist. Week 1: standups took 30 minutes. People tuned out. Sub-groups formed. Taylor ran the math: 12 people = 66 communication paths. By Week 2, the team fragmented into cliques, decisions stalled, and nobody knew who was working on what. Carlos: \"We have 12 experts and nothing is getting done.\""
+          },
+          {
+            "id": "bottleneck_burnout",
+            "icon": "⚠️",
+            "title": "Bottleneck Burnout",
+            "summary": "Ava's 4-person team collapses when one member is out sick",
+            "image": "/images/D1L2_comic_bottleneck_burnout.webp",
+            "details": "Ava's lean team of 4 moved fast — until Maya called in sick. With 25% of capacity gone, the remaining 3 couldn't cover her responsibilities. A critical fusion recipe prototype was blocked for 2 days. Devon: \"We don't have enough skills to cover gaps. One person out and we're stuck.\" Small teams are agile, but too small means single points of failure everywhere."
+          },
+          {
+            "id": "the_specialist_silo",
+            "icon": "💡",
+            "title": "The Specialist Silo",
+            "summary": "An all-specialist team creates silos and external dependencies",
+            "image": "/images/D1L2_comic_specialist_silo.webp",
+            "details": "Carlos formed a team of 7 chefs — all culinary I-shaped specialists. Day 3: Maya needed menu design work. No designer on the team. Wait 2 days for an external designer. Day 5: marketing collateral needed. No marketer. Wait 3 days. Taylor: \"I-shaped specialists create silos. Every dependency is a delay. We need T-shaped members who can collaborate across domains.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Leadership Consultant",
+          "quote": "There's a science to team formation. Too many people and communication explodes. Too few and one absence paralyzes you. And if everyone is a narrow specialist, you'll spend more time waiting than working."
+        },
+        "learning_hook": "**Agile team formation** follows proven principles: the 7±2 rule for size, cross-functional composition with T-shaped members, and velocity as a planning tool (not a performance metric). Let's learn how to build teams that actually deliver."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "form_the_menu_innovation_lab",
+        "title": "Form the Menu Innovation Lab",
+        "description": "Taylor needs your help forming the Menu Innovation Lab — Savory & Co.'s new Agile team for experimental fusion cuisine. Make the right decisions about team size, composition, work visibility, and velocity measurement.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What is the optimal Agile team size according to best practices?",
+            "points": 100,
+            "scenario_name": "Optimal Team Size",
+            "situation": "Alex and Taylor must finalize the team size. Carlos insists on 12 people (\"More expertise = better innovation\"), Ava wants just 4 (\"Small teams are agile\"), and Dr. Foster warns both extremes cause problems. The team needs to pick the right size based on Agile best practices.",
+            "options": [
+              {
+                "id": "A",
+                "text": "4 people (Ava's proposal) — small teams move faster",
+                "correct": false,
+                "whyWrong": "4 people is too small. One person out = 25% capacity lost. Missing cross-functional coverage and no redundancy for critical skills."
+              },
+              {
+                "id": "B",
+                "text": "5-9 members (the 7±2 rule) — optimal balance",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "12 people (Carlos's proposal) — more expertise is better",
+                "correct": false,
+                "whyWrong": "12 people creates 66 communication paths (vs 21 for 7). Standups take 25+ minutes. The team naturally fragments into sub-groups."
+              },
+              {
+                "id": "D",
+                "text": "It depends entirely on the project — no standard exists",
+                "correct": false,
+                "whyWrong": "Context matters, but Agile has a well-established recommended range (5-9). The 7±2 rule is backed by decades of team dynamics research."
+              }
+            ],
+            "explanation": "Optimal Agile team size is 5-9 members (commonly cited as 7±2). This balances communication efficiency (21 paths vs 66 for 12 people), skill diversity, and collaboration dynamics. Too small risks bottlenecks; too large creates coordination chaos.",
+            "correctFeedback": {
+              "text": "Optimal Agile team size is 5-9 members (commonly cited as 7±2). This balances communication efficiency (21 paths vs 66 for 12 people), skill diversity, and collaboration dynamics. Too small risks bottlenecks; too large creates coordination chaos.",
+              "character": "Taylor Kim",
+              "characterQuote": "7 people = 21 communication paths. Manageable. Everyone can collaborate effectively without coordination overhead."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Agile DOES have a recommended range: 5-9 members. It's based on communication science and team dynamics research. The 7±2 rule is the proven sweet spot.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Agile DOES have a recommended range: 5-9 members. It's based on communication science and team dynamics research. The 7±2 rule is the proven sweet spot."
+            },
+            "retryHint": "Think about the tradeoff between communication overhead and skill coverage. What happens with too few people? Too many? There IS a research-backed sweet spot."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What team composition does Agile recommend?",
+            "points": 100,
+            "scenario_name": "Team Composition",
+            "situation": "Team size is decided at 7 people. Carlos proposes 7 chefs — all culinary specialists with world-class expertise. Taylor counters that the team needs chefs, design, marketing, nutrition, and operations coverage. Dr. Foster explains the difference between T-shaped and I-shaped team members.",
+            "options": [
+              {
+                "id": "A",
+                "text": "7 chefs (deep specialists, all I-shaped) — maximize culinary expertise",
+                "correct": false,
+                "whyWrong": "7 I-shaped specialists means external dependencies for every non-culinary task — wait 2 days for designers, 1 day for marketers. Silos and delays destroy velocity."
+              },
+              {
+                "id": "B",
+                "text": "Cross-functional: 3 chefs + designer + marketer + nutritionist + ops (all T-shaped)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Mix of full-time and part-time members to cover all skills",
+                "correct": false,
+                "whyWrong": "Part-time members reduce team cohesion and velocity. Context-switching hurts productivity. They miss standups and retrospectives. Agile prefers dedicated, full-time members."
+              },
+              {
+                "id": "D",
+                "text": "Hire generalists who can do everything — maximum flexibility",
+                "correct": false,
+                "whyWrong": "Pure generalists lack deep expertise. T-shaped is the ideal: BOTH depth (specialist skills) AND breadth (cross-domain collaboration). Generalists are shallow in everything."
+              }
+            ],
+            "explanation": "Cross-functional teams have ALL skills needed to deliver value WITHOUT external dependencies. T-shaped members have deep expertise in one domain (vertical bar) PLUS broad collaboration ability (horizontal bar). This eliminates waiting for external resources.",
+            "correctFeedback": {
+              "text": "Cross-functional teams have ALL skills needed to deliver value WITHOUT external dependencies. T-shaped members have deep expertise in one domain (vertical bar) PLUS broad collaboration ability (horizontal bar). This eliminates waiting for external resources.",
+              "character": "Taylor Kim",
+              "characterQuote": "Cross-functional and T-shaped. No waiting for external resources. The team can deliver end-to-end."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I-shaped specialists create silos and dependencies. T-shaped members have depth AND breadth — that's what Agile teams need.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "I-shaped specialists create silos and dependencies. T-shaped members have depth AND breadth — that's what Agile teams need."
+            },
+            "retryHint": "Agile teams need to deliver value without waiting for external help. What kind of team composition eliminates external dependencies while maintaining expertise?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What should Taylor implement to solve this work visibility problem?",
+            "points": 100,
+            "scenario_name": "Work Visibility",
+            "situation": "Week 3 at the Menu Innovation Lab. During standup, Maya says: \"I'm not sure who's working on the Thai-Mexican fusion prototype — is it me or Devon?\" Devon responds: \"I thought you were handling it.\" Taylor realizes team members are confused about work assignments and progress throughout the day.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Send daily status report emails summarizing all work assignments",
+                "correct": false,
+                "whyWrong": "Emails are static and quickly outdated. By afternoon, the morning status report is already stale. Need a persistent, real-time visual tool."
+              },
+              {
+                "id": "B",
+                "text": "Use a Kanban board showing work items and their status (To Do, In Progress, Done)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Have team members pay closer attention during standups",
+                "correct": false,
+                "whyWrong": "Standups are point-in-time. It's hard to remember all work item statuses throughout the day, especially when priorities shift."
+              },
+              {
+                "id": "D",
+                "text": "Taylor should track all work assignments and assign tasks each morning",
+                "correct": false,
+                "whyWrong": "This contradicts self-organizing teams. In Agile, team members self-assign and track their own work using a shared board. The Scrum Master facilitates — they don't control assignments."
+              }
+            ],
+            "explanation": "Kanban boards are \"information radiators\" — they provide real-time, visual work tracking. Team members self-assign tasks and update status. Anyone can glance at the board and know exactly who's working on what, all day long.",
+            "correctFeedback": {
+              "text": "Kanban boards are \"information radiators\" — they provide real-time, visual work tracking. Team members self-assign tasks and update status. Anyone can glance at the board and know exactly who's working on what, all day long.",
+              "character": "Devon Brown",
+              "characterQuote": "Before the Kanban board, I asked 5 times a day: 'Who's doing what?' Now I just glance at the board. Game-changer."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "We need persistent, real-time visibility — not static emails or better listening. The team needs to see work status at any moment, not just during standup.",
+              "character": "Taylor Kim",
+              "characterQuote": "We need persistent, real-time visibility — not static emails or better listening. The team needs to see work status at any moment, not just during standup."
+            },
+            "retryHint": "The team needs something visible ALL day, not just during meetings. What Agile tool provides persistent, real-time visibility into who is working on what?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What is the Menu Lab's velocity for Sprint 2?",
+            "points": 100,
+            "scenario_name": "Velocity Calculation",
+            "situation": "Sprint 2 ends. The Menu Innovation Lab completed 5 user stories (3 + 5 + 8 + 2 + 12 = 30 story points). A 6th story worth 10 story points is HALF complete — 5 points of work done, but the story is not finished.",
+            "options": [
+              {
+                "id": "A",
+                "text": "30 points (only fully completed stories count)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "35 points (30 completed + 5 for the half-done story)",
+                "correct": false,
+                "whyWrong": "Velocity does NOT count partial completion. That half-done story could take 2 more days or 2 more weeks — we don't know. Only fully DONE work counts."
+              },
+              {
+                "id": "C",
+                "text": "40 points (30 completed + 10 for the story that's started)",
+                "correct": false,
+                "whyWrong": "You can't count a story at full value when it's only half done. The 10-point story contributes ZERO to this sprint's velocity."
+              },
+              {
+                "id": "D",
+                "text": "Cannot calculate until all stories are done",
+                "correct": false,
+                "whyWrong": "Velocity is calculated at the END of each sprint based on what was completed. You don't wait for future sprints — you measure completed work now."
+              }
+            ],
+            "explanation": "Velocity = completed work ONLY. The 5 finished stories total 30 points. The half-done story (5 of 10 points) does NOT count — it will count in Sprint 3 when fully complete. Partial work contributes zero to velocity.",
+            "correctFeedback": {
+              "text": "Velocity = completed work ONLY. The 5 finished stories total 30 points. The half-done story (5 of 10 points) does NOT count — it will count in Sprint 3 when fully complete. Partial work contributes zero to velocity.",
+              "character": "Taylor Kim",
+              "characterQuote": "Velocity = 30 points. Partial work doesn't count because we can't deliver partial value to customers."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Partially done work is risky. You don't know how much effort remains. Only DONE work delivers value and counts toward velocity.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Partially done work is risky. You don't know how much effort remains. Only DONE work delivers value and counts toward velocity."
+            },
+            "retryHint": "Does velocity count work that's \"in progress\" or only work that's \"done\"? What happens to the half-finished story's points?"
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "Can Carlos use velocity to compare team performance?",
+            "points": 100,
+            "scenario_name": "Velocity Comparison",
+            "situation": "Carlos reviews the metrics: \"Menu Innovation Lab has velocity of 30 points. But the Catering Team has velocity of 50 points! Menu Lab is clearly underperforming — 50 is way more than 30.\" Taylor shakes her head: \"Carlos, you can't compare velocities like that...\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes — higher velocity means better team performance",
+                "correct": false,
+                "whyWrong": "Velocity is team-specific. Each team has its own estimation scale. Higher velocity does NOT mean better performance — it may just mean different estimation calibration."
+              },
+              {
+                "id": "B",
+                "text": "No — velocity is team-specific and cannot compare different teams",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Yes — but normalize by team size first (velocity per person)",
+                "correct": false,
+                "whyWrong": "Even normalized per person, teams estimate differently. Per-person velocity is still comparing different scales — apples to oranges."
+              },
+              {
+                "id": "D",
+                "text": "Only if both teams use the exact same estimation method",
+                "correct": false,
+                "whyWrong": "Even with the same method, teams calibrate differently over time. Their contexts differ. Velocity comparison across teams is fundamentally flawed."
+              }
+            ],
+            "explanation": "Velocity is team-specific. Different teams estimate differently — there's no universal \"story point.\" Menu Lab's \"5 points\" might equal Catering Team's \"8 points.\" Velocity is for planning (how much can THIS team do?), NOT for comparing teams or judging productivity.",
+            "correctFeedback": {
+              "text": "Velocity is team-specific. Different teams estimate differently — there's no universal \"story point.\" Menu Lab's \"5 points\" might equal Catering Team's \"8 points.\" Velocity is for planning (how much can THIS team do?), NOT for comparing teams or judging productivity.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Velocity is a planning tool, not a performance metric. Use it to predict how much your team can deliver, not to rank teams against each other."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Different teams, different estimation scales. The Catering Team estimates bigger. Their '5 points' is our '8 points.' You can't compare different scales.",
+              "character": "Taylor Kim",
+              "characterQuote": "Different teams, different estimation scales. The Catering Team estimates bigger. Their '5 points' is our '8 points.' You can't compare different scales."
+            },
+            "retryHint": "Is there a universal \"story point\" that all teams share? If not, what does comparing their velocities actually tell you?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Science of Agile Team Formation",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The 7±2 Rule",
+            "subtitle": "Optimal Team Size",
+            "content": "The optimal Agile team size is 5-9 members. This isn't arbitrary — it's based on communication science.\n\n**Communication Paths Formula:** n(n-1)/2\n\n| Team Size | Communication Paths | Effect |\n|-----------|-------------------|--------|\n| 4 people | 6 paths | TOO SMALL — bottlenecks, burnout, skill gaps |\n| 7 people | 21 paths | OPTIMAL — efficient collaboration |\n| 12 people | 66 paths | TOO LARGE — coordination chaos, sub-groups |\n\n**The Trade-offs:**\n- **Too Small (4 or fewer):** One person out = 25% capacity lost. Missing skills. Single points of failure.\n- **Optimal (5-9):** Everyone contributes. Manageable coordination. Cross-functional coverage.\n- **Too Large (10+):** Exponential overhead. Sub-groups form. Standups become long meetings.",
+            "diagram": {
+              "image": "/images/D1L2_diagram_team_size.webp",
+              "alt": "Team size and communication paths diagram"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Cross-Functional Teams & T-Shaped Members",
+            "subtitle": "",
+            "content": "**Cross-Functional Team:** A team with ALL competencies needed to deliver value WITHOUT external dependencies.\n\n**T-Shaped Member:** Deep expertise in one domain (vertical bar of the T) PLUS broad skills and willingness to help across other areas (horizontal bar of the T).\n\n**I-Shaped Specialist (Problem):** Only does one thing. Creates silos and dependencies. \"That's not my job\" mentality. Every missing skill = waiting for external help.\n\n**Why T-Shaped Wins:**\n- Maya (T-shaped): Deep pastry expertise, but can help with plating, sourcing, and customer feedback\n- An I-shaped pastry chef: Only does pastry. Blocks the team when design, marketing, or operations work is needed",
+            "diagram": {
+              "image": "/images/D1L2_diagram_t_shaped.webp",
+              "alt": "T-shaped vs I-shaped team members"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Velocity",
+            "subtitle": "The Misunderstood Metric",
+            "content": "**What Velocity IS:**\n- Amount of work completed in a sprint (story points)\n- A PLANNING tool (\"How much can WE do next sprint?\")\n- Team-specific (each team has its own estimation scale)\n\n**What Velocity is NOT:**\n- A performance metric for comparing teams\n- A way to judge individual productivity\n- Counting partial work (only DONE counts)\n\n**Velocity Rules:**\n1. Count ONLY fully completed work\n2. Partial work = 0 points (counts when finished in a future sprint)\n3. Calculate at end of each sprint\n4. Use for planning YOUR team's capacity, never for cross-team comparison"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Building a Distributed Agile Team",
+        "scenario": {
+          "title": "Building a Distributed Agile Team",
+          "description": "Success! The Menu Innovation Lab is thriving. Now Savory & Co. is expanding globally. They're forming a NEW team — the Global Menu Localization Squad — to adapt menus for regional markets (Asia, Europe, Latin America). This team will be DISTRIBUTED across Singapore, London, and Mexico City.",
+          "images": [
+            {
+              "src": "/images/D1L2_comic_transfer.webp",
+              "alt": "Distributed team across time zones"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "How should Alex approach team size for the distributed team?",
+            "points": 100,
+            "scenario_name": "Team Size for Distributed Teams",
+            "situation": "Alex is forming a distributed team across Singapore, London, and Mexico City. He asks: \"Does the 7±2 rule still apply for distributed teams, or should we go smaller since coordination is harder across time zones?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Make distributed teams smaller (4-5 people) to reduce coordination overhead",
+                "correct": false,
+                "whyWrong": "Smaller teams create bottlenecks regardless of location. A 4-person distributed team has skill gaps AND loses redundancy across time zones."
+              },
+              {
+                "id": "B",
+                "text": "The 7±2 rule still applies — communication overhead makes it even MORE critical",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Distributed teams can be larger (12+) since they don't all meet at once",
+                "correct": false,
+                "whyWrong": "Larger distributed teams are HARDER to coordinate. More meetings across more time zones. The 7±2 rule is about cognitive load and relationships, which apply regardless of location."
+              },
+              {
+                "id": "D",
+                "text": "Split into 3 mini-teams of 2-3 people per time zone",
+                "correct": false,
+                "whyWrong": "Splitting into 3 mini-teams of 2-3 creates 3 weak sub-teams instead of one strong team. Each mini-team lacks cross-functional coverage and can't deliver independently."
+              }
+            ],
+            "explanation": "The 7±2 rule is MORE important for distributed teams, not less. Communication overhead is already higher remotely — you can't afford exponential overhead from large teams on top of that. Keeping team size optimal (5-9) ensures manageable coordination across time zones.",
+            "correctFeedback": {
+              "text": "The 7±2 rule is MORE important for distributed teams, not less. Communication overhead is already higher remotely — you can't afford exponential overhead from large teams on top of that. Keeping team size optimal (5-9) ensures manageable coordination across time zones.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Distributed teams face inherent communication challenges. Keeping team size optimal (5-9) ensures you don't add unnecessary complexity."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Going smaller doesn't solve distributed challenges — it creates new ones. Too few people means skill gaps and no time zone coverage.",
+              "character": "Taylor Kim",
+              "characterQuote": "Going smaller doesn't solve distributed challenges — it creates new ones. Too few people means skill gaps and no time zone coverage."
+            },
+            "retryHint": "Does being distributed make communication easier or harder? If harder, should you increase or decrease the number of communication paths?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What should replace the physical Kanban board for the distributed team?",
+            "points": 100,
+            "scenario_name": "Work Visibility for Remote Teams",
+            "situation": "The distributed team can't gather around a physical Kanban board like the co-located Menu Innovation Lab does. Taylor needs to find a way to maintain real-time work visibility across 3 time zones.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Detailed status emails sent at the start and end of each time zone's workday",
+                "correct": false,
+                "whyWrong": "With 3 time zones, you'd have 6 status emails daily — information overload, not visibility. Emails are asynchronous and quickly outdated."
+              },
+              {
+                "id": "B",
+                "text": "Digital Kanban tool (Jira, Trello) accessible to all team members 24/7",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Trust the team — visibility tools aren't needed if people communicate well",
+                "correct": false,
+                "whyWrong": "Trust is essential, but visibility is still critical. Without shared visibility, distributed teams duplicate work, miss blockers, and lose alignment."
+              },
+              {
+                "id": "D",
+                "text": "Daily video calls where each member reports their status",
+                "correct": false,
+                "whyWrong": "Daily video calls are point-in-time (like standups). The team needs persistent visibility throughout the day, not just during one call."
+              }
+            ],
+            "explanation": "Digital Kanban boards provide the same real-time visibility as physical boards, but accessible from any location and any time zone. Singapore can see London's progress; Mexico City can see Singapore's updates — all without waiting for meetings or emails.",
+            "correctFeedback": {
+              "text": "Digital Kanban boards provide the same real-time visibility as physical boards, but accessible from any location and any time zone. Singapore can see London's progress; Mexico City can see Singapore's updates — all without waiting for meetings or emails.",
+              "character": "Devon Brown",
+              "characterQuote": "Trello works perfectly for distributed teams. I check it first thing in the morning to see what Singapore accomplished overnight."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Trust doesn't replace visibility. Even high-trust teams need shared information tools — especially when they can't overhear each other across time zones.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Trust doesn't replace visibility. Even high-trust teams need shared information tools — especially when they can't overhear each other across time zones."
+            },
+            "retryHint": "What kind of tool provides real-time, persistent visibility that works across time zones without requiring everyone to be online at the same time?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "drag_drop",
+            "question": "Drag each adaptation to the correct category — HELPFUL or NOT HELPFUL for distributed teams:",
+            "points": 100,
+            "scenario_name": "Distributed Team Adaptations",
+            "situation": "Taylor is preparing guidelines for the distributed Global Menu Localization Squad. She needs to determine which common adaptations actually help distributed Agile teams succeed versus which ones will cause problems.",
+            "chips": [
+              {
+                "id": "video_standups_instead_of_inperson_meetings",
+                "label": "Video standups instead of in-person meetings",
+                "correctZone": "helpful"
+              },
+              {
+                "id": "async_communication_tools_slack_teams",
+                "label": "Async communication tools (Slack, Teams)",
+                "correctZone": "helpful"
+              },
+              {
+                "id": "relying_on_osmotic_communication_overhearing_conversations",
+                "label": "Relying on osmotic communication (overhearing conversations)",
+                "correctZone": "not_helpful"
+              },
+              {
+                "id": "intentional_documentation_of_decisions_and_context",
+                "label": "Intentional documentation of decisions and context",
+                "correctZone": "helpful"
+              },
+              {
+                "id": "scheduling_all_meetings_at_headquarters_time_zone_only",
+                "label": "Scheduling all meetings at headquarters' time zone only",
+                "correctZone": "not_helpful"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "helpful",
+                "label": "HELPFUL",
+                "detail": "Maintains face-to-face ritual while enabling remote participation"
+              },
+              {
+                "id": "not_helpful",
+                "label": "NOT HELPFUL",
+                "detail": "Cannot overhear conversations remotely — distributed teams need intentional communication"
+              }
+            ],
+            "explanation": "Distributed Agile teams need intentional adaptations: video standups, async tools, and documented decisions bridge the distance. But relying on osmotic communication (which only works in-person) and headquarters-only scheduling undermine distributed collaboration.",
+            "correctFeedback": {
+              "text": "Distributed Agile teams need intentional adaptations: video standups, async tools, and documented decisions bridge the distance. But relying on osmotic communication (which only works in-person) and headquarters-only scheduling undermine distributed collaboration.",
+              "character": "Taylor Kim",
+              "characterQuote": "The key is intentionality. What happens naturally in a co-located team — overhearing, quick chats — must be deliberately replaced with digital equivalents for distributed teams."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Osmotic communication doesn't work remotely — you can't overhear a Slack channel the way you overhear a hallway conversation. And meetings should rotate time zones for fairness.",
+              "character": "Taylor Kim",
+              "characterQuote": "Osmotic communication doesn't work remotely — you can't overhear a Slack channel the way you overhear a hallway conversation. And meetings should rotate time zones for fairness."
+            },
+            "retryHint": "Think about what works naturally in an office (overhearing, quick chats, shared physical boards) versus what needs to be deliberately replaced for remote teams."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered the science of Agile team formation — from optimal team size to cross-functional composition to the proper use of velocity metrics.",
+        "key_takeaways": [
+          "7±2 Rule: Optimal Agile team size is 5-9 members. Too small = bottlenecks and burnout. Too large = communication chaos and sub-groups.",
+          "Cross-Functional & T-Shaped: Teams need ALL skills to deliver value without external dependencies. T-shaped members have deep expertise PLUS broad collaboration ability.",
+          "Kanban = Information Radiator: Real-time, persistent work visibility beats status emails and standup memory. Anyone can glance at the board anytime.",
+          "Velocity = Completed Work Only: Partial work contributes ZERO to velocity. Only DONE stories count. The half-finished story carries over to the next sprint.",
+          "Velocity is NOT for Comparing Teams: Each team has its own estimation scale. Velocity is a planning tool for YOUR team's capacity, never a cross-team benchmark.",
+          "Distributed Teams Follow the Same Rules: The 7±2 rule, cross-functional composition, and velocity principles apply — but practices need digital equivalents (digital Kanban, async tools, video standups)."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Carlos wanted 12 specialists. Ava wanted 4 generalists. Both were wrong. Seven cross-functional, T-shaped team members delivered TWICE what the specialist group ever did. And when Carlos tried to compare velocities between teams, I finally understood: velocity is a planning tool, not a scoreboard. Every team has its own scale. Now I build teams based on the science — not opinions."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L3",
+          "title": "Sprint Planning & Execution",
+          "description": "You've built the team — now plan the sprint. Learn backlog refinement, capacity planning, and sprint commitment using velocity as your guide."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What is the BEST reason for the PM's concern?",
+            "points": 50,
+            "scenario_name": "Team Size Concern",
+            "situation": "A project manager is forming a new Agile team. The functional manager offers to assign 14 specialists from different departments to ensure all skills are covered. The PM is concerned about this approach.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Specialists may have conflicting priorities with their functional departments",
+                "correct": false,
+                "whyWrong": "While matrix conflicts are a real concern, it's not the primary issue with a 14-person team. The team size itself creates the bigger problem."
+              },
+              {
+                "id": "B",
+                "text": "14 people exceeds the optimal Agile team size, creating communication overhead",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Specialists cannot work on Agile teams effectively",
+                "correct": false,
+                "whyWrong": "Specialists CAN work on Agile teams — ideally as T-shaped members. The issue here is team size, not specialist skills."
+              },
+              {
+                "id": "D",
+                "text": "The functional manager should not be involved in team formation",
+                "correct": false,
+                "whyWrong": "Functional managers are often involved in resource allocation. The concern isn't WHO assigns resources, but HOW MANY are being assigned."
+              }
+            ],
+            "explanation": "14 people far exceeds the optimal 5-9 member range. Communication paths = 14x13/2 = 91 paths — massive coordination overhead. The team will fragment into sub-groups, standups will become long meetings, and decision-making will stall.",
+            "correctFeedback": {
+              "text": "14 people far exceeds the optimal 5-9 member range. Communication paths = 14x13/2 = 91 paths — massive coordination overhead. The team will fragment into sub-groups, standups will become long meetings, and decision-making will stall.",
+              "character": "Taylor Kim",
+              "characterQuote": "91 communication paths! That team would spend more time coordinating than creating. The 7±2 rule exists for exactly this reason."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The primary concern with 14 people isn't skill conflict or role boundaries — it's team dynamics. Think about what happens to communication as team size grows.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The primary concern with 14 people isn't skill conflict or role boundaries — it's team dynamics. Think about what happens to communication as team size grows."
+            },
+            "retryHint": "What mathematical formula governs communication overhead in teams? Apply it to 14 people and consider the impact on daily coordination."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the Scrum Master report?",
+            "points": 50,
+            "scenario_name": "Sprint Velocity Calculation",
+            "situation": "An Agile team completed 4 user stories worth 25 story points this sprint. A 5th story worth 8 points is 75% complete. The product owner asks for the sprint velocity.",
+            "options": [
+              {
+                "id": "A",
+                "text": "25 story points",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "31 story points (25 + 6 for 75% of 8)",
+                "correct": false,
+                "whyWrong": "Velocity does NOT prorate partial work. That 75% complete story could take 1 day or 1 week to finish — we don't know. Only fully DONE work counts."
+              },
+              {
+                "id": "C",
+                "text": "33 story points (25 + 8 for the story in progress)",
+                "correct": false,
+                "whyWrong": "A story that's not done cannot count at full value. Velocity measures throughput of completed work only."
+              },
+              {
+                "id": "D",
+                "text": "Cannot be calculated until all stories are complete",
+                "correct": false,
+                "whyWrong": "Velocity is calculated at sprint end. We measure what's Done NOW. The incomplete story carries over to the next sprint."
+              }
+            ],
+            "explanation": "Velocity counts ONLY completed work. The 4 finished stories = 25 points. The 75% complete story contributes ZERO to this sprint — it will count when fully done next sprint. Partial work is never included in velocity.",
+            "correctFeedback": {
+              "text": "Velocity counts ONLY completed work. The 4 finished stories = 25 points. The 75% complete story contributes ZERO to this sprint — it will count when fully done next sprint. Partial work is never included in velocity.",
+              "character": "Taylor Kim",
+              "characterQuote": "25 points. The 75% complete story carries over. We don't deliver partial value to customers, so we don't count partial work in velocity."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Velocity doesn't count partial completion, even if the story is 'almost done.' Only DONE work delivers value and counts toward velocity.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Velocity doesn't count partial completion, even if the story is 'almost done.' Only DONE work delivers value and counts toward velocity."
+            },
+            "retryHint": "Does \"75% complete\" mean the story is done? If not, how many points does it contribute to this sprint's velocity?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the PRIMARY reason velocity cannot be used to compare teams?",
+            "points": 50,
+            "scenario_name": "Cross-Team Velocity Comparison",
+            "situation": "A sponsor wants to compare the velocities of three Agile teams working on different products to determine which team is most productive. The PM explains why this comparison is problematic.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Teams work on different products with different complexity",
+                "correct": false,
+                "whyWrong": "Product complexity affects velocity, but that's not the primary issue. Even teams on similar products can't be compared because their estimation scales differ."
+              },
+              {
+                "id": "B",
+                "text": "Each team has its own estimation scale, making cross-team comparison meaningless",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Velocity fluctuates sprint to sprint and isn't reliable",
+                "correct": false,
+                "whyWrong": "Velocity does fluctuate, but that's not why comparison fails. Even stable velocities can't be compared across teams due to different estimation calibration."
+              },
+              {
+                "id": "D",
+                "text": "Comparing velocities discourages team collaboration",
+                "correct": false,
+                "whyWrong": "While velocity comparison can harm team culture, the fundamental issue is mathematical: different scales can't be compared."
+              }
+            ],
+            "explanation": "Velocity is team-specific because each team develops its own sense of what a \"story point\" means. Team A's 5 points does not equal Team B's 5 points. There is no universal story point standard, so cross-team comparison is mathematically meaningless.",
+            "correctFeedback": {
+              "text": "Velocity is team-specific because each team develops its own sense of what a \"story point\" means. Team A's 5 points does not equal Team B's 5 points. There is no universal story point standard, so cross-team comparison is mathematically meaningless.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "There's no universal story point. Each team calibrates differently. Comparing their velocities is like comparing measurements in different units."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The issue isn't complexity or fluctuation — it's fundamentally that teams use different scales. You can't compare numbers that mean different things.",
+              "character": "Taylor Kim",
+              "characterQuote": "The issue isn't complexity or fluctuation — it's fundamentally that teams use different scales. You can't compare numbers that mean different things."
+            },
+            "retryHint": "Is a \"story point\" the same size across all teams? If Team A's \"5 points\" equals Team B's \"8 points,\" what does comparing their totals actually tell you?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What should the Scrum Master implement?",
+            "points": 50,
+            "scenario_name": "Information Radiator",
+            "situation": "During a retrospective, team members complain they're confused about who's working on what throughout the day. Daily standups help, but by afternoon everyone forgets the updates. The team needs persistent visibility into work assignments and progress.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Add a second standup meeting in the afternoon",
+                "correct": false,
+                "whyWrong": "More meetings isn't the solution. Standups are point-in-time — the team needs persistent, real-time visibility, not more verbal updates."
+              },
+              {
+                "id": "B",
+                "text": "Send status email summaries after each standup",
+                "correct": false,
+                "whyWrong": "Emails are static and quickly outdated. By afternoon, the morning email is stale. Need real-time visibility that updates continuously."
+              },
+              {
+                "id": "C",
+                "text": "Implement a Kanban board as an information radiator",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Have the Scrum Master track and report on all work assignments",
+                "correct": false,
+                "whyWrong": "This contradicts self-organization. Team members should track their own work on a shared board, not rely on the Scrum Master to monitor and report assignments."
+              }
+            ],
+            "explanation": "Kanban boards provide persistent, real-time work visibility. Team members self-assign tasks and update status. Anyone can glance at the board anytime to see current work state — no meetings or emails required.",
+            "correctFeedback": {
+              "text": "Kanban boards provide persistent, real-time work visibility. Team members self-assign tasks and update status. Anyone can glance at the board anytime to see current work state — no meetings or emails required.",
+              "character": "Devon Brown",
+              "characterQuote": "The Kanban board changed everything. No more 'who's doing what?' conversations. Just glance at the board."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "More meetings and emails aren't the answer. The team needs something VISIBLE all day — an information radiator that shows work status in real time.",
+              "character": "Taylor Kim",
+              "characterQuote": "More meetings and emails aren't the answer. The team needs something VISIBLE all day — an information radiator that shows work status in real time."
+            },
+            "retryHint": "What Agile tool provides persistent, visual work tracking that's available all day — not just during meetings?"
+          }
+        ]
+      }
+    }
+  ]
+}

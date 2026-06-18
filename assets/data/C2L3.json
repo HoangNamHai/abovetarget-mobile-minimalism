@@ -1,0 +1,681 @@
+{
+  "lessonId": "C2L3",
+  "lessonTitle": "Critical Path Method",
+  "courseId": "C2",
+  "courseName": "Planning: Scope, Schedule, Cost",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Identify the critical path as the longest path through a network diagram with zero float",
+    "Calculate Total Float using the formula LS - ES (or LF - EF)",
+    "Perform Forward Pass (ES, EF) and Backward Pass (LS, LF) calculations",
+    "Determine which activities to crash for optimal cost/time trade-offs",
+    "Distinguish between Resource Leveling and Resource Smoothing"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "jordan_park",
+    "taylor_kim"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Two Weeks Short: How Do You Compress a 12-Week Schedule to 10?",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. The company is planning a city-wide Food Festival launching in 12 weeks. You've built a network diagram with two major paths: Path 1 (Venue Setup) at 12 weeks, and Path 2 (Vendor Logistics) at 11 weeks. Then the sponsor drops a bomb: the mayor moved the city celebration, and the festival must be ready in 10 weeks. That's a 2-week compression. But which path actually controls the finish date? Which activities can be crashed? And at what cost?",
+        "failure_cards": [
+          {
+            "id": "the_schedule_shock",
+            "icon": "📋",
+            "title": "The Schedule Shock",
+            "summary": "The sponsor demands a 2-week compression — but Alex doesn't know which path controls the schedule",
+            "image": "/images/C2L3_comic_kitchen_delay.webp",
+            "details": "Alex panics and tries to crash activities on both paths simultaneously. Jordan warns: \"Only one path actually controls when we finish. If we compress the wrong one, we waste money and still miss the deadline.\" Without identifying the critical path first, Alex spends $30K crashing vendor recruitment — a non-critical activity — and the festival still launches late."
+          },
+          {
+            "id": "the_path_that_controls_everything",
+            "icon": "⚠️",
+            "title": "The Path That Controls Everything",
+            "summary": "Path 1 is 12 weeks, Path 2 is 11 weeks — but \"critical\" means longest, not most important",
+            "image": "/images/C2L3_comic_network_diagram.webp",
+            "details": "Jordan maps both paths on the whiteboard. Path 1 (Venue Setup): A(2) + B(3) + D(4) + F(2) + H(1) = 12 weeks. Path 2 (Vendor Logistics): A(2) + C(3) + E(3) + G(2) + H(1) = 11 weeks. Path 1 is the critical path — zero float. Path 2 has 1 week of float. Any delay on Path 1 delays the entire festival. Alex realizes: \"To compress by 2 weeks, we MUST compress Path 1.\""
+          },
+          {
+            "id": "the_crashing_decision",
+            "icon": "💡",
+            "title": "The Crashing Decision",
+            "summary": "Crash Stage Construction alone for $30K, or split the crash across two activities for $23K?",
+            "image": "/images/C2L3_comic_critical_path.webp",
+            "details": "Taylor shows the crash options. Stage Construction (D) can be crashed 2 weeks at $15K/week. Sound/Lighting (F) can be crashed 1 week at $8K. Permits (B) and Inspection (H) cannot be crashed. Alex calculates: crashing D alone costs $30K, but crashing D by 1 week ($15K) plus F by 1 week ($8K) costs only $23K. Same 2-week result, $7K cheaper. Jordan approves: \"That's data-driven decision making.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "jordan_park",
+          "name": "Jordan Park",
+          "role": "Scheduler",
+          "quote": "Critical path = longest path = zero float. It's not about importance — it's about duration. Path 1 at 12 weeks controls when we finish. Crash the wrong path and you waste money without saving a single day."
+        },
+        "learning_hook": "**The Critical Path Method (CPM)** transforms a project schedule from a list of activities into a strategic decision-making tool. It tells you which activities control your finish date, where you have flexibility, and how to compress at minimum cost. Let's master it."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "compress_the_food_festival_schedule",
+        "title": "Compress the Food Festival Schedule",
+        "description": "Jordan guides you through identifying the critical path, calculating float, performing pass calculations, and making optimal crashing decisions for the Food Festival.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Which path is the CRITICAL PATH, and what does that mean for the project?",
+            "points": 150,
+            "scenario_name": "Identify the Critical Path",
+            "situation": "The Food Festival network diagram has two paths. Path 1 (Venue Setup): A(2wk) + B(3wk) + D(4wk) + F(2wk) + H(1wk) = 12 weeks. Path 2 (Vendor Logistics): A(2wk) + C(3wk) + E(3wk) + G(2wk) + H(1wk) = 11 weeks. Both paths start with Activity A (Venue Selection) and end with Activity H (Final Inspection).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Path 2 (Vendor Logistics) because it has more vendor-related activities and higher business risk",
+                "correct": false,
+                "whyWrong": "Critical path is determined by DURATION, not business risk or activity type. Path 1 (12 weeks) is longer than Path 2 (11 weeks), making Path 1 critical regardless of content."
+              },
+              {
+                "id": "B",
+                "text": "Both paths are critical because they share Activity A and Activity H",
+                "correct": false,
+                "whyWrong": "Sharing endpoints does not make paths critical. Only the LONGEST path(s) are critical. Path 1 (12 weeks) > Path 2 (11 weeks)."
+              },
+              {
+                "id": "C",
+                "text": "Path 1 (Venue Setup) because it is the LONGEST path (12 weeks) with ZERO float — any delay on Path 1 delays the entire project",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Neither path is critical because the project has 1 week of scheduling flexibility",
+                "correct": false,
+                "whyWrong": "Every project has at least one critical path. The 1-week flexibility exists only on Path 2. Path 1 has zero flexibility and controls the finish date."
+              }
+            ],
+            "explanation": "The critical path is the LONGEST sequence of activities through the network. Path 1 at 12 weeks is longer than Path 2 at 11 weeks, making Path 1 critical with zero float. Any delay on Path 1 activities (A, B, D, F, H) directly delays the festival. Path 2 has 1 week of float (12 - 11 = 1 week), meaning its activities can slip up to 1 week without impacting the launch date.",
+            "correctFeedback": {
+              "text": "The critical path is the LONGEST sequence of activities through the network. Path 1 at 12 weeks is longer than Path 2 at 11 weeks, making Path 1 critical with zero float. Any delay on Path 1 activities (A, B, D, F, H) directly delays the festival. Path 2 has 1 week of float (12 - 11 = 1 week), meaning its activities can slip up to 1 week without impacting the launch date.",
+              "character": "Jordan Park",
+              "characterQuote": "Path 1 is our critical path — the longest path. It has ZERO float. Any delay on activities A, B, D, F, or H delays the festival. Path 2 has 1 week of flexibility."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Critical path = longest path through the network. Calculate the total duration of each path. The one with the highest total is critical because it controls your finish date.",
+              "character": "Jordan Park",
+              "characterQuote": "Critical path = longest path through the network. Calculate the total duration of each path. The one with the highest total is critical because it controls your finish date."
+            },
+            "retryHint": "Add up the durations for each path. The path with the longest total duration is the critical path — it has zero float and controls the project finish date."
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Drag each value to the correct CPM date field for Activity D:",
+            "points": 200,
+            "scenario_name": "Forward and Backward Pass Calculation",
+            "situation": "Activity D (Stage Construction) is on the CRITICAL PATH. Its predecessor B (Permit Acquisition) finishes at Day 35. Activity D has a duration of 28 days (4 weeks). The project duration is 84 days (12 weeks). Jordan asks you to calculate D's schedule dates using Forward Pass and Backward Pass.",
+            "chips": [
+              {
+                "id": "day_35",
+                "label": "Day 35",
+                "correctZone": "early_start_es"
+              },
+              {
+                "id": "day_63",
+                "label": "Day 63",
+                "correctZone": "early_finish_ef"
+              },
+              {
+                "id": "day_63",
+                "label": "Day 63",
+                "correctZone": "late_finish_lf"
+              },
+              {
+                "id": "day_35",
+                "label": "Day 35",
+                "correctZone": "late_start_ls"
+              },
+              {
+                "id": "0_days",
+                "label": "0 days",
+                "correctZone": "total_float"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "early_start_es",
+                "label": "Early Start (ES)",
+                "detail": "Forward Pass: ES = predecessor's EF. B finishes Day 35, so D starts Day 35"
+              },
+              {
+                "id": "early_finish_ef",
+                "label": "Early Finish (EF)",
+                "detail": "Forward Pass: EF = ES + Duration = 35 + 28 = Day 63"
+              },
+              {
+                "id": "late_finish_lf",
+                "label": "Late Finish (LF)",
+                "detail": "Backward Pass: D is on the critical path, so LF = EF = Day 63 (zero float)"
+              },
+              {
+                "id": "late_start_ls",
+                "label": "Late Start (LS)",
+                "detail": "Backward Pass: LS = LF - Duration = 63 - 28 = Day 35 (zero float)"
+              },
+              {
+                "id": "total_float",
+                "label": "Total Float",
+                "detail": "Float = LS - ES = 35 - 35 = 0 days. D is critical — no scheduling flexibility"
+              }
+            ],
+            "explanation": "Forward Pass (left to right) calculates the EARLIEST dates: ES = predecessor's EF, EF = ES + Duration. Backward Pass (right to left) calculates the LATEST dates: LF = successor's LS, LS = LF - Duration. Total Float = LS - ES (or LF - EF). For critical path activities, Float = 0, meaning ES = LS and EF = LF. Any delay on Activity D directly delays the project.",
+            "correctFeedback": {
+              "text": "Forward Pass (left to right) calculates the EARLIEST dates: ES = predecessor's EF, EF = ES + Duration. Backward Pass (right to left) calculates the LATEST dates: LF = successor's LS, LS = LF - Duration. Total Float = LS - ES (or LF - EF). For critical path activities, Float = 0, meaning ES = LS and EF = LF. Any delay on Activity D directly delays the project.",
+              "character": "Jordan Park",
+              "characterQuote": "Perfect pass calculations. ES = LS = Day 35 and EF = LF = Day 63 confirms D is on the critical path with zero float. No room for delay."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Forward Pass gives you ES and EF — the earliest start and finish. Backward Pass gives you LS and LF — the latest allowable dates. Float = LS - ES. For critical activities, the early and late dates are identical.",
+              "character": "Jordan Park",
+              "characterQuote": "Forward Pass gives you ES and EF — the earliest start and finish. Backward Pass gives you LS and LF — the latest allowable dates. Float = LS - ES. For critical activities, the early and late dates are identical."
+            },
+            "retryHint": "Forward Pass goes left to right: ES = when the predecessor finishes, EF = ES + Duration. Backward Pass goes right to left: for critical activities, LF = EF and LS = ES. Float = LS - ES."
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Which activities should Alex crash to achieve 2-week compression at MINIMUM cost?",
+            "points": 150,
+            "scenario_name": "Optimal Crashing Decision",
+            "situation": "The sponsor demands a 2-week compression (12 weeks to 10 weeks). The critical path crash options are: Activity A (Venue Selection) — cannot crash; Activity B (Permit Acquisition) — cannot crash (government dependency); Activity D (Stage Construction) — crash up to 2 weeks at $15K/week; Activity F (Sound/Lighting) — crash up to 1 week at $8K/week; Activity H (Final Inspection) — cannot crash (mandatory). Two viable options exist: crash D by 2 weeks ($30K), or crash D by 1 week plus F by 1 week ($23K).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Crash Activity B (Permit Acquisition) by 2 weeks — fastest path to compression",
+                "correct": false,
+                "whyWrong": "Activity B is an EXTERNAL DEPENDENCY — government permit processing cannot be crashed. You cannot speed up bureaucracy with money."
+              },
+              {
+                "id": "B",
+                "text": "Crash Activity D (Stage Construction) by 2 weeks for $30K — simplest approach",
+                "correct": false,
+                "whyWrong": "This WORKS but is NOT optimal. Crashing D alone for 2 weeks costs $30K. Crashing D(1wk) + F(1wk) achieves the same result for $23K — a $7K savings."
+              },
+              {
+                "id": "C",
+                "text": "Crash Activity C (Vendor Recruitment) by 2 weeks — cheapest available activity",
+                "correct": false,
+                "whyWrong": "Activity C is on Path 2 (NON-CRITICAL). Crashing non-critical activities does NOTHING to shorten the project. Path 1 still controls the finish at 12 weeks."
+              },
+              {
+                "id": "D",
+                "text": "Crash Activity D by 1 week ($15K) + Activity F by 1 week ($8K) = $23K total",
+                "correct": true
+              }
+            ],
+            "explanation": "The optimal crash combination is D (1 week at $15K) + F (1 week at $8K) = $23K. This achieves the same 2-week compression as crashing D alone ($30K) but saves $7K. Always analyze crash cost combinations to find the minimum cost solution. Crashing non-critical activities (like C on Path 2) does nothing to shorten the project — only critical path activities control the finish date.",
+            "correctFeedback": {
+              "text": "The optimal crash combination is D (1 week at $15K) + F (1 week at $8K) = $23K. This achieves the same 2-week compression as crashing D alone ($30K) but saves $7K. Always analyze crash cost combinations to find the minimum cost solution. Crashing non-critical activities (like C on Path 2) does nothing to shorten the project — only critical path activities control the finish date.",
+              "character": "Taylor Kim",
+              "characterQuote": "You found the optimal combination. Same 2-week result, $7K cheaper. That's professional schedule compression — analyze all crash cost options before committing."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: only crash CRITICAL PATH activities. And when multiple activities can be crashed, compare cost combinations to find the cheapest way to meet your target.",
+              "character": "Taylor Kim",
+              "characterQuote": "Remember: only crash CRITICAL PATH activities. And when multiple activities can be crashed, compare cost combinations to find the cheapest way to meet your target."
+            },
+            "retryHint": "Only crash critical path activities. When you need 2 weeks of compression, compare ALL combinations: D alone ($30K) vs D+F ($23K). Choose the cheapest option that meets the target."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Critical Path Method Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "What Is the Critical Path?",
+            "subtitle": "",
+            "content": "The **Critical Path** is the LONGEST sequence of activities through a project network diagram. It determines the shortest possible project duration.\n\n**Key characteristics:**\n\n| Property | Description |\n|----------|-------------|\n| **Zero Float** | No scheduling flexibility — any delay extends the project |\n| **Controls Finish Date** | Project duration = Critical path duration |\n| **Longest, Not Most Important** | \"Critical\" refers to duration, not business priority |\n| **At Least One Per Project** | Every project has at least one critical path |\n\n**Food Festival Example:**\n\n- **Path 1 (Venue Setup):** A + B + D + F + H = 2 + 3 + 4 + 2 + 1 = **12 weeks (CRITICAL)**\n- **Path 2 (Vendor Logistics):** A + C + E + G + H = 2 + 3 + 3 + 2 + 1 = **11 weeks (1 week float)**\n\nPath 1 is critical because 12 > 11. Any delay on A, B, D, F, or H delays the festival. Path 2 activities (C, E, G) can be delayed up to 1 week without impact."
+          },
+          {
+            "id": "tab2",
+            "title": "Float, Forward Pass, and Backward Pass",
+            "subtitle": "",
+            "content": "**Float (Slack)** is the amount of time an activity can be delayed without impacting the project finish date.\n\n**CPM Formulas:**\n\n| Calculation | Formula | Purpose |\n|-------------|---------|---------|\n| Early Start (ES) | Latest EF of all predecessors | Forward Pass — earliest an activity can start |\n| Early Finish (EF) | ES + Duration | Forward Pass — earliest an activity can finish |\n| Late Finish (LF) | Earliest LS of all successors | Backward Pass — latest an activity can finish |\n| Late Start (LS) | LF - Duration | Backward Pass — latest an activity can start |\n| Total Float | LS - ES (or LF - EF) | Scheduling flexibility — 0 = critical |\n\n**Forward Pass** (left to right): calculates the EARLIEST possible dates.\n**Backward Pass** (right to left): calculates the LATEST allowable dates.\n\n**Example — Activity D (Critical):** ES = 35, EF = 63, LS = 35, LF = 63, Float = 0\n**Example — Activity C (Non-Critical):** Float = 12 - 11 = 1 week of flexibility\n\n**Key Insight:** Float is a strategic resource, not wasted time. Use it to redirect resources from non-critical activities to the critical path.",
+            "diagram": {
+              "image": "/images/C2L3_diagram_network.webp",
+              "alt": "Network diagram with critical path and float"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Schedule Compression",
+            "subtitle": "Crashing",
+            "content": "**Crashing** adds resources to critical path activities to reduce their duration. It trades cost for time.\n\n**Four Rules of Crashing:**\n\n1. **Only crash CRITICAL PATH activities** — Crashing non-critical activities wastes money (they have float)\n2. **Choose lowest cost per time unit** — If D costs $15K/week and F costs $8K/week, prioritize F\n3. **Don't crash more than necessary** — Stop when target duration is reached or budget limit is hit\n4. **Recalculate after each crash** — Non-critical paths may become critical as you compress\n\n**Food Festival Crash Analysis:**\n\n| Option | Activities | Calculation | Result |\n|--------|-----------|-------------|--------|\n| Option 1 | D alone (2 weeks) | 2 x $15K | $30K |\n| Option 2 | D (1 wk) + F (1 wk) | $15K + $8K | **$23K (OPTIMAL)** |\n\nAfter crashing, always recalculate the critical path. If Path 1 drops to 10 weeks but Path 2 is 11 weeks, Path 2 becomes the new critical path."
+          },
+          {
+            "id": "tab4",
+            "title": "Resource Leveling vs Resource Smoothing",
+            "subtitle": "",
+            "content": "Two resource optimization techniques with different schedule impacts:\n\n| Aspect | Resource Leveling | Resource Smoothing |\n|--------|-------------------|-------------------|\n| **Purpose** | Balance resource demand to avoid overallocation | Optimize usage within schedule constraints |\n| **Schedule Impact** | Often EXTENDS the schedule | Does NOT extend the schedule |\n| **Constraint** | Resources are FIXED (limited availability) | Schedule is FIXED (deadline cannot move) |\n| **Uses Float?** | May consume all float and extend project | Uses only available float |\n\n**Leveling:** \"We'll extend the schedule to fit our resources.\"\n**Smoothing:** \"We'll adjust activities within their float to fit the schedule.\""
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Resource Constraint Creates Dual Critical Paths",
+        "scenario": {
+          "title": "Resource Constraint Creates Dual Critical Paths",
+          "description": "After Alex approves the crash plan (D + F for $23K), Jordan discovers a problem: the sound engineer is only available part-time. Activity F (Sound/Lighting Setup) will take 2 weeks no matter what — it CANNOT be crashed to 1 week. The original crash plan fails. Updated paths: Path 1 = A(2) + B(3) + D(3, crashed) + F(2, constrained) + H(1) = 11 weeks. Path 2 = A(2) + C(3) + E(3) + G(2) + H(1) = 11 weeks. Both paths are now 11 weeks. The sponsor still demands 10 weeks.",
+          "images": [
+            {
+              "src": "/images/C2L3_comic_transfer.webp",
+              "alt": "Dual critical paths after resource constraint"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "How many critical paths does the project now have, and what is the float for all activities?",
+            "points": 100,
+            "scenario_name": "Analyze the New Situation",
+            "situation": "After crashing D by 1 week, Path 1 drops to 11 weeks. But F cannot be crashed due to the sound engineer's limited availability. Path 2 was already 11 weeks. Now both paths are 11 weeks — equal in duration.",
+            "options": [
+              {
+                "id": "A",
+                "text": "1 critical path (Path 1 only) — Path 2 still has float because it was originally non-critical",
+                "correct": false,
+                "whyWrong": "Path 2 no longer has float. Float = Critical Path Duration - This Path Duration = 11 - 11 = 0 weeks. Both paths are equally long, so both are critical."
+              },
+              {
+                "id": "B",
+                "text": "2 critical paths (both Path 1 and Path 2) — all activities on both paths have ZERO float",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "0 critical paths — both paths have 1 week of float since neither is longer than the other",
+                "correct": false,
+                "whyWrong": "Every project has at least one critical path. When both paths equal 11 weeks, both are critical with zero float — not \"no critical path.\""
+              },
+              {
+                "id": "D",
+                "text": "1 critical path (Path 2 only) — Path 1 was compressed so it's no longer critical",
+                "correct": false,
+                "whyWrong": "Compressing Path 1 to match Path 2 doesn't make Path 1 non-critical. Both at 11 weeks means both are critical."
+              }
+            ],
+            "explanation": "When multiple paths have the same longest duration, ALL of them are critical. Path 1 = 11 weeks, Path 2 = 11 weeks. Both are the longest paths in the network, so both are critical with zero float. This means ANY delay on ANY activity on EITHER path delays the festival. Dual critical paths represent significantly higher risk because there are more activities with zero flexibility.",
+            "correctFeedback": {
+              "text": "When multiple paths have the same longest duration, ALL of them are critical. Path 1 = 11 weeks, Path 2 = 11 weeks. Both are the longest paths in the network, so both are critical with zero float. This means ANY delay on ANY activity on EITHER path delays the festival. Dual critical paths represent significantly higher risk because there are more activities with zero flexibility.",
+              "character": "Jordan Park",
+              "characterQuote": "Dual critical paths. Both are 11 weeks with zero float. Any delay on EITHER path delays the festival. We've gone from 5 critical activities to 10. Higher risk."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When two paths have the same duration, they're BOTH critical. Neither has float because there's no longer path to create that buffer. Calculate: longest path minus this path's duration.",
+              "character": "Jordan Park",
+              "characterQuote": "When two paths have the same duration, they're BOTH critical. Neither has float because there's no longer path to create that buffer. Calculate: longest path minus this path's duration."
+            },
+            "retryHint": "Float = longest path duration minus this path's duration. When both paths are 11 weeks: Float = 11 - 11 = 0 for both. Zero float = critical."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Which combination achieves 10 weeks at MINIMUM cost?",
+            "points": 100,
+            "scenario_name": "Dual-Path Compression Strategy",
+            "situation": "To compress from 11 to 10 weeks, Alex must address BOTH critical paths. Available crash options: Path 1 — D can be crashed 1 more week at $15K (F cannot be crashed). Path 2 — C (Vendor Recruitment) at $12K/week, E (Logistics Planning) at $10K/week, G (Vendor Setup) at $14K/week. Each can be crashed by 1 week maximum.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Crash D on Path 1 only ($15K) — this compresses the project to 10 weeks",
+                "correct": false,
+                "whyWrong": "Only compresses Path 1 to 10 weeks. Path 2 stays at 11 weeks and becomes the sole critical path. Project = 11 weeks. BOTH paths must be compressed."
+              },
+              {
+                "id": "B",
+                "text": "Crash C on Path 2 ($12K) + G on Path 2 ($14K) = $26K total",
+                "correct": false,
+                "whyWrong": "Only addresses Path 2. Path 1 stays at 11 weeks. Project = 11 weeks. You must crash at least one activity on EACH critical path."
+              },
+              {
+                "id": "C",
+                "text": "Crash D on Path 1 ($15K) + G on Path 2 ($14K) = $29K total",
+                "correct": false,
+                "whyWrong": "This works but isn't optimal. G costs $14K vs E's $10K. Choosing E saves $4K. Always select the lowest cost activity on each path."
+              },
+              {
+                "id": "D",
+                "text": "Crash D on Path 1 ($15K) + E on Path 2 ($10K) = $25K total",
+                "correct": true
+              }
+            ],
+            "explanation": "With dual critical paths, you must compress BOTH paths. Crashing only Path 1 (Option A) leaves Path 2 at 11 weeks — project still takes 11 weeks. Crashing only Path 2 (Option B) leaves Path 1 at 11 weeks. You need one crash on each path. D ($15K) is the only option on Path 1. For Path 2, E ($10K) is cheaper than C ($12K) or G ($14K). Optimal: D + E = $25K.",
+            "correctFeedback": {
+              "text": "With dual critical paths, you must compress BOTH paths. Crashing only Path 1 (Option A) leaves Path 2 at 11 weeks — project still takes 11 weeks. Crashing only Path 2 (Option B) leaves Path 1 at 11 weeks. You need one crash on each path. D ($15K) is the only option on Path 1. For Path 2, E ($10K) is cheaper than C ($12K) or G ($14K). Optimal: D + E = $25K.",
+              "character": "Taylor Kim",
+              "characterQuote": "Optimal dual-path compression. D handles Path 1, E handles Path 2, and you chose the cheapest Path 2 option. Total: $25K for a 10-week launch."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "With dual critical paths, you must crash at least one activity on EACH path. Then choose the cheapest activity on each path. Compare all Path 2 options: C ($12K), E ($10K), G ($14K).",
+              "character": "Taylor Kim",
+              "characterQuote": "With dual critical paths, you must crash at least one activity on EACH path. Then choose the cheapest activity on each path. Compare all Path 2 options: C ($12K), E ($10K), G ($14K)."
+            },
+            "retryHint": "With dual critical paths, you need at least one crash per path. For Path 1, D is the only option ($15K). For Path 2, compare C ($12K), E ($10K), and G ($14K) — which is cheapest?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "multi_select",
+            "question": "Select ALL TRUE statements about managing dual critical paths:",
+            "points": 100,
+            "scenario_name": "Dual Critical Path Risk",
+            "situation": "The festival is now on a 10-week timeline with both paths compressed. Alex needs to communicate the risk implications to the sponsor and management team.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Managing two critical paths is HIGHER RISK than managing one",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Any delay on EITHER path delays the entire project",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Path 2 now has 1 week of float again since we compressed it",
+                "correct": false,
+                "whyWrong": "After compressing both paths to 10 weeks, they are still EQUAL in duration. Float = 10 - 10 = 0. Neither path has float — both remain critical."
+              },
+              {
+                "id": "D",
+                "text": "Alex must monitor MORE activities closely because all activities on both paths have zero float",
+                "correct": true
+              }
+            ],
+            "explanation": "Dual critical paths mean double the risk. With one critical path, only 5 activities had zero float (A, B, D, F, H). Now ALL 10 activities across both paths have zero float. Any delay on any activity on either path delays the festival. This requires significantly tighter monitoring, more frequent status updates, and contingency planning for more activities.",
+            "correctFeedback": {
+              "text": "Dual critical paths mean double the risk. With one critical path, only 5 activities had zero float (A, B, D, F, H). Now ALL 10 activities across both paths have zero float. Any delay on any activity on either path delays the festival. This requires significantly tighter monitoring, more frequent status updates, and contingency planning for more activities.",
+              "character": "Jordan Park",
+              "characterQuote": "You understand the risk. Dual critical paths mean every activity is a potential schedule breaker. We need daily monitoring on all 10 activities now."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When both paths are critical, NEITHER has float. That means more activities with zero flexibility, more risk, and more to monitor. Think about what zero float means for project control.",
+              "character": "Jordan Park",
+              "characterQuote": "When both paths are critical, NEITHER has float. That means more activities with zero flexibility, more risk, and more to monitor. Think about what zero float means for project control."
+            },
+            "retryHint": "Dual critical paths means both paths have zero float. More activities with zero float = higher risk. What does that mean for monitoring and control?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **Critical Path Method** transforms a project schedule from a list of activities into a strategic decision-making tool. It identifies which activities control the finish date, where flexibility exists, and how to compress at minimum cost.",
+        "key_takeaways": [
+          "Critical Path = Longest Path = Zero Float — The longest sequence of activities controls the project finish date. Any delay on critical activities delays the project.",
+          "Float = LS - ES (or LF - EF) — Total Float shows how much an activity can be delayed without impacting the project. Zero float = critical.",
+          "Forward Pass calculates ES and EF — Move left to right: ES = predecessor's EF, EF = ES + Duration. These are the EARLIEST possible dates.",
+          "Backward Pass calculates LF and LS — Move right to left: LF = successor's LS, LS = LF - Duration. These are the LATEST allowable dates.",
+          "Only crash CRITICAL PATH activities — Crashing non-critical activities wastes money because they have float. Always compare crash cost combinations.",
+          "Recalculate after crashing — Non-critical paths may become critical. Dual critical paths mean higher risk and more activities to monitor."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think 'crash the schedule' meant 'throw money at everything.' Now I know: identify the critical path first, find the lowest-cost crash combination, and always recalculate afterward. When F couldn't be crashed, we got dual critical paths — double the risk. CPM isn't just math. It's strategic decision-making."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C2L4",
+          "title": "Schedule Compression Techniques",
+          "description": "You've learned crashing (add resources). Now learn fast-tracking (overlap activities) — and when each technique is appropriate based on risk tolerance and activity dependencies."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Which statement is TRUE about this project?",
+            "points": 50,
+            "scenario_name": "Critical Path Definition",
+            "situation": "A project network has three paths: Path A (15 weeks), Path B (18 weeks), and Path C (16 weeks). The project manager needs to determine the critical path and the project duration.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Path A is critical because it has the fewest activities",
+                "correct": false,
+                "whyWrong": "Critical path is determined by total DURATION, not number of activities. A path with fewer activities can still be the longest if each activity takes longer."
+              },
+              {
+                "id": "B",
+                "text": "Path B is the critical path because it is the longest path (18 weeks), and the project duration is 18 weeks",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "All three paths are critical because they all lead to project completion",
+                "correct": false,
+                "whyWrong": "Only the LONGEST path(s) are critical. Paths A and C have float and are non-critical."
+              },
+              {
+                "id": "D",
+                "text": "Path C is critical because it is the middle duration",
+                "correct": false,
+                "whyWrong": "\"Middle duration\" is irrelevant to criticality. Only the longest path is critical."
+              }
+            ],
+            "explanation": "The critical path is the LONGEST path through the network. Path B at 18 weeks is longer than Path A (15 weeks) and Path C (16 weeks). Therefore Path B is critical with zero float, and the project duration is 18 weeks. Path A has 3 weeks of float (18 - 15) and Path C has 2 weeks of float (18 - 16).",
+            "correctFeedback": {
+              "text": "The critical path is the LONGEST path through the network. Path B at 18 weeks is longer than Path A (15 weeks) and Path C (16 weeks). Therefore Path B is critical with zero float, and the project duration is 18 weeks. Path A has 3 weeks of float (18 - 15) and Path C has 2 weeks of float (18 - 16).",
+              "character": "Jordan Park",
+              "characterQuote": "Longest path = critical path = project duration. Path B at 18 weeks controls everything."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Critical path is determined by duration, not by number of activities or business importance. Add up each path and find the longest one.",
+              "character": "Jordan Park",
+              "characterQuote": "Critical path is determined by duration, not by number of activities or business importance. Add up each path and find the longest one."
+            },
+            "retryHint": "Compare the total duration of each path. The longest path is the critical path and determines the minimum project duration."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the Total Float for this activity?",
+            "points": 50,
+            "scenario_name": "Float Calculation",
+            "situation": "An activity has the following schedule data: Early Start (ES) = Day 20, Early Finish (EF) = Day 35, Late Start (LS) = Day 25, Late Finish (LF) = Day 40. The project manager needs to determine this activity's scheduling flexibility.",
+            "options": [
+              {
+                "id": "A",
+                "text": "0 days — the activity is on the critical path",
+                "correct": false,
+                "whyWrong": "Float = 25 - 20 = 5 days, not 0. This activity is NOT on the critical path."
+              },
+              {
+                "id": "B",
+                "text": "5 days",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "15 days",
+                "correct": false,
+                "whyWrong": "Check your arithmetic. LS - ES = 25 - 20 = 5, not 15."
+              },
+              {
+                "id": "D",
+                "text": "20 days",
+                "correct": false,
+                "whyWrong": "20 is the Early Start value, not the float. Float = LS - ES = 25 - 20 = 5 days."
+              }
+            ],
+            "explanation": "Total Float = LS - ES = 25 - 20 = 5 days. Alternatively: LF - EF = 40 - 35 = 5 days. This activity can be delayed up to 5 days without impacting the project finish date. Since float is greater than zero, this activity is NOT on the critical path.",
+            "correctFeedback": {
+              "text": "Total Float = LS - ES = 25 - 20 = 5 days. Alternatively: LF - EF = 40 - 35 = 5 days. This activity can be delayed up to 5 days without impacting the project finish date. Since float is greater than zero, this activity is NOT on the critical path.",
+              "character": "Jordan Park",
+              "characterQuote": "Float = LS - ES = 25 - 20 = 5 days. This activity has flexibility — it's not on the critical path."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Total Float = LS - ES. Plug in the values: 25 - 20 = ? Both formulas (LS - ES and LF - EF) give the same result.",
+              "character": "Jordan Park",
+              "characterQuote": "Total Float = LS - ES. Plug in the values: 25 - 20 = ? Both formulas (LS - ES and LF - EF) give the same result."
+            },
+            "retryHint": "Total Float = Late Start minus Early Start. Look at the given values: LS = 25, ES = 20. What is 25 minus 20?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the project manager do?",
+            "points": 50,
+            "scenario_name": "Crashing Decision",
+            "situation": "A project must be compressed by 2 weeks. It has two paths: Path 1 (Critical) at 20 weeks and Path 2 (Non-Critical) at 18 weeks with 2 weeks of float. Activity X is on Path 1 and can be crashed 2 weeks at $10K/week. Activity Y is on Path 2 and can be crashed 2 weeks at $5K/week.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Crash Activity Y by 2 weeks because it is cheaper ($10K total)",
+                "correct": false,
+                "whyWrong": "Activity Y is NON-CRITICAL. Crashing it does not reduce project duration — Path 1 still controls at 20 weeks. You'd spend $10K for zero schedule benefit."
+              },
+              {
+                "id": "B",
+                "text": "Crash Activity X by 2 weeks ($20K) because it is on the critical path",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Crash both X and Y to maximize compression",
+                "correct": false,
+                "whyWrong": "Crashing Y is useless — it just reduces Y's float. Only X (critical) needs crashing. Crashing Y wastes $10K."
+              },
+              {
+                "id": "D",
+                "text": "Crash Activity Y first, then X if needed",
+                "correct": false,
+                "whyWrong": "Starting with Y (non-critical) achieves nothing. Path 1 still controls the finish. Always start with critical path activities."
+              }
+            ],
+            "explanation": "Only crash CRITICAL PATH activities. Activity X is on Path 1 (critical). Crashing X by 2 weeks reduces the project from 20 to 18 weeks. Activity Y is on Path 2 (non-critical with 2 weeks of float) — crashing it does NOTHING to shorten the project because Path 1 still controls the finish date.",
+            "correctFeedback": {
+              "text": "Only crash CRITICAL PATH activities. Activity X is on Path 1 (critical). Crashing X by 2 weeks reduces the project from 20 to 18 weeks. Activity Y is on Path 2 (non-critical with 2 weeks of float) — crashing it does NOTHING to shorten the project because Path 1 still controls the finish date.",
+              "character": "Taylor Kim",
+              "characterQuote": "Correct. Only critical path activities control the finish date. Crashing non-critical activities is wasted money."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Cost per week matters, but ONLY for critical path activities. Crashing a non-critical activity — no matter how cheap — doesn't shorten the project.",
+              "character": "Taylor Kim",
+              "characterQuote": "Cost per week matters, but ONLY for critical path activities. Crashing a non-critical activity — no matter how cheap — doesn't shorten the project."
+            },
+            "retryHint": "Which path controls the project finish date? Only activities on THAT path can shorten the project when crashed. Non-critical activities have float — crashing them just gives them more float."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the MOST LIKELY outcome of resource leveling?",
+            "points": 50,
+            "scenario_name": "Resource Leveling Impact",
+            "situation": "A project has a critical path of 40 weeks. Due to resource constraints — two key engineers are overallocated and cannot work on overlapping activities — the project manager must apply resource leveling to resolve the conflict.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project duration will decrease because resources are used more efficiently",
+                "correct": false,
+                "whyWrong": "Leveling typically EXTENDS the schedule, not shortens it. It delays activities to balance resource demand."
+              },
+              {
+                "id": "B",
+                "text": "The project duration will likely increase beyond 40 weeks",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The project duration will stay exactly 40 weeks",
+                "correct": false,
+                "whyWrong": "Leveling rarely maintains the exact schedule. It prioritizes resolving resource conflicts, which usually means some activities are pushed later."
+              },
+              {
+                "id": "D",
+                "text": "The critical path will be eliminated",
+                "correct": false,
+                "whyWrong": "Every project has at least one critical path. Leveling may change WHICH path is critical, but it cannot eliminate the concept of a critical path."
+              }
+            ],
+            "explanation": "Resource Leveling often EXTENDS the schedule because it delays activities to avoid resource overallocation. When two activities need the same resource simultaneously, one must be delayed — which can extend the critical path. This is different from Resource Smoothing, which adjusts activities within their float and does NOT extend the schedule.",
+            "correctFeedback": {
+              "text": "Resource Leveling often EXTENDS the schedule because it delays activities to avoid resource overallocation. When two activities need the same resource simultaneously, one must be delayed — which can extend the critical path. This is different from Resource Smoothing, which adjusts activities within their float and does NOT extend the schedule.",
+              "character": "Jordan Park",
+              "characterQuote": "Leveling prioritizes resource balance over schedule. When resources are the constraint, the schedule often extends. That's the trade-off."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Resource Leveling resolves overallocation by delaying activities. If a critical activity must wait for a resource, the project extends. Leveling = schedule may grow. Smoothing = schedule stays fixed.",
+              "character": "Jordan Park",
+              "characterQuote": "Resource Leveling resolves overallocation by delaying activities. If a critical activity must wait for a resource, the project extends. Leveling = schedule may grow. Smoothing = schedule stays fixed."
+            },
+            "retryHint": "Resource Leveling resolves resource conflicts by adjusting activity timing. If a critical path activity must wait for a resource, what happens to the project duration?"
+          }
+        ]
+      }
+    }
+  ]
+}

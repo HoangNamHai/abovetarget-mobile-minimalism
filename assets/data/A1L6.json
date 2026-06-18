@@ -1,0 +1,696 @@
+{
+  "lessonId": "A1L6",
+  "lessonTitle": "Project Constraints",
+  "courseId": "A1",
+  "courseName": "Introduction to Project Management",
+  "pathId": "A",
+  "pathName": "Foundation",
+  "domain": "Business Environment",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Identify the six major project constraints: Scope, Schedule, Cost, Quality, Resources, and Risk",
+    "Understand how constraints interact and create trade-offs (changing one affects others)",
+    "Apply constraint trade-off analysis to real-world scenarios",
+    "Make informed decisions when stakeholders demand competing priorities",
+    "Recognize the expanded constraint model (beyond the traditional triple constraint)"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "maya_rodriguez",
+    "ava_chen",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "The Impossible Project: Six Competing Constraints",
+        "intro": "The Food Festival booth project has a crisis: Fixed deadline (July 4th), NEW health requirements (+$4.5K scope), AND Ava just CUT the budget by $5K. Carlos demands: 'Make it ALL work.' But the math doesn't add up.",
+        "failure_cards": [
+          {
+            "id": "the_perfect_storm",
+            "icon": "📋",
+            "title": "The Perfect Storm",
+            "summary": "Three problems hit at once",
+            "image": "/images/A1L6_comic_perfect_storm.webp",
+            "details": "Problem 1: Festival date is FIXED (July 4th). Problem 2: New health requirements mandated (+$4,500 in equipment). Problem 3: Ava just cut the budget from $20K to $15K. Alex does the math: 'We're $9,500 short!'"
+          },
+          {
+            "id": "the_impossible_math",
+            "icon": "⚠️",
+            "title": "The Impossible Math",
+            "summary": "Scope up, budget down = disaster",
+            "image": "/images/A1L6_comic_impossible_math.webp",
+            "details": "Alex at the whiteboard: 'Needed: $24.5K. Available: $15K. Gap: $9.5K.' Carlos says: 'Just figure it out. We need EVERYTHING.' Alex: 'Carlos, that's MATHEMATICALLY IMPOSSIBLE!'"
+          },
+          {
+            "id": "the_tradeoff_moment",
+            "icon": "💡",
+            "title": "The Trade-Off Moment",
+            "summary": "You can't optimize everything",
+            "image": "/images/A1L6_comic_tradeoff_moment.webp",
+            "details": "Dr. Foster arrives: 'Alex is right. You can't optimize SIX constraints simultaneously.' Maya adds: 'One thing is NON-NEGOTIABLE: food safety. We can't compromise quality.' Alex realizes: 'We need to decide what to FLEX to protect what we CAN'T.'"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Alex, we need to launch on July 4th (schedule), with ALL the new health features (scope), under $15K (cost), with perfect food safety (quality), using Maya part-time (resources), and zero risk of contamination. Make it happen."
+        },
+        "learning_hook": "**Every project faces COMPETING CONSTRAINTS.** When you change one, others are affected. Great PMs don't promise 'we can do it all.' They help stakeholders make INFORMED TRADE-OFFS."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "analyze_project_constraints",
+        "title": "Analyze Project Constraints",
+        "description": "Dr. Amelia Foster presents the constraint framework. Analyze the Food Festival Booth project and identify which constraints you can adjust.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each factor to its constraint category:",
+            "points": 180,
+            "scenario_name": "Constraint Identification",
+            "situation": "Match each project factor to the correct constraint category.",
+            "chips": [
+              {
+                "id": "july_4th_deadline",
+                "label": "July 4th deadline",
+                "correctZone": "schedule"
+              },
+              {
+                "id": "health_features",
+                "label": "Health features",
+                "correctZone": "scope"
+              },
+              {
+                "id": "15k_budget",
+                "label": "$15K budget",
+                "correctZone": "cost"
+              },
+              {
+                "id": "food_safety",
+                "label": "Food safety",
+                "correctZone": "quality"
+              },
+              {
+                "id": "maya_20_hrs_week",
+                "label": "Maya 20 hrs/week",
+                "correctZone": "resources"
+              },
+              {
+                "id": "contamination_risk",
+                "label": "Contamination risk",
+                "correctZone": "risk"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "schedule",
+                "label": "SCHEDULE",
+                "detail": "When the project must be completed"
+              },
+              {
+                "id": "scope",
+                "label": "SCOPE",
+                "detail": "What deliverables/features are included"
+              },
+              {
+                "id": "cost",
+                "label": "COST",
+                "detail": "Budget available for the project"
+              },
+              {
+                "id": "quality",
+                "label": "QUALITY",
+                "detail": "Standards the deliverable must meet"
+              },
+              {
+                "id": "resources",
+                "label": "RESOURCES",
+                "detail": "People, equipment, materials available"
+              },
+              {
+                "id": "risk",
+                "label": "RISK",
+                "detail": "Threats that could impact the project"
+              }
+            ],
+            "explanation": "July 4th = Schedule. Health features = Scope. $15K = Cost. Food safety = Quality. Maya's time = Resources. Contamination = Risk.",
+            "correctFeedback": {
+              "text": "July 4th = Schedule. Health features = Scope. $15K = Cost. Food safety = Quality. Maya's time = Resources. Contamination = Risk.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Understanding which constraint each factor belongs to is the first step in making informed trade-offs."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Is this about WHAT we deliver, WHEN we deliver, or HOW MUCH we spend?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Is this about WHAT we deliver, WHEN we deliver, or HOW MUCH we spend?"
+            },
+            "retryHint": "Match each factor to what it constrains: deliverables (scope), timeline (schedule), budget (cost), standards (quality), availability (resources), or threats (risk)."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What is the BEST way to make this project feasible?",
+            "points": 220,
+            "scenario_name": "Trade-Off Analysis",
+            "situation": "Schedule (July 4th) is FIXED. Quality (food safety) is FIXED. Cost is CONSTRAINED ($15K). Scope INCREASED (+$4.5K). Total gap: $9.5K shortfall.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Cancel the project — it's impossible",
+                "correct": false,
+                "whyWrong": "Cancelling avoids the problem but doesn't solve it. Good PMs find alternatives before recommending cancellation."
+              },
+              {
+                "id": "B",
+                "text": "Cut scope — prioritize CRITICAL health features, defer nice-to-have features",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Convince Ava to restore the $20K budget",
+                "correct": false,
+                "whyWrong": "Ava already made her decision. Assuming you can override an investor's budget constraint is unrealistic."
+              },
+              {
+                "id": "D",
+                "text": "Delay to August festival",
+                "correct": false,
+                "whyWrong": "The July 4th date is NON-NEGOTIABLE. The festival organizer controls the schedule, not Savory & Co."
+              },
+              {
+                "id": "E",
+                "text": "Use cheaper equipment that doesn't fully meet health code",
+                "correct": false,
+                "whyWrong": "Reducing QUALITY (compliance) is NEVER acceptable when regulatory requirements are involved. This creates legal risk."
+              },
+              {
+                "id": "F",
+                "text": "Have Maya work overtime to do everything",
+                "correct": false,
+                "whyWrong": "Maya is already limited to 20 hrs/week due to operations. More hours would burn out a key resource."
+              }
+            ],
+            "explanation": "When schedule and quality are FIXED and cost is CONSTRAINED, the only flexible constraint is SCOPE. Prioritize CRITICAL features (handwashing = highest food safety impact), defer lower-priority features.",
+            "correctFeedback": {
+              "text": "When schedule and quality are FIXED and cost is CONSTRAINED, the only flexible constraint is SCOPE. Prioritize CRITICAL features (handwashing = highest food safety impact), defer lower-priority features.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I didn't want to cut ANY features. But I see now — handwashing stations are critical for safety. Sneeze guards can wait."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "We can't change the date or compromise safety. We can't get more money. What CAN we change?",
+              "character": "Carlos Mendez",
+              "characterQuote": "We can't change the date or compromise safety. We can't get more money. What CAN we change?"
+            },
+            "retryHint": "Fixed: Schedule, Quality. Constrained: Cost. What's the only thing LEFT to adjust?"
+          },
+          {
+            "q_id": "q3",
+            "type": "drag_drop",
+            "question": "Match each stakeholder to their primary constraint priority:",
+            "points": 100,
+            "scenario_name": "Stakeholder Constraint Priorities",
+            "situation": "Different stakeholders prioritize different constraints. Match each stakeholder to their TOP priority.",
+            "chips": [
+              {
+                "id": "ava_chen",
+                "label": "Ava Chen",
+                "correctZone": "cost_priority"
+              },
+              {
+                "id": "festival_organizer",
+                "label": "Festival Organizer",
+                "correctZone": "schedule_priority"
+              },
+              {
+                "id": "maya_rodriguez",
+                "label": "Maya Rodriguez",
+                "correctZone": "quality_priority"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "cost_priority",
+                "label": "Cost Priority",
+                "detail": "Budget and ROI"
+              },
+              {
+                "id": "schedule_priority",
+                "label": "Schedule Priority",
+                "detail": "July 4th deadline"
+              },
+              {
+                "id": "quality_priority",
+                "label": "Quality Priority",
+                "detail": "Food safety standards"
+              }
+            ],
+            "explanation": "Ava (investor) prioritizes Cost. Festival Organizer prioritizes Schedule. Maya (chef) prioritizes Quality. Understanding stakeholder priorities helps negotiate trade-offs.",
+            "correctFeedback": {
+              "text": "Ava (investor) prioritizes Cost. Festival Organizer prioritizes Schedule. Maya (chef) prioritizes Quality. Understanding stakeholder priorities helps negotiate trade-offs.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Know your stakeholders' priorities. That's how you find trade-offs everyone can accept."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "What matters most to each person based on their role?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "What matters most to each person based on their role?"
+            },
+            "retryHint": "Investor = money matters. Festival organizer = date matters. Chef = food safety matters."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Understanding Project Constraints",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Triple Constraint",
+            "subtitle": "The Iron Triangle",
+            "content": "**The Classic PM Model:**\n\nEvery project balances three core constraints:\n\n**SCOPE** — What is delivered?\n**TIME** — When is it delivered?\n**COST** — How much does it cost?\n\n**The Iron Triangle Rule:**\n'Good, Fast, Cheap — Pick TWO.'\n\n- Good + Fast = Expensive\n- Good + Cheap = Slow\n- Fast + Cheap = Poor Quality\n\n**Key Insight:** You CANNOT optimize all three simultaneously. Trade-offs are inevitable.",
+            "diagram": {
+              "image": "/images/A1L6_diagram_six_constraints.webp",
+              "alt": "Six Project Constraints"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Six Constraints",
+            "subtitle": "Expanded Model",
+            "content": "**Modern PMI View:** Projects face MORE than three constraints.\n\n**1. SCOPE** — What deliverables/features?\n**2. SCHEDULE** — When must it be completed?\n**3. COST** — What's the budget?\n**4. QUALITY** — What standards must be met?\n**5. RESOURCES** — What people/equipment are available?\n**6. RISK** — What threats could impact success?\n\n**The Interconnection:**\n- Increase Scope → Increase Cost and/or Schedule\n- Decrease Schedule → Increase Cost OR Decrease Quality\n- Decrease Cost → Decrease Scope OR Increase Schedule"
+          },
+          {
+            "id": "tab3",
+            "title": "Trade-Off Steps",
+            "subtitle": "Five-Step Framework",
+            "content": "**How to Manage Competing Constraints:**\n\n**Step 1: Identify ALL Constraints**\nDon't assume just scope/time/cost — check all six\n\n**Step 2: Determine FIXED vs FLEXIBLE**\n- Fixed: Non-negotiable (regulatory, investor limits)\n- Flexible: Can be negotiated\n\n**Step 3: Prioritize with Stakeholders**\nAsk: 'Which is MOST important? Which can we compromise?'\n\n**Step 4: Analyze Trade-Offs**\nFor each option, assess impact on ALL constraints\n\n**Step 5: Document Decisions**\nRecord what was decided, why, and what was sacrificed"
+          },
+          {
+            "id": "tab4",
+            "title": "Common Scenarios",
+            "subtitle": "Trade-Off Examples",
+            "content": "**Scenario: Stakeholder Demands Faster Delivery**\n- Options: Increase Cost (overtime), Decrease Scope (MVP), Increase Risk (less testing)\n- Response: 'We can deliver faster if we increase budget OR reduce scope.'\n\n**Scenario: Stakeholder Cuts Budget**\n- Options: Decrease Scope, Increase Schedule\n- Response: 'With less budget, we can reduce scope OR extend timeline.'\n\n**Scenario: Stakeholder Adds Features**\n- Options: Increase Cost, Increase Schedule, Swap features\n- Response: 'Adding features will increase budget OR delay delivery.'"
+          },
+          {
+            "id": "tab5",
+            "title": "Never Compromise",
+            "subtitle": "What's Non-Negotiable",
+            "content": "**Some constraints should NEVER be compromised:**\n\n**Quality (Regulatory/Safety)**\n- Health codes, safety standards, legal compliance\n- Cutting corners creates liability and reputational risk\n\n**Security (Customer Data)**\n- Payment processing, personal information\n- Breaches are catastrophic for trust and business\n\n**Ethics (Honesty)**\n- Don't hide problems or misrepresent progress\n- Transparency builds trust, deception destroys it\n\n**Key Principle:** When Quality/Safety are fixed, adjust SCOPE or SCHEDULE instead — NEVER cut corners on compliance."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Online Ordering System Launch",
+        "scenario": {
+          "title": "Online Ordering System Launch",
+          "description": "Savory & Co. is launching an online ordering system. Original plan: 4 months, $120K, full features. NOW: Carlos wants to launch in 2 months because a competitor just launched. > Carlos demands: 'Launch in 2 months, not 4 — our competitor just launched!'",
+          "images": [
+            {
+              "src": "/images/A1L6_comic_transfer.webp",
+              "alt": "Carlos pressuring Alex about accelerated deadline"
+            }
+          ],
+          "details": [
+            "**Original:** 4 months, $120K, full system (order, payment, tracking, loyalty, reviews)",
+            "**New Demand:** 2 months (competitor pressure)",
+            "**Fixed:** Quality (99.9% uptime, PCI compliance for payments)"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What constraint is Carlos changing?",
+            "points": 100,
+            "scenario_name": "What Constraint is Changing?",
+            "situation": "Carlos just learned that a competitor launched their online ordering system. He demands that Savory & Co.'s system launch in 2 months instead of the original 4-month timeline.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Scope (adding features)",
+                "correct": false,
+                "whyWrong": "Carlos isn't adding features — he's accelerating the TIMELINE. That's Schedule, not Scope."
+              },
+              {
+                "id": "B",
+                "text": "Schedule (accelerating deadline from 4 months to 2 months)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cost (reducing budget)",
+                "correct": false,
+                "whyWrong": "Carlos didn't mention budget. He's compressing the TIMELINE."
+              },
+              {
+                "id": "D",
+                "text": "Quality (lowering standards)",
+                "correct": false,
+                "whyWrong": "Carlos didn't say lower quality. He wants FASTER delivery — that's Schedule."
+              }
+            ],
+            "explanation": "Carlos is compressing the SCHEDULE from 4 months to 2 months. This creates pressure on other constraints.",
+            "correctFeedback": {
+              "text": "Carlos is compressing the SCHEDULE from 4 months to 2 months. This creates pressure on other constraints.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Our competitor just launched. We need to move FASTER. 4 months is too slow now."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I'm not asking for more features or less money. I'm asking for it SOONER.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I'm not asking for more features or less money. I'm asking for it SOONER."
+            },
+            "retryHint": "Carlos wants the project done in 2 months instead of 4. What constraint is that?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Given the accelerated schedule (2 months instead of 4), what is the BEST trade-off?",
+            "points": 100,
+            "scenario_name": "Best Trade-Off",
+            "situation": "The online ordering project schedule has been compressed from 4 months to 2 months. Quality is fixed (99.9% uptime, PCI compliance). The original scope includes order, payment, tracking, loyalty, and reviews features.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Increase cost — pay vendor 50% premium for rush delivery (+$60K)",
+                "correct": false,
+                "whyWrong": "Ava is unlikely to approve a 50% budget increase ($180K total). Cost constraint is likely fixed."
+              },
+              {
+                "id": "B",
+                "text": "Reduce scope — launch MVP (order + payment only), add loyalty and reviews in Phase 2",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Reduce quality — skip security testing to save time",
+                "correct": false,
+                "whyWrong": "NEVER acceptable for payment systems. PCI compliance is NON-NEGOTIABLE. A breach would be catastrophic."
+              },
+              {
+                "id": "D",
+                "text": "Tell Carlos it's impossible — refuse to accelerate",
+                "correct": false,
+                "whyWrong": "Refusing doesn't solve the competitive pressure. Good PMs propose alternatives, not just refuse."
+              }
+            ],
+            "explanation": "When schedule is compressed, reduce SCOPE to core value (MVP). Order + payment delivers business value; loyalty and reviews can wait.",
+            "correctFeedback": {
+              "text": "When schedule is compressed, reduce SCOPE to core value (MVP). Order + payment delivers business value; loyalty and reviews can wait.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Launching basic ordering in 2 months beats launching everything in 4 months — after the competitor already owns the market."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "We can't skip security. We probably can't double the budget. What CAN we flex?",
+              "character": "Carlos Mendez",
+              "characterQuote": "We can't skip security. We probably can't double the budget. What CAN we flex?"
+            },
+            "retryHint": "Schedule compressed, quality fixed, cost likely fixed. What's left to adjust?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "How should Alex communicate this trade-off decision to Carlos?",
+            "points": 100,
+            "scenario_name": "Communicating Trade-Offs",
+            "situation": "Alex has decided to propose an MVP approach — launching with order and payment features only in 2 months, deferring loyalty and reviews to Phase 2. Now Alex needs to present this trade-off to Carlos.",
+            "options": [
+              {
+                "id": "A",
+                "text": "'We can't do 2 months. It's impossible.'",
+                "correct": false,
+                "whyWrong": "Refusing without alternatives isn't helpful. PMs should present OPTIONS, not just say no."
+              },
+              {
+                "id": "B",
+                "text": "'2 months is feasible if we launch MVP (order + payment). We'll add loyalty and reviews in Phase 2 after launch.'",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "'I'll figure it out somehow. Don't worry about the details.'",
+                "correct": false,
+                "whyWrong": "Vague promises without clear trade-offs set up for failure. Be transparent about what's changing."
+              },
+              {
+                "id": "D",
+                "text": "'We can do it if you approve $60K extra budget.'",
+                "correct": false,
+                "whyWrong": "Jumping to cost increase without exploring scope options isn't strategic. MVP is a better first option."
+              }
+            ],
+            "explanation": "Great communication! You proposed a clear trade-off: reduced scope (MVP) to meet the accelerated schedule, with a plan for Phase 2.",
+            "correctFeedback": {
+              "text": "Great communication! You proposed a clear trade-off: reduced scope (MVP) to meet the accelerated schedule, with a plan for Phase 2.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "This is exactly how to communicate trade-offs: what we're flexing, what we're protecting, and the path forward."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Be specific. What CAN you deliver in 2 months? What comes later?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Be specific. What CAN you deliver in 2 months? What comes later?"
+            },
+            "retryHint": "Effective trade-off communication: 'We CAN do X if we adjust Y. Here's the plan...'"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that projects face SIX major constraints — Scope, Schedule, Cost, Quality, Resources, and Risk. These constraints are INTERCONNECTED: changing one affects others. Great PMs help stakeholders make INFORMED TRADE-OFFS based on priorities.",
+        "key_takeaways": [
+          "SIX MAJOR CONSTRAINTS: Scope, Schedule, Cost, Quality, Resources, Risk",
+          "IRON TRIANGLE RULE: 'Good, Fast, Cheap — Pick Two.' Can't optimize all simultaneously.",
+          "CONSTRAINTS ARE INTERCONNECTED: Increase scope → increase cost/schedule. Decrease schedule → increase cost or decrease quality.",
+          "FIXED vs FLEXIBLE: Identify which constraints CAN'T change vs CAN change.",
+          "TRADE-OFF FRAMEWORK: Identify → Determine fixed/flexible → Prioritize → Analyze → Document",
+          "NEVER COMPROMISE: Quality when regulatory/safety involved. Security when customer data involved."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L7",
+          "title": "Project Success & Value",
+          "description": "Learn what defines project success — beyond just meeting scope, time, and cost."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What concept BEST describes the relationship between schedule, budget, and scope in this scenario?",
+            "points": 50,
+            "scenario_name": "Schedule Compression Decision",
+            "situation": "A restaurant chain is building a new flagship location. The project is on track for a June 1 completion date. The CEO announces that a major food critic will visit on May 15 — two weeks earlier than planned. The CEO demands the project be completed by May 15.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Scope creep requiring change control",
+                "correct": false,
+                "whyWrong": "Scope creep is unauthorized scope expansion. This scenario is about compressing the SCHEDULE, not expanding scope."
+              },
+              {
+                "id": "B",
+                "text": "Triple constraint trade-offs where changing one constraint affects others",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Risk response planning for schedule uncertainty",
+                "correct": false,
+                "whyWrong": "Risk response would address potential threats. This is a known constraint change requiring trade-off analysis."
+              },
+              {
+                "id": "D",
+                "text": "Resource leveling to balance workload",
+                "correct": false,
+                "whyWrong": "Resource leveling adjusts resource assignments. This scenario is about constraint trade-offs."
+              }
+            ],
+            "explanation": "The triple constraint shows that changing one constraint typically requires adjusting others. Compressing schedule by 2 weeks requires either more budget (overtime) or less scope (fewer features).",
+            "correctFeedback": {
+              "text": "The triple constraint shows that changing one constraint typically requires adjusting others. Compressing schedule by 2 weeks requires either more budget (overtime) or less scope (fewer features).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You can't compress time for free. Something else must flex."
+            },
+            "retryHint": "The scenario describes changing schedule and its impact on other constraints. What concept explains this?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "How should the project manager respond to this suggestion?",
+            "points": 50,
+            "scenario_name": "Quality vs Cost Decision",
+            "situation": "A catering company is preparing for a high-profile corporate event. The project is over budget due to unexpected ingredient cost increases. One team member suggests using lower-quality ingredients that still meet minimum food safety standards but don't match the premium quality promised to the client.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accept the suggestion since the ingredients still meet safety standards",
+                "correct": false,
+                "whyWrong": "Meeting minimum safety is not the same as meeting the premium quality PROMISED to the client. This would violate the quality baseline."
+              },
+              {
+                "id": "B",
+                "text": "Reject the suggestion and inform stakeholders that quality compromises require client approval",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Implement the change without informing the client to stay within budget",
+                "correct": false,
+                "whyWrong": "Changing quality without client approval violates transparency. The client has a right to know."
+              },
+              {
+                "id": "D",
+                "text": "Escalate immediately to senior management to override the budget constraint",
+                "correct": false,
+                "whyWrong": "Escalation may be appropriate, but first the PM should present options to the client."
+              }
+            ],
+            "explanation": "Quality cannot be unilaterally changed without stakeholder approval. The PM should present options transparently: pay more for premium quality, or approve quality reduction.",
+            "correctFeedback": {
+              "text": "Quality cannot be unilaterally changed without stakeholder approval. The PM should present options transparently: pay more for premium quality, or approve quality reduction.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Never compromise quality without the client's knowledge. That's how you lose trust."
+            },
+            "retryHint": "Quality changes affect what the client receives. Who should approve such changes?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which constraint is MOST DIRECTLY affected by this situation?",
+            "points": 50,
+            "scenario_name": "Resource Constraint Impact",
+            "situation": "A project to renovate a restaurant's kitchen has been progressing on schedule. The project manager learns that the lead electrician — a critical resource — must leave the project for two weeks due to a family emergency. No qualified replacement is available locally.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Scope — the project will deliver fewer features",
+                "correct": false,
+                "whyWrong": "The scope isn't necessarily affected. The constraint is about RESOURCES and its impact on SCHEDULE."
+              },
+              {
+                "id": "B",
+                "text": "Cost — the project will exceed budget",
+                "correct": false,
+                "whyWrong": "Cost might be a secondary impact (if you pay premium for replacement), but the PRIMARY constraint is Resources/Schedule."
+              },
+              {
+                "id": "C",
+                "text": "Resources — a critical team member is unavailable, likely impacting schedule",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Quality — the electrical work will be substandard",
+                "correct": false,
+                "whyWrong": "Quality isn't automatically affected — when the electrician returns, work will meet standards. The issue is availability."
+              }
+            ],
+            "explanation": "The electrician's absence is a RESOURCE constraint directly impacting SCHEDULE. The PM should assess options: delay tasks, find replacement, or accept schedule slip.",
+            "correctFeedback": {
+              "text": "The electrician's absence is a RESOURCE constraint directly impacting SCHEDULE. The PM should assess options: delay tasks, find replacement, or accept schedule slip.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When resources aren't available, schedule usually takes the hit — unless you can find alternatives."
+            },
+            "retryHint": "The electrician is a critical RESOURCE. When resources are unavailable, which constraint is typically affected?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Stakeholder Constraint Priorities",
+            "situation": "A hospitality company is launching a new hotel restaurant. The project sponsor (owner) prioritizes staying within the $2M budget. The general manager prioritizes opening by December 1 (holiday season). The executive chef prioritizes premium kitchen equipment for quality. Meeting all three priorities is not possible.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Make the trade-off decision based on project management best practices",
+                "correct": false,
+                "whyWrong": "The PM shouldn't make constraint trade-off decisions unilaterally. Stakeholders should be involved in prioritization."
+              },
+              {
+                "id": "B",
+                "text": "Facilitate a discussion with stakeholders to understand priorities and agree on trade-offs",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Escalate to the company CEO to make the final decision",
+                "correct": false,
+                "whyWrong": "Escalating before facilitating discussion skips the PM's role. First help stakeholders understand trade-offs."
+              },
+              {
+                "id": "D",
+                "text": "Delay the decision until more information is available",
+                "correct": false,
+                "whyWrong": "Delaying doesn't resolve the conflict. The PM should proactively facilitate trade-off discussions."
+              }
+            ],
+            "explanation": "When stakeholders have competing priorities, the PM facilitates discussion, presents trade-off options, and helps stakeholders agree on priorities. The PM doesn't make the final call on business priorities.",
+            "correctFeedback": {
+              "text": "When stakeholders have competing priorities, the PM facilitates discussion, presents trade-off options, and helps stakeholders agree on priorities. The PM doesn't make the final call on business priorities.",
+              "character": "Carlos Mendez",
+              "characterQuote": "My job as sponsor is to set priorities. Alex's job is to show me the options and trade-offs."
+            },
+            "retryHint": "The PM's role is to facilitate, not decide. What should the PM do with competing stakeholder priorities?"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "lessonId": "D1L5",
+  "lessonTitle": "Sprint Review & Demos",
+  "courseId": "D1",
+  "courseName": "Agile Foundations: Scrum & Kanban",
+  "pathId": "D",
+  "pathName": "Agile/Hybrid Approaches",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish Sprint Review (collaboration for feedback) from formal approval gates",
+    "Differentiate Sprint Review (product-oriented) from Sprint Retrospective (process-oriented)",
+    "Apply Definition of Done (DoD) as criteria for increment readiness in Sprint Review",
+    "Calculate and report cycle time for product increments",
+    "Understand Minimum Viable Product (MVP) as a prototype for early feedback"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "morgan_lee",
+    "taylor_kim",
+    "carlos_mendez",
+    "maya_rodriguez",
+    "ava_thompson"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Sprint Review Isn't an Approval Gate: Why Morgan's Sign-Off Document Misses the Point",
+        "intro": "You're **Alex Mitchell**, Scrum Master at Savory & Co. Sprint 3 is complete — the team built 3 fusion dishes for the Menu Innovation Lab. The team is ready for Sprint Review, but Morgan arrives with an \"Acceptance Document\" expecting formal stakeholder sign-off before proceeding to Sprint 4. Carlos and Ava are confused: \"I thought we were here to taste dishes and give feedback?\" Alex needs to coach Morgan on what Sprint Review really is — collaboration for feedback, not a formal approval gate.",
+        "failure_cards": [
+          {
+            "id": "the_formal_signoff",
+            "icon": "📋",
+            "title": "The Formal Sign-Off",
+            "summary": "Morgan treats Sprint Review as a predictive approval gate",
+            "image": "/images/D1L5_comic_formal_signoff.webp",
+            "details": "Morgan handed Carlos and Ava a multi-page acceptance document requiring formal signatures before the team could proceed. Carlos: \"I just wanted to taste the dishes and share my thoughts.\" Ava: \"This feels like a contract negotiation, not a product review.\" The collaborative energy died instantly. Instead of tasting dishes and giving real feedback, stakeholders spent 45 minutes debating document language. Zero useful product feedback was gathered."
+          },
+          {
+            "id": "product_vs_process_confusion",
+            "icon": "⚠️",
+            "title": "Product vs Process Confusion",
+            "summary": "Process discussions derail the product review",
+            "image": "/images/D1L5_comic_process_confusion.webp",
+            "details": "During Sprint Review, Maya raised her hand: \"Can we discuss changing our standup time from 9am to 10am?\" Devon added: \"And I want to revisit our estimation approach.\" Carlos and Ava sat confused while the team debated internal process for 30 minutes. The dishes went untasted. Alex realized: Sprint Review is for PRODUCT feedback from stakeholders — process improvements belong in Sprint Retrospective."
+          },
+          {
+            "id": "demoing_incomplete_work",
+            "icon": "💡",
+            "title": "Demoing Incomplete Work",
+            "summary": "Demoing 90% complete work undermines quality standards",
+            "image": "/images/D1L5_comic_incomplete_demo.webp",
+            "details": "Maya proudly presented Mediterranean ramen: \"It's 90% done — recipe finalized, plating complete, taste test passed. We just haven't finished the nutrition analysis.\" Carlos loved it and wanted it on the menu immediately. But when a customer with allergies asked about ingredients, nobody had the data. The dish was recalled within a week. Alex: \"If it doesn't meet Definition of Done, it shouldn't be demoed. 90% done isn't potentially shippable.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "alex_mitchell",
+          "name": "Alex Mitchell",
+          "role": "Scrum Master",
+          "quote": "Sprint Review isn't a formality or an approval gate. It's where we get real feedback from real stakeholders. Demo potentially shippable work, gather input, adapt the backlog. That's the Agile difference — collaboration over sign-offs."
+        },
+        "learning_hook": "**Sprint Review** is one of Scrum's key ceremonies — but it's commonly misunderstood. It's not a formal approval checkpoint, not a process improvement meeting, and not a place to demo incomplete work. Let's learn what Sprint Review really is, how it differs from Retrospective, and why Definition of Done matters."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "running_an_effective_sprint_review",
+        "title": "Running an Effective Sprint Review",
+        "description": "Sprint 3 Review is about to start at Savory & Co. Morgan has arrived with her acceptance document, stakeholders are waiting, and Alex needs to coach the team through a proper Sprint Review. Let's get it right.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What is the PRIMARY purpose of Sprint Review in Agile?",
+            "points": 150,
+            "scenario_name": "Sprint Review Purpose",
+            "situation": "Sprint 3 Review is starting. Morgan presents her acceptance document: \"Before we demo, I need everyone to sign off on these 3 dishes. This acceptance document ensures formal approval before we proceed to Sprint 4.\" Carlos looks confused: \"Should I be signing something?\" Ava adds: \"I thought we were here to see the dishes and give feedback.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Formal approval and sign-off by Product Owner",
+                "correct": false,
+                "whyWrong": "Formal approval and sign-off is a predictive project approach. Agile uses feedback loops, not approval gates. Sprint Review has no sign-off documents."
+              },
+              {
+                "id": "B",
+                "text": "Collaboration: demonstrate work, gather feedback, adapt priorities",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Team reflects on process improvements (what went well, what to improve)",
+                "correct": false,
+                "whyWrong": "Reflecting on process improvements is the purpose of Sprint RETROSPECTIVE, not Sprint Review. Review is product-oriented; Retrospective is process-oriented."
+              },
+              {
+                "id": "D",
+                "text": "Plan the next sprint (select user stories, estimate tasks)",
+                "correct": false,
+                "whyWrong": "Planning the next sprint is the purpose of Sprint PLANNING. Sprint Review demonstrates completed work and gathers feedback."
+              }
+            ],
+            "explanation": "Sprint Review is a COLLABORATION session — the team demos the potentially shippable increment, stakeholders provide feedback, and the Product Owner adapts the backlog based on input. No formal sign-off is required. This is fundamentally different from predictive project approval gates.",
+            "correctFeedback": {
+              "text": "Sprint Review is a COLLABORATION session — the team demos the potentially shippable increment, stakeholders provide feedback, and the Product Owner adapts the backlog based on input. No formal sign-off is required. This is fundamentally different from predictive project approval gates.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Sprint Review isn't a formality — it's where Agile teams get real feedback from real stakeholders. Demo work, gather input, adapt. No bureaucratic approvals needed."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember the key distinction: Sprint Review focuses on the PRODUCT we built. It's about collaboration and feedback, not formal approvals or process discussions.",
+              "character": "Taylor Kim",
+              "characterQuote": "Remember the key distinction: Sprint Review focuses on the PRODUCT we built. It's about collaboration and feedback, not formal approvals or process discussions."
+            },
+            "retryHint": "Sprint Review is about the PRODUCT — demonstrating what was built and getting stakeholder feedback. Formal approvals, process reflection, and sprint planning are separate ceremonies."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "How should Alex (Scrum Master) respond to Maya and Devon's process suggestions?",
+            "points": 100,
+            "scenario_name": "Review vs Retrospective",
+            "situation": "During Sprint Review, the team is demoing the Thai-Mexican taco to Carlos and Ava. Maya raises her hand: \"While we're all here, can we discuss changing our standup time from 9am to 10am? Some team members are arriving late.\" Devon adds: \"And I'd like to talk about our story point estimation — I think we're overestimating.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Discuss process improvements now — Sprint Review covers all team topics",
+                "correct": false,
+                "whyWrong": "Mixing product and process dilutes focus. Stakeholders (Carlos, Ava) are present to give product feedback, not to hear internal process discussions."
+              },
+              {
+                "id": "B",
+                "text": "\"Great process topics — save them for Sprint Retrospective. Sprint Review focuses on the PRODUCT.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cancel Sprint Retrospective since we're discussing process here",
+                "correct": false,
+                "whyWrong": "Both ceremonies are essential and serve distinct purposes. Canceling either one removes a critical feedback loop."
+              },
+              {
+                "id": "D",
+                "text": "Add 15 minutes to Sprint Review for process discussion",
+                "correct": false,
+                "whyWrong": "Adding process time to a product review wastes stakeholder time and blurs the purpose of both ceremonies."
+              }
+            ],
+            "explanation": "Sprint Review is PRODUCT-oriented (what we built). Sprint Retrospective is PROCESS-oriented (how we worked). Process improvement topics like standup timing and estimation techniques belong in the Retrospective, not the Review. Keeping them separate ensures both get adequate attention.",
+            "correctFeedback": {
+              "text": "Sprint Review is PRODUCT-oriented (what we built). Sprint Retrospective is PROCESS-oriented (how we worked). Process improvement topics like standup timing and estimation techniques belong in the Retrospective, not the Review. Keeping them separate ensures both get adequate attention.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Sprint Review focuses on the product. Retrospective focuses on the process. Keeping them separate ensures we give both adequate attention — and stakeholders don't sit through internal process debates."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I know my topics are important, but this isn't the right meeting. Think about what Sprint Review is FOR and who's in the room — stakeholders care about the product, not our internal processes.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "I know my topics are important, but this isn't the right meeting. Think about what Sprint Review is FOR and who's in the room — stakeholders care about the product, not our internal processes."
+            },
+            "retryHint": "Think about the FOCUS of each ceremony. Sprint Review = PRODUCT (what did we build?). Sprint Retrospective = PROCESS (how did we work?). Where do standup timing and estimation belong?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Should the team demonstrate Mediterranean ramen in Sprint Review?",
+            "points": 125,
+            "scenario_name": "Definition of Done",
+            "situation": "The team is about to demo 3 dishes. Maya mentions: \"Mediterranean ramen is 90% complete — recipe finalized, plating done, taste test passed. But we haven't completed the nutrition analysis yet (missing calorie count, allergen info).\" The team's Definition of Done requires: recipe finalized, plating complete, taste test passed, nutrition analysis complete, and allergen info documented.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes — demo it as 90% complete and explain what's missing",
+                "correct": false,
+                "whyWrong": "Demoing 90% complete work normalizes showing incomplete increments. It signals that DoD is aspirational rather than mandatory, eroding quality standards over time."
+              },
+              {
+                "id": "B",
+                "text": "No — only demo increments that meet Definition of Done (potentially shippable)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Yes — demo it but don't count it as \"Done\" for velocity",
+                "correct": false,
+                "whyWrong": "While not counting it for velocity is correct, Sprint Review should only showcase potentially shippable work. Showing incomplete work with caveats undermines the DoD."
+              },
+              {
+                "id": "D",
+                "text": "Ask Morgan to waive the nutrition requirement for this sprint",
+                "correct": false,
+                "whyWrong": "Definition of Done is the team's quality standard and is not waived mid-sprint. The nutrition requirement exists for safety and compliance reasons."
+              }
+            ],
+            "explanation": "Sprint Review demonstrates POTENTIALLY SHIPPABLE increments — work that meets ALL Definition of Done criteria. Mediterranean ramen at 90% does not meet DoD because nutrition analysis is incomplete. Demoing incomplete work signals that quality standards are optional. Complete it next sprint and demo it then.",
+            "correctFeedback": {
+              "text": "Sprint Review demonstrates POTENTIALLY SHIPPABLE increments — work that meets ALL Definition of Done criteria. Mediterranean ramen at 90% does not meet DoD because nutrition analysis is incomplete. Demoing incomplete work signals that quality standards are optional. Complete it next sprint and demo it then.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "I wanted to show Mediterranean ramen, but it doesn't meet DoD yet. We'll complete nutrition analysis next sprint and demo it then. Quality over speed — always."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Definition of Done isn't negotiable. If it's not 100% Done — meeting ALL DoD criteria — it's not potentially shippable and shouldn't be demoed. 90% done is still not done.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Definition of Done isn't negotiable. If it's not 100% Done — meeting ALL DoD criteria — it's not potentially shippable and shouldn't be demoed. 90% done is still not done."
+            },
+            "retryHint": "The Definition of Done is binary — work either meets ALL criteria or it doesn't. 90% complete means it's NOT done. What should Sprint Review demonstrate?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What metric should Alex report to answer Carlos's question \"How long from start to finish?\"",
+            "points": 125,
+            "scenario_name": "Cycle Time Calculation",
+            "situation": "After Sprint Review, Carlos (GM) asks: \"Korean BBQ sushi looks great. How long did it take to develop from start to finish? I need to understand our production speed.\" Team records show: work started on Day 1 of Sprint 2, completed (met DoD) on Day 8 of Sprint 3. Each sprint is 2 weeks (10 working days).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Lead time — measures from request to delivery",
+                "correct": false,
+                "whyWrong": "Lead time measures from REQUEST to delivery, including any waiting time before work starts. Carlos specifically asked \"from start to finish,\" which is cycle time, not lead time."
+              },
+              {
+                "id": "B",
+                "text": "Cycle time — 18 days from start of work to completion",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Velocity — story points completed per sprint",
+                "correct": false,
+                "whyWrong": "Velocity measures how many story points the team completes per sprint — it's a throughput metric, not a duration metric for individual items."
+              },
+              {
+                "id": "D",
+                "text": "Takt time — time between successive deliveries",
+                "correct": false,
+                "whyWrong": "Takt time measures the pace between successive outputs (how often we deliver), not the duration for any single item."
+              }
+            ],
+            "explanation": "Cycle time measures the duration from when work STARTS on an item to when it is COMPLETED. Korean BBQ sushi: Day 1 of Sprint 2 to Day 8 of Sprint 3 = 10 days (remainder of Sprint 2) + 8 days (Sprint 3) = 18 days cycle time. This directly answers \"how long from start to finish.\"",
+            "correctFeedback": {
+              "text": "Cycle time measures the duration from when work STARTS on an item to when it is COMPLETED. Korean BBQ sushi: Day 1 of Sprint 2 to Day 8 of Sprint 3 = 10 days (remainder of Sprint 2) + 8 days (Sprint 3) = 18 days cycle time. This directly answers \"how long from start to finish.\"",
+              "character": "Carlos Mendez",
+              "characterQuote": "18 days cycle time — now I understand our production speed. If we want faster development, we need to reduce cycle time. Clear, actionable metric."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Carlos asked 'from start to finish' — that's cycle time. Lead time includes waiting before work starts. Velocity measures throughput per sprint. Match the metric to the question being asked.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Carlos asked 'from start to finish' — that's cycle time. Lead time includes waiting before work starts. Velocity measures throughput per sprint. Match the metric to the question being asked."
+            },
+            "retryHint": "Carlos asked \"how long from start to finish\" for ONE item. Which metric measures the time from when work begins on a single item until that item is completed?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Sprint Review Fundamentals",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Sprint Review = Collaboration, NOT Formal Approval",
+            "subtitle": "",
+            "content": "The Sprint Review is a Scrum ceremony focused on collaboration, not approval.\n\n**Predictive vs Agile Comparison:**\n\n| Predictive Projects | Agile Sprint Review |\n|---------------------|---------------------|\n| Formal approval gates | Collaborative feedback loops |\n| Sign-off documents required | No sign-offs required |\n| Work stops at checkpoints | Continuous flow |\n| PM/Sponsor approves | Team + stakeholders collaborate |\n| \"Is this acceptable?\" | \"What can we improve?\" |\n\n**Sprint Review Purpose:**\n- **DEMONSTRATE** the potentially shippable increment\n- **GATHER** feedback from PO and stakeholders\n- **INSPECT** progress against the Sprint Goal\n- **ADAPT** the product backlog based on feedback\n\n**What Sprint Review is NOT:**\n- Not a formal approval gate (no sign-off documents)\n- Not a status report meeting (interactive, demo-focused)\n- Not limited to the Product Owner (invite stakeholders, customers)\n- Not optional (mandatory Scrum ceremony)"
+          },
+          {
+            "id": "tab2",
+            "title": "Sprint Review vs Sprint Retrospective",
+            "subtitle": "",
+            "content": "Two separate ceremonies with distinct purposes:\n\n| Aspect | Sprint Review | Sprint Retrospective |\n|--------|---------------|---------------------|\n| **Focus** | PRODUCT (what we built) | PROCESS (how we worked) |\n| **Key Question** | \"What do you think of this?\" | \"How can we improve?\" |\n| **Attendees** | Team + PO + Stakeholders | Team + Scrum Master only |\n| **Output** | Product feedback, updated backlog | Action items for process improvement |\n| **Duration** | 2-4 hours (2-week sprint) | 1-2 hours (2-week sprint) |\n\n**Why Separation Matters:**\n- Product review + process discussion = neither gets adequate attention\n- Stakeholders don't need internal process discussions\n- Team needs a safe space (Retrospective) without stakeholders present\n- Both ceremonies deserve dedicated time and focus",
+            "diagram": {
+              "image": "/images/D1L5_diagram_review_vs_retro.webp",
+              "alt": "Sprint Review vs Retrospective comparison"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Definition of Done (DoD)",
+            "subtitle": "",
+            "content": "The Definition of Done is a checklist of required criteria for considering work \"Done\" and ready for delivery.\n\n**Sprint Review Rule:** Only demo work that meets ALL DoD criteria.\n\n| Status | Demo in Sprint Review? | Count for Velocity? |\n|--------|------------------------|---------------------|\n| Meets DoD (100%) | Yes — demo it | Yes — count it |\n| Partial DoD (90%) | No — don't demo | No — don't count |\n| Work in Progress | No — don't demo | No — don't count |\n\n**Why DoD Matters:**\n- Prevents \"almost done\" syndrome\n- Ensures consistent quality across increments\n- Clarifies the boundary between Done and In Progress\n- Supports accurate velocity measurement",
+            "diagram": {
+              "image": "/images/D1L5_diagram_definition_of_done.webp",
+              "alt": "Definition of Done framework"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Cycle Time vs Related Metrics",
+            "subtitle": "",
+            "content": "| Metric | Definition | Answers the Question |\n|--------|------------|---------------------|\n| **Cycle Time** | Start of work to completion | \"How long to build this?\" |\n| **Lead Time** | Request to delivery (includes waiting) | \"How long from idea to done?\" |\n| **Velocity** | Story points per sprint | \"How much per sprint?\" |\n| **Takt Time** | Pace between outputs | \"How often do we deliver?\" |\n\n**Cycle Time Example:**\n- Korean BBQ sushi requested: Day 1 Sprint 1\n- Work started: Day 1 Sprint 2\n- Completed (met DoD): Day 8 Sprint 3\n- **Lead Time:** 28 days (request to done)\n- **Cycle Time:** 18 days (start to done)",
+            "diagram": {
+              "image": "/images/D1L5_diagram_cycle_time.webp",
+              "alt": "Cycle time and lead time comparison"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "MVP Demo for Investors",
+        "scenario": {
+          "title": "MVP Demo for Investors",
+          "description": "Savory & Co. is pitching a NEW concept to investors: a **meal kit delivery service** where customers cook fusion dishes at home with pre-portioned ingredients. Ava (investor) wants to see a Minimum Viable Product (MVP) before committing funding. Alex asks the team: \"What should our MVP include? How should we demo it?\"",
+          "images": [
+            {
+              "src": "/images/D1L5_comic_mvp_demo.webp",
+              "alt": "MVP meal kit demo scenario"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What should the meal kit MVP include?",
+            "points": 100,
+            "scenario_name": "MVP Scope",
+            "situation": "The team is deciding what to include in the meal kit MVP for Ava. Some team members want to build a full subscription platform with multiple kits and delivery logistics. Others suggest starting with just one complete meal kit to prove the concept.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Everything planned: multiple meal kits, subscription platform, delivery logistics",
+                "correct": false,
+                "whyWrong": "Building everything planned defeats the purpose of MVP. The goal is to test assumptions with minimum investment before committing to full-scale development."
+              },
+              {
+                "id": "B",
+                "text": "ONE meal kit with recipe, ingredients, and instructions — minimum to demonstrate core value",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Just a mockup presentation with no actual product",
+                "correct": false,
+                "whyWrong": "A mockup isn't \"viable\" — it doesn't actually work. MVP must be a functional product, not just a presentation. You can't get meaningful feedback from something that doesn't work."
+              },
+              {
+                "id": "D",
+                "text": "Three different meal kits to show variety",
+                "correct": false,
+                "whyWrong": "Three kits is more than the minimum needed to prove the concept. Start with one, gather feedback, then decide whether variety matters."
+              }
+            ],
+            "explanation": "MVP means Minimum Viable Product — the minimum set of features that delivers core value and enables meaningful feedback. One complete meal kit proves the concept and lets Ava evaluate the core experience. Multiple kits, subscription platforms, and delivery logistics can be added in future iterations based on feedback.",
+            "correctFeedback": {
+              "text": "MVP means Minimum Viable Product — the minimum set of features that delivers core value and enables meaningful feedback. One complete meal kit proves the concept and lets Ava evaluate the core experience. Multiple kits, subscription platforms, and delivery logistics can be added in future iterations based on feedback.",
+              "character": "Morgan Lee",
+              "characterQuote": "One complete meal kit is enough to prove whether customers can cook our fusion dishes at home. We'll learn more from real feedback on one kit than from planning three we haven't tested."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "MVP means MINIMUM features that are still VIABLE. What's the smallest thing we can build that actually demonstrates the core value proposition? Start there.",
+              "character": "Alex Mitchell",
+              "characterQuote": "MVP means MINIMUM features that are still VIABLE. What's the smallest thing we can build that actually demonstrates the core value proposition? Start there."
+            },
+            "retryHint": "MVP = MINIMUM features + VIABLE quality. What is the absolute minimum product you could build that still demonstrates the core value of cooking fusion dishes at home?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "How is the MVP demo SIMILAR to Sprint Review?",
+            "points": 100,
+            "scenario_name": "MVP Demo Format",
+            "situation": "The MVP meal kit is ready. Alex is planning the demo session with Ava. Morgan suggests: \"Let's send her the kit and a formal evaluation form to fill out.\" Taylor suggests: \"Let's do it like a Sprint Review — demo the kit live and gather feedback in real time.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Both require formal approval before the team can proceed",
+                "correct": false,
+                "whyWrong": "Neither Sprint Review nor MVP demos require formal approval. Both focus on gathering feedback for adaptation, not obtaining sign-offs."
+              },
+              {
+                "id": "B",
+                "text": "Both demonstrate working product and gather feedback for adaptation",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Both happen at the end of every sprint",
+                "correct": false,
+                "whyWrong": "Sprint Reviews happen at sprint boundaries, but MVP demos can happen at any point. The shared principle is demonstrating working product for feedback, not timing."
+              },
+              {
+                "id": "D",
+                "text": "Both are process-oriented meetings where the team reflects on improvements",
+                "correct": false,
+                "whyWrong": "Process-oriented reflection describes Sprint Retrospective, not Sprint Review. Both Sprint Review and MVP demos are product-oriented."
+              }
+            ],
+            "explanation": "Both MVP demos and Sprint Reviews share key characteristics: they demonstrate a WORKING product (not a mockup), gather real FEEDBACK from stakeholders, and use that feedback to ADAPT future development. Neither requires formal approval — both prioritize learning and collaboration over sign-offs.",
+            "correctFeedback": {
+              "text": "Both MVP demos and Sprint Reviews share key characteristics: they demonstrate a WORKING product (not a mockup), gather real FEEDBACK from stakeholders, and use that feedback to ADAPT future development. Neither requires formal approval — both prioritize learning and collaboration over sign-offs.",
+              "character": "Taylor Kim",
+              "characterQuote": "Live demo with real-time feedback — just like Sprint Review. Ava can taste the food, ask questions, and give us actionable input we can use immediately."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what makes Sprint Review valuable: live demonstration, real feedback, adaptation. An MVP demo shares those same principles. What's the common thread?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about what makes Sprint Review valuable: live demonstration, real feedback, adaptation. An MVP demo shares those same principles. What's the common thread?"
+            },
+            "retryHint": "What do Sprint Review and MVP demos have in common? Think about what happens during both: you show something real, people react, and you learn from their reactions."
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Should the MVP meet the team's Definition of Done?",
+            "points": 100,
+            "scenario_name": "MVP Quality Standards",
+            "situation": "The meal kit is almost ready, but the team realizes the instruction card has a typo and the ingredient portions haven't been verified for accuracy. Devon suggests: \"It's just an MVP — ship it as-is and fix those details later.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "No — \"good enough\" is acceptable for a prototype",
+                "correct": false,
+                "whyWrong": "\"Good enough\" with inaccurate portions means Ava might reject the entire concept based on a fixable quality issue. Viable means it works as intended."
+              },
+              {
+                "id": "B",
+                "text": "Yes — MVP must meet DoD because \"viable\" means functional quality",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Quality doesn't matter for MVP since it's just for testing",
+                "correct": false,
+                "whyWrong": "Quality absolutely matters for MVP because flawed products generate misleading feedback. Negative reactions to bugs get confused with negative reactions to the concept."
+              },
+              {
+                "id": "D",
+                "text": "Lower standards are fine since it's just for early feedback",
+                "correct": false,
+                "whyWrong": "Lowering standards for early feedback is counterproductive. If the product doesn't work correctly, the feedback you receive is about quality problems, not about the concept."
+              }
+            ],
+            "explanation": "MVP means Minimum features but VIABLE quality. \"Viable\" means the product must work properly — inaccurate portions could ruin the cooking experience and generate misleading negative feedback. You cannot get meaningful feedback from a broken or flawed product. Fix the typo and verify portions before demoing.",
+            "correctFeedback": {
+              "text": "MVP means Minimum features but VIABLE quality. \"Viable\" means the product must work properly — inaccurate portions could ruin the cooking experience and generate misleading negative feedback. You cannot get meaningful feedback from a broken or flawed product. Fix the typo and verify portions before demoing.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "If Ava tries the kit and the portions are wrong, she'll think the concept doesn't work. But the concept is fine — the execution was sloppy. Fix it first, then demo quality work."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Would you demo a dish with the wrong seasoning measurements? MVP is minimum FEATURES, not minimum QUALITY. The product must work correctly to generate meaningful feedback.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Would you demo a dish with the wrong seasoning measurements? MVP is minimum FEATURES, not minimum QUALITY. The product must work correctly to generate meaningful feedback."
+            },
+            "retryHint": "What does \"viable\" mean in MVP? If the product has errors, will stakeholder feedback reflect the concept's value or the product's quality problems?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that Sprint Review is a COLLABORATION ceremony for demonstrating potentially shippable work and gathering stakeholder feedback — not a formal approval gate.",
+        "key_takeaways": [
+          "Sprint Review is COLLABORATION, not approval — Demo work, gather feedback, adapt the backlog. No sign-off documents required.",
+          "Sprint Review = PRODUCT, Sprint Retrospective = PROCESS — Review focuses on what we built (with stakeholders). Retrospective focuses on how we worked (team only). Keep them separate.",
+          "Only demo work that meets Definition of Done — 90% complete is not potentially shippable. Wait until ALL DoD criteria are met before demoing.",
+          "Cycle time = start-to-finish for ONE item — Different from lead time (request to delivery) and velocity (points per sprint). Match the metric to the question.",
+          "MVP = Minimum features + Viable quality — The goal is to LEARN from feedback, not to get approval. Viable means the product must work correctly."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Morgan started Sprint 3 Review with an acceptance document, expecting formal sign-off. I coached her: Sprint Review is COLLABORATION, not approval. The feedback from Carlos and Ava made our dishes better — no paperwork needed, just honest conversation. And when Maya wanted to demo 90% complete work, I held firm on Definition of Done. Quality over speed, always."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L6",
+          "title": "Sprint Retrospectives",
+          "description": "You've mastered Sprint Review (product feedback) — now learn Sprint Retrospective, where the team reflects on PROCESS improvements in a safe space without stakeholders."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the Scrum Master do?",
+            "points": 50,
+            "scenario_name": "Formal Sign-Off Request",
+            "situation": "During Sprint Review, the Product Owner asks the team to sign a formal acceptance document confirming the sprint deliverables meet requirements. The Scrum Master is unsure whether this is appropriate for an Agile project.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Have the team sign the document since the PO requested it",
+                "correct": false,
+                "whyWrong": "Signing formal documents contradicts the Agile principle of collaboration over formal processes. Sprint Review is not an approval gate."
+              },
+              {
+                "id": "B",
+                "text": "Explain that Sprint Review is for collaboration and feedback, not formal sign-offs",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Create a simpler verbal approval process as a compromise",
+                "correct": false,
+                "whyWrong": "Even a simplified verbal approval still frames the review as an approval checkpoint. The fundamental issue is the mindset, not the formality level."
+              },
+              {
+                "id": "D",
+                "text": "Skip Sprint Review entirely and use email sign-off instead",
+                "correct": false,
+                "whyWrong": "Skipping Sprint Review removes a critical Scrum ceremony. The solution is to run the review correctly (collaboration), not to replace it with email."
+              }
+            ],
+            "explanation": "Sprint Review is a COLLABORATION session for gathering feedback and adapting the backlog — not a formal approval gate. Agile uses feedback loops instead of sign-off documents. The Scrum Master should coach the PO on the purpose of Sprint Review and redirect focus to product demonstration and stakeholder feedback.",
+            "correctFeedback": {
+              "text": "Sprint Review is a COLLABORATION session for gathering feedback and adapting the backlog — not a formal approval gate. Agile uses feedback loops instead of sign-off documents. The Scrum Master should coach the PO on the purpose of Sprint Review and redirect focus to product demonstration and stakeholder feedback.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Sprint Review is about getting real feedback, not collecting signatures. Coach the PO to focus on collaboration — demo the increment, listen to stakeholders, and adapt the backlog."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Formal sign-offs belong to predictive approaches. Sprint Review's power comes from open collaboration. Think about what creates more value — signatures or feedback.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Formal sign-offs belong to predictive approaches. Sprint Review's power comes from open collaboration. Think about what creates more value — signatures or feedback."
+            },
+            "retryHint": "Sprint Review's purpose is collaboration and feedback. What does Agile use instead of formal approval gates?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the Scrum Master do?",
+            "points": 50,
+            "scenario_name": "Process Topic in Sprint Review",
+            "situation": "A team member raises a process improvement idea during Sprint Review: \"Can we discuss changing our estimation technique? I think we're overestimating story points.\" Several stakeholders are present and waiting to see the product demo.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Discuss it now since the whole team is present",
+                "correct": false,
+                "whyWrong": "Discussing process improvements during Sprint Review wastes stakeholder time. Stakeholders are present for product feedback, not internal team process debates."
+              },
+              {
+                "id": "B",
+                "text": "Note the topic and defer to Sprint Retrospective, keeping Sprint Review product-focused",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Tell the team member that process improvements aren't important",
+                "correct": false,
+                "whyWrong": "Process improvements ARE important — they just belong in a different ceremony. Dismissing them entirely discourages continuous improvement."
+              },
+              {
+                "id": "D",
+                "text": "Add 15 minutes to Sprint Review for process discussion",
+                "correct": false,
+                "whyWrong": "Extending Sprint Review for process topics blurs the boundary between Review and Retrospective, diluting the focus of both."
+              }
+            ],
+            "explanation": "Sprint Review is PRODUCT-oriented (what we built) and includes stakeholders. Sprint Retrospective is PROCESS-oriented (how we worked) and is team-only. Process improvement topics like estimation techniques belong in the Retrospective, where the team has a safe space for internal discussions without stakeholders present.",
+            "correctFeedback": {
+              "text": "Sprint Review is PRODUCT-oriented (what we built) and includes stakeholders. Sprint Retrospective is PROCESS-oriented (how we worked) and is team-only. Process improvement topics like estimation techniques belong in the Retrospective, where the team has a safe space for internal discussions without stakeholders present.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Great topic — but wrong meeting. Sprint Review is for product feedback with stakeholders. Sprint Retrospective is where we discuss estimation, standups, and other process improvements."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Process improvements matter, but stakeholders are here to see the product. Think about which Scrum ceremony is designed for internal process reflection.",
+              "character": "Taylor Kim",
+              "characterQuote": "Process improvements matter, but stakeholders are here to see the product. Think about which Scrum ceremony is designed for internal process reflection."
+            },
+            "retryHint": "Two different Scrum ceremonies: one for PRODUCT (with stakeholders), one for PROCESS (team only). Which ceremony is designed for process improvement discussions?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the team do?",
+            "points": 50,
+            "scenario_name": "Incomplete Work at Sprint Review",
+            "situation": "A user story is 85% complete at the end of the sprint — core functionality works, but documentation is incomplete (a Definition of Done requirement). The team is debating whether to include it in the Sprint Review demo.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Demo it and explain what's missing to stakeholders",
+                "correct": false,
+                "whyWrong": "Demoing incomplete work with caveats normalizes showing unfinished increments. It erodes the team's commitment to Definition of Done over time."
+              },
+              {
+                "id": "B",
+                "text": "Not demo it since it doesn't meet Definition of Done",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Ask the Product Owner to waive the documentation requirement",
+                "correct": false,
+                "whyWrong": "DoD is the team's quality standard and is not waived by the Product Owner. Documentation requirements exist for good reasons (maintenance, onboarding, compliance)."
+              },
+              {
+                "id": "D",
+                "text": "Demo it but count it as 85% done for velocity tracking",
+                "correct": false,
+                "whyWrong": "Partial velocity tracking doesn't exist in Scrum. Work either meets DoD (count it) or it doesn't (don't count it). There's no 85% credit."
+              }
+            ],
+            "explanation": "Sprint Review demonstrates POTENTIALLY SHIPPABLE increments — work that meets ALL Definition of Done criteria. At 85% complete, the documentation requirement is unmet, so it doesn't meet DoD. Incomplete work shouldn't be demoed regardless of how close it is to completion. Complete it next sprint and demo it then.",
+            "correctFeedback": {
+              "text": "Sprint Review demonstrates POTENTIALLY SHIPPABLE increments — work that meets ALL Definition of Done criteria. At 85% complete, the documentation requirement is unmet, so it doesn't meet DoD. Incomplete work shouldn't be demoed regardless of how close it is to completion. Complete it next sprint and demo it then.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "85% done is still not done. Complete the documentation next sprint, then demo it properly. DoD protects our quality standards."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Definition of Done is binary — either ALL criteria are met, or the work isn't done. Would you serve a dish that's missing one ingredient? Complete it first.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Definition of Done is binary — either ALL criteria are met, or the work isn't done. Would you serve a dish that's missing one ingredient? Complete it first."
+            },
+            "retryHint": "Definition of Done is binary — all criteria met or not. What does Sprint Review demonstrate?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the correct answer?",
+            "points": 50,
+            "scenario_name": "Cycle Time Question",
+            "situation": "The General Manager asks the Scrum Master: \"Feature X started development on March 1st and was completed on March 15th. How do I measure how long that took?\" The GM wants a clear metric to track production speed for individual items.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Cannot determine without knowing when Feature X was first requested",
+                "correct": false,
+                "whyWrong": "The request date is needed for LEAD TIME (request to delivery), not cycle time (start to completion). The GM provided start and end dates, which is sufficient for cycle time."
+              },
+              {
+                "id": "B",
+                "text": "15 days cycle time (from start of work to completion)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Need to calculate story points to determine the duration metric",
+                "correct": false,
+                "whyWrong": "Story points measure relative effort, not calendar duration. Cycle time is measured in days, not story points."
+              },
+              {
+                "id": "D",
+                "text": "Depends on how many sprints the work spanned",
+                "correct": false,
+                "whyWrong": "Cycle time is measured in calendar/working days regardless of sprint boundaries. The number of sprints is irrelevant to the calculation."
+              }
+            ],
+            "explanation": "Cycle time measures start-to-finish duration for one work item. Feature X: March 1 (start) to March 15 (completion) = 15 days cycle time. You don't need the request date (that's lead time), story points (that's velocity), or sprint count (cycle time is calendar-based, not sprint-based).",
+            "correctFeedback": {
+              "text": "Cycle time measures start-to-finish duration for one work item. Feature X: March 1 (start) to March 15 (completion) = 15 days cycle time. You don't need the request date (that's lead time), story points (that's velocity), or sprint count (cycle time is calendar-based, not sprint-based).",
+              "character": "Carlos Mendez",
+              "characterQuote": "15 days — simple and clear. Cycle time gives me exactly what I need to understand how long individual items take to build."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The GM asked 'how long from start to finish' — that's the definition of cycle time. You have start date and end date. What's the calculation?",
+              "character": "Alex Mitchell",
+              "characterQuote": "The GM asked 'how long from start to finish' — that's the definition of cycle time. You have start date and end date. What's the calculation?"
+            },
+            "retryHint": "Cycle time = start date to completion date. The GM gave you both dates. What's the simple calculation?"
+          }
+        ]
+      }
+    }
+  ]
+}

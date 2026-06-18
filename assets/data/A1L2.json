@@ -1,0 +1,711 @@
+{
+  "lessonId": "A1L2",
+  "lessonTitle": "The Project Manager's Role",
+  "courseId": "A1",
+  "courseName": "Introduction to Project Management",
+  "pathId": "A",
+  "pathName": "Foundation",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand the PM's three core responsibilities: Plan, Execute, Monitor & Control",
+    "Recognize the PM's authority boundaries (what they CAN vs CANNOT control)",
+    "Apply the PMI Talent Triangle: Technical PM Skills, Leadership, Strategic & Business Management",
+    "Distinguish between authority (formal power) and influence (persuasion without power)",
+    "Identify key PM skills: Communication, negotiation, problem-solving"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "elena_santos",
+    "morgan_lee",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Alex's Question: What Can I Actually DECIDE?",
+        "intro": "You're **Alex Mitchell**, now in your second week as PM at Savory & Co. Carlos just handed you the restaurant expansion project — opening a second location. But as you start making decisions, you keep hitting walls.",
+        "failure_cards": [
+          {
+            "id": "contractor_blocked",
+            "icon": "📋",
+            "title": "Contractor Blocked",
+            "summary": "Elena said 'that's MY decision'",
+            "image": "/images/A1L2_comic_contractor.webp",
+            "details": "You found the perfect contractor for the build-out. When you tried to approve the $350K contract, Elena (CFO) stopped you cold: 'That's MY decision, Alex. You can recommend, but I sign the checks.'"
+          },
+          {
+            "id": "budget_request_denied",
+            "icon": "⚠️",
+            "title": "Budget Request Denied",
+            "summary": "Carlos said 'you need MY approval'",
+            "image": "/images/A1L2_comic_budget.webp",
+            "details": "Permit costs came in $15K over budget. You tried to reallocate funds to cover it. Carlos intervened: 'Any budget increase needs MY approval. You manage within what I give you.'"
+          },
+          {
+            "id": "what_can_i_decide",
+            "icon": "💡",
+            "title": "What CAN I Decide?",
+            "summary": "Responsibility without authority",
+            "image": "/images/A1L2_comic_authority.webp",
+            "details": "You're responsible for project success, but you can't approve budgets, sign contracts, or override stakeholders. If you can't decide anything, how are you supposed to deliver?"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Good questions, Alex. Let me clarify your role. You have RESPONSIBILITY for success, but LIMITED AUTHORITY to make decisions. Understanding that gap is the key to being a great PM."
+        },
+        "learning_hook": "**PMs lead through INFLUENCE, not command.** Let's learn what you CAN control — and how to succeed with what you CANNOT."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "pm_authority_boundaries",
+        "title": "PM Authority Boundaries",
+        "description": "For each scenario, decide if Alex has AUTHORITY to make the decision alone, or must RECOMMEND/REQUEST approval from sponsor or stakeholder.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Who approves the project charter and authorizes Alex to start the project?",
+            "points": 100,
+            "scenario_name": "Project Charter Approval",
+            "situation": "Alex drafts the project charter for the restaurant expansion (purpose, objectives, high-level budget, timeline). It's ready for approval.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Alex (PM approves own charter)",
+                "correct": false,
+                "whyWrong": "PMs cannot approve their own charters — that's a conflict of interest."
+              },
+              {
+                "id": "B",
+                "text": "Carlos (Sponsor)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Elena (CFO)",
+                "correct": false,
+                "whyWrong": "While the CFO controls finances, the project sponsor is responsible for authorizing the project."
+              },
+              {
+                "id": "D",
+                "text": "Morgan (Product Owner)",
+                "correct": false,
+                "whyWrong": "Product Owners define requirements and prioritize work, but they don't authorize projects."
+              }
+            ],
+            "explanation": "The SPONSOR (Carlos) authorizes the project and approves the charter. This formally gives Alex the authority to proceed.",
+            "correctFeedback": {
+              "text": "The SPONSOR (Carlos) authorizes the project and approves the charter. This formally gives Alex the authority to proceed.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Correct. I'm accountable to the board for this expansion. I must approve the charter before you spend a dime, Alex."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If Alex could approve his own budget, we'd have zero financial control. The sponsor must authorize.",
+              "character": "Elena Santos",
+              "characterQuote": "If Alex could approve his own budget, we'd have zero financial control. The sponsor must authorize."
+            },
+            "retryHint": "Who has the ultimate authority to say 'yes, this project happens'? The PM drafts, but who approves?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Can Alex reassign Taylor to excavation?",
+            "points": 100,
+            "scenario_name": "Daily Task Assignments",
+            "situation": "Alex's project team (5 members) is working on site preparation. Excavation is behind schedule. Alex wants to reassign Taylor from permit paperwork to excavation support.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes — Alex has authority to assign tasks within the project",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "No — Alex must ask Carlos (GM) for permission",
+                "correct": false,
+                "whyWrong": "Requiring GM approval for every task reassignment would be micromanagement."
+              },
+              {
+                "id": "C",
+                "text": "No — Alex must ask Taylor's functional manager",
+                "correct": false,
+                "whyWrong": "For task assignments within the project, the PM has authority. Functional manager approval is needed for hiring/firing, not task reassignment."
+              },
+              {
+                "id": "D",
+                "text": "No — Team self-organizes (Agile approach)",
+                "correct": false,
+                "whyWrong": "While Agile teams have more autonomy, the PM still has responsibility to manage work assignments."
+              }
+            ],
+            "explanation": "PMs have authority to assign and manage work WITHIN the project scope. Day-to-day task assignments don't require sponsor approval.",
+            "correctFeedback": {
+              "text": "PMs have authority to assign and manage work WITHIN the project scope. Day-to-day task assignments don't require sponsor approval.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Good to know. If I had to ask Carlos every time I reassigned someone, the project would grind to a halt."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Alex, I gave you the project. You manage the day-to-day work. I don't want to approve every task assignment — that's YOUR job.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Alex, I gave you the project. You manage the day-to-day work. I don't want to approve every task assignment — that's YOUR job."
+            },
+            "retryHint": "Think about what would happen if PMs needed approval for every task change. Is that efficient?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Can Alex approve a $15K budget increase?",
+            "points": 100,
+            "scenario_name": "Budget Increase Request",
+            "situation": "Alex discovers permit costs are $15K higher than estimated ($30K vs. $15K budgeted). Total project budget is $850K. Alex wants to increase the budget.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes — Alex has authority to increase budget within project",
+                "correct": false,
+                "whyWrong": "PMs manage budgets but cannot unilaterally increase the total approved budget."
+              },
+              {
+                "id": "B",
+                "text": "No — Alex must request approval from Sponsor (Carlos) or CFO (Elena)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Yes, if Alex uses contingency reserve",
+                "correct": false,
+                "whyWrong": "Using contingency is different from increasing the budget. Contingency is already within the approved budget."
+              },
+              {
+                "id": "D",
+                "text": "No — Budget cannot be changed once approved",
+                "correct": false,
+                "whyWrong": "Budgets CAN be changed through proper change control and sponsor approval."
+              }
+            ],
+            "explanation": "PMs MANAGE the budget but don't APPROVE increases beyond the baseline. Sponsor/CFO approval is required for additional funding.",
+            "correctFeedback": {
+              "text": "PMs MANAGE the budget but don't APPROVE increases beyond the baseline. Sponsor/CFO approval is required for additional funding.",
+              "character": "Elena Santos",
+              "characterQuote": "Right. Alex can reallocate within the approved $850K budget. But adding more money? That's my decision. I need to see the business justification."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Alex, you manage within your budget. If you need more, you come to me with a business case. That's how financial governance works.",
+              "character": "Elena Santos",
+              "characterQuote": "Alex, you manage within your budget. If you need more, you come to me with a business case. That's how financial governance works."
+            },
+            "retryHint": "Who controls the money? Can a PM just add funds without anyone's approval?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What authority does Alex have to resolve the conflict?",
+            "points": 100,
+            "scenario_name": "Team Conflict Resolution",
+            "situation": "Maya and Devon are arguing about construction sequencing (Maya: 'Do electrical first,' Devon: 'Plumbing first, it's safer'). The argument is delaying the schedule.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Alex can ORDER a decision (command: 'We're doing electrical first')",
+                "correct": false,
+                "whyWrong": "Ordering decisions without team input creates resentment and disengagement."
+              },
+              {
+                "id": "B",
+                "text": "Alex must FACILITATE a decision (influence: help Maya and Devon reach agreement)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Alex must escalate to Carlos to decide",
+                "correct": false,
+                "whyWrong": "Escalating technical operational decisions to the sponsor wastes their time."
+              },
+              {
+                "id": "D",
+                "text": "Alex has no role (team resolves own conflicts)",
+                "correct": false,
+                "whyWrong": "PMs absolutely have a role in conflict resolution — they facilitate discussions and guide teams to consensus."
+              }
+            ],
+            "explanation": "PMs lead through INFLUENCE, not command. Alex should facilitate discussion, help evaluate options, and guide to consensus.",
+            "correctFeedback": {
+              "text": "PMs lead through INFLUENCE, not command. Alex should facilitate discussion, help evaluate options, and guide to consensus.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent, Alex. You're learning that influence beats authority. Help the team see the best path — don't dictate it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If Alex just orders us around without listening, we'll disengage. We have experience — let us contribute to the decision.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "If Alex just orders us around without listening, we'll disengage. We have experience — let us contribute to the decision."
+            },
+            "retryHint": "What's the difference between commanding ('do this') and facilitating ('let's figure this out together')?"
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "Can Alex award the $350K contract to Best Build Co.?",
+            "points": 100,
+            "scenario_name": "Vendor Selection — High-Value Contract",
+            "situation": "Alex evaluates 3 construction contractors. Winner: Best Build Co. ($350K, excellent references, 4-month timeline). Alex wants to award the contract.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes — Alex has authority to select vendors",
+                "correct": false,
+                "whyWrong": "For high-value contracts, separation of duties is critical."
+              },
+              {
+                "id": "B",
+                "text": "Yes, but Alex must notify Carlos after signing",
+                "correct": false,
+                "whyWrong": "Notifying after the fact provides no governance value. The sponsor must approve BEFORE signing."
+              },
+              {
+                "id": "C",
+                "text": "No — Alex RECOMMENDS vendor, Carlos (Sponsor) approves high-value contracts",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "No — Elena (CFO) must approve ALL contracts",
+                "correct": false,
+                "whyWrong": "Not all contracts require CFO approval — small purchases may be within PM authority. The sponsor typically approves project-related contracts above a threshold."
+              }
+            ],
+            "explanation": "PMs typically RECOMMEND vendors, but SPONSOR approves high-value contracts. Alex evaluates and recommends; Carlos approves.",
+            "correctFeedback": {
+              "text": "PMs typically RECOMMEND vendors, but SPONSOR approves high-value contracts. Alex evaluates and recommends; Carlos approves.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I trust your evaluation, Alex. But for $350K, I need to sign off. It's my responsibility to the board."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "You do the homework, Alex — evaluate options, check references, negotiate terms. But I approve major commitments. That's good governance.",
+              "character": "Carlos Mendez",
+              "characterQuote": "You do the homework, Alex — evaluate options, check references, negotiate terms. But I approve major commitments. That's good governance."
+            },
+            "retryHint": "Think about checks and balances. Should one person both evaluate AND approve a $350K contract?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Understanding the PM's Role",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Responsibilities",
+            "subtitle": "What Does a PM Do?",
+            "content": "A **Project Manager** is responsible for **Plan, Execute, and Monitor & Control**:\n\n**1. PLAN the project:**\n- Define scope, schedule, and budget\n- Identify risks and plan responses\n- Plan resources and communication\n\n**2. EXECUTE the plan:**\n- Coordinate team activities\n- Manage stakeholder expectations\n- Ensure quality standards\n\n**3. MONITOR & CONTROL:**\n- Track progress vs. plan\n- Identify variances and take corrective action\n- Manage changes through change control"
+          },
+          {
+            "id": "tab2",
+            "title": "Authority Gap",
+            "subtitle": "The PM's Dilemma",
+            "content": "**RESPONSIBILITY:** PM is accountable for project SUCCESS (on time, on budget, meets scope, satisfies stakeholders)\n\n**AUTHORITY:** PM has LIMITED formal power:\n- Cannot approve budget increases\n- Cannot hire/fire team members\n- Cannot override sponsors\n- Cannot sign high-value contracts\n\n**Why the Gap Exists:**\n- PMs don't own resources (team reports to functional managers)\n- PMs don't control funding (sponsor/CFO approves)\n- PMs don't set strategy (sponsor defines objectives)\n\n**The Solution:** Lead through INFLUENCE, not command."
+          },
+          {
+            "id": "tab3",
+            "title": "Talent Triangle",
+            "subtitle": "PMI's Three Skill Categories",
+            "content": "**1. Technical Project Management:**\n- PM processes (planning, executing, monitoring)\n- Tools (Gantt charts, budgets, risk registers)\n- PMBOK knowledge\n\n**2. Leadership:**\n- Communication and negotiation\n- Team building and motivation\n- Conflict resolution\n- Influence without authority\n\n**3. Strategic & Business Management:**\n- Business acumen (ROI, financial metrics)\n- Strategic alignment\n- Benefits realization\n\n**The Trend:** PMI increasingly emphasizes Leadership over pure Technical skills.",
+            "diagram": {
+              "image": "/images/A1L2_diagram_talent_triangle.webp",
+              "alt": "PMI Talent Triangle"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Boundaries",
+            "subtitle": "CAN vs. CANNOT Control",
+            "content": "**Alex CAN Control (within project):**\n- Task assignments (who works on what)\n- Day-to-day decisions (schedule adjustments)\n- Team coordination (meetings, communication)\n- Quality standards enforcement\n- Status reporting and stakeholder updates\n- Recommend vendors, approaches, solutions\n\n**Alex CANNOT Control (requires approval):**\n- Project charter approval (Sponsor)\n- Budget increases beyond baseline (Sponsor/CFO)\n- High-value contracts (Sponsor approves)\n- Scope changes impacting baseline (Change Control)\n- Hire/fire team members (Functional managers)\n\n**Key Insight:** Authority boundaries vary by organization. Always clarify with your sponsor!"
+          },
+          {
+            "id": "tab5",
+            "title": "Influence Skills",
+            "subtitle": "Leading Without Authority",
+            "content": "**1. Build Relationships BEFORE you need them**\n- Establish trust early with stakeholders\n\n**2. Communicate the 'Why' (not just 'What')**\n- Explain the benefit, not just the request\n\n**3. Demonstrate Value**\n- Show stakeholders you make their lives easier\n\n**4. Frame Decisions as CHOICES**\n- Instead of demands, present options with trade-offs\n\n**5. Use Data and Evidence**\n- Influence through facts, not opinions\n\n> **Dr. Foster's Quote:** \"Authority is GIVEN by your title. Influence is EARNED through your actions.\""
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Team Member Underperforming",
+        "scenario": {
+          "title": "Team Member Underperforming",
+          "description": "Liam (junior team member) is consistently missing deadlines. His work quality is poor — permit applications have errors, causing delays. The team is frustrated. Alex needs to address this. **Details:**",
+          "images": [
+            {
+              "src": "/images/A1L2_comic_transfer.webp",
+              "alt": "Transfer Scenario"
+            }
+          ],
+          "details": [
+            "**Issue:** Liam missing deadlines, poor quality",
+            "**Impact:** Project delays, team frustration",
+            "**Question:** What authority does Alex have?"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What authority does Alex have regarding Liam's performance?",
+            "points": 150,
+            "scenario_name": "PM Authority Over Team Performance",
+            "situation": "Liam, a junior team member on Alex's restaurant expansion project, is consistently missing deadlines and submitting permit applications with errors, causing project delays and growing team frustration. Alex needs to address Liam's performance.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Alex can fire Liam (PM has authority over team)",
+                "correct": false,
+                "whyWrong": "In matrix organizations, PMs don't hire/fire team members."
+              },
+              {
+                "id": "B",
+                "text": "Alex can formally discipline Liam (written warning)",
+                "correct": false,
+                "whyWrong": "Formal discipline (written warnings, PIPs, termination) requires functional manager involvement."
+              },
+              {
+                "id": "C",
+                "text": "Alex can provide feedback and coaching, but formal discipline requires functional manager approval",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Alex has no authority (must escalate immediately to Carlos)",
+                "correct": false,
+                "whyWrong": "Alex DOES have authority to provide feedback and coaching."
+              }
+            ],
+            "explanation": "In a matrix organization, PMs don't hire/fire team members. Liam reports to a functional manager. Alex CAN provide performance feedback and coaching but formal discipline requires the functional manager.",
+            "correctFeedback": {
+              "text": "In a matrix organization, PMs don't hire/fire team members. Liam reports to a functional manager. Alex CAN provide performance feedback and coaching but formal discipline requires the functional manager.",
+              "character": "Carlos Mendez",
+              "characterQuote": "You can coach Liam, Alex. Give him feedback, help him improve. But if formal action is needed, you work with his manager."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Alex, you lead through influence. Coach Liam, give feedback, support improvement. But HR actions go through his manager.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Alex, you lead through influence. Coach Liam, give feedback, support improvement. But HR actions go through his manager."
+            },
+            "retryHint": "Who manages the WORK (PM) vs. who manages the PERSON (functional manager)?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "drag_drop",
+            "question": "Alex decides to coach Liam using influence techniques. Drag the INFLUENCE techniques to the coaching approach. Avoid COMMAND techniques.",
+            "points": 150,
+            "scenario_name": "Influence Techniques",
+            "situation": "After deciding to coach Liam rather than escalate to his functional manager, Alex prepares for a one-on-one conversation. Dr. Amelia Foster advises Alex to use influence-based coaching techniques rather than command-based approaches.",
+            "chips": [
+              {
+                "id": "chip",
+                "label": "Chip",
+                "correctZone": "correct_zone"
+              },
+              {
+                "id": "observation",
+                "label": "Observation",
+                "correctZone": "use_these_influence"
+              },
+              {
+                "id": "inquiry",
+                "label": "Inquiry",
+                "correctZone": "use_these_influence"
+              },
+              {
+                "id": "support",
+                "label": "Support",
+                "correctZone": "use_these_influence"
+              },
+              {
+                "id": "command",
+                "label": "Command",
+                "correctZone": "avoid_these_command"
+              },
+              {
+                "id": "threat",
+                "label": "Threat",
+                "correctZone": "avoid_these_command"
+              },
+              {
+                "id": "accusation",
+                "label": "Accusation",
+                "correctZone": "avoid_these_command"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "correct_zone",
+                "label": "Correct Zone",
+                "detail": "Detail"
+              },
+              {
+                "id": "use_these_influence",
+                "label": "Use These (Influence)",
+                "detail": "Builds trust and engagement"
+              },
+              {
+                "id": "avoid_these_command",
+                "label": "Avoid These (Command)",
+                "detail": "Creates resentment"
+              }
+            ],
+            "explanation": "Observation, Inquiry, and Support are influence techniques that build trust. Command, Threat, and Accusation create resentment and should be avoided.",
+            "correctFeedback": {
+              "text": "Observation, Inquiry, and Support are influence techniques that build trust. Command, Threat, and Accusation create resentment and should be avoided.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You've got it, Alex. 'I noticed...' opens dialogue. 'You must...' shuts it down. Influence always beats command."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about how YOU would feel hearing each approach. Would it make you want to improve, or would it make you defensive?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about how YOU would feel hearing each approach. Would it make you want to improve, or would it make you defensive?"
+            },
+            "retryHint": "Influence = engage and support. Command = demand and threaten. Which builds better relationships?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that PMs have **RESPONSIBILITY** for project success but **LIMITED AUTHORITY** to make decisions. Great PMs lead through **INFLUENCE**, using the PMI Talent Triangle (Technical, Leadership, Strategic skills) to navigate authority boundaries.",
+        "key_takeaways": [
+          "PM's Core Responsibilities: Plan, Execute, Monitor & Control",
+          "Authority Gap: Responsible for success, but can't approve budgets, hire/fire, override sponsors",
+          "Influence > Authority: Great PMs succeed through communication, negotiation, relationships",
+          "PMI Talent Triangle: Technical PM Skills + Leadership + Strategic & Business Management",
+          "Authority Boundaries: Clarify with sponsor — 'What can I decide alone? What requires approval?'",
+          "Leading Through Influence: Build relationships, communicate Why, frame choices, use data"
+        ],
+        "xp_earned": 150,
+        "next_lesson": {
+          "id": "A1L3",
+          "title": "Project Stakeholders",
+          "description": "Learn WHO you're working with — identifying stakeholders and understanding their power, interests, and expectations."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager do?",
+            "points": 50,
+            "scenario_name": "Project Sponsorship",
+            "situation": "A project manager at a software company has completed the project charter and is ready to begin work. The sponsor is unavailable for two weeks due to travel. The PM believes the charter is complete and wants to start executing to meet deadlines.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Begin project execution since the charter is complete",
+                "correct": false,
+                "whyWrong": "A complete charter is not an approved charter. Without sponsor authorization, the PM has no formal authority."
+              },
+              {
+                "id": "B",
+                "text": "Wait for the sponsor to return and approve the charter before starting",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Have the CFO approve the charter in the sponsor's absence",
+                "correct": false,
+                "whyWrong": "The CFO is not the sponsor. Only the sponsor (or an explicitly authorized delegate) can approve the charter."
+              },
+              {
+                "id": "D",
+                "text": "Send the charter to the sponsor via email and proceed after 48 hours",
+                "correct": false,
+                "whyWrong": "Assuming approval without explicit confirmation is risky."
+              }
+            ],
+            "explanation": "The project charter must be approved by the sponsor before project work can begin. The sponsor's authorization is what formally starts the project.",
+            "correctFeedback": {
+              "text": "The project charter must be approved by the sponsor before project work can begin. The sponsor's authorization is what formally starts the project.",
+              "character": "Carlos Mendez",
+              "characterQuote": "No charter approval, no project start. That's not bureaucracy — it's governance. I'm accountable for this project to the board."
+            },
+            "retryHint": "Who has the authority to say 'yes, this project is officially starting'? Can anyone else grant that authority?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST approach for the project manager?",
+            "points": 50,
+            "scenario_name": "Team Conflict Management",
+            "situation": "Two senior team members are in conflict about the technical approach for a critical project deliverable. The disagreement is escalating and affecting team morale. Both team members have valid technical arguments.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Make the technical decision for the team to end the conflict quickly",
+                "correct": false,
+                "whyWrong": "Making the decision yourself may end the conflict but doesn't build team buy-in."
+              },
+              {
+                "id": "B",
+                "text": "Escalate to the sponsor to make the decision",
+                "correct": false,
+                "whyWrong": "Escalating technical operational decisions wastes sponsor time."
+              },
+              {
+                "id": "C",
+                "text": "Facilitate a discussion to help the team evaluate options and reach consensus",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Separate the team members and assign them to different work streams",
+                "correct": false,
+                "whyWrong": "Separating team members avoids the issue rather than resolving it."
+              }
+            ],
+            "explanation": "PMs should facilitate conflict resolution rather than command decisions or immediately escalate. Facilitation helps the team evaluate options objectively and builds ownership of the solution.",
+            "correctFeedback": {
+              "text": "PMs should facilitate conflict resolution rather than command decisions or immediately escalate. Facilitation helps the team evaluate options objectively and builds ownership of the solution.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Conflict is normal — it often leads to better solutions. Your job is to channel it productively, not suppress it or run from it."
+            },
+            "retryHint": "What's the difference between commanding, escalating, avoiding, and facilitating? Which builds team ownership?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Budget Variance Management",
+            "situation": "Midway through a project, the PM discovers that actual costs are 15% over the planned budget. The project has a 10% contingency reserve. The variance is due to unexpected material cost increases beyond anyone's control.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Use the contingency reserve to cover the variance",
+                "correct": false,
+                "whyWrong": "Acting without analysis is premature. While contingency may be appropriate, the PM should first analyze and present options."
+              },
+              {
+                "id": "B",
+                "text": "Request additional funding from the sponsor immediately",
+                "correct": false,
+                "whyWrong": "Requesting funds without a thorough analysis doesn't give the sponsor enough information."
+              },
+              {
+                "id": "C",
+                "text": "Analyze the variance and prepare options for the sponsor",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Reduce project scope to bring costs back in line",
+                "correct": false,
+                "whyWrong": "Cutting scope is one option, but the PM shouldn't unilaterally make this decision."
+              }
+            ],
+            "explanation": "The PM should first analyze the variance thoroughly and prepare options (use contingency, request funds, reduce scope) before presenting to the sponsor for a decision.",
+            "correctFeedback": {
+              "text": "The PM should first analyze the variance thoroughly and prepare options (use contingency, request funds, reduce scope) before presenting to the sponsor for a decision.",
+              "character": "Elena Santos",
+              "characterQuote": "Don't just bring me problems — bring me options. I need to understand the trade-offs before I make a call."
+            },
+            "retryHint": "What's the PM's responsibility — to decide, or to analyze and recommend? Who makes the final call on budget?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the MOST effective approach for the project manager?",
+            "points": 50,
+            "scenario_name": "Stakeholder Influence",
+            "situation": "A functional manager is reluctant to release a key resource to the project, citing department priorities. The PM needs this resource to meet critical milestones. The PM and functional manager are at the same organizational level.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Escalate to the sponsor to mandate the resource assignment",
+                "correct": false,
+                "whyWrong": "Escalating immediately damages the relationship with the functional manager."
+              },
+              {
+                "id": "B",
+                "text": "Meet with the functional manager to understand concerns and find a mutually beneficial solution",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Adjust the project schedule to work around the unavailable resource",
+                "correct": false,
+                "whyWrong": "Accepting constraints without attempting influence accepts defeat too easily."
+              },
+              {
+                "id": "D",
+                "text": "Document the risk and proceed without the resource",
+                "correct": false,
+                "whyWrong": "Proceeding without a critical resource and just documenting the risk is passive."
+              }
+            ],
+            "explanation": "Leading through influence means engaging stakeholders directly to understand their concerns and finding win-win solutions before escalating or accepting constraints.",
+            "correctFeedback": {
+              "text": "Leading through influence means engaging stakeholders directly to understand their concerns and finding win-win solutions before escalating or accepting constraints.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Influence is about understanding the other person's world. What do they need? How can this project help them too?"
+            },
+            "retryHint": "What's the first step in influence? Understanding the other person's perspective, or demanding what you need?"
+          }
+        ]
+      }
+    }
+  ]
+}

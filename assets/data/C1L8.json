@@ -1,0 +1,712 @@
+{
+  "lessonId": "C1L8",
+  "lessonTitle": "Benefits Realization",
+  "courseId": "C1",
+  "courseName": "Integration Management",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish project success (time, budget, scope) from business success (benefits realized)",
+    "Classify benefits as tangible (revenue, ROI, cost savings) or intangible (brand, satisfaction, morale)",
+    "Understand that benefits realization occurs post-project (3 months to 5 years after delivery)",
+    "Recognize that benefits ownership transfers from the PM to operations/sponsor at project closure",
+    "Apply root cause analysis when benefits fall short of projections"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "elena_santos",
+    "dr_amelia_foster",
+    "nina_chen"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "The Restaurant Is Open, the Numbers Are In — But Who's to Blame?",
+        "intro": "You're **Alex Mitchell**, three months after delivering the Riverside Plaza restaurant on time, on budget, and within scope. The project is closed. But at the 3-month business review, Carlos waves a report showing revenue at only 81% of target and ROI at 78%. He points at you: \"Your project didn't deliver value!\" Dr. Foster steps in: \"You're confusing two DIFFERENT things.\"",
+        "failure_cards": [
+          {
+            "id": "the_false_success",
+            "icon": "📋",
+            "title": "The False Success",
+            "summary": "Project metrics all green, but business metrics tell a different story",
+            "image": "/images/C1L8_comic_false_success.webp",
+            "details": "Three months after grand opening, Alex proudly presents the project scorecard: delivered on time (Oct 15), within budget ($1.215M vs $1.2M baseline), met scope (120 seats, wood-fired oven, chef's table), formally accepted and closed. But Elena holds up a second scorecard — the BUSINESS results: revenue $65K/month vs $80K target (81%), customer rating 4.2 vs 4.5 target, ROI projection 14% vs 18% target. Carlos immediately points at Alex: \"Your project didn't deliver value!\" Two scorecards, two very different stories."
+          },
+          {
+            "id": "the_intangible_miss",
+            "icon": "⚠️",
+            "title": "The Intangible Miss",
+            "summary": "Not all benefits show up on financial statements — and those are falling short too",
+            "image": "/images/C1L8_comic_intangible_miss.webp",
+            "details": "Elena digs deeper. Beyond the financial shortfall, the intangible benefits are also underperforming. Brand reputation as a \"premium dining destination\" hasn't materialized — online reviews mention slow service and inconsistent food quality. Employee morale is mixed; two servers quit in month two. Market differentiation from the wood-fired oven isn't driving traffic because Nina's marketing campaigns haven't highlighted it. The restaurant was built perfectly, but the OPERATIONAL execution needed to realize these benefits — both tangible and intangible — is falling short."
+          },
+          {
+            "id": "the_ownership_gap",
+            "icon": "💡",
+            "title": "The Ownership Gap",
+            "summary": "Benefits don't belong to the PM after project closure — operations must own them",
+            "image": "/images/C1L8_comic_ownership_gap.webp",
+            "details": "Dr. Foster draws a line on the whiteboard. On the left: \"Project Delivery (Alex) — Time, Budget, Scope.\" On the right: \"Benefits Realization (Carlos) — Revenue, ROI, Satisfaction.\" She explains: Alex's job was to deliver a functioning restaurant. Done. Carlos's job is to OPERATE it effectively to achieve the projected business value. Revenue depends on marketing (Nina), service quality (Jamie), food consistency (Marco), and pricing strategy (Carlos) — none of which are project delivery issues. Carlos's expression shifts from blame to realization: \"So the revenue shortfall is MY responsibility?\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Revenue is $65K, not $80K — Alex's project didn't deliver value! ...Wait. You're saying the revenue depends on how I run operations, not how Alex built the restaurant?"
+        },
+        "learning_hook": "**A project can succeed and benefits can still fail.** Project success (delivery) and business success (value) are SEPARATE measures with SEPARATE owners. The PM delivers the tool. Operations realizes the value. Understanding this distinction is critical for the PMP exam — and for every project you'll ever manage."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "who_owns_success",
+        "title": "Who Owns Success?",
+        "description": "Dr. Foster guides you through the distinction between project delivery and benefits realization. \"Let's untangle what happened at Riverside Plaza — and figure out who's responsible for what.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each Riverside Plaza benefit into the correct category — Tangible (Financial) or Intangible (Qualitative):",
+            "points": 100,
+            "scenario_name": "Tangible vs Intangible Classification",
+            "situation": "Dr. Foster explains that Riverside Plaza's projected benefits fall into two categories: tangible (financial, measurable, appears on financial statements) and intangible (qualitative, strategic, doesn't appear directly on financials). Before diagnosing the shortfall, you must understand what KIND of benefits you're tracking.",
+            "chips": [
+              {
+                "id": "revenue_80k_month",
+                "label": "Revenue $80K/month",
+                "correctZone": "tangible_financial"
+              },
+              {
+                "id": "brand_reputation_as_premium_dining_destination",
+                "label": "Brand reputation as \"premium dining destination\"",
+                "correctZone": "intangible_qualitative"
+              },
+              {
+                "id": "roi_18_annually",
+                "label": "ROI 18% annually",
+                "correctZone": "tangible_financial"
+              },
+              {
+                "id": "customer_satisfaction_45_star_rating",
+                "label": "Customer satisfaction 4.5+ star rating",
+                "correctZone": "intangible_qualitative"
+              },
+              {
+                "id": "cost_savings_10k_month_from_efficient_kitchen",
+                "label": "Cost savings $10K/month from efficient kitchen",
+                "correctZone": "tangible_financial"
+              },
+              {
+                "id": "employee_morale_and_retention",
+                "label": "Employee morale and retention",
+                "correctZone": "intangible_qualitative"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "tangible_financial",
+                "label": "Tangible (Financial)",
+                "detail": "Revenue is a direct financial measure on income statements"
+              },
+              {
+                "id": "intangible_qualitative",
+                "label": "Intangible (Qualitative)",
+                "detail": "Brand perception is qualitative — valuable but not a line item on financials"
+              }
+            ],
+            "explanation": "Tangible benefits appear on financial statements and are measured in currency: revenue, ROI, cost savings, payback period. Intangible benefits are qualitative and strategic: brand reputation, customer satisfaction, employee morale, market differentiation. Both matter — tangible benefits justify the investment financially, while intangible benefits create strategic advantages that often lead to FUTURE tangible returns (strong brand leads to customer loyalty leads to repeat revenue).",
+            "correctFeedback": {
+              "text": "Tangible benefits appear on financial statements and are measured in currency: revenue, ROI, cost savings, payback period. Intangible benefits are qualitative and strategic: brand reputation, customer satisfaction, employee morale, market differentiation. Both matter — tangible benefits justify the investment financially, while intangible benefits create strategic advantages that often lead to FUTURE tangible returns (strong brand leads to customer loyalty leads to repeat revenue).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Good classification. Tangible benefits hit the financial statements directly. Intangible benefits don't — but they create strategic value that eventually drives financial returns. Track both."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: does this benefit appear as a line item on a financial statement? If it's measured in dollars, it's tangible. If it's measured in perception, satisfaction, or reputation, it's intangible.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: does this benefit appear as a line item on a financial statement? If it's measured in dollars, it's tangible. If it's measured in perception, satisfaction, or reputation, it's intangible."
+            },
+            "retryHint": "Financial statements contain revenue, costs, profit, and ROI — those are tangible. Everything measured in perception, ratings, or reputation is intangible."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Which statement MOST ACCURATELY describes the current situation at Riverside Plaza?",
+            "points": 100,
+            "scenario_name": "Project Success vs Business Success",
+            "situation": "Elena reviews the 3-month data for Riverside Plaza. Project metrics (Alex's responsibility): delivered on time (Oct 15), within budget ($1.215M vs $1.2M baseline), met scope (120 seats, wood-fired oven, chef's table), formally accepted and closed. Business metrics (3 months post-opening): revenue $65K/month (target $80K) = 81%, customer rating 4.2 stars (target 4.5) = 93%, ROI projection 14% (target 18%) = 78%.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Project succeeded AND business succeeded — everything is on track",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Project failed AND business failed — Alex didn't deliver correctly",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Project succeeded (delivered correctly) BUT business benefits are partially realized — project success doesn't guarantee benefit realization",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Can't evaluate yet — need to wait at least 2 years before judging",
+                "correct": false
+              }
+            ],
+            "explanation": "Project success and business success are SEPARATE measures. Alex delivered the restaurant on time, within budget, and meeting scope — that is project success. But the business benefits (revenue, ROI, satisfaction) are below targets at the 3-month mark — that is a benefits realization shortfall. A perfectly delivered project can fail to realize benefits if operations execution is poor, market conditions shifted, or business case assumptions were wrong. Different measures, different owners, different timelines.",
+            "correctFeedback": {
+              "text": "Project success and business success are SEPARATE measures. Alex delivered the restaurant on time, within budget, and meeting scope — that is project success. But the business benefits (revenue, ROI, satisfaction) are below targets at the 3-month mark — that is a benefits realization shortfall. A perfectly delivered project can fail to realize benefits if operations execution is poor, market conditions shifted, or business case assumptions were wrong. Different measures, different owners, different timelines.",
+              "character": "Elena Santos",
+              "characterQuote": "I wanted to blame Alex. But the project scorecard is all green — Alex delivered exactly what we agreed on. Revenue depends on how Carlos, Nina, and the team execute operations. Different responsibilities."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at the two scorecards separately. Did Alex deliver the restaurant correctly (time, budget, scope)? That's one question. Are the business results meeting targets? That's a completely different question with a different owner.",
+              "character": "Elena Santos",
+              "characterQuote": "Look at the two scorecards separately. Did Alex deliver the restaurant correctly (time, budget, scope)? That's one question. Are the business results meeting targets? That's a completely different question with a different owner."
+            },
+            "retryHint": "Separate the two scorecards. Project metrics (time, budget, scope) are all green. Business metrics (revenue, ROI, rating) are below target. Can one succeed while the other falls short?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "According to PMI best practices, when is benefits realization PRIMARILY measured?",
+            "points": 100,
+            "scenario_name": "Benefits Measurement Timing",
+            "situation": "Carlos is confused about WHEN benefits should be measured. He assumed that if the project was successful at closure (Oct 15), the benefits should automatically follow. Dr. Foster explains that benefits follow a different timeline entirely.",
+            "options": [
+              {
+                "id": "A",
+                "text": "During project execution, as deliverables are produced",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "At project closure, when deliverables are formally accepted",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Post-project, over a period of 3 months to several years after delivery",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Only at the end of the fiscal year for annual financial reporting",
+                "correct": false
+              }
+            ],
+            "explanation": "Benefits are NOT measured at project closure — that's when DELIVERABLES are verified. Benefits require time to materialize after the project delivers its outputs. The typical timeline: early indicators at 3 months, mid-term assessment at 6 months, annual review at 1 year, and full realization assessment at 2-5 years. Riverside Plaza's 3-month review is an appropriate early indicator checkpoint — not too early to analyze, not too late to take corrective action.",
+            "correctFeedback": {
+              "text": "Benefits are NOT measured at project closure — that's when DELIVERABLES are verified. Benefits require time to materialize after the project delivers its outputs. The typical timeline: early indicators at 3 months, mid-term assessment at 6 months, annual review at 1 year, and full realization assessment at 2-5 years. Riverside Plaza's 3-month review is an appropriate early indicator checkpoint — not too early to analyze, not too late to take corrective action.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Benefits require TIME to materialize. At closure, you verify deliverables. After closure, you measure whether those deliverables created the projected business value. Different checkpoints, different questions."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what you can measure at each stage. During execution, you measure progress. At closure, you verify deliverables. But can you measure revenue impact on the day you open the doors? Or does that take time?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what you can measure at each stage. During execution, you measure progress. At closure, you verify deliverables. But can you measure revenue impact on the day you open the doors? Or does that take time?"
+            },
+            "retryHint": "Can you measure restaurant revenue on opening day? Or does it take weeks and months of operations to see whether revenue meets projections?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "According to PMI best practices, who is PRIMARILY responsible for realizing projected benefits after project delivery?",
+            "points": 100,
+            "scenario_name": "Benefits Ownership Transfer",
+            "situation": "Carlos insists that Alex should be held accountable for the revenue shortfall. Dr. Foster asks Carlos to consider: who controls the factors that drive revenue AFTER the restaurant is built and open?",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project manager who delivered the project",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The project sponsor and operations management",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The PMO that oversees all organizational projects",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The business analyst who created the original requirements",
+                "correct": false
+              }
+            ],
+            "explanation": "After project closure, responsibility for benefits realization transfers from the PM to operations management (with sponsor oversight). At Riverside Plaza: Alex delivered the restaurant (PM responsibility — done). Carlos must now drive revenue through marketing, service quality, pricing, and customer experience (operations responsibility — ongoing). Elena provides oversight as sponsor. The PM created the enabling conditions; operations must use those conditions to generate value.",
+            "correctFeedback": {
+              "text": "After project closure, responsibility for benefits realization transfers from the PM to operations management (with sponsor oversight). At Riverside Plaza: Alex delivered the restaurant (PM responsibility — done). Carlos must now drive revenue through marketing, service quality, pricing, and customer experience (operations responsibility — ongoing). Elena provides oversight as sponsor. The PM created the enabling conditions; operations must use those conditions to generate value.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Alex gave me a functioning restaurant — that was his job. Revenue depends on MY marketing, MY service quality, MY pricing decisions. Benefits are MY responsibility now."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about who controls the factors that drive revenue. Does Alex control marketing campaigns? Does Alex set menu prices? Does Alex train the servers? Who does?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about who controls the factors that drive revenue. Does Alex control marketing campaigns? Does Alex set menu prices? Does Alex train the servers? Who does?"
+            },
+            "retryHint": "After the restaurant opens, who controls marketing, service quality, pricing, and customer experience? That person owns benefits realization."
+          },
+          {
+            "q_id": "q5",
+            "type": "multi_select",
+            "question": "Which are LIKELY root causes for the revenue benefits shortfall? Select ALL that apply.",
+            "points": 100,
+            "scenario_name": "Root Cause Analysis for Shortfall",
+            "situation": "Revenue is $65K/month vs the $80K target. Carlos agrees he owns the shortfall and wants to diagnose WHY. The data shows: customer traffic 400/month (projected 500), average check $40 (projected $50), online reviews mention slow service, and Nina's marketing campaigns haven't highlighted the wood-fired oven — the restaurant's key differentiator.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Restaurant design is flawed — Alex built it wrong",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Marketing isn't driving enough customer traffic",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Average check size is below projection due to menu/pricing strategy",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Service quality issues are hurting repeat business and ratings",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "The business case projections were unrealistic from the start",
+                "correct": false
+              }
+            ],
+            "explanation": "The three correct root causes are all OPERATIONAL factors within Carlos's control: (B) Nina's marketing hasn't highlighted the wood-fired oven, contributing to lower traffic (400 vs 500). (C) Average check of $40 vs $50 suggests pricing or upselling opportunities are being missed. (D) Reviews mentioning slow service hurt ratings (4.2 vs 4.5) and reduce repeat visits. These are operational execution issues, not project delivery failures.",
+            "correctFeedback": {
+              "text": "The three correct root causes are all OPERATIONAL factors within Carlos's control: (B) Nina's marketing hasn't highlighted the wood-fired oven, contributing to lower traffic (400 vs 500). (C) Average check of $40 vs $50 suggests pricing or upselling opportunities are being missed. (D) Reviews mentioning slow service hurt ratings (4.2 vs 4.5) and reduce repeat visits. These are operational execution issues, not project delivery failures.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "All three root causes are operational — marketing effectiveness, pricing strategy, and service quality. None are project delivery issues. Carlos owns all three, and all three have corrective actions."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Focus on what's happening AFTER the restaurant opened. Is the building faulty? Or are the daily operations — marketing, pricing, service — underperforming?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Focus on what's happening AFTER the restaurant opened. Is the building faulty? Or are the daily operations — marketing, pricing, service — underperforming?"
+            },
+            "retryHint": "Revenue = Traffic x Average Check. Which operational factors affect traffic and check size? Think marketing, pricing, and service quality."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Benefits Realization Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Project Success vs Business Success",
+            "subtitle": "",
+            "content": "**Project Success** and **Business Success** are DIFFERENT measures with DIFFERENT owners and DIFFERENT timelines.\n\n**Project Success — \"Did we build it correctly?\"**\n- **Metrics:** On time (schedule baseline), on budget (cost baseline), met scope (scope baseline)\n- **Measured when:** During the project and at closure\n- **Owner:** Project Manager\n- **Riverside Plaza:** Delivered Oct 15, $1.215M (within budget), 120 seats with all features. ALL GREEN.\n\n**Business Success — \"Did what we built deliver VALUE?\"**\n- **Metrics:** Revenue (financial return), ROI (investment payback), customer satisfaction (market acceptance)\n- **Measured when:** Post-project (3 months to 5 years)\n- **Owner:** Operations management and sponsor\n- **Riverside Plaza:** Revenue 81%, ROI 78%, Rating 93%. BELOW TARGET.\n\n**Key Insight:** A perfectly delivered project can fail to realize benefits if operations execution is poor, market conditions changed, business case assumptions were wrong, or customer acceptance is lower than expected. Conversely, a troubled project (over budget, delayed) can still deliver excellent business benefits if operations executes well.",
+            "diagram": {
+              "image": "/images/C1L8_diagram_benefits_framework.webp",
+              "alt": "Benefits realization framework diagram"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Tangible vs Intangible Benefits",
+            "subtitle": "",
+            "content": "Benefits come in two forms — both matter for different reasons:\n\n**Tangible Benefits (Financial)**\n- Appear on financial statements, measured in currency\n- Examples: Revenue ($80K/month), ROI (18%), Cost Savings ($10K/month), Payback Period (4.2 years)\n- Why they matter: Justify the investment financially — the CFO (Elena) cares most about these\n- How to measure: Financial statements, revenue reports, cost accounting\n\n**Intangible Benefits (Qualitative)**\n- Don't appear directly on financials, measured through surveys, ratings, studies\n- Examples: Brand reputation (\"premium dining\"), Customer satisfaction (4.5 stars), Employee morale, Market differentiation (only wood-fired oven in area)\n- Why they matter: Create strategic advantages that lead to FUTURE tangible returns\n- How to measure: Surveys, ratings, brand studies, retention rates, competitive analysis\n\n**The Connection:** Intangible benefits often drive future tangible results. Strong brand leads to customer loyalty leads to repeat revenue. High satisfaction leads to positive reviews leads to new customers. Good employee morale leads to better service leads to higher tips and lower turnover costs."
+          },
+          {
+            "id": "tab3",
+            "title": "Benefits Realization Timeline",
+            "subtitle": "",
+            "content": "Benefits are NOT measured at project closure — they're measured post-project over months to years:\n\n| Phase | Activity | Owner | Riverside Plaza Example |\n|-------|----------|-------|------------------------|\n| Business Case (Initiation) | Benefits PROJECTED | Sponsor with PM assistance | \"$80K/month revenue, 18% ROI, 4.5 rating\" |\n| Project Closure (Delivery) | Ownership TRANSFERS | PM hands off to Operations | \"Oct 15 opening — Alex's job done, Carlos takes over\" |\n| 3 Months Post-Project | Early indicators measured | Operations | \"$65K revenue (81%), 4.2 rating — identify trends\" |\n| 6 Months Post-Project | Mid-term assessment | Operations | \"Corrective actions implemented, revenue trending up\" |\n| 1 Year Post-Project | Annual review | Operations/Sponsor | \"Revenue $82K (103%), ROI 16% — improving\" |\n| 2-5 Years Post-Project | Full realization | Sponsor | \"ROI 19%, payback achieved — benefits fully realized\" |\n\n**Key Point:** The 3-month review is an early indicator checkpoint — early enough to identify trends but not too early to act. Waiting passively for benefits to \"self-correct\" is never the right approach. Diagnose, act, monitor."
+          },
+          {
+            "id": "tab4",
+            "title": "Common Mistakes",
+            "subtitle": "",
+            "content": "**Mistake 1: \"Project success = Business success\"**\n- Truth: They are separate measures. A project can succeed (delivery) while benefits fail (operations). And vice versa — a troubled project can still deliver excellent business value.\n\n**Mistake 2: \"The PM owns benefits\"**\n- Truth: The PM delivers the tool (project). Operations uses the tool to realize value (benefits). Responsibility transfers at closure. Don't blame the builder for how the owner uses the building.\n\n**Mistake 3: \"Benefits should be visible at project closure\"**\n- Truth: Benefits require TIME. Revenue, ROI, and satisfaction take months to materialize. Measure at regular intervals: 3 months, 6 months, 1 year, 2-5 years.\n\n**Mistake 4: \"If benefits fall short, wait and they'll improve\"**\n- Truth: Benefits don't self-correct. When indicators show shortfalls, operations must conduct root cause analysis, implement corrective actions, and monitor results. Passive waiting wastes time and money."
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:** Benefits realization is part of the **Value Delivery System** (pages 16-18). Projects exist to deliver business value — but the project delivers the CAPABILITY, and operations realizes the VALUE.\n\n**Key PMI Principle:** \"Projects exist to deliver business VALUE, not just deliverables.\" The distinction between delivering outputs (project success) and achieving outcomes (business success) is fundamental to PMI's value delivery framework.\n\n**PMP Exam Tips:**\n- Benefits realization appears in approximately 8-10% of PMP exam questions\n- Key distinction: Project success (time, budget, scope) vs business success (benefits realized)\n- Benefits ownership transfers from PM to operations/sponsor at closure\n- Root cause analysis is the correct response to benefit shortfalls — not blame, passivity, or redesign"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "The CRM That 'Didn't Deliver Value'",
+        "scenario": {
+          "title": "The CRM That 'Didn't Deliver Value'",
+          "description": "You've just completed a CRM software implementation project. Delivered on time, within budget, met all technical requirements — project SUCCESS by every measure. The business case projected: 25% sales productivity increase, 15% customer retention improvement, and 200% ROI in Year 1. Three months later, the Sales VP storms into your office: \"Your CRM project didn't deliver value! Productivity is only +8%, not +25%. Retention improved just 5%. ROI projection is 80%, not 200%. This was a failure!\" You know this pattern. You've seen it before at Riverside Plaza. Time to apply what you learned about benefits realization.",
+          "images": [
+            {
+              "src": "/images/C1L8_comic_transfer.webp",
+              "alt": "CRM project transfer scenario"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "How should you respond to the Sales VP's accusation that \"your project didn't deliver value\"?",
+            "points": 100,
+            "scenario_name": "Responding to the Sales VP",
+            "situation": "The Sales VP is blaming you for the CRM benefits shortfall. Productivity is +8% (target 25%), retention is +5% (target 15%), and ROI projection is 80% (target 200%). The CRM was delivered on time, within budget, and met all technical specifications.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"I'm sorry. Let me investigate what went wrong with the project delivery.\"",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "\"The CRM works correctly — that's project success. Productivity gains depend on user adoption and sales process changes — that's operations. Let's collaborate on diagnosing the root causes.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"The 25% productivity target was unrealistic. The business case was flawed from the start.\"",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "\"That's not my problem anymore. The project is closed and formally accepted.\"",
+                "correct": false
+              }
+            ],
+            "explanation": "The correct response separates project success from benefits realization while offering collaboration. The CRM was delivered correctly (project success). Productivity gains require user adoption, process changes, and operational execution (benefits realization — operations' responsibility). Rather than accepting false blame, deflecting, or dismissing, you educate the VP on the distinction and offer to help diagnose root causes.",
+            "correctFeedback": {
+              "text": "The correct response separates project success from benefits realization while offering collaboration. The CRM was delivered correctly (project success). Productivity gains require user adoption, process changes, and operational execution (benefits realization — operations' responsibility). Rather than accepting false blame, deflecting, or dismissing, you educate the VP on the distinction and offer to help diagnose root causes.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I delivered a working CRM — that's my PM responsibility. Productivity gains require your team to actually USE the CRM effectively. Let's figure out together why adoption is low."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about the Riverside Plaza lesson. Did the project deliver what was specified? Yes. Who controls whether the sales team adopts the CRM and changes their processes?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about the Riverside Plaza lesson. Did the project deliver what was specified? Yes. Who controls whether the sales team adopts the CRM and changes their processes?"
+            },
+            "retryHint": "Remember Riverside Plaza: Alex delivered the restaurant correctly. Carlos owned the revenue shortfall. Apply the same logic — who delivered the CRM, and who must drive adoption?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "multi_select",
+            "question": "Which are LIKELY root causes for the CRM benefits shortfall? Select ALL that apply.",
+            "points": 100,
+            "scenario_name": "Root Cause Diagnosis",
+            "situation": "The Sales VP agrees to analyze WHY productivity is below target instead of assigning blame. You help facilitate a root cause analysis session. The data shows: only 40% of sales reps use the CRM daily, most reps received only a 2-hour training session, and the existing sales process wasn't updated to incorporate CRM workflows.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The CRM software doesn't work as designed",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Low user adoption — only 40% of sales reps use CRM daily",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Insufficient training — reps received only basic 2-hour training",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Sales process not redesigned to leverage CRM capabilities",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Market conditions changed dramatically since the business case",
+                "correct": false
+              }
+            ],
+            "explanation": "The three correct root causes are all operational factors: (B) 60% of reps don't use the CRM daily — you can't realize productivity gains from a tool people don't use. (C) A 2-hour training session is insufficient for a complex CRM — reps don't know the features that drive productivity. (D) The old sales process wasn't updated to incorporate CRM workflows — the tool exists but isn't embedded in daily work.",
+            "correctFeedback": {
+              "text": "The three correct root causes are all operational factors: (B) 60% of reps don't use the CRM daily — you can't realize productivity gains from a tool people don't use. (C) A 2-hour training session is insufficient for a complex CRM — reps don't know the features that drive productivity. (D) The old sales process wasn't updated to incorporate CRM workflows — the tool exists but isn't embedded in daily work.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "All three root causes are operational adoption barriers. The CRM works — but if people don't use it, aren't trained on it, and their processes don't require it, benefits won't materialize."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The CRM was delivered and accepted. Look at the data: 40% adoption, 2-hour training, unchanged processes. Are these project delivery problems or operational execution problems?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The CRM was delivered and accepted. Look at the data: 40% adoption, 2-hour training, unchanged processes. Are these project delivery problems or operational execution problems?"
+            },
+            "retryHint": "The CRM works. But only 40% of reps use it daily, training was minimal, and old processes are unchanged. Are these delivery problems or operations problems?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "drag_drop",
+            "question": "Match each root cause to the BEST corrective action:",
+            "points": 100,
+            "scenario_name": "Corrective Actions",
+            "situation": "Based on the root cause analysis, the Sales VP needs to implement corrective actions. You help him map each root cause to the most effective operational response.",
+            "chips": [
+              {
+                "id": "low_user_adoption_40_daily_usage",
+                "label": "Low user adoption (40% daily usage)",
+                "correctZone": "conduct_adoption_survey_and_launch_usage_incentive_program"
+              },
+              {
+                "id": "insufficient_training_2hour_only",
+                "label": "Insufficient training (2-hour only)",
+                "correctZone": "implement_advanced_crm_training_program_with_rolespecific_modules"
+              },
+              {
+                "id": "sales_process_not_redesigned",
+                "label": "Sales process not redesigned",
+                "correctZone": "redesign_sales_workflows_to_embed_crm_into_every_stage_of_the_pipeline"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "conduct_adoption_survey_and_launch_usage_incentive_program",
+                "label": "Conduct adoption survey and launch usage incentive program",
+                "detail": "Understanding barriers enables targeted interventions; incentives drive behavior change"
+              },
+              {
+                "id": "implement_advanced_crm_training_program_with_rolespecific_modules",
+                "label": "Implement advanced CRM training program with role-specific modules",
+                "detail": "Deeper, role-specific training builds the skills needed for daily CRM usage"
+              },
+              {
+                "id": "redesign_sales_workflows_to_embed_crm_into_every_stage_of_the_pipeline",
+                "label": "Redesign sales workflows to embed CRM into every stage of the pipeline",
+                "detail": "Process integration ensures the CRM becomes required, not optional"
+              }
+            ],
+            "explanation": "Each corrective action targets a specific operational root cause: adoption survey addresses WHY reps aren't using the CRM, advanced training builds missing skills, and process redesign embeds the tool into daily workflows. All three are operations responsibilities — none involve rebuilding or redesigning the CRM software itself. The tool works; operations must drive usage.",
+            "correctFeedback": {
+              "text": "Each corrective action targets a specific operational root cause: adoption survey addresses WHY reps aren't using the CRM, advanced training builds missing skills, and process redesign embeds the tool into daily workflows. All three are operations responsibilities — none involve rebuilding or redesigning the CRM software itself. The tool works; operations must drive usage.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Every corrective action targets operations, not the CRM itself. Drive adoption, train deeply, redesign processes. Benefits will follow when people actually USE the tool."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about cause and effect. Low adoption needs an adoption solution. Poor training needs a training solution. Unchanged processes need a process solution. Match each problem to its direct fix.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about cause and effect. Low adoption needs an adoption solution. Poor training needs a training solution. Unchanged processes need a process solution. Match each problem to its direct fix."
+            },
+            "retryHint": "Match each ROOT CAUSE to the action that directly addresses it. Low adoption needs adoption solutions. Poor training needs training solutions. Bad processes need process solutions."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to distinguish **project success** from **business success** — and why blaming the PM for benefits shortfalls is like blaming the builder for how the owner runs the building. Benefits realization is an operational responsibility that begins where project delivery ends.",
+        "key_takeaways": [
+          "Two Measures of Success: Project success (time, budget, scope) and business success (revenue, ROI, satisfaction) are SEPARATE measures with SEPARATE owners",
+          "Tangible vs Intangible: Tangible benefits appear on financial statements (revenue, ROI, cost savings). Intangible benefits are qualitative (brand, satisfaction, morale) — both matter",
+          "Post-Project Measurement: Benefits are measured 3 months to 5 years after delivery, NOT at project closure",
+          "Ownership Transfer: PM delivers the project, then hands off to operations/sponsor who own benefit realization",
+          "Root Cause Analysis: When benefits fall short, diagnose operational root causes (adoption, training, process) — don't blame delivery",
+          "Benefits Don't Self-Correct: Passive waiting wastes time. Identify shortfalls early, implement corrective actions, monitor monthly"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C2L1",
+          "title": "Cost Estimation & Budgeting",
+          "description": "How do you estimate project costs accurately? Learn analogous, parametric, and bottom-up estimation — plus how to build a cost baseline with contingency reserves."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "When should benefits measurement PRIMARILY occur?",
+            "points": 70,
+            "scenario_name": "Benefits Measurement Timing",
+            "situation": "A project to implement a new inventory management system was completed on time and within budget 6 months ago. The sponsor asks you to evaluate whether the system has achieved its projected benefit of 20% inventory cost reduction.",
+            "options": [
+              {
+                "id": "A",
+                "text": "At project closure when deliverables are accepted",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Post-project, over a period of months to years after delivery",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "During project execution when the system is being built",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Only at the end of the fiscal year for annual financial reporting",
+                "correct": false
+              }
+            ],
+            "explanation": "Benefits are measured AFTER delivery — typically 3 months to several years — once the system is operational and producing results. At 6 months post-project, you are in an appropriate window to evaluate whether the 20% cost reduction is materializing. Project closure verifies deliverables; post-project measurement verifies benefits.",
+            "correctFeedback": {
+              "text": "Benefits are measured AFTER delivery — typically 3 months to several years — once the system is operational and producing results. At 6 months post-project, you are in an appropriate window to evaluate whether the 20% cost reduction is materializing. Project closure verifies deliverables; post-project measurement verifies benefits.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Six months post-delivery is a solid mid-term checkpoint. You have enough operational data to assess trends and take corrective action if the 20% target isn't tracking."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Benefits require the system to be OPERATIONAL before you can measure outcomes. When can you first measure inventory cost reduction — during construction or after go-live?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Benefits require the system to be OPERATIONAL before you can measure outcomes. When can you first measure inventory cost reduction — during construction or after go-live?"
+            },
+            "retryHint": "When can you first measure whether the system reduces inventory costs — while building it, on launch day, or after months of operation?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "Which statement BEST describes this situation?",
+            "points": 65,
+            "scenario_name": "Project Success with Benefits Failure",
+            "situation": "Your organization completed a mobile app development project. The app was delivered on time, within budget, and met all technical requirements. However, 3 months after launch, user downloads are 30% of projections and revenue is significantly below the business case targets.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project failed because it didn't achieve business objectives",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The project succeeded but benefits realization is falling short",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The PM should be held accountable for low download numbers",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The project cannot be evaluated until 2 full years after launch",
+                "correct": false
+              }
+            ],
+            "explanation": "Project success (delivery) and business success (benefits) are separate. The PM delivered the app correctly — on time, within budget, meeting requirements. That is project success. Low downloads and revenue are benefits realization issues driven by marketing, user experience in the marketplace, competitive positioning, and app store optimization — operational factors outside PM scope.",
+            "correctFeedback": {
+              "text": "Project success (delivery) and business success (benefits) are separate. The PM delivered the app correctly — on time, within budget, meeting requirements. That is project success. Low downloads and revenue are benefits realization issues driven by marketing, user experience in the marketplace, competitive positioning, and app store optimization — operational factors outside PM scope.",
+              "character": "Elena Santos",
+              "characterQuote": "The app works. The project delivered. But downloads and revenue depend on marketing, positioning, and market acceptance — operations must own those outcomes."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Separate the two scorecards. Did the PM deliver a working app that met requirements? That's one question. Are downloads and revenue meeting targets? That's a different question with a different owner.",
+              "character": "Elena Santos",
+              "characterQuote": "Separate the two scorecards. Did the PM deliver a working app that met requirements? That's one question. Are downloads and revenue meeting targets? That's a different question with a different owner."
+            },
+            "retryHint": "The app was delivered on time, within budget, meeting all requirements. Does that sound like project success or failure? Then who owns what happens AFTER launch?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "According to PMI best practices, what is the MOST appropriate response?",
+            "points": 65,
+            "scenario_name": "Benefits Ownership After Delivery",
+            "situation": "A warehouse automation project was successfully delivered 6 months ago. The operations director reports that efficiency gains are only 60% of what was projected in the business case. She asks who is responsible for this gap and what should be done about it.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The PM should reopen the project to investigate and fix the delivery issues",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The PMO should take over benefits tracking as part of portfolio management",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Operations management should conduct root cause analysis and implement corrective actions to improve efficiency gains",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "The organization should accept the shortfall since the project was delivered successfully",
+                "correct": false
+              }
+            ],
+            "explanation": "After project delivery, operations management owns benefits realization. The warehouse automation was delivered successfully — reopening the project is unnecessary. The operations director should diagnose WHY efficiency is at 60% (Is it user adoption? Training? Process changes? Equipment calibration?) and implement targeted corrective actions. Benefits don't self-correct — active operational management is required.",
+            "correctFeedback": {
+              "text": "After project delivery, operations management owns benefits realization. The warehouse automation was delivered successfully — reopening the project is unnecessary. The operations director should diagnose WHY efficiency is at 60% (Is it user adoption? Training? Process changes? Equipment calibration?) and implement targeted corrective actions. Benefits don't self-correct — active operational management is required.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I learned this at Riverside Plaza. The builder delivered my restaurant correctly. Revenue was MY responsibility. Same here — the automation works. Efficiency gains depend on how operations USES it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The project delivered a working automation system. Now who operates it daily? Who controls training, process changes, and adoption? That's who owns the efficiency gap.",
+              "character": "Carlos Mendez",
+              "characterQuote": "The project delivered a working automation system. Now who operates it daily? Who controls training, process changes, and adoption? That's who owns the efficiency gap."
+            },
+            "retryHint": "The automation system works. Efficiency depends on how the warehouse team uses it. Who should diagnose adoption barriers and implement process improvements?"
+          }
+        ]
+      }
+    }
+  ]
+}

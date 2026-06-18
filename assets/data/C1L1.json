@@ -1,0 +1,684 @@
+{
+  "lessonId": "C1L1",
+  "lessonTitle": "Project Charter Development",
+  "courseId": "C1",
+  "courseName": "Integration Management",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand the purpose and authority of the project charter as the formal document that authorizes the project",
+    "Identify the 7 key components of a project charter (business case, objectives, requirements, risks, milestones, budget, PM authority, stakeholders)",
+    "Recognize who creates the charter (sponsor/initiator) versus who uses it (PM)",
+    "Distinguish between charter (high-level authorization) and project management plan (detailed execution roadmap)",
+    "Apply charter knowledge to determine what a PM can and cannot do without an approved charter"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "elena_santos",
+    "carlos_mendez",
+    "morgan_lee",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "$1.2M Investment, Zero Authority: Why Can't Alex Start Planning?",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. A regional mall developer wants Savory to open a flagship location in Riverside Plaza — $1.2M budget, 6-month timeline, high visibility. Carlos is excited: \"Let's start designing the kitchen!\" But Elena stops everyone cold: \"Not without a charter.\" Without formal authorization, Alex can't commit budget, hire resources, or make decisions. Is the charter really necessary — or is Elena being bureaucratic?",
+        "failure_cards": [
+          {
+            "id": "budget_crisis",
+            "icon": "📋",
+            "title": "Budget Crisis",
+            "summary": "Alex commits $400K to contractors — without authority",
+            "image": "/images/C1L1_comic_budget_crisis.webp",
+            "details": "Without a charter, Alex signed contracts with kitchen designers for $400K. When the board reviewed, they demanded: \"Who authorized this?\" Elena: \"Alex had no authority to commit these funds. Without a charter, any spending is unauthorized.\" The project was halted and contracts were voided. All because Alex acted before receiving formal authorization."
+          },
+          {
+            "id": "scope_creep",
+            "icon": "⚠️",
+            "title": "Scope Creep",
+            "summary": "No success criteria means everyone defines \"success\" differently",
+            "image": "/images/C1L1_comic_scope_creep.webp",
+            "details": "Without defined objectives, Carlos added a rooftop bar. Morgan requested a catering kitchen. The mall developer wanted a chef's table experience. Alex: \"What are we actually building?\" Without a charter defining success criteria, the project became whatever anyone wanted — and no one was satisfied. Every stakeholder pulled scope in a different direction."
+          },
+          {
+            "id": "authority_vacuum",
+            "icon": "💡",
+            "title": "Authority Vacuum",
+            "summary": "Alex can't make decisions without charter-defined authority",
+            "image": "/images/C1L1_comic_authority.webp",
+            "details": "Alex needed to approve a $15K design change. Without charter-defined spending authority, Elena rejected it: \"Who says you can approve this?\" Every decision required escalation. Progress halted. The team grew frustrated: \"Alex, just decide!\" But Alex had no formal authority to decide anything. Without a charter, every approval became a bottleneck."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "elena_santos",
+          "name": "Elena Santos",
+          "role": "CFO/Project Sponsor",
+          "quote": "Without a charter, Alex has no authority to spend a single dollar, hire a single contractor, or commit a single hour of your time, Carlos. The charter isn't bureaucracy — it's authorization."
+        },
+        "learning_hook": "**The project charter** is the document that formally authorizes the project and grants the PM authority to apply organizational resources. No charter = no authority. Let's learn what goes into a charter, who creates it, and why it matters."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "build_the_riverside_plaza_charter",
+        "title": "Build the Riverside Plaza Charter",
+        "description": "Elena guides you through building a proper charter for the Riverside Plaza project. \"Let's make sure this charter has everything the board needs before they'll authorize Alex to move forward.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "multi_select",
+            "question": "Which critical components are MISSING from this draft charter? Select all that are missing.",
+            "points": 200,
+            "scenario_name": "Missing Charter Components",
+            "situation": "Elena presents Alex with a draft charter for the Riverside Plaza project. Some components are already present: Project Title (Riverside Plaza Flagship Location Launch), Project Manager Assigned (Alex Mitchell), and High-Level Budget ($1.2M). But the board won't approve an incomplete charter.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Business Case / Project Purpose (WHY are we doing this?)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Measurable Project Objectives (WHAT outcomes define success?)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "High-Level Requirements (WHAT are we delivering?)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Project Management Plan (detailed execution roadmap)",
+                "correct": false
+              },
+              {
+                "id": "E",
+                "text": "Success Criteria and Key Stakeholders",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Detailed Work Breakdown Structure (WBS)",
+                "correct": false
+              }
+            ],
+            "explanation": "The charter is missing 4 critical components: Business Case (WHY), Measurable Objectives (WHAT success looks like), High-Level Requirements (WHAT we deliver), and Success Criteria / Key Stakeholders (HOW we measure success and WHO is involved). The Project Management Plan and WBS are NOT charter components — they are created AFTER charter approval during the Planning phase. Charter = high-level authorization (2-5 pages). PM Plan = detailed execution (50-200+ pages).",
+            "correctFeedback": {
+              "text": "The charter is missing 4 critical components: Business Case (WHY), Measurable Objectives (WHAT success looks like), High-Level Requirements (WHAT we deliver), and Success Criteria / Key Stakeholders (HOW we measure success and WHO is involved). The Project Management Plan and WBS are NOT charter components — they are created AFTER charter approval during the Planning phase. Charter = high-level authorization (2-5 pages). PM Plan = detailed execution (50-200+ pages).",
+              "character": "Elena Santos",
+              "characterQuote": "Perfect. Now I can present this charter to the board. It has everything executives need: business justification, clear objectives, scope summary, success metrics, and stakeholder list — all at the RIGHT level of detail."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember, the charter is a high-level authorization document. It tells executives WHY, WHAT, WHO, and HOW MUCH — not the detailed HOW. Detailed plans come AFTER charter approval.",
+              "character": "Elena Santos",
+              "characterQuote": "Remember, the charter is a high-level authorization document. It tells executives WHY, WHAT, WHO, and HOW MUCH — not the detailed HOW. Detailed plans come AFTER charter approval."
+            },
+            "retryHint": "Think about what executives need to authorize a project: Why are we doing this? What does success look like? What are we delivering? Who is involved? Those are charter components. Detailed plans come later."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "How should Alex respond to Carlos?",
+            "points": 150,
+            "scenario_name": "Defend the Charter to Carlos",
+            "situation": "Carlos challenges Alex: \"This charter is slowing us down. We're wasting time on paperwork when we should be designing the kitchen! Can't we skip this and just start planning?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"You're right, Carlos. Let's skip the charter and start planning the layout.\"",
+                "correct": false,
+                "whyWrong": "Skipping the charter violates PMI process. Without a charter, Alex has NO AUTHORITY to commit resources. Any work done would be unauthorized, and Alex bears the risk."
+              },
+              {
+                "id": "B",
+                "text": "\"PMI requires a charter, so we have to do it even if it's bureaucratic.\"",
+                "correct": false,
+                "whyWrong": "Technically correct but defensive. Saying \"PMI requires it\" makes the charter sound like bureaucracy rather than explaining WHY it protects the project and enables Alex to act."
+              },
+              {
+                "id": "C",
+                "text": "\"The charter authorizes me to apply resources and spend budget. Without it, I have no authority to hire contractors, reserve your time, or commit costs. Let's complete it first.\"",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "\"Let me ask Elena if we can start work before the charter is approved.\"",
+                "correct": false,
+                "whyWrong": "Elena (the sponsor) won't approve starting without a charter because the charter IS the authorization. Asking to skip it shows Alex doesn't understand its purpose."
+              }
+            ],
+            "explanation": "The best response explains what the charter GIVES Alex: authority to commit resources, spend budget, and make decisions. This helps Carlos see the charter as enabling, not restricting. The charter protects Alex (authority is defined), protects the project (success criteria are clear), and protects the organization (business case is documented).",
+            "correctFeedback": {
+              "text": "The best response explains what the charter GIVES Alex: authority to commit resources, spend budget, and make decisions. This helps Carlos see the charter as enabling, not restricting. The charter protects Alex (authority is defined), protects the project (success criteria are clear), and protects the organization (business case is documented).",
+              "character": "Carlos Mendez",
+              "characterQuote": "Okay, I get it now. Without the charter, you can't even officially ask for my help. And if we don't define 'success,' we might deliver the wrong thing. Let's complete the charter first."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what the charter gives Alex. What can't Alex do without it? The charter isn't just paperwork — it's authorization and protection for everyone involved.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what the charter gives Alex. What can't Alex do without it? The charter isn't just paperwork — it's authorization and protection for everyone involved."
+            },
+            "retryHint": "The charter isn't about compliance — it's about what Alex CAN'T do without it. No charter = no authority to spend money, hire people, or commit resources."
+          },
+          {
+            "q_id": "q3",
+            "type": "drag_drop",
+            "question": "Drag each item to the correct document — Charter or Project Management Plan:",
+            "points": 150,
+            "scenario_name": "Charter vs Project Management Plan",
+            "situation": "Morgan asks: \"I see the charter has high-level requirements like 'seat 120 customers.' Should we add the detailed menu specifications, kitchen workflow diagrams, and staffing schedules to the charter too?\" Alex needs to sort which items belong in the charter versus the project management plan.",
+            "chips": [
+              {
+                "id": "business_case_why_were_investing_12m",
+                "label": "Business Case (WHY we're investing $1.2M)",
+                "correctZone": "charter"
+              },
+              {
+                "id": "measurable_objectives_open_by_oct_15_80k_monthly_revenue",
+                "label": "Measurable Objectives (open by Oct 15, $80K monthly revenue)",
+                "correctZone": "charter"
+              },
+              {
+                "id": "pm_authority_alex_can_approve_up_to_25k",
+                "label": "PM Authority (Alex can approve up to $25K)",
+                "correctZone": "charter"
+              },
+              {
+                "id": "detailed_kitchen_workflow_diagrams",
+                "label": "Detailed Kitchen Workflow Diagrams",
+                "correctZone": "project_management_plan"
+              },
+              {
+                "id": "staffing_schedule_by_shift",
+                "label": "Staffing Schedule by Shift",
+                "correctZone": "project_management_plan"
+              },
+              {
+                "id": "complete_work_breakdown_structure",
+                "label": "Complete Work Breakdown Structure",
+                "correctZone": "project_management_plan"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "charter",
+                "label": "Charter",
+                "detail": "High-level justification for executives to authorize the project"
+              },
+              {
+                "id": "project_management_plan",
+                "label": "Project Management Plan",
+                "detail": "Tactical execution detail created by the PM during Planning phase"
+              }
+            ],
+            "explanation": "The charter is a high-level authorization document (2-5 pages) created by the sponsor. It answers WHY, WHAT, and WHO at a strategic level. The PM Plan is a detailed execution document (50-200+ pages) created by the PM after charter approval. It answers HOW at a tactical level. Charter says \"seat 120 customers\" — PM Plan says \"30 four-top tables, 12 counter seats, staffing by shift.\"",
+            "correctFeedback": {
+              "text": "The charter is a high-level authorization document (2-5 pages) created by the sponsor. It answers WHY, WHAT, and WHO at a strategic level. The PM Plan is a detailed execution document (50-200+ pages) created by the PM after charter approval. It answers HOW at a tactical level. Charter says \"seat 120 customers\" — PM Plan says \"30 four-top tables, 12 counter seats, staffing by shift.\"",
+              "character": "Morgan Lee",
+              "characterQuote": "Got it! Charter = high-level WHAT and WHY. Plan = detailed HOW. I'll save my detailed requirements for the PM Plan once the charter is approved."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about who reads each document. Would executives read 200 pages of kitchen workflows? Keep charter strategic, plan tactical.",
+              "character": "Morgan Lee",
+              "characterQuote": "Think about who reads each document. Would executives read 200 pages of kitchen workflows? Keep charter strategic, plan tactical."
+            },
+            "retryHint": "Charter is for EXECUTIVES to authorize (high-level, 2-5 pages). PM Plan is for the TEAM to execute (detailed, 50-200+ pages). Who reads what?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Charter Authorization Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "What Is a Project Charter?",
+            "subtitle": "",
+            "content": "The project charter is the document that formally authorizes the project and the PM. It has three core functions:\n\n1. **Formally AUTHORIZES** the project to exist\n2. **AUTHORIZES the PM** to apply organizational resources to project activities\n3. **Documents** the business justification, objectives, and high-level scope\n\n**Key Characteristics:**\n\n| Aspect | Charter Detail |\n|--------|----------------|\n| **Created By** | Project Sponsor, PMO, or Portfolio Steering Committee (NOT the PM) |\n| **Created During** | Initiating Process Group (BEFORE planning begins) |\n| **Level of Detail** | High-level (strategic summary, not detailed execution) |\n| **Length** | Typically 2-5 pages |\n| **Purpose** | Authorize project existence AND PM authority |\n\n**Why It Matters:** Without a charter, the PM has NO authority to commit budget, hire resources, or make decisions. The charter protects the PM (authority is defined), the project (success criteria are clear), and the organization (business case is documented)."
+          },
+          {
+            "id": "tab2",
+            "title": "The 7 Essential Charter Components",
+            "subtitle": "",
+            "content": "Every charter should include these elements:\n\n1. **Business Case / Project Purpose** — WHY are we doing this? What business need does it address?\n   - *Savory Example:* \"Riverside Plaza targets 25-35 year-old professionals. Expected ROI: 18% annually.\"\n\n2. **Measurable Project Objectives (SMART)** — WHAT specific outcomes define success?\n   - *Savory Example:* \"Open by Oct 15. Achieve $80K monthly revenue within 3 months.\"\n\n3. **High-Level Requirements** — WHAT are we delivering? (Scope summary, not detailed WBS)\n   - *Savory Example:* \"2,200 sq ft, seat 120 customers, full-service kitchen, 20 signature items.\"\n\n4. **High-Level Risks** — Major known risks at initiation (not complete risk register)\n   - *Savory Example:* \"Construction delays, permitting (liquor license), competition.\"\n\n5. **Summary Milestone Schedule** — Key dates (not detailed schedule)\n   - *Savory Example:* \"Lease signed: April 15. Construction complete: Aug 30. Grand opening: Oct 15.\"\n\n6. **Summary Budget** — Total cost estimate (not detailed breakdown)\n   - *Savory Example:* \"$1.2M (kitchen $600K, equipment $300K, marketing $200K, contingency $100K)\"\n\n7. **PM Authority Level and Key Stakeholders** — WHO is the PM, WHAT authority do they have, WHO has interest?\n   - *Savory Example:* \"PM: Alex Mitchell. Approve expenses up to $25K. Sponsor: Elena Santos.\"",
+            "diagram": {
+              "image": "/images/C1L1_diagram_charter_framework.webp",
+              "alt": "Charter Authorization Framework"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Charter vs Project Management Plan",
+            "subtitle": "",
+            "content": "Two different documents. Two different purposes. Two different authors.\n\n| Aspect | Project Charter | Project Management Plan |\n|--------|----------------|------------------------|\n| **Created By** | Sponsor / Initiator (Elena) | Project Manager (Alex) |\n| **Created When** | Initiating (before planning) | Planning (after charter approved) |\n| **Level of Detail** | High-level (strategic) | Detailed (tactical/operational) |\n| **Purpose** | Authorize project and PM | Guide execution and control |\n| **Length** | 2-5 pages | 50-200+ pages |\n| **Answers** | WHY, WHAT (high-level), WHO | HOW (detailed) |\n\n**Charter says:** \"Seat 120 customers, budget $1.2M, open Oct 15\"\n**PM Plan says:** \"30 four-top tables, 12 counter seats, kitchen workflow with 8-minute cook time, staffing schedule by shift...\"\n\n**Key Insight:** Charter = authorization to start planning. PM Plan = detailed roadmap for execution. You cannot create the plan without first having the charter."
+          },
+          {
+            "id": "tab4",
+            "title": "Who Creates the Charter?",
+            "subtitle": "",
+            "content": "**Common Misconception:** \"The PM creates the charter.\"\n\n**Reality:** The SPONSOR creates and authorizes the charter. The PM can ASSIST in drafting but CANNOT self-authorize. Authorization must come from outside the project.\n\n**Why This Matters:**\n- If Alex could create his own charter, he could authorize anything\n- External authorization (Elena) ensures organizational oversight\n- The charter represents the ORGANIZATION'S commitment, not just Alex's plan\n\n**Process Flow:**\n- Business Need Identified (Carlos sees opportunity) -->\n- Sponsor Develops Charter (Elena drafts with Alex's input) -->\n- Charter Approved (Elena signs, board approves $1.2M) -->\n- PM Authorized (Alex can now apply resources) -->\n- Planning Begins (Alex creates PM Plan)"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "A New Project, Same Charter Principles",
+        "scenario": {
+          "title": "A New Project, Same Charter Principles",
+          "description": "You're a PM at a software company. Your director approaches you: \"We need a mobile app for our sales team. Budget is roughly $200K, timeline is 8 months. I'll send you some initial requirements. Can you start assembling the development team this week? We're in a hurry.\" No charter exists yet. The director is eager to skip formalities and start building.",
+          "images": [
+            {
+              "src": "/images/C1L1_comic_transfer.webp",
+              "alt": "Transfer scenario: mobile app project"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Without an approved charter, what should you do FIRST?",
+            "points": 100,
+            "scenario_name": "Can You Start Without a Charter?",
+            "situation": "The director asks you to \"start assembling the development team this week.\" You know there is no approved charter for this mobile app project. The budget has been mentioned verbally but not formally documented or approved.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Begin assembling the team since the director verbally approved the project",
+                "correct": false,
+                "whyWrong": "Verbal approval is not formal authorization. If something goes wrong, you bear the risk for unauthorized resource commitments. The charter documents authority."
+              },
+              {
+                "id": "B",
+                "text": "Start with low-risk activities like requirements gathering while waiting for formal approval",
+                "correct": false,
+                "whyWrong": "Even requirements gathering sessions commit organizational time and resources. Without charter authorization, this work is technically unauthorized."
+              },
+              {
+                "id": "C",
+                "text": "Offer to help the director create a brief charter so you have formal authority to proceed",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Create a project management plan to show the director you're ready to execute",
+                "correct": false,
+                "whyWrong": "The PM Plan is created AFTER charter approval. You cannot create a detailed execution plan for a project that hasn't been authorized to exist."
+              }
+            ],
+            "explanation": "Without an approved charter, you have NO authority to apply organizational resources — including hiring developers or even formally gathering requirements from stakeholders. The best approach is to help the director create a charter (typically 2-3 pages), which gives you formal authorization to commit budget, hire resources, and begin planning. This reframes the charter as an enabler (\"with this, I can move fast\") rather than a blocker.",
+            "correctFeedback": {
+              "text": "Without an approved charter, you have NO authority to apply organizational resources — including hiring developers or even formally gathering requirements from stakeholders. The best approach is to help the director create a charter (typically 2-3 pages), which gives you formal authorization to commit budget, hire resources, and begin planning. This reframes the charter as an enabler (\"with this, I can move fast\") rather than a blocker.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I learned this the hard way with Riverside Plaza. Without a charter, I couldn't hire anyone, sign contracts, or even officially ask for help. Now I always get charter approval first — and I help the sponsor create it quickly."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "You can help WRITE the charter. You can ASK questions. But you cannot COMMIT resources or budget until the charter authorizes you. Even 'low-risk' work commits organizational time.",
+              "character": "Elena Santos",
+              "characterQuote": "You can help WRITE the charter. You can ASK questions. But you cannot COMMIT resources or budget until the charter authorizes you. Even 'low-risk' work commits organizational time."
+            },
+            "retryHint": "What document gives you formal authority to apply resources? And who needs to create it — you, or the director (as sponsor)?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "multi_select",
+            "question": "Which components MUST be in the charter before you can start work? Select all that apply.",
+            "points": 100,
+            "scenario_name": "Essential Charter Components for the App Project",
+            "situation": "The director agrees to create a charter. You need to advise her on what to include so the organization formally authorizes the mobile app project.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Business Case (why we're building this app)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Measurable Objectives (what success looks like)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "PM Authority Level (your spending and hiring limits)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Detailed Project Schedule (all tasks with start and end dates)",
+                "correct": false
+              },
+              {
+                "id": "E",
+                "text": "Complete Work Breakdown Structure (every deliverable broken down)",
+                "correct": false
+              }
+            ],
+            "explanation": "The charter needs a Business Case (WHY the app is needed), Measurable Objectives (WHAT success looks like — adoption rate, revenue impact), and PM Authority Level (YOUR decision-making limits for spending and hiring). Detailed schedules and WBS are Planning phase deliverables created AFTER charter approval. The charter is a 2-5 page authorization, not a 200-page execution plan.",
+            "correctFeedback": {
+              "text": "The charter needs a Business Case (WHY the app is needed), Measurable Objectives (WHAT success looks like — adoption rate, revenue impact), and PM Authority Level (YOUR decision-making limits for spending and hiring). Detailed schedules and WBS are Planning phase deliverables created AFTER charter approval. The charter is a 2-5 page authorization, not a 200-page execution plan.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Charter = high-level authorization. Plan = detailed execution. You've got the distinction right. Now get that charter from the director before committing any resources."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: the charter is HIGH-LEVEL. It authorizes the project, not the detailed execution. Schedules and WBS come AFTER charter approval during Planning.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Remember: the charter is HIGH-LEVEL. It authorizes the project, not the detailed execution. Schedules and WBS come AFTER charter approval during Planning."
+            },
+            "retryHint": "What do executives need to AUTHORIZE a project? Business justification, success definition, and PM authority limits. Detailed plans come after authorization."
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What is the BEST response?",
+            "points": 100,
+            "scenario_name": "Responding to \"Skip the Paperwork\"",
+            "situation": "The director seems impatient: \"We don't have time for paperwork. Just start working and we'll document later.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"Okay, I'll start assembling the team and we'll formalize the charter later.\"",
+                "correct": false,
+                "whyWrong": "Starting without a charter means working without authorization. \"We'll document later\" almost always means \"we'll never document.\" If something goes wrong, you bear the blame for unauthorized decisions."
+              },
+              {
+                "id": "B",
+                "text": "\"PMI requires a charter before any work begins. Those are the rules.\"",
+                "correct": false,
+                "whyWrong": "Technically correct but defensive. This makes the charter sound like bureaucratic compliance rather than a tool that protects and empowers the PM."
+              },
+              {
+                "id": "C",
+                "text": "\"I understand the urgency. Let me help you create a quick charter — it only needs 2-3 pages. With that, I'll have authority to move fast.\"",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "\"I'll create the charter myself and send it to you for a signature.\"",
+                "correct": false,
+                "whyWrong": "The PM should NOT create the charter independently. The sponsor/initiator creates and authorizes the charter. The PM can assist in drafting but cannot self-authorize their own authority level."
+              }
+            ],
+            "explanation": "The best response acknowledges urgency, offers to help (proactive problem-solving), emphasizes speed (\"2-3 pages\"), and explains the benefit (authority to move fast). This reframes the charter from \"paperwork that slows us down\" to \"authorization that enables fast action.\" The director is more likely to cooperate when they see the charter helps rather than hinders.",
+            "correctFeedback": {
+              "text": "The best response acknowledges urgency, offers to help (proactive problem-solving), emphasizes speed (\"2-3 pages\"), and explains the benefit (authority to move fast). This reframes the charter from \"paperwork that slows us down\" to \"authorization that enables fast action.\" The director is more likely to cooperate when they see the charter helps rather than hinders.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I've learned that pushing back on 'skip the paperwork' is easier when you offer to SOLVE the problem. Help them create a quick charter, and suddenly you have authority to move as fast as they want."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Defensive responses like 'PMI requires it' create resistance. Instead, show how the charter HELPS: 'With this 2-page document, I have authority to hire developers TODAY.' Frame it as enabling, not restricting.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Defensive responses like 'PMI requires it' create resistance. Instead, show how the charter HELPS: 'With this 2-page document, I have authority to hire developers TODAY.' Frame it as enabling, not restricting."
+            },
+            "retryHint": "How can you acknowledge urgency while still getting the charter you need? The best response shows the charter ENABLES fast work, not blocks it."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **project charter** is the document that formally authorizes the project and grants the PM authority to apply organizational resources. Without it, the PM has no authority to commit budget, hire resources, or make decisions.",
+        "key_takeaways": [
+          "Charter AUTHORIZES the project AND the PM — Without it, no authority to use resources or commit budget",
+          "Created by the SPONSOR, not the PM — PM can assist in drafting, but the sponsor must authorize",
+          "HIGH-LEVEL, not detailed — Charter = strategic summary (2-5 pages). PM Plan = detailed execution (50-200+ pages)",
+          "Created during INITIATING, before Planning — Charter must be approved before the PM can create detailed plans",
+          "7 essential components: Business case, measurable objectives, high-level requirements, high-level risks, summary milestones, summary budget, PM authority and key stakeholders",
+          "NOT bureaucracy — it's authorization — The charter protects the PM, the project, and the organization"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think charters were just paperwork that slowed things down. Now I understand: the charter is my authority. Without it, I can't make decisions, commit budget, or hire resources. It protects me as much as it protects the project. And when someone says 'skip the paperwork,' I help them create a quick charter instead — because that's what lets me move fast."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L2",
+          "title": "Project Management Plan",
+          "description": "You've authorized the project with a charter — now create the detailed roadmap that guides execution, integrating scope, schedule, cost, quality, and risk into one cohesive plan."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Verbal Assignment",
+            "situation": "A project manager has been verbally assigned to a new project by her functional manager. The functional manager says the project is urgent and asks her to begin assembling the team immediately. No written documentation exists for the project.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Begin assembling the team as requested since time is critical",
+                "correct": false,
+                "whyWrong": "Without a charter, the PM has no formal authority to commit organizational resources (including team members). Verbal urgency does not replace documented authorization."
+              },
+              {
+                "id": "B",
+                "text": "Request a project charter be developed and approved",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Create a project management plan to formalize the approach",
+                "correct": false,
+                "whyWrong": "The PM Plan is created AFTER the charter is approved. You cannot create a detailed execution plan for a project that hasn't been formally authorized."
+              },
+              {
+                "id": "D",
+                "text": "Conduct stakeholder analysis to identify key players",
+                "correct": false,
+                "whyWrong": "Stakeholder analysis is part of planning work that occurs after charter approval. Without a charter, even research and analysis work is technically unauthorized."
+              }
+            ],
+            "explanation": "The project charter formally authorizes the project and provides the PM with authority to apply organizational resources. Verbal assignment is NOT sufficient — the PM needs documented authorization before committing resources or beginning formal project work. Without a charter, assembling a team, creating a PM plan, or conducting analysis are all unauthorized activities.",
+            "correctFeedback": {
+              "text": "The project charter formally authorizes the project and provides the PM with authority to apply organizational resources. Verbal assignment is NOT sufficient — the PM needs documented authorization before committing resources or beginning formal project work. Without a charter, assembling a team, creating a PM plan, or conducting analysis are all unauthorized activities.",
+              "character": "Elena Santos",
+              "characterQuote": "Verbal assignment isn't authorization. Get that charter documented and approved — then you have real authority to act."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The charter isn't bureaucracy — it's your authority. Without it, any work you do is unauthorized, and you bear the risk if something goes wrong.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The charter isn't bureaucracy — it's your authority. Without it, any work you do is unauthorized, and you bear the risk if something goes wrong."
+            },
+            "retryHint": "What document gives the PM formal authority to apply resources? Verbal assignment does not provide documented authorization."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the project manager do?",
+            "points": 50,
+            "scenario_name": "Charter Completeness",
+            "situation": "A newly assigned project manager is reviewing the project charter. The charter includes the project purpose, high-level requirements, summary budget, and success criteria. The project manager notices it does NOT include a detailed work breakdown structure (WBS) or a complete risk register. She is concerned the charter may be incomplete.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Request that the sponsor add the WBS and risk register to the charter before proceeding",
+                "correct": false,
+                "whyWrong": "WBS and risk register are NOT charter components. Asking the sponsor to add them shows confusion between charter (high-level authorization) and PM Plan (detailed execution)."
+              },
+              {
+                "id": "B",
+                "text": "Recognize that the charter is complete and begin planning to develop the WBS and risk register",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Create the WBS and risk register and add them to the charter for approval",
+                "correct": false,
+                "whyWrong": "The PM creates WBS and risk register as part of the PM Plan, not the charter. These are separate documents created during the Planning process group."
+              },
+              {
+                "id": "D",
+                "text": "Escalate to the PMO that the charter is incomplete and should not be approved",
+                "correct": false,
+                "whyWrong": "The charter IS complete. Escalating about \"missing\" WBS and risk register demonstrates a misunderstanding of what belongs in a charter versus a PM Plan."
+              }
+            ],
+            "explanation": "The charter described IS complete. It appropriately contains project purpose (business case), high-level requirements, summary budget, and success criteria. WBS and detailed risk register are NOT charter components — they are Planning phase deliverables created AFTER charter approval. The PM should proceed with planning to develop these elements.",
+            "correctFeedback": {
+              "text": "The charter described IS complete. It appropriately contains project purpose (business case), high-level requirements, summary budget, and success criteria. WBS and detailed risk register are NOT charter components — they are Planning phase deliverables created AFTER charter approval. The PM should proceed with planning to develop these elements.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The charter gives you authorization to plan. NOW you can create the WBS, risk register, and other detailed planning documents. The charter was never supposed to contain those."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If charters included WBS and risk registers, they'd be 100 pages. Executives need high-level authorization documents — not detailed plans.",
+              "character": "Elena Santos",
+              "characterQuote": "If charters included WBS and risk registers, they'd be 100 pages. Executives need high-level authorization documents — not detailed plans."
+            },
+            "retryHint": "Consider what belongs in a charter (2-5 pages, high-level) versus what is created during planning (detailed deliverables). Is a WBS a charter component or a planning output?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the PRIMARY issue with this approach?",
+            "points": 50,
+            "scenario_name": "Who Defines PM Authority",
+            "situation": "A project manager has been asked to lead a strategic initiative. She has extensive knowledge of the business need and has drafted a comprehensive charter including the project purpose, objectives, high-level requirements, and her own authority level (spending limits, hiring authority, and escalation thresholds). She asks her manager to sign the document.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The document should include a detailed project schedule",
+                "correct": false,
+                "whyWrong": "Detailed schedule belongs in the PM Plan, not the charter. Length isn't the issue — the issue is WHO defined the authority level."
+              },
+              {
+                "id": "B",
+                "text": "The project manager should not define their own authority level in the charter",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The charter should be longer and more detailed",
+                "correct": false,
+                "whyWrong": "Charters should be high-level (2-5 pages). Making it longer would make it a PM Plan, not a charter."
+              },
+              {
+                "id": "D",
+                "text": "The manager should create the document entirely, not just sign it",
+                "correct": false,
+                "whyWrong": "While sponsors typically create charters, PMs CAN assist in drafting content. The specific issue is the PM defining their OWN authority level, not that they helped write the document."
+              }
+            ],
+            "explanation": "The PM should NOT define their own authority level. The charter, including PM authority, should be created and authorized by the sponsor or initiating authority — not the PM. If PMs could self-define authority, they could authorize anything. Authority must come from OUTSIDE the project to ensure organizational oversight.",
+            "correctFeedback": {
+              "text": "The PM should NOT define their own authority level. The charter, including PM authority, should be created and authorized by the sponsor or initiating authority — not the PM. If PMs could self-define authority, they could authorize anything. Authority must come from OUTSIDE the project to ensure organizational oversight.",
+              "character": "Elena Santos",
+              "characterQuote": "If Alex could define his own spending authority, he could authorize anything. MY job as sponsor is to define appropriate limits. That's organizational governance."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Authorization must come from outside. A PM defining their own authority is like writing yourself a blank check — that's not how governance works.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Authorization must come from outside. A PM defining their own authority is like writing yourself a blank check — that's not how governance works."
+            },
+            "retryHint": "Consider who has the right to define the PM's authority. Can someone grant themselves authorization? What would happen if PMs could set their own spending limits?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the BEST response?",
+            "points": 50,
+            "scenario_name": "Charter as Enabler",
+            "situation": "During a project review, a stakeholder asks the project manager: \"Why did we spend time on the charter when we could have started detailed planning immediately? It seems like the charter just delayed us.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"The charter is required by PMI methodology and must be completed for certification purposes.\"",
+                "correct": false,
+                "whyWrong": "While technically true, this is defensive and doesn't explain the VALUE of the charter. It makes it sound like bureaucratic compliance rather than project enablement."
+              },
+              {
+                "id": "B",
+                "text": "\"The charter formally authorizes the project and provides me with authority to apply organizational resources, which enables all subsequent planning and execution.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"The charter was a quick document that didn't take much time away from planning.\"",
+                "correct": false,
+                "whyWrong": "This dismisses the charter's importance by minimizing the time spent. The correct response explains WHY the charter enables the project, not that it was \"quick.\""
+              },
+              {
+                "id": "D",
+                "text": "\"We needed executive approval before spending any budget.\"",
+                "correct": false,
+                "whyWrong": "Budget approval is only one aspect. The charter provides comprehensive authorization including PM authority, success criteria, and stakeholder alignment — not just budget."
+              }
+            ],
+            "explanation": "The best response explains the charter's value: it formally authorizes the project, provides the PM with authority to apply resources, and enables all subsequent work. This frames the charter as an ENABLER rather than a bureaucratic delay. Without it, no planning or execution can formally occur because the PM lacks authorization.",
+            "correctFeedback": {
+              "text": "The best response explains the charter's value: it formally authorizes the project, provides the PM with authority to apply resources, and enables all subsequent work. This frames the charter as an ENABLER rather than a bureaucratic delay. Without it, no planning or execution can formally occur because the PM lacks authorization.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I've learned to explain the charter as what ENABLES the project, not what delays it. Once stakeholders see it as authorization rather than paperwork, they support it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "'PMI requires it' is true but defensive. 'It authorizes me to act' is empowering. Always frame the charter as what enables work, not what blocks it.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "'PMI requires it' is true but defensive. 'It authorizes me to act' is empowering. Always frame the charter as what enables work, not what blocks it."
+            },
+            "retryHint": "How can you explain the charter's value in a way that shows it ENABLES the project rather than delays it? Focus on what the charter gives the PM — authority to act."
+          }
+        ]
+      }
+    }
+  ]
+}

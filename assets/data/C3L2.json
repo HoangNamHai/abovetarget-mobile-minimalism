@@ -1,0 +1,705 @@
+{
+  "lessonId": "C3L2",
+  "lessonTitle": "Risk Response Planning",
+  "courseId": "C3",
+  "courseName": "Risk, Quality, Procurement",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Match risk characteristics to the appropriate response strategy (Avoid, Mitigate, Transfer, Accept, Escalate)",
+    "Distinguish between 4 negative risk strategies (threats) and 4 positive risk strategies (opportunities)",
+    "Recognize when to escalate a risk versus handle it at the project level",
+    "Understand secondary risks (caused by the response) versus residual risks (remaining after the response)",
+    "Apply active acceptance (contingency reserve) versus passive acceptance based on risk severity"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "jordan_park",
+    "casey_martinez",
+    "carlos_mendez"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Five Risks, Eight Strategies, $80K at Stake",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. You've just landed the biggest contract yet: catering for a luxury tech conference with 1,200 guests. Revenue potential: $250,000. Penalty for failure: $80,000. Jordan Park (Risk Manager) has identified 5 critical risks threatening the project. Casey wants to \"just avoid ALL the risks!\" But Jordan warns that over-avoidance is expensive and impractical. Each risk needs a tailored response: Avoid? Mitigate? Transfer? Accept? Escalate? The wrong choice on any one of these could trigger the $80K penalty clause.",
+        "failure_cards": [
+          {
+            "id": "the_highstakes_contract",
+            "icon": "📋",
+            "title": "The High-Stakes Contract",
+            "summary": "Casey wants to cancel anything risky — but avoiding everything means canceling the contract",
+            "image": "/images/C3L2_comic_vendor_threat.webp",
+            "details": "Alex held the signed contract: $250K, 1,200 guests, Savory's breakthrough into premium corporate catering. Then Jordan pointed to the penalty clause: $80K if they fail to deliver. He identified 5 critical risks — chef illness, supplier delay, equipment opportunity, power outage, and a stuck health permit. Casey panicked: \"Let's just avoid ALL of them!\" Jordan shook his head: \"Avoid everything and we cancel the contract. We need the RIGHT strategy for EACH risk.\""
+          },
+          {
+            "id": "the_wrong_strategy_costs_more_than_the_risk",
+            "icon": "⚠️",
+            "title": "The Wrong Strategy Costs More Than the Risk",
+            "summary": "Spending $15K to avoid a $5K expected loss wastes money — while ignoring a 60% probability risk invites disaster",
+            "image": "/images/C3L2_comic_response_failure.webp",
+            "details": "Alex rented a $15K backup generator for a risk with only 5% probability and $5K expected loss — spending 3x the expected loss. Meanwhile, the seafood supplier had a 60% delay rate but Alex chose passive acceptance: \"We'll deal with it if it happens.\" Jordan warned: \"You over-spent on a low-probability risk and under-responded to a near-certain one. Match the strategy to the situation — not the other way around.\""
+          },
+          {
+            "id": "five_risks_five_decisions",
+            "icon": "💡",
+            "title": "Five Risks, Five Decisions",
+            "summary": "Each risk needs a custom response based on probability, impact, cost, and authority",
+            "image": "/images/C3L2_comic_strategy_choice.webp",
+            "details": "The five risks sat on the board: Chef Illness (30% probability, $50K impact), Seafood Delay (60%, $30K), Equipment Opportunity (40% discount expiring this week), Power Outage (5%, $100K), and Health Permit (stuck in city bureaucracy). Jordan laid out the toolkit: Avoid, Mitigate, Transfer, Accept for threats. Exploit, Enhance, Share, Accept for opportunities. And Escalate for risks beyond the PM's authority. Alex picked up the marker: \"Let's analyze each one systematically.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "jordan_park",
+          "name": "Jordan Park",
+          "role": "Risk Manager",
+          "quote": "You have 8 response strategies — 4 for threats and 4 for opportunities — plus escalation. Casey, avoiding everything would cost us the contract. Each risk needs the RIGHT strategy based on probability, impact, cost, and your authority level."
+        },
+        "learning_hook": "**Risk response planning** means selecting the optimal strategy for each identified risk. Threats use Avoid, Mitigate, Transfer, or Accept. Opportunities use Exploit, Enhance, Share, or Accept. And when a risk is beyond your authority, you Escalate. Let's match strategies to risks."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "match_strategies_to_the_five_critical_risks",
+        "title": "Match Strategies to the Five Critical Risks",
+        "description": "Jordan guides you through selecting the right response strategy for each of the 5 risks threatening the $250K tech conference contract. \"Match the strategy to the risk — not the other way around.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What is the BEST risk response strategy for Chef Illness?",
+            "points": 100,
+            "scenario_name": "Chef Illness Risk",
+            "situation": "Casey Martinez (Head Chef) might get sick 3 days before the event. Probability: 30%. Impact: $50K (emergency replacement, quality issues, potential event failure). Expected loss: 30% x $50K = $15K. Your options: cross-train backup chef Taylor ($8K), contract a temp agency guarantee ($12K), cancel the contract to eliminate the risk, or do nothing and hope for the best.",
+            "options": [
+              {
+                "id": "A",
+                "text": "AVOID — Cancel the contract to eliminate the risk entirely",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "MITIGATE — Cross-train Taylor as backup chef ($8K investment)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "TRANSFER — Contract with temp agency for guaranteed replacement ($12K)",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "ACCEPT (Passive) — Do nothing, hope Casey stays healthy",
+                "correct": false
+              }
+            ],
+            "explanation": "Mitigation reduces the IMPACT if Casey gets sick. Taylor learns recipes, vendor relationships, and kitchen protocols. Impact drops from $50K (chaos) to roughly $10K (minor inefficiency). Cost-effective: $8K investment versus $15K expected loss = $7K savings. Mitigation is the most common and appropriate strategy for medium-probability risks.",
+            "correctFeedback": {
+              "text": "Mitigation reduces the IMPACT if Casey gets sick. Taylor learns recipes, vendor relationships, and kitchen protocols. Impact drops from $50K (chaos) to roughly $10K (minor inefficiency). Cost-effective: $8K investment versus $15K expected loss = $7K savings. Mitigation is the most common and appropriate strategy for medium-probability risks.",
+              "character": "Jordan Park",
+              "characterQuote": "Perfect. $8K to cross-train Taylor protects against $50K impact. That's textbook mitigation — reduce the impact at a cost less than the expected loss."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Compare the cost of each response to the expected loss ($15K). Which option gives you the best protection for the lowest price? And remember — avoidance should match the scale of the threat.",
+              "character": "Jordan Park",
+              "characterQuote": "Compare the cost of each response to the expected loss ($15K). Which option gives you the best protection for the lowest price? And remember — avoidance should match the scale of the threat."
+            },
+            "retryHint": "Compare each response's cost to the expected loss ($15K). The best strategy protects against the impact at a cost BELOW the expected loss."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What is the BEST risk response strategy for Seafood Delay?",
+            "points": 100,
+            "scenario_name": "Seafood Supplier Delay",
+            "situation": "The seafood supplier has a 60% chance of 1-day delivery delay based on past performance. Probability: 60%. Impact: $30K (spoiled seafood, menu gaps, quality issues). Expected loss: 60% x $30K = $18K. Your options: remove all seafood from the menu, order 2 days early with rush shipping ($2K extra), add a $30K penalty clause to the supplier contract, or accept and deal with the delay if it happens.",
+            "options": [
+              {
+                "id": "A",
+                "text": "AVOID — Remove all seafood from the menu",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "MITIGATE — Order 2 days early with rush shipping ($2K extra)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "TRANSFER — Add $30K penalty clause to supplier contract",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "ACCEPT — Order normally and deal with delay if it happens",
+                "correct": false
+              }
+            ],
+            "explanation": "Creating a time buffer REDUCES PROBABILITY of missing the deadline. Even with a 1-day delay, seafood arrives on time. Cost: $2K versus $18K expected loss = $16K savings. Time buffers are powerful, low-cost mitigation strategies that address the root cause of unreliable delivery.",
+            "correctFeedback": {
+              "text": "Creating a time buffer REDUCES PROBABILITY of missing the deadline. Even with a 1-day delay, seafood arrives on time. Cost: $2K versus $18K expected loss = $16K savings. Time buffers are powerful, low-cost mitigation strategies that address the root cause of unreliable delivery.",
+              "character": "Jordan Park",
+              "characterQuote": "Exactly. A $2K time buffer against an $18K expected loss is outstanding mitigation. You addressed the root cause — unreliable delivery timing — at minimal cost."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what actually solves the problem. The client wants premium seafood served on time. Which option ensures that happens at the lowest cost?",
+              "character": "Jordan Park",
+              "characterQuote": "Think about what actually solves the problem. The client wants premium seafood served on time. Which option ensures that happens at the lowest cost?"
+            },
+            "retryHint": "At 60% probability, this risk is almost certain to occur. Which response actually ensures the seafood arrives on time — not just compensates you when it does not?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What is the BEST response to this OPPORTUNITY?",
+            "points": 100,
+            "scenario_name": "Equipment Upgrade Opportunity",
+            "situation": "A vendor is offering a commercial oven at 40% discount ($12K savings). The sale ends this week. This is a POSITIVE risk (opportunity), not a threat. Casey is excited about doubling hot-food capacity, but the team needs to decide quickly.",
+            "options": [
+              {
+                "id": "A",
+                "text": "EXPLOIT — Purchase immediately to GUARANTEE the 40% savings",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "ENHANCE — Negotiate for 50% discount to increase the benefit",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "SHARE — Partner with another restaurant to split cost and benefit",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "ACCEPT — Buy the oven IF convenient, but do not rush",
+                "correct": false
+              }
+            ],
+            "explanation": "EXPLOIT means taking action to ENSURE the opportunity occurs. Purchasing within the deadline GUARANTEES the 40% discount ($12K savings). High-value opportunity plus tight deadline equals exploit it now. Do not overthink — secure the win.",
+            "correctFeedback": {
+              "text": "EXPLOIT means taking action to ENSURE the opportunity occurs. Purchasing within the deadline GUARANTEES the 40% discount ($12K savings). High-value opportunity plus tight deadline equals exploit it now. Do not overthink — secure the win.",
+              "character": "Casey Martinez",
+              "characterQuote": "Yes! $12K savings locked in and we double our hot-food capacity. That is how you handle opportunities — grab them before they disappear."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "This is a time-sensitive, high-value opportunity. Which strategy GUARANTEES you capture the benefit before the deadline passes?",
+              "character": "Jordan Park",
+              "characterQuote": "This is a time-sensitive, high-value opportunity. Which strategy GUARANTEES you capture the benefit before the deadline passes?"
+            },
+            "retryHint": "The sale ends this week. Which response ensures you capture the $12K savings before the deadline? Opportunities with tight deadlines need decisive action."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What is the BEST risk response strategy for Power Outage?",
+            "points": 100,
+            "scenario_name": "Venue Power Outage",
+            "situation": "The venue's backup generator has a 5% historical failure rate. Probability: 5%. Impact: $100K (no hot food service, client outrage, penalty clause triggered). Expected loss: 5% x $100K = $5K. Key information: the venue contract includes event insurance that covers power failures. Savory is named as additional insured at NO EXTRA COST.",
+            "options": [
+              {
+                "id": "A",
+                "text": "AVOID — Rent a second backup generator ($15K)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "MITIGATE — Prepare cold-food contingency menu ($3K)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "TRANSFER — Use venue's event insurance (already included in contract)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "ACCEPT (Active) — Set aside $5K contingency reserve",
+                "correct": false
+              }
+            ],
+            "explanation": "ALWAYS review existing contracts for coverage before buying new protection. Venue insurance already names Savory as additional insured for power failures — at NO EXTRA COST. Transfer provides financial protection without spending a dollar. Never pay twice for the same coverage.",
+            "correctFeedback": {
+              "text": "ALWAYS review existing contracts for coverage before buying new protection. Venue insurance already names Savory as additional insured for power failures — at NO EXTRA COST. Transfer provides financial protection without spending a dollar. Never pay twice for the same coverage.",
+              "character": "Jordan Park",
+              "characterQuote": "Perfect. You checked the contract first. Existing insurance covers this at zero cost. That is smart risk management — use what you already have before spending more."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Before you spend money on any response, what does the venue contract already include? Always check existing coverage first.",
+              "character": "Jordan Park",
+              "characterQuote": "Before you spend money on any response, what does the venue contract already include? Always check existing coverage first."
+            },
+            "retryHint": "Jordan said to check the venue contract before spending money. What coverage does the contract already include for power failures?"
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "What is the APPROPRIATE response for the Permit Delay?",
+            "points": 100,
+            "scenario_name": "Health Permit Delay",
+            "situation": "The health permit renewal is stuck in city bureaucracy. Probability: unknown (government processes are unpredictable). Impact: $250K (entire contract lost if no permit). Alex has NO authority to expedite government permits — this is beyond project scope. CEO Carlos Mendez has government relations contacts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "AVOID — Cancel the contract to eliminate permit dependency",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "MITIGATE — Hire a permit expediter to speed up approval",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "TRANSFER — Make the venue responsible for obtaining permits",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "ESCALATE — Notify CEO Carlos who has government relations contacts",
+                "correct": true
+              }
+            ],
+            "explanation": "ESCALATION is for risks OUTSIDE project scope or BEYOND PM authority. Alex cannot expedite government permits — no authority, no contacts. CEO Carlos has government relations channels and can engage city officials at the executive level. Escalation transfers DECISION-MAKING to someone who can actually address the risk. It is recognition of authority boundaries, not failure.",
+            "correctFeedback": {
+              "text": "ESCALATION is for risks OUTSIDE project scope or BEYOND PM authority. Alex cannot expedite government permits — no authority, no contacts. CEO Carlos has government relations channels and can engage city officials at the executive level. Escalation transfers DECISION-MAKING to someone who can actually address the risk. It is recognition of authority boundaries, not failure.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Alex made the right call bringing this to me. I have contacts at City Hall who can move this forward. That is knowing your authority limits and using the chain of command appropriately."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Can Alex actually influence the government permit process? If the risk is outside your scope or beyond your authority, what is the appropriate response?",
+              "character": "Jordan Park",
+              "characterQuote": "Ask yourself: Can Alex actually influence the government permit process? If the risk is outside your scope or beyond your authority, what is the appropriate response?"
+            },
+            "retryHint": "Alex has called the permit office three times with no results. He lacks authority over government processes. Who in the organization HAS the contacts and authority to resolve this?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Risk Response Strategy Toolkit",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Threat Strategies (Negative Risks)",
+            "subtitle": "",
+            "content": "Four strategies for responding to threats — risks that could HARM the project:\n\n1. **AVOID** — Eliminate the threat by removing the cause or protecting the project from its impact\n   - When to use: HIGH probability + HIGH impact threats where elimination is cost-effective\n   - When NOT to use: Cost of avoidance exceeds expected loss or destroys significant value\n   - *Example:* Cancel outdoor event during hurricane season to eliminate weather risk\n   - Key point: Avoidance eliminates the CAUSE. If the threat still exists after your response, it is mitigation, not avoidance.\n\n2. **MITIGATE** — Reduce the probability of occurrence and/or reduce the impact if it occurs\n   - When to use: MEDIUM probability/impact risks where you can reduce risk at reasonable cost\n   - Cost rule: Mitigation cost should be less than expected loss (Probability x Impact)\n   - *Example:* Cross-train backup chef to reduce impact of primary chef illness\n   - Key point: Mitigation REDUCES risk but does not eliminate it. This is the MOST COMMON strategy in practice.\n\n3. **TRANSFER** — Shift risk ownership and financial impact to a third party (insurance, contracts, warranties)\n   - When to use: Third party can manage risk better, or existing coverage is available at low/no cost\n   - Key distinction: Transfer shifts FINANCIAL risk. The PM still owns the project risk and manages the third party.\n   - *Example:* Use venue insurance for power failure coverage\n   - Key point: Always check existing contracts for coverage before buying new insurance.\n\n4. **ACCEPT** — Acknowledge the risk exists but take no proactive action unless it occurs\n   - Active acceptance: Set aside contingency reserve, have a response plan ready\n   - Passive acceptance: No action, deal with risk IF it occurs\n   - When to use active: Medium probability identified risks requiring resources if triggered\n   - When to use passive: Very low impact risks where the response is trivial\n   - Key point: Acceptance is a CONSCIOUS DECISION, not negligence."
+          },
+          {
+            "id": "tab2",
+            "title": "Opportunity Strategies (Positive Risks)",
+            "subtitle": "",
+            "content": "Four strategies for responding to opportunities — risks that could BENEFIT the project:\n\n1. **EXPLOIT** — Take actions to ENSURE the opportunity occurs (make it certain)\n   - *Example:* Purchase discounted equipment immediately before the sale ends\n\n2. **ENHANCE** — Increase the probability or impact of the opportunity\n   - *Example:* Negotiate for a larger discount or extended deadline\n\n3. **SHARE** — Partner with a third party to jointly capture the opportunity\n   - *Example:* Joint venture to split costs and benefits when you cannot capture it alone\n\n4. **ACCEPT** — Take advantage IF the opportunity arises, but do not actively pursue it\n   - *Example:* Buy at discount if convenient during routine purchasing\n\n**Plus: ESCALATE** — Transfer decision-making to higher authority when a risk (threat or opportunity) is outside project scope or beyond PM authority."
+          },
+          {
+            "id": "tab3",
+            "title": "Critical Distinctions for the PMP Exam",
+            "subtitle": "",
+            "content": "**Avoid vs Mitigate:**\n- AVOID eliminates the threat entirely — the cause is removed, the risk no longer exists\n- MITIGATE reduces probability or impact — the risk still exists but at lower severity\n- Test: Does the risk still exist after your response? If yes, it is mitigation. If no, it is avoidance.\n\n**Transfer vs Escalate:**\n- TRANSFER shifts FINANCIAL risk to a third party. The PM still owns the project risk.\n- ESCALATE shifts DECISION-MAKING to higher authority. The PM notifies but does not own resolution.\n- Test: Insurance, contracts, warranties = TRANSFER. PM lacks authority, outside scope = ESCALATE.\n\n**Contingency Reserve vs Management Reserve:**\n- Contingency reserve: For IDENTIFIED risks (known-unknowns). Included in cost baseline. PM can use without approval.\n- Management reserve: For UNIDENTIFIED risks (unknown-unknowns). NOT in baseline. Requires sponsor approval.\n\n**Secondary Risk vs Residual Risk:**\n- Secondary risk: A NEW risk CAUSED BY the risk response (would not exist without the response)\n- Residual risk: The ORIGINAL risk at a LOWER LEVEL after the response is implemented\n- Test: Is this new? Then it is secondary. Is this the same risk reduced? Then it is residual.",
+            "diagram": {
+              "image": "/images/C3L2_diagram_response_strategies.webp",
+              "alt": "Risk Response Strategy Selection Framework"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Software Product Launch Risk Decisions",
+        "scenario": {
+          "title": "Software Product Launch Risk Decisions",
+          "description": "You are the PM for a software product launch at a tech startup. The product demo is scheduled for a major industry conference in 3 weeks. Three critical risks have emerged, and your budget for risk responses is $15K. Your authority is limited to project-level decisions only.",
+          "images": [
+            {
+              "src": "/images/C3L2_comic_transfer.webp",
+              "alt": "Transfer scenario: software product launch risk decisions"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What is the BEST response for the Key Developer Illness risk?",
+            "points": 100,
+            "scenario_name": "Key Developer Illness",
+            "situation": "Lead developer Sarah has been sick frequently. Probability: 40%. Impact: $80K (demo failure, missed conference opportunity). Expected loss: 40% x $80K = $32K. No other developer knows the demo codebase. Cross-training another developer would cost $5K.",
+            "options": [
+              {
+                "id": "A",
+                "text": "AVOID — Cancel the conference demo to eliminate the risk",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "MITIGATE — Cross-train another developer on the demo codebase ($5K)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "TRANSFER — Buy key-person insurance for Sarah",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "ACCEPT — Hope Sarah stays healthy for 3 weeks",
+                "correct": false
+              }
+            ],
+            "explanation": "Cross-training reduces IMPACT if Sarah is sick. Another developer can run the demo. $5K investment versus $32K expected loss (40% x $80K) is highly cost-effective mitigation. It also eliminates the single point of failure and builds team capability.",
+            "correctFeedback": {
+              "text": "Cross-training reduces IMPACT if Sarah is sick. Another developer can run the demo. $5K investment versus $32K expected loss (40% x $80K) is highly cost-effective mitigation. It also eliminates the single point of failure and builds team capability.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Same pattern as cross-training Taylor for chef illness. $5K to protect against $32K expected loss — and you eliminate the single point of failure."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Compare each response's cost to the expected loss ($32K). Which option provides operational capability, not just financial compensation?",
+              "character": "Jordan Park",
+              "characterQuote": "Compare each response's cost to the expected loss ($32K). Which option provides operational capability, not just financial compensation?"
+            },
+            "retryHint": "You need someone who can run the demo if Sarah is unavailable. Which option gives you that operational capability at a cost below the expected loss?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What is the BEST response for the Cloud Provider Outage risk?",
+            "points": 100,
+            "scenario_name": "Cloud Provider Outage",
+            "situation": "The demo relies on AWS services. Probability: 2% (AWS has 99.99% uptime). Impact: $150K (live demo fails in front of 500 investors). Expected loss: 2% x $150K = $3K. AWS provides a 99.99% uptime SLA with service credits already included in the contract.",
+            "options": [
+              {
+                "id": "A",
+                "text": "AVOID — Build local backup that does not need cloud ($20K)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "MITIGATE — Set up redundant cloud region ($8K)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "TRANSFER — Rely on AWS 99.99% uptime SLA and service credits (existing)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "ACCEPT (Active) — Set aside $3K contingency reserve",
+                "correct": false
+              }
+            ],
+            "explanation": "AWS SLA already provides financial protection at NO EXTRA COST. If an outage occurs, service credits compensate. At 2% probability, existing transfer coverage is sufficient. Do not pay twice for coverage you already have.",
+            "correctFeedback": {
+              "text": "AWS SLA already provides financial protection at NO EXTRA COST. If an outage occurs, service credits compensate. At 2% probability, existing transfer coverage is sufficient. Do not pay twice for coverage you already have.",
+              "character": "Jordan Park",
+              "characterQuote": "Same principle as the venue insurance. Check existing contracts first. AWS SLA provides transfer at zero additional cost."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Before spending money, what does the existing AWS contract already cover? Always review current coverage before buying new protection.",
+              "character": "Jordan Park",
+              "characterQuote": "Before spending money, what does the existing AWS contract already cover? Always review current coverage before buying new protection."
+            },
+            "retryHint": "What does the existing AWS contract include for service failures? Always check current coverage before spending additional money."
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What is the BEST response for the Regulatory Approval Delay risk?",
+            "points": 100,
+            "scenario_name": "Regulatory Approval Delay",
+            "situation": "The product needs FDA clearance for healthcare features. Probability: unknown (government process). Impact: $500K (cannot demo regulated features). Your authority: project-level only — you have no FDA relationships. Your CEO has healthcare industry relationships and regulatory contacts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "AVOID — Remove regulated features from demo",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "MITIGATE — Hire regulatory consultant to expedite ($10K)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "TRANSFER — Make the venue responsible for regulatory compliance",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "ESCALATE — Notify CEO who has healthcare industry relationships",
+                "correct": true
+              }
+            ],
+            "explanation": "FDA approval is OUTSIDE project scope and BEYOND PM authority. The CEO may have FDA relationships, healthcare board members, or regulatory advisors who can help. Escalation transfers decision-making to someone who CAN address the issue. It is recognition of authority boundaries, not admission of failure.",
+            "correctFeedback": {
+              "text": "FDA approval is OUTSIDE project scope and BEYOND PM authority. The CEO may have FDA relationships, healthcare board members, or regulatory advisors who can help. Escalation transfers decision-making to someone who CAN address the issue. It is recognition of authority boundaries, not admission of failure.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Same as the health permit — when something is beyond your authority, escalate to someone who has the right relationships and organizational power."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Can you influence the FDA process at the project level? If not, who in the organization has the relationships and authority to address regulatory issues?",
+              "character": "Jordan Park",
+              "characterQuote": "Can you influence the FDA process at the project level? If not, who in the organization has the relationships and authority to address regulatory issues?"
+            },
+            "retryHint": "You have no FDA contacts or authority over government regulatory processes. Who in your organization has the relationships to influence this outcome?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that risk response planning means selecting the optimal strategy for each identified risk based on its characteristics — not applying a one-size-fits-all approach.",
+        "key_takeaways": [
+          "Match strategy to risk — Each risk needs a custom response based on probability, impact, cost, and your authority. No single strategy works for every risk.",
+          "Cost-benefit rule — If response cost is less than expected loss (P x I), consider mitigation or avoidance. If cost exceeds expected loss, consider acceptance or transfer.",
+          "Mitigate is most common — Mitigation (reducing probability or impact) is the most frequently used strategy. Cost-effective for medium-severity risks.",
+          "Check existing coverage first — ALWAYS review existing contracts, insurance, and warranties BEFORE buying new coverage. Do not pay twice for the same protection.",
+          "Escalate when appropriate — Escalate when a risk is outside project scope or beyond PM authority. It is recognition of boundaries, not admission of failure.",
+          "Opportunities need responses too — Positive risks have their own strategies: Exploit, Enhance, Share, Accept. Do not ignore upside potential."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Risk response is not about eliminating every threat — it is about choosing the RIGHT response for EACH risk. We mitigated chef illness for $8K, buffered the supplier delay for $2K, exploited the oven discount, transferred power risk through existing insurance, and escalated the permit to Carlos. $80K penalty avoided, $250K revenue secured."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L3",
+          "title": "Risk Monitoring & Control",
+          "description": "You have planned your risk responses — now learn how to track identified risks, watch for triggers, and execute your planned responses when risks actually occur."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "This is an example of which risk response strategy?",
+            "points": 50,
+            "scenario_name": "Performance Bond Strategy",
+            "situation": "A project manager identifies a risk that a key supplier may go bankrupt during the project. The PM decides to include a contract clause requiring the supplier to provide a performance bond.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Avoid",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Mitigate",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Transfer",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Accept",
+                "correct": false
+              }
+            ],
+            "explanation": "Performance bonds, insurance, and contract clauses are TRANSFER strategies — they shift financial risk to third parties (in this case, the bonding company) who can better absorb the consequences. If the supplier fails, the bond pays compensation.",
+            "correctFeedback": {
+              "text": "Performance bonds, insurance, and contract clauses are TRANSFER strategies — they shift financial risk to third parties (in this case, the bonding company) who can better absorb the consequences. If the supplier fails, the bond pays compensation.",
+              "character": "Jordan Park",
+              "characterQuote": "Performance bonds shift financial consequences to the bonding company. Classic transfer — you are still using the supplier but with financial protection."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The PM is still using the supplier, so it is not avoidance. The bond does not reduce bankruptcy probability, so it is not mitigation. What does a performance bond actually DO when the supplier fails?",
+              "character": "Jordan Park",
+              "characterQuote": "The PM is still using the supplier, so it is not avoidance. The bond does not reduce bankruptcy probability, so it is not mitigation. What does a performance bond actually DO when the supplier fails?"
+            },
+            "retryHint": "A performance bond pays compensation if the supplier fails. Who bears the financial risk — the project or the bonding company?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "The compatibility issue is an example of:",
+            "points": 50,
+            "scenario_name": "Secondary vs Residual Risk",
+            "situation": "A PM implements a risk response that significantly reduces a technical risk. However, the response creates a new risk: the alternate technology solution may have compatibility issues with existing systems.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Residual risk",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Secondary risk",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Trigger risk",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Inherent risk",
+                "correct": false
+              }
+            ],
+            "explanation": "Secondary risks are NEW risks CAUSED BY the risk response. The compatibility issue would not exist if the alternate technology had not been selected. Always identify and plan for secondary risks when implementing responses — your solution may create new problems.",
+            "correctFeedback": {
+              "text": "Secondary risks are NEW risks CAUSED BY the risk response. The compatibility issue would not exist if the alternate technology had not been selected. Always identify and plan for secondary risks when implementing responses — your solution may create new problems.",
+              "character": "Jordan Park",
+              "characterQuote": "The compatibility issue is a direct consequence of switching technologies. That is textbook secondary risk — new risk caused by the response itself."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Was this risk there before the response, or did the response CREATE it? That distinction tells you whether it is residual or secondary.",
+              "character": "Jordan Park",
+              "characterQuote": "Was this risk there before the response, or did the response CREATE it? That distinction tells you whether it is residual or secondary."
+            },
+            "retryHint": "Did this compatibility risk exist BEFORE the technology switch? If it is new, it is not residual. If the response created it, what type of risk is that?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "This $10,000 is an example of:",
+            "points": 50,
+            "scenario_name": "Contingency vs Management Reserve",
+            "situation": "A project has identified a risk with 20% probability and $50,000 impact. The PM sets aside $10,000 in the project budget specifically for this risk if it occurs.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Management reserve",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Contingency reserve",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Budget variance",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Cost baseline",
+                "correct": false
+              }
+            ],
+            "explanation": "Contingency reserve is for IDENTIFIED risks (known-unknowns). It is included in the cost baseline, and the PM can use it without additional approval when the identified risk occurs. Management reserve is for UNIDENTIFIED risks and requires sponsor approval.",
+            "correctFeedback": {
+              "text": "Contingency reserve is for IDENTIFIED risks (known-unknowns). It is included in the cost baseline, and the PM can use it without additional approval when the identified risk occurs. Management reserve is for UNIDENTIFIED risks and requires sponsor approval.",
+              "character": "Jordan Park",
+              "characterQuote": "The risk is identified, the reserve is planned, and the PM controls it. That is contingency reserve — part of the cost baseline for known-unknowns."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Is this money set aside for a KNOWN risk or for surprises no one anticipated? That distinction separates contingency from management reserve.",
+              "character": "Jordan Park",
+              "characterQuote": "Is this money set aside for a KNOWN risk or for surprises no one anticipated? That distinction separates contingency from management reserve."
+            },
+            "retryHint": "The PM set this money aside for a specific, identified risk. Is this for a known-unknown or an unknown-unknown? That determines which type of reserve it is."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What should the PM do?",
+            "points": 50,
+            "scenario_name": "When to Escalate",
+            "situation": "A PM identifies a risk that could have major impact on the organization's strategic objectives, not just the project. The risk is related to changing government regulations that affect the entire industry.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Mitigate the risk by hiring a regulatory consultant",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Transfer the risk through insurance",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Accept the risk and monitor for changes",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Escalate the risk to portfolio/program management or executives",
+                "correct": true
+              }
+            ],
+            "explanation": "Risks affecting organizational strategy are OUTSIDE project scope. Escalation brings the risk to decision-makers who can address strategic implications across the portfolio, not just within one project. Strategic regulatory changes need executive attention, not just project-level response.",
+            "correctFeedback": {
+              "text": "Risks affecting organizational strategy are OUTSIDE project scope. Escalation brings the risk to decision-makers who can address strategic implications across the portfolio, not just within one project. Strategic regulatory changes need executive attention, not just project-level response.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Industry-wide regulatory changes affect every project in the portfolio. That is exactly why escalation exists — bring it to someone who can coordinate the organizational response."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Does this risk affect just your project, or the entire organization? If it is strategic in nature, who has the authority and perspective to address it?",
+              "character": "Jordan Park",
+              "characterQuote": "Does this risk affect just your project, or the entire organization? If it is strategic in nature, who has the authority and perspective to address it?"
+            },
+            "retryHint": "This risk affects the organization's strategic objectives and the entire industry — not just your project. Who has the authority to address risks at that level?"
+          }
+        ]
+      }
+    }
+  ]
+}

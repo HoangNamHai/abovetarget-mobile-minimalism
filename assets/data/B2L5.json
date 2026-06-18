@@ -1,0 +1,698 @@
+{
+  "lessonId": "B2L5",
+  "lessonTitle": "Motivation & Recognition",
+  "courseId": "B2",
+  "courseName": "Team Leadership & Development",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 540,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Diagnose whether a team member's motivation issue is intrinsic (challenge, growth, autonomy) or extrinsic (recognition, rewards, hygiene)",
+    "Apply Herzberg's Two-Factor Theory to distinguish hygiene factors (prevent dissatisfaction) from motivators (create satisfaction)",
+    "Use Maslow's Hierarchy of Needs to identify which need level is unmet and blocking motivation",
+    "Recognize Theory X vs Theory Y management assumptions and their impact on team morale",
+    "Design recognition strategies that are timely (throughout project), specific (not generic), and culturally appropriate"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "dr_amelia_foster",
+    "elena_santos",
+    "marco_silva",
+    "jamie_park"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Three Demotivated Team Members, Three Different Root Causes: Can Money Fix Them All?",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. Carlos insists: \"Just give everyone a bonus — money solves motivation problems!\" But your three struggling team members couldn't have more different issues — one wants acknowledgment, one wants challenge, one wants safety. Can you diagnose the root cause for each before Carlos throws money at the wrong problems?",
+        "failure_cards": [
+          {
+            "id": "elena_still_quits",
+            "icon": "📋",
+            "title": "Elena Still Quits",
+            "summary": "Bonus given, but she wanted acknowledgment — not money",
+            "image": "/images/B2L5_comic_elena.webp",
+            "details": "Carlos gave Elena a $2,000 bonus. She quit anyway. Elena: \"The bonus felt like hush money. I wanted someone to SAY my work mattered. To acknowledge what I achieved. The money felt like a transaction, not appreciation.\" Money doesn't fix RECOGNITION needs. She wanted acknowledgment, not cash."
+          },
+          {
+            "id": "marcos_boredom_deepens",
+            "icon": "⚠️",
+            "title": "Marco's Boredom Deepens",
+            "summary": "20% raise offered, but he's still chopping vegetables — still bored",
+            "image": "/images/B2L5_comic_marco.webp",
+            "details": "Carlos offered Marco a generous raise. Marco declined. Marco: \"You think more money makes prep work interesting? I've trained 15 years for culinary excellence. I need CHALLENGE, not cash. Pay me less and give me innovation.\" Intrinsic motivation (challenge, creativity) can't be bought with extrinsic rewards."
+          },
+          {
+            "id": "jamie_explodes",
+            "icon": "💡",
+            "title": "Jamie Explodes",
+            "summary": "Bonus offered while fridge still broken — Jamie resigns",
+            "image": "/images/B2L5_comic_jamie.webp",
+            "details": "When Carlos offered Jamie a $3,000 \"crisis bonus,\" Jamie erupted: \"You think MONEY fixes a broken fridge and 70-hour weeks? That's INSULTING. Fix the equipment. Give me my weekends back. THEN we can talk.\" Jamie quit the next day. Hygiene factors (safety, reasonable hours) must be fixed BEFORE motivators work."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Leadership Consultant",
+          "quote": "Three demotivated team members. Three completely different root causes. One blanket solution will fail two of them — and might insult all three. Diagnose BEFORE you prescribe."
+        },
+        "learning_hook": "**Motivation diagnosis** is one of the most misunderstood PM skills. Most managers default to money — but extrinsic rewards don't fix intrinsic problems, and motivators don't fix hygiene issues. Let's learn to diagnose root causes using Herzberg, Maslow, and intrinsic/extrinsic frameworks."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "diagnose_the_root_cause",
+        "title": "Diagnose the Root Cause",
+        "description": "Dr. Foster guides you through three motivation cases. \"Each team member has a different root cause. Diagnose whether the issue is intrinsic or extrinsic, identify the theory, and select the right intervention. The wrong fix can be insulting — not motivating.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What is Elena's primary motivation issue, and what is the BEST intervention?",
+            "points": 125,
+            "scenario_name": "Elena Santos — The Unacknowledged Achiever",
+            "situation": "Elena Santos (Sous Chef) led the spring menu launch to massive success — worked weekends, mentored juniors, exceeded every target. Her previous manager verbally mentioned a performance bonus. After the project, she received nothing. HR said \"bonuses are discretionary.\" Now Elena is withdrawn, no longer volunteers for projects, and productivity has dropped. Elena says: \"I just want to be acknowledged. It felt like my effort didn't matter to anyone.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Intrinsic issue (boredom) — Assign her to lead an exciting new creative project",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Extrinsic issue (compensation) — Offer retroactive bonus if budget allows",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Extrinsic issue (recognition) — Publicly acknowledge her contributions and commit to ongoing recognition throughout future projects",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Extrinsic issue (process) — Escalate to HR to investigate the promised bonus",
+                "correct": false
+              }
+            ],
+            "explanation": "Elena's issue is EXTRINSIC — she needs RECOGNITION (a Herzberg motivator) for her achievements. Her Esteem need (Maslow Level 4) is unmet. She explicitly said: \"I just want to be acknowledged.\" Public acknowledgment costs nothing, addresses the root cause immediately, and commits to ongoing recognition throughout future projects — preventing this from happening again. Recognition must be TIMELY and GENUINE.",
+            "correctFeedback": {
+              "text": "Elena's issue is EXTRINSIC — she needs RECOGNITION (a Herzberg motivator) for her achievements. Her Esteem need (Maslow Level 4) is unmet. She explicitly said: \"I just want to be acknowledged.\" Public acknowledgment costs nothing, addresses the root cause immediately, and commits to ongoing recognition throughout future projects — preventing this from happening again. Recognition must be TIMELY and GENUINE.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Elena didn't need money — she needed someone to SEE her. Public acknowledgment validates that her effort mattered. That's worth more than any bonus check."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I just want someone to acknowledge what I achieved. To say it mattered. Is that too much to ask?",
+              "character": "Elena Santos",
+              "characterQuote": "I just want someone to acknowledge what I achieved. To say it mattered. Is that too much to ask?"
+            },
+            "retryHint": "Listen to Elena's exact words: \"I just want to be acknowledged.\" What intervention directly addresses the need for acknowledgment?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What is Marco's primary motivation issue, and what is the BEST intervention?",
+            "points": 125,
+            "scenario_name": "Marco Silva — The Underutilized Expert",
+            "situation": "Marco Silva has 15+ years of Michelin-level experience. Due to staffing shortages, he's been assigned routine prep work — chopping vegetables, inventory checks — for three months. He's vocally frustrated: \"I didn't train for 15 years to chop onions. This is beneath my skill level.\" When asked to help temporarily, he says: \"Temporarily turned into 3 months. I'm losing my edge. I need complex challenges.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Extrinsic issue (compensation) — Increase salary to compensate for lower-level work",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Extrinsic issue (status) — Give him a better title (Executive Chef)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Intrinsic issue (challenge) — Assign a complex R&D project (fusion menu innovation) with full autonomy",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Extrinsic issue (belonging) — Organize team-building activities to boost his morale",
+                "correct": false
+              }
+            ],
+            "explanation": "Marco's issue is INTRINSIC — he needs CHALLENGING WORK that matches his expertise. He's at Maslow's Self-Actualization level (Level 5) and needs a Herzberg motivator (achievement/growth). The R&D project gives him challenge (complex culinary innovation), autonomy (freedom to create), mastery (using 15 years of expertise), and purpose (creating the future of the restaurant). Money doesn't fix boredom.",
+            "correctFeedback": {
+              "text": "Marco's issue is INTRINSIC — he needs CHALLENGING WORK that matches his expertise. He's at Maslow's Self-Actualization level (Level 5) and needs a Herzberg motivator (achievement/growth). The R&D project gives him challenge (complex culinary innovation), autonomy (freedom to create), mastery (using 15 years of expertise), and purpose (creating the future of the restaurant). Money doesn't fix boredom.",
+              "character": "Marco Silva",
+              "characterQuote": "THIS is why I became a chef — to create, innovate, and push boundaries. Not to chop vegetables for three months. Give me a challenge and watch what I can do."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Marco's soul is starving for challenge. Listen to his words: 'I need complex challenges — I'm losing my edge.' What does an expert with 15 years of experience need?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Marco's soul is starving for challenge. Listen to his words: 'I need complex challenges — I'm losing my edge.' What does an expert with 15 years of experience need?"
+            },
+            "retryHint": "Marco said: \"I need complex challenges — I'm losing my edge.\" What type of motivation is \"challenge\" — intrinsic or extrinsic? What intervention provides it?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What is Jamie's primary motivation issue, and what is the BEST intervention?",
+            "points": 125,
+            "scenario_name": "Jamie Park — The Burned Out Manager",
+            "situation": "The kitchen's refrigeration system has been failing for 6 weeks. Jamie (Front-of-House Manager) has been working 70-hour weeks — manually monitoring temperatures, coordinating emergency repairs, preventing health code violations. No additional resources have been provided. Jamie is visibly exhausted: \"I've reported this fridge issue for 6 weeks. Nothing's been fixed. I'm risking my license.\" When offered a bonus, Jamie says: \"I don't want a bonus. I want safe working conditions and reasonable hours.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Extrinsic issue (recognition) — Publicly praise Jamie's dedication and crisis management",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Extrinsic issue (hygiene) — Fix the refrigeration system immediately and reduce Jamie's hours to sustainable levels",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Extrinsic issue (reward) — Offer a performance bonus for handling the crisis heroically",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Intrinsic issue (growth) — Assign a stretch goal to design a new operations system",
+                "correct": false
+              }
+            ],
+            "explanation": "Jamie's issue is a HYGIENE factor (Herzberg): unsafe working conditions and overwork. Maslow Levels 1-2 (Physiological needs like rest, Safety needs like equipment) are unmet. You CANNOT motivate someone whose basic safety needs are at risk. The fridge must be fixed and hours must be reduced — then, and only then, can recognition or rewards be meaningful. Fix hygiene factors BEFORE offering motivators.",
+            "correctFeedback": {
+              "text": "Jamie's issue is a HYGIENE factor (Herzberg): unsafe working conditions and overwork. Maslow Levels 1-2 (Physiological needs like rest, Safety needs like equipment) are unmet. You CANNOT motivate someone whose basic safety needs are at risk. The fridge must be fixed and hours must be reduced — then, and only then, can recognition or rewards be meaningful. Fix hygiene factors BEFORE offering motivators.",
+              "character": "Jamie Park",
+              "characterQuote": "THANK YOU for actually listening. Fix the fridge. Give me my weekends back. That's all I needed to hear. Now I can do my job without risking my health or my license."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When someone is working 70 hours with unsafe equipment, they need SAFETY and REST — not bonuses, praise, or stretch goals. Fix the hygiene factors FIRST.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When someone is working 70 hours with unsafe equipment, they need SAFETY and REST — not bonuses, praise, or stretch goals. Fix the hygiene factors FIRST."
+            },
+            "retryHint": "Jamie explicitly said what they need: \"safe working conditions and reasonable hours.\" Which intervention addresses BOTH of those requests directly?"
+          },
+          {
+            "q_id": "q4",
+            "type": "drag_drop",
+            "question": "Drag each motivation concept to the correct theory:",
+            "points": 125,
+            "scenario_name": "Motivation Theory Matching",
+            "situation": "Dr. Foster tests your understanding of the motivation theories you've just applied. \"Match each concept to the correct theory framework.\"",
+            "chips": [
+              {
+                "id": "hygiene_factors_prevent_dissatisfaction",
+                "label": "Hygiene factors prevent dissatisfaction",
+                "correctZone": "herzbergs_twofactor_theory"
+              },
+              {
+                "id": "lower_needs_must_be_met_before_higher_needs_motivate",
+                "label": "Lower needs must be met before higher needs motivate",
+                "correctZone": "maslows_hierarchy_of_needs"
+              },
+              {
+                "id": "micromanagement_creates_a_selffulfilling_prophecy",
+                "label": "Micromanagement creates a self-fulfilling prophecy",
+                "correctZone": "mcgregors_theory_x"
+              },
+              {
+                "id": "challenge_and_autonomy_drive_longterm_engagement",
+                "label": "Challenge and autonomy drive long-term engagement",
+                "correctZone": "intrinsic_motivation"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "herzbergs_twofactor_theory",
+                "label": "Herzberg's Two-Factor Theory",
+                "detail": "Herzberg distinguishes hygiene (prevent dissatisfaction) from motivators (create satisfaction)"
+              },
+              {
+                "id": "maslows_hierarchy_of_needs",
+                "label": "Maslow's Hierarchy of Needs",
+                "detail": "Maslow's hierarchy requires satisfying base needs before higher-level needs can drive behavior"
+              },
+              {
+                "id": "mcgregors_theory_x",
+                "label": "McGregor's Theory X",
+                "detail": "Theory X assumes people dislike work, leading to micromanagement that kills engagement"
+              },
+              {
+                "id": "intrinsic_motivation",
+                "label": "Intrinsic Motivation",
+                "detail": "Intrinsic motivation comes from within — challenge, growth, autonomy, mastery"
+              }
+            ],
+            "explanation": "Each motivation framework addresses a different diagnostic question. Herzberg separates hygiene from motivators. Maslow establishes a hierarchy of needs. McGregor contrasts management assumptions (X vs Y). Intrinsic/Extrinsic distinguishes the SOURCE of motivation. Together, they form a complete diagnostic toolkit for PMs.",
+            "correctFeedback": {
+              "text": "Each motivation framework addresses a different diagnostic question. Herzberg separates hygiene from motivators. Maslow establishes a hierarchy of needs. McGregor contrasts management assumptions (X vs Y). Intrinsic/Extrinsic distinguishes the SOURCE of motivation. Together, they form a complete diagnostic toolkit for PMs.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You've got the frameworks locked. Herzberg for type (hygiene vs motivator), Maslow for level (which need is unmet), McGregor for assumptions (X vs Y), and intrinsic/extrinsic for source."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what makes each theory unique. Herzberg splits factors into two categories. Maslow creates a ladder. McGregor contrasts management philosophies. Intrinsic/extrinsic looks at where motivation comes from.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what makes each theory unique. Herzberg splits factors into two categories. Maslow creates a ladder. McGregor contrasts management philosophies. Intrinsic/extrinsic looks at where motivation comes from."
+            },
+            "retryHint": "Herzberg = two categories (hygiene vs motivators). Maslow = five levels (lower before higher). McGregor = two assumptions (X vs Y). Intrinsic = internal drive (challenge, growth)."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Motivation Diagnostic Toolkit",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Intrinsic vs Extrinsic Motivation",
+            "subtitle": "",
+            "content": "The fundamental diagnostic question: **WHERE does motivation come from?**\n\n| Type | Source | Examples | Sustainability |\n|------|--------|----------|----------------|\n| **Intrinsic** | Within the person (internal satisfaction) | Challenge, autonomy, mastery, creativity, purpose, growth | Sustainable (self-renewing) |\n| **Extrinsic** | External factors (rewards/recognition) | Bonuses, promotions, public praise, titles, status | Short-term (requires continual input) |\n\n**Critical Rule:** Extrinsic rewards (money) DON'T fix intrinsic problems (boredom). Marco was bored (intrinsic issue). A raise (extrinsic reward) wouldn't help because money doesn't make boring work interesting. He needed challenge and creativity — intrinsic motivators.\n\n**PMI Reference:** PMBOK 7th Ed, pages 24-25",
+            "diagram": {
+              "image": "/images/B2L5_diagram_motivation_framework.webp",
+              "alt": "Motivation Diagnostic Framework"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Herzberg's Two-Factor Theory",
+            "subtitle": "",
+            "content": "Not all factors motivate equally. Some prevent dissatisfaction; others CREATE satisfaction.\n\n**HYGIENE FACTORS** (Prevent dissatisfaction, but don't motivate):\n- Safe working conditions\n- Fair salary and benefits\n- Job security\n- Company policies and administration\n- Work-life balance\n\n**MOTIVATORS** (Create satisfaction and active engagement):\n- Recognition and appreciation\n- Achievement and accomplishment\n- Responsibility and autonomy\n- Growth and advancement\n- Meaningful, challenging work\n\n**Critical Distinction:** If someone lacks a HYGIENE factor (e.g., unsafe conditions), giving them a MOTIVATOR (e.g., public praise) is insulting. Fix hygiene FIRST. Jamie's broken fridge was a hygiene issue — offering a bonus without fixing it was insulting and ineffective.\n\n**PMI Reference:** PMBOK 7th Ed, page 158"
+          },
+          {
+            "id": "tab3",
+            "title": "Maslow's Hierarchy of Needs",
+            "subtitle": "",
+            "content": "People are motivated by unmet needs. Lower-level needs MUST be satisfied before higher-level needs can motivate.\n\n**The Hierarchy (bottom to top):**\n- **Level 5 — Self-Actualization:** Achieving potential, creativity, personal growth (Marco)\n- **Level 4 — Esteem:** Recognition, respect, accomplishment, status (Elena)\n- **Level 3 — Belonging:** Relationships, teamwork, being part of a group\n- **Level 2 — Safety:** Security, safe working conditions, job stability (Jamie)\n- **Level 1 — Physiological:** Basic needs — food, water, rest, reasonable hours (Jamie)\n\n**Key Rule:** You CANNOT motivate someone at Level 4 (Esteem) if their Level 2 (Safety) needs are unmet. Lower needs BLOCK higher needs. Jamie's Safety and Physiological needs were unmet — recognition (Level 4) was meaningless until safety was restored.\n\n**PMI Reference:** PMBOK 7th Ed — Maslow's Hierarchy of Needs"
+          },
+          {
+            "id": "tab4",
+            "title": "McGregor's Theory X vs Theory Y",
+            "subtitle": "",
+            "content": "Your assumptions about people shape how you lead them — and become self-fulfilling prophecies.\n\n**Theory X (Negative Assumptions):** People inherently dislike work, avoid responsibility, must be closely supervised, motivated by punishment and fear. Leads to micromanagement.\n\n**Theory Y (Positive Assumptions):** People are self-motivated, seek responsibility, thrive with trust, motivated by purpose and growth. Leads to empowerment.\n\n**The Self-Fulfilling Prophecy:** If you assume people are lazy (X), you micromanage, they disengage, they appear \"lazy.\" If you assume people want to excel (Y), you empower, they step up, they excel.\n\n**PMI Preference:** Theory Y aligns with servant leadership and Agile values — trust, empowerment, self-organization.\n\n**PMI Reference:** PMBOK 7th Ed, page 160"
+          },
+          {
+            "id": "tab5",
+            "title": "Recognition Best Practices",
+            "subtitle": "",
+            "content": "Recognition is a MOTIVATOR — but only when done right.\n\n**1. TIMING:** Throughout the project, not just at the end. Recognize contributions as they happen. Weekly recognition beats annual awards.\n\n**2. SPECIFICITY:** Personal and specific, not generic. Instead of \"Great job, team!\" say \"Elena, your menu redesign reduced food waste by 30% — that directly drove our profit increase.\"\n\n**3. CULTURAL SENSITIVITY:** Some cultures prefer public recognition (celebration). Others prefer private recognition (quiet acknowledgment). Know your team member preferences.\n\n**4. ALIGNMENT:** Connect recognition to personal goals. \"This positions you well for the Senior Chef role you mentioned wanting.\"\n\n**PMI Reference:** Recognition and rewards should be documented in the Resource Management Plan."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Festival Pop-Up Team Assessment",
+        "scenario": {
+          "title": "Festival Pop-Up Team Assessment",
+          "description": "Savory & Co. is launching a pop-up booth at NYC's biggest food festival — three weeks away. Alex must assess three team members showing motivation issues and apply the right intervention for each. Dr. Foster reminds you: \"Same diagnostic approach — identify the root cause, match the theory, select the intervention.\"",
+          "images": [
+            {
+              "src": "/images/B2L5_comic_transfer.webp",
+              "alt": "Festival pop-up team assessment"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What is Sofia's root cause and the BEST intervention?",
+            "points": 100,
+            "scenario_name": "Sofia Martinez — The Overlooked Expert",
+            "situation": "Sofia Martinez (Senior Chef, 12 years experience) was specifically requested for the festival by the committee based on her reputation. But Carlos assigned her as \"assistant\" to a less experienced chef to \"keep egos in check.\" Sofia hasn't complained directly, but her engagement has plummeted — she's doing bare minimum and avoiding eye contact.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Extrinsic (hygiene) — Give her a salary bump for the festival work",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Intrinsic (challenge) — Give her a complex R&D project instead",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Extrinsic (esteem) — Restore her leadership role at the festival",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Extrinsic (motivator) — Publicly praise her experience at a team meeting",
+                "correct": false
+              }
+            ],
+            "explanation": "Sofia's issue is EXTRINSIC (esteem/recognition) — she was requested by name for her expertise, then demoted to assistant. This damaged her sense of respect and recognition (Maslow Level 4, Herzberg Motivator). Restoring her leadership role addresses the root cause: recognizing her expertise with appropriate responsibility. Like Elena, she needs acknowledgment through action, not just words.",
+            "correctFeedback": {
+              "text": "Sofia's issue is EXTRINSIC (esteem/recognition) — she was requested by name for her expertise, then demoted to assistant. This damaged her sense of respect and recognition (Maslow Level 4, Herzberg Motivator). Restoring her leadership role addresses the root cause: recognizing her expertise with appropriate responsibility. Like Elena, she needs acknowledgment through action, not just words.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Sofia's reputation got her invited, then she was demoted. That's a direct hit to her esteem. Restore what was taken, and you restore her motivation."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I thought keeping egos in check was smart management. But I actually damaged Sofia's respect by demoting her publicly.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I thought keeping egos in check was smart management. But I actually damaged Sofia's respect by demoting her publicly."
+            },
+            "retryHint": "Sofia was requested BY NAME by the festival committee, then assigned as assistant. What need is unmet when someone's expertise is acknowledged externally but ignored internally?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What is Liam's root cause and the BEST intervention?",
+            "points": 100,
+            "scenario_name": "Liam Chen — The Overwhelmed Junior",
+            "situation": "Liam Chen (Junior Cook, 6 months experience) has been assigned to manage the entire prep station alone for the festival — normally a senior role. He's visibly anxious, making errors, and working late trying to prepare. When asked how it's going, he said: \"I don't know what I'm doing. I need help.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Intrinsic (self-actualization) — This stretch assignment will help him grow",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Extrinsic (esteem) — Publicly recognize his potential at a team meeting",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Extrinsic (hygiene) — Provide training, mentorship, and adequate staffing support",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Extrinsic (reward) — Offer a bonus for completing the assignment",
+                "correct": false
+              }
+            ],
+            "explanation": "Liam's issue is a HYGIENE factor (Herzberg): inadequate resources and training for the role. His Safety need (Maslow Level 2) is threatened by potential failure. The solution is SUPPORT: training, mentorship, and appropriate staffing. Don't throw juniors into senior roles without scaffolding. Directive leadership (B2L4) is appropriate for new team members who need guidance, not autonomy.",
+            "correctFeedback": {
+              "text": "Liam's issue is a HYGIENE factor (Herzberg): inadequate resources and training for the role. His Safety need (Maslow Level 2) is threatened by potential failure. The solution is SUPPORT: training, mentorship, and appropriate staffing. Don't throw juniors into senior roles without scaffolding. Directive leadership (B2L4) is appropriate for new team members who need guidance, not autonomy.",
+              "character": "Elena Santos",
+              "characterQuote": "I remember being thrown into the deep end early in my career. Without mentorship, I almost quit. Liam needs support — not sink-or-swim pressure."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Stretch assignments can build people — or break them. The difference is whether you provide scaffolding. Liam is drowning, not growing.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Stretch assignments can build people — or break them. The difference is whether you provide scaffolding. Liam is drowning, not growing."
+            },
+            "retryHint": "Liam said: \"I don't know what I'm doing. I need help.\" What kind of intervention addresses someone who lacks the skills and support for their assignment?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What is Nina's root cause and the BEST intervention?",
+            "points": 100,
+            "scenario_name": "Nina Patel — The Blocked Achiever",
+            "situation": "Nina Patel (Marketing Manager) is responsible for all festival promotion. Two weeks before launch, her design software license expired and IT hasn't renewed it. She's been requesting escalation for 5 days. The promotion deadline is approaching and she can't work. Nina: \"I WANT to do my job. I'm BLOCKED by broken tools.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Intrinsic (challenge) — Give her a new creative brief to inspire her",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Extrinsic (recognition) — Praise her dedication despite obstacles",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Extrinsic (hygiene) — Escalate IT immediately and get her tools working today",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Extrinsic (reward) — Offer a bonus if she meets the deadline despite obstacles",
+                "correct": false
+              }
+            ],
+            "explanation": "Nina's issue is a HYGIENE factor (Herzberg): inadequate tools preventing her from working. This is a resource/conditions issue, not a motivation issue. Servant Leadership in Action: Remove obstacles! Escalate the IT issue, get her software working TODAY. Once tools are working, Nina's existing motivation will drive results. She's not demotivated — she's blocked.",
+            "correctFeedback": {
+              "text": "Nina's issue is a HYGIENE factor (Herzberg): inadequate tools preventing her from working. This is a resource/conditions issue, not a motivation issue. Servant Leadership in Action: Remove obstacles! Escalate the IT issue, get her software working TODAY. Once tools are working, Nina's existing motivation will drive results. She's not demotivated — she's blocked.",
+              "character": "Alex Mitchell",
+              "characterQuote": "My job as PM isn't to motivate Nina — she's already motivated. My job is to REMOVE OBSTACLES. Fix the software, and she'll deliver exactly what we need."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I'm not demotivated — I'm FRUSTRATED. Give me working tools and watch me deliver. But don't praise me, inspire me, or bonus me while my software is still broken.",
+              "character": "Nina Patel",
+              "characterQuote": "I'm not demotivated — I'm FRUSTRATED. Give me working tools and watch me deliver. But don't praise me, inspire me, or bonus me while my software is still broken."
+            },
+            "retryHint": "Nina said: \"I WANT to do my job. I'm BLOCKED by broken tools.\" She's not lacking motivation — what's actually preventing her from working?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered **motivation diagnosis** — the skill of identifying ROOT CAUSES before jumping to solutions. Most managers default to money, but extrinsic rewards don't fix intrinsic problems, and motivators don't fix hygiene issues. Diagnose FIRST, then prescribe the right intervention.",
+        "key_takeaways": [
+          "Intrinsic vs Extrinsic: Intrinsic motivation (challenge, growth, autonomy) is sustainable and self-renewing. Extrinsic motivation (money, rewards) is short-term and requires continual input. Money doesn't fix boredom.",
+          "Herzberg's Two-Factor Theory: Fix HYGIENE factors (safety, tools, fair pay) BEFORE offering motivators (recognition, advancement). Motivators on top of broken hygiene is insulting.",
+          "Maslow's Hierarchy: Lower-level needs (physiological, safety) must be met before higher-level needs (esteem, self-actualization) can motivate. You can't inspire someone who isn't safe.",
+          "McGregor's Theory X vs Y: Theory Y (trust, empowerment) unlocks motivation. Theory X (micromanagement, distrust) destroys it and creates a self-fulfilling prophecy.",
+          "Recognition Best Practices: Timely (throughout project, not just at end), specific (not generic praise), culturally appropriate (public vs private), and aligned with personal goals.",
+          "Diagnose Before You Prescribe: Different root causes need different interventions. One blanket solution (like money) will fail most of the time."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Carlos wanted to give everyone a raise. But Elena needed acknowledgment, Marco needed challenge, and Jamie needed safety. Three completely different root causes — and money would have failed all three. The diagnostic mindset changed everything: ask 'What's the root cause?' BEFORE jumping to solutions."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L1",
+          "title": "Project Charter Development",
+          "description": "With your team motivated and engaged, learn how to formally authorize and define projects through the Project Charter — the foundation of project integration."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Herzberg's Two-Factor Theory",
+            "situation": "A project team member complains about unsafe working conditions in the project workspace. The project manager wants to improve the team member's motivation. According to Herzberg's Two-Factor Theory, what should the project manager do FIRST?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Offer a performance bonus to compensate for the conditions",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Publicly recognize the team member's dedication",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Address the safety concerns immediately",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Assign more challenging work to increase engagement",
+                "correct": false
+              }
+            ],
+            "explanation": "According to Herzberg's Two-Factor Theory, hygiene factors (like safe working conditions) must be addressed BEFORE motivators can be effective. Hygiene factors prevent dissatisfaction; motivators create satisfaction. You can't build satisfaction on a foundation of unaddressed dissatisfaction. Fix the safety issue first — then motivators like recognition and challenge become meaningful.",
+            "correctFeedback": {
+              "text": "According to Herzberg's Two-Factor Theory, hygiene factors (like safe working conditions) must be addressed BEFORE motivators can be effective. Hygiene factors prevent dissatisfaction; motivators create satisfaction. You can't build satisfaction on a foundation of unaddressed dissatisfaction. Fix the safety issue first — then motivators like recognition and challenge become meaningful.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Herzberg is clear: fix hygiene factors FIRST. Motivators only work when the foundation of basic needs is secure."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "You can't motivate someone whose basic safety is at risk. Fix the foundation first — then build motivation on top.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You can't motivate someone whose basic safety is at risk. Fix the foundation first — then build motivation on top."
+            },
+            "retryHint": "Herzberg separates factors into two categories: hygiene (prevent dissatisfaction) and motivators (create satisfaction). Safety is which category? And which must be addressed first?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What type of motivation issue is this, and what intervention is MOST appropriate?",
+            "points": 50,
+            "scenario_name": "Intrinsic vs Extrinsic Motivation",
+            "situation": "A senior software architect on your project has become disengaged. During a one-on-one, she says: \"The work is so repetitive. I haven't learned anything new in months. I feel like my skills are stagnating.\" The PM needs to re-engage this team member.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Extrinsic issue — Offer a salary increase to compensate",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Intrinsic issue — Assign a complex technical challenge with learning opportunities",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Extrinsic issue — Provide public recognition for past achievements",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Hygiene issue — Improve her workspace and equipment",
+                "correct": false
+              }
+            ],
+            "explanation": "This is an INTRINSIC motivation issue. The architect is at Maslow's Self-Actualization level — she needs growth, challenge, and mastery opportunities. Her statement \"I haven't learned anything new\" directly indicates a need for skill development and complexity. Money, recognition, and workspace improvements don't address boredom and stagnation. Complex, meaningful work does.",
+            "correctFeedback": {
+              "text": "This is an INTRINSIC motivation issue. The architect is at Maslow's Self-Actualization level — she needs growth, challenge, and mastery opportunities. Her statement \"I haven't learned anything new\" directly indicates a need for skill development and complexity. Money, recognition, and workspace improvements don't address boredom and stagnation. Complex, meaningful work does.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Experts need CHALLENGE to stay engaged. Repetitive work starves their need for growth. Assign complex, meaningful work and watch engagement return."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When someone says they're bored and not growing, they're telling you exactly what they need — challenge and learning, not money or praise.",
+              "character": "Alex Mitchell",
+              "characterQuote": "When someone says they're bored and not growing, they're telling you exactly what they need — challenge and learning, not money or praise."
+            },
+            "retryHint": "Pay attention to the architect's exact words: \"repetitive,\" \"haven't learned,\" \"skills stagnating.\" What type of motivation does this indicate — and what fixes it?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "According to Maslow's Hierarchy of Needs, what is MOST likely causing the continued decline?",
+            "points": 50,
+            "scenario_name": "Maslow's Hierarchy of Needs",
+            "situation": "A team member has been working 60-hour weeks for the past month to meet a critical deadline. Despite receiving a performance bonus and public recognition from the sponsor, the team member's performance continues to decline and they seem exhausted.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The bonus wasn't large enough to be motivating",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Physiological needs (rest) are unmet, blocking motivation from higher-level rewards",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The team member doesn't value public recognition",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The team member needs more challenging work to re-engage",
+                "correct": false
+              }
+            ],
+            "explanation": "According to Maslow's Hierarchy, physiological needs (including adequate rest) are at the base and must be satisfied before higher-level needs can motivate. 60-hour weeks for a month creates exhaustion that no bonus or recognition can fix. The team member needs REST and sustainable hours before bonuses or recognition can have any positive effect. You can't motivate at Level 4 (Esteem) when Level 1 (Physiological) is depleted.",
+            "correctFeedback": {
+              "text": "According to Maslow's Hierarchy, physiological needs (including adequate rest) are at the base and must be satisfied before higher-level needs can motivate. 60-hour weeks for a month creates exhaustion that no bonus or recognition can fix. The team member needs REST and sustainable hours before bonuses or recognition can have any positive effect. You can't motivate at Level 4 (Esteem) when Level 1 (Physiological) is depleted.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You can't motivate someone at Level 4 (Esteem — recognition) when Level 1 (Physiological — rest) is depleted. The hierarchy isn't just theory — it's biological reality."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I've been there — burned out, getting bonuses that meant nothing because I was too exhausted to care. Rest isn't a luxury; it's a foundation.",
+              "character": "Jamie Park",
+              "characterQuote": "I've been there — burned out, getting bonuses that meant nothing because I was too exhausted to care. Rest isn't a luxury; it's a foundation."
+            },
+            "retryHint": "Consider Maslow's Hierarchy: Physiological, Safety, Belonging, Esteem, Self-Actualization. Which level is threatened by exhaustion from 60-hour weeks? And what happens when that base level is unmet?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "According to McGregor's Theory X and Theory Y, what is the MOST likely cause of these issues?",
+            "points": 50,
+            "scenario_name": "McGregor's Theory X vs Theory Y",
+            "situation": "A project manager consistently micromanages the team, closely monitoring all work and rarely delegating decisions. Team morale is low, creativity has declined, and several high performers are considering leaving. The organization asks for recommendations.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team lacks the skills needed for their roles",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The project manager's Theory X assumptions are creating a self-fulfilling prophecy",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The team needs clearer goals and requirements",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The project needs more frequent status meetings for alignment",
+                "correct": false
+              }
+            ],
+            "explanation": "The project manager is operating from Theory X assumptions (people dislike work, need constant supervision). This creates a self-fulfilling prophecy: micromanagement leads to team disengagement, which \"confirms\" the need for more micromanagement. Theory Y (people are self-motivated, seek responsibility) would empower the team, increase engagement, and retain high performers. PMI and Agile principles align with Theory Y.",
+            "correctFeedback": {
+              "text": "The project manager is operating from Theory X assumptions (people dislike work, need constant supervision). This creates a self-fulfilling prophecy: micromanagement leads to team disengagement, which \"confirms\" the need for more micromanagement. Theory Y (people are self-motivated, seek responsibility) would empower the team, increase engagement, and retain high performers. PMI and Agile principles align with Theory Y.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Theory X becomes a self-fulfilling prophecy. Treat people like they can't be trusted, and they'll stop trying to earn trust. High performers leave for environments that believe in them."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I learned this the hard way: micromanagement tells your team you don't trust them. The best people don't stay where they're not trusted.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I learned this the hard way: micromanagement tells your team you don't trust them. The best people don't stay where they're not trusted."
+            },
+            "retryHint": "Consider McGregor's Theory X (negative assumptions, micromanagement) vs Theory Y (positive assumptions, empowerment). Which is the PM demonstrating, and what are the predictable consequences?"
+          }
+        ]
+      }
+    }
+  ]
+}

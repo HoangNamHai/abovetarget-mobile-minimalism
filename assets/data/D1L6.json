@@ -1,0 +1,736 @@
+{
+  "lessonId": "D1L6",
+  "lessonTitle": "Sprint Retrospectives",
+  "courseId": "D1",
+  "courseName": "Agile Foundations: Scrum & Kanban",
+  "pathId": "D",
+  "pathName": "Agile/Hybrid Approaches",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish Sprint Retrospective (process improvement) from Sprint Review (product feedback)",
+    "Apply retrospective techniques based on team dynamics and mood",
+    "Create SMART action items instead of vague improvement wishes",
+    "Recognize and avoid common retrospective anti-patterns",
+    "Facilitate blame-free process improvement discussions using structured techniques"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "taylor_kim",
+    "maya_rodriguez",
+    "devon_brown",
+    "morgan_lee",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Sprint 4 Failed. The Team Is Angry. Can Alex Turn Blame Into Action?",
+        "intro": "You're **Alex Mitchell**, Scrum Master at Savory & Co. Sprint 4 just ended — only 2 of 4 dishes delivered. Taylor and Maya argued about ingredient sourcing. Morgan added 3 scope changes mid-sprint. Devon stayed silent and Daily Standups were skipped twice. Now it's time for the Sprint Retrospective, but Morgan wants to attend. Alex must create a safe space for honest reflection and turn complaints into concrete improvements. Can a 40-minute meeting fix a broken sprint?",
+        "failure_cards": [
+          {
+            "id": "the_blame_game",
+            "icon": "📋",
+            "title": "The Blame Game",
+            "summary": "Without facilitation structure, the retrospective becomes a blame session",
+            "image": "/images/D1L6_comic_blame_game.webp",
+            "details": "Alex opened with \"So, what went wrong?\" Maya immediately attacked: \"This is Morgan's fault — 3 scope changes mid-sprint!\" Taylor fired back: \"If your ingredient estimates were accurate, we'd have been fine.\" Devon said nothing. After 40 minutes of finger-pointing, the team left angrier than they started. No actions were created. The same problems repeated in Sprint 5."
+          },
+          {
+            "id": "the_silent_retrospective",
+            "icon": "⚠️",
+            "title": "The Silent Retrospective",
+            "summary": "Morgan attended the retrospective and the team self-censored",
+            "image": "/images/D1L6_comic_silent_retro.webp",
+            "details": "Alex allowed Morgan to attend \"for transparency.\" Maya wanted to raise scope creep but couldn't criticize the PO to her face. Taylor held back complaints about shifting priorities. Devon — already quiet — didn't say a word. The team produced two generic actions: \"communicate better\" and \"follow the process.\" By Sprint 6, nothing changed. The retrospective had become a performance for management, not a safe space for improvement."
+          },
+          {
+            "id": "the_vague_wishlist",
+            "icon": "💡",
+            "title": "The Vague Wishlist",
+            "summary": "Good discussion, but zero actionable outcomes",
+            "image": "/images/D1L6_comic_vague_actions.webp",
+            "details": "The team had an honest conversation. Maya surfaced scope creep. Devon mentioned skipped standups. Taylor acknowledged the argument. But their action items were: \"Communicate better\" and \"Follow the process more.\" No owner, no timeline, no success criteria. By Sprint 5, nobody remembered what they agreed to. The same issues appeared in the next retrospective — again and again."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Agile Consultant",
+          "quote": "Retrospectives are the most powerful Agile ceremony — and the most commonly wasted. Without psychological safety, structured facilitation, and SMART actions, they become either blame sessions, silent performances, or vague wishlists. None of those produce change."
+        },
+        "learning_hook": "**Sprint Retrospectives** are the Scrum ceremony where the team reflects on HOW they worked — not WHAT they built. The goal is to create 2-4 actionable improvements for the next sprint. But success requires psychological safety, the right facilitation technique, and SMART action items. Let's learn how to run a retrospective that produces real change."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "facilitate_the_sprint_4_retrospective",
+        "title": "Facilitate the Sprint 4 Retrospective",
+        "description": "Alex must navigate three critical decisions: who attends, which technique to use, and how to turn complaints into concrete actions. Dr. Amelia coaches from the sideline.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What should Alex do about Morgan's request to attend?",
+            "points": 150,
+            "scenario_name": "Who Should Attend the Retrospective?",
+            "situation": "Sprint 4 Retrospective is about to start. Morgan Lee (Product Owner) appears at the door: \"I'm the PO — I should attend to hear what the team thinks about Sprint 4. How else will I know what went wrong?\" The team watches Alex. Taylor shifts uncomfortably. Maya wants to discuss scope changes but can't criticize Morgan to her face.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Invite Morgan to attend — transparency is important and the PO is part of the Scrum team",
+                "correct": false,
+                "whyWrong": "If Morgan attends, Maya will not raise the scope creep issue — the biggest problem of Sprint 4. Psychological safety trumps transparency in retrospectives."
+              },
+              {
+                "id": "B",
+                "text": "Politely explain that retrospectives are for the team by the team, and offer to share insights with Morgan afterward",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Let the team vote on whether Morgan should attend",
+                "correct": false,
+                "whyWrong": "Puts the team in an awkward position — nobody wants to vote \"no\" to Morgan's face. Alex should protect psychological safety proactively, not delegate it."
+              },
+              {
+                "id": "D",
+                "text": "Allow Morgan to attend but ask her not to speak",
+                "correct": false,
+                "whyWrong": "Physical presence alone inhibits honesty, even without speaking. Team members self-censor when authority figures observe."
+              }
+            ],
+            "explanation": "Retrospectives require psychological safety. The team will not candidly discuss PO behavior (like scope creep) if the PO is present. Alex should protect the team's safe space and share themes with Morgan afterward — not during the session. This is a core facilitation responsibility.",
+            "correctFeedback": {
+              "text": "Retrospectives require psychological safety. The team will not candidly discuss PO behavior (like scope creep) if the PO is present. Alex should protect the team's safe space and share themes with Morgan afterward — not during the session. This is a core facilitation responsibility.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Retrospectives are FOR the team, BY the team. If Morgan attends, Maya won't say 'scope changes destroyed our plan.' Share themes afterward — but presence during inhibits honesty."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what psychological safety means. Will Maya discuss scope creep in front of the person who caused it? Presence alone inhibits honesty, even without speaking.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what psychological safety means. Will Maya discuss scope creep in front of the person who caused it? Presence alone inhibits honesty, even without speaking."
+            },
+            "retryHint": "Retrospectives need psychological safety for honest feedback — including feedback about the Product Owner's behavior. Can the team speak freely if the PO is watching?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Which retrospective technique should Alex use for this team?",
+            "points": 150,
+            "scenario_name": "Choosing the Right Technique",
+            "situation": "Morgan agrees to wait outside. Now Alex needs to choose a retrospective technique. The team dynamics are: Taylor is defensive about the argument with Maya. Maya is frustrated and wants to blame the PO for scope changes. Devon is hesitant to speak up and fears conflict. Overall mood is tense, low morale, with interpersonal conflict.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Start-Stop-Continue — simple and efficient",
+                "correct": false,
+                "whyWrong": "Start-Stop-Continue works for stable teams but \"Stop doing...\" can become blame-focused in tense environments. Not ideal for high-emotion situations."
+              },
+              {
+                "id": "B",
+                "text": "Timeline Retrospective — plot all events chronologically",
+                "correct": false,
+                "whyWrong": "Timeline Retrospective takes 60-90 minutes. The team is emotionally drained and Alex has limited time. Too time-consuming for this situation."
+              },
+              {
+                "id": "C",
+                "text": "Mad-Sad-Glad — structured emotional expression with positive balance",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Open discussion — just ask \"what went well, what didn't?\"",
+                "correct": false,
+                "whyWrong": "Open discussion without structure will devolve into the blame game — Maya attacks Morgan, Taylor gets defensive, Devon stays silent. Structure prevents chaos."
+              }
+            ],
+            "explanation": "Mad-Sad-Glad is ideal for teams with low morale and interpersonal conflict. It gives explicit permission to express negative emotions (Mad, Sad) in a structured way, while balancing with positives (Glad). This prevents chaotic blame while validating frustration. Silent writing first ensures Devon can contribute without fear.",
+            "correctFeedback": {
+              "text": "Mad-Sad-Glad is ideal for teams with low morale and interpersonal conflict. It gives explicit permission to express negative emotions (Mad, Sad) in a structured way, while balancing with positives (Glad). This prevents chaotic blame while validating frustration. Silent writing first ensures Devon can contribute without fear.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Mad-Sad-Glad lets everyone express frustration safely. Taylor and Maya can surface issues without direct blame. Devon can share disappointment in writing. And 'Glad' reminds us we DID deliver 2 dishes."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Consider the team's emotional state — tense, low morale, interpersonal conflict. Which technique explicitly permits emotional expression while maintaining structure?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Consider the team's emotional state — tense, low morale, interpersonal conflict. Which technique explicitly permits emotional expression while maintaining structure?"
+            },
+            "retryHint": "The team is tense with low morale and interpersonal conflict. Which technique gives explicit permission to express emotions (both negative AND positive) in a structured way?"
+          },
+          {
+            "q_id": "q3",
+            "type": "drag_drop",
+            "question": "Drag each retrospective phase into the correct sequence position:",
+            "points": 200,
+            "scenario_name": "Retrospective Facilitation Phases",
+            "situation": "Alex is structuring the retrospective facilitation. The Agile Practice Guide describes five phases that retrospectives should follow in a specific order. Alex needs to arrange them correctly to ensure psychological safety comes before data gathering, and actions come after insights.",
+            "chips": [
+              {
+                "id": "set_the_stage_create_psychological_safety",
+                "label": "Set the Stage (create psychological safety)",
+                "correctZone": "phase_1"
+              },
+              {
+                "id": "gather_data_collect_observations",
+                "label": "Gather Data (collect observations)",
+                "correctZone": "phase_2"
+              },
+              {
+                "id": "generate_insights_dig_to_root_causes",
+                "label": "Generate Insights (dig to root causes)",
+                "correctZone": "phase_3"
+              },
+              {
+                "id": "decide_what_to_do_create_action_items",
+                "label": "Decide What to Do (create action items)",
+                "correctZone": "phase_4"
+              },
+              {
+                "id": "close_commit_and_appreciate",
+                "label": "Close (commit and appreciate)",
+                "correctZone": "phase_5"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "phase_1",
+                "label": "Phase 1",
+                "detail": "Must establish safety BEFORE asking for honesty — ground rules, check-in"
+              },
+              {
+                "id": "phase_2",
+                "label": "Phase 2",
+                "detail": "Collect what happened using chosen technique (Mad-Sad-Glad sticky notes)"
+              },
+              {
+                "id": "phase_3",
+                "label": "Phase 3",
+                "detail": "Move from observations to understanding WHY things happened — use \"5 Whys\""
+              },
+              {
+                "id": "phase_4",
+                "label": "Phase 4",
+                "detail": "Turn insights into 2-4 SMART action items with owners and timelines"
+              },
+              {
+                "id": "phase_5",
+                "label": "Phase 5",
+                "detail": "Recap actions, appreciation round, check-out — end on positive note"
+              }
+            ],
+            "explanation": "The five-phase retrospective flow follows a deliberate sequence: safety first (Set the Stage), then facts (Gather Data), then analysis (Generate Insights), then decisions (Decide What to Do), and finally closure (Close). Skipping \"Set the Stage\" removes psychological safety. Skipping \"Decide What to Do\" produces discussion without actions. Each phase builds on the previous one.",
+            "correctFeedback": {
+              "text": "The five-phase retrospective flow follows a deliberate sequence: safety first (Set the Stage), then facts (Gather Data), then analysis (Generate Insights), then decisions (Decide What to Do), and finally closure (Close). Skipping \"Set the Stage\" removes psychological safety. Skipping \"Decide What to Do\" produces discussion without actions. Each phase builds on the previous one.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect sequence. Safety before honesty, observations before analysis, insights before actions, and always close with appreciation. This flow is what separates a productive retrospective from a complaint session."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what must come first. Can you gather honest data without first establishing safety? Can you create actions without first understanding root causes? Each phase depends on the one before it.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what must come first. Can you gather honest data without first establishing safety? Can you create actions without first understanding root causes? Each phase depends on the one before it."
+            },
+            "retryHint": "Start with what creates safety, then collect facts, then analyze causes, then create actions, and finally close. Each phase builds on the previous one — you cannot skip steps."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Sprint Retrospective Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Retrospective vs Review",
+            "subtitle": "Know the Difference",
+            "content": "The Sprint Retrospective and Sprint Review are often confused — but they serve completely different purposes.\n\n\n| Aspect | Sprint Retrospective | Sprint Review |\n|--------|---------------------|---------------|\n| **Focus** | HOW we worked (process, collaboration) | WHAT we built (product increment) |\n| **Attendees** | Team only (psychological safety) | Team + PO + Stakeholders (feedback) |\n| **Output** | Process improvement actions | Product feedback, backlog updates |\n| **Key Question** | \"Did we work the right way?\" | \"Did we build the right thing?\" |\n| **Example** | \"We skipped standups — how to improve?\" | \"The spice level is perfect on this dish\" |\n\n**Key Insight:** If stakeholders attend, it is a Review (product). If only the team attends, it is a Retrospective (process). The PO attends Reviews but should NOT attend Retrospectives to preserve psychological safety.",
+            "diagram": {
+              "image": "/images/D1L6_diagram_retro_vs_review.webp",
+              "alt": "Retrospective vs Review comparison"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Choosing the Right Technique",
+            "subtitle": "",
+            "content": "Different team situations require different retrospective techniques:\n\n| Technique | Best For | How It Works |\n|-----------|----------|--------------|\n| **Mad-Sad-Glad** | Low morale, conflict, high emotions | 3 columns: team writes what made them Mad, Sad, Glad |\n| **Start-Stop-Continue** | Stable teams, routine sprints | 3 columns: what to Start, Stop, Continue doing |\n| **4Ls** | Learning-focused teams | 4 quadrants: Liked, Learned, Lacked, Longed For |\n| **Sailboat** | Disengaged teams | Visual metaphor: Wind (helps), Anchor (holds back), Rocks (risks) |\n\n**Selection Guide:**\n- Team tense or in conflict? Use **Mad-Sad-Glad** (permits emotions)\n- Team stable and mature? Use **Start-Stop-Continue** (simple, efficient)\n- Team disengaged or bored? Use **Sailboat** (creative, playful)\n- Sprint was complex? Use **Timeline** (detailed, but time-consuming)"
+          },
+          {
+            "id": "tab3",
+            "title": "SMART Action Items",
+            "subtitle": "Not Vague Wishes",
+            "content": "The biggest retrospective anti-pattern is producing vague wishes instead of actionable improvements.\n\n| Vague Wish | SMART Action |\n|------------|--------------|\n| \"Communicate better\" | \"Maya and Taylor hold 15-min alignment at sprint start. Owner: Taylor. Success: Agreement documented.\" |\n| \"Follow the process\" | \"Team commits to Daily Standup — if absent, post async update. Owner: Devon monitors. Success: 0 skipped in Sprint 5.\" |\n| \"Improve quality\" | \"Add peer review step before taste test. Owner: Maya. Timeline: Every dish. Success: Zero taste test failures.\" |\n\n**SMART Criteria:**\n- **S**pecific — What exactly will we do?\n- **M**easurable — How will we know it worked?\n- **A**ssignable — Who owns this?\n- **R**ealistic — Can we do this in one sprint?\n- **T**ime-bound — By when?\n\n**Rule of Thumb:** Generate 2-4 action items maximum per retrospective. More creates overwhelm. Fewer suggests the discussion lacked depth.",
+            "diagram": {
+              "image": "/images/D1L6_diagram_smart_actions.webp",
+              "alt": "SMART action items framework"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Retrospective Anti-Patterns",
+            "subtitle": "",
+            "content": "| Anti-Pattern | Symptom | Prevention |\n|--------------|---------|------------|\n| **Blame Culture** | Finger-pointing: \"Taylor's fault\" | Reframe to systems: \"What process could help?\" |\n| **No Actions** | Good discussion, no concrete outcomes | Dedicate 10 min to SMART actions |\n| **PM Dominates** | Facilitator talks 80%, team listens | Silent writing first, open questions |\n| **Same Issues** | Same complaint appears sprint after sprint | Review PREVIOUS actions first |\n| **Complaint Session** | 30 min venting, no solutions | Structured technique, timebox each phase |\n| **No Safety** | Junior members stay silent | Silent writing, round-robin sharing |\n| **Stakeholders Attend** | PO or management present | Team-only, share themes afterward |\n\n**Agile Principle 12:** \"At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.\""
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Facilitating Your First Retrospective",
+        "scenario": {
+          "title": "Facilitating Your First Retrospective",
+          "description": "You are a new Scrum Master at a software company. Your team just completed their first sprint together. Sprint outcome: 3 of 4 user stories completed (75%). Team mood is mixed — some frustrated, some optimistic. One senior member (Lee) tends to dominate discussions. A junior member (Kim) has not spoken in team meetings yet. You have 30 minutes for the retrospective.",
+          "images": [
+            {
+              "src": "/images/D1L6_comic_transfer.webp",
+              "alt": "New Scrum Master facilitating first retrospective"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Given mixed mood (some frustrated, some optimistic), which technique fits best?",
+            "points": 75,
+            "scenario_name": "Technique for Mixed Emotions",
+            "situation": "Your new team completed their first sprint with mixed results — 3 of 4 stories done. Some members are frustrated about the missed story, others are optimistic about completing 75%. You need to choose a retrospective technique that works for both emotional states.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Timeline Retrospective — plot all events chronologically",
+                "correct": false,
+                "whyWrong": "Timeline Retrospective takes 60-90 minutes. With only 30 minutes and a new team, this is too time-consuming and detailed."
+              },
+              {
+                "id": "B",
+                "text": "Mad-Sad-Glad — structured emotional expression with positive balance",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Skip the technique — just have an open discussion",
+                "correct": false,
+                "whyWrong": "Open discussion without structure will let Lee dominate and Kim stay silent. New teams need structure to establish participation norms."
+              },
+              {
+                "id": "D",
+                "text": "Start-Stop-Continue — simple and efficient",
+                "correct": false,
+                "whyWrong": "Start-Stop-Continue works for stable, mature teams. A brand-new team with mixed emotions needs a technique that explicitly addresses feelings."
+              }
+            ],
+            "explanation": "Mad-Sad-Glad works for mixed emotions because frustrated members can express \"Mad,\" optimistic members can share \"Glad,\" and \"Sad\" captures disappointments without blame. It balances negativity with positivity, which is exactly what a mixed-mood team needs.",
+            "correctFeedback": {
+              "text": "Mad-Sad-Glad works for mixed emotions because frustrated members can express \"Mad,\" optimistic members can share \"Glad,\" and \"Sad\" captures disappointments without blame. It balances negativity with positivity, which is exactly what a mixed-mood team needs.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Mad-Sad-Glad is my go-to for teams with mixed emotions. It validates frustration AND optimism in the same framework. Everyone feels heard."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about the team's emotional range — some frustrated, some optimistic. Which technique has explicit categories for BOTH negative and positive feelings?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about the team's emotional range — some frustrated, some optimistic. Which technique has explicit categories for BOTH negative and positive feelings?"
+            },
+            "retryHint": "You have both frustrated and optimistic team members. Which technique has categories for expressing BOTH negative emotions and positive feelings?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "How should you prevent Lee from dominating while encouraging Kim to participate?",
+            "points": 75,
+            "scenario_name": "Preventing Dominance",
+            "situation": "You are about to start the retrospective. Lee (senior developer) tends to speak first and at length, which discourages others from sharing different opinions. Kim (junior developer) has not spoken in any team meeting since joining. You need a facilitation approach that equalizes participation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Ask Lee directly to talk less during the retrospective",
+                "correct": false,
+                "whyWrong": "Directly asking Lee to talk less is confrontational and embarrassing. It creates tension rather than solving the structural problem."
+              },
+              {
+                "id": "B",
+                "text": "Use silent writing first, then round-robin sharing so everyone speaks",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Let natural discussion flow — forcing participation feels awkward",
+                "correct": false,
+                "whyWrong": "Natural discussion with a dominant personality guarantees Kim stays silent. New teams need facilitation structure to establish healthy norms."
+              },
+              {
+                "id": "D",
+                "text": "Have Kim speak first before Lee gets a chance",
+                "correct": false,
+                "whyWrong": "Putting Kim on the spot first creates pressure and anxiety. Kim may freeze. Silent writing lets Kim formulate thoughts privately before sharing."
+              }
+            ],
+            "explanation": "Silent writing first ensures everyone contributes ideas independently — preventing groupthink from dominant voices like Lee. Round-robin sharing means Kim MUST speak, creating a safe, structured opportunity without singling them out. This is the standard facilitation technique for uneven participation.",
+            "correctFeedback": {
+              "text": "Silent writing first ensures everyone contributes ideas independently — preventing groupthink from dominant voices like Lee. Round-robin sharing means Kim MUST speak, creating a safe, structured opportunity without singling them out. This is the standard facilitation technique for uneven participation.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Silent writing equalizes participation by design. Everyone's ideas exist on paper before anyone speaks. Round-robin means no one is skipped. Lee's ideas aren't louder just because Lee is louder."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "How do you ensure everyone contributes without putting pressure on quieter members? Think about techniques that separate THINKING from SPEAKING.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "How do you ensure everyone contributes without putting pressure on quieter members? Think about techniques that separate THINKING from SPEAKING."
+            },
+            "retryHint": "You need a technique that ensures EVERYONE contributes equally — without confrontation or putting anyone on the spot. What if everyone writes ideas privately first?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Is \"We should have better requirements\" a good action item?",
+            "points": 75,
+            "scenario_name": "Evaluating Action Item Quality",
+            "situation": "The retrospective discussion went well. The team now proposes this action item: \"We should have better requirements.\" No owner, no timeline, no success criteria have been defined.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes — it is a valid improvement idea the team can work on",
+                "correct": false,
+                "whyWrong": "Without owner, timeline, and success criteria, this action will be forgotten by Sprint 2. Vague wishes produce zero change."
+              },
+              {
+                "id": "B",
+                "text": "No — it needs to be made SMART with a specific owner, timeline, and success criteria",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "No — requirements are the PO's responsibility, not the team's",
+                "correct": false,
+                "whyWrong": "While the PO defines requirements, the PROCESS for requirements review is a team concern. Retrospectives focus on process improvements the team can control."
+              },
+              {
+                "id": "D",
+                "text": "Yes — keep it simple, don't over-engineer retrospective outcomes",
+                "correct": false,
+                "whyWrong": "\"Simple\" without specificity means \"forgettable.\" SMART actions are not over-engineering — they are the minimum needed for follow-through."
+              }
+            ],
+            "explanation": "\"Better requirements\" is a vague wish, not an actionable item. SMART version: \"PO and Tech Lead hold 30-min requirements review at sprint start. Owner: Scrum Master schedules. Success: No mid-sprint clarification requests in Sprint 2.\" Without specificity, the team will forget by next sprint and the same issue will reappear.",
+            "correctFeedback": {
+              "text": "\"Better requirements\" is a vague wish, not an actionable item. SMART version: \"PO and Tech Lead hold 30-min requirements review at sprint start. Owner: Scrum Master schedules. Success: No mid-sprint clarification requests in Sprint 2.\" Without specificity, the team will forget by next sprint and the same issue will reappear.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I used to accept vague actions like 'communicate better.' They never stuck. Now I always ask: WHO owns it? WHAT exactly will they do? WHEN? HOW will we know it worked?"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Vague wishes die between sprints. Ask yourself: if I read this action in two weeks, will I know exactly what to do, who does it, and whether it succeeded?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Vague wishes die between sprints. Ask yourself: if I read this action in two weeks, will I know exactly what to do, who does it, and whether it succeeded?"
+            },
+            "retryHint": "A good action item answers: WHO owns it? WHAT exactly will they do? WHEN? HOW will we measure success? Does \"better requirements\" answer any of these?"
+          },
+          {
+            "q_id": "transfer_q4",
+            "type": "single_select",
+            "question": "With only 30 minutes, how should you structure the retrospective?",
+            "points": 75,
+            "scenario_name": "Time-Constrained Retrospective",
+            "situation": "You have only 30 minutes for this retrospective, but the standard five-phase format takes about 40 minutes. You need to decide how to handle the time constraint without sacrificing the retrospective's effectiveness.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Skip \"Set the Stage\" to save time — go straight to gathering data",
+                "correct": false,
+                "whyWrong": "Skipping \"Set the Stage\" removes psychological safety. Kim will not speak up without ground rules and a check-in, especially on a new team."
+              },
+              {
+                "id": "B",
+                "text": "Compress all five phases proportionally: 3-6-6-6-3 minutes",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Do only Gather Data and skip insights and actions",
+                "correct": false,
+                "whyWrong": "Gathering data without generating insights or creating actions produces observations with no follow-through. The team will leave without any concrete improvements."
+              },
+              {
+                "id": "D",
+                "text": "Run the full 40 minutes anyway — quality matters more than the timebox",
+                "correct": false,
+                "whyWrong": "Exceeding the timebox disrespects the team's time and signals that meeting discipline doesn't matter — undermining Agile principles."
+              }
+            ],
+            "explanation": "Keep all five phases but compress proportionally. Never skip \"Set the Stage\" — psychological safety is critical, especially for a new team. Never skip \"Decide What to Do\" — without actions, the retrospective was just venting. A compressed 3-6-6-6-3 structure maintains the flow while fitting the 30-minute timebox.",
+            "correctFeedback": {
+              "text": "Keep all five phases but compress proportionally. Never skip \"Set the Stage\" — psychological safety is critical, especially for a new team. Never skip \"Decide What to Do\" — without actions, the retrospective was just venting. A compressed 3-6-6-6-3 structure maintains the flow while fitting the 30-minute timebox.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Every phase serves a purpose. Compress, don't cut. Three minutes of safety-setting is better than zero. Six minutes of action planning is better than none."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Which phases can you afford to skip entirely? Hint: none. Safety and actions are both non-negotiable. Think about proportional compression instead.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Which phases can you afford to skip entirely? Hint: none. Safety and actions are both non-negotiable. Think about proportional compression instead."
+            },
+            "retryHint": "All five phases serve a purpose. Can you keep them all but make each one shorter? What timing split would fit 30 minutes?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **Sprint Retrospective** is the Scrum ceremony for process improvement — reflecting on HOW the team worked, not WHAT they built. Success requires psychological safety, the right facilitation technique, and SMART action items that drive real change.",
+        "key_takeaways": [
+          "Retrospective = HOW (process). Review = WHAT (product). Different purposes, different attendees. PO attends Reviews, but should NOT attend Retrospectives to preserve psychological safety.",
+          "Team-only ceremony — Product Owner and stakeholders should not attend. Share themes and actions afterward, not during the session.",
+          "Technique selection matters — Mad-Sad-Glad for low morale and conflict. Start-Stop-Continue for stable teams. Sailboat for disengaged teams. Match the technique to team dynamics.",
+          "SMART actions, not vague wishes — \"Communicate better\" fails. \"Maya and Taylor hold 15-min alignment at sprint start (Owner: Taylor, Day 1-3)\" succeeds.",
+          "Five facilitation phases — Set Stage, Gather Data, Generate Insights, Decide Actions, Close. Never skip safety or actions.",
+          "Avoid anti-patterns — Blame culture, no actions, facilitator dominates, same issues every sprint, stakeholders attend, junior members silenced."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Before this, our retrospectives were complaint sessions. Maya blamed Morgan, Taylor got defensive, Devon said nothing. Now I structure them: safety first with ground rules, silent writing so everyone contributes, Mad-Sad-Glad to channel emotions, and always — ALWAYS — SMART actions with owners. Our Sprint 5 had zero skipped standups because Devon owned that action item. Retrospectives work when they produce change, not just conversation."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L7",
+          "title": "Agile Principles & Values",
+          "description": "You've mastered Scrum ceremonies — now explore the 12 Agile Principles and 4 Agile Values that underpin everything Scrum teams do."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the Scrum Master do?",
+            "points": 50,
+            "scenario_name": "PO Attendance at Retrospective",
+            "situation": "During Sprint Retrospective, the Product Owner asks to attend: \"I want to hear the team's feedback directly so I can improve how I write user stories.\" The Scrum Master knows the team has concerns about mid-sprint scope changes initiated by the PO.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Allow the PO to attend for transparency",
+                "correct": false,
+                "whyWrong": "Transparency is important, but psychological safety takes priority in retrospectives. The team will self-censor about PO behavior if the PO is present."
+              },
+              {
+                "id": "B",
+                "text": "Explain that retrospectives are team-only for psychological safety, and offer to share themes afterward",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Let the team vote on PO attendance",
+                "correct": false,
+                "whyWrong": "Voting puts the team in an uncomfortable position. Nobody wants to vote \"no\" in front of the PO. The Scrum Master should proactively protect the space."
+              },
+              {
+                "id": "D",
+                "text": "Allow the PO to observe silently without participating",
+                "correct": false,
+                "whyWrong": "Physical presence alone inhibits honesty, regardless of whether the PO speaks. Team members self-censor when authority figures observe."
+              }
+            ],
+            "explanation": "Retrospectives require psychological safety for honest feedback about process — including PO behavior like scope changes. With the PO present, the team will not discuss scope creep or communication issues candidly. The Scrum Master should protect psychological safety and share themes and actions afterward.",
+            "correctFeedback": {
+              "text": "Retrospectives require psychological safety for honest feedback about process — including PO behavior like scope changes. With the PO present, the team will not discuss scope creep or communication issues candidly. The Scrum Master should protect psychological safety and share themes and actions afterward.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Psychological safety is non-negotiable in retrospectives. Share outcomes with the PO afterward — but their presence during the session inhibits the honest feedback the team needs to improve."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: will the team discuss the PO's scope changes honestly if the PO is sitting right there? Presence alone changes behavior, even without speaking.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: will the team discuss the PO's scope changes honestly if the PO is sitting right there? Presence alone changes behavior, even without speaking."
+            },
+            "retryHint": "Retrospectives need psychological safety for honest feedback — including feedback about the PO. Can the team speak candidly about scope changes with the PO watching?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What anti-pattern does this recurring issue indicate?",
+            "points": 50,
+            "scenario_name": "Recurring Issues Anti-Pattern",
+            "situation": "A Scrum team has raised the same issue in their retrospective for three consecutive sprints: \"We keep missing sprint goals because requirements are unclear at sprint start.\" The Scrum Master is concerned about this recurring pattern.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Blame culture — the team is blaming the PO for unclear requirements",
+                "correct": false,
+                "whyWrong": "The team is raising a legitimate process concern, not blaming anyone. The issue is that previous action items to address it were never implemented."
+              },
+              {
+                "id": "B",
+                "text": "Same issues every sprint — no follow-through on previous action items",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The Scrum Master is dominating the discussion",
+                "correct": false,
+                "whyWrong": "Nothing in the scenario suggests the Scrum Master is dominating. The team IS raising issues — the problem is lack of follow-through, not lack of voice."
+              },
+              {
+                "id": "D",
+                "text": "No psychological safety — the team is afraid to address the real problem",
+                "correct": false,
+                "whyWrong": "The team clearly feels safe enough to raise the issue repeatedly. The problem is not safety — it is that actions are not being tracked and implemented."
+              }
+            ],
+            "explanation": "When the same issue appears sprint after sprint, it means action items from previous retrospectives were not implemented or tracked. The prevention is to start each retrospective by reviewing the PREVIOUS sprint's actions: Did we do them? If not, why? Accountability for past actions prevents recurring complaints.",
+            "correctFeedback": {
+              "text": "When the same issue appears sprint after sprint, it means action items from previous retrospectives were not implemented or tracked. The prevention is to start each retrospective by reviewing the PREVIOUS sprint's actions: Did we do them? If not, why? Accountability for past actions prevents recurring complaints.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I learned to START every retrospective by reviewing last sprint's action items. If we committed to a 'requirements review at sprint start' but never did it, we address THAT first — not re-discuss the same problem."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If the same complaint appears three sprints in a row, the issue isn't the complaint — it's that nothing was done about it. What step is missing between retrospectives?",
+              "character": "Alex Mitchell",
+              "characterQuote": "If the same complaint appears three sprints in a row, the issue isn't the complaint — it's that nothing was done about it. What step is missing between retrospectives?"
+            },
+            "retryHint": "The team keeps raising the same issue. They clearly feel safe speaking up. So the problem isn't safety or blame — it's that nothing CHANGES between retrospectives. What's missing?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the Scrum Master do with this proposed action item?",
+            "points": 50,
+            "scenario_name": "Vague Action Items",
+            "situation": "At the end of a Sprint Retrospective, the team proposes: \"We need to improve our testing process.\" No owner, timeline, or success criteria have been defined. The Scrum Master needs to evaluate whether this is ready to be committed as an action item.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accept it — it is a valid improvement idea",
+                "correct": false,
+                "whyWrong": "Accepting vague actions means they will be forgotten by next sprint. \"Improve testing\" is too broad for anyone to act on."
+              },
+              {
+                "id": "B",
+                "text": "Help the team make it SMART — add specific owner, timeline, and success criteria",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Reject it — testing is the QA team's responsibility, not the development team's",
+                "correct": false,
+                "whyWrong": "Testing process is a team concern, not solely QA's responsibility. Retrospectives focus on process improvements the whole team can own."
+              },
+              {
+                "id": "D",
+                "text": "Accept it as-is to keep the retrospective moving",
+                "correct": false,
+                "whyWrong": "Moving fast at the cost of specificity guarantees the action produces no change. Spending 2 extra minutes to make it SMART is worth the investment."
+              }
+            ],
+            "explanation": "\"Improve testing\" is a vague wish, not an actionable item. SMART version: \"Add automated unit tests for API endpoints before sprint end. Owner: Devon. Success criteria: 80% code coverage. Timeline: Sprint 5.\" Without specificity, the action will be forgotten and the same issue will recur.",
+            "correctFeedback": {
+              "text": "\"Improve testing\" is a vague wish, not an actionable item. SMART version: \"Add automated unit tests for API endpoints before sprint end. Owner: Devon. Success criteria: 80% code coverage. Timeline: Sprint 5.\" Without specificity, the action will be forgotten and the same issue will recur.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "SMART actions are the difference between retrospectives that produce change and retrospectives that produce conversation. WHO does WHAT by WHEN, measured HOW?"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If you read this action item in two weeks, would you know exactly what to do? Who does it? By when? How do you know it worked? That's the SMART test.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "If you read this action item in two weeks, would you know exactly what to do? Who does it? By when? How do you know it worked? That's the SMART test."
+            },
+            "retryHint": "A good action item answers: WHO owns it? WHAT exactly will they do? WHEN? HOW will we measure success? Does \"improve our testing process\" answer any of these?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which retrospective technique is MOST appropriate for this situation?",
+            "points": 50,
+            "scenario_name": "Technique for Conflict",
+            "situation": "A Scrum team is experiencing conflict between two senior developers who disagree about architectural decisions. Team morale is low, and a junior developer has stopped participating in team discussions. The Scrum Master is planning the next Sprint Retrospective.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Start-Stop-Continue — simple and efficient",
+                "correct": false,
+                "whyWrong": "Start-Stop-Continue works for stable teams. \"Stop doing...\" can become accusatory in a conflict-heavy environment, escalating tensions."
+              },
+              {
+                "id": "B",
+                "text": "Timeline Retrospective — plot events chronologically",
+                "correct": false,
+                "whyWrong": "Timeline Retrospective is detailed and time-consuming (60-90 min). An emotionally drained team needs a technique that addresses feelings, not chronological analysis."
+              },
+              {
+                "id": "C",
+                "text": "Mad-Sad-Glad — structured emotional expression with positive balance",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Skip the retrospective until the conflict resolves",
+                "correct": false,
+                "whyWrong": "Skipping the retrospective removes the team's only structured opportunity to address the conflict. Agile Principle 12 says teams must regularly reflect — especially during difficult times."
+              }
+            ],
+            "explanation": "Mad-Sad-Glad explicitly permits emotional expression (Mad, Sad) in a structured way, preventing chaotic blame. It also balances negativity with positivity (Glad), which is essential for a low-morale team. Silent writing first ensures the junior developer can contribute without fear of the conflict between senior members.",
+            "correctFeedback": {
+              "text": "Mad-Sad-Glad explicitly permits emotional expression (Mad, Sad) in a structured way, preventing chaotic blame. It also balances negativity with positivity (Glad), which is essential for a low-morale team. Silent writing first ensures the junior developer can contribute without fear of the conflict between senior members.",
+              "character": "Alex Mitchell",
+              "characterQuote": "When emotions are high, you need a technique that channels them — not one that ignores them. Mad-Sad-Glad says 'your frustration is valid' while keeping it structured."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Consider the team dynamics: conflict, low morale, a silenced junior member. Which technique explicitly acknowledges negative emotions while also surfacing positives?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Consider the team dynamics: conflict, low morale, a silenced junior member. Which technique explicitly acknowledges negative emotions while also surfacing positives?"
+            },
+            "retryHint": "The team has conflict, low morale, and a silenced junior member. Which technique has explicit categories for expressing negative emotions (Mad, Sad) AND positive ones (Glad)?"
+          }
+        ]
+      }
+    }
+  ]
+}

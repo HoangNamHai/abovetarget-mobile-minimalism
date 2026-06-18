@@ -1,0 +1,630 @@
+{
+  "lessonId": "C3L1",
+  "lessonTitle": "Risk Identification & Analysis",
+  "courseId": "C3",
+  "courseName": "Risk, Quality, Procurement",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Select the appropriate risk identification technique based on team dynamics (Brainstorming, Delphi, SWOT, Assumptions Analysis)",
+    "Categorize risks using Risk Breakdown Structure (RBS): Technical, External, Organizational, Project Management",
+    "Apply the Probability x Impact Matrix to prioritize risks and calculate Expected Monetary Value (EMV)",
+    "Determine when to escalate risks versus manage them at the project level",
+    "Distinguish between risks (future uncertainty) and issues (current problems)"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "jordan_park",
+    "carlos_mendez",
+    "taylor_kim",
+    "elena_santos"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "34 Risks, $4.2M at Stake: Which 5 Could Kill This Project?",
+        "intro": "You're **Alex Mitchell**, leading Savory & Co.'s boldest move: international expansion into Mexico City ($1.8M), Toronto ($1.5M), and Vancouver ($900K) — $4.2M total. Jordan Park, the Risk Manager, drops a bombshell: \"We've identified 34 potential risks across all three markets. We can't analyze all 34 deeply — limited time and budget. Which 5 could kill this project?\" Your first brainstorming session was a disaster. Carlos dominated, Taylor stayed silent, and Maria's insights were lost in the time zone gap. Elena wants your prioritized risk list by Friday. You need a better approach.",
+        "failure_cards": [
+          {
+            "id": "the_supplier_crisis",
+            "icon": "📋",
+            "title": "The Supplier Crisis",
+            "summary": "Alex tries brainstorming but Carlos dominates the entire session",
+            "image": "/images/C3L1_comic_supplier_crisis.webp",
+            "details": "The team's first risk identification session was a classic brainstorming failure. Carlos, with 15 years of operations experience, dominated every discussion: \"Supply chain is the biggest risk! Currency fluctuation? The peso will be fine!\" Taylor had critical insights about system integration failures but never got a word in. Maria, the Mexico Market Expert, couldn't attend due to a 2-hour time zone gap. Her email about regulatory concerns went unread. The session captured Carlos's opinions — not the team's expertise."
+          },
+          {
+            "id": "the_risk_ignored",
+            "icon": "⚠️",
+            "title": "The Risk Ignored",
+            "summary": "Suppressed input means critical risks go unidentified until they become crises",
+            "image": "/images/C3L1_comic_risk_ignored.webp",
+            "details": "Because Taylor never spoke up about integration risks, the Mexico tech platform was built on incompatible systems. Three months in, the $270K integration failure blindsided the team. Jordan: \"Taylor knew about this risk from day one. She tried to raise it in the brainstorming session, but Carlos dismissed it. We used the wrong identification technique — and it cost us.\" Alex realized: the technique you choose determines which risks you find."
+          },
+          {
+            "id": "the_risk_register",
+            "icon": "💡",
+            "title": "The Risk Register",
+            "summary": "Jordan introduces a systematic approach: right technique, clear categories, smart prioritization",
+            "image": "/images/C3L1_comic_risk_register.webp",
+            "details": "Jordan lays out the framework on the whiteboard: \"Risk identification isn't just listing everything that could go wrong. Step one: pick the RIGHT technique for your team dynamics. Step two: categorize using Risk Breakdown Structure so each risk has a clear owner. Step three: prioritize with Expected Monetary Value so limited budget goes to the highest-impact risks. Step four: escalate what's above your pay grade.\" Alex: \"Then let's build this risk strategy right.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "jordan_park",
+          "name": "Jordan Park",
+          "role": "Risk Manager",
+          "quote": "Brainstorming failed because of team dynamics, not because of the risks themselves. We need a technique that overcomes Carlos's dominance, includes remote team members, and captures Taylor's critical insights. The RIGHT technique for your team is more important than any risk list."
+        },
+        "learning_hook": "**Risk identification** is a systematic process: choose the right technique for your team, categorize for clear ownership, prioritize with EMV for limited resources, and escalate when something exceeds your authority. Let's learn how to find the 5 risks that could kill a $4.2M project."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "build_the_risk_strategy",
+        "title": "Build the Risk Strategy",
+        "description": "Jordan guides you through building a systematic risk strategy for the $4.2M international expansion. \"We have 34 risks, a $150K mitigation budget, a $100K authority limit, and Elena wants our top 5 by Friday. Let's get systematic.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Which risk identification technique should you use for the Mexico market session?",
+            "points": 125,
+            "scenario_name": "Right Technique for the Team",
+            "situation": "You need to run a risk identification session for Mexico market risks. Your team has challenging dynamics: Carlos (Operations Lead) dominates discussions and dismisses others. Taylor (Tech Lead) has critical integration insights but stays silent when Carlos interrupts. Maria (Mexico Market Expert) is remote with a 2-hour time difference and intermediate English. Last week's brainstorming failed — Carlos dominated, Taylor stayed quiet, Maria couldn't join.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Brainstorming — Schedule another live session with clear ground rules",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Delphi Technique — Anonymous expert rounds via structured questionnaires",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "SWOT Analysis — Strategic assessment of strengths, weaknesses, opportunities, threats",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Individual Interviews — One-on-one sessions with each team member",
+                "correct": false
+              }
+            ],
+            "explanation": "Delphi overcomes ALL team dynamics challenges. Anonymous submissions prevent Carlos from dominating. Asynchronous rounds include Maria across time zones. Written responses accommodate her intermediate English and give Taylor a safe channel to share integration concerns. It takes longer (2-3 rounds) but uncovers risks that brainstorming misses.",
+            "correctFeedback": {
+              "text": "Delphi overcomes ALL team dynamics challenges. Anonymous submissions prevent Carlos from dominating. Asynchronous rounds include Maria across time zones. Written responses accommodate her intermediate English and give Taylor a safe channel to share integration concerns. It takes longer (2-3 rounds) but uncovers risks that brainstorming misses.",
+              "character": "Jordan Park",
+              "characterQuote": "Delphi is exactly right. Anonymous means Carlos can't dominate. Asynchronous means Maria participates on her own schedule. Written means Taylor shares freely without interruption. We'll get insights brainstorming would have buried."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about your specific team dynamics. What technique eliminates dominance, works across time zones, and gives hesitant team members a safe channel to contribute?",
+              "character": "Jordan Park",
+              "characterQuote": "Think about your specific team dynamics. What technique eliminates dominance, works across time zones, and gives hesitant team members a safe channel to contribute?"
+            },
+            "retryHint": "Your biggest problem isn't what risks to look for — it's how to get balanced input from a team with a dominant personality, a hesitant expert, and a remote member in a different time zone. Which technique solves all three?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Using Risk Breakdown Structure, how should this currency risk be categorized?",
+            "points": 125,
+            "scenario_name": "Risk Breakdown Structure",
+            "situation": "The Delphi rounds surface a critical risk: \"The Mexican Peso may depreciate 15-20% against the USD during the 9-month project, increasing material costs by $270K-$360K.\" Probability: 70%. Impact: $600K. You need to categorize it using Risk Breakdown Structure (RBS) to assign the correct owner. RBS categories: Technical (technology, design, performance), External (market, regulatory, currency, political), Organizational (resources, funding, priorities), Project Management (estimation, planning, communication).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Technical Risk — It affects our technical cost calculations",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Organizational Risk — It affects our budget and funding",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "External Risk — It's a market factor outside project control",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Project Management Risk — It affects our project cost estimates",
+                "correct": false
+              }
+            ],
+            "explanation": "Currency fluctuation is an External risk — a market factor completely outside project control. The correct owner is Finance/Jordan, who can coordinate hedging strategies with treasury. RBS clarity equals ownership clarity equals faster mitigation. Taylor was right: \"Currency risks aren't my area — that's Finance territory.\"",
+            "correctFeedback": {
+              "text": "Currency fluctuation is an External risk — a market factor completely outside project control. The correct owner is Finance/Jordan, who can coordinate hedging strategies with treasury. RBS clarity equals ownership clarity equals faster mitigation. Taylor was right: \"Currency risks aren't my area — that's Finance territory.\"",
+              "character": "Taylor Kim",
+              "characterQuote": "Exactly. Currency isn't a technical issue — it's a market factor. Finance has the tools to handle it: hedging contracts, forward agreements. Assigning it to me would have been the wrong ownership."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about the ROOT CAUSE, not the effect. Currency is driven by market forces — is that technology, internal organization, or something outside our control?",
+              "character": "Jordan Park",
+              "characterQuote": "Think about the ROOT CAUSE, not the effect. Currency is driven by market forces — is that technology, internal organization, or something outside our control?"
+            },
+            "retryHint": "Ask yourself: who CONTROLS currency values? No one inside the project or the organization. If the cause is outside your control, it's in the External category of the RBS."
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Which risk should you prioritize FIRST for mitigation (excluding escalated risks)?",
+            "points": 125,
+            "scenario_name": "EMV Prioritization",
+            "situation": "Your mitigation budget is $150K. The Delphi rounds identified 5 high-impact risks. Regulatory Delays (60% x $800K = $480K EMV) has been escalated to Elena because mitigation options exceed your $100K authority. Of the remaining four risks within your authority: Currency Fluctuation (70% x $600K = $420K EMV), Tech Integration Failure (40% x $500K = $200K EMV), Staffing Shortage (50% x $300K = $150K EMV), and Supply Chain Disruption (30% x $400K = $120K EMV).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Tech Integration Failure — $200K EMV",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Currency Fluctuation — $420K EMV",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Staffing Shortage — $150K EMV",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Supply Chain Disruption — $120K EMV",
+                "correct": false
+              }
+            ],
+            "explanation": "Currency Fluctuation has the highest EMV ($420K) among risks within your authority. At 70% probability, it's near-certain to occur. EMV-based prioritization (Probability x Impact) ensures your limited $150K budget addresses the highest risk-adjusted cost first. After currency mitigation, evaluate remaining budget for tech integration ($200K EMV).",
+            "correctFeedback": {
+              "text": "Currency Fluctuation has the highest EMV ($420K) among risks within your authority. At 70% probability, it's near-certain to occur. EMV-based prioritization (Probability x Impact) ensures your limited $150K budget addresses the highest risk-adjusted cost first. After currency mitigation, evaluate remaining budget for tech integration ($200K EMV).",
+              "character": "Jordan Park",
+              "characterQuote": "Currency at $420K EMV is our top priority within authority. At 70% probability, it's almost certain. Our $150K budget should hit the highest EMV first — that maximizes risk reduction value."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "EMV = Probability x Impact. With limited budget, which risk has the highest risk-adjusted cost that you're authorized to address? Rank by EMV, not by gut feeling.",
+              "character": "Jordan Park",
+              "characterQuote": "EMV = Probability x Impact. With limited budget, which risk has the highest risk-adjusted cost that you're authorized to address? Rank by EMV, not by gut feeling."
+            },
+            "retryHint": "EMV = Probability x Impact. With limited budget, which risk gives you the highest \"expected cost\" if left unmitigated? That's where your first mitigation dollar should go."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What should you do about the Regulatory Delays risk?",
+            "points": 125,
+            "scenario_name": "Escalation Decision",
+            "situation": "Jordan brings concerning news about the Regulatory Delays risk: Mexico telecom regulations may change during the 9-month project. Probability: 60%. Impact: $800K compliance investment. EMV: $480K (highest of all risks). Mitigation options: (1) Lobby regulators at $120K with uncertain outcome, (2) Redesign to avoid telecom features at $500K plus 4-month delay, (3) Accept the risk with a 60% chance of $800K hit. Your authority limit is $100K per risk mitigation decision.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accept the risk — Stay within your authority limits",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Mitigate by lobbying regulators — $120K investment",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Mitigate by redesigning — $500K and 4-month delay",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Escalate to Elena (CFO) for organizational decision",
+                "correct": true
+              }
+            ],
+            "explanation": "This risk MUST be escalated. All mitigation options exceed your $100K authority. The 4-month delay threatens market entry timing. Lobbying regulators requires executive and legal support. Elena has organizational authority and can engage legal counsel, government relations, and board connections. This is an organizational decision, not a project-level decision.",
+            "correctFeedback": {
+              "text": "This risk MUST be escalated. All mitigation options exceed your $100K authority. The 4-month delay threatens market entry timing. Lobbying regulators requires executive and legal support. Elena has organizational authority and can engage legal counsel, government relations, and board connections. This is an organizational decision, not a project-level decision.",
+              "character": "Elena Santos",
+              "characterQuote": "Alex made the right call. I have resources he doesn't — legal counsel, government relations contacts, board connections. That's exactly why escalation exists. Don't try to be a hero with risks above your pay grade."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If something threatens the entire expansion timeline or requires decisions above your authority, I need to know immediately. Check: does ANY mitigation option fit within your $100K authority?",
+              "character": "Elena Santos",
+              "characterQuote": "If something threatens the entire expansion timeline or requires decisions above your authority, I need to know immediately. Check: does ANY mitigation option fit within your $100K authority?"
+            },
+            "retryHint": "Check your authority: $100K per risk. Check the mitigation options: $120K, $500K, or accept a $480K EMV. When EVERY option exceeds your authority or requires organizational resources, what's the right action?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Risk Identification & Analysis Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Choosing the Right Identification Technique",
+            "subtitle": "",
+            "content": "The BEST risk identification technique depends on your team dynamics, not just the risks you're seeking.\n\n| Technique | Best For | Avoid When |\n|-----------|----------|------------|\n| **Brainstorming** | Equal power dynamics, all SMEs live, tight timeline | Dominant personalities, remote teams, cultural barriers |\n| **Delphi Technique** | Unequal power dynamics, remote/distributed teams, language barriers | Urgent timeline (takes 2-3 rounds), simple well-understood risks |\n| **SWOT Analysis** | High-level strategic risks, new market entry, organizational change | Detailed operational risks, problematic group dynamics |\n| **Assumptions Analysis** | Many undocumented assumptions, complex dependencies, novel approaches | Standard projects, few assumptions, external risk focus |\n\n**Key Insight:** The technique you choose determines which risks you find. Brainstorming with a dominant personality will suppress critical input. Delphi with anonymous rounds will surface risks that group discussions would bury.\n\n*PMBOK 7th Ed, Pages 123-125*"
+          },
+          {
+            "id": "tab2",
+            "title": "Risk Breakdown Structure (RBS)",
+            "subtitle": "",
+            "content": "RBS answers the question: \"Who owns this risk?\" Clear ownership means faster mitigation response.\n\n| RBS Category | Description | Owner | Examples |\n|--------------|-------------|-------|----------|\n| **Technical** | Technology, design, interfaces, performance | Tech Lead | Integration failure, performance issues, design defects |\n| **External** | Market, regulatory, environmental, currency, political | Finance / Legal / Risk Manager | Currency fluctuation, regulatory changes, supplier bankruptcy |\n| **Organizational** | Resources, funding, priorities, dependencies | Operations / HR | Staffing shortage, budget cuts, priority shifts |\n| **Project Management** | Estimation, planning, communication, procurement | Project Manager | Scope creep, poor estimates, vendor issues |\n\n**Why Categorize?** Clear ownership leads to clear accountability leads to faster mitigation response. When a risk triggers, you know exactly who to call.\n\n*PMBOK 7th Ed, Page 127*",
+            "diagram": {
+              "image": "/images/C3L1_diagram_risk_matrix.webp",
+              "alt": "Risk Identification and Analysis Framework"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Probability x Impact Matrix and EMV",
+            "subtitle": "",
+            "content": "**Expected Monetary Value (EMV)** = Probability x Impact\n\nEMV tells you the risk-adjusted cost. With limited resources, prioritize by EMV to maximize risk reduction value.\n\n| P x I Zone | Probability | Impact | Action |\n|------------|-------------|--------|--------|\n| **Red Zone** | High (>50%) | High (>$500K) | Act NOW — mitigation or escalation required |\n| **Yellow Zone** | Mixed | Mixed | Monitor closely, plan contingencies |\n| **Green Zone** | Low (<30%) | Low (<$200K) | Accept or monitor passively |\n\n**Prioritization Steps:**\n1. Calculate EMV for each identified risk\n2. Plot risks on the P x I Matrix\n3. Rank by EMV within each zone\n4. Allocate mitigation budget to highest EMV first\n\n*PMBOK 7th Ed, Page 131*"
+          },
+          {
+            "id": "tab4",
+            "title": "When to Escalate",
+            "subtitle": "",
+            "content": "Escalate when the risk exceeds your authority or requires organizational decisions.\n\n**Escalate When:**\n- Mitigation cost exceeds PM authority (e.g., $120K option vs. $100K limit)\n- Risk threatens project objectives (e.g., 4-month delay jeopardizes market entry)\n- Response requires organizational resources (e.g., lobbying needs legal/executive support)\n- Risk affects multiple projects or the portfolio\n\n**Don't Escalate When:**\n- PM has authority to decide\n- Mitigation is within project scope and budget\n- Risk is manageable at the project level\n- No organizational implications\n\n**When Escalating, Provide:** (1) Risk description and EMV, (2) Options analyzed with costs and benefits, (3) Your recommendation, (4) What you need from the decision-maker.\n\n*PMBOK 7th Ed, Page 89*"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Tokyo Virtual Team Challenge",
+        "scenario": {
+          "title": "Tokyo Virtual Team Challenge",
+          "description": "Three months later, Savory & Co. is expanding to Tokyo ($2.5M investment). Your entire team is virtual across four time zones. Yuki Tanaka (Tokyo Market Expert) is 14 hours ahead, hesitant to contradict senior members in group settings due to Japanese hierarchical culture, and has intermediate English. Hans Schmidt (European Supply Chain Lead) is 8 hours ahead with a very direct communication style. Sarah Johnson (Finance Analyst) is 3 hours ahead and senior to Yuki. Last week's video call failed — Hans's direct questioning made Yuki uncomfortable and she barely contributed.",
+          "images": [
+            {
+              "src": "/images/C3L1_comic_transfer.webp",
+              "alt": "Transfer scenario: Tokyo expansion virtual team"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Which risk identification technique should you use for the Tokyo virtual team?",
+            "points": 150,
+            "scenario_name": "Technique for the Tokyo Team",
+            "situation": "You need to identify Tokyo-specific market risks. A live brainstorming session would be at 3am for Yuki. When you tried a video call last week, Hans's direct communication style made Yuki visibly uncomfortable and she barely spoke. Yuki has critical local expertise — Japanese regulatory nuances, cultural business practices, and supplier relationships — that no checklist can capture.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Brainstorming — Schedule a compromise time (11pm for Yuki, early morning for you)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Delphi Technique — Anonymous expert rounds via structured questionnaires",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "SWOT Analysis — Strategic assessment with pre-work assignments",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Checklist Review — Use a standard market entry risk checklist",
+                "correct": false
+              }
+            ],
+            "explanation": "Delphi solves ALL challenges: Anonymous submissions mean Yuki can contribute without publicly contradicting seniors (overcoming hierarchical cultural barriers). Asynchronous rounds eliminate 3am meetings. Written responses give Yuki time to compose thoughts in English. Structured rounds build consensus across all four time zones and communication styles.",
+            "correctFeedback": {
+              "text": "Delphi solves ALL challenges: Anonymous submissions mean Yuki can contribute without publicly contradicting seniors (overcoming hierarchical cultural barriers). Asynchronous rounds eliminate 3am meetings. Written responses give Yuki time to compose thoughts in English. Structured rounds build consensus across all four time zones and communication styles.",
+              "character": "Jordan Park",
+              "characterQuote": "Yuki has insights no checklist will capture — Japanese business culture, regulatory nuances, local supplier relationships. Delphi creates a safe, asynchronous channel for her to share that expertise without the dynamics that shut her down in the video call."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about Yuki's three barriers: cultural hierarchy (she won't contradict seniors publicly), time zones (14 hours), and language (intermediate English). Which technique addresses ALL three simultaneously?",
+              "character": "Jordan Park",
+              "characterQuote": "Think about Yuki's three barriers: cultural hierarchy (she won't contradict seniors publicly), time zones (14 hours), and language (intermediate English). Which technique addresses ALL three simultaneously?"
+            },
+            "retryHint": "Yuki has three barriers: she won't contradict seniors publicly (cultural), she can't attend live at 3am (time zone), and she needs time to compose responses (language). Which technique removes all three barriers at once?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "multi_select",
+            "question": "Select ALL the reasons why Delphi is the best technique for this scenario.",
+            "points": 150,
+            "scenario_name": "Why Delphi Works",
+            "situation": "You've chosen the Delphi technique for the Tokyo team. Your manager asks you to justify why Delphi is the best approach instead of a faster technique like brainstorming.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Overcomes cultural barriers — Yuki can contribute without publicly contradicting seniors",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Works across time zones — Asynchronous rounds eliminate 3am meeting conflicts",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Handles language barriers — Written responses give Yuki time to compose thoughts in English",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Captures critical SME input — Ensures Yuki's Tokyo expertise is included",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Fastest technique available — Gets results quickly for urgent timeline",
+                "correct": false
+              }
+            ],
+            "explanation": "Delphi addresses four distinct challenges: (A) anonymous submissions overcome Japanese hierarchical culture, (B) asynchronous rounds work across 14-hour time difference, (C) written format accommodates intermediate English, and (D) the structured process ensures Yuki's irreplaceable local expertise is captured. Delphi is NOT the fastest technique — it requires 2-3 rounds and takes 1-2 weeks. But speed isn't the priority; getting balanced, quality input from all team members is.",
+            "correctFeedback": {
+              "text": "Delphi addresses four distinct challenges: (A) anonymous submissions overcome Japanese hierarchical culture, (B) asynchronous rounds work across 14-hour time difference, (C) written format accommodates intermediate English, and (D) the structured process ensures Yuki's irreplaceable local expertise is captured. Delphi is NOT the fastest technique — it requires 2-3 rounds and takes 1-2 weeks. But speed isn't the priority; getting balanced, quality input from all team members is.",
+              "character": "Jordan Park",
+              "characterQuote": "Four reasons, four barriers solved. Delphi isn't about speed — it's about getting the RIGHT input from the RIGHT people. Yuki's local knowledge is irreplaceable, and Delphi is the only technique that gives her a safe channel to share it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Four of these are genuine advantages of Delphi for THIS team. One describes a trait Delphi does NOT have. Delphi takes 2-3 rounds — is speed really its strength?",
+              "character": "Jordan Park",
+              "characterQuote": "Four of these are genuine advantages of Delphi for THIS team. One describes a trait Delphi does NOT have. Delphi takes 2-3 rounds — is speed really its strength?"
+            },
+            "retryHint": "Think about what Delphi ACTUALLY provides: anonymity, asynchronous participation, written format, structured inclusion. Does it also provide speed? Compare its timeline (1-2 weeks) to brainstorming (1-2 hours)."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **risk identification** is a systematic process: choose the right technique for your team dynamics, categorize for clear ownership, prioritize with EMV for limited resources, and escalate when something exceeds your authority.",
+        "key_takeaways": [
+          "Technique Selection = Team Dynamics — Choose identification technique based on WHO is participating, not just WHAT risks you're seeking. Delphi for dominant personalities and remote teams. Brainstorming for equal dynamics and live access.",
+          "RBS = Clear Ownership — Categorize risks as Technical (Tech Lead), External (Finance/Legal), Organizational (Operations/HR), or PM (Project Manager). Clear ownership means faster response.",
+          "EMV = Priority Order — Calculate Expected Monetary Value (Probability x Impact) to prioritize limited mitigation resources. Highest EMV gets first attention.",
+          "Escalate Appropriately — Escalate when risk exceeds your authority, threatens project objectives, or requires organizational decisions. Don't be a hero with risks above your pay grade.",
+          "Risks vs. Issues — Risks are future uncertainties requiring proactive identification. Issues are current problems requiring reactive response. Risk identification is always PROACTIVE."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think risk identification was just listing everything that could go wrong. Now I know it's about using the RIGHT technique for your team — Delphi surfaced risks that brainstorming buried. Categorizing with RBS gave every risk a clear owner. Prioritizing with EMV ensured our limited $150K budget hit the highest-impact risks first. And escalating the regulatory risk to Elena? That was the smartest move I made. She had resources I didn't — legal counsel, government relations, board connections. Risk identification isn't about being a hero. It's about being systematic."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L2",
+          "title": "Risk Response Planning",
+          "description": "You've identified and prioritized risks — now plan how to respond. Learn the four risk response strategies: Avoid, Mitigate, Transfer, and Accept. Which strategy fits which risk?"
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Which risk identification technique should the PM use?",
+            "points": 50,
+            "scenario_name": "Technique Selection",
+            "situation": "A project manager needs to conduct risk identification for a multinational project. The team includes a senior executive who tends to dominate discussions, subject matter experts from three different countries, and a technical lead who has valuable insights but rarely speaks in group meetings.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Brainstorming with clear facilitation rules",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Delphi technique",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "SWOT analysis",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Document review",
+                "correct": false
+              }
+            ],
+            "explanation": "The Delphi technique uses anonymous expert rounds, overcoming power dynamics and ensuring balanced input from all participants regardless of location or personality. Anonymous submissions prevent the senior executive from dominating, and asynchronous rounds include the international SMEs across time zones.",
+            "correctFeedback": {
+              "text": "The Delphi technique uses anonymous expert rounds, overcoming power dynamics and ensuring balanced input from all participants regardless of location or personality. Anonymous submissions prevent the senior executive from dominating, and asynchronous rounds include the international SMEs across time zones.",
+              "character": "Jordan Park",
+              "characterQuote": "Delphi is the right call. Anonymous rounds level the playing field — the executive's opinion carries the same weight as the technical lead's."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about the team dynamics: dominant executive, multinational SMEs, and a hesitant technical lead. Which technique overcomes all three barriers?",
+              "character": "Jordan Park",
+              "characterQuote": "Think about the team dynamics: dominant executive, multinational SMEs, and a hesitant technical lead. Which technique overcomes all three barriers?"
+            },
+            "retryHint": "The key challenge is team dynamics — a dominant executive, international time zones, and a hesitant expert. Which technique uses anonymous, asynchronous rounds to overcome these barriers?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "How should this risk be categorized?",
+            "points": 50,
+            "scenario_name": "RBS Categorization",
+            "situation": "A project team has identified a risk: \"Global chip shortage may delay hardware delivery by 2-3 months, impacting project schedule by $400K.\" The PM needs to categorize this risk using Risk Breakdown Structure.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Technical risk — It involves hardware components",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "External risk — It's a market/supply factor outside project control",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Project Management risk — It affects the project schedule",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Organizational risk — It requires organizational decisions",
+                "correct": false
+              }
+            ],
+            "explanation": "A global chip shortage is an External risk — a supply market factor completely outside the project's control. While it involves hardware (Technical) and affects the schedule (PM), the ROOT CAUSE is an external market condition. RBS categorization follows the root cause, not the effect.",
+            "correctFeedback": {
+              "text": "A global chip shortage is an External risk — a supply market factor completely outside the project's control. While it involves hardware (Technical) and affects the schedule (PM), the ROOT CAUSE is an external market condition. RBS categorization follows the root cause, not the effect.",
+              "character": "Jordan Park",
+              "characterQuote": "Root cause analysis is key. The chip shortage is driven by global supply conditions — that's External. The schedule impact is the effect, not the cause."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Focus on the ROOT CAUSE, not the effect. Is a global chip shortage caused by something inside the project, inside the organization, or outside both?",
+              "character": "Jordan Park",
+              "characterQuote": "Focus on the ROOT CAUSE, not the effect. Is a global chip shortage caused by something inside the project, inside the organization, or outside both?"
+            },
+            "retryHint": "RBS categorization is based on ROOT CAUSE. The chip shortage starts in the global supply market. Is that inside or outside the project and organization?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which risk should be prioritized FIRST for mitigation?",
+            "points": 50,
+            "scenario_name": "EMV Prioritization",
+            "situation": "A project manager has a $50K risk mitigation budget and identifies three risks: Risk A has 80% probability and $100K impact (EMV = $80K). Risk B has 40% probability and $150K impact (EMV = $60K). Risk C has 20% probability and $200K impact (EMV = $40K).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Risk A — Highest EMV ($80K)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Risk B — Balance of probability and impact",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Risk C — Highest potential impact ($200K)",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Address all three equally",
+                "correct": false
+              }
+            ],
+            "explanation": "EMV-based prioritization allocates limited budget to the highest risk-adjusted cost. Risk A's $80K EMV is the highest, and its 80% probability makes it near-certain to occur. With only $50K in budget, maximizing risk reduction value means addressing the highest EMV first.",
+            "correctFeedback": {
+              "text": "EMV-based prioritization allocates limited budget to the highest risk-adjusted cost. Risk A's $80K EMV is the highest, and its 80% probability makes it near-certain to occur. With only $50K in budget, maximizing risk reduction value means addressing the highest EMV first.",
+              "character": "Jordan Park",
+              "characterQuote": "Risk A at $80K EMV and 80% probability is practically a certainty. Your $50K budget should hit this one first — highest risk-adjusted cost, highest likelihood."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "EMV = Probability x Impact. Don't be distracted by high impact alone — a $200K impact at 20% probability has lower EMV than a $100K impact at 80%.",
+              "character": "Jordan Park",
+              "characterQuote": "EMV = Probability x Impact. Don't be distracted by high impact alone — a $200K impact at 20% probability has lower EMV than a $100K impact at 80%."
+            },
+            "retryHint": "Calculate EMV for each risk (Probability x Impact). Which has the highest risk-adjusted cost? That's where your first mitigation dollar should go."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What should the project manager do?",
+            "points": 50,
+            "scenario_name": "Escalation Protocol",
+            "situation": "A project manager identifies a significant risk that would require $75K to mitigate. The PM's spending authority is $50K per risk. The risk has 60% probability, $200K impact, and $120K EMV. The project sponsor is unavailable for two weeks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accept the risk and monitor it closely",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Implement a $50K partial mitigation within authority",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Document the risk and escalate to an alternate decision-maker",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Exceed authority and implement full $75K mitigation",
+                "correct": false
+              }
+            ],
+            "explanation": "When a risk exceeds your authority and your primary escalation point (sponsor) is unavailable, identify an alternate decision-maker — deputy sponsor, PMO, or steering committee. Document the risk thoroughly with your analysis and recommended actions, then escalate appropriately. Proper escalation protects both the project and the PM.",
+            "correctFeedback": {
+              "text": "When a risk exceeds your authority and your primary escalation point (sponsor) is unavailable, identify an alternate decision-maker — deputy sponsor, PMO, or steering committee. Document the risk thoroughly with your analysis and recommended actions, then escalate appropriately. Proper escalation protects both the project and the PM.",
+              "character": "Elena Santos",
+              "characterQuote": "Finding an alternate decision-maker when the sponsor is unavailable shows mature escalation judgment. Document, recommend, and escalate — don't sit on it for two weeks."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The mitigation exceeds your authority. Can you make this decision alone? If not, and your sponsor is unavailable, is there another path to get authorization?",
+              "character": "Elena Santos",
+              "characterQuote": "The mitigation exceeds your authority. Can you make this decision alone? If not, and your sponsor is unavailable, is there another path to get authorization?"
+            },
+            "retryHint": "The mitigation cost ($75K) exceeds your authority ($50K). Your sponsor is unavailable. What is the proper escalation protocol when the primary decision-maker can't be reached?"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,760 @@
+{
+  "lessonId": "B1L6",
+  "lessonTitle": "Effective Communication Planning",
+  "courseId": "B1",
+  "courseName": "Stakeholder & Communication Management",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Select appropriate communication methods (Push, Pull, Interactive) based on stakeholder needs",
+    "Distinguish formal vs informal communication and when each is appropriate",
+    "Apply the communication channels formula [n(n-1)/2] to understand communication complexity",
+    "Choose communication technology for distributed teams based on proximity and urgency",
+    "Build targeted communication plans that match method to stakeholder"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "ava_thompson",
+    "maya_rodriguez",
+    "jordan_liu",
+    "devon_brown"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Alex's Communication Meltdown: The \"CC Everyone\" Disaster",
+        "intro": "You're **Alex Mitchell**, leading Savory & Co.'s ambitious expansion to 5 new locations across NYC, Miami, Chicago, Denver, and Seattle. With **47 stakeholders** across 3 time zones, communication is critical. But your GM, **Carlos Mendez**, has a \"simple\" solution that's about to backfire spectacularly.",
+        "failure_cards": [
+          {
+            "id": "investor_email_flood",
+            "icon": "📋",
+            "title": "Investor Email Flood",
+            "summary": "300+ emails daily, critical risks buried",
+            "image": "/images/B1L6_comic_email_flood.webp",
+            "details": "Ava Thompson, lead investor, gets 300+ emails per day. When Alex CC'd all 9 investors on every project email, Ava's inbox exploded. She set up an auto-archive filter after Day 3. The budget variance warning sat unread for 2 weeks. By the time Ava saw it, the Chicago location was $85K over budget. \"I asked for monthly digests, not daily noise!\""
+          },
+          {
+            "id": "location_manager_delays",
+            "icon": "⚠️",
+            "title": "Location Manager Delays",
+            "summary": "Urgent issues stuck in email chains",
+            "image": "/images/B1L6_comic_delays.webp",
+            "details": "Maya Rodriguez hit a critical permit delay at the NYC location. She emailed the group at 9am ET. Responses trickled in over 8 hours across time zones. By 5pm, the thread had 23 replies but no decision. The contractor left site. The permit delay cost 3 weeks and $12K in idle labor. \"I needed answers NOW, not email tennis!\""
+          },
+          {
+            "id": "kitchen_staff_confusion",
+            "icon": "💡",
+            "title": "Kitchen Staff Confusion",
+            "summary": "200-page manual, zero adoption",
+            "image": "/images/B1L6_comic_confusion.webp",
+            "details": "Alex emailed every kitchen staff member a 200-page operations manual. Devon Brown checked — 3 out of 30 staff opened it. Zero read past page 5. When the new equipment arrived, staff called HQ every 10 minutes asking \"Where's the setup guide?\" Overtime costs spiked $8K in Week 1. \"Give me a searchable app, not a PDF brick!\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Alex, just CC everyone on everything. That's transparency, right? Everyone should know everything!"
+        },
+        "learning_hook": "**\"CC everyone\" = 1,081 communication channels.** That's not transparency — that's chaos. You need to match the RIGHT communication method to the RIGHT stakeholder. Let's learn how."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "match_communication_methods_to_stakeholders",
+        "title": "Match Communication Methods to Stakeholders",
+        "description": "Savory & Co. has 47 stakeholders across 4 groups. Carlos wants to \"CC everyone on everything.\" You know better. Match each stakeholder group to the RIGHT communication method to avoid the disasters you just saw.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each communication example into the correct method category:",
+            "points": 100,
+            "scenario_name": "Categorize Communication Examples",
+            "situation": "The PMI framework defines three communication methods. You need to sort real-world examples into the correct category.",
+            "chips": [
+              {
+                "id": "monthly_newsletter_to_investors",
+                "label": "Monthly newsletter to investors",
+                "correctZone": "push_oneway_broadcast"
+              },
+              {
+                "id": "sharepoint_document_library",
+                "label": "SharePoint document library",
+                "correctZone": "pull_selfservice_access"
+              },
+              {
+                "id": "weekly_team_video_conference",
+                "label": "Weekly team video conference",
+                "correctZone": "interactive_twoway_dialogue"
+              },
+              {
+                "id": "sms_safety_alert",
+                "label": "SMS safety alert",
+                "correctZone": "push_oneway_broadcast"
+              },
+              {
+                "id": "searchable_knowledge_base_app",
+                "label": "Searchable knowledge base app",
+                "correctZone": "pull_selfservice_access"
+              },
+              {
+                "id": "slack_channel_for_urgent_questions",
+                "label": "Slack channel for urgent questions",
+                "correctZone": "interactive_twoway_dialogue"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "push_oneway_broadcast",
+                "label": "PUSH (one-way broadcast)",
+                "detail": "Newsletters are sent to recipients who don't need to respond — one-way broadcast"
+              },
+              {
+                "id": "pull_selfservice_access",
+                "label": "PULL (self-service access)",
+                "detail": "Repositories are self-service — recipients pull information when they need it"
+              },
+              {
+                "id": "interactive_twoway_dialogue",
+                "label": "INTERACTIVE (two-way dialogue)",
+                "detail": "Video calls enable real-time two-way dialogue between participants"
+              }
+            ],
+            "explanation": "PUSH broadcasts information (emails, alerts), PULL provides self-service access (repositories, knowledge bases), and INTERACTIVE enables dialogue (calls, chat). The key is matching the method to the stakeholder's needs.",
+            "correctFeedback": {
+              "text": "PUSH broadcasts information (emails, alerts), PULL provides self-service access (repositories, knowledge bases), and INTERACTIVE enables dialogue (calls, chat). The key is matching the method to the stakeholder's needs.",
+              "character": "Carlos Mendez",
+              "characterQuote": "So 'CC everyone' is PUSH... and too much PUSH creates noise. I think I'm starting to understand."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about direction: PUSH = you send it. PULL = they fetch it. INTERACTIVE = you discuss it together.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about direction: PUSH = you send it. PULL = they fetch it. INTERACTIVE = you discuss it together."
+            },
+            "retryHint": "PUSH = you send it. PULL = they fetch it. INTERACTIVE = you discuss it together."
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Drag the correct components to build Ava's communication plan:",
+            "points": 100,
+            "scenario_name": "Build the Investor Communication Plan",
+            "situation": "Ava Thompson's investor group (9 investors) is high-power and time-constrained. Ava gets 300+ emails per day. Your CC-all approach buried a critical $85K budget variance for 2 weeks.",
+            "chips": [
+              {
+                "id": "financial_status_risks",
+                "label": "Financial Status & Risks",
+                "correctZone": "information_need"
+              },
+              {
+                "id": "push_pull_hybrid",
+                "label": "PUSH + PULL Hybrid",
+                "correctZone": "method"
+              },
+              {
+                "id": "monthly",
+                "label": "Monthly",
+                "correctZone": "frequency"
+              },
+              {
+                "id": "email_digest_dashboard",
+                "label": "Email Digest + Dashboard",
+                "correctZone": "channel_tool"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "information_need",
+                "label": "Information Need",
+                "detail": "Investors need visibility into project finances and risk exposure"
+              },
+              {
+                "id": "method",
+                "label": "Method",
+                "detail": "Monthly digest pushes summary; dashboard allows deep-dive on demand"
+              },
+              {
+                "id": "frequency",
+                "label": "Frequency",
+                "detail": "Respects investors' time — not daily noise, not quarterly gaps"
+              },
+              {
+                "id": "channel_tool",
+                "label": "Channel/Tool",
+                "detail": "Digest for awareness, dashboard for self-service details"
+              }
+            ],
+            "explanation": "Investors need targeted, high-level financial information delivered on a schedule that respects their time. A hybrid approach (PUSH digest + PULL dashboard) gives them awareness without overload.",
+            "correctFeedback": {
+              "text": "Investors need targeted, high-level financial information delivered on a schedule that respects their time. A hybrid approach (PUSH digest + PULL dashboard) gives them awareness without overload.",
+              "character": "Ava Thompson",
+              "characterQuote": "THIS is what I wanted. Monthly summary in my inbox, dashboard when I need details. No more spam filter for your project!"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I get 300 emails a day. If you CC me on everything, I'll filter it all to spam. Think about what I actually need and when.",
+              "character": "Ava Thompson",
+              "characterQuote": "I get 300 emails a day. If you CC me on everything, I'll filter it all to spam. Think about what I actually need and when."
+            },
+            "retryHint": "Think about Ava's constraints: time-poor, high-power, needs financials. What method respects her time while keeping her informed?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "How many potential communication channels exist with 47 stakeholders?",
+            "points": 100,
+            "scenario_name": "Communication Channels — Why CC All Fails",
+            "situation": "The Savory & Co. expansion has 47 stakeholders total. Carlos proposes CC'ing everyone on every email. Using the communication channels formula n(n-1)/2, you need to show him why this creates communication chaos.",
+            "options": [
+              {
+                "id": "A",
+                "text": "47 channels (one per stakeholder)",
+                "correct": false,
+                "whyWrong": "47 assumes each person has only one channel. In reality, every person connects to every other person."
+              },
+              {
+                "id": "B",
+                "text": "94 channels (47 x 2)",
+                "correct": false,
+                "whyWrong": "94 doubles the stakeholder count but doesn't apply the correct formula."
+              },
+              {
+                "id": "C",
+                "text": "1,081 channels",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "2,162 channels (47 x 46)",
+                "correct": false,
+                "whyWrong": "2,162 is n x (n-1) but forgets to divide by 2. Each channel connects two people, so you halve the result."
+              }
+            ],
+            "explanation": "The formula is n(n-1)/2. With 47 stakeholders: 47 x 46 = 2,162, then 2,162 / 2 = 1,081. That's 1,081 potential communication channels — impossible to manage manually. This is why \"CC everyone\" fails.",
+            "correctFeedback": {
+              "text": "The formula is n(n-1)/2. With 47 stakeholders: 47 x 46 = 2,162, then 2,162 / 2 = 1,081. That's 1,081 potential communication channels — impossible to manage manually. This is why \"CC everyone\" fails.",
+              "character": "Carlos Mendez",
+              "characterQuote": "1,081 channels?! No wonder Ava archived everything. That's not transparency — that's a flood. I was wrong."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Let me help with the math. n=47, so n-1=46. Then 47 times 46 equals 2,162. Finally, 2,162 divided by 2 equals 1,081. That's over a thousand channels!",
+              "character": "Carlos Mendez",
+              "characterQuote": "Let me help with the math. n=47, so n-1=46. Then 47 times 46 equals 2,162. Finally, 2,162 divided by 2 equals 1,081. That's over a thousand channels!"
+            },
+            "retryHint": "The formula is n(n-1)/2. Calculate step by step: n-1 first, then multiply, then divide by 2."
+          },
+          {
+            "q_id": "q4",
+            "type": "drag_drop",
+            "question": "Drag each communication approach into SYNCHRONOUS or ASYNCHRONOUS:",
+            "points": 100,
+            "scenario_name": "Sync vs Async for Distributed Teams",
+            "situation": "The Location Managers span 3 time zones (ET, CT, PT). You need to choose the right mix of synchronous and asynchronous communication.",
+            "chips": [
+              {
+                "id": "video_call_at_11am_et",
+                "label": "Video call at 11am ET",
+                "correctZone": "synchronous_sametime"
+              },
+              {
+                "id": "slack_message_with_4hour_response_window",
+                "label": "Slack message with 4-hour response window",
+                "correctZone": "asynchronous_differenttime"
+              },
+              {
+                "id": "recorded_video_update",
+                "label": "Recorded video update",
+                "correctZone": "asynchronous_differenttime"
+              },
+              {
+                "id": "phone_call",
+                "label": "Phone call",
+                "correctZone": "synchronous_sametime"
+              },
+              {
+                "id": "email_with_reply_by_eod",
+                "label": "Email with \"reply by EOD\"",
+                "correctZone": "asynchronous_differenttime"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "synchronous_sametime",
+                "label": "SYNCHRONOUS (same-time)",
+                "detail": "Video calls require everyone to be present at the same time"
+              },
+              {
+                "id": "asynchronous_differenttime",
+                "label": "ASYNCHRONOUS (different-time)",
+                "detail": "Messages that allow delayed response are asynchronous"
+              }
+            ],
+            "explanation": "Distributed teams across time zones need BOTH: scheduled synchronous touchpoints (weekly video call at rotating times) PLUS asynchronous channels (Slack, email) for non-urgent coordination. This respects time zones while enabling collaboration.",
+            "correctFeedback": {
+              "text": "Distributed teams across time zones need BOTH: scheduled synchronous touchpoints (weekly video call at rotating times) PLUS asynchronous channels (Slack, email) for non-urgent coordination. This respects time zones while enabling collaboration.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Weekly call at rotating times means everyone gets a fair shot. Slack fills the gaps. This actually works across 3 time zones!"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Synchronous means everyone present at the SAME time. Asynchronous means respond when you're available. Which requires real-time presence?",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Synchronous means everyone present at the SAME time. Asynchronous means respond when you're available. Which requires real-time presence?"
+            },
+            "retryHint": "Synchronous = everyone present at the same time. Asynchronous = respond when available."
+          },
+          {
+            "q_id": "q5",
+            "type": "drag_drop",
+            "question": "Drag each communication scenario into FORMAL or INFORMAL:",
+            "points": 100,
+            "scenario_name": "Formal vs Informal Communication",
+            "situation": "As PM, you need to know when communication creates an official record and when it builds relationships informally.",
+            "chips": [
+              {
+                "id": "project_charter_document",
+                "label": "Project charter document",
+                "correctZone": "formal_documented_official_record"
+              },
+              {
+                "id": "quick_slack_message_to_check_status",
+                "label": "Quick Slack message to check status",
+                "correctZone": "informal_casual_relationshipbuilding"
+              },
+              {
+                "id": "change_request_form",
+                "label": "Change request form",
+                "correctZone": "formal_documented_official_record"
+              },
+              {
+                "id": "coffee_chat_about_a_team_concern",
+                "label": "Coffee chat about a team concern",
+                "correctZone": "informal_casual_relationshipbuilding"
+              },
+              {
+                "id": "board_presentation_to_investors",
+                "label": "Board presentation to investors",
+                "correctZone": "formal_documented_official_record"
+              },
+              {
+                "id": "hallway_conversation_about_progress",
+                "label": "Hallway conversation about progress",
+                "correctZone": "informal_casual_relationshipbuilding"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "formal_documented_official_record",
+                "label": "FORMAL (documented, official record)",
+                "detail": "Project charters are official documents creating a legal/organizational record"
+              },
+              {
+                "id": "informal_casual_relationshipbuilding",
+                "label": "INFORMAL (casual, relationship-building)",
+                "detail": "Quick chat messages are casual coordination, not official records"
+              }
+            ],
+            "explanation": "Formal communication creates official records (charters, change requests, board presentations). Informal builds relationships and enables quick coordination (Slack, coffee chats, hallway conversations). Smart PMs use BOTH — start informal, escalate to formal if needed.",
+            "correctFeedback": {
+              "text": "Formal communication creates official records (charters, change requests, board presentations). Informal builds relationships and enables quick coordination (Slack, coffee chats, hallway conversations). Smart PMs use BOTH — start informal, escalate to formal if needed.",
+              "character": "Carlos Mendez",
+              "characterQuote": "So when Devon's underperforming, I start with informal coaching — not a formal write-up. Formal comes later if needed. Got it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Formal creates a RECORD (legal, audit trail). Informal builds RELATIONSHIPS (coaching, coordination). Which bucket does each belong in?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Formal creates a RECORD (legal, audit trail). Informal builds RELATIONSHIPS (coaching, coordination). Which bucket does each belong in?"
+            },
+            "retryHint": "Formal creates a RECORD (legal, audit trail). Informal builds RELATIONSHIPS (coaching, coordination)."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Communication Methods & Planning Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Three Communication Methods",
+            "subtitle": "",
+            "content": "The PMI framework defines **three communication methods**:\n\n**PUSH (One-Way Broadcast)**\n- Sender distributes information to recipients\n- Direction: Sender --> Receiver\n- When to Use: Time-sensitive info, broad audience, no response needed\n- Examples: Email digests, newsletters, SMS alerts, memos\n- Risk: Overload if overused — Ava filtered everything to spam\n\n**PULL (Self-Service Access)**\n- Recipient accesses information when needed\n- Direction: Receiver pulls from source\n- When to Use: Reference material, different needs at different times\n- Examples: Intranet, SharePoint, knowledge bases, wikis\n- Risk: May forget to check — combine with PUSH alerts for critical items\n\n**INTERACTIVE (Two-Way Dialogue)**\n- Real-time two-way exchange between participants\n- Direction: Sender <--> Receiver\n- When to Use: Complex topics, immediate feedback needed, relationship-building\n- Examples: Meetings, video calls, phone, instant messaging\n- Risk: Time-consuming, limited scalability — don't use for 47-person groups"
+          },
+          {
+            "id": "tab2",
+            "title": "Communication Channels Formula",
+            "subtitle": "",
+            "content": "**Formula:** Number of Communication Channels = **n(n-1)/2**\n\nWhere n = number of stakeholders\n\n**As team size grows, communication complexity grows exponentially:**\n\n| Stakeholders | Calculation | Channels |\n|-------------|-------------|----------|\n| 3 people | 3(2)/2 | 3 channels |\n| 5 people | 5(4)/2 | 10 channels |\n| 10 people | 10(9)/2 | 45 channels |\n| 20 people | 20(19)/2 | 190 channels |\n| **47 people** | 47(46)/2 | **1,081 channels** |\n\n**Implication:** Carlos's \"CC all\" creates 1,081 channels — impossible to manage manually!\n\n**Solution:** Use targeted methods:\n- PUSH for broad updates (1 sender to many, manageable)\n- PULL for reference (many access same source, reduces channels)\n- INTERACTIVE for critical dialogue (small groups, not 47-person meetings)",
+            "diagram": {
+              "image": "/images/B1L6_diagram_push_pull_interactive.webp",
+              "alt": "Push Pull Interactive Methods"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Formal vs Informal Communication",
+            "subtitle": "",
+            "content": "**Formal Communication:**\n- Creates official RECORD\n- Follows organizational procedures\n- Legal/contractual significance\n- Required for audits/compliance\n- Examples: Project charter, change requests, contracts, performance reviews, board presentations\n\n**Informal Communication:**\n- Builds RELATIONSHIPS\n- Casual, undocumented\n- Quick coordination and coaching\n- Examples: Slack messages, coffee chats, hallway conversations, quick phone calls\n\n**PMI Guidance:** Start informal (coaching), escalate to formal (disciplinary) if issue persists. Overusing formal damages relationships; underusing it risks missing documentation."
+          },
+          {
+            "id": "tab4",
+            "title": "Distributed Team Technology",
+            "subtitle": "",
+            "content": "For teams across time zones, match technology to urgency and proximity:\n\n**By Urgency:**\n- High urgency --> Synchronous (calls, video, instant message)\n- Medium urgency --> Asynchronous with response window (email by EOD)\n- Low urgency --> Pull repositories (check when convenient)\n\n**By Proximity:**\n- Same location --> Face-to-face preferred\n- Distributed, same timezone --> Video calls + collaboration tools\n- Distributed, multiple timezones --> Asynchronous primary + rotating sync meetings\n\n**The Savory Solution:**\n- Weekly video call at ROTATING times (fair to all time zones)\n- Slack channel for urgent issues (real-time, any timezone)\n- Recorded updates for non-urgent info (watch when convenient)"
+          },
+          {
+            "id": "tab5",
+            "title": "Decision Framework",
+            "subtitle": "Choosing the Right Method",
+            "content": "**Step 1:** Do recipients need to RESPOND or DIALOGUE?\n- YES --> INTERACTIVE (meetings, calls, chat)\n- NO --> Continue to Step 2\n\n**Step 2:** Is information TIME-SENSITIVE or needs IMMEDIATE attention?\n- YES --> PUSH (email, SMS, notification)\n- NO --> Continue to Step 3\n\n**Step 3:** Is information REFERENCE material?\n- YES --> PULL (repository, knowledge base)\n- NO --> Use HYBRID (Push summary + Pull details)\n\n**Savory Examples:**\n- Investors --> Hybrid (monthly PUSH digest + PULL dashboard)\n- Location Managers --> Interactive (weekly call + Slack)\n- Compliance --> Hybrid (PULL library + PUSH critical alerts)\n- Kitchen Staff --> Hybrid (PULL app + PUSH safety SMS)"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "FDA Equipment Recall Crisis",
+        "scenario": {
+          "title": "FDA Equipment Recall Crisis",
+          "description": "It's Month 3 of the expansion. The FDA just issued an **URGENT RECALL** of a commercial refrigeration unit model used in 3 of your 5 locations (Chicago, Denver, Miami). The recalled units pose a **FIRE RISK** if not unplugged immediately. **Crisis Details:**",
+          "images": [
+            {
+              "src": "/images/B1L6_comic_transfer.webp",
+              "alt": "FDA Equipment Recall Crisis"
+            }
+          ],
+          "details": [
+            "**Time:** 2pm PT (5pm ET) — kitchen staff are mid-dinner service",
+            "**Affected:** 18 kitchen staff across 3 locations",
+            "**Urgency:** CRITICAL — fire risk requires immediate action",
+            "**Constraint:** Staff can't check email during service"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Which communication approach should Alex use to ensure ALL 18 affected staff receive and ACT ON this alert within 30 minutes?",
+            "points": 150,
+            "scenario_name": "Emergency Communication Method",
+            "situation": "The FDA just issued an urgent recall of a commercial refrigeration unit posing a fire risk, affecting 18 kitchen staff across 3 Savory & Co. locations (Chicago, Denver, Miami). It's 2pm PT (5pm ET) and staff are mid-dinner service — they cannot check email.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Email all 18 staff with subject \"URGENT: Equipment Recall\"",
+                "correct": false,
+                "whyWrong": "Staff are mid-dinner service. They won't check email for hours. Too slow for life-safety emergencies."
+              },
+              {
+                "id": "B",
+                "text": "Post recall notice to the knowledge base and wait for staff to check",
+                "correct": false,
+                "whyWrong": "PULL requires proactive checking. Staff won't randomly check the knowledge base during dinner rush."
+              },
+              {
+                "id": "C",
+                "text": "Call each of the 3 location managers and ask them to notify teams",
+                "correct": false,
+                "whyWrong": "Adds delay and relies on a single point of failure per location. Direct communication to all 18 is faster."
+              },
+              {
+                "id": "D",
+                "text": "SMS all 18 staff: \"URGENT: Unplug Model XYZ NOW. Fire risk.\" + follow-up call to managers",
+                "correct": true
+              }
+            ],
+            "explanation": "SMS is the right choice for urgent safety. Staff have phones on them and check texts immediately — even during service. The message is short and actionable (\"Unplug NOW\"). Follow-up calls to managers confirm the message was received and acted upon. This is PUSH (SMS) + INTERACTIVE (calls) for critical communication.",
+            "correctFeedback": {
+              "text": "SMS is the right choice for urgent safety. Staff have phones on them and check texts immediately — even during service. The message is short and actionable (\"Unplug NOW\"). Follow-up calls to managers confirm the message was received and acted upon. This is PUSH (SMS) + INTERACTIVE (calls) for critical communication.",
+              "character": "Devon Brown",
+              "characterQuote": "I saw that text immediately. 'Unplug NOW' — clear, urgent, actionable. Within 5 minutes, all three locations had unplugged the units. Email would have sat unread for hours."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "During dinner rush, I don't check email. I don't check the intranet. But a text? I see that instantly. For safety, you need the fastest push method.",
+              "character": "Devon Brown",
+              "characterQuote": "During dinner rush, I don't check email. I don't check the intranet. But a text? I see that instantly. For safety, you need the fastest push method."
+            },
+            "retryHint": "Life-safety requires the FASTEST push method. What do people check instantly, even during work?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "How many ADDITIONAL communication channels would be created by adding 8 people to the 18-person list?",
+            "points": 150,
+            "scenario_name": "Adding People to the Communication List",
+            "situation": "After the crisis, Carlos suggests adding 8 more people to the \"critical communications\" list for better coverage. The current list has 18 people.",
+            "options": [
+              {
+                "id": "A",
+                "text": "8 channels (one per new person)",
+                "correct": false,
+                "whyWrong": "Each new person creates channels with EVERY existing person, not just one channel."
+              },
+              {
+                "id": "B",
+                "text": "144 channels",
+                "correct": false,
+                "whyWrong": "144 may come from an incorrect calculation. The correct math is 325 - 153 = 172."
+              },
+              {
+                "id": "C",
+                "text": "172 channels",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "325 channels",
+                "correct": false,
+                "whyWrong": "325 is the TOTAL channels with 26 people, not the ADDITIONAL channels created."
+              }
+            ],
+            "explanation": "Current channels: 18(17)/2 = 153. Proposed channels with 26 people: 26(25)/2 = 325. Additional channels: 325 - 153 = 172. Adding 8 people creates 172 additional channels — that's over 21 new channels per person added! The formula shows why \"just add more people\" backfires.",
+            "correctFeedback": {
+              "text": "Current channels: 18(17)/2 = 153. Proposed channels with 26 people: 26(25)/2 = 325. Additional channels: 325 - 153 = 172. Adding 8 people creates 172 additional channels — that's over 21 new channels per person added! The formula shows why \"just add more people\" backfires.",
+              "character": "Carlos Mendez",
+              "characterQuote": "172 extra channels for 8 people? That's 21 channels per person added. I get it now — bigger isn't better. Targeted is better."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Use the formula for both scenarios. Current: 18(17)/2 = 153. After adding 8: 26(25)/2 = 325. The difference is 325 minus 153.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Use the formula for both scenarios. Current: 18(17)/2 = 153. After adding 8: 26(25)/2 = 325. The difference is 325 minus 153."
+            },
+            "retryHint": "Calculate channels for 18 people, then for 26 people, then find the difference."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered communication planning: matching **Push, Pull, and Interactive** methods to stakeholder needs, understanding the **channels formula** that shows why \"CC all\" fails, and knowing when to use **formal vs informal** communication.",
+        "key_takeaways": [
+          "PUSH for time-sensitive broadcasts (digests, SMS alerts)",
+          "PULL for reference material (knowledge bases, repositories)",
+          "INTERACTIVE for dialogue and problem-solving (calls, chat)",
+          "Channels formula: n(n-1)/2 — complexity grows exponentially",
+          "Formal creates records; Informal builds relationships",
+          "Distributed teams need async primary + rotating sync touchpoints"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L1",
+          "title": "Team Formation & Tuckman's Model",
+          "description": "Learn how teams evolve through Forming, Storming, Norming, and Performing stages."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Which communication approach is MOST appropriate for this distributed team?",
+            "points": 50,
+            "scenario_name": "Distributed Team Communication",
+            "situation": "A project manager is leading a team with 12 members spread across 4 countries and 6 time zones. The team needs to share daily progress updates and resolve blocking issues quickly.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Daily video conference at the same time for all team members",
+                "correct": false,
+                "whyWrong": "With 6 time zones, any single meeting time is unreasonable for some members (middle of the night)."
+              },
+              {
+                "id": "B",
+                "text": "Email-only communication with end-of-day reports from each member",
+                "correct": false,
+                "whyWrong": "Email creates delays that compound across time zones. Blocking issues get buried."
+              },
+              {
+                "id": "C",
+                "text": "Asynchronous collaboration tools with a weekly rotating-time sync meeting",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "In-person quarterly meetings with phone calls as needed",
+                "correct": false,
+                "whyWrong": "Quarterly is too infrequent for daily progress updates. Phone calls lack structure."
+              }
+            ],
+            "explanation": "Distributed teams across multiple time zones need ASYNCHRONOUS PRIMARY (collaboration tools for daily updates, blocking issues documented and visible to all) plus SYNCHRONOUS TOUCHPOINTS at rotating times so everyone gets fair access to real-time discussion.",
+            "correctFeedback": {
+              "text": "Distributed teams across multiple time zones need ASYNCHRONOUS PRIMARY (collaboration tools for daily updates, blocking issues documented and visible to all) plus SYNCHRONOUS TOUCHPOINTS at rotating times so everyone gets fair access to real-time discussion.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Rotating meeting times mean I'm not always the one waking up at 5am. Async tools mean I can flag blockers immediately and the team sees them when they start their day."
+            },
+            "retryHint": "With 6 time zones, no single meeting time works for everyone. What combination respects all time zones?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "How many ADDITIONAL communication channels will be created by adding 4 people?",
+            "points": 50,
+            "scenario_name": "Communication Channels Calculation",
+            "situation": "A project currently has 8 stakeholders. The sponsor wants to add 4 subject matter experts to improve technical decisions.",
+            "options": [
+              {
+                "id": "A",
+                "text": "4 channels (one per new person)",
+                "correct": false,
+                "whyWrong": "Each new person creates channels with EVERY existing person, not just one."
+              },
+              {
+                "id": "B",
+                "text": "16 channels",
+                "correct": false,
+                "whyWrong": "16 may come from 4x4, but the correct formula requires calculating both totals."
+              },
+              {
+                "id": "C",
+                "text": "38 channels",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "66 channels",
+                "correct": false,
+                "whyWrong": "66 is the TOTAL channels with 12 people, not the ADDITIONAL channels created."
+              }
+            ],
+            "explanation": "Current channels: 8(7)/2 = 28. New channels with 12 people: 12(11)/2 = 66. Additional channels: 66 - 28 = 38. Adding 4 people creates 38 new channels — nearly 10 per person added!",
+            "correctFeedback": {
+              "text": "Current channels: 8(7)/2 = 28. New channels with 12 people: 12(11)/2 = 66. Additional channels: 66 - 28 = 38. Adding 4 people creates 38 new channels — nearly 10 per person added!",
+              "character": "Carlos Mendez",
+              "characterQuote": "38 channels for 4 people? That's almost 10 new channels per person. The formula really shows why 'just add more people' backfires."
+            },
+            "retryHint": "Use n(n-1)/2 for both scenarios, then subtract to find the difference."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the BEST approach for the project manager to address this situation?",
+            "points": 50,
+            "scenario_name": "Formal vs Informal — First-Time Issue",
+            "situation": "During a project status meeting, a senior team member gives a presentation that is poorly organized and lacks key data. This is the first time this has happened with this team member, who usually performs well.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Document the incident immediately and place a formal warning in the team member's file",
+                "correct": false,
+                "whyWrong": "Jumping to formal documentation for a first-time issue damages trust and is disproportionate."
+              },
+              {
+                "id": "B",
+                "text": "Have an informal private discussion to understand what happened and offer support",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Ignore the issue since it's the first occurrence and see if it happens again",
+                "correct": false,
+                "whyWrong": "Ignoring issues allows them to fester. Even first-time issues should be addressed — just informally."
+              },
+              {
+                "id": "D",
+                "text": "Discuss the poor performance publicly in the next team meeting as a learning opportunity",
+                "correct": false,
+                "whyWrong": "Public criticism humiliates the team member and damages psychological safety."
+              }
+            ],
+            "explanation": "PMI guidance is clear: start with informal communication for first-time issues. A private conversation allows you to understand context, maintain trust, and offer support. Formal documentation comes later IF the issue persists after coaching.",
+            "correctFeedback": {
+              "text": "PMI guidance is clear: start with informal communication for first-time issues. A private conversation allows you to understand context, maintain trust, and offer support. Formal documentation comes later IF the issue persists after coaching.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I used to jump to formal write-ups. Then I learned: formal damages relationships if used too early. Start informal, understand the context, offer support."
+            },
+            "retryHint": "For first-time performance issues, should you start with formal documentation or informal coaching?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which communication method is MOST appropriate for this situation?",
+            "points": 50,
+            "scenario_name": "Push vs Pull — Reference Material",
+            "situation": "A project manager needs to provide the team with access to technical reference documents, coding standards, and API documentation. Different team members need different documents at different times throughout the project.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Email all documents to the entire team at project kickoff",
+                "correct": false,
+                "whyWrong": "Email dump creates information overload. Documents get buried and can't be searched easily."
+              },
+              {
+                "id": "B",
+                "text": "Set up a searchable document repository (SharePoint, wiki, or intranet)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Schedule weekly meetings to review relevant documentation",
+                "correct": false,
+                "whyWrong": "Meetings are INTERACTIVE method, meant for dialogue. Reference docs don't need discussion."
+              },
+              {
+                "id": "D",
+                "text": "Print physical binders for each team member with all documentation",
+                "correct": false,
+                "whyWrong": "Physical binders can't be searched, are hard to update, and create waste when documents change."
+              }
+            ],
+            "explanation": "Reference material that different people need at different times is the perfect use case for PULL communication. A searchable repository allows team members to access exactly what they need, when they need it, without information overload.",
+            "correctFeedback": {
+              "text": "Reference material that different people need at different times is the perfect use case for PULL communication. A searchable repository allows team members to access exactly what they need, when they need it, without information overload.",
+              "character": "Devon Brown",
+              "characterQuote": "When I need the equipment manual, I search the app and find it in 10 seconds. If you'd emailed me 200 documents at kickoff, I'd never find what I need."
+            },
+            "retryHint": "Different people need different documents at different times. Which method lets them get exactly what they need, when they need it?"
+          }
+        ]
+      }
+    }
+  ]
+}

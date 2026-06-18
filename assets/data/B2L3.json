@@ -1,0 +1,634 @@
+{
+  "lessonId": "B2L3",
+  "lessonTitle": "Conflict Resolution Strategies",
+  "courseId": "B2",
+  "courseName": "Team Leadership & Development",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Identify the five conflict resolution strategies (Collaborate/Confront, Compromise, Smooth/Accommodate, Force/Direct, Withdraw/Avoid) and their outcomes (win-win, lose-lose, win-lose, yield-lose, lose-leave)",
+    "Apply the urgency-relationship matrix to select the appropriate conflict resolution strategy based on context",
+    "Distinguish when to use each strategy based on time constraints, relationship importance, and whether win-win is possible",
+    "Recognize PMI's preference for collaborative problem-solving while understanding when other strategies are appropriate"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "marco_silva",
+    "jamie_park",
+    "elena_vasquez",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Four Conflicts. Five Strategies. Wrong Choice = Disaster.",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. It's 3 weeks until the biggest catering event of the year (500 guests, $80K revenue). Four conflicts just erupted simultaneously. Dr. Foster warns: \"Forcing a solution on creative disagreement kills innovation. But collaborating with someone who won't cooperate wastes precious time.\" Can you match each conflict to the right strategy?",
+        "failure_cards": [
+          {
+            "id": "creative_clash",
+            "icon": "📋",
+            "title": "Creative Clash",
+            "summary": "Marco and Jamie can't agree on plate presentation for the 500-guest event",
+            "image": "/images/B2L3_comic_creative_clash.webp",
+            "details": "Marco (Executive Chef) wants classic plating that shows Michelin-level execution. Jamie (FOH Manager) wants deconstructed presentation that photographs well for Instagram and appeals to younger demographics. Both are long-term leaders with valid expertise. The event is 3 weeks away — there's time to find a real solution, but ignoring it will derail the menu."
+          },
+          {
+            "id": "vendor_deadlock",
+            "icon": "⚠️",
+            "title": "Vendor Deadlock",
+            "summary": "Two vendors fighting over the same loading dock time slot on event day",
+            "image": "/images/B2L3_comic_vendor_deadlock.webp",
+            "details": "The produce vendor and equipment vendor both need the 7am loading dock slot. Only one truck can use the dock at a time. The produce vendor warns late delivery means spoiled ingredients. The equipment vendor says late setup delays everything 2 hours. This is a zero-sum conflict — no amount of collaboration creates a second loading dock. Both have legitimate urgency, but physical constraints mean someone has to give."
+          },
+          {
+            "id": "authority_challenge",
+            "icon": "💡",
+            "title": "Authority Challenge",
+            "summary": "Carlos publicly undermined Alex's authority in a team meeting",
+            "image": "/images/B2L3_comic_authority_challenge.webp",
+            "details": "During a team meeting with 12 staff members present, Carlos (GM) said: \"Alex, your status updates are confusing everyone. You need to be clearer.\" The team watches to see how Alex responds. Responding defensively would escalate into a power struggle. Staying silent might look weak. The relationship with Carlos matters long-term, but so does Alex's credibility with the team."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Organizational Change Consultant",
+          "quote": "PMI says 'Collaborate first,' but that doesn't mean ALWAYS. You need a decision matrix: urgency vs. relationship importance. Most PMs either collaborate on everything (too slow) or force everything (too destructive). Can you adapt your strategy to each conflict's context?"
+        },
+        "learning_hook": "**The Thomas-Kilmann Conflict Model** identifies 5 strategies, but choosing the WRONG one can be worse than doing nothing. Let's learn when to use each strategy."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "resolve_the_conflicts",
+        "title": "Resolve the Conflicts",
+        "description": "Dr. Foster guides you through each conflict scenario. \"Each conflict needs a DIFFERENT approach. Match the strategy to the context — urgency, relationship importance, and whether win-win is possible.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Given low urgency (3 weeks available) and high relationship importance (both are long-term leaders), what conflict resolution strategy should Alex use?",
+            "points": 125,
+            "scenario_name": "Creative Clash — Marco vs. Jamie",
+            "situation": "Marco (Executive Chef) and Jamie (FOH Manager) are at an impasse over the 500-guest event's plate presentation. Marco wants classic plating that ensures consistency at scale. Jamie wants deconstructed plating that drives Instagram engagement and attracts younger demographics. Both are long-term team leaders with valid expertise. The event is 3 weeks away.",
+            "options": [
+              {
+                "id": "A",
+                "text": "FORCE: Side with Marco since he has more culinary experience",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "COMPROMISE: Do half the dishes classic, half deconstructed — split it down the middle",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "COLLABORATE: Facilitate a meeting to understand both perspectives and find a creative solution",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "WITHDRAW: Table the discussion until the event is closer",
+                "correct": false
+              }
+            ],
+            "explanation": "Low urgency (3 weeks) + High relationship importance (both are long-term leaders) = COLLABORATE. There is time to find a creative win-win solution. Collaboration honors both experts' perspectives and produces a better result — such as deconstructed presentation for 3 signature dishes and classic for the rest, combining Marco's execution quality with Jamie's marketing vision.",
+            "correctFeedback": {
+              "text": "Low urgency (3 weeks) + High relationship importance (both are long-term leaders) = COLLABORATE. There is time to find a creative win-win solution. Collaboration honors both experts' perspectives and produces a better result — such as deconstructed presentation for 3 signature dishes and classic for the rest, combining Marco's execution quality with Jamie's marketing vision.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect. You had TIME (3 weeks) and HIGH RELATIONSHIP importance (both are leaders). Collaboration was the right choice. The hybrid solution — 3 signature dishes deconstructed, the rest classic — is better than either original proposal."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When you have time and the relationship matters, invest in collaboration. The extra effort yields better solutions and stronger relationships. Don't shortcut when win-win is possible.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When you have time and the relationship matters, invest in collaboration. The extra effort yields better solutions and stronger relationships. Don't shortcut when win-win is possible."
+            },
+            "retryHint": "Low urgency + High relationship = COLLABORATE. Ask questions, understand both perspectives, then facilitate a creative solution that honors both experts."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What conflict resolution strategy should Alex use for this zero-sum conflict with high urgency?",
+            "points": 125,
+            "scenario_name": "Vendor Deadlock — Loading Dock Conflict",
+            "situation": "Event day logistics: The produce vendor and equipment vendor both need the 7am loading dock slot. Only one truck can use the dock at a time. The produce vendor warns that late delivery means spoiled ingredients. The equipment vendor says late setup delays everything by 2 hours. Both have valid urgency claims. This is a physical constraint — no creative solution can produce a second loading dock.",
+            "options": [
+              {
+                "id": "A",
+                "text": "COLLABORATE: Facilitate a meeting to find a win-win solution",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "COMPROMISE: Split the time slots — produce at 6:45am, equipment at 7:15am",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "FORCE: Assign slots without discussion based on PM judgment",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "WITHDRAW: Let the vendors work it out themselves",
+                "correct": false
+              }
+            ],
+            "explanation": "Zero-sum conflict (physical constraint) + High urgency (event day) = COMPROMISE. No amount of collaboration creates a second loading dock. Compromise (splitting the difference) gives both vendors a workable solution quickly. Neither is thrilled, but both can function — that's the best available outcome when win-win is physically impossible.",
+            "correctFeedback": {
+              "text": "Zero-sum conflict (physical constraint) + High urgency (event day) = COMPROMISE. No amount of collaboration creates a second loading dock. Compromise (splitting the difference) gives both vendors a workable solution quickly. Neither is thrilled, but both can function — that's the best available outcome when win-win is physically impossible.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Neither vendor is thrilled with the adjusted times, but both accepted. That's compromise — not perfect, but workable when win-win isn't possible."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Is win-win even possible here? Can discussion create a second loading dock? When the answer is no, the best available option is splitting the difference.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Is win-win even possible here? Can discussion create a second loading dock? When the answer is no, the best available option is splitting the difference."
+            },
+            "retryHint": "Is win-win physically possible here? When the answer is no, and urgency is high, the practical solution is to split the difference."
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What should Alex do IN THIS MOMENT (during the public meeting)?",
+            "points": 125,
+            "scenario_name": "Authority Challenge — Carlos in Public",
+            "situation": "During a team meeting with 12 staff members present, Carlos (GM) said: \"Alex, your status updates are confusing everyone. You need to be clearer.\" The team is watching to see how Alex responds. The relationship with Carlos matters long-term — he's the General Manager. But Alex's credibility with the team is also at stake.",
+            "options": [
+              {
+                "id": "A",
+                "text": "FORCE: \"Carlos, that criticism was inappropriate. Let's discuss this later.\"",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "SMOOTH: \"You're right, Carlos. I'll do better.\"",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "WITHDRAW now, COLLABORATE later: \"Thanks for the feedback. Let's discuss specifics after the meeting.\"",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "COLLABORATE publicly: \"Let's discuss what would work better right now.\"",
+                "correct": false
+              }
+            ],
+            "explanation": "Low urgency + High relationship + Public venue = WITHDRAW IN THE MOMENT. Strategic withdrawal prevents escalation and preserves both leaders' credibility. Then COLLABORATE privately to address the issue constructively. After a private conversation, Carlos respected Alex's professionalism and they improved the update format together (win-win).",
+            "correctFeedback": {
+              "text": "Low urgency + High relationship + Public venue = WITHDRAW IN THE MOMENT. Strategic withdrawal prevents escalation and preserves both leaders' credibility. Then COLLABORATE privately to address the issue constructively. After a private conversation, Carlos respected Alex's professionalism and they improved the update format together (win-win).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Smart move. You didn't take the bait. Addressing it privately preserved both your credibility and Carlos's dignity. That's mature leadership."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The PUBLIC venue changes everything. Collaboration is the right eventual strategy, but doing it publicly wastes team time and creates drama. Withdraw now, resolve later.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The PUBLIC venue changes everything. Collaboration is the right eventual strategy, but doing it publicly wastes team time and creates drama. Withdraw now, resolve later."
+            },
+            "retryHint": "Think about VENUE, not just the conflict. What happens if you address this in front of 12 team members vs. in a private conversation later?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What conflict resolution strategy should Alex use with Elena?",
+            "points": 125,
+            "scenario_name": "Process Resistance — Elena Won't Submit Reports",
+            "situation": "Elena (HR Manager) hasn't submitted project status reports for 3 weeks. When asked, she said: \"These reports are too long, nobody reads them, and they take 2 hours to complete. I have real work to do.\" However, stakeholders ARE asking for her updates. Reports are overdue, and Elena is a capable team member with potentially valid concerns about the process.",
+            "options": [
+              {
+                "id": "A",
+                "text": "FORCE: \"Elena, submit the reports by Friday or face consequences.\"",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "SMOOTH: \"I understand, Elena. Just skip the reports for now.\"",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "WITHDRAW: \"We'll discuss this later when things calm down.\"",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "COLLABORATE: \"Let's review the report requirements together. If the process is broken, let's fix it.\"",
+                "correct": true
+              }
+            ],
+            "explanation": "Medium urgency (reports overdue) + Medium relationship (capable HR Manager) + Potentially valid concern (inefficient process) = COLLABORATE. Elena's resistance may signal a legitimate problem. Alex and Elena discover the reports ARE too long (3 pages taking 2 hours). They co-design a streamlined 1-page format (20 minutes). Win-win: better process for everyone, compliance achieved.",
+            "correctFeedback": {
+              "text": "Medium urgency (reports overdue) + Medium relationship (capable HR Manager) + Potentially valid concern (inefficient process) = COLLABORATE. Elena's resistance may signal a legitimate problem. Alex and Elena discover the reports ARE too long (3 pages taking 2 hours). They co-design a streamlined 1-page format (20 minutes). Win-win: better process for everyone, compliance achieved.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Thank you for actually listening instead of just forcing me to comply. When we reviewed together, we found the reports really were inefficient. The new format works for everyone."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When someone resists a process, ask WHY before forcing compliance. Sometimes resistance reveals problems worth solving. Collaborate to find the root cause.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When someone resists a process, ask WHY before forcing compliance. Sometimes resistance reveals problems worth solving. Collaborate to find the root cause."
+            },
+            "retryHint": "Elena says reports take 2 hours. Is that a valid concern worth exploring? What if the process IS broken and collaboration could fix it for the whole team?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Conflict Resolution Toolkit",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Five Conflict Resolution Strategies",
+            "subtitle": "",
+            "content": "PMI recognizes five conflict resolution strategies, each with distinct outcomes:\n\n**1. COLLABORATE / CONFRONT / PROBLEM-SOLVE**\n- **Outcome:** Win-Win (both parties fully satisfied)\n- **Speed:** Slow (requires discussion and creativity)\n- **Best For:** Creative disagreements, high relationships, adequate time\n- **PMI Priority:** 1st choice (preferred when conditions allow)\n- **Example:** Marco and Jamie designing hybrid plating together\n\n**2. COMPROMISE**\n- **Outcome:** Lose-Lose (partial satisfaction for both)\n- **Speed:** Medium\n- **Best For:** Zero-sum conflicts, moderate urgency, equal power\n- **PMI Priority:** 3rd choice\n- **Example:** Vendors splitting the loading dock time slots\n\n**3. SMOOTH / ACCOMMODATE**\n- **Outcome:** Yield-Lose (one party gives in)\n- **Speed:** Fast\n- **Best For:** Low stakes, relationship more important than outcome\n- **PMI Priority:** 4th choice\n- **Example:** Letting minor preferences slide to maintain harmony\n\n**4. FORCE / DIRECT**\n- **Outcome:** Win-Lose (one party prevails)\n- **Speed:** Very Fast\n- **Best For:** Emergencies, unresolvable impasses, safety issues\n- **PMI Priority:** Last resort\n- **Example:** Emergency decisions when team is deadlocked past deadline\n\n**5. WITHDRAW / AVOID**\n- **Outcome:** Lose-Leave (no resolution)\n- **Speed:** Instant\n- **Best For:** Cool-off needed, trivial issues, wrong venue\n- **PMI Priority:** Situational\n- **Example:** Alex not responding to Carlos publicly, then collaborating privately",
+            "diagram": {
+              "image": "/images/B2L3_diagram_conflict_strategies.webp",
+              "alt": "Conflict Resolution Strategies Framework"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "The Urgency-Relationship Matrix",
+            "subtitle": "",
+            "content": "The key to selecting the right strategy is analyzing two factors:\n\n| | **High Urgency** | **Low Urgency** |\n|---|---|---|\n| **High Relationship** | COMPROMISE (or Force with care). Need speed but relationship matters. | COLLABORATE. PMI's preferred approach. Time available, relationship critical. Invest in win-win. |\n| **Low Relationship** | FORCE / DIRECT. Emergency, relationship expendable. Make the call. | WITHDRAW or SMOOTH. Not urgent, relationship doesn't matter. Don't waste energy. |\n\n**Decision Process:**\n1. **Urgency:** How quickly do we need a decision?\n2. **Relationship:** How critical is this relationship long-term?\n3. **Win-Win Possible:** Is a creative solution achievable, or is this zero-sum?\n\n**Common Mistake:** Defaulting to one strategy for all conflicts. Effective PMs ADAPT based on context."
+          },
+          {
+            "id": "tab3",
+            "title": "When to Deviate from Collaboration",
+            "subtitle": "",
+            "content": "**PMI prefers Collaborate/Confront, but it's not always appropriate:**\n\n**When Collaboration Fails:**\n- Time pressure: Emergency requires immediate decision\n- Uncooperative party: One side refuses to engage constructively\n- Zero-sum conflict: Physical constraints make win-win impossible\n- Trivial issue: Not worth the investment of collaborative effort\n\n**When to FORCE (Last Resort):**\n- Safety emergencies\n- Persistent conflict blocking progress past deadline\n- Team unable to reach consensus when a decision must be made\n- PMBOK 7th Ed: \"Use positional power when persistence hinders productivity\"\n\n**When to WITHDRAW (Strategic):**\n- Emotions running too high (cooling-off needed)\n- Wrong venue (public vs. private)\n- Issue is truly trivial\n- Plan to address it later in better conditions\n\n**Key Insight:** Withdrawing is NOT avoidance if you plan to address it later. It's choosing the right TIME and PLACE."
+          },
+          {
+            "id": "tab4",
+            "title": "Compromise is Lose-Lose",
+            "subtitle": "",
+            "content": "**Common Misconception:** \"Compromise is a win-win approach.\"\n\n**Truth:** Compromise means BOTH parties give something up. Neither is fully satisfied.\n\n| Collaboration | Compromise |\n|---------------|------------|\n| Both get what they want | Both sacrifice something |\n| Win-Win | Lose-Lose (partial satisfaction) |\n| Creative solution | Split the difference |\n| Takes time | Faster |\n| Builds commitment | Can breed resentment |\n\n**When Compromise is Appropriate:**\n- Zero-sum conflicts (only one winner possible)\n- Time pressure prevents full collaboration\n- Equal power between parties\n\n**When to Avoid Compromise:**\n- When collaboration could yield better results\n- When one solution is clearly superior\n- When partial solutions don't work (can't build half a bridge)"
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:**\n- Pages 168-169: Conflict Management\n- Page 259 (Process Groups Practice Guide): Use of positional power when persistence hinders productivity\n\n**PMP Exam Tips:**\n- PMI's preferred strategy is Collaborate/Confront (win-win) — but exam questions test whether you know WHEN to deviate\n- Compromise is NOT win-win. Both parties sacrifice. PMI classifies it as lose-lose (partial satisfaction)\n- Forcing is appropriate when collaboration has been exhausted and deadline pressure requires action\n- Withdraw is strategic when venue or timing is wrong — not the same as avoiding responsibility"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "The Social Media Strategy Conflict",
+        "scenario": {
+          "title": "The Social Media Strategy Conflict",
+          "description": "Two weeks later, a new conflict emerges. Jamie (FOH) and Marco (Kitchen) are deadlocked over live-streaming kitchen prep on social media. Jamie wants transparency and real-time engagement to attract younger demographics. Marco says cameras distract his team and expose proprietary techniques to competitors. Carlos turns to Alex: \"Just FORCE a decision. We don't have time for meetings.\"",
+          "images": [
+            {
+              "src": "/images/B2L3_comic_transfer.webp",
+              "alt": "Alex convincing Carlos about collaborative approach"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "How should Alex respond to Carlos's demand to force a decision?",
+            "points": 150,
+            "scenario_name": "Push Back on Carlos",
+            "situation": "Carlos demands that Alex force a decision on the live-streaming conflict. \"Just decide: live-stream or no live-stream. Make the call. End of story.\" But the timeline is 2 weeks (medium urgency, not emergency), and both Jamie and Marco are long-term leaders (high relationship importance). Alex needs to convince Carlos that forcing is the wrong approach here.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"You're right, Carlos. I'll tell Marco the live-stream is happening.\"",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "\"Carlos, forcing would alienate a long-term leader. With 2 weeks and high-value relationships, collaboration will get us a better result.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"Let's compromise — live-stream some parts, not others.\"",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "\"I'll avoid the conflict and let Jamie and Marco figure it out themselves.\"",
+                "correct": false
+              }
+            ],
+            "explanation": "2 weeks = medium urgency (not emergency). Jamie and Marco = long-term leaders (high relationship importance). The urgency-relationship matrix says: Medium urgency + High relationship = COLLABORATE. Alex pushes back on Carlos's force-first instinct using framework reasoning. A collaborative session could yield creative solutions like live-streaming the dining room setup instead of the kitchen, or pre-recording behind-the-scenes content with Marco's approval.",
+            "correctFeedback": {
+              "text": "2 weeks = medium urgency (not emergency). Jamie and Marco = long-term leaders (high relationship importance). The urgency-relationship matrix says: Medium urgency + High relationship = COLLABORATE. Alex pushes back on Carlos's force-first instinct using framework reasoning. A collaborative session could yield creative solutions like live-streaming the dining room setup instead of the kitchen, or pre-recording behind-the-scenes content with Marco's approval.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I used to think consistent leadership meant one approach for everything. You showed me it means consistently adapting to context. That's harder — and better."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Review the urgency-relationship matrix. 2 weeks is medium urgency, not an emergency. Jamie and Marco are long-term leaders — high relationship importance. What does the matrix recommend?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Review the urgency-relationship matrix. 2 weeks is medium urgency, not an emergency. Jamie and Marco are long-term leaders — high relationship importance. What does the matrix recommend?"
+            },
+            "retryHint": "Decision matrix: What's the urgency? (2 weeks = medium, NOT emergency). What's the relationship importance? (Both are long-term leaders = high). Medium + High = COLLABORATE."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Based on the urgency-relationship matrix, which scenario would justify FORCING a decision?",
+            "points": 150,
+            "scenario_name": "When Is Forcing Justified?",
+            "situation": "Carlos pushes back: \"Fine, you convinced me on this one. But when IS it OK to just force a decision?\" Alex needs to identify the correct scenario where forcing is the appropriate strategy.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Two department heads disagree on project scope (3 weeks until deadline, both are VPs)",
+                "correct": false,
+                "whyWrong": "3 weeks = medium urgency. Both VPs = high relationship. This calls for collaboration, not forcing."
+              },
+              {
+                "id": "B",
+                "text": "A safety inspector identifies a violation that must be fixed before tomorrow's event",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "A vendor wants to renegotiate contract terms (1 month until renewal)",
+                "correct": false,
+                "whyWrong": "1 month = low urgency. Vendor relationship = medium-high for long-term partnership. Collaboration or negotiation is appropriate."
+              },
+              {
+                "id": "D",
+                "text": "Team members disagree on which agile tool to use (no deadline pressure)",
+                "correct": false,
+                "whyWrong": "No deadline = low urgency. Team buy-in matters. This is perfect for collaboration or even letting the team self-decide."
+              }
+            ],
+            "explanation": "The safety violation scenario justifies FORCING because: Emergency urgency (must be fixed before tomorrow), regulatory requirement (non-negotiable compliance), no time for discussion (immediate action required), and safety is paramount (human safety overrides relationship concerns). PMBOK supports using positional power when \"persistent conflicts hinder productivity\" — and safety emergencies are the clearest case.",
+            "correctFeedback": {
+              "text": "The safety violation scenario justifies FORCING because: Emergency urgency (must be fixed before tomorrow), regulatory requirement (non-negotiable compliance), no time for discussion (immediate action required), and safety is paramount (human safety overrides relationship concerns). PMBOK supports using positional power when \"persistent conflicts hinder productivity\" — and safety emergencies are the clearest case.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Emergencies and safety issues are the clearest cases for forcing. When lives or compliance are at stake, decisive action is expected — not debated."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "FORCING is reserved for: emergencies, safety issues, regulatory deadlines, and situations where collaborative approaches have failed and progress is blocked.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "FORCING is reserved for: emergencies, safety issues, regulatory deadlines, and situations where collaborative approaches have failed and progress is blocked."
+            },
+            "retryHint": "Look for the scenario with: Emergency urgency + Safety/Compliance + No time for discussion. Which one has all three?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to match conflict resolution strategies to context using the urgency-relationship decision matrix. PMI prefers collaborative problem-solving (win-win), but effective conflict resolution requires adapting your strategy based on urgency, relationship importance, and whether win-win is possible.",
+        "key_takeaways": [
+          "PMI prefers Collaborate/Confront (win-win), but it's not always appropriate — Time availability and cooperative parties are prerequisites for effective collaboration",
+          "Compromise is lose-lose (partial satisfaction), not win-win — Use when time pressure prevents collaboration or in zero-sum conflicts where no creative solution exists",
+          "Forcing is win-lose and should be a last resort — Appropriate for emergencies, safety issues, or when persistent conflict blocks progress past deadline",
+          "Withdrawing can be strategic, not weak — Choose the right time and place, then collaborate later when conditions improve",
+          "Use the Urgency-Relationship Matrix — High urgency + Low relationship = Force; Low urgency + High relationship = Collaborate; match strategy to context every time"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think good PMs always collaborate. Now I know good PMs always ADAPT. Four conflicts, four different strategies — collaboration, compromise, strategic withdrawal, and more collaboration. The matrix gives me a framework to justify my approach, even when Carlos wants me to force every decision."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L4",
+          "title": "Leadership Styles & Situational Leadership",
+          "description": "Now that you know HOW to resolve conflicts, learn how to adapt your leadership STYLE to team maturity, task complexity, and autonomy readiness. Just like conflict resolution, leadership isn't one-size-fits-all."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What conflict resolution outcome has been achieved?",
+            "points": 50,
+            "scenario_name": "Collaboration Outcome Recognition",
+            "situation": "A project manager is facilitating a meeting between two team members who have different ideas about how to implement a software feature. After discussing both perspectives, the team members work together to develop a new approach that incorporates the best elements of both ideas. Both team members are satisfied with the solution.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Win-Lose",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Win-Win",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Lose-Lose",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Yield-Lose",
+                "correct": false
+              }
+            ],
+            "explanation": "When both parties work together to create a solution that fully satisfies both, the result is Win-Win. This is the hallmark of successful collaboration — the combined approach is better than either original idea alone, and both parties feel ownership of the outcome.",
+            "correctFeedback": {
+              "text": "When both parties work together to create a solution that fully satisfies both, the result is Win-Win. This is the hallmark of successful collaboration — the combined approach is better than either original idea alone, and both parties feel ownership of the outcome.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Win-Win is only possible through collaboration. When you invest the time to understand both perspectives and create together, everyone wins."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at the outcome: both contributed, both satisfied. That's the definition of Win-Win through collaboration. No one gave anything up.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Look at the outcome: both contributed, both satisfied. That's the definition of Win-Win through collaboration. No one gave anything up."
+            },
+            "retryHint": "What happens when both parties work together AND both are satisfied? Is anyone giving something up, or did they create something new together?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the MOST appropriate immediate response?",
+            "points": 50,
+            "scenario_name": "Strategic Withdrawal",
+            "situation": "During a status meeting, a senior stakeholder makes a critical comment about the project manager's reporting format. The project manager notices that emotions are running high and other stakeholders are becoming uncomfortable with the tension.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Force the stakeholder to apologize for the inappropriate comment",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Acknowledge the feedback and offer to discuss improvements in a private meeting",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Immediately compromise by changing the reporting format on the spot",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Defend the current reporting format with detailed justifications",
+                "correct": false
+              }
+            ],
+            "explanation": "When emotions are high and the venue is public, strategic withdrawal (acknowledging the feedback + deferring to a private discussion) is appropriate. This de-escalates the situation while committing to address the concern constructively. PMBOK supports withdrawal when cooling-off is needed or the venue is inappropriate for resolution.",
+            "correctFeedback": {
+              "text": "When emotions are high and the venue is public, strategic withdrawal (acknowledging the feedback + deferring to a private discussion) is appropriate. This de-escalates the situation while committing to address the concern constructively. PMBOK supports withdrawal when cooling-off is needed or the venue is inappropriate for resolution.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect response. You didn't take the bait, didn't make it worse, and created a path to constructive resolution. That's mature PM behavior."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "In a public setting with high emotions, the priority is de-escalation. Public is rarely the right venue for conflict resolution.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "In a public setting with high emotions, the priority is de-escalation. Public is rarely the right venue for conflict resolution."
+            },
+            "retryHint": "What's the priority when emotions are high in a public setting? What approach de-escalates while still acknowledging the concern?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which conflict resolution strategy was used?",
+            "points": 50,
+            "scenario_name": "Compromise Recognition",
+            "situation": "A project manager is mediating a conflict between two vendors over delivery schedules. After discussion, both vendors agree to adjust their schedules slightly — one delivers 30 minutes earlier, the other 30 minutes later than originally requested. Neither is completely happy with the outcome, but both can work with it.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Collaborate/Problem-Solve",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Compromise",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Smooth/Accommodate",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Force/Direct",
+                "correct": false
+              }
+            ],
+            "explanation": "When both parties give something up and neither is fully satisfied (but both can function), that's COMPROMISE. The key indicator is \"neither is completely happy\" — that's lose-lose (partial satisfaction). Compromise is appropriate for zero-sum conflicts or when time pressure prevents full collaboration.",
+            "correctFeedback": {
+              "text": "When both parties give something up and neither is fully satisfied (but both can function), that's COMPROMISE. The key indicator is \"neither is completely happy\" — that's lose-lose (partial satisfaction). Compromise is appropriate for zero-sum conflicts or when time pressure prevents full collaboration.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The phrase 'neither is completely happy' is your signal. That's compromise — workable but not optimal. Lose-Lose in PMI terms."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Watch for outcome language. 'Both satisfied' = collaboration. 'Neither fully satisfied' = compromise. The words in the scenario matter.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Watch for outcome language. 'Both satisfied' = collaboration. 'Neither fully satisfied' = compromise. The words in the scenario matter."
+            },
+            "retryHint": "What does \"neither is completely happy but both can work with it\" tell you about the outcome? Is this win-win or something else?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What conflict resolution approach is MOST appropriate now?",
+            "points": 50,
+            "scenario_name": "Forcing Appropriateness",
+            "situation": "A project team has been debating a technical architecture decision for three weeks. Despite multiple collaborative discussions, they cannot reach consensus. The project deadline is in two days, and a decision must be made to proceed.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Continue collaborative discussions until consensus is reached",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Use positional authority to make the decision and move forward",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Withdraw from the conflict and let the team figure it out",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Compromise by implementing parts of each proposed architecture",
+                "correct": false
+              }
+            ],
+            "explanation": "When collaboration has been attempted and failed (3 weeks of discussion), and deadline pressure requires action (2 days), FORCING (using positional authority) becomes appropriate. PMBOK Process Groups Practice Guide supports this: \"Use positional power when persistent conflict hinders productivity.\"",
+            "correctFeedback": {
+              "text": "When collaboration has been attempted and failed (3 weeks of discussion), and deadline pressure requires action (2 days), FORCING (using positional authority) becomes appropriate. PMBOK Process Groups Practice Guide supports this: \"Use positional power when persistent conflict hinders productivity.\"",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You tried collaboration — it didn't work. The deadline is real. Now it's time to decide. Force is the last resort, but it's needed here. Explain your reasoning and proceed."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "After three weeks of collaborative attempts and a two-day deadline, continuing to discuss won't yield different results. Sometimes the PM must use authority to unblock progress.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "After three weeks of collaborative attempts and a two-day deadline, continuing to discuss won't yield different results. Sometimes the PM must use authority to unblock progress."
+            },
+            "retryHint": "Three weeks of collaboration haven't worked. The deadline is in two days. What's the appropriate response when discussion is exhausted and action is required?"
+          }
+        ]
+      }
+    }
+  ]
+}

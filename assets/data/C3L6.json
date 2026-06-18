@@ -1,0 +1,717 @@
+{
+  "lessonId": "C3L6",
+  "lessonTitle": "Procurement & Contracts",
+  "courseId": "C3",
+  "courseName": "Risk, Quality, Procurement",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Select the appropriate contract type (Fixed Price, Cost Reimbursable, Time & Materials) based on scope clarity and risk tolerance",
+    "Understand risk allocation between buyer and seller for each contract type",
+    "Identify when hybrid contracts (incentive fees, cost ceilings) are appropriate",
+    "Apply make-or-buy decision criteria to procurement planning",
+    "Recognize contract administration responsibilities including SOW, source selection criteria, and procurement management plan"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "rashid_patel",
+    "ava_thompson",
+    "sam_rodriguez",
+    "carlos_mendez"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Three Vendors, Three Contracts, One Wrong Choice Costs $50K",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. The company is expanding operations and needs to procure three critical services: a $150K kitchen renovation (blueprints finalized), an $80K marketing campaign (strategy still evolving), and $30K in equipment maintenance (repairs as needed). Ava calls Rashid into her office: \"I've seen companies get burned by bad contracts -- wrong type for wrong work.\" The wrong contract choice on any of these three could cost Savory $50K or more. Fixed Price when scope is unclear = change order nightmare. Cost Reimbursable when scope is clear = wasting money on flexibility you don't need. Time & Materials without a cap = budget blowout.",
+        "failure_cards": [
+          {
+            "id": "the_contract_dispute",
+            "icon": "📋",
+            "title": "The Contract Dispute",
+            "summary": "Alex signs a Fixed Price contract for the marketing campaign -- scope changes trigger $40K in change orders",
+            "image": "/images/C3L6_comic_contract_dispute.webp",
+            "details": "Without understanding risk allocation, Alex locked in a Fixed Price contract for the marketing campaign. But the marketing strategy was still evolving -- customer feedback would shape deliverables. Within two months, 12 change orders piled up as requirements shifted. The vendor threatened to walk: \"You keep changing what you want but won't pay for changes.\" Sam ran the numbers: $40K in change order overhead on an $80K contract. Ava was furious: \"You used the wrong contract type for unclear scope. Fixed Price only works when you KNOW what you're getting.\""
+          },
+          {
+            "id": "the_vendor_selection_failure",
+            "icon": "⚠️",
+            "title": "The Vendor Selection Failure",
+            "summary": "Alex uses Cost Reimbursable for the kitchen renovation -- paying for flexibility on work that didn't need it",
+            "image": "/images/C3L6_comic_vendor_selection.webp",
+            "details": "For the kitchen renovation, Alex chose Cost Reimbursable \"just to be safe.\" But blueprints were already approved, equipment specs finalized, compliance requirements clear. The contractor billed $185K for work that should have cost $150K Fixed Price. Sam: \"We paid a 23% premium for flexibility we never used. The scope was locked from day one -- Fixed Price would have saved us $35K.\" Ava: \"Cost Reimbursable is for uncertain scope. This scope was crystal clear.\""
+          },
+          {
+            "id": "the_budget_blowout",
+            "icon": "💡",
+            "title": "The Budget Blowout",
+            "summary": "Alex signs T&M for maintenance with no cap -- costs spiral to $55K against a $30K budget",
+            "image": "/images/C3L6_comic_contract_types.webp",
+            "details": "The equipment maintenance contract seemed straightforward: pay hourly for repairs as needed. But without a not-to-exceed clause, the maintenance vendor billed freely. Old freezer units needed constant attention. By month eight, invoices totaled $55K against a $30K budget. Rashid: \"T&M without a ceiling is an open checkbook. You needed a not-to-exceed clause to cap exposure.\" Alex learned the hard way: every contract type needs appropriate controls."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "ava_thompson",
+          "name": "Ava Thompson",
+          "role": "Investor",
+          "quote": "Who bears the risk in each contract type? That's THE question. Fixed Price shifts risk to the seller. Cost Reimbursable shifts risk to the buyer. Match the contract to the work -- and always add controls to limit your exposure."
+        },
+        "learning_hook": "**Procurement management** requires matching the right contract type to the right work. Fixed Price for clear scope, Cost Reimbursable for evolving scope, Time & Materials for unpredictable hours. Each type allocates risk differently between buyer and seller. Let's learn how to select, modify, and manage contracts to protect both Savory and its vendors."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "match_three_procurements_to_contract_types",
+        "title": "Match Three Procurements to Contract Types",
+        "description": "Ava tests Rashid's procurement knowledge: \"Three services, three risk profiles. Show me you understand which contract type protects us on each one -- and WHY.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What contract type should Rashid recommend for the kitchen renovation?",
+            "points": 100,
+            "scenario_name": "Kitchen Renovation -- Clear Scope",
+            "situation": "Savory & Co. needs a $150K commercial kitchen renovation. The blueprints are APPROVED with no changes expected. Equipment specs are FINALIZED with specific models identified. Health department compliance requirements are CLEAR. The timeline is 3 months fixed. The buyer priority is cost certainty -- Savory wants the contractor to handle any overruns.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Firm Fixed Price -- Contractor delivers for $150K, absorbs any cost overruns",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Cost Reimbursable -- Pay actual costs plus fee for flexibility",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Time & Materials -- Pay hourly rate for construction hours worked",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Cost Plus Incentive Fee -- Incentivize the contractor to save costs",
+                "correct": false
+              }
+            ],
+            "explanation": "Clear scope + stable requirements + finalized specs = Firm Fixed Price. The contractor can estimate accurately because the scope is locked. The seller absorbs cost overrun risk, and the buyer knows the exact price upfront. This is textbook FFP territory.",
+            "correctFeedback": {
+              "text": "Clear scope + stable requirements + finalized specs = Firm Fixed Price. The contractor can estimate accurately because the scope is locked. The seller absorbs cost overrun risk, and the buyer knows the exact price upfront. This is textbook FFP territory.",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Blueprints approved, specs finalized, compliance clear. We KNOW exactly what we're getting. Fixed Price locks the cost and transfers overrun risk to the contractor."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about scope clarity. When scope is crystal clear, which contract type lets us lock the price and transfer cost risk to the seller?",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Think about scope clarity. When scope is crystal clear, which contract type lets us lock the price and transfer cost risk to the seller?"
+            },
+            "retryHint": "When blueprints are approved and specs are finalized, the scope is CLEAR. Which contract type locks the price and makes the seller responsible for overruns?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What contract type should Rashid recommend for the marketing campaign?",
+            "points": 100,
+            "scenario_name": "Marketing Campaign -- Evolving Scope",
+            "situation": "Savory & Co. needs an $80K brand launch marketing campaign over 6 months. The strategy is EVOLVING as customer feedback will shape direction. Deliverables are TBD depending on what resonates with the target audience. Requirements are UNCLEAR as the team is still learning what works. The buyer priority is flexibility to pivot as the campaign develops.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Fixed Price -- Set $80K deliverables now and lock scope",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Cost Reimbursable -- Pay actual costs plus fee, maintain flexibility to pivot",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Time & Materials -- Pay hourly for creative work as needed",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Fixed Price with change order process -- Lock price but allow modifications",
+                "correct": false
+              }
+            ],
+            "explanation": "Evolving scope + high uncertainty + need for flexibility = Cost Reimbursable. The buyer accepts cost uncertainty in exchange for the ability to adapt as requirements clarify. The vendor is not forced to guess at unclear requirements and risk losses.",
+            "correctFeedback": {
+              "text": "Evolving scope + high uncertainty + need for flexibility = Cost Reimbursable. The buyer accepts cost uncertainty in exchange for the ability to adapt as requirements clarify. The vendor is not forced to guess at unclear requirements and risk losses.",
+              "character": "Carlos Mendez",
+              "characterQuote": "We don't know what message will resonate yet. Cost Reimbursable gives us room to experiment, test, and pivot without triggering expensive change orders every time direction shifts."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The marketing strategy is still evolving. We can't lock scope today. Which contract type gives us flexibility to adapt as we learn what works?",
+              "character": "Carlos Mendez",
+              "characterQuote": "The marketing strategy is still evolving. We can't lock scope today. Which contract type gives us flexibility to adapt as we learn what works?"
+            },
+            "retryHint": "When the scope is still evolving and deliverables depend on future learning, which contract type provides flexibility without punishing changes?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What contract type should Rashid recommend for equipment maintenance?",
+            "points": 100,
+            "scenario_name": "Equipment Maintenance -- Unpredictable Hours",
+            "situation": "Savory & Co. needs ongoing kitchen equipment maintenance with a $30K annual budget estimate. Equipment fails randomly -- nobody knows when the freezer will break or how long repairs will take. Hours required vary from quick 30-minute fixes to multi-day overhauls. The buyer priority is paying for actual work done at a predictable hourly rate, with an option for budget protection.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Fixed Price -- Annual maintenance contract for a flat $30K",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Cost Reimbursable -- Reimburse actual repair costs plus management fee",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Time & Materials -- Pay agreed hourly rate for actual hours worked, with not-to-exceed clause",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Fixed Price with unlimited repairs included",
+                "correct": false
+              }
+            ],
+            "explanation": "Unpredictable work hours + ongoing need + no fixed endpoint = Time & Materials. Savory pays an agreed hourly rate for actual time worked. Adding a not-to-exceed clause ($30K cap) prevents budget surprises while keeping the flexibility to handle unpredictable repairs.",
+            "correctFeedback": {
+              "text": "Unpredictable work hours + ongoing need + no fixed endpoint = Time & Materials. Savory pays an agreed hourly rate for actual time worked. Adding a not-to-exceed clause ($30K cap) prevents budget surprises while keeping the flexibility to handle unpredictable repairs.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Nobody knows when the freezer will break down or how long repairs take. T&M with a cap gives us predictable rates AND budget protection. We pay for what we use."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Equipment failures are random and unpredictable. Which contract type pays for actual hours at a set rate, without forcing us to guess at scope we can't predict?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Equipment failures are random and unpredictable. Which contract type pays for actual hours at a set rate, without forcing us to guess at scope we can't predict?"
+            },
+            "retryHint": "When work hours are unpredictable and repairs happen randomly, which contract type pays a set rate for actual time -- with an option to add a budget cap?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "Which statement CORRECTLY describes risk allocation across all three contract types?",
+            "points": 100,
+            "scenario_name": "Risk Allocation Understanding",
+            "situation": "Ava asks Rashid to explain the risk trade-off for each contract type before she signs off on the procurement strategy. She wants to understand who bears more risk -- buyer or seller -- for each of the three core contract types: Fixed Price, Cost Reimbursable, and Time & Materials.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Fixed Price = Buyer HIGH risk, Seller LOW risk (buyer absorbs overruns)",
+                "correct": false,
+                "whyWrong": "Backwards. In Fixed Price, the SELLER absorbs cost overruns, not the buyer. The buyer has LOW risk because they know the exact cost upfront."
+              },
+              {
+                "id": "B",
+                "text": "Fixed Price = Buyer LOW, Seller HIGH / Cost Reimbursable = Buyer HIGH, Seller LOW / T&M = Buyer MEDIUM, Seller LOW",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "All three contract types share risk equally between buyer and seller",
+                "correct": false,
+                "whyWrong": "Contract types exist specifically BECAUSE of different risk allocations. Each type intentionally shifts risk differently based on scope clarity and buyer/seller priorities."
+              },
+              {
+                "id": "D",
+                "text": "Risk depends on the vendor's reputation, not the contract type",
+                "correct": false,
+                "whyWrong": "Vendor reputation matters operationally, but the contract TYPE determines who bears cost overrun risk contractually. A good vendor with a bad contract type still creates structural risk."
+              }
+            ],
+            "explanation": "In Fixed Price, the seller absorbs cost overruns (HIGH risk) while the buyer knows the exact cost (LOW risk). In Cost Reimbursable, the buyer reimburses actual costs that can escalate (HIGH risk) while the seller's costs are covered (LOW risk). In T&M, the buyer pays hours times rate with moderate exposure (MEDIUM risk) while the seller is paid for actual work (LOW risk).",
+            "correctFeedback": {
+              "text": "In Fixed Price, the seller absorbs cost overruns (HIGH risk) while the buyer knows the exact cost (LOW risk). In Cost Reimbursable, the buyer reimburses actual costs that can escalate (HIGH risk) while the seller's costs are covered (LOW risk). In T&M, the buyer pays hours times rate with moderate exposure (MEDIUM risk) while the seller is paid for actual work (LOW risk).",
+              "character": "Ava Thompson",
+              "characterQuote": "Now I see the trade-off. Fixed Price protects our budget but only works with clear scope. Cost Reimbursable gives flexibility but shifts cost risk to us. T&M is the middle ground. Match the risk to the work."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about who pays when costs go over estimate. In Fixed Price, does the buyer or seller absorb overruns? That tells you who has higher risk.",
+              "character": "Ava Thompson",
+              "characterQuote": "Think about who pays when costs go over estimate. In Fixed Price, does the buyer or seller absorb overruns? That tells you who has higher risk."
+            },
+            "retryHint": "In a Fixed Price contract, if costs go 20% over estimate, who pays the difference -- the buyer or the seller? That answer tells you who bears more risk."
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "What hybrid modification should Rashid recommend to protect against cost overruns while maintaining flexibility?",
+            "points": 100,
+            "scenario_name": "Hybrid Contract Modification",
+            "situation": "After selecting Cost Reimbursable for the marketing campaign, Ava is concerned: \"Cost Reimbursable gives us flexibility, but what if costs spiral out of control? I don't want an open-ended commitment to reimburse whatever the vendor spends.\" Sam suggests adding a modification to the contract to balance flexibility with budget protection.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Convert to Fixed Price to eliminate cost risk entirely",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Add a cost ceiling (not-to-exceed clause) to the Cost Reimbursable contract",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Add an incentive fee for early completion",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Accept unlimited cost risk -- that is inherent to Cost Reimbursable",
+                "correct": false
+              }
+            ],
+            "explanation": "A cost ceiling (not-to-exceed clause) caps total reimbursement at a maximum amount ($80K) while maintaining Cost Reimbursable flexibility. The vendor gets reimbursed for actual costs up to the ceiling -- any work beyond requires separate approval. This is the \"best of both worlds\" modification: flexibility + budget protection.",
+            "correctFeedback": {
+              "text": "A cost ceiling (not-to-exceed clause) caps total reimbursement at a maximum amount ($80K) while maintaining Cost Reimbursable flexibility. The vendor gets reimbursed for actual costs up to the ceiling -- any work beyond requires separate approval. This is the \"best of both worlds\" modification: flexibility + budget protection.",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Cost ceiling is the smart play. We keep the flexibility for evolving scope AND protect our budget at $80K. Vendor gets reimbursed up to the cap. Anything beyond needs our approval first."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ava's concern is cost overruns, not completion speed. Which modification directly CAPS our cost exposure while keeping the flexibility we need for evolving scope?",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Ava's concern is cost overruns, not completion speed. Which modification directly CAPS our cost exposure while keeping the flexibility we need for evolving scope?"
+            },
+            "retryHint": "Ava's concern is cost spiraling out of control. Which modification puts a hard cap on how much Savory will reimburse -- while still allowing the vendor flexibility within that cap?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Contract Types & Risk Allocation Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The Three Core Contract Types",
+            "subtitle": "",
+            "content": "The contract type determines WHO bears the risk. Selecting the right type depends on scope clarity, risk tolerance, and buyer priorities.\n\n**Fixed Price (FP)** -- Seller delivers specified scope for a fixed total price.\n- Buyer risk: LOW (knows exact cost upfront)\n- Seller risk: HIGH (must absorb any cost overruns)\n- Best for: Well-defined scope, stable requirements, clear specifications\n- Variants: Firm Fixed Price (FFP), Fixed Price Incentive Fee (FPIF), Fixed Price Economic Price Adjustment (FPEPA)\n\n**Cost Reimbursable (CR)** -- Buyer reimburses seller's actual costs plus a fee.\n- Buyer risk: HIGH (costs can escalate beyond estimate)\n- Seller risk: LOW (costs are covered, profit guaranteed as fee)\n- Best for: Evolving scope, high uncertainty, R&D, creative work\n- Variants: Cost Plus Fixed Fee (CPFF), Cost Plus Incentive Fee (CPIF), Cost Plus Award Fee (CPAF)\n\n**Time & Materials (T&M)** -- Pay agreed hourly/daily rate for actual time worked, plus materials.\n- Buyer risk: MEDIUM (hours x rate, can add not-to-exceed clause)\n- Seller risk: LOW (paid for actual time regardless of outcomes)\n- Best for: Unpredictable hours, ongoing work, staff augmentation, maintenance"
+          },
+          {
+            "id": "tab2",
+            "title": "Risk Allocation & Decision Framework",
+            "subtitle": "",
+            "content": "**The Decision Rule:**\n- Clear scope + stable requirements --> Fixed Price (transfer risk to seller)\n- Evolving scope + high uncertainty --> Cost Reimbursable (accept risk for flexibility)\n- Unpredictable hours + ongoing work --> Time & Materials (balanced risk with rate certainty)\n\n| Contract Type | Buyer Risk | Seller Risk | Scope Requirement | When to Use |\n|---------------|-----------|-------------|-------------------|-------------|\n| Fixed Price | LOW | HIGH | Clear and stable | Know exactly what you want |\n| Cost Reimbursable | HIGH | LOW | Evolving and uncertain | Need flexibility to adapt |\n| Time & Materials | MEDIUM | LOW | Unpredictable hours | Cannot predict effort needed |\n\n**Key Insight:** Scope clarity drives appropriate risk allocation. Mismatching contract type to scope clarity creates conflict -- vendor disputes, change orders, and budget blowouts.",
+            "diagram": {
+              "image": "/images/C3L6_diagram_contract_types.webp",
+              "alt": "Contract Types and Risk Allocation"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Hybrid Modifications & Controls",
+            "subtitle": "",
+            "content": "Pure contract types can be modified to balance risk between buyer and seller:\n\n- **Cost Ceiling (Not-to-Exceed):** Caps total reimbursement at a maximum amount. Use with CR or T&M. Maintains flexibility while protecting budget.\n- **Incentive Fee:** Bonus or penalty based on cost, schedule, or performance targets. Use with FP (FPIF) or CR (CPIF). Aligns buyer/seller interests toward shared goals.\n- **Performance Milestones:** Payments tied to deliverable completion. Use with any contract type. Ensures progress before full payment.\n- **Award Fee:** Fee based on subjective evaluation of seller performance. Use with CR (CPAF). Provides buyer discretion on fee amount."
+          },
+          {
+            "id": "tab4",
+            "title": "Procurement Planning Essentials",
+            "subtitle": "",
+            "content": "**Statement of Work (SOW):** Describes the procurement item in sufficient detail for prospective sellers to determine if they can provide it. Includes scope description, performance period, deliverables, and acceptance criteria.\n\n**Source Selection Criteria:** How proposals will be evaluated -- technical capability, past performance, price, management approach, financial capacity. Weighted scoring ensures objective evaluation.\n\n**Make-or-Buy Analysis:** Decision framework for whether to produce internally or procure externally. Consider: cost comparison, available capacity, expertise, risk, strategic importance, and intellectual property.\n\n**PMBOK Reference:** PMBOK 7th Ed, Pages 171-173 (Contract Types), Page 307 (Procurement Management)"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Cost Overrun Crisis on the Marketing Contract",
+        "scenario": {
+          "title": "Cost Overrun Crisis on the Marketing Contract",
+          "description": "Three months into the marketing campaign (Cost Reimbursable contract), problems emerge. The Month 1 invoice arrives at $25K -- but the $80K budget was planned for 6 months, meaning the expected monthly spend was approximately $13K. At this burn rate, the budget will be exhausted in 3 months instead of 6. Ava is furious: \"This is exactly why I worried about Cost Reimbursable!\"",
+          "images": [
+            {
+              "src": "/images/C3L6_comic_transfer.webp",
+              "alt": "Transfer: Managing contract performance issues"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What should Rashid do about the cost overrun trend?",
+            "points": 100,
+            "scenario_name": "Addressing the Cost Overrun",
+            "situation": "The marketing vendor submitted a $25K invoice for Month 1 work on the Cost Reimbursable contract. While the work quality is good, the burn rate of $25K per month threatens to exhaust the $80K budget by Month 3 instead of Month 6. Ava demands immediate action to protect the budget.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Switch to a Fixed Price contract immediately to eliminate cost risk",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Add a cost ceiling (not-to-exceed $80K) to the existing Cost Reimbursable contract",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Terminate the contract and find a new vendor who will accept a tighter budget",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Accept the overrun -- Cost Reimbursable means we pay actual costs regardless",
+                "correct": false
+              }
+            ],
+            "explanation": "A cost ceiling (not-to-exceed clause) protects the budget while maintaining flexibility for the still-evolving scope. The vendor gets reimbursed for actual costs up to the $80K cap. Any work beyond the ceiling requires separate approval. This addresses Ava's concern without losing the flexibility the marketing campaign needs.",
+            "correctFeedback": {
+              "text": "A cost ceiling (not-to-exceed clause) protects the budget while maintaining flexibility for the still-evolving scope. The vendor gets reimbursed for actual costs up to the $80K cap. Any work beyond the ceiling requires separate approval. This addresses Ava's concern without losing the flexibility the marketing campaign needs.",
+              "character": "Rashid Patel",
+              "characterQuote": "Cost ceiling is the right move. We keep our flexibility for the evolving campaign AND protect at $80K. The vendor can work freely within the cap -- anything beyond needs our explicit approval."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "We need to address cost exposure without losing flexibility. Which modification caps our total spend while still allowing the vendor to adapt as the campaign evolves?",
+              "character": "Rashid Patel",
+              "characterQuote": "We need to address cost exposure without losing flexibility. Which modification caps our total spend while still allowing the vendor to adapt as the campaign evolves?"
+            },
+            "retryHint": "Ava wants budget protection. The team needs flexibility. Which contract modification gives BOTH -- a hard budget cap with continued adaptability for evolving scope?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "How should Rashid respond to the vendor's concern about the cost ceiling?",
+            "points": 100,
+            "scenario_name": "Vendor Pushback on the Ceiling",
+            "situation": "Rashid proposes a $80K cost ceiling to the marketing vendor. The vendor pushes back: \"An $80K ceiling limits our ability to do great work. We need flexibility to try different approaches. If you cap our reimbursement, we might not be able to deliver the results you want.\" Rashid needs to find a solution that satisfies both parties.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Remove the ceiling to preserve the vendor relationship and ensure quality work",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Offer an approval process for work beyond $80K instead of a hard ceiling",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Terminate and find a vendor who will accept the ceiling without complaint",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Reduce the campaign scope to guarantee it fits within $80K regardless of quality",
+                "correct": false
+              }
+            ],
+            "explanation": "An approval process instead of a hard ceiling is the optimal compromise. The vendor can request additional budget if justified by campaign performance data. Savory maintains oversight without eliminating the possibility of investing more if results warrant it. Both parties have a voice in budget decisions beyond the threshold.",
+            "correctFeedback": {
+              "text": "An approval process instead of a hard ceiling is the optimal compromise. The vendor can request additional budget if justified by campaign performance data. Savory maintains oversight without eliminating the possibility of investing more if results warrant it. Both parties have a voice in budget decisions beyond the threshold.",
+              "character": "Ava Thompson",
+              "characterQuote": "Smart compromise. The vendor can make a case for more budget if results justify it. We maintain oversight. Both sides have a voice. That's good contract management."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Neither surrendering budget control nor terminating the relationship is ideal. What middle ground gives the vendor a path to more budget while keeping Savory in control of the decision?",
+              "character": "Ava Thompson",
+              "characterQuote": "Neither surrendering budget control nor terminating the relationship is ideal. What middle ground gives the vendor a path to more budget while keeping Savory in control of the decision?"
+            },
+            "retryHint": "The vendor wants room to do great work. Ava wants budget control. What solution lets the vendor request more budget while keeping Savory's approval required before spending beyond the cap?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What preventive measure should Rashid implement for future Cost Reimbursable contracts?",
+            "points": 100,
+            "scenario_name": "Preventing Future Surprises",
+            "situation": "After resolving the current cost overrun situation, Ava asks Rashid: \"How do we prevent this kind of invoice shock on future Cost Reimbursable contracts? I don't want another surprise where we're burning at double the expected rate and don't find out until the invoice arrives.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Never use Cost Reimbursable contracts again -- they are too risky for Savory",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Include cost ceiling AND monthly cost reporting requirements from contract start",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Require detailed scope definition before starting any engagement to avoid Cost Reimbursable",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Hire internal staff instead of using external contractors for uncertain work",
+                "correct": false
+              }
+            ],
+            "explanation": "Proactive controls built into the contract from day one prevent surprises. A cost ceiling establishes the budget boundary. Monthly reporting provides early warning of cost trends -- if Month 1 exceeds expectations, the team can intervene immediately instead of discovering the problem weeks later. Build controls into the contract upfront, not reactively after a crisis.",
+            "correctFeedback": {
+              "text": "Proactive controls built into the contract from day one prevent surprises. A cost ceiling establishes the budget boundary. Monthly reporting provides early warning of cost trends -- if Month 1 exceeds expectations, the team can intervene immediately instead of discovering the problem weeks later. Build controls into the contract upfront, not reactively after a crisis.",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Ceiling plus monthly reporting is the gold standard. Ceiling caps exposure. Monthly reporting gives early warning. If we'd had both from day one, we'd have caught the burn rate in Week 4, not Month 2."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Avoiding Cost Reimbursable entirely isn't realistic -- some work genuinely needs flexibility. What controls would let us use CR safely, with visibility into spending patterns from the start?",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Avoiding Cost Reimbursable entirely isn't realistic -- some work genuinely needs flexibility. What controls would let us use CR safely, with visibility into spending patterns from the start?"
+            },
+            "retryHint": "The problem was not the contract type -- it was the lack of built-in controls. What two proactive measures (one for budget protection, one for visibility) would prevent invoice shock from day one?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **procurement contract selection** is fundamentally about matching contract type to scope clarity and risk tolerance. The wrong match -- Fixed Price on unclear scope, Cost Reimbursable on clear scope, T&M without controls -- creates conflict, waste, and budget blowouts.",
+        "key_takeaways": [
+          "Match Contract to Scope Clarity -- Clear scope = Fixed Price. Evolving scope = Cost Reimbursable. Unpredictable hours = Time & Materials. Scope clarity is the primary driver.",
+          "Risk Allocation Drives Selection -- Fixed Price: seller bears overrun risk. Cost Reimbursable: buyer bears cost uncertainty. T&M: buyer has moderate risk at set rates.",
+          "Hybrid Modifications Balance Risk -- Cost ceilings, incentive fees, and performance milestones modify base types to balance buyer and seller interests.",
+          "Controls Are Non-Negotiable -- Cost Reimbursable does not mean unlimited budget. Always include ceilings, reporting, and approval thresholds to manage exposure.",
+          "Contract Administration Matters -- Selecting the right type is step one. Monitoring performance, managing changes, and maintaining vendor relationships are ongoing responsibilities."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think all contracts were basically the same -- just agree on a price and go. Now I understand that the contract TYPE determines who bears the risk. Fixed Price for clear scope, Cost Reimbursable for evolving scope, T&M for unpredictable hours. And always -- always -- add controls like cost ceilings and monthly reporting. The right contract protects both sides."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L7",
+          "title": "Contract Administration & Closure (future)",
+          "description": "You've selected the right contract types -- now learn how to manage vendor performance, handle contract changes, conduct procurement audits, and formally close contracts when the work is done."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Which contract type is MOST appropriate?",
+            "points": 50,
+            "scenario_name": "Clear Scope Contract Selection",
+            "situation": "A project manager is procuring services for a project where the scope is well-defined with approved specifications and detailed requirements documents. The buyer wants cost certainty and is willing to transfer cost overrun risk to the seller. The work is straightforward with no expected changes.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Cost Plus Fixed Fee",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Firm Fixed Price",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Time and Materials",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Cost Plus Incentive Fee",
+                "correct": false
+              }
+            ],
+            "explanation": "Well-defined scope + approved specs + buyer wants cost certainty + willing to transfer risk = Firm Fixed Price. The seller accepts overrun risk because they can estimate accurately with clearly defined scope. The buyer gets cost certainty -- the exact price is known upfront.",
+            "correctFeedback": {
+              "text": "Well-defined scope + approved specs + buyer wants cost certainty + willing to transfer risk = Firm Fixed Price. The seller accepts overrun risk because they can estimate accurately with clearly defined scope. The buyer gets cost certainty -- the exact price is known upfront.",
+              "character": "Rashid Patel",
+              "characterQuote": "Textbook Fixed Price. Clear scope means the seller can estimate accurately and accept the risk. The buyer knows the exact cost. Both sides are protected when scope is locked."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Clear scope + cost certainty goal + risk transfer to seller. Only one contract type delivers all three of those conditions.",
+              "character": "Rashid Patel",
+              "characterQuote": "Clear scope + cost certainty goal + risk transfer to seller. Only one contract type delivers all three of those conditions."
+            },
+            "retryHint": "When scope is clear and the buyer wants to know the exact cost upfront, which contract type locks the price and makes the seller responsible for any overruns?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What modification can the buyer negotiate to protect against further cost overruns while maintaining flexibility?",
+            "points": 50,
+            "scenario_name": "Cost Ceiling Modification",
+            "situation": "A buyer enters a Cost Plus Fixed Fee contract for software development. Midway through, the buyer becomes concerned about escalating costs. The project scope is still evolving, so converting to Fixed Price is not practical. The buyer wants to maintain flexibility while limiting total financial exposure.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Convert to a Fixed Price contract",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Add a cost ceiling (not-to-exceed clause)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Terminate the contract immediately",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Accept the costs as inherent to Cost Plus contracts",
+                "correct": false
+              }
+            ],
+            "explanation": "A cost ceiling (not-to-exceed clause) caps total reimbursement while maintaining Cost Plus flexibility. The buyer's budget is protected at the ceiling amount. The vendor continues to get reimbursed for actual costs up to the cap. This is a standard modification that balances flexibility with financial protection.",
+            "correctFeedback": {
+              "text": "A cost ceiling (not-to-exceed clause) caps total reimbursement while maintaining Cost Plus flexibility. The buyer's budget is protected at the ceiling amount. The vendor continues to get reimbursed for actual costs up to the cap. This is a standard modification that balances flexibility with financial protection.",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Cost ceiling is standard practice. Caps your exposure, keeps your flexibility. The vendor works within the ceiling -- anything beyond requires a separate approval and justification."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The scope is still evolving, so Fixed Price won't work. But that doesn't mean the buyer must accept unlimited cost exposure. What standard modification caps the total reimbursement?",
+              "character": "Sam Rodriguez",
+              "characterQuote": "The scope is still evolving, so Fixed Price won't work. But that doesn't mean the buyer must accept unlimited cost exposure. What standard modification caps the total reimbursement?"
+            },
+            "retryHint": "The buyer needs flexibility (scope is evolving) AND budget protection (costs are escalating). Which modification provides a hard cap on total reimbursement without eliminating adaptability?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which contract type is MOST appropriate?",
+            "points": 50,
+            "scenario_name": "Unpredictable Maintenance Work",
+            "situation": "A project manager needs to procure ongoing maintenance services where the work required is unpredictable. Equipment fails randomly, repairs vary from simple 30-minute fixes to complex multi-day overhauls, and there is no way to predict monthly hours in advance. The PM wants to pay for actual work done at a predictable rate.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Firm Fixed Price",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Cost Plus Award Fee",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Time and Materials",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Fixed Price Incentive Fee",
+                "correct": false
+              }
+            ],
+            "explanation": "Time and Materials is ideal for unpredictable hours -- the buyer pays an agreed rate for actual time worked. The hourly rate is predictable even though total hours are not. Adding a not-to-exceed clause provides budget protection without requiring scope prediction.",
+            "correctFeedback": {
+              "text": "Time and Materials is ideal for unpredictable hours -- the buyer pays an agreed rate for actual time worked. The hourly rate is predictable even though total hours are not. Adding a not-to-exceed clause provides budget protection without requiring scope prediction.",
+              "character": "Alex Mitchell",
+              "characterQuote": "T&M is the standard for maintenance. Predictable rate, unpredictable hours. Add a not-to-exceed clause and you have budget protection too."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Random failures, varying repair complexity, no way to predict hours. Which contract type pays for actual time at a set rate instead of forcing a scope estimate that cannot be accurate?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Random failures, varying repair complexity, no way to predict hours. Which contract type pays for actual time at a set rate instead of forcing a scope estimate that cannot be accurate?"
+            },
+            "retryHint": "When work hours are completely unpredictable but hourly rates can be agreed upon, which contract type pays for actual time worked without requiring a total scope estimate?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "In a Fixed Price contract, who bears the greatest risk for cost overruns?",
+            "points": 50,
+            "scenario_name": "Risk Allocation in Fixed Price",
+            "situation": "During a procurement planning meeting, a stakeholder asks the project manager to explain the risk implications of the Fixed Price contract they are recommending for a well-defined construction project. The stakeholder wants to understand who bears the greatest financial risk if costs exceed the original estimate.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The buyer, because they must pay the fixed amount regardless of value delivered",
+                "correct": false,
+                "whyWrong": "Paying a fixed amount is actually LOW risk -- the buyer knows the exact cost. It is the SELLER who faces risk because they must deliver within that fixed amount even if their costs exceed it."
+              },
+              {
+                "id": "B",
+                "text": "The seller, because they must deliver the specified scope within the fixed price",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Risk is shared equally between buyer and seller in all Fixed Price contracts",
+                "correct": false,
+                "whyWrong": "Fixed Price intentionally shifts cost overrun risk to the seller in exchange for cost certainty for the buyer. The risk allocation is NOT equal -- it is deliberately asymmetric."
+              },
+              {
+                "id": "D",
+                "text": "Neither party bears significant risk because the price is fixed",
+                "correct": false,
+                "whyWrong": "Risk is not eliminated by fixing the price -- it is transferred. The seller accepts significant cost overrun risk. If costs run 20% over estimate, the seller absorbs the loss entirely."
+              }
+            ],
+            "explanation": "In a Fixed Price contract, the seller must deliver the specified scope for the agreed price. If actual costs exceed the estimate, the seller absorbs the overrun -- reducing profit or creating losses. The buyer has LOW risk because they know the exact cost upfront. This is why Fixed Price requires clear scope: the seller needs accurate estimates to price fairly.",
+            "correctFeedback": {
+              "text": "In a Fixed Price contract, the seller must deliver the specified scope for the agreed price. If actual costs exceed the estimate, the seller absorbs the overrun -- reducing profit or creating losses. The buyer has LOW risk because they know the exact cost upfront. This is why Fixed Price requires clear scope: the seller needs accurate estimates to price fairly.",
+              "character": "Ava Thompson",
+              "characterQuote": "That's the core trade-off. In Fixed Price, we as the buyer know our exact cost. The seller takes the overrun risk -- which is fair because the scope is clear enough for them to estimate accurately."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about who writes the check when costs exceed the estimate. In Fixed Price, does the buyer pay more, or does the seller absorb the difference? That tells you who carries the risk.",
+              "character": "Ava Thompson",
+              "characterQuote": "Think about who writes the check when costs exceed the estimate. In Fixed Price, does the buyer pay more, or does the seller absorb the difference? That tells you who carries the risk."
+            },
+            "retryHint": "If a Fixed Price contractor estimated $100K for a project but actual costs reach $120K, who pays the extra $20K? The buyer pays only the agreed $100K -- the seller absorbs the $20K overrun."
+          }
+        ]
+      }
+    }
+  ]
+}

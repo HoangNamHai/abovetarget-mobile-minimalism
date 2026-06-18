@@ -1,0 +1,691 @@
+{
+  "lessonId": "B2L4",
+  "lessonTitle": "Leadership Styles",
+  "courseId": "B2",
+  "courseName": "Team Leadership & Development",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Identify the five core leadership styles: Servant, Transformational, Transactional, Laissez-faire, and Autocratic/Directive",
+    "Apply Situational Leadership by matching leadership style to team maturity and task complexity",
+    "Distinguish between empowerment-based leadership (Servant, Transformational, Laissez-faire) and control-based leadership (Transactional, Autocratic)",
+    "Recognize PMI's preference for Servant Leadership in Agile environments",
+    "Understand that effective leaders ADAPT their style to context — not apply one style everywhere"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "dr_amelia_foster",
+    "marco_silva",
+    "elena_vasquez",
+    "taylor_kim"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Three Teams, Three Maturity Levels: Which Leadership Style Fits Each?",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. Carlos insists you \"pick one leadership style and stick with it.\" But your three teams couldn't be more different — new hires needing guidance, veterans resenting oversight, and innovators requiring empowerment. Can you prove that adaptable leadership beats rigid consistency?",
+        "failure_cards": [
+          {
+            "id": "veterans_quit",
+            "icon": "📋",
+            "title": "Veterans Quit",
+            "summary": "Marco's veteran team resigns after being micromanaged",
+            "image": "/images/B2L4_comic_veterans.webp",
+            "details": "When Alex applied directive leadership to the Kitchen Brigade, Marco's veterans felt insulted. \"We've been doing this for 15 years. We don't need babysitting.\" Three senior chefs resigned within 2 weeks. Institutional knowledge and morale — gone. Wrong style plus wrong team equals disaster. Micromanaging experts kills morale and drives out your best people."
+          },
+          {
+            "id": "rookies_flounder",
+            "icon": "⚠️",
+            "title": "Rookies Flounder",
+            "summary": "Catering crew makes costly mistakes without guidance",
+            "image": "/images/B2L4_comic_rookies.webp",
+            "details": "When Alex gave the catering crew too much autonomy, chaos ensued. Wrong portion sizes. Missed allergen protocols. A near-miss food safety incident. Elena (HR): \"They needed training and structure. Instead they got 'figure it out yourself.'\" Rookies need direction. Treating inexperienced hires like self-directed experts creates dangerous confusion."
+          },
+          {
+            "id": "innovation_stalls",
+            "icon": "💡",
+            "title": "Innovation Stalls",
+            "summary": "Creativity dies under transactional reward/punishment system",
+            "image": "/images/B2L4_comic_innovation.webp",
+            "details": "Alex used rewards and metrics to manage the Innovation Lab. Taylor (Scrum Master): \"If I'm punished for failed experiments, I'll only pitch safe ideas.\" The team stopped taking creative risks. Innovation metrics dropped 60%. No breakthrough dishes in 3 months. Transactional leadership kills creativity because innovators need empowerment, not metrics."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Leadership Consultant",
+          "quote": "One size fits no one. Veterans need autonomy. Rookies need direction. Innovators need empowerment. Match your leadership style to each team's maturity — not your personal preference."
+        },
+        "learning_hook": "**Situational Leadership** is the #1 skill that separates effective PMs from average ones. The best leaders adapt their style to context. Let's learn how to match leadership approach to team needs."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "match_the_right_leadership_style_to_each_team",
+        "title": "Match the Right Leadership Style to Each Team",
+        "description": "Dr. Amelia Foster guides you through situational leadership. \"Each team has different maturity levels, different motivations, and different needs. Your job is to match the right leadership style to each situation — not force one style everywhere.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Which leadership style BEST fits the Kitchen Brigade?",
+            "points": 125,
+            "scenario_name": "Kitchen Brigade Leadership",
+            "situation": "Marco Silva's Kitchen Brigade consists of 5 veteran chefs, each with 15+ years of Michelin-level experience. They're highly autonomous, self-directed, and resent oversight. Marco tells Alex: \"We've been doing this since before you were born. Just tell us what you need, and get out of our way.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Servant Leadership — support the team and remove obstacles",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Transactional — set clear targets with rewards for meeting them",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Laissez-faire — give specs, set milestones, trust their expertise",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Autocratic/Directive — provide daily supervision and detailed instructions",
+                "correct": false
+              }
+            ],
+            "explanation": "Laissez-faire leadership is ideal for highly skilled, self-directed teams. Veterans with 15+ years of Michelin experience don't need — and will resent — close supervision. They need trust, clear requirements, and autonomy. PMBOK 7th Edition: \"Laissez-faire suits highly skilled teams that are self-directed.\"",
+            "correctFeedback": {
+              "text": "Laissez-faire leadership is ideal for highly skilled, self-directed teams. Veterans with 15+ years of Michelin experience don't need — and will resent — close supervision. They need trust, clear requirements, and autonomy. PMBOK 7th Edition: \"Laissez-faire suits highly skilled teams that are self-directed.\"",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect match. Veterans like Marco have forgotten more about cooking than most people learn in a lifetime. Your job isn't to direct them — it's to clear their path and let them create magic."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I've trained under three Michelin-starred chefs. I know my craft. What I need from leadership is trust, resources, and freedom — not supervision or metrics.",
+              "character": "Marco Silva",
+              "characterQuote": "I've trained under three Michelin-starred chefs. I know my craft. What I need from leadership is trust, resources, and freedom — not supervision or metrics."
+            },
+            "retryHint": "Consider the team's experience level and motivation. What do experts with 15+ years need most — supervision, rewards, or trust?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Which leadership style BEST fits the Catering Crew?",
+            "points": 125,
+            "scenario_name": "Catering Crew Leadership",
+            "situation": "The new Catering Crew consists of 5 recent hires, most with no F&B experience. They're eager but need structure — clear expectations, training, and guidance. Elena (HR) notes: \"They don't know what they don't know. Without direction, they'll make dangerous mistakes.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Laissez-faire — let them learn from their mistakes",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Transformational — inspire them with the restaurant's vision",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Autocratic/Directive — provide clear commands, step-by-step training, and close supervision",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Servant Leadership — ask what they need and remove obstacles",
+                "correct": false
+              }
+            ],
+            "explanation": "Inexperienced teams with high-stakes work (food safety!) need directive leadership — clear commands, structured training, and close supervision until they build competence. This isn't micromanagement — it's appropriate guidance for the team's current maturity level. As they develop skills, transition to coaching, then democratic, then eventually laissez-faire.",
+            "correctFeedback": {
+              "text": "Inexperienced teams with high-stakes work (food safety!) need directive leadership — clear commands, structured training, and close supervision until they build competence. This isn't micromanagement — it's appropriate guidance for the team's current maturity level. As they develop skills, transition to coaching, then democratic, then eventually laissez-faire.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Exactly right. New hires don't need 'empowerment' — they need TRAINING. Once they're competent, we can give them autonomy. But you can't skip the learning phase. That's how accidents happen."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I've seen what happens when new hires are left to 'figure it out.' Wrong portions, missed allergens, near-miss incidents. Direction isn't about control — it's about SAFETY until they're ready.",
+              "character": "Elena Vasquez",
+              "characterQuote": "I've seen what happens when new hires are left to 'figure it out.' Wrong portions, missed allergens, near-miss incidents. Direction isn't about control — it's about SAFETY until they're ready."
+            },
+            "retryHint": "These are first-time employees handling food safety and allergen protocols. What's at stake if they make errors? What type of leadership prevents dangerous mistakes?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Which leadership style BEST fits the Innovation Lab?",
+            "points": 125,
+            "scenario_name": "Innovation Lab Leadership",
+            "situation": "Taylor Kim leads the Innovation Lab — a cross-functional team of chefs, marketers, and designers experimenting with fusion cuisine. They need creative freedom to take risks, try experiments, and sometimes fail. Taylor says: \"Innovation dies when people fear failure. We need permission to experiment without punishment.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Transactional — set innovation targets with bonuses for hitting them",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Transformational — inspire with vision, empower creativity, encourage safe-to-fail experimentation",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Autocratic/Directive — provide detailed specifications for each experiment",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Laissez-faire — let the team work independently with no leadership input",
+                "correct": false
+              }
+            ],
+            "explanation": "Transformational leadership is ideal for creative, innovative work. It inspires through vision (\"We're creating the future of dining\"), empowers creativity, and encourages safe-to-fail experimentation. PMBOK 7th Edition: \"Transformational leadership empowers teams, promoting creativity and innovation.\"",
+            "correctFeedback": {
+              "text": "Transformational leadership is ideal for creative, innovative work. It inspires through vision (\"We're creating the future of dining\"), empowers creativity, and encourages safe-to-fail experimentation. PMBOK 7th Edition: \"Transformational leadership empowers teams, promoting creativity and innovation.\"",
+              "character": "Taylor Kim",
+              "characterQuote": "When Alex painted the vision — 'attract younger demographics with groundbreaking fusion' — and trusted us to create, that's when the magic happened. Vision plus autonomy equals innovation."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If my experiments can get me punished, I'll only pitch safe ideas. That's not innovation — that's playing defense. We need a leader who inspires us with vision and trusts us to explore.",
+              "character": "Taylor Kim",
+              "characterQuote": "If my experiments can get me punished, I'll only pitch safe ideas. That's not innovation — that's playing defense. We need a leader who inspires us with vision and trusts us to explore."
+            },
+            "retryHint": "Creative teams need to feel safe taking risks and sometimes failing. Which style empowers that kind of creative freedom through vision and trust?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "How should Alex respond to reframe Carlos's understanding of consistency?",
+            "points": 125,
+            "scenario_name": "Reframing Consistency",
+            "situation": "Carlos confronts Alex: \"You're being directive with catering, hands-off with Marco, and inspirational with innovation. That's not leadership — that's inconsistency! Just pick ONE style!\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"You're right, Carlos. I'll pick one style and apply it everywhere for fairness.\"",
+                "correct": false,
+                "whyWrong": "This abandons situational leadership, which you just demonstrated works. One-size-fits-all leadership treats veterans like rookies and rookies like veterans — a recipe for disaster."
+              },
+              {
+                "id": "B",
+                "text": "\"Situational leadership IS consistency — I consistently match style to team maturity.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"PMI says we should use multiple styles. It's best practice.\"",
+                "correct": false,
+                "whyWrong": "While true, this appeals to authority without explaining WHY. Carlos needs to understand the logic, not just accept rules."
+              },
+              {
+                "id": "D",
+                "text": "\"Each team is different, so I do what feels right in the moment.\"",
+                "correct": false,
+                "whyWrong": "This sounds like random improvisation, not deliberate leadership. Situational leadership is STRATEGIC adaptation, not \"feelings.\""
+              }
+            ],
+            "explanation": "TRUE consistency isn't \"same style everywhere\" — it's \"consistently matching style to context.\" The consistency is in your METHOD (assess maturity then match style), not in applying the same approach to vastly different situations. Effective leaders adapt deliberately, not randomly.",
+            "correctFeedback": {
+              "text": "TRUE consistency isn't \"same style everywhere\" — it's \"consistently matching style to context.\" The consistency is in your METHOD (assess maturity then match style), not in applying the same approach to vastly different situations. Effective leaders adapt deliberately, not randomly.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "That's the insight most leaders miss. Consistency of APPROACH (always adapting to context) beats consistency of STYLE (forcing one approach everywhere). You just reframed leadership."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I want to understand your logic, not just hear 'PMI says so' or 'it feels right.' Explain why treating different teams differently makes sense.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I want to understand your logic, not just hear 'PMI says so' or 'it feels right.' Explain why treating different teams differently makes sense."
+            },
+            "retryHint": "Think about what \"consistency\" really means. Is it doing the same thing everywhere regardless of context? Or is it having a consistent METHOD for choosing the right approach?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Situational Leadership Toolkit",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Five Leadership Styles",
+            "subtitle": "",
+            "content": "Effective project managers understand and apply multiple leadership styles depending on team maturity and context:\n\n**1. SERVANT LEADERSHIP** (PMI Recommended for Agile)\n- Leader serves the team, removes obstacles, prioritizes team needs\n- Hallmarks: \"How can I help you succeed?\" mindset\n- Best for: Agile teams, high-performing groups, self-organizing teams\n- Key questions: \"What's blocking you?\" / \"What do you need from me?\"\n\n**2. TRANSFORMATIONAL**\n- Inspires through vision, empowers creativity, encourages innovation\n- Hallmarks: Paints compelling future, builds intrinsic motivation\n- Best for: Creative work, change initiatives, innovation projects\n- Key questions: \"What if we could...?\" / \"Imagine the possibilities\"\n\n**3. TRANSACTIONAL**\n- Motivates through rewards and consequences, structured expectations\n- Hallmarks: Clear rewards for compliance, penalties for deviation\n- Best for: Short-term compliance, regulatory work, routine tasks\n- Warning: Kills creativity and intrinsic motivation if overused\n\n**4. LAISSEZ-FAIRE**\n- Full autonomy, minimal supervision, trust-based delegation\n- Hallmarks: \"Tell me what you need and I'll get out of your way\"\n- Best for: Highly skilled experts, self-directed teams\n- Warning: Only works with HIGH maturity teams — chaos with novices\n\n**5. AUTOCRATIC (DIRECTIVE)**\n- Leader decides alone, gives clear commands, close supervision\n- Hallmarks: Quick decisions, structured guidance, minimal consultation\n- Best for: Crisis situations, new/inexperienced teams, high-stakes safety\n- Warning: Stifles experienced teams, damages morale if overused",
+            "diagram": {
+              "image": "/images/B2L4_diagram_leadership_styles.webp",
+              "alt": "Five leadership styles framework"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Situational Leadership Model",
+            "subtitle": "",
+            "content": "**Core Principle:** Match leadership style to team maturity and task complexity. No single style works everywhere.\n\n**The Maturity Continuum:**\n\n| Team Maturity | Autonomy Readiness | Recommended Style |\n|---------------|-------------------|-------------------|\n| Low (new, learning) | Low (need supervision) | Directive/Autocratic |\n| Medium-Low (growing) | Growing | Coaching |\n| Medium-High (capable) | Capable | Democratic/Supporting |\n| High (experts) | Very High | Laissez-faire/Servant |\n\n**Creative/Innovation Work:** Transformational regardless of maturity (vision inspires creativity)\n\n**Key Insight:** Leadership style should EVOLVE as team matures. The Catering Crew today needs directive leadership; in 6 months they may need coaching; in a year, democratic. The progression is: Directive then Coaching then Supporting then Delegating."
+          },
+          {
+            "id": "tab3",
+            "title": "Servant Leadership Deep Dive",
+            "subtitle": "",
+            "content": "**PMI's Preferred Approach for Agile Teams**\n\nServant leadership inverts the traditional hierarchy. Instead of the leader directing the team, the team is supported by the leader.\n\n**Core Behaviors:**\n1. Remove obstacles — clear the team's path so they can focus on delivery\n2. Provide resources — ensure the team has what they need to succeed\n3. Shield from interference — protect the team from organizational politics and distractions\n4. Develop people — help team members grow their skills and careers\n5. Build trust — create psychological safety where people can take risks\n\n**PMBOK Reference:** \"The project manager acts as a servant leader, focusing on the team's needs and removing impediments.\" (PMBOK 7th Edition)"
+          },
+          {
+            "id": "tab4",
+            "title": "Common Mistakes",
+            "subtitle": "",
+            "content": "**Mistake 1: \"One style fits all\"** — Your preference doesn't matter. The TEAM'S needs determine the style.\n\n**Mistake 2: Micromanaging experts** — Close supervision of senior professionals breeds resentment and turnover. Match laissez-faire or servant leadership to experienced teams.\n\n**Mistake 3: Abandoning novices** — \"Figure it out\" with new hires creates mistakes, safety incidents, and slow learning. Provide directive leadership until competent.\n\n**Mistake 4: Transactional for creative work** — Metrics and rewards for innovation teams kill risk-taking. Use transformational to inspire with vision and accept failure.\n\n**Mistake 5: Confusing style with personality** — \"I'm just not a directive person\" is not an excuse. Situational leadership is a SKILL, not a personality trait. Learn to flex across all styles based on context."
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Exam Alignment",
+            "subtitle": "",
+            "content": "**Key PMP Exam Concepts:**\n- \"Best leadership style\" questions: Answer is always Situational / depends on context\n- Agile team leadership: Servant leadership preferred\n- Innovation/creativity scenarios: Transformational\n- New team members: Directive/coaching initially\n- Expert resistance to oversight: Laissez-faire\n\n**PMBOK References:**\n- Section 3.4: Project Team Management\n- Pages 23-25: Leadership Styles\n- Agile Practice Guide: Servant Leadership"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "San Francisco Expansion Teams",
+        "scenario": {
+          "title": "San Francisco Expansion Teams",
+          "description": "The San Francisco expansion team is launching a new downtown location. Alex must assess three different workstreams and assign appropriate leadership approaches. Each workstream has a different team profile — prove your situational leadership skills.",
+          "images": [
+            {
+              "src": "/images/B2L4_comic_transfer.webp",
+              "alt": "San Francisco expansion team leadership challenge"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Which leadership style should Alex use with the construction team?",
+            "points": 100,
+            "scenario_name": "Construction Contractors",
+            "situation": "The construction contractors are industry veterans with 20+ years of experience. The general contractor tells Alex: \"Just tell us the specs and deadline. We know how to build restaurants.\" They've built dozens of restaurant buildouts and are fully self-directed.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Directive — provide daily supervision and detailed instructions",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Laissez-faire — give specs, set milestones, trust their expertise",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Transformational — inspire them with the vision of the new restaurant",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Democratic — consult on every construction decision before proceeding",
+                "correct": false
+              }
+            ],
+            "explanation": "Expert contractors with decades of experience need laissez-faire leadership. Give them clear requirements, milestone deadlines, and then trust their expertise. This mirrors the Kitchen Brigade scenario — highly skilled professionals need autonomy, not oversight.",
+            "correctFeedback": {
+              "text": "Expert contractors with decades of experience need laissez-faire leadership. Give them clear requirements, milestone deadlines, and then trust their expertise. This mirrors the Kitchen Brigade scenario — highly skilled professionals need autonomy, not oversight.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Professional contractors have built dozens of restaurants. They don't need you to tell them how to lay pipe. They need you to tell them WHAT you want and WHEN you need it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I've worked with these contractors before. They know their craft. What they need is clear requirements and trust — not someone looking over their shoulder.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I've worked with these contractors before. They know their craft. What they need is clear requirements and trust — not someone looking over their shoulder."
+            },
+            "retryHint": "These are 20-year industry veterans who have built more restaurants than Alex has seen. Which style respects their expertise while setting clear expectations?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Which leadership style should Alex use with the marketing interns?",
+            "points": 100,
+            "scenario_name": "Marketing Interns",
+            "situation": "The marketing interns are in their first professional roles. They're enthusiastic but unsure of industry norms, brand standards, and professional expectations. One intern asks: \"Should I tweet that, or check with someone first?\" They handle public-facing social media and brand communications.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Laissez-faire — let them learn from their mistakes",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Autocratic — control all content and decisions personally",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Transformational — inspire them with the brand vision",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Directive with coaching — provide training, close support, and review their work while developing their skills",
+                "correct": true
+              }
+            ],
+            "explanation": "New professionals in public-facing roles need directive coaching — training with explanation, hands-on support while they develop skills, and gradual autonomy as they prove competence. Unlike pure autocratic (which just gives orders), coaching DEVELOPS the intern's judgment for future decisions.",
+            "correctFeedback": {
+              "text": "New professionals in public-facing roles need directive coaching — training with explanation, hands-on support while they develop skills, and gradual autonomy as they prove competence. Unlike pure autocratic (which just gives orders), coaching DEVELOPS the intern's judgment for future decisions.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Interns want to learn, but they need scaffolding. Coaching gives them structure while building their skills. After a few weeks, they'll need less oversight — that's the goal."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "'Figure it out' fails interns. 'Do exactly this' limits them. The middle path is coaching — teach the WHY, not just the WHAT, while keeping close oversight.",
+              "character": "Taylor Kim",
+              "characterQuote": "'Figure it out' fails interns. 'Do exactly this' limits them. The middle path is coaching — teach the WHY, not just the WHAT, while keeping close oversight."
+            },
+            "retryHint": "These are first-time professionals handling public-facing brand communications. What do they need most — freedom, orders, inspiration, or structured learning with support?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Which leadership style should Alex use with the technology team?",
+            "points": 100,
+            "scenario_name": "AI Technology Team",
+            "situation": "The technology team is implementing an experimental AI-powered kitchen management system — cutting-edge technology that no restaurant has deployed before. The tech lead says: \"This is R&D. We'll need to experiment, iterate, and accept that some approaches won't work.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Transformational — inspire with the vision, empower experimentation",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Transactional — set clear metrics and reward successful deployments",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Directive — provide detailed technical specifications",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Democratic — vote on each technical approach",
+                "correct": false
+              }
+            ],
+            "explanation": "Innovation and R&D require transformational leadership. The team needs VISION (\"We're pioneering AI-powered kitchens\"), EMPOWERMENT (\"Experiment freely\"), and SAFE-TO-FAIL culture (\"We expect some approaches won't work. That's learning.\"). Transactional rewards for \"success\" would kill experimentation — people only take risks when failure isn't punished.",
+            "correctFeedback": {
+              "text": "Innovation and R&D require transformational leadership. The team needs VISION (\"We're pioneering AI-powered kitchens\"), EMPOWERMENT (\"Experiment freely\"), and SAFE-TO-FAIL culture (\"We expect some approaches won't work. That's learning.\"). Transactional rewards for \"success\" would kill experimentation — people only take risks when failure isn't punished.",
+              "character": "Taylor Kim",
+              "characterQuote": "R&D teams need permission to fail. When you paint the vision and trust us to find the path, we'll innovate. When you punish failure, we play safe and discover nothing."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Innovation isn't predictable. You can't set metrics for discoveries you haven't made yet. The team needs vision and trust, not targets and deadlines for breakthroughs.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Innovation isn't predictable. You can't set metrics for discoveries you haven't made yet. The team needs vision and trust, not targets and deadlines for breakthroughs."
+            },
+            "retryHint": "This is experimental technology that hasn't been done before. Which leadership style enables innovation and creates a safe-to-fail environment?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to apply **Situational Leadership** by matching leadership style to team maturity, task complexity, and work type. Effective leaders don't have \"one style\" — they have a TOOLKIT of approaches and the wisdom to choose the right one for each context.",
+        "key_takeaways": [
+          "Situational Leadership = Adaptive Consistency: Consistently match style to context, not one style everywhere",
+          "Servant Leadership: PMI's preferred approach for Agile — support the team, remove impediments, don't direct",
+          "Transformational: Inspires creativity and innovation through vision; empowers safe-to-fail experimentation",
+          "Laissez-faire: ONLY for highly skilled, self-directed teams — requires HIGH maturity to work",
+          "Directive/Autocratic: Appropriate for crisis situations or novice teams — never for experts",
+          "Transactional: Short-term compliance only — kills intrinsic motivation and creativity long-term"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Carlos wanted me to pick one style. Dr. Foster showed me that real consistency is about consistently READING the situation and ADAPTING my approach. Veterans get autonomy. Rookies get structure. Innovators get vision. Same method, different execution — that's situational leadership."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L5",
+          "title": "Motivation & Recognition",
+          "description": "Now that you know HOW to lead different teams, learn WHAT motivates them: intrinsic vs extrinsic drivers, recognition styles, and building lasting engagement."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What is the MOST appropriate leadership approach?",
+            "points": 50,
+            "scenario_name": "Servant Leadership in Agile",
+            "situation": "A project manager is leading an Agile team of experienced developers. The team is struggling with impediments — build server issues, conflicting stakeholder requirements, and unclear priorities. Team members are frustrated that these issues aren't being resolved.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Direct the team on how to resolve each issue step by step",
+                "correct": false,
+                "whyWrong": "Experienced developers don't need direction on HOW to do their work. They need the PM to remove obstacles so they CAN work."
+              },
+              {
+                "id": "B",
+                "text": "Focus on removing impediments and clearing the team's path",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Inspire the team with the project vision to boost morale",
+                "correct": false,
+                "whyWrong": "Vision is important, but the immediate need is obstacle removal. Address the impediments first, then worry about morale."
+              },
+              {
+                "id": "D",
+                "text": "Establish reward systems for overcoming challenges",
+                "correct": false,
+                "whyWrong": "Transactional approaches don't address the root problem — unresolved impediments. The team needs support, not incentives."
+              }
+            ],
+            "explanation": "This is classic servant leadership — the PM's role is to remove impediments and clear the team's path. Experienced developers know HOW to do their work; they need the PM to eliminate obstacles so they CAN work. PMBOK 7th Edition: \"The project manager acts as a servant leader, focusing on the team's needs and removing impediments.\"",
+            "correctFeedback": {
+              "text": "This is classic servant leadership — the PM's role is to remove impediments and clear the team's path. Experienced developers know HOW to do their work; they need the PM to eliminate obstacles so they CAN work. PMBOK 7th Edition: \"The project manager acts as a servant leader, focusing on the team's needs and removing impediments.\"",
+              "character": "Taylor Kim",
+              "characterQuote": "When the team is blocked, they don't need inspiration or rewards. They need someone to fix the build server and clarify priorities. That's servant leadership in action."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Servant leaders ask: 'What's in my team's way?' and then work to remove it. That's the core of the role. Focus on obstacle removal.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Servant leaders ask: 'What's in my team's way?' and then work to remove it. That's the core of the role. Focus on obstacle removal."
+            },
+            "retryHint": "The team is experienced but blocked. They know what to do but can't do it. What does a servant leader prioritize?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What leadership approach should the project manager use to encourage innovation?",
+            "points": 50,
+            "scenario_name": "Transformational for Innovation",
+            "situation": "A project manager is leading a team tasked with developing an innovative new product. The team has the necessary skills but seems hesitant to propose bold ideas, sticking to safe, incremental improvements. Nobody wants to risk suggesting something that might fail.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Set performance metrics with rewards for innovative ideas",
+                "correct": false,
+                "whyWrong": "Metrics and rewards can actually discourage risk-taking. If \"failed\" ideas are penalized (or unrewarded), people play safe."
+              },
+              {
+                "id": "B",
+                "text": "Provide detailed specifications for the type of innovation expected",
+                "correct": false,
+                "whyWrong": "Innovation cannot be specified — by definition, you don't know what the breakthrough will look like. This limits creativity."
+              },
+              {
+                "id": "C",
+                "text": "Inspire with vision, create psychological safety for experimentation, and empower creative risk-taking",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Let the team work independently without any leadership input",
+                "correct": false,
+                "whyWrong": "Laissez-faire without vision guidance leads to drift. The team needs inspiration AND autonomy, not just autonomy alone."
+              }
+            ],
+            "explanation": "Transformational leadership is ideal for innovation. Inspire with a compelling vision of what's possible. Create psychological safety so bold ideas aren't punished. Empower the team to experiment and iterate. When people feel safe to fail, they take the creative risks that lead to breakthroughs.",
+            "correctFeedback": {
+              "text": "Transformational leadership is ideal for innovation. Inspire with a compelling vision of what's possible. Create psychological safety so bold ideas aren't punished. Empower the team to experiment and iterate. When people feel safe to fail, they take the creative risks that lead to breakthroughs.",
+              "character": "Taylor Kim",
+              "characterQuote": "Bold ideas come from teams that feel safe to fail. Transformational leaders create that safety through vision and trust."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If you want safe ideas, measure and reward. If you want breakthroughs, inspire and trust. Metrics kill creativity.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "If you want safe ideas, measure and reward. If you want breakthroughs, inspire and trust. Metrics kill creativity."
+            },
+            "retryHint": "Innovation requires creative risk-taking. What prevents people from proposing bold ideas? Fear of failure. What leadership style eliminates that fear through vision and psychological safety?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the BEST approach to leading these different teams?",
+            "points": 50,
+            "scenario_name": "Situational Leadership with Mixed Teams",
+            "situation": "A project manager notices that different subteams have vastly different experience levels. One subteam consists of industry veterans with 15+ years of experience who are highly self-directed. Another subteam is composed of recent graduates in their first professional roles who need frequent guidance and feedback.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Use a consistent democratic style with both teams to ensure fairness",
+                "correct": false,
+                "whyWrong": "\"Fairness\" isn't treating everyone the same — it's giving everyone what they need. Veterans need autonomy; graduates need guidance. Same treatment produces unequal outcomes."
+              },
+              {
+                "id": "B",
+                "text": "Adapt leadership style based on each team's maturity — delegation for veterans, direction for graduates",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Apply directive leadership to both teams to maintain control and consistency",
+                "correct": false,
+                "whyWrong": "Directing veterans wastes their expertise and breeds resentment. Directive leadership is appropriate only for the less experienced team."
+              },
+              {
+                "id": "D",
+                "text": "Use laissez-faire with both teams to show trust in all employees",
+                "correct": false,
+                "whyWrong": "Laissez-faire with new graduates leads to chaos and mistakes. They need structured guidance until competent — autonomy must be earned."
+              }
+            ],
+            "explanation": "Situational leadership means adapting to team maturity. VETERANS get delegation and laissez-faire — trust their expertise, set expectations, and get out of their way. GRADUATES get direction and coaching — provide structure, training, and close support while they build competence. This isn't inconsistency — it's appropriateness.",
+            "correctFeedback": {
+              "text": "Situational leadership means adapting to team maturity. VETERANS get delegation and laissez-faire — trust their expertise, set expectations, and get out of their way. GRADUATES get direction and coaching — provide structure, training, and close support while they build competence. This isn't inconsistency — it's appropriateness.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Situational leadership isn't about the PM's preference. It's about the team's needs. Veterans and graduates have fundamentally different needs — lead accordingly."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Treating everyone the same isn't fair — it's lazy. Fair leadership gives each team what they need to succeed.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Treating everyone the same isn't fair — it's lazy. Fair leadership gives each team what they need to succeed."
+            },
+            "retryHint": "Teams at different maturity levels have different needs. What does an expert need versus what does a novice need? Match your style to their maturity."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Under which conditions would laissez-faire leadership be MOST appropriate?",
+            "points": 50,
+            "scenario_name": "When to Use Laissez-Faire",
+            "situation": "A project manager is considering using a laissez-faire leadership approach with a project team. She wants to determine under which conditions this approach would be most effective before committing to it.",
+            "options": [
+              {
+                "id": "A",
+                "text": "When the team is newly formed and still learning to work together",
+                "correct": false,
+                "whyWrong": "New teams need structure and guidance, not complete autonomy. Laissez-faire with new teams creates confusion and mistakes."
+              },
+              {
+                "id": "B",
+                "text": "When the team consists of highly skilled experts who are self-directed and proven",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "When there is a crisis requiring quick decisions and rapid action",
+                "correct": false,
+                "whyWrong": "Crisis situations often require decisive, directive leadership. Laissez-faire is too slow and unstructured for emergencies."
+              },
+              {
+                "id": "D",
+                "text": "When the project has strict compliance requirements and regulatory oversight",
+                "correct": false,
+                "whyWrong": "Compliance work requires structured oversight and accountability. Laissez-faire may lead to gaps in documentation or regulatory processes."
+              }
+            ],
+            "explanation": "Laissez-faire is ONLY appropriate when the team has HIGH expertise (proven track record), is SELF-DIRECTED (motivated, accountable, autonomous), and the work allows autonomy (not crisis, not strict compliance). PMBOK 7th Edition: \"Laissez-faire suits highly skilled teams that are self-directed.\" Using laissez-faire with the wrong team creates chaos.",
+            "correctFeedback": {
+              "text": "Laissez-faire is ONLY appropriate when the team has HIGH expertise (proven track record), is SELF-DIRECTED (motivated, accountable, autonomous), and the work allows autonomy (not crisis, not strict compliance). PMBOK 7th Edition: \"Laissez-faire suits highly skilled teams that are self-directed.\" Using laissez-faire with the wrong team creates chaos.",
+              "character": "Marco Silva",
+              "characterQuote": "My kitchen brigade has 80+ combined years of experience. We don't need oversight — we need trust. That's when laissez-faire works."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Laissez-faire isn't for everyone. It's for teams who have EARNED autonomy through demonstrated expertise and self-direction. Check the conditions.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Laissez-faire isn't for everyone. It's for teams who have EARNED autonomy through demonstrated expertise and self-direction. Check the conditions."
+            },
+            "retryHint": "Laissez-faire is a HIGH-TRUST, HIGH-MATURITY approach. What conditions indicate a team is ready for complete autonomy?"
+          }
+        ]
+      }
+    }
+  ]
+}

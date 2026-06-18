@@ -1,0 +1,681 @@
+{
+  "lessonId": "C1L2",
+  "lessonTitle": "Project Management Plan",
+  "courseId": "C1",
+  "courseName": "Integration Management",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand that the Project Management Plan integrates ALL subsidiary plans into one cohesive document",
+    "Distinguish between subsidiary plans (how to execute) and baselines (approved references for performance measurement)",
+    "Identify the three key baselines: Scope Baseline, Schedule Baseline, Cost Baseline",
+    "Recognize that the PM creates the plan (with team input), but the sponsor must approve it",
+    "Apply integration principles to scenarios demonstrating how changes in one area cascade to others"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "dr_amelia_foster",
+    "maya_rodriguez",
+    "carlos_mendez",
+    "sam_rodriguez",
+    "nina_patel"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Six Plans, Zero Integration: Why Your Project Is Falling Apart",
+        "intro": "You're **Alex Mitchell**, newly assigned as Project Manager for the Savory & Co. Riverside Plaza flagship restaurant. The charter is approved and you've asked each team lead to draft their plans. Maya built the kitchen scope, Sam created the budget, Nina planned the marketing launch. But nobody talked to each other — and now the plans are in direct conflict. Dr. Foster walks in and sees the problem immediately: \"You have six plans, but no integration.\"",
+        "failure_cards": [
+          {
+            "id": "the_chaos_of_separate_plans",
+            "icon": "📋",
+            "title": "The Chaos of Separate Plans",
+            "summary": "Six plans created in isolation, each with conflicting assumptions",
+            "image": "/images/C1L2_comic_no_plan.webp",
+            "details": "It's Wednesday afternoon at the Savory & Co. project office. Alex sits at a desk covered in six different colored folders — kitchen scope (orange), budget (green), risk register (red), communications plan (blue), quality plan (purple), procurement plan (yellow). Maya's kitchen timeline says Oct 25 opening. Nina's marketing materials say \"Grand Opening Oct 15.\" Sam's budget phasing assumes $250K monthly cash flow, but the combined September spend totals $350K. Every plan looks solid in isolation. Together, they are a disaster waiting to happen."
+          },
+          {
+            "id": "the_cascade_of_consequences",
+            "icon": "⚠️",
+            "title": "The Cascade of Consequences",
+            "summary": "Each conflict creates a chain reaction that amplifies across plans",
+            "image": "/images/C1L2_comic_cascade.webp",
+            "details": "Nina has already sent \"Oct 15 Grand Opening\" invitations to press and VIPs. But Maya needs until Oct 25 for the kitchen installation — a 10-day gap that will embarrass the brand publicly. Sam discovers the combined September spending of $350K exceeds the $250K cash flow limit, meaning contractors won't get paid on time. The risk register doesn't account for any of these conflicts because Jordan built it based on Maya's timeline alone. One misalignment cascades into four failures: wrong launch date, budget shortfall, unpaid contractors, and unmitigated risks."
+          },
+          {
+            "id": "the_integrated_solution_baselines",
+            "icon": "💡",
+            "title": "The Integrated Solution — Baselines",
+            "summary": "Dr. Foster reveals the three baselines that hold the integrated plan together",
+            "image": "/images/C1L2_comic_baselines.webp",
+            "details": "Dr. Foster picks up all six folders and begins stacking them into a single binder. She draws three golden boxes on the whiteboard: Scope Baseline (WHAT we deliver), Schedule Baseline (WHEN we deliver), Cost Baseline (HOW MUCH it costs). \"These three baselines are the backbone of your PM Plan. Every subsidiary plan must align to them. When one changes, you trace the cascade through ALL the others. That is integration.\" Alex realizes: integration is not stapling documents together — it is actively ensuring every plan works as one system."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "I watched the chaos unfold — Maya says Oct 25, Nina says Oct 15, Sam says we're $100K short in September. Nobody talked to each other. That's not planning — that's hoping."
+        },
+        "learning_hook": "**A Project Management Plan is not a stack of documents.** It is ONE integrated plan where scope, schedule, cost, quality, risk, and communications all align. When one area changes, the PM must trace the cascade through every connected plan. The three baselines — Scope, Schedule, Cost — are the backbone of performance measurement."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "build_the_integrated_plan",
+        "title": "Build the Integrated Plan",
+        "description": "Dr. Foster guides you through building an integrated PM Plan. \"Let's start by understanding what belongs in the plan, then identify the baselines, then test your integration thinking with a real change request.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "multi_select",
+            "question": "Which of the following are COMPONENTS of the Project Management Plan? (Select all that apply)",
+            "points": 150,
+            "scenario_name": "What Belongs in the PM Plan?",
+            "situation": "Alex is assembling the Project Management Plan for the Riverside Plaza flagship. Dr. Foster hands him a checklist: \"The PM Plan integrates all subsidiary plans. But not everything is PART of the plan. Some documents are inputs created before planning, and some are outputs created during execution.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Scope Management Plan",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Schedule Management Plan",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cost Management Plan",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Risk Management Plan",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Stakeholder Engagement Plan",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Project Charter",
+                "correct": false
+              },
+              {
+                "id": "G",
+                "text": "Lessons Learned Register",
+                "correct": false
+              },
+              {
+                "id": "H",
+                "text": "Change Log",
+                "correct": false
+              }
+            ],
+            "explanation": "The PM Plan integrates all subsidiary management plans — one for each knowledge area (Scope, Schedule, Cost, Quality, Resource, Communications, Risk, Procurement, Stakeholder Engagement, Change Management) plus the three baselines. The Project Charter is an INPUT (created during Initiating, before planning begins). Lessons Learned Register and Change Log are EXECUTION outputs — they don't exist yet during planning because no work has been performed.",
+            "correctFeedback": {
+              "text": "The PM Plan integrates all subsidiary management plans — one for each knowledge area (Scope, Schedule, Cost, Quality, Resource, Communications, Risk, Procurement, Stakeholder Engagement, Change Management) plus the three baselines. The Project Charter is an INPUT (created during Initiating, before planning begins). Lessons Learned Register and Change Log are EXECUTION outputs — they don't exist yet during planning because no work has been performed.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent! You correctly identified what belongs in the PM Plan and excluded the charter (input), lessons learned (execution output), and change log (execution output). The PM Plan contains planning outputs only."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about WHEN each document is created. The charter comes before planning. Lessons learned and the change log come during execution. The PM Plan contains documents created DURING the Planning Process Group.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about WHEN each document is created. The charter comes before planning. Lessons learned and the change log come during execution. The PM Plan contains documents created DURING the Planning Process Group."
+            },
+            "retryHint": "The PM Plan contains documents created during Planning. The Charter is created before planning (Initiating). Lessons Learned and Change Log are created during Execution. Which options are planning outputs?"
+          },
+          {
+            "q_id": "q2",
+            "type": "multi_select",
+            "question": "Which three documents serve as baselines for performance measurement? (Select exactly 3)",
+            "points": 150,
+            "scenario_name": "Identify the Three Baselines",
+            "situation": "Dr. Foster draws three golden boxes on the whiteboard and says: \"Within the PM Plan, there are three BASELINES. These are approved references used to measure project performance. They feed into Earned Value Management. Only three exist — no more, no less.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Scope Baseline (Scope Statement + WBS + WBS Dictionary)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Schedule Baseline (Approved project schedule)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cost Baseline (Time-phased budget)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Quality Baseline",
+                "correct": false
+              },
+              {
+                "id": "E",
+                "text": "Risk Baseline",
+                "correct": false
+              },
+              {
+                "id": "F",
+                "text": "Communications Baseline",
+                "correct": false
+              }
+            ],
+            "explanation": "Only three baselines exist in PMI methodology: Scope Baseline (WHAT we deliver), Schedule Baseline (WHEN we deliver), and Cost Baseline (HOW MUCH it costs). These three feed directly into Earned Value Management (EVM) for performance measurement — Planned Value uses schedule and cost baselines, Earned Value uses the scope baseline. Other knowledge areas have Management Plans (strategies for how to manage), but NOT baselines (frozen references for measurement).",
+            "correctFeedback": {
+              "text": "Only three baselines exist in PMI methodology: Scope Baseline (WHAT we deliver), Schedule Baseline (WHEN we deliver), and Cost Baseline (HOW MUCH it costs). These three feed directly into Earned Value Management (EVM) for performance measurement — Planned Value uses schedule and cost baselines, Earned Value uses the scope baseline. Other knowledge areas have Management Plans (strategies for how to manage), but NOT baselines (frozen references for measurement).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect! Scope = WHAT, Schedule = WHEN, Cost = HOW MUCH. These three baselines are used in EVM to calculate Schedule Variance and Cost Variance. No other knowledge area has a baseline."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Only three baselines exist. Quality, Risk, and Communications have management plans (strategies), not baselines (frozen performance references). Think about what EVM measures: scope delivered, schedule adherence, cost spent.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Only three baselines exist. Quality, Risk, and Communications have management plans (strategies), not baselines (frozen performance references). Think about what EVM measures: scope delivered, schedule adherence, cost spent."
+            },
+            "retryHint": "Think about Earned Value Management. EVM measures three things: WHAT we deliver (scope), WHEN we deliver (schedule), and HOW MUCH we spend (cost). Those are the only three baselines."
+          },
+          {
+            "q_id": "q3",
+            "type": "multi_select",
+            "question": "Maya's change affects the Scope Baseline. What ELSE must Alex update in the PM Plan to maintain integration? (Select all that apply)",
+            "points": 200,
+            "scenario_name": "Change Cascade — Maya's Pizza Oven",
+            "situation": "Maya approaches Alex with a change request: \"I need to add a wood-fired pizza oven to the kitchen design. Here's the impact: +300 sq ft kitchen space (structural change), +10 days installation timeline, +$45K cost (equipment + installation), and a new risk — the oven supplier has a 15% chance of a 3-week delivery delay.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Schedule Baseline (+10 days shifts opening date)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Cost Baseline (+$45K to budget)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Risk Register (new supplier delay risk)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Communications Plan (marketing must update messaging and timing)",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Project Charter",
+                "correct": false
+              },
+              {
+                "id": "F",
+                "text": "Stakeholder Register",
+                "correct": false
+              }
+            ],
+            "explanation": "Maya's scope change cascades through four areas: Schedule Baseline (+10 days pushes the opening from Oct 15 to Oct 25), Cost Baseline (+$45K increases the budget from $1.2M to $1.245M), Risk Register (new 15% probability of 3-week supplier delay), and Communications Plan (Nina must update marketing materials and event timing). The Project Charter is high-level authorization — a $45K scope detail doesn't require charter amendment. The Stakeholder Register tracks WHO is involved, not WHAT is being built — adding equipment doesn't add new stakeholders.",
+            "correctFeedback": {
+              "text": "Maya's scope change cascades through four areas: Schedule Baseline (+10 days pushes the opening from Oct 15 to Oct 25), Cost Baseline (+$45K increases the budget from $1.2M to $1.245M), Risk Register (new 15% probability of 3-week supplier delay), and Communications Plan (Nina must update marketing materials and event timing). The Project Charter is high-level authorization — a $45K scope detail doesn't require charter amendment. The Stakeholder Register tracks WHO is involved, not WHAT is being built — adding equipment doesn't add new stakeholders.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Now I see it! Maya's oven change ripples through schedule (+10 days), cost (+$45K), risk (supplier delay), and communications (marketing update). One scope change, four cascade updates. That's integration thinking!"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Follow the dependency chain. When scope changes, ask: Does this affect the timeline? The budget? Are there new risks? Does anyone need to be informed? Don't update documents that aren't actually affected.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Follow the dependency chain. When scope changes, ask: Does this affect the timeline? The budget? Are there new risks? Does anyone need to be informed? Don't update documents that aren't actually affected."
+            },
+            "retryHint": "Think about what is directly impacted by adding $45K in cost, 10 extra days, and a new supplier risk. Which plans need to reflect these changes? Don't update documents that track people (stakeholder register) or high-level authorization (charter)."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Integrated PM Plan",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "What Is the Project Management Plan?",
+            "subtitle": "",
+            "content": "The **Project Management Plan** is the comprehensive document that describes how the project will be executed, monitored, and controlled. It integrates all subsidiary plans from all knowledge areas into one cohesive plan.\n\n**Key Characteristics:**\n\n| Aspect | Detail | Savory & Co. Example |\n|--------|--------|---------------------|\n| **Created By** | Project Manager (with team input) | Alex creates with Maya, Sam, Nina, Jordan input |\n| **Approved By** | Sponsor or governance body | Elena approves before execution begins |\n| **Created When** | Planning Process Group | After charter approval, before execution |\n| **Updated Via** | Integrated Change Control | Changes require formal approval process |\n| **Scope** | Comprehensive (50-200+ pages) | All 10 subsidiary plans + 3 baselines |\n\n**Key Insight:** The PM integrates the plan but does NOT create all content alone. Team members contribute their expertise — Maya defines kitchen scope, Sam creates the budget, Jordan builds the risk register. Alex synthesizes everything and ensures alignment across all plans."
+          },
+          {
+            "id": "tab2",
+            "title": "The 10 Subsidiary Plans",
+            "subtitle": "",
+            "content": "The PM Plan integrates 10 subsidiary management plans, one for each knowledge area:\n\n| # | Plan | What It Defines | Savory & Co. Owner |\n|---|------|-----------------|-------------------|\n| 1 | **Scope Management** | How scope will be defined, validated, controlled | Alex + Maya |\n| 2 | **Schedule Management** | How schedule will be developed and controlled | Alex |\n| 3 | **Cost Management** | How costs will be estimated, budgeted, controlled | Alex + Sam |\n| 4 | **Quality Management** | How quality requirements will be met | Maya |\n| 5 | **Resource Management** | How resources will be acquired and managed | Carlos |\n| 6 | **Communications Management** | Who needs what information, when, how | Alex + Nina |\n| 7 | **Risk Management** | How risks will be identified, analyzed, responded to | Jordan |\n| 8 | **Procurement Management** | How procurement will be conducted | Sam |\n| 9 | **Stakeholder Engagement** | How stakeholders will be engaged | Alex |\n| 10 | **Change Management** | How changes will be evaluated and approved | Alex |\n\n**Common Misconception:** \"The PM Plan is just the schedule and budget.\" Reality: The PM Plan is ALL 10 subsidiary plans plus the 3 baselines — the complete execution roadmap.",
+            "diagram": {
+              "image": "/images/C1L2_diagram_subsidiary_plans.webp",
+              "alt": "PM Plan subsidiary plans diagram"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "The Three Baselines",
+            "subtitle": "",
+            "content": "A **baseline** is an approved version of a work product that can only be changed through formal change control. Baselines serve as the reference against which performance is measured.\n\n| Baseline | What It Measures | Components | Savory & Co. Example |\n|----------|-----------------|------------|---------------------|\n| **Scope Baseline** | WHAT we deliver | Scope Statement + WBS + WBS Dictionary | 2,200 sq ft restaurant, 120 seats, 20 menu items |\n| **Schedule Baseline** | WHEN we deliver | Approved project schedule | Lease Apr 15 → Construction Aug 30 → Open Oct 15 |\n| **Cost Baseline** | HOW MUCH it costs | Time-phased budget | $1.2M total, phased by month |\n\n**Why Baselines Matter for EVM:**\n- **Planned Value (PV):** What we planned to accomplish (schedule + cost baselines)\n- **Earned Value (EV):** What we actually delivered (scope baseline)\n- **Schedule Variance:** SV = EV - PV (are we ahead or behind?)\n- **Cost Variance:** CV = EV - AC (are we over or under budget?)"
+          },
+          {
+            "id": "tab4",
+            "title": "Integration = Cascade Updates",
+            "subtitle": "",
+            "content": "When one knowledge area changes, related areas must be updated to maintain alignment. This is the core principle of Integration Management.\n\n**Maya's Pizza Oven — The Full Cascade:**\n\n| Original Plan | Change Impact | Updated Value |\n|---------------|---------------|---------------|\n| Scope Baseline | +Wood-fired pizza oven, +300 sq ft | Add to WBS and scope statement |\n| Schedule Baseline | +10 days installation | Opening: Oct 15 → Oct 25 |\n| Cost Baseline | +$45K equipment + installation | Budget: $1.2M → $1.245M |\n| Risk Register | New supplier delay risk | Add 15% probability × 3-week impact |\n| Communications Plan | Marketing message and timing update | \"Wood-fired pizza\" becomes differentiator |\n\n**What Does NOT Change:**\n- **Charter:** High-level authorization unchanged ($45K is within project authority)\n- **Stakeholder Register:** Same people involved (no new stakeholders added)"
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:** Pages 82-89 — Project Management Plan as an integrating document across all performance domains.\n\n**PMBOK 6th Edition:** Section 4.2 — Develop Project Management Plan process, including all subsidiary plans and baselines as outputs.\n\n**PMP Exam Tips:**\n- PM Plan questions appear frequently — know all 10 subsidiary plans and 3 baselines\n- Key distinction: Charter = input to PM Plan (created before planning), NOT a component\n- Baselines can only be changed through Integrated Change Control (formal approval)\n- PM creates the plan with team input; sponsor approves it"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Software Project: Biometric Authentication Change",
+        "scenario": {
+          "title": "Software Project: Biometric Authentication Change",
+          "description": "You're managing a mobile app development project with an approved PM Plan: The product owner requests: \"Add biometric authentication (fingerprint/face ID).\" Impact analysis shows: +1 feature (biometric API integration), +3 weeks (launch shifts to Oct 21), +$25K (API licensing + development), and a new risk — 20% chance of 2-week API integration delay.",
+          "images": [
+            {
+              "src": "/images/C1L2_comic_transfer.webp",
+              "alt": "Software project change request scenario"
+            }
+          ],
+          "details": [
+            "**Scope Baseline:** Mobile app with 15 features",
+            "**Schedule Baseline:** 6-month timeline (Apr 1 - Sep 30)",
+            "**Cost Baseline:** $400K budget"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "multi_select",
+            "question": "Which PM Plan components must be updated due to the biometric authentication change? (Select all that apply)",
+            "points": 150,
+            "scenario_name": "Identify All Cascade Updates",
+            "situation": "The biometric authentication feature has been approved through Integrated Change Control. You must now update the PM Plan to maintain integration across all affected components.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Scope Baseline (add biometric feature to WBS)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Schedule Baseline (+3 weeks shifts launch to Oct 21)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cost Baseline (+$25K to budget)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Risk Register (add API integration delay risk)",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Communications Plan (notify stakeholders of 3-week delay)",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Procurement Plan (API license contract needed)",
+                "correct": true
+              },
+              {
+                "id": "G",
+                "text": "Stakeholder Register",
+                "correct": false
+              }
+            ],
+            "explanation": "The biometric change cascades through six PM Plan components: Scope Baseline (new feature in WBS), Schedule Baseline (3-week extension), Cost Baseline (+$25K), Risk Register (20% API delay risk), Communications Plan (stakeholders must be informed of timeline shift), and Procurement Plan (API licensing requires a new contract). The Stakeholder Register tracks WHO is involved — adding a feature doesn't add new stakeholders to the project.",
+            "correctFeedback": {
+              "text": "The biometric change cascades through six PM Plan components: Scope Baseline (new feature in WBS), Schedule Baseline (3-week extension), Cost Baseline (+$25K), Risk Register (20% API delay risk), Communications Plan (stakeholders must be informed of timeline shift), and Procurement Plan (API licensing requires a new contract). The Stakeholder Register tracks WHO is involved — adding a feature doesn't add new stakeholders to the project.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent integration thinking! One feature request cascaded through six PM Plan components. You traced the impact through scope, schedule, cost, risk, communications, and procurement. That's what maintaining integration looks like."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself for each component: Does adding biometric authentication affect what we deliver? When? How much? What risks? Who needs to know? Any new contracts? Follow the dependency chain.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself for each component: Does adding biometric authentication affect what we deliver? When? How much? What risks? Who needs to know? Any new contracts? Follow the dependency chain."
+            },
+            "retryHint": "Consider every impact of adding biometric authentication: new scope (WBS), longer timeline (schedule), higher cost (budget), new technical risk, stakeholder notification needed, and a new API license contract. Which PM Plan components cover these?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "drag_drop",
+            "question": "Drag each update to the correct PM Plan component:",
+            "points": 150,
+            "scenario_name": "Match Updates to Components",
+            "situation": "You've identified all the cascade updates. Now match each specific update to the correct PM Plan component it belongs to.",
+            "chips": [
+              {
+                "id": "add_biometric_authentication_to_wbs",
+                "label": "Add biometric authentication to WBS",
+                "correctZone": "scope_baseline"
+              },
+              {
+                "id": "shift_launch_from_sep_30_to_oct_21",
+                "label": "Shift launch from Sep 30 to Oct 21",
+                "correctZone": "schedule_baseline"
+              },
+              {
+                "id": "add_25k_api_10k_dev_15k",
+                "label": "Add $25K (API $10K + dev $15K)",
+                "correctZone": "cost_baseline"
+              },
+              {
+                "id": "add_20_probability_of_2week_api_delay",
+                "label": "Add 20% probability of 2-week API delay",
+                "correctZone": "risk_register"
+              },
+              {
+                "id": "notify_sponsor_of_3week_schedule_extension",
+                "label": "Notify sponsor of 3-week schedule extension",
+                "correctZone": "communications_plan"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "scope_baseline",
+                "label": "Scope Baseline",
+                "detail": "New deliverable added to work breakdown structure"
+              },
+              {
+                "id": "schedule_baseline",
+                "label": "Schedule Baseline",
+                "detail": "Timeline extension changes the approved schedule"
+              },
+              {
+                "id": "cost_baseline",
+                "label": "Cost Baseline",
+                "detail": "Budget increase changes the time-phased cost plan"
+              },
+              {
+                "id": "risk_register",
+                "label": "Risk Register",
+                "detail": "New technical risk identified during change analysis"
+              },
+              {
+                "id": "communications_plan",
+                "label": "Communications Plan",
+                "detail": "Stakeholder notification required for timeline change"
+              }
+            ],
+            "explanation": "Each update has a specific home within the PM Plan. Scope changes go to the Scope Baseline (WBS). Timeline changes go to the Schedule Baseline. Budget changes go to the Cost Baseline. New risks go to the Risk Register. Stakeholder notifications are governed by the Communications Plan. Integration means knowing exactly where each update belongs.",
+            "correctFeedback": {
+              "text": "Each update has a specific home within the PM Plan. Scope changes go to the Scope Baseline (WBS). Timeline changes go to the Schedule Baseline. Budget changes go to the Cost Baseline. New risks go to the Risk Register. Stakeholder notifications are governed by the Communications Plan. Integration means knowing exactly where each update belongs.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Every change has a home. Scope changes go to the scope baseline, timeline changes to the schedule baseline, budget changes to the cost baseline. Integration means knowing where each update belongs and making sure nothing falls through the cracks."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what each component controls. The Scope Baseline tracks WHAT we deliver. The Schedule Baseline tracks WHEN. The Cost Baseline tracks HOW MUCH. Match each update to the component that owns that type of information.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about what each component controls. The Scope Baseline tracks WHAT we deliver. The Schedule Baseline tracks WHEN. The Cost Baseline tracks HOW MUCH. Match each update to the component that owns that type of information."
+            },
+            "retryHint": "Scope Baseline = WHAT we deliver. Schedule Baseline = WHEN. Cost Baseline = HOW MUCH. Risk Register = uncertain events. Communications Plan = who needs to know."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the Project Management Plan is ONE integrated document — not a stack of separate plans. It contains 10 subsidiary management plans and 3 baselines, all working together as a cohesive system. When one area changes, the PM must trace the cascade through every connected plan to maintain integration.",
+        "key_takeaways": [
+          "10 Subsidiary Plans: The PM Plan integrates Scope, Schedule, Cost, Quality, Resource, Communications, Risk, Procurement, Stakeholder Engagement, and Change Management plans into one document",
+          "3 Key Baselines: Scope (WHAT), Schedule (WHEN), Cost (HOW MUCH) — the only baselines used for performance measurement in Earned Value Management",
+          "PM Creates, Sponsor Approves: The PM integrates all subsidiary plans with team input; the sponsor authorizes execution by approving the plan",
+          "Baselines Are Change-Controlled: Baselines can only be modified through Integrated Change Control with formal approval — they are frozen references",
+          "Integration = Cascade Updates: When one plan changes, trace the impact through all dependent plans (scope → schedule → cost → risk → communications)",
+          "Charter Is NOT Part of the PM Plan: The charter is an input (created during Initiating) — the PM Plan contains planning outputs only"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L3",
+          "title": "Direct & Manage Project Work",
+          "description": "You've authorized the project (charter) and created the plan (PM Plan) — now execute! Learn how to coordinate work execution, manage deliverables, collect work performance data, and handle change requests during project execution."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the PM do NEXT?",
+            "points": 50,
+            "scenario_name": "PM Plan Approval Sequence",
+            "situation": "A project manager has completed all 10 subsidiary management plans and established the three baselines. The team has reviewed and validated every component. The sponsor asks: \"Is the Project Management Plan ready for execution?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Submit the PM Plan to the sponsor for formal approval",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Begin project execution immediately",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Create the project charter",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Conduct a lessons learned session",
+                "correct": false
+              }
+            ],
+            "explanation": "The PM creates the plan; the sponsor approves it. Only after formal sponsor approval can execution begin. This is the governance sequence: Charter authorizes planning → PM creates plan → Sponsor approves plan → Execution begins. Without sponsor approval, the plan has no authority to begin work.",
+            "correctFeedback": {
+              "text": "The PM creates the plan; the sponsor approves it. Only after formal sponsor approval can execution begin. This is the governance sequence: Charter authorizes planning → PM creates plan → Sponsor approves plan → Execution begins. Without sponsor approval, the plan has no authority to begin work.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "PM creates, sponsor approves. That's the governance sequence. Without formal sponsor approval, the PM Plan has no authority — and neither does the execution it describes."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about the authorization flow. Who has the authority to approve the plan and authorize execution? The PM creates, but someone else must approve.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about the authorization flow. Who has the authority to approve the plan and authorize execution? The PM creates, but someone else must approve."
+            },
+            "retryHint": "After creating the PM Plan, what authorization step must happen before work begins? Who has the authority to approve?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "Which three documents provide the performance measurement baseline for Earned Value Management?",
+            "points": 50,
+            "scenario_name": "Performance Measurement Baselines",
+            "situation": "During project execution, a stakeholder asks the PM: \"How do we measure whether this project is on track? What documents do we compare actual performance against?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Project charter, WBS, and cost estimates",
+                "correct": false,
+                "whyWrong": "The charter is high-level authorization, not a performance baseline. WBS is only one part of the scope baseline (which also includes the scope statement and WBS dictionary). Cost estimates alone are not the cost baseline (which is a time-phased budget)."
+              },
+              {
+                "id": "B",
+                "text": "Scope baseline, schedule baseline, and cost baseline",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Risk register, quality plan, and communications plan",
+                "correct": false,
+                "whyWrong": "Risk register, quality plan, and communications plan are management tools, not performance baselines. There is no \"risk baseline,\" \"quality baseline,\" or \"communications baseline\" in PMI methodology."
+              },
+              {
+                "id": "D",
+                "text": "Lessons learned, change log, and stakeholder register",
+                "correct": false,
+                "whyWrong": "Lessons learned, change log, and stakeholder register are execution documents. They are outputs of project work, not frozen references for measuring performance."
+              }
+            ],
+            "explanation": "The three baselines — Scope, Schedule, and Cost — form the performance measurement baseline used in Earned Value Management. Scope Baseline measures WHAT was delivered (Earned Value), Schedule Baseline measures WHEN it should be delivered (Planned Value timing), and Cost Baseline measures HOW MUCH it should cost (Planned Value amount). No other knowledge areas have baselines.",
+            "correctFeedback": {
+              "text": "The three baselines — Scope, Schedule, and Cost — form the performance measurement baseline used in Earned Value Management. Scope Baseline measures WHAT was delivered (Earned Value), Schedule Baseline measures WHEN it should be delivered (Planned Value timing), and Cost Baseline measures HOW MUCH it should cost (Planned Value amount). No other knowledge areas have baselines.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect! Scope = WHAT, Schedule = WHEN, Cost = HOW MUCH. These three baselines feed EVM calculations: Schedule Variance (SV = EV - PV) and Cost Variance (CV = EV - AC)."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: baselines are frozen references for performance measurement. Only three exist. Other knowledge areas have management plans (strategies), not baselines (measurement references).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Remember: baselines are frozen references for performance measurement. Only three exist. Other knowledge areas have management plans (strategies), not baselines (measurement references)."
+            },
+            "retryHint": "Earned Value Management compares three things: what we planned to deliver (scope), when we planned to deliver it (schedule), and how much we planned to spend (cost). What three baselines match?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What else should the PM do?",
+            "points": 50,
+            "scenario_name": "Integration After Approved Change",
+            "situation": "An approved scope change adds a new module to a software project, resulting in +2 weeks to the schedule and +$50K to the budget. The PM has already updated the scope baseline, schedule baseline, and cost baseline. The PM's manager asks: \"Are we done updating the PM Plan?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Update the project charter to reflect the new scope",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Review impacts on the risk register, communications plan, and other subsidiary plans",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Create a new PM Plan from scratch",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Notify stakeholders only after all changes are fully implemented",
+                "correct": false
+              }
+            ],
+            "explanation": "Updating the three baselines is necessary but not sufficient. Integration means tracing the cascade through ALL affected components — the risk register (does the new module introduce technical risks?), communications plan (do stakeholders need to be informed of the 2-week delay?), quality plan (does the new module require additional testing?), and procurement plan (are new contracts needed?). Integration thinking means asking: \"If this changes, what else is affected?\"",
+            "correctFeedback": {
+              "text": "Updating the three baselines is necessary but not sufficient. Integration means tracing the cascade through ALL affected components — the risk register (does the new module introduce technical risks?), communications plan (do stakeholders need to be informed of the 2-week delay?), quality plan (does the new module require additional testing?), and procurement plan (are new contracts needed?). Integration thinking means asking: \"If this changes, what else is affected?\"",
+              "character": "Alex Mitchell",
+              "characterQuote": "Integration means following the full cascade. Scope change → schedule impact → cost impact → but also: what new risks? Who needs to know? Any quality or procurement impacts? Don't stop at the baselines."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Updating baselines alone isn't enough. Think about the ripple effects. New scope can create new risks, require stakeholder notifications, affect quality testing, or trigger procurement needs.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Updating baselines alone isn't enough. Think about the ripple effects. New scope can create new risks, require stakeholder notifications, affect quality testing, or trigger procurement needs."
+            },
+            "retryHint": "After updating the three baselines, what other PM Plan components might be affected by the scope change? Think about risks, communications, quality, and procurement."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the BEST response?",
+            "points": 50,
+            "scenario_name": "PM Plan Misconception",
+            "situation": "A new team member joins the project and asks: \"I've seen the schedule and the budget. Is that the Project Management Plan?\" The PM needs to correct this common misconception.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"Yes, the PM Plan is primarily the schedule and budget documents\"",
+                "correct": false,
+                "whyWrong": "This is the exact misconception being corrected. The PM Plan includes ALL 10 subsidiary plans, not just schedule and cost. Scope, quality, risk, communications, procurement, stakeholder engagement, and resource plans are equally important components."
+              },
+              {
+                "id": "B",
+                "text": "\"No, the PM Plan integrates all 10 subsidiary plans — scope, schedule, cost, quality, risk, communications, and more — plus three baselines\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"The PM Plan is the same as the project charter\"",
+                "correct": false,
+                "whyWrong": "Charter = high-level authorization created during Initiating (WHAT and WHY). PM Plan = detailed execution roadmap created during Planning (HOW). They are fundamentally different documents created at different times."
+              },
+              {
+                "id": "D",
+                "text": "\"The PM Plan only includes documents created before the project starts\"",
+                "correct": false,
+                "whyWrong": "The PM Plan includes documents created DURING the Planning Process Group. Documents created before the project (like the charter) are inputs, not components. The PM Plan is a planning output, not a pre-project document."
+              }
+            ],
+            "explanation": "The PM Plan is comprehensive — it integrates ALL 10 subsidiary management plans (one for each knowledge area) plus the 3 baselines (scope, schedule, cost). Thinking it is \"just the schedule and budget\" is a common misconception that leads to incomplete planning and poor integration. The PM Plan is the complete execution roadmap covering every aspect of how the project will be managed.",
+            "correctFeedback": {
+              "text": "The PM Plan is comprehensive — it integrates ALL 10 subsidiary management plans (one for each knowledge area) plus the 3 baselines (scope, schedule, cost). Thinking it is \"just the schedule and budget\" is a common misconception that leads to incomplete planning and poor integration. The PM Plan is the complete execution roadmap covering every aspect of how the project will be managed.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Correct! The PM Plan is comprehensive — scope, schedule, cost, quality, resource, communications, risk, procurement, stakeholder engagement, change management, plus the three baselines. It's the complete execution roadmap."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The PM Plan is far more than schedule and budget. It covers every knowledge area. And it's not the charter — the charter authorizes the project, while the PM Plan describes how to execute it.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The PM Plan is far more than schedule and budget. It covers every knowledge area. And it's not the charter — the charter authorizes the project, while the PM Plan describes how to execute it."
+            },
+            "retryHint": "The PM Plan integrates subsidiary plans from ALL knowledge areas. How many knowledge areas are there? And how many baselines? The plan is comprehensive, not limited to schedule and budget."
+          }
+        ]
+      }
+    }
+  ]
+}

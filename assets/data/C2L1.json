@@ -1,0 +1,714 @@
+{
+  "lessonId": "C2L1",
+  "lessonTitle": "Cost Estimation & Budgeting",
+  "courseId": "C2",
+  "courseName": "Planning: Scope, Schedule, Cost",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Select the appropriate estimation technique (bottom-up, analogous, parametric, three-point) based on data availability and detail requirements",
+    "Understand the budget hierarchy: Cost Baseline, Contingency Reserve, Project Budget, Management Reserve, Total Funding",
+    "Distinguish contingency reserves (known risks, PM controls) from management reserves (unknown unknowns, sponsor controls)",
+    "Apply cost aggregation from work packages to project budget",
+    "Recognize the WBS as the foundation for cost estimation in predictive projects"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "elena_santos",
+    "carlos_mendez",
+    "sam_park",
+    "nina_kowalski",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "The $2.8 Million Question: Can Alex Defend Every Dollar?",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. The company is planning its biggest expansion ever — three new restaurant locations with a total budget request of $2.8 million. Elena, the CFO, is scrutinizing every line item. She sees $2.5M in cost estimates plus $300K in reserves and demands: \"Is this just padding, Alex?\" Three different work packages each require a different estimation approach. Can you match the right technique to the right work package — and defend the budget hierarchy to the board?",
+        "failure_cards": [
+          {
+            "id": "the_budget_challenge",
+            "icon": "📋",
+            "title": "The Budget Challenge",
+            "summary": "Alex presents a $2.8M expansion budget — Elena demands justification for $300K in reserves",
+            "image": "/images/C2L1_comic_budget_challenge.webp",
+            "details": "Savory & Co. is planning three new restaurant locations. Alex presents a budget pyramid: $2.5M cost baseline, $200K contingency reserve, $100K management reserve. Elena circles the reserve amounts in red: \"$300K in reserves? Is this just padding, Alex?\" Without a clear defense of every component, the board will slash the budget — and leave the project exposed to risk with no safety net."
+          },
+          {
+            "id": "three_different_challenges",
+            "icon": "⚠️",
+            "title": "Three Different Challenges",
+            "summary": "Three work packages — construction, technology, marketing — each demand a different estimation technique",
+            "image": "/images/C2L1_comic_work_packages.webp",
+            "details": "Work Package 1 (Construction, $1.8M): Detailed blueprints approved, two similar past expansions, fixed-price contracts. Work Package 2 (Technology, $400K): New vendor, integration unknowns, no historical data. Work Package 3 (Marketing, $300K): Past launch campaign data available, agencies quote ranges. Using the wrong technique for any package means either false precision or unjustifiable vagueness — and Elena will reject the budget."
+          },
+          {
+            "id": "justify_every_dollar",
+            "icon": "💡",
+            "title": "Justify Every Dollar",
+            "summary": "Elena demands Alex explain which technique he used for each work package — and why the budget hierarchy matters",
+            "image": "/images/C2L1_comic_stakes.webp",
+            "details": "Elena leans forward: \"Which estimation technique did you use for each? This isn't arbitrary, is it?\" Four techniques exist — bottom-up, analogous, parametric, and three-point — but each has its place. Meanwhile, Alex must also defend the five-layer budget hierarchy: Cost Baseline, Contingency Reserve, Project Budget, Management Reserve, and Total Funding. Dr. Amelia encourages: \"Match the technique to the work package. Structure the budget properly. You've got this.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "elena_santos",
+          "name": "Elena Santos",
+          "role": "CFO/Sponsor",
+          "quote": "I've seen PMs inflate budgets with 'contingencies.' Convince me these numbers are real — show me your method for each work package."
+        },
+        "learning_hook": "**Cost estimation** is about choosing the right technique for the right situation. **Budget structure** is about building defensible layers — baseline, contingency, management reserve — each with a clear purpose and clear control authority. Let's learn how to match techniques to work packages and build a budget the board will approve."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "defend_the_28m_budget",
+        "title": "Defend the $2.8M Budget",
+        "description": "Elena challenges Alex: \"I see $2.5M in estimates, then you add $200K contingency and $100K management reserve. Why the extra $300K? Is this just padding?\" Alex must select the right estimation technique for each work package AND structure the budget hierarchy correctly.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Which estimation technique should Alex use for the Location Build-Out?",
+            "points": 150,
+            "scenario_name": "Construction Estimation Technique",
+            "situation": "Work Package 1 is Location Build-Out ($1.8M). The scope clarity is HIGH — blueprints are approved and equipment specs are finalized. Savory & Co. has completed 2 similar expansions in the past 18 months. The investor presentation requires itemized costs. Uncertainty is LOW because of fixed-price contracts for construction.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Analogous (Top-Down) — Use past project costs as basis, adjust for differences",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Parametric — Use cost per square foot ($350/sq ft) multiplied by total square footage",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Bottom-Up — Estimate each WBS work package individually (site prep, structure, equipment, permits), then sum",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Three-Point — Estimate optimistic, most likely, pessimistic for each element",
+                "correct": false
+              }
+            ],
+            "explanation": "HIGH detail needed + Clear scope + Low uncertainty = BOTTOM-UP. Alex itemizes: Site prep $300K, Structure $600K, Kitchen equipment $500K, Dining area $250K, Permits $150K = $1.8M total. This gives Elena the itemized breakdown she needs to defend the numbers to the board.",
+            "correctFeedback": {
+              "text": "HIGH detail needed + Clear scope + Low uncertainty = BOTTOM-UP. Alex itemizes: Site prep $300K, Structure $600K, Kitchen equipment $500K, Dining area $250K, Permits $150K = $1.8M total. This gives Elena the itemized breakdown she needs to defend the numbers to the board.",
+              "character": "Elena Santos",
+              "characterQuote": "Good. I can show investors exactly where the money goes. This justifies the $1.8M."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Consider the conditions: high detail needed, clear scope with blueprints, and low uncertainty from fixed contracts. Which technique gives itemized breakdown from WBS work packages?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Consider the conditions: high detail needed, clear scope with blueprints, and low uncertainty from fixed contracts. Which technique gives itemized breakdown from WBS work packages?"
+            },
+            "retryHint": "When scope is clear, detail is needed, and uncertainty is low, which technique builds the estimate from the bottom of the WBS upward?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Which estimation technique should Alex use for the Technology Infrastructure?",
+            "points": 150,
+            "scenario_name": "Technology Estimation Technique",
+            "situation": "Work Package 2 is Technology Infrastructure ($400K). Scope clarity is MEDIUM — requirements are defined but vendor implementation varies. There is NO historical data because Savory & Co. is switching to a new POS vendor with an unfamiliar system. Detail level needed is MEDIUM. Uncertainty is HIGH due to integration challenges and unclear customization needs.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Analogous — Use industry benchmarks for restaurant tech stacks (~$120K per location)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Parametric — Use cost per location multiplied by 3 locations",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Bottom-Up — Get detailed quotes for POS, inventory system, WiFi, and security individually",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Three-Point — Estimate optimistic ($320K), most likely ($400K), pessimistic ($550K); use weighted average",
+                "correct": true
+              }
+            ],
+            "explanation": "HIGH uncertainty + No historical data = THREE-POINT. Alex gets range estimates that acknowledge risk. Optimistic $320K (smooth integration) + Most Likely $400K (standard customization) + Pessimistic $550K (major customization). Simple average = ($320K + $400K + $550K) / 3 = $423K. Budget set at $425K.",
+            "correctFeedback": {
+              "text": "HIGH uncertainty + No historical data = THREE-POINT. Alex gets range estimates that acknowledge risk. Optimistic $320K (smooth integration) + Most Likely $400K (standard customization) + Pessimistic $550K (major customization). Simple average = ($320K + $400K + $550K) / 3 = $423K. Budget set at $425K.",
+              "character": "Sam Park",
+              "characterQuote": "I appreciate the range. Let's budget $425K to be safe. This shows you've thought about what could go wrong."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "No historical data, new vendor, and high uncertainty. Which technique captures a RANGE of outcomes instead of a single number?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "No historical data, new vendor, and high uncertainty. Which technique captures a RANGE of outcomes instead of a single number?"
+            },
+            "retryHint": "When you have no historical data and high uncertainty, which technique uses optimistic, most likely, and pessimistic estimates to capture the range of possible outcomes?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Which estimation technique should Alex use for the Marketing Launch Campaign?",
+            "points": 100,
+            "scenario_name": "Marketing Estimation Technique",
+            "situation": "Work Package 3 is Marketing Launch Campaign ($300K). Scope clarity is MEDIUM — strategy is approved but creative execution is TBD. Historical data exists from launching 2 locations previously, and Savory & Co. has established vendor rates. Detail level needed is MEDIUM. Uncertainty is MEDIUM.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Analogous — Use past launch costs ($180K for 2 locations), adjust for 3 locations and inflation",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Parametric — Use cost per location multiplied by 3 ($100K x 3)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Bottom-Up — Itemize each deliverable (billboards, social ads, PR events, influencer partnerships)",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Three-Point — Get optimistic, most likely, pessimistic quotes from agencies",
+                "correct": false
+              }
+            ],
+            "explanation": "HISTORICAL DATA exists + Quick estimate needed = ANALOGOUS. Past 2-location launch cost $180K. Adjust for scale: $180K x 1.5 (3 locations) x 1.12 (inflation) = $302K, approximately $300K. Analogous works well when you have comparable past projects to reference.",
+            "correctFeedback": {
+              "text": "HISTORICAL DATA exists + Quick estimate needed = ANALOGOUS. Past 2-location launch cost $180K. Adjust for scale: $180K x 1.5 (3 locations) x 1.12 (inflation) = $302K, approximately $300K. Analogous works well when you have comparable past projects to reference.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Makes sense. We spent about $90K per location last time. This tracks with what I expected."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "You have direct historical data from past launches. Which technique uses similar past project costs as the basis for the current estimate?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You have direct historical data from past launches. Which technique uses similar past project costs as the basis for the current estimate?"
+            },
+            "retryHint": "Savory & Co. launched 2 locations before and has that cost data. Which technique uses similar past project costs and adjusts for differences?"
+          },
+          {
+            "q_id": "q4",
+            "type": "drag_drop",
+            "question": "Drag each budget component to its correct position in the hierarchy (1 = bottom/foundation, 5 = top/total):",
+            "points": 100,
+            "scenario_name": "Budget Hierarchy",
+            "situation": "Alex has $2.5M in cost estimates. Elena asks: \"Now show me the budget hierarchy — from your detailed estimates up to total funding.\" Alex must arrange the five budget components in the correct order from foundation (bottom) to total (top).",
+            "chips": [
+              {
+                "id": "cost_baseline_25m_sum_of_all_wbs_work_package_estimates",
+                "label": "Cost Baseline ($2.5M) — Sum of all WBS work package estimates",
+                "correctZone": "position_1_bottom"
+              },
+              {
+                "id": "contingency_reserve_200k_for_known_risks_supply_chain_delays_permits",
+                "label": "Contingency Reserve ($200K) — For known risks (supply chain delays, permits)",
+                "correctZone": "position_2"
+              },
+              {
+                "id": "project_budget_27m_cost_baseline_contingency_reserve",
+                "label": "Project Budget ($2.7M) — Cost Baseline + Contingency Reserve",
+                "correctZone": "position_3"
+              },
+              {
+                "id": "management_reserve_100k_for_unknown_unknowns_unforeseeable_events",
+                "label": "Management Reserve ($100K) — For unknown unknowns (unforeseeable events)",
+                "correctZone": "position_4"
+              },
+              {
+                "id": "total_project_funding_28m_project_budget_management_reserve",
+                "label": "Total Project Funding ($2.8M) — Project Budget + Management Reserve",
+                "correctZone": "position_5_top"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "position_1_bottom",
+                "label": "Position 1 (Bottom)",
+                "detail": "Foundation of the budget — the sum of all approved WBS cost estimates. Used for Earned Value tracking."
+              },
+              {
+                "id": "position_2",
+                "label": "Position 2",
+                "detail": "Added ON TOP of baseline for identified risks from the risk register. PM controls this layer."
+              },
+              {
+                "id": "position_3",
+                "label": "Position 3",
+                "detail": "PM's authorized spending limit. Baseline plus contingency. PM can reallocate within this envelope."
+              },
+              {
+                "id": "position_4",
+                "label": "Position 4",
+                "detail": "Added above project budget for unforeseeable risks. Sponsor controls — PM must request access."
+              },
+              {
+                "id": "position_5_top",
+                "label": "Position 5 (Top)",
+                "detail": "Full funding envelope presented to the board. Everything the project might need."
+              }
+            ],
+            "explanation": "The budget hierarchy builds from bottom to top: Cost Baseline (sum of WBS estimates) + Contingency Reserve (known risks, PM controls) = Project Budget (PM's authorized limit) + Management Reserve (unknown unknowns, sponsor controls) = Total Funding (what the board approves). Each layer has a specific purpose and a specific control authority.",
+            "correctFeedback": {
+              "text": "The budget hierarchy builds from bottom to top: Cost Baseline (sum of WBS estimates) + Contingency Reserve (known risks, PM controls) = Project Budget (PM's authorized limit) + Management Reserve (unknown unknowns, sponsor controls) = Total Funding (what the board approves). Each layer has a specific purpose and a specific control authority.",
+              "character": "Elena Santos",
+              "characterQuote": "This is exactly how I need to present it to the board. Cost baseline, reserves with clear purposes, total funding. Approved."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what builds on what. The foundation is the sum of your estimates. Then you add reserves for known risks, then unknown risks. Each layer has a clear controller.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what builds on what. The foundation is the sum of your estimates. Then you add reserves for known risks, then unknown risks. Each layer has a clear controller."
+            },
+            "retryHint": "Start with the raw estimates (baseline), add known-risk reserves (contingency), combine those into the PM's budget, then add unknowns (management reserve) to reach total funding."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Cost Estimation & Budget Structure",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Choosing the Right Estimation Technique",
+            "subtitle": "",
+            "content": "Four estimation techniques exist, and selection depends on three factors:\n\n1. **Detail level needed** — How itemized does the estimate need to be?\n2. **Data availability** — Do you have historical data or cost-per-unit parameters?\n3. **Uncertainty level** — How much is unknown?\n\n**Bottom-Up Estimating:**\n- Best for: High detail needed, clear scope, itemized breakdown required\n- Accuracy: +/-10%\n- Data required: WBS with work package details\n- Savory Example: Site prep $300K + Structure $600K + Equipment $500K + Dining $250K + Permits $150K = $1.8M\n\n**Analogous (Top-Down) Estimating:**\n- Best for: Quick estimate when historical data from similar projects exists\n- Accuracy: +/-25-50%\n- Data required: Past project costs\n- Savory Example: Past 2-location launch ($180K) x 1.5 x inflation = $300K\n\n**Parametric Estimating:**\n- Best for: Scalable work with measurable units\n- Accuracy: +/-15-20%\n- Data required: Cost-per-unit parameter (e.g., $/sq ft)\n- Example: Construction at $350/sq ft x 6,000 sq ft = $2.1M\n\n**Three-Point Estimating:**\n- Best for: High uncertainty, insufficient historical data\n- Accuracy: +/-15%\n- Data required: Expert judgment for optimistic, most likely, and pessimistic values\n- Savory Example: Technology ($320K + $400K + $550K) / 3 = $423K"
+          },
+          {
+            "id": "tab2",
+            "title": "Three-Point Estimating Formulas",
+            "subtitle": "",
+            "content": "When uncertainty is HIGH and historical data is LIMITED, use range estimates:\n\n**Triangular Distribution (Simple Average):**\nCost = (Optimistic + Most Likely + Pessimistic) / 3\nTechnology: ($320K + $400K + $550K) / 3 = $423K\n\n**Beta Distribution (Weighted Average — PERT):**\nCost = (Optimistic + 4 x Most Likely + Pessimistic) / 6\nTechnology: ($320K + 4 x $400K + $550K) / 6 = $407K\n*Gives more weight to the most likely scenario.*\n\n**When to use Three-Point:**\n- New vendor or technology with no direct experience\n- Complex integration with unknowns\n- Stakeholders keep saying \"it depends\"\n- Range estimate required for risk-aware budgeting"
+          },
+          {
+            "id": "tab3",
+            "title": "The Budget Pyramid",
+            "subtitle": "",
+            "content": "The budget builds from detailed estimates (bottom) to total funding (top). Each layer has a specific purpose and control authority:\n\n| Level | Component | Amount | Who Controls | Purpose |\n|-------|-----------|--------|--------------|---------|\n| 1 (Bottom) | Cost Baseline | $2.5M | Project Manager | Sum of all WBS estimates. Used for Earned Value tracking. |\n| 2 | Contingency Reserve | $200K (8%) | Project Manager | For KNOWN risks from risk register. PM uses with documented trigger. |\n| 3 | Project Budget | $2.7M | Project Manager | PM's authorized spending limit (Baseline + Contingency). |\n| 4 | Management Reserve | $100K (3.7%) | Sponsor | For UNKNOWN unknowns. PM must request sponsor approval. |\n| 5 (Top) | Total Funding | $2.8M | Sponsor | Full funding envelope presented to the board. |\n\n**Key Distinction:**\n\n- **Contingency Reserve (PM controls):** \"I know risks X, Y, Z might happen. Here's the budget for them.\"\n- **Management Reserve (Sponsor controls):** \"I don't know what I don't know. Here's a buffer for true surprises.\"",
+            "diagram": {
+              "image": "/images/C2L1_diagram_budget_hierarchy.webp",
+              "alt": "Budget hierarchy pyramid diagram"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Critical Concepts",
+            "subtitle": "",
+            "content": "**WBS is the Foundation:**\nYou cannot estimate costs without knowing WHAT you are building. The WBS breaks scope into estimable work packages. Bottom-up estimation relies entirely on WBS structure.\n\n**Contingency is NOT Management Reserve:**\n- Contingency: KNOWN risks (from risk register), PM controls\n- Management Reserve: UNKNOWN unknowns, Sponsor controls\n- Confusing them causes budget control issues on the PMP exam\n\n**Cost Baseline is NOT Project Budget:**\n- Cost Baseline: Sum of estimates ONLY (no reserves)\n- Project Budget: Baseline + Contingency\n- For EVM, compare actual costs to the baseline, not the budget\n\n**Reserves Are Not Padding:**\n- Contingency is calculated from risk analysis (probability x impact)\n- Management reserve is typically 3-5% for unknowns\n- Without reserves, any risk event = instant budget overrun\n\n> **Dr. Amelia Foster:** \"Reserves aren't padding — they're justified by risk analysis. Contingency for known risks. Management reserve for what you can't foresee.\""
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Defending Reserves to the Board",
+        "scenario": {
+          "title": "Defending Reserves to the Board",
+          "description": "Elena is presenting the $2.8M budget to the board of directors. A board member challenges the reserves: **Ava Thompson (Investor):** \"Why do we need $300K in reserves on top of the $2.5M estimate? Isn't that just padding? Can't we approve $2.5M instead?\" You must help Alex defend the reserves with specific justification.",
+          "images": [
+            {
+              "src": "/images/C2L1_comic_transfer.webp",
+              "alt": "Transfer scenario: defending reserves at board presentation"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "drag_drop",
+            "question": "Drag each characteristic to the correct reserve type — Contingency Reserve or Management Reserve:",
+            "points": 100,
+            "scenario_name": "Reserve Classification",
+            "situation": "Ava asks Alex to explain the difference between the two types of reserves. Alex needs to match each characteristic to the correct reserve type to demonstrate that the reserves serve distinct, justified purposes.",
+            "chips": [
+              {
+                "id": "covers_known_risks_from_risk_register",
+                "label": "Covers known risks from risk register",
+                "correctZone": "contingency_reserve_200k"
+              },
+              {
+                "id": "project_manager_controls_and_can_use_with_documentation",
+                "label": "Project Manager controls and can use with documentation",
+                "correctZone": "contingency_reserve_200k"
+              },
+              {
+                "id": "covers_unknown_unknowns_unforeseeable_events",
+                "label": "Covers unknown unknowns (unforeseeable events)",
+                "correctZone": "management_reserve_100k"
+              },
+              {
+                "id": "sponsor_controls_pm_must_request_access",
+                "label": "Sponsor controls — PM must request access",
+                "correctZone": "management_reserve_100k"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "contingency_reserve_200k",
+                "label": "Contingency Reserve ($200K)",
+                "detail": "Contingency is for IDENTIFIED risks — supply chain delays, permit issues, weather."
+              },
+              {
+                "id": "management_reserve_100k",
+                "label": "Management Reserve ($100K)",
+                "detail": "Management reserve is for risks you have not and could not identify in advance."
+              }
+            ],
+            "explanation": "Contingency Reserve ($200K) covers known risks identified in the risk register and is controlled by the PM with documentation. Management Reserve ($100K) covers unknown unknowns (unforeseeable events) and is controlled by the sponsor — the PM must request access. These are fundamentally different budget components with different purposes and different control authorities.",
+            "correctFeedback": {
+              "text": "Contingency Reserve ($200K) covers known risks identified in the risk register and is controlled by the PM with documentation. Management Reserve ($100K) covers unknown unknowns (unforeseeable events) and is controlled by the sponsor — the PM must request access. These are fundamentally different budget components with different purposes and different control authorities.",
+              "character": "Elena Santos",
+              "characterQuote": "Good distinction. Contingency is Alex's to manage. Management reserve is mine. Two different risk categories, two different authorities."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about the key words: 'known risks' versus 'unknown unknowns.' And think about who has the authority — PM or sponsor?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about the key words: 'known risks' versus 'unknown unknowns.' And think about who has the authority — PM or sponsor?"
+            },
+            "retryHint": "Contingency = known risks, PM controls. Management reserve = unknown unknowns, sponsor controls. Match the risk type to the authority level."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "How should Alex characterize the reserves to the board?",
+            "points": 100,
+            "scenario_name": "Board Defense — Characterization",
+            "situation": "Ava presses further: \"Why $300K in reserves? How do you characterize these amounts? Are they arbitrary or is there a methodology behind them?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"Standard industry practice — all projects include reserves of this size.\"",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "\"Justified by risk analysis, not padding — each dollar is tied to identified risks or a reasonable unknowns percentage.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"A safety cushion in case we go over budget on any work package.\"",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "\"Required by PMI standards for all projects of this scope.\"",
+                "correct": false
+              }
+            ],
+            "explanation": "The best defense ties reserves to SPECIFIC risk analysis. Contingency ($200K) is calculated from the risk register using probability x impact for identified risks. Management reserve ($100K, or 3.7%) is a standard percentage for unforeseeable events. This shows reserves are data-driven, not arbitrary padding.",
+            "correctFeedback": {
+              "text": "The best defense ties reserves to SPECIFIC risk analysis. Contingency ($200K) is calculated from the risk register using probability x impact for identified risks. Management reserve ($100K, or 3.7%) is a standard percentage for unforeseeable events. This shows reserves are data-driven, not arbitrary padding.",
+              "character": "Ava Thompson",
+              "characterQuote": "If it's based on risk analysis, not guesswork, I can support it. Show me the risk register and I'm satisfied."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Generic answers like 'industry practice' or 'PMI requires it' don't satisfy board members. They want to know how you CALCULATED these specific amounts.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Generic answers like 'industry practice' or 'PMI requires it' don't satisfy board members. They want to know how you CALCULATED these specific amounts."
+            },
+            "retryHint": "Board members want specifics, not generalities. Which response ties the dollar amounts to a specific analytical method?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What is the BEST example Alex can give?",
+            "points": 100,
+            "scenario_name": "Board Defense — Specific Risk Example",
+            "situation": "Ava is warming up to Alex's explanation but wants proof: \"Give me a specific example of a KNOWN risk that contingency covers. Show me one of these identified risks.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"Future market crashes we can't predict.\"",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "\"Supply chain delays — 20% probability, $150K impact if construction materials arrive late.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"General cost overruns that might happen on any project.\"",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "\"Team members might get sick and miss work.\"",
+                "correct": false
+              }
+            ],
+            "explanation": "A proper contingency example is SPECIFIC (supply chain delays for kitchen equipment), QUANTIFIED (20% probability, $150K impact), and IDENTIFIED (documented in the risk register with trigger conditions). This demonstrates that reserves are based on analysis, not guessing. The expected monetary value contributes to the overall contingency calculation.",
+            "correctFeedback": {
+              "text": "A proper contingency example is SPECIFIC (supply chain delays for kitchen equipment), QUANTIFIED (20% probability, $150K impact), and IDENTIFIED (documented in the risk register with trigger conditions). This demonstrates that reserves are based on analysis, not guessing. The expected monetary value contributes to the overall contingency calculation.",
+              "character": "Ava Thompson",
+              "characterQuote": "Now I understand. You've identified specific risks and calculated the reserve based on probability and impact. That's not padding — that's prudent planning."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Contingency is for KNOWN, IDENTIFIED risks — not vague concerns. The best example has a specific risk, a probability, and a dollar impact.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Contingency is for KNOWN, IDENTIFIED risks — not vague concerns. The best example has a specific risk, a probability, and a dollar impact."
+            },
+            "retryHint": "Contingency covers KNOWN risks. The best example has three elements: a specific risk event, a probability percentage, and a dollar impact amount."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned how to **select estimation techniques** based on data availability and detail needs, and how to **structure a defensible budget** with proper reserves. Elena approved the $2.8M budget because Alex justified every component.",
+        "key_takeaways": [
+          "Bottom-Up — High detail, high accuracy (+/-10%). Best when scope is clear and itemized breakdown is required (construction: $1.8M)",
+          "Analogous — Quick estimate using historical data (+/-25-50%). Best when similar past projects exist (marketing: $300K)",
+          "Parametric — Cost-per-unit calculation (+/-15-20%). Best for scalable work with measurable parameters",
+          "Three-Point — Captures uncertainty with ranges (+/-15%). Best when historical data is missing and uncertainty is high (technology: $425K)",
+          "Budget Hierarchy — Cost Baseline + Contingency Reserve = Project Budget + Management Reserve = Total Funding",
+          "Reserve Control — Contingency = PM controls (known risks from risk register). Management Reserve = Sponsor controls (unknown unknowns)"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to just add 10% for contingency without thinking about it. Now I understand the difference between contingency and management reserves — and I can defend each dollar to the board. Matching the right estimation technique to each work package made the whole budget defensible. Elena approved it because I showed my work."
+          }
+        ],
+        "xp_earned": 300,
+        "next_lesson": {
+          "id": "C2L2",
+          "title": "Earned Value Management",
+          "description": "You've built the budget — now learn how to track cost performance using EVM metrics. Calculate CPI, SPI, and forecast whether you'll finish on budget using EAC and ETC."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Which estimation technique is MOST appropriate?",
+            "points": 50,
+            "scenario_name": "Technique Selection",
+            "situation": "Your organization is planning a new data center project. The scope is well-defined with detailed technical specifications. Vendors have provided itemized quotes for servers, networking equipment, and installation services. The project sponsor requires a high-confidence estimate for board approval.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Analogous — Reference past data center projects and adjust for differences",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Bottom-up — Aggregate the itemized vendor quotes with internal labor estimates",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Parametric — Calculate cost per rack multiplied by number of racks",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Three-point — Estimate optimistic, most likely, and pessimistic scenarios",
+                "correct": false
+              }
+            ],
+            "explanation": "Clear scope + Itemized quotes + High-confidence requirement = BOTTOM-UP. When detailed specifications exist and vendors have provided itemized quotes, aggregate them for maximum accuracy. Board-level estimates require maximum defensibility, and bottom-up provides the itemized breakdown sponsors need.",
+            "correctFeedback": {
+              "text": "Clear scope + Itemized quotes + High-confidence requirement = BOTTOM-UP. When detailed specifications exist and vendors have provided itemized quotes, aggregate them for maximum accuracy. Board-level estimates require maximum defensibility, and bottom-up provides the itemized breakdown sponsors need.",
+              "character": "Elena Santos",
+              "characterQuote": "When you have detailed specs and itemized vendor quotes, bottom-up gives you the defensible estimate the board requires."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "You have detailed specs AND itemized quotes. Which technique aggregates detailed estimates from the bottom of the WBS upward?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You have detailed specs AND itemized quotes. Which technique aggregates detailed estimates from the bottom of the WBS upward?"
+            },
+            "retryHint": "When vendors have already provided itemized quotes and specifications are detailed, which technique uses those detailed inputs directly?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST response?",
+            "points": 50,
+            "scenario_name": "Reserve Justification",
+            "situation": "During budget planning, you calculated a cost baseline of $500,000. Your risk analysis identified three major risks with a combined expected monetary value of $40,000. You are presenting to the sponsor. The sponsor asks: \"Why do you need $40,000 in contingency? Isn't the $500,000 estimate accurate?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"The $500,000 covers planned work. The $40,000 contingency covers identified risks — if supply delays occur (30% probability, $50K impact) plus vendor issues (20% probability, $75K impact), we have funds to respond without requesting additional budget.\"",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "\"PMI best practices recommend 8-10% contingency reserves for all projects.\"",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "\"We always add contingency in case the estimate is wrong.\"",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "\"Without contingency, any risk will cause a budget overrun crisis.\"",
+                "correct": false
+              }
+            ],
+            "explanation": "Specific, risk-based justification shows contingency is calculated from identified risks, not arbitrary padding. Reference specific risks with probability and impact calculations. This demonstrates professional practice and builds sponsor confidence.",
+            "correctFeedback": {
+              "text": "Specific, risk-based justification shows contingency is calculated from identified risks, not arbitrary padding. Reference specific risks with probability and impact calculations. This demonstrates professional practice and builds sponsor confidence.",
+              "character": "Elena Santos",
+              "characterQuote": "That's exactly what I want to hear. Specific risks, specific numbers, specific justification."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Sponsors want to know WHICH risks and HOW you calculated the $40K. Generic answers like 'best practice' or 'in case we're wrong' do not build confidence.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Sponsors want to know WHICH risks and HOW you calculated the $40K. Generic answers like 'best practice' or 'in case we're wrong' do not build confidence."
+            },
+            "retryHint": "The sponsor wants specifics. Which response references actual identified risks with probability and impact numbers?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should you do?",
+            "points": 50,
+            "scenario_name": "Budget Authority",
+            "situation": "Your project has a cost baseline of $800,000, contingency reserve of $60,000, and management reserve of $40,000. During execution, an unforeseeable regulatory change requires $30,000 in additional compliance work that was NOT identified in any risk register.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Use contingency reserve — it covers project risks",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Request management reserve release from the sponsor",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Absorb the cost by reducing scope on other work packages",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Request a budget increase through integrated change control",
+                "correct": false
+              }
+            ],
+            "explanation": "Management reserve is for unknown unknowns — unforeseeable events not in the risk register. This regulatory change was not and could not have been identified in advance. The PM must request sponsor approval to access management reserve funds. If approved, the funds transfer to the project budget.",
+            "correctFeedback": {
+              "text": "Management reserve is for unknown unknowns — unforeseeable events not in the risk register. This regulatory change was not and could not have been identified in advance. The PM must request sponsor approval to access management reserve funds. If approved, the funds transfer to the project budget.",
+              "character": "Elena Santos",
+              "characterQuote": "That's exactly what management reserve is for. I approve the $30K release. Update the project budget accordingly."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Was this risk in the risk register? No — it was unforeseeable. Which type of reserve covers unknown unknowns, and who controls it?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Was this risk in the risk register? No — it was unforeseeable. Which type of reserve covers unknown unknowns, and who controls it?"
+            },
+            "retryHint": "The regulatory change was not in any risk register — it was unforeseeable. Which reserve type covers unknown unknowns, and who must approve its use?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which figure should you compare actual costs against when calculating Cost Performance Index (CPI)?",
+            "points": 50,
+            "scenario_name": "Cost Baseline vs Project Budget",
+            "situation": "You are reporting project cost performance to the sponsor using Earned Value Management. Your cost baseline is $600,000, contingency reserve is $45,000, and management reserve is $30,000. Actual costs to date are $310,000 and the planned value at this point is $300,000.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Total funding ($675,000) — because it represents all available money",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Project budget ($645,000) — because it includes contingency the PM controls",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Cost baseline ($600,000) — because EVM measures performance against the approved baseline",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Cost baseline plus management reserve ($630,000) — because both represent authorized spending",
+                "correct": false
+              }
+            ],
+            "explanation": "Earned Value Management compares actual costs against the COST BASELINE, not the project budget or total funding. The cost baseline is the time-phased budget approved for measuring performance. Reserves are excluded from EVM calculations because they represent risk buffers, not planned work. CPI = Earned Value / Actual Cost, where Earned Value is derived from the baseline.",
+            "correctFeedback": {
+              "text": "Earned Value Management compares actual costs against the COST BASELINE, not the project budget or total funding. The cost baseline is the time-phased budget approved for measuring performance. Reserves are excluded from EVM calculations because they represent risk buffers, not planned work. CPI = Earned Value / Actual Cost, where Earned Value is derived from the baseline.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "EVM tracks performance against the baseline — the approved budget for planned work. Reserves are separate from performance measurement."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: the baseline is for measuring performance. Reserves are for managing risk. They serve different purposes in different contexts.",
+              "character": "Elena Santos",
+              "characterQuote": "Remember: the baseline is for measuring performance. Reserves are for managing risk. They serve different purposes in different contexts."
+            },
+            "retryHint": "EVM measures performance against the approved plan for doing the work. Which budget component represents just the planned work — without any reserves?"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,672 @@
+{
+  "lessonId": "A1L8",
+  "lessonTitle": "Project Integration Basics",
+  "courseId": "A1",
+  "courseName": "Introduction to Project Management",
+  "pathId": "A",
+  "pathName": "Foundation",
+  "domain": "Business Environment",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand Project Integration Management as the HOLISTIC view connecting all 10 knowledge areas",
+    "Recognize how changes in one knowledge area ripple across others",
+    "Apply integrated change control to assess multi-dimensional impacts",
+    "Identify the PM's role as INTEGRATOR, not just coordinator",
+    "Make integrated decisions that balance competing knowledge area demands"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "maya_rodriguez",
+    "elena_vasquez",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "The 'Simple' Change That Wasn't",
+        "intro": "Maya proposes a seemingly simple change: 'Let's add a vegetarian option to the festival booth menu.' Alex initially says 'Sure, no problem!' But Carlos stops him: 'Wait. Before you approve ANY change, analyze the FULL IMPACT. Does this affect schedule? Cost? Scope? Quality? Risk? Procurement? Stakeholders?'",
+        "failure_cards": [
+          {
+            "id": "the_simple_request",
+            "icon": "📋",
+            "title": "The Simple Request",
+            "summary": "Just one burger, right?",
+            "image": "/images/A1L8_comic_simple_request.webp",
+            "details": "Morning in Savory & Co. test kitchen. Maya holds up a veggie burger patty sample enthusiastically: 'Let's add ONE vegetarian burger option. Simple addition, right?' Alex smiles confidently: 'Sure Maya, I'll just update the menu. No big deal!'"
+          },
+          {
+            "id": "carloss_intervention",
+            "icon": "⚠️",
+            "title": "Carlos's Intervention",
+            "summary": "STOP. Analyze first.",
+            "image": "/images/A1L8_comic_intervention.webp",
+            "details": "Carlos appears in the doorway with hand raised: 'STOP, Alex. Before you approve ANY change... analyze the FULL IMPACT.' Alex's expression changes: 'Wait... a simple burger affects ALL of those?' Carlos nods: 'Schedule, cost, quality, resources, risk, procurement, communications, stakeholders...'"
+          },
+          {
+            "id": "the_ripple_effect",
+            "icon": "💡",
+            "title": "The Ripple Effect",
+            "summary": "One change. Eight impacts.",
+            "image": "/images/A1L8_comic_ripple_effect.webp",
+            "details": "Group shot around a whiteboard showing 'INTEGRATION MANAGEMENT' with lines radiating to 8 knowledge areas. Carlos: 'THIS is Project Integration Management—seeing how EVERYTHING connects.' Visual elements hint at impacts: +2 weeks, +$3K, training needed, new risks..."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Before you say yes to ANY change, analyze the FULL IMPACT across all knowledge areas. That's Project Integration Management—the PM's most important role."
+        },
+        "learning_hook": "**Projects aren't a collection of independent tasks.** They're an INTEGRATED SYSTEM where changes in one area affect ALL others. Project Integration Management is the PM's core responsibility—seeing the WHOLE project and understanding RIPPLE EFFECTS."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "analyze_knowledge_area_impacts",
+        "title": "Analyze Knowledge Area Impacts",
+        "description": "Carlos challenges Alex: 'Maya's vegetarian burger request seems simple. But you need to CONNECT the impacts across knowledge areas and BUILD an integrated impact assessment before deciding.'",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Match each impact to the affected knowledge area:",
+            "points": 300,
+            "scenario_name": "Knowledge Area Impact Connections",
+            "situation": "The vegetarian burger change affects multiple knowledge areas. Connect each impact to the correct knowledge area.",
+            "chips": [
+              {
+                "id": "2_weeks_timeline",
+                "label": "+2 weeks timeline",
+                "correctZone": "schedule_when_work_is_completed"
+              },
+              {
+                "id": "3000_budget",
+                "label": "+$3,000 budget",
+                "correctZone": "cost_budget_and_spending"
+              },
+              {
+                "id": "vegetarian_certification",
+                "label": "Vegetarian certification",
+                "correctZone": "quality_standards_and_compliance"
+              },
+              {
+                "id": "maya_10_hrs_week",
+                "label": "Maya +10 hrs/week",
+                "correctZone": "resources_people_equipment_materials"
+              },
+              {
+                "id": "crosscontamination_hazard",
+                "label": "Cross-contamination hazard",
+                "correctZone": "risk_threats_and_opportunities"
+              },
+              {
+                "id": "3_new_supplier_contracts",
+                "label": "3 new supplier contracts",
+                "correctZone": "procurement_contracts_and_vendors"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "schedule_when_work_is_completed",
+                "label": "SCHEDULE (When work is completed)",
+                "detail": "Recipe development and supplier setup"
+              },
+              {
+                "id": "cost_budget_and_spending",
+                "label": "COST (Budget and spending)",
+                "detail": "Testing, suppliers, training, marketing"
+              },
+              {
+                "id": "quality_standards_and_compliance",
+                "label": "QUALITY (Standards and compliance)",
+                "detail": "Allergen controls, separate prep area"
+              },
+              {
+                "id": "resources_people_equipment_materials",
+                "label": "RESOURCES (People, equipment, materials)",
+                "detail": "Recipe development, staff training"
+              },
+              {
+                "id": "risk_threats_and_opportunities",
+                "label": "RISK (Threats and opportunities)",
+                "detail": "New supplier reliability risks"
+              },
+              {
+                "id": "procurement_contracts_and_vendors",
+                "label": "PROCUREMENT (Contracts and vendors)",
+                "detail": "Patties, cheese, buns"
+              }
+            ],
+            "explanation": "One scope change creates ripples across 6 knowledge areas: Schedule (+2 weeks), Cost (+$3K), Quality (certification), Resources (Maya's time, training), Risk (contamination), Procurement (new suppliers).",
+            "correctFeedback": {
+              "text": "One scope change creates ripples across 6 knowledge areas: Schedule (+2 weeks), Cost (+$3K), Quality (certification), Resources (Maya's time, training), Risk (contamination), Procurement (new suppliers).",
+              "character": "Carlos Mendez",
+              "characterQuote": "Now I see why you're the PM. You didn't just say 'sure, add a burger.' You showed me how it affects everything."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Where does each impact belong? Think about what it affects.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Where does each impact belong? Think about what it affects."
+            },
+            "retryHint": "Match each impact to what it constrains: time (schedule), money (cost), standards (quality), people (resources), threats (risk), vendors (procurement)."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What is the BEST integrated decision for the vegetarian burger request?",
+            "points": 200,
+            "scenario_name": "Integrated Decision Making",
+            "situation": "Alex has analyzed the vegetarian burger change: +$3K cost (20% over Ava's $15K limit), Maya needs +10 hrs/week (exceeds her 20 hr/week cap), and +2 weeks timeline (Festival date fixed).",
+            "options": [
+              {
+                "id": "A",
+                "text": "APPROVE immediately—it's a good business idea",
+                "correct": false,
+                "whyWrong": "Approving without addressing constraint violations ignores the integrated analysis. Budget exceeded (+20% over limit), resource overloaded (Maya's capacity exceeded), timeline at risk (festival date fixed)."
+              },
+              {
+                "id": "B",
+                "text": "REJECT immediately—too many impacts",
+                "correct": false,
+                "whyWrong": "Rejecting without exploring alternatives isn't constructive. The idea has merit; the timing and constraints are the problem. Good PMs find the third option."
+              },
+              {
+                "id": "C",
+                "text": "DEFER to Phase 2—validate demand at this festival, plan properly for next event",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "APPROVE but skip the quality certification to save time and cost",
+                "correct": false,
+                "whyWrong": "Never compromise quality or safety requirements. Allergen controls and vegetarian certification are non-negotiable—skipping them creates legal and health risks."
+              }
+            ],
+            "explanation": "DEFER is the best choice: Budget constraint violated (+20%), resource capacity exceeded, timeline at risk. The idea is good but timing is wrong. Validate demand at this festival, implement properly for Phase 2.",
+            "correctFeedback": {
+              "text": "DEFER is the best choice: Budget constraint violated (+20%), resource capacity exceeded, timeline at risk. The idea is good but timing is wrong. Validate demand at this festival, implement properly for Phase 2.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Good PMs don't just say yes or no. They say 'yes, but not now' when that's the right answer."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "What's the best decision given ALL the constraints?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "What's the best decision given ALL the constraints?"
+            },
+            "retryHint": "When an idea is good but constraints don't allow it, what's the third option beyond approve/reject?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Project Integration Management",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "What is Integration?",
+            "subtitle": "",
+            "content": "**PMI Definition:**\n'Project Integration Management includes the processes to identify, define, combine, unify, and coordinate the various processes and project management activities.'\n\n**In Plain English:**\nIntegration Management is the PM's job of seeing the WHOLE project (not just individual parts) and ensuring ALL knowledge areas work together cohesively.\n\n**Key Insight:**\nIt's the 'glue' that holds all 10 knowledge areas together.",
+            "diagram": {
+              "image": "/images/A1L8_diagram_integration.webp",
+              "alt": "The Integration Ripple Effect"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "10 Knowledge Areas",
+            "subtitle": "",
+            "content": "**The 10 PMI Knowledge Areas:**\n\n1. **Integration Management** — Connects all others (PM's CORE role)\n2. **Scope Management** — What work is included\n3. **Schedule Management** — When work is done\n4. **Cost Management** — Budget and spending\n5. **Quality Management** — Standards and compliance\n6. **Resource Management** — People, equipment, materials\n7. **Communications Management** — Stakeholder information flow\n8. **Risk Management** — Threats and opportunities\n9. **Procurement Management** — Contracts, vendors, suppliers\n10. **Stakeholder Management** — Engagement and expectations"
+          },
+          {
+            "id": "tab3",
+            "title": "The Ripple Effect",
+            "subtitle": "",
+            "content": "**Key Principle:**\nProjects are INTEGRATED SYSTEMS. Changing one knowledge area creates RIPPLE EFFECTS across others.\n\n**Common Ripple Patterns:**\n\n**Scope Increase:**\n- Schedule: INCREASES (more work takes more time)\n- Cost: INCREASES (more work costs more money)\n- Resources: INCREASES (need more people/materials)\n- Quality: May DECREASE if time/budget don't increase\n- Risk: INCREASES (more work = more things can go wrong)\n\n**Schedule Compression:**\n- Cost: INCREASES (overtime, more resources)\n- Risk: INCREASES (rushing creates errors)\n- Quality: May DECREASE (less testing time)"
+          },
+          {
+            "id": "tab4",
+            "title": "PM as Integrator",
+            "subtitle": "",
+            "content": "**The PM's CORE Responsibility:**\n\n**What PMs Integrate:**\n- **Knowledge Areas:** Ensure scope, schedule, cost, quality, resources, communications, risk, procurement, stakeholders all ALIGN\n- **Stakeholders:** Balance competing demands\n- **Constraints:** Balance scope, schedule, cost, quality, resources, risk (trade-offs)\n\n**The Orchestra Conductor Analogy:**\n'A PM is like an orchestra conductor. You don't play every instrument, but you ensure ALL instruments play TOGETHER in harmony. If the violins (scope) speed up without the cellos (schedule) adjusting, the symphony (project) falls apart.'"
+          },
+          {
+            "id": "tab5",
+            "title": "Change Control",
+            "subtitle": "",
+            "content": "**Integrated Change Control Process:**\n\n**1. RECEIVE** change request\n(Maya's vegetarian burger idea)\n\n**2. ANALYZE** integrated impact\n(ALL 10 knowledge areas)\n\n**3. DOCUMENT** analysis\n(Impact assessment)\n\n**4. DECIDE** approve/reject/defer\n(Based on constraints and priorities)\n\n**5. COMMUNICATE** decision\n(Update plans, notify stakeholders)\n\n**Key Insight:**\nYou can't change ONE thing without affecting MANY things. Integration Management is analyzing these ripples BEFORE approving changes."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Festival Booth Relocation",
+        "scenario": {
+          "title": "Festival Booth Relocation",
+          "description": "The Festival Organizer just called: 'We're moving your booth from Location A (near main entrance) to Location B (near food court).' Alex's initial reaction: 'Location change? No big deal—same booth, same menu, just different spot.'",
+          "images": [
+            {
+              "src": "/images/A1L8_comic_transfer.webp",
+              "alt": "Alex receiving phone call about booth relocation with festival map visible"
+            }
+          ],
+          "details": [
+            "**Original:** Location A (near main entrance)",
+            "**New:** Location B (near food court)",
+            "**Potential impacts:** Relocation fee, signage changes, load-in schedule, competition near food court"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "multi_select",
+            "question": "Which knowledge areas should Alex analyze for integrated impact? (Select ALL that apply)",
+            "points": 100,
+            "scenario_name": "Knowledge Area Impact Analysis",
+            "situation": "Before accepting the location change, Alex should analyze which knowledge areas are affected.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Scope (signage, booth layout may need adjustment)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Schedule (Location B has different load-in hours)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cost (+$500 relocation fee, +$300 signage redesign)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Quality (food standards remain the same)",
+                "correct": false,
+                "whyWrong": "Quality standards are independent of physical location. Food safety protocols, preparation standards, and compliance requirements don't change based on booth placement."
+              },
+              {
+                "id": "E",
+                "text": "Resources (Maya must assess new kitchen setup, staff need directions)",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Communications (Ava approval, customer notification, marketing update)",
+                "correct": true
+              },
+              {
+                "id": "G",
+                "text": "Risk (more competition near food court, less main entrance traffic)",
+                "correct": true
+              },
+              {
+                "id": "H",
+                "text": "Procurement (suppliers unaffected—still deliver to festival)",
+                "correct": false,
+                "whyWrong": "Supplier contracts and deliveries are to the festival venue, not a specific booth location. No new vendors are needed and existing contracts remain unchanged."
+              }
+            ],
+            "explanation": "The location change affects 7 knowledge areas: Scope, Schedule, Cost, Resources, Communications, Risk, and Stakeholders. Quality and Procurement are NOT directly affected.",
+            "correctFeedback": {
+              "text": "The location change affects 7 knowledge areas: Scope, Schedule, Cost, Resources, Communications, Risk, and Stakeholders. Quality and Procurement are NOT directly affected.",
+              "character": "Carlos Mendez",
+              "characterQuote": "This is exactly how I want you to think—analyze ALL impacts before accepting ANY change."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Some areas are affected, some aren't. Which ones truly change because of the new location?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Some areas are affected, some aren't. Which ones truly change because of the new location?"
+            },
+            "retryHint": "Location changes affect logistics and costs, but not all knowledge areas. Food standards stay the same. Suppliers deliver to the festival, not a specific spot."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What is the BEST integrated decision for the location change?",
+            "points": 100,
+            "scenario_name": "Integrated Decision",
+            "situation": "Alex has analyzed the location change impacts: +$800 cost, schedule conflict with load-in hours, increased competition risk near food court.",
+            "options": [
+              {
+                "id": "A",
+                "text": "APPROVE immediately—Festival Organizer controls locations, no choice",
+                "correct": false,
+                "whyWrong": "Even if the organizer controls location, blindly accepting without analyzing impacts and negotiating mitigation is not integrated thinking. The PM should minimize negative effects."
+              },
+              {
+                "id": "B",
+                "text": "REQUEST IMPACT MITIGATION before approving—negotiate with Festival Organizer: waive relocation fee, provide prime spot near food court entrance, extend load-in time",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "REJECT immediately—location change is too disruptive",
+                "correct": false,
+                "whyWrong": "Rejection isn't realistic—the Festival Organizer has authority over locations. Refusing creates a relationship problem without solving the logistical one. Better to negotiate mitigation."
+              },
+              {
+                "id": "D",
+                "text": "DEFER decision—ask Festival Organizer to revisit in 2 weeks",
+                "correct": false,
+                "whyWrong": "The festival timeline doesn't allow deferral. The location change is happening now, and Alex must address it immediately through negotiation, not delay."
+              }
+            ],
+            "explanation": "Accept the change but negotiate mitigation: waive $500 fee, prime food court spot, extended load-in time. This is integrated problem-solving—accepting reality while minimizing negative impacts.",
+            "correctFeedback": {
+              "text": "Accept the change but negotiate mitigation: waive $500 fee, prime food court spot, extended load-in time. This is integrated problem-solving—accepting reality while minimizing negative impacts.",
+              "character": "Carlos Mendez",
+              "characterQuote": "You're thinking like an integrator. Accept the reality, but minimize the negative impacts through smart negotiation."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "You can't reject it. You can't defer it. But you can negotiate terms.",
+              "character": "Carlos Mendez",
+              "characterQuote": "You can't reject it. You can't defer it. But you can negotiate terms."
+            },
+            "retryHint": "When you can't refuse a change, what's the best alternative? Hint: minimize negative impacts."
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "drag_drop",
+            "question": "Categorize each impact by severity level:",
+            "points": 100,
+            "scenario_name": "Impact Summary",
+            "situation": "Build the integrated impact summary for Carlos by categorizing each impact correctly.",
+            "chips": [
+              {
+                "id": "signage_redesign_needed",
+                "label": "Signage redesign needed",
+                "correctZone": "medium_impact_manageable_with_planning"
+              },
+              {
+                "id": "loadin_hours_conflict",
+                "label": "Load-in hours conflict",
+                "correctZone": "medium_impact_manageable_with_planning"
+              },
+              {
+                "id": "800_total_cost",
+                "label": "+$800 total cost",
+                "correctZone": "medium_impact_manageable_with_planning"
+              },
+              {
+                "id": "food_court_competition",
+                "label": "Food court competition",
+                "correctZone": "high_impact_significant_concern_requiring_mitigation"
+              },
+              {
+                "id": "staff_direction_updates",
+                "label": "Staff direction updates",
+                "correctZone": "low_impact_minor_adjustment_needed"
+              },
+              {
+                "id": "stakeholder_notifications",
+                "label": "Stakeholder notifications",
+                "correctZone": "medium_impact_manageable_with_planning"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "medium_impact_manageable_with_planning",
+                "label": "MEDIUM IMPACT (Manageable with planning)",
+                "detail": "New location requires updated signs"
+              },
+              {
+                "id": "high_impact_significant_concern_requiring_mitigation",
+                "label": "HIGH IMPACT (Significant concern requiring mitigation)",
+                "detail": "More competitors, less entrance traffic"
+              },
+              {
+                "id": "low_impact_minor_adjustment_needed",
+                "label": "LOW IMPACT (Minor adjustment needed)",
+                "detail": "Maya site visit, team notification"
+              }
+            ],
+            "explanation": "HIGH: Competition risk (strategic concern). MEDIUM: Signage, load-in schedule, cost, communications (manageable). LOW: Staff directions (minor adjustment).",
+            "correctFeedback": {
+              "text": "HIGH: Competition risk (strategic concern). MEDIUM: Signage, load-in schedule, cost, communications (manageable). LOW: Staff directions (minor adjustment).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "This is exactly how integrated analysis should work—prioritize impacts by severity."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "What's the biggest concern? What's manageable? What's minor?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "What's the biggest concern? What's manageable? What's minor?"
+            },
+            "retryHint": "Strategic risks (competition) are HIGH. Operational changes (cost, schedule) are MEDIUM. Minor logistics (directions) are LOW."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that Project Integration Management is the PM's CORE responsibility—seeing the WHOLE project, understanding RIPPLE EFFECTS across all 10 knowledge areas, and making HOLISTIC decisions. Changes in one area affect ALL others. Great PMs analyze integrated impacts BEFORE approving changes.",
+        "key_takeaways": [
+          "PROJECT INTEGRATION MANAGEMENT: Connects all 10 PMI knowledge areas, ensures they work together cohesively",
+          "THE 10 KNOWLEDGE AREAS: Integration, Scope, Schedule, Cost, Quality, Resources, Communications, Risk, Procurement, Stakeholders",
+          "THE RIPPLE EFFECT: Changing one knowledge area creates ripples across others (scope increase = schedule/cost/risk increases)",
+          "INTEGRATED CHANGE CONTROL: Analyze ALL impacts (10 knowledge areas) before approving/rejecting/deferring changes",
+          "PM AS INTEGRATOR: Not an expert in each area, but the ONE person who sees ALL areas and connects them (orchestra conductor)",
+          "DECISION FRAMEWORK: APPROVE if benefits outweigh costs; REJECT if constraints violated; DEFER if good idea but wrong timing"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L1",
+          "title": "Stakeholder Management",
+          "description": "Learn how to analyze stakeholder power/interest, engage effectively, and manage expectations."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Change Request Bypass",
+            "situation": "A project manager receives an urgent request from a stakeholder to add a new feature. The stakeholder claims it's a 'minor change' that won't affect anything else. The PM is tempted to approve it quickly to maintain the stakeholder relationship.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Approve the change immediately to maintain the stakeholder relationship",
+                "correct": false,
+                "whyWrong": "Approving without analysis violates Integrated Change Control. Even 'minor' changes can have significant ripple effects across knowledge areas."
+              },
+              {
+                "id": "B",
+                "text": "Reject the change because it wasn't in the original scope",
+                "correct": false,
+                "whyWrong": "Rejection without analysis is as problematic as approval without analysis. The PM's role is to ASSESS impact, not automatically reject."
+              },
+              {
+                "id": "C",
+                "text": "Analyze the integrated impact across all affected knowledge areas before deciding",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Escalate to the sponsor immediately",
+                "correct": false,
+                "whyWrong": "Escalation may be needed AFTER analysis, but the PM should first understand the integrated impact to inform the escalation."
+              }
+            ],
+            "explanation": "Integration Management requires analyzing impacts across ALL knowledge areas before approving any change. A 'minor' change in scope can affect schedule, cost, resources, quality, and risk.",
+            "correctFeedback": {
+              "text": "Integration Management requires analyzing impacts across ALL knowledge areas before approving any change. A 'minor' change in scope can affect schedule, cost, resources, quality, and risk.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Remember the vegetarian burger lesson—what looks 'simple' often affects 8+ knowledge areas."
+            },
+            "retryHint": "Integrated Change Control has a specific sequence. What must happen BEFORE the PM decides to approve, reject, or escalate?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What does the orchestra conductor analogy BEST illustrate about the PM's integration role?",
+            "points": 50,
+            "scenario_name": "Orchestra Conductor Analogy",
+            "situation": "A new project manager asks a senior PM, 'Do I need to be an expert in every knowledge area—scope, schedule, cost, quality, risk?' The senior PM explains that the PM's role is more like an orchestra conductor than an individual musician.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The PM must be the most skilled person on the team",
+                "correct": false,
+                "whyWrong": "Conductors don't play instruments better than orchestra members. Similarly, PMs don't need to be experts in every knowledge area—they need to integrate them."
+              },
+              {
+                "id": "B",
+                "text": "The PM ensures all knowledge areas work together harmoniously toward project objectives",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The PM should let team members work independently without interference",
+                "correct": false,
+                "whyWrong": "Conductors actively coordinate musicians. PMs must actively integrate knowledge areas, not leave them to work in silos."
+              },
+              {
+                "id": "D",
+                "text": "The PM's primary job is to entertain stakeholders",
+                "correct": false,
+                "whyWrong": "While stakeholder engagement matters, the conductor analogy is about COORDINATION and INTEGRATION, not entertainment."
+              }
+            ],
+            "explanation": "The orchestra conductor analogy highlights that PMs don't need to be experts in every area (play every instrument), but must ensure all areas work together (play in harmony) toward the project goal (the symphony).",
+            "correctFeedback": {
+              "text": "The orchestra conductor analogy highlights that PMs don't need to be experts in every area (play every instrument), but must ensure all areas work together (play in harmony) toward the project goal (the symphony).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You don't need to play violin AND cello AND trumpet. You need to ensure they all play the same symphony."
+            },
+            "retryHint": "What is the conductor's PRIMARY responsibility? Playing instruments or ensuring harmony across all instruments?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which knowledge areas are MOST LIKELY to be impacted by this schedule compression decision?",
+            "points": 50,
+            "scenario_name": "Ripple Effect Analysis",
+            "situation": "A restaurant project manager needs to compress the schedule by 2 weeks to meet a grand opening date. The team suggests working overtime and adding contractors. The PM recognizes this schedule decision will have ripple effects.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Cost (overtime, contractors), Risk (rushed work = more errors), Quality (less testing time)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Only Cost, because overtime and contractors require additional budget",
+                "correct": false,
+                "whyWrong": "Schedule compression affects MORE than just cost. Rushed work increases risk of errors, and compressed testing time can affect quality."
+              },
+              {
+                "id": "C",
+                "text": "Only Resources, because you need more people",
+                "correct": false,
+                "whyWrong": "While resources are affected, schedule compression also impacts cost (overtime pay), risk (rushing creates errors), and quality (less verification time)."
+              },
+              {
+                "id": "D",
+                "text": "Procurement only, because contractors are external resources",
+                "correct": false,
+                "whyWrong": "Procurement may be involved, but cost, risk, and quality are more significantly impacted by schedule compression."
+              }
+            ],
+            "explanation": "Schedule compression creates ripple effects: Cost increases (overtime premiums, contractor rates), Risk increases (rushing work leads to more defects), Quality may decrease (less time for testing and refinement).",
+            "correctFeedback": {
+              "text": "Schedule compression creates ripple effects: Cost increases (overtime premiums, contractor rates), Risk increases (rushing work leads to more defects), Quality may decrease (less time for testing and refinement).",
+              "character": "Carlos Mendez",
+              "characterQuote": "Compressing schedule is never 'free.' You pay somewhere—usually in cost, risk, or quality."
+            },
+            "retryHint": "Schedule compression affects multiple areas. Consider: What happens to budget? What happens to defect rates? What happens to testing time?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Based on the integrated impact analysis, who should APPROVE this change?",
+            "points": 50,
+            "scenario_name": "Change Control Board Decision",
+            "situation": "A project manager has analyzed a scope change request and found it will add $25,000 to the budget (15% increase), extend the schedule by 3 weeks, require 2 additional team members, and introduce 2 new medium-level risks. The original project budget was $165,000.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project manager can approve since they performed the analysis",
+                "correct": false,
+                "whyWrong": "A 15% budget increase and 3-week schedule extension typically exceed PM authority. Changes affecting baselines require sponsor or CCB approval."
+              },
+              {
+                "id": "B",
+                "text": "The sponsor or Change Control Board (CCB) since the change significantly impacts cost and schedule baselines",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The team lead who requested the change",
+                "correct": false,
+                "whyWrong": "Requesters don't approve their own changes. Approval authority depends on impact level, and this change requires higher authority."
+              },
+              {
+                "id": "D",
+                "text": "No approval needed since the PM already analyzed the impact",
+                "correct": false,
+                "whyWrong": "Analysis informs the decision but doesn't constitute approval. Baseline changes require formal approval from appropriate authority."
+              }
+            ],
+            "explanation": "Changes that significantly impact baselines (15% budget increase, 3-week schedule extension) typically exceed PM approval authority. The sponsor or CCB should approve changes of this magnitude.",
+            "correctFeedback": {
+              "text": "Changes that significantly impact baselines (15% budget increase, 3-week schedule extension) typically exceed PM approval authority. The sponsor or CCB should approve changes of this magnitude.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The PM performs the analysis, but significant baseline changes need sponsor or CCB authorization."
+            },
+            "retryHint": "Significant baseline changes (budget, schedule) typically require approval from authorities above the PM. Who would that be?"
+          }
+        ]
+      }
+    }
+  ]
+}

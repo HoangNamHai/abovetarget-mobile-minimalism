@@ -1,0 +1,719 @@
+{
+  "lessonId": "B1L5",
+  "lessonTitle": "Managing Difficult Stakeholders",
+  "courseId": "B1",
+  "courseName": "Stakeholder & Communication Management",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Apply negotiation strategies (Win-Win, Win-Lose, Withdraw) based on relationship importance and power dynamics",
+    "Distinguish when to escalate stakeholder conflicts vs. manage at project level",
+    "Use influence tactics for stakeholders with high power but low PM authority",
+    "Recognize resistance patterns (passive-aggressive, active opposition, unreasonable demands) and apply responses",
+    "Apply stakeholder re-engagement strategies when stakeholders become disengaged mid-project"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "ava_thompson",
+    "carlos_mendez",
+    "jamie_park",
+    "dr_amelia_foster",
+    "rashid_patel"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Three Difficult Stakeholders. Three Different Strategies.",
+        "intro": "You're **Alex Mitchell**, four months into Savory & Co.'s international expansion project. Three stakeholders have become serious obstacles — and each requires a completely different approach.",
+        "failure_cards": [
+          {
+            "id": "the_demanding_investor",
+            "icon": "📋",
+            "title": "The Demanding Investor",
+            "summary": "Ava wants a $200K rooftop bar added — no budget increase",
+            "image": "/images/B1L5_comic_demanding.webp",
+            "details": "Investor Ava Thompson saw a competitor open a popular rooftop bar downtown. Now she's demanding Savory & Co. add one to the expansion plans. She calls it \"non-negotiable,\" but the budget was locked months ago at $850K. Ava has high power and isn't used to hearing \"no.\" One wrong move and she pulls funding or escalates to the board."
+          },
+          {
+            "id": "the_disengaged_sponsor",
+            "icon": "⚠️",
+            "title": "The Disengaged Sponsor",
+            "summary": "Carlos hasn't responded in 14 days — approval blocked",
+            "image": "/images/B1L5_comic_disengaged.webp",
+            "details": "General Manager Carlos Mendez has gone silent. No email replies, no meeting attendance, no approvals. The Phase 2 budget has been sitting on his desk for two weeks. Behind the scenes, Carlos is drowning — three senior servers quit, a health inspection is tomorrow, and the expansion feels like one more thing he can't handle. But without his sign-off, the entire project stalls."
+          },
+          {
+            "id": "the_undermining_manager",
+            "icon": "💡",
+            "title": "The Undermining Manager",
+            "summary": "Jamie agrees publicly but sabotages privately",
+            "image": "/images/B1L5_comic_undermining.webp",
+            "details": "FOH Manager Jamie Park nods along in every meeting, then privately misses deadlines, \"forgets\" commitments, and tells her team the expansion is a waste of time. She's run front-of-house for three years and feels excluded from decisions being made about her domain. Her passive-aggressive resistance is eroding team morale and causing cascading delays."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Consultant",
+          "quote": "Each stakeholder requires a DIFFERENT approach. One-size-fits-all always fails. Ava needs Win-Win negotiation. Carlos needs empathy first. Jamie needs influence without authority."
+        },
+        "learning_hook": "**Every difficult stakeholder has a reason for their behavior.** Your job: identify the ROOT CAUSE, select the RIGHT STRATEGY (negotiate, re-engage, or influence), and execute a conversation that preserves the relationship while protecting the project."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "navigate_three_difficult_conversations",
+        "title": "Navigate Three Difficult Conversations",
+        "description": "Alex must handle three stakeholder conversations. Each requires a different strategy. Choose wisely — relationships and project success are on the line.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What is Alex's BEST response to Ava's opening demand?",
+            "points": 85,
+            "scenario_name": "Ava's Opening Demand",
+            "situation": "Alex meets with investor Ava Thompson. She opens immediately: \"Alex, I've been thinking about the new location. The competitor downtown just opened a rooftop bar and it's incredibly popular. We need to add one to our plans. It's non-negotiable.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"That's outside the approved scope. The budget is fixed.\"",
+                "correct": false,
+                "whyWrong": "Matching her \"non-negotiable\" stance with a hard \"no\" escalates the conflict and damages the relationship."
+              },
+              {
+                "id": "B",
+                "text": "\"Let's discuss the trade-offs. What business outcome are you hoping to achieve with a rooftop bar?\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"I'll see what we can do. Let me look into it.\"",
+                "correct": false,
+                "whyWrong": "Accommodation without understanding creates expectations you can't meet. Trust erodes when you fail to deliver."
+              },
+              {
+                "id": "D",
+                "text": "\"A rooftop bar would cost $200K more and delay opening by 2 months.\"",
+                "correct": false,
+                "whyWrong": "Data alone doesn't address her business concern. Lead with inquiry before presenting constraints."
+              }
+            ],
+            "explanation": "Strategic inquiry uncovers the UNDERLYING NEED behind Ava's stated position. Her real goal isn't a rooftop specifically — it's capturing after-work revenue. Understanding this opens the door to Win-Win alternatives.",
+            "correctFeedback": {
+              "text": "Strategic inquiry uncovers the UNDERLYING NEED behind Ava's stated position. Her real goal isn't a rooftop specifically — it's capturing after-work revenue. Understanding this opens the door to Win-Win alternatives.",
+              "character": "Dr. Foster",
+              "characterQuote": "Perfect. You didn't block her or cave — you asked the question that unlocks Win-Win negotiation. Understand the need behind the demand."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Blocking creates confrontation. Accommodating creates false expectations. Data without inquiry misses the underlying need. Start by understanding WHAT she's really trying to achieve.",
+              "character": "Dr. Foster",
+              "characterQuote": "Blocking creates confrontation. Accommodating creates false expectations. Data without inquiry misses the underlying need. Start by understanding WHAT she's really trying to achieve."
+            },
+            "retryHint": "Win-Win negotiation starts with understanding the other party's underlying interest — not their stated position."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What Win-Win solution should Alex propose?",
+            "points": 85,
+            "scenario_name": "Ava's Win-Win Solution",
+            "situation": "Ava reveals her real goal: \"I want to attract the after-work crowd. Happy hour revenue could be $300K annually. The competitor is stealing that market segment.\" Now Alex needs to offer a creative alternative.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"What if we expanded the main floor bar area instead? Industry data shows main floor bars get 30% higher foot traffic — same revenue goal at 40% of the cost.\"",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "\"Let me run the numbers and present options at our next meeting.\"",
+                "correct": false,
+                "whyWrong": "You have enough information to offer alternatives now. Deferral loses negotiation momentum."
+              },
+              {
+                "id": "C",
+                "text": "\"The rooftop idea is too expensive. We simply can't do it.\"",
+                "correct": false,
+                "whyWrong": "Flat rejection without alternatives damages the relationship with a high-power stakeholder."
+              },
+              {
+                "id": "D",
+                "text": "\"I'll add the rooftop to the plan and we'll figure out budget later.\"",
+                "correct": false,
+                "whyWrong": "Promising without a plan sets up delivery failure, which destroys trust faster than negotiation."
+              }
+            ],
+            "explanation": "Win-Win negotiation separates POSITIONS (rooftop bar) from INTERESTS (after-work revenue). Alex proposes an alternative that meets Ava's business goal at a fraction of the cost — both parties win.",
+            "correctFeedback": {
+              "text": "Win-Win negotiation separates POSITIONS (rooftop bar) from INTERESTS (after-work revenue). Alex proposes an alternative that meets Ava's business goal at a fraction of the cost — both parties win.",
+              "character": "Ava Thompson",
+              "characterQuote": "An expanded main floor bar... I hadn't considered that. You understood what I was trying to achieve and found a better way. That's the kind of thinking I want on this project."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Deferral loses momentum. Rejection without alternatives makes you an obstacle. Over-commitment creates risk. Offer a data-backed alternative that meets her REAL need.",
+              "character": "Dr. Foster",
+              "characterQuote": "Deferral loses momentum. Rejection without alternatives makes you an obstacle. Over-commitment creates risk. Offer a data-backed alternative that meets her REAL need."
+            },
+            "retryHint": "Separate position (rooftop) from interest (revenue). What alternative addresses the interest at lower cost?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What should Alex say FIRST?",
+            "points": 85,
+            "scenario_name": "Re-engaging Carlos",
+            "situation": "Alex catches Carlos in his office. Carlos looks exhausted: \"Alex... sorry I've been off the radar. It's been... a lot. What do you need?\" Alex knows Carlos is overwhelmed — three servers quit and a health inspection is tomorrow.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"I need your approval on the Phase 2 budget. It's been holding up the project for two weeks.\"",
+                "correct": false,
+                "whyWrong": "Task-focused pressure on an overwhelmed person creates resentment, not cooperation."
+              },
+              {
+                "id": "B",
+                "text": "\"I can see you're dealing with a lot. Before we talk project — how are YOU doing? What's been going on?\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"I'll come back later when you're less busy.\"",
+                "correct": false,
+                "whyWrong": "Avoidance doesn't solve the problem. Engagement with empathy beats continued silence."
+              },
+              {
+                "id": "D",
+                "text": "\"We really need to get this approval today. The team is waiting.\"",
+                "correct": false,
+                "whyWrong": "Urgency pressure on a stressed sponsor backfires — you get minimal compliance at best."
+              }
+            ],
+            "explanation": "Empathy first, then business. When a stakeholder is overwhelmed, leading with your needs creates resentment. Understanding their situation builds trust and opens the door to re-engagement.",
+            "correctFeedback": {
+              "text": "Empathy first, then business. When a stakeholder is overwhelmed, leading with your needs creates resentment. Understanding their situation builds trust and opens the door to re-engagement.",
+              "character": "Carlos Mendez",
+              "characterQuote": "You know what, Alex? Most people would have just pushed for what they needed. You actually asked how I was doing. That matters."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Leading with your agenda when someone is drowning adds to their burden. Empathy isn't a detour — it's the fastest path to re-engagement.",
+              "character": "Dr. Foster",
+              "characterQuote": "Leading with your agenda when someone is drowning adds to their burden. Empathy isn't a detour — it's the fastest path to re-engagement."
+            },
+            "retryHint": "The re-engagement framework: empathy first, reciprocity second, friction reduction third."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What should Alex do to keep Carlos engaged going forward?",
+            "points": 80,
+            "scenario_name": "Reducing Friction for Carlos",
+            "situation": "After Alex showed empathy and offered to help with health inspection prep, Carlos is grateful and agrees to review the Phase 2 budget right now. Alex needs to make this easy and establish a sustainable engagement pattern.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"I've prepared a 15-minute summary so we can move quickly. Going forward, would shorter weekly video updates work better than long meetings?\"",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "\"Great! Let me get the full documentation and we can go through everything in detail.\"",
+                "correct": false,
+                "whyWrong": "A full review adds unnecessary burden to someone who's already overwhelmed."
+              },
+              {
+                "id": "C",
+                "text": "\"Thanks Carlos. Let's also catch up on all the other pending approvals while we're at it.\"",
+                "correct": false,
+                "whyWrong": "Piling on additional requests when he's stressed damages the trust you just earned."
+              }
+            ],
+            "explanation": "Friction reduction makes engagement EASY for overwhelmed stakeholders. Short summaries, video updates, and batched decisions respect their time and make them more likely to stay engaged.",
+            "correctFeedback": {
+              "text": "Friction reduction makes engagement EASY for overwhelmed stakeholders. Short summaries, video updates, and batched decisions respect their time and make them more likely to stay engaged.",
+              "character": "Dr. Foster",
+              "characterQuote": "Brilliant. You reduced the engagement burden from hours to minutes. That's how you keep a busy sponsor in the loop without overwhelming them."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Carlos is time-constrained. Full documentation adds burden. Piling on more requests destroys the goodwill you just built. Make it EASY.",
+              "character": "Dr. Foster",
+              "characterQuote": "Carlos is time-constrained. Full documentation adds burden. Piling on more requests destroys the goodwill you just built. Make it EASY."
+            },
+            "retryHint": "Think about what makes engagement EASY vs. HARD for someone who's overwhelmed."
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "How should Alex address Jamie's pattern of passive resistance?",
+            "points": 85,
+            "scenario_name": "Addressing Jamie's Resistance",
+            "situation": "Jamie Park has missed her third deadline this month. She says: \"Hey Alex. I know what you're going to say. The training schedule slipped again. But you know how it is — we're short-staffed and I can't do everything.\" Alex knows Jamie publicly agrees but privately undermines.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"This is the third deadline you've missed. I need to know if you're committed to this project.\"",
+                "correct": false,
+                "whyWrong": "Accusatory framing (\"Are you committed?\") triggers defensiveness and confirms Jamie's belief she's not respected."
+              },
+              {
+                "id": "B",
+                "text": "\"I've noticed a pattern and want to understand. Is there something about how we're working together that isn't working for you?\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"Let's just reschedule again. When can you realistically complete it?\"",
+                "correct": false,
+                "whyWrong": "Rescheduling without addressing the underlying cause enables continued resistance."
+              },
+              {
+                "id": "D",
+                "text": "\"I'll escalate this to Carlos if it happens again.\"",
+                "correct": false,
+                "whyWrong": "Threats destroy any chance of genuine collaboration. Jamie will comply minimally and find subtler ways to resist."
+              }
+            ],
+            "explanation": "Curious inquiry surfaces the ROOT CAUSE of resistance without triggering defensiveness. Jamie's real issue isn't workload — it's feeling excluded from decisions about her own domain.",
+            "correctFeedback": {
+              "text": "Curious inquiry surfaces the ROOT CAUSE of resistance without triggering defensiveness. Jamie's real issue isn't workload — it's feeling excluded from decisions about her own domain.",
+              "character": "Jamie Park",
+              "characterQuote": "I... honestly? I feel like all these decisions are being made without anyone asking what would actually work for our team. I've run FOH for three years. Doesn't that count for anything?"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Accusation triggers defensiveness. Rescheduling enables the pattern. Threats destroy trust permanently. Lead with curiosity to uncover what's really going on.",
+              "character": "Dr. Foster",
+              "characterQuote": "Accusation triggers defensiveness. Rescheduling enables the pattern. Threats destroy trust permanently. Lead with curiosity to uncover what's really going on."
+            },
+            "retryHint": "Passive-aggressive behavior usually signals feeling excluded or disrespected. What question surfaces that root cause?"
+          },
+          {
+            "q_id": "q6",
+            "type": "single_select",
+            "question": "What's the BEST way to convert Jamie from a resister to a partner?",
+            "points": 80,
+            "scenario_name": "Converting Jamie to a Partner",
+            "situation": "Jamie opened up: she feels her expertise is being ignored. She has practical suggestions — morning training sessions instead of afternoons, hands-on practice instead of slides. Alex needs to convert this resister into an ally.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"Those are solid insights. Let's restructure together — you design the timing and hands-on components, I'll handle corporate integration. Can we co-own this?\"",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "\"Good ideas. I'll see what I can do.\"",
+                "correct": false,
+                "whyWrong": "Vague half-commitment keeps Alex in control and Jamie excluded — the exact dynamic causing resistance."
+              },
+              {
+                "id": "C",
+                "text": "\"The afternoon timing was set by corporate. I can't change it.\"",
+                "correct": false,
+                "whyWrong": "Leading with constraints when someone just opened up about feeling unheard destroys the moment."
+              }
+            ],
+            "explanation": "Coalition building through co-ownership converts resistance into partnership. When people have voice and ownership in decisions, they shift from blocking to championing.",
+            "correctFeedback": {
+              "text": "Coalition building through co-ownership converts resistance into partnership. When people have voice and ownership in decisions, they shift from blocking to championing.",
+              "character": "Jamie Park",
+              "characterQuote": "I was ready for a fight. Instead you actually listened. If you want my support, you earned it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "'I'll see what I can do' keeps Jamie excluded. Leading with constraints shuts down collaboration. Shared ownership is the key to influence without authority.",
+              "character": "Dr. Foster",
+              "characterQuote": "'I'll see what I can do' keeps Jamie excluded. Leading with constraints shuts down collaboration. Shared ownership is the key to influence without authority."
+            },
+            "retryHint": "Influence without authority works through acknowledgment and shared ownership. How do you give Jamie a real stake?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Difficult Stakeholder Frameworks",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The Difficult Stakeholder Spectrum",
+            "subtitle": "",
+            "content": "Every difficult stakeholder falls into one of three patterns, each with a different root cause and strategy:\n\n| Type | Behavior | Root Cause | Strategy |\n|------|----------|------------|----------|\n| **DEMANDING** (Ava) | Wants more than agreed scope | Unmet business needs | Win-Win Negotiation |\n| **DISENGAGED** (Carlos) | Withdrawn from project | Overwhelmed or deprioritized | Empathy + Friction Reduction |\n| **UNDERMINING** (Jamie) | Agrees publicly, resists privately | Feels excluded or disrespected | Influence + Coalition Building |\n\n**Key Insight:** Don't treat the symptom (demands, silence, missed deadlines). Identify and address the ROOT CAUSE."
+          },
+          {
+            "id": "tab2",
+            "title": "Win-Win Negotiation Process",
+            "subtitle": "",
+            "content": "Win-Win negotiation works when: the relationship is important, both parties have legitimate interests, and time allows for exploration.\n\n**The 4-Step Process:**\n1. **INQUIRE** — Understand their UNDERLYING need (not stated position)\n2. **EXPLORE** — Generate alternative solutions together\n3. **PROPOSE** — Offer options that address their need AND your constraints\n4. **CONFIRM** — Get commitment to the agreed approach\n\n**Ava Example:**\n- **Position:** \"I want a rooftop bar\"\n- **Underlying Need:** Revenue from after-work crowd\n- **Win-Win:** Expanded main floor bar (same outcome, 40% cost)\n\n**PMBOK Reference:** PMBOK 7th Edition, Page 174 — Negotiation Strategies",
+            "diagram": {
+              "image": "/images/B1L5_diagram_stakeholder_spectrum.webp",
+              "alt": "Stakeholder Spectrum Framework"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Stakeholder Re-engagement Framework",
+            "subtitle": "",
+            "content": "When a stakeholder becomes disengaged, follow this three-step approach:\n\n**Step 1 — Empathy First:** Understand WHY they're disengaged\n- Overwhelmed? Reduce their burden\n- Deprioritized? Demonstrate project value\n- Dissatisfied? Address their concerns directly\n\n**Step 2 — Reciprocity:** Offer help BEFORE asking for help\n- \"What can I take off your plate?\"\n- Creates obligation and builds trust naturally\n\n**Step 3 — Reduce Friction:** Make engagement EASY\n- 15-minute summaries vs. 60-minute meetings\n- Video updates vs. in-person attendance\n- Batched decisions vs. one-by-one approvals\n\n**Key Insight:** Disengagement usually isn't about your project. It's about competing priorities.\n\n**PMBOK Reference:** PMBOK 7th Edition, Page 86 — Stakeholder Engagement"
+          },
+          {
+            "id": "tab4",
+            "title": "Influence Without Authority",
+            "subtitle": "",
+            "content": "When you lack formal power over a stakeholder, use these influence tactics:\n\n| Tactic | Description | Example |\n|--------|-------------|---------|\n| **Coalition** | Gain support from their peers or boss | Carlos endorses Alex's PM role to Jamie |\n| **Reciprocity** | Help them before asking for help | Prep inspection docs for Carlos |\n| **Expertise Acknowledgment** | Publicly recognize their knowledge | \"Jamie, you know FOH better than anyone\" |\n| **Co-ownership** | Make them partners, not recipients | Co-design training schedule with Jamie |\n| **Curiosity** | Ask questions instead of making statements | \"What would work better for your team?\" |\n\n**Key Insight:** You can't command respect — you earn it through acknowledgment and shared ownership.\n\n**PMBOK Reference:** PMBOK 7th Edition, Page 93 — Power and Influence"
+          },
+          {
+            "id": "tab5",
+            "title": "Escalation Decision Framework",
+            "subtitle": "",
+            "content": "Not every difficult stakeholder situation needs escalation. Use this decision tree:\n\n**Question 1:** Is the situation beyond PM authority? (Budget limits, policy, contracts)\n- **No** → Manage yourself using negotiation and influence\n- **Yes** → Proceed to Question 2\n\n**Question 2:** Is there a possible ethics or corruption concern?\n- **No** → Try Win-Win negotiation first, escalate if it fails\n- **Yes** → ESCALATE IMMEDIATELY with documentation\n\n**Escalation Criteria:**\n- Exceeds PM spending authority\n- Involves potential ethics violations\n- Creates organizational-level risk\n- Influence attempts have been exhausted\n\n**PMBOK Reference:** PMBOK 7th Edition, Page 89 — Escalation"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "The Supplier Standoff",
+        "scenario": {
+          "title": "The Supplier Standoff",
+          "description": "Alex faces a NEW difficult stakeholder. **Rashid Patel** (Supply Chain Manager) has become uncooperative after Alex suggested switching to a new food supplier. Rashid has 15 years of supplier relationships and took the suggestion personally. He's now delaying information requests and providing minimal updates. **Context:**",
+          "images": [
+            {
+              "src": "/images/B1L5_comic_transfer.webp",
+              "alt": "The Supplier Standoff"
+            }
+          ],
+          "details": [
+            "Rashid has 15 years of supplier expertise",
+            "Alex suggested exploring a new vendor for cost savings",
+            "Rashid took it as questioning his judgment",
+            "He's now being uncooperative — delaying requests, minimal updates",
+            "Alex needs Rashid's expertise for the expansion"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Based on the scenario, what type of difficult stakeholder is Rashid, and what's the likely ROOT CAUSE?",
+            "points": 150,
+            "scenario_name": "Identify the Pattern",
+            "situation": "Rashid Patel, Savory & Co.'s Supply Chain Manager with 15 years of supplier relationships, has become uncooperative after Alex suggested exploring a new food vendor for cost savings. Rashid took the suggestion as questioning his judgment and is now delaying information requests and providing only minimal updates.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Demanding — He wants a bigger budget for procurement",
+                "correct": false,
+                "whyWrong": "Rashid isn't asking for more resources. His behavior signals feeling threatened, not unfulfilled demands."
+              },
+              {
+                "id": "B",
+                "text": "Undermining — He feels his expertise is being disrespected and his role threatened",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Disengaged — He's overwhelmed with other priorities",
+                "correct": false,
+                "whyWrong": "Rashid isn't withdrawing from all engagement — he's specifically uncooperative with Alex. That's resistance, not disengagement."
+              },
+              {
+                "id": "D",
+                "text": "Demanding — He wants decision-making authority over suppliers",
+                "correct": false,
+                "whyWrong": "He already has supplier authority. The issue is feeling that authority is being bypassed."
+              }
+            ],
+            "explanation": "Rashid is showing UNDERMINING behavior (minimal cooperation, information delays) because his ROOT CAUSE is feeling that his 15 years of expertise is being disrespected. Alex suggesting new vendors felt like questioning his judgment.",
+            "correctFeedback": {
+              "text": "Rashid is showing UNDERMINING behavior (minimal cooperation, information delays) because his ROOT CAUSE is feeling that his 15 years of expertise is being disrespected. Alex suggesting new vendors felt like questioning his judgment.",
+              "character": "Dr. Foster",
+              "characterQuote": "When experts feel their knowledge is being bypassed, they protect themselves by becoming uncooperative. The solution isn't force — it's acknowledgment."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at the behavior pattern: Rashid isn't asking for more resources (Demanding) or withdrawing from everything (Disengaged). He's specifically being uncooperative with Alex. That's targeted resistance.",
+              "character": "Dr. Foster",
+              "characterQuote": "Look at the behavior pattern: Rashid isn't asking for more resources (Demanding) or withdrawing from everything (Disengaged). He's specifically being uncooperative with Alex. That's targeted resistance."
+            },
+            "retryHint": "Match the behavior (targeted non-cooperation) to the stakeholder type. Which pattern involves public agreement but private resistance?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Alex schedules a one-on-one with Rashid. What's the BEST opening line?",
+            "points": 150,
+            "scenario_name": "Select the Right Strategy",
+            "situation": "Alex has identified Rashid's undermining behavior and its root cause -- he feels his 15 years of supply chain expertise is being disrespected. Alex schedules a private one-on-one meeting with Rashid to repair the relationship and re-establish collaboration on the expansion project.",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"Rashid, I've noticed some delays in the information I've requested. Can we talk about what's going on?\"",
+                "correct": false,
+                "whyWrong": "Starting with the problem (delays) puts Rashid on defense. He'll justify rather than open up."
+              },
+              {
+                "id": "B",
+                "text": "\"Rashid, I realized I made a mistake. I suggested exploring new vendors without consulting the person who knows our supply chain best — you. Can we start over?\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"Rashid, I need your cooperation on this project. Carlos expects us to work together.\"",
+                "correct": false,
+                "whyWrong": "Invoking Carlos's authority confirms Rashid's fear that his role is being undermined from above."
+              },
+              {
+                "id": "D",
+                "text": "\"Rashid, I know you're busy, but I really need those supplier reports by Friday.\"",
+                "correct": false,
+                "whyWrong": "Task-focused pressure ignores the relationship damage entirely."
+              }
+            ],
+            "explanation": "Opening with acknowledgment of YOUR mistake AND his expertise immediately disarms defensiveness. \"Start over\" signals a true partnership, not just compliance. This is influence without authority in action.",
+            "correctFeedback": {
+              "text": "Opening with acknowledgment of YOUR mistake AND his expertise immediately disarms defensiveness. \"Start over\" signals a true partnership, not just compliance. This is influence without authority in action.",
+              "character": "Dr. Foster",
+              "characterQuote": "The most powerful words in stakeholder management are 'I made a mistake' followed by 'and you're the expert.' Together they rebuild trust faster than any other approach."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Starting with the problem puts him on defense. Invoking Carlos's authority feels like a threat. Task-focused pressure ignores the relationship damage. Lead with acknowledgment.",
+              "character": "Dr. Foster",
+              "characterQuote": "Starting with the problem puts him on defense. Invoking Carlos's authority feels like a threat. Task-focused pressure ignores the relationship damage. Lead with acknowledgment."
+            },
+            "retryHint": "For undermining stakeholders, the strategy is Influence + Coalition. What opening demonstrates respect for expertise and acknowledges your own misstep?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to manage three types of difficult stakeholders, each with a different root cause and strategy.",
+        "key_takeaways": [
+          "Demanding stakeholders need WIN-WIN negotiation — understand underlying needs, not stated positions",
+          "Disengaged stakeholders need EMPATHY FIRST + FRICTION REDUCTION — make engagement easy",
+          "Undermining stakeholders need INFLUENCE WITHOUT AUTHORITY — acknowledge expertise, build coalition",
+          "Root cause analysis is essential — symptoms (demands, silence, missed deadlines) have deeper causes",
+          "Escalation is appropriate only when situations exceed PM authority, involve ethics violations, or after influence fails",
+          "Emotional intelligence unlocks collaboration better than pressure and threats"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L6",
+          "title": "Effective Communication Planning",
+          "description": "You've learned to handle difficult conversations. Now learn to PLAN communication strategies that prevent stakeholder conflicts before they happen."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Sponsor Re-engagement",
+            "situation": "A project manager is working on a restaurant chain expansion. The project sponsor has started missing steering committee meetings and responding to emails with one-word answers. The PM suspects the sponsor is dealing with other organizational pressures but needs the sponsor's approval to proceed with the next project phase.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Escalate to the sponsor's supervisor to get the approvals needed",
+                "correct": false,
+                "whyWrong": "Escalation before understanding the situation damages the sponsor relationship permanently."
+              },
+              {
+                "id": "B",
+                "text": "Send a detailed email summarizing all pending decisions that require sponsor approval",
+                "correct": false,
+                "whyWrong": "Adding more content to an overwhelmed stakeholder increases their burden — treating the symptom, not the cause."
+              },
+              {
+                "id": "C",
+                "text": "Request a brief meeting to understand the sponsor's current challenges and offer to reduce the engagement burden",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Document the sponsor's lack of engagement and proceed with the next phase using emergency authority",
+                "correct": false,
+                "whyWrong": "Proceeding without proper approval creates governance risks and doesn't solve the underlying problem."
+              }
+            ],
+            "explanation": "When a stakeholder becomes disengaged, the PM should first understand the ROOT CAUSE (empathy) and then offer to make engagement easier (friction reduction). This re-engagement strategy preserves the relationship while getting needed approvals.",
+            "correctFeedback": {
+              "text": "When a stakeholder becomes disengaged, the PM should first understand the ROOT CAUSE (empathy) and then offer to make engagement easier (friction reduction). This re-engagement strategy preserves the relationship while getting needed approvals.",
+              "character": "Dr. Foster",
+              "characterQuote": "When stakeholders pull back, our instinct is to push harder. But understanding and accommodation unlock re-engagement far more effectively than pressure."
+            },
+            "retryHint": "Think empathy + friction reduction. What approach understands the root cause AND makes future engagement easier?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST approach for the project manager?",
+            "points": 50,
+            "scenario_name": "Passive Resistance",
+            "situation": "A functional manager has been publicly agreeing to provide resources for a project but consistently fails to deliver. Team members report the functional manager privately expresses skepticism about the project's value. The project manager does not have direct authority over this manager.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Document each failure to deliver and present the evidence to the project sponsor",
+                "correct": false,
+                "whyWrong": "Going directly to documentation and escalation creates an adversarial relationship. The manager becomes a permanent blocker."
+              },
+              {
+                "id": "B",
+                "text": "Meet privately with the functional manager to understand their concerns and explore how to involve them in project decisions",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Request that the project sponsor direct the functional manager to comply with resource commitments",
+                "correct": false,
+                "whyWrong": "Forcing compliance through hierarchy creates resentment. The manager will comply minimally and resist in subtler ways."
+              },
+              {
+                "id": "D",
+                "text": "Accept the situation and find alternative resources from other departments",
+                "correct": false,
+                "whyWrong": "Avoidance doesn't resolve the conflict and may not be feasible if the resources are specialized."
+              }
+            ],
+            "explanation": "Passive-aggressive resistance typically stems from feeling excluded or skeptical about decisions made without input. The PM should use INFLUENCE WITHOUT AUTHORITY — understand concerns through curiosity, acknowledge their perspective, and involve them in decisions through coalition building.",
+            "correctFeedback": {
+              "text": "Passive-aggressive resistance typically stems from feeling excluded or skeptical about decisions made without input. The PM should use INFLUENCE WITHOUT AUTHORITY — understand concerns through curiosity, acknowledge their perspective, and involve them in decisions through coalition building.",
+              "character": "Dr. Foster",
+              "characterQuote": "People resist when they feel powerless. Give them voice and ownership, and resistance often transforms into advocacy."
+            },
+            "retryHint": "Consider influence tactics: curiosity, acknowledgment, and shared ownership. Which approach addresses the root cause of resistance?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What negotiation approach should the project manager use?",
+            "points": 50,
+            "scenario_name": "Scope Negotiation",
+            "situation": "A key stakeholder is demanding additional features that would increase the project budget by 30%. The relationship with this stakeholder is important for future projects. The stakeholder has expressed frustration that their input wasn't sought earlier in the planning process.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Win-Lose: Firmly reject the additional features to protect the budget",
+                "correct": false,
+                "whyWrong": "Win-Lose damages the ongoing relationship and creates resentment affecting future collaboration."
+              },
+              {
+                "id": "B",
+                "text": "Accommodate: Accept all requested features to maintain the relationship",
+                "correct": false,
+                "whyWrong": "Accommodation without negotiation sets unrealistic expectations and creates project risk."
+              },
+              {
+                "id": "C",
+                "text": "Win-Win: Understand the underlying business need and explore alternatives that achieve the same outcome at lower cost",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Withdraw: Postpone the discussion until the stakeholder calms down",
+                "correct": false,
+                "whyWrong": "Withdrawal delays resolution and frustrates a stakeholder whose concern about being excluded is legitimate."
+              }
+            ],
+            "explanation": "Win-Win negotiation is appropriate when the relationship is important AND the stakeholder has legitimate interests. The PM should understand the UNDERLYING NEED (not just the stated demand) and explore alternatives within project constraints.",
+            "correctFeedback": {
+              "text": "Win-Win negotiation is appropriate when the relationship is important AND the stakeholder has legitimate interests. The PM should understand the UNDERLYING NEED (not just the stated demand) and explore alternatives within project constraints.",
+              "character": "Dr. Foster",
+              "characterQuote": "The magic of Win-Win is in the question 'What are you trying to achieve?' The answer often reveals solutions neither party initially considered."
+            },
+            "retryHint": "Win-Win works when: (1) relationship is important, (2) both parties have legitimate interests, (3) time allows for exploration."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What should the project manager do?",
+            "points": 50,
+            "scenario_name": "Escalation Decision",
+            "situation": "A regulatory inspector is demanding changes to the restaurant construction that exceed code requirements by $60,000. The project manager's spending authority is $50,000. The inspector hints that \"things could be expedited\" with the right vendor selection. The PM suspects possible corruption.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Negotiate directly with the inspector to find a Win-Win solution",
+                "correct": false,
+                "whyWrong": "When corruption is suspected, negotiating directly could implicate the PM in unethical behavior. This exceeds PM authority on multiple dimensions."
+              },
+              {
+                "id": "B",
+                "text": "Comply with the demand to avoid project delays",
+                "correct": false,
+                "whyWrong": "Compliance with potentially corrupt demands violates professional ethics and may expose the organization to legal liability."
+              },
+              {
+                "id": "C",
+                "text": "Escalate immediately to the project sponsor with documentation of the situation and concerns",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Threaten to report the inspector to the ethics board",
+                "correct": false,
+                "whyWrong": "Direct threats without organizational backing can backfire and expose the PM to retaliation."
+              }
+            ],
+            "explanation": "Escalation is appropriate when: (1) the situation exceeds PM authority ($60K > $50K limit), (2) there are potential ethics/corruption concerns, AND (3) organizational risk is high. The PM should document and escalate rather than negotiate or comply.",
+            "correctFeedback": {
+              "text": "Escalation is appropriate when: (1) the situation exceeds PM authority ($60K > $50K limit), (2) there are potential ethics/corruption concerns, AND (3) organizational risk is high. The PM should document and escalate rather than negotiate or comply.",
+              "character": "Dr. Foster",
+              "characterQuote": "Escalation isn't failure — it's recognizing when a situation exceeds your authority and requires organizational response. A good PM knows when to hand off to leadership."
+            },
+            "retryHint": "Review the escalation criteria: Beyond PM authority? Ethics concern? Organizational risk? How many criteria are met here?"
+          }
+        ]
+      }
+    }
+  ]
+}

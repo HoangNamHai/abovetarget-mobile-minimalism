@@ -1,0 +1,615 @@
+{
+  "lessonId": "C1L7",
+  "lessonTitle": "Project Closure",
+  "courseId": "C1",
+  "courseName": "Integration Management",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 420,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand project closure as a FORMAL process, not just work completion",
+    "Identify the 7 formal closure activities: acceptance, contracts, lessons learned, resource release, documentation, transfer, celebration",
+    "Distinguish contract closeout for fixed-price vs cost-reimbursable contracts",
+    "Recognize that ALL projects require formal closure — completed, cancelled, OR suspended",
+    "Apply closure principles to real-world project completion and cancellation scenarios"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "dr_amelia_foster",
+    "elena_santos",
+    "javier_torres",
+    "maya_rodriguez",
+    "sam_chen"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "The Restaurant Is Open, But the Project Isn't Closed",
+        "intro": "You're **Alex Mitchell**, and Riverside Plaza just had its grand opening — packed house, rave reviews, a triumphant Carlos declaring \"Project done!\" But Alex looks at the closure checklist: only 1 of 7 items checked. Dr. Amelia stops the celebration cold: \"Work complete does NOT mean project closed.\" Six formal closure activities remain — acceptance, contracts, lessons learned, team release, documentation, and operations transfer. Can Alex close this project PROPERLY?",
+        "failure_cards": [
+          {
+            "id": "incomplete_close",
+            "icon": "📋",
+            "title": "Incomplete Close",
+            "summary": "Grand opening success masks an incomplete project",
+            "image": "/images/C1L7_comic_incomplete_close.webp",
+            "details": "Riverside Plaza is packed on opening night. Kiki the food critic writes a glowing 4.5-star review. Carlos raises his arms in triumph: \"Project's DONE! Great work everyone — back to your regular jobs!\" But Alex is holding a thick folder labeled \"Closure Checklist\" with only 1 of 7 items checked. Dr. Amelia steps forward with a hand raised: \"Not so fast. The restaurant opened, but the PROJECT isn't closed.\" Work Complete does NOT equal Project Closed. Formal closure is a process, not a moment."
+          },
+          {
+            "id": "contract_mess",
+            "icon": "⚠️",
+            "title": "Contract Mess",
+            "summary": "Skipping contract closeout creates financial and legal chaos",
+            "image": "/images/C1L7_comic_contract_mess.webp",
+            "details": "Javier the electrical contractor is owed $5,000 on a fixed-price contract. Sam from Finance wants to pocket the savings. But contract terms determine closeout — not what seems fair. Fixed-price contracts require full payment regardless of the contractor's actual costs. Cost-reimbursable contracts only require actual costs. Alex must verify the contract type BEFORE making any payment decisions. Skipping contract closeout leaves legal obligations dangling, warranties unconfirmed, and vendor relationships damaged."
+          },
+          {
+            "id": "lessons_lost",
+            "icon": "💡",
+            "title": "Lessons Lost",
+            "summary": "Cancelled projects without closure waste the most valuable learning",
+            "image": "/images/C1L7_comic_lessons_lost.webp",
+            "details": "Savory & Co.'s Downtown 2.0 project is cancelled at 60% completion when investor funding is withdrawn. Carlos shrugs: \"It's cancelled — nothing to close.\" Wrong. ALL projects require formal closure — completed, cancelled, or suspended. Cancelled projects have the MOST valuable lessons learned: what went wrong, what warning signs were missed, and how to prevent it next time. The Downtown 2.0 lesson? Investor commitment was verbal, not contractual. Skipping closure on a cancelled project wastes the failure's entire learning value."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "The restaurant is open, customers are eating — what else is there? We're done!"
+        },
+        "learning_hook": "**Work done is NOT project closed.** Formal closure requires 7 specific activities: sponsor acceptance, contract closeout, lessons learned, resource release, documentation archive, operations transfer, and team celebration. Skip any of them, and you create legal liability, miss critical learning, and strand resources. Even CANCELLED projects need formal closure."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "complete_the_formal_closure_process",
+        "title": "Complete the Formal Closure Process",
+        "description": "Dr. Amelia guides you through formal project closure. \"Every project must end formally — with signatures, closeouts, and lessons captured. Skip closure, and you'll face legal liability, missed learning, and stranded resources.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "multi_select",
+            "question": "Which activities are REQUIRED for formal project closure? Select all that apply.",
+            "points": 175,
+            "scenario_name": "Identify the 7 Closure Activities",
+            "situation": "Carlos has declared the project \"done\" because the restaurant opened successfully. But Dr. Amelia insists on FORMAL closure. She lists activities on the whiteboard and asks Alex to identify which ones are required.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Obtain formal acceptance from sponsor (Elena signs acceptance document)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Close out all contractor/vendor contracts (final payments, completion certificates)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Capture final lessons learned (comprehensive project retrospective)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Release project team members (formal release to functional managers)",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Archive project documentation (store in organizational repository)",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Start planning the next project phase",
+                "correct": false
+              },
+              {
+                "id": "G",
+                "text": "Transfer deliverables to operations (hand off to Carlos, Jamie, Marco)",
+                "correct": true
+              },
+              {
+                "id": "H",
+                "text": "Celebrate team success (recognition event, acknowledge contributions)",
+                "correct": true
+              }
+            ],
+            "explanation": "The 7 formal closure activities are: (1) Formal Acceptance — sponsor signature confirming deliverables met requirements, (2) Contract Closeout — final payments and completion certificates, (3) Lessons Learned — comprehensive retrospective, (4) Resource Release — team formally released to functional managers, (5) Documentation Archive — stored in organizational repository, (6) Operations Transfer — hand off deliverables to ongoing team, (7) Team Celebration — recognition and acknowledgment. Option F (planning the next phase) is INITIATING a new project, not CLOSING this one.",
+            "correctFeedback": {
+              "text": "The 7 formal closure activities are: (1) Formal Acceptance — sponsor signature confirming deliverables met requirements, (2) Contract Closeout — final payments and completion certificates, (3) Lessons Learned — comprehensive retrospective, (4) Resource Release — team formally released to functional managers, (5) Documentation Archive — stored in organizational repository, (6) Operations Transfer — hand off deliverables to ongoing team, (7) Team Celebration — recognition and acknowledgment. Option F (planning the next phase) is INITIATING a new project, not CLOSING this one.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Exactly right. These seven activities formalize the project's end — legally, financially, and organizationally. Skip any of them and you create problems down the road."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what needs to happen AFTER the work is done. Who hasn't signed off yet? What contracts are still open? Where will the documentation live? Who will maintain the deliverables?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what needs to happen AFTER the work is done. Who hasn't signed off yet? What contracts are still open? Where will the documentation live? Who will maintain the deliverables?"
+            },
+            "retryHint": "There are 7 closure activities. All are about ending THIS project formally — not starting the next one. Which option is about starting something new rather than closing something out?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What should Alex do?",
+            "points": 175,
+            "scenario_name": "Contract Closeout Decision",
+            "situation": "Alex is closing Javier's electrical contractor contract. Contract details: Fixed price at $120,000. Work status: complete and accepted. Payments made: $115,000. Remaining: $5,000. Javier says: \"Contract says $120K. Work is done. You owe me $5K.\" Sam from Finance counters: \"We only spent $115K. That's $5K savings for the project!\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Pay Javier the full $5,000 because the contract is fixed-price at $120K",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Review contract terms first — if fixed-price, pay $5K (contract obligation); if cost-reimbursable, reclaim savings",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Split the difference — pay Javier $2,500, keep $2,500 as project savings",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Reclaim all $5,000 since Alex spent less than budgeted",
+                "correct": false
+              }
+            ],
+            "explanation": "Contract terms determine closeout, not assumptions or arbitrary splits. Fixed-price contracts require full payment of the agreed price regardless of the contractor's actual costs — the contractor bears cost risk and earns profit if costs are lower. Cost-reimbursable contracts only require payment of actual costs — the buyer bears cost risk and reclaims unused budget. Alex must VERIFY the contract type before deciding. The correct first step is always: review the contract terms.",
+            "correctFeedback": {
+              "text": "Contract terms determine closeout, not assumptions or arbitrary splits. Fixed-price contracts require full payment of the agreed price regardless of the contractor's actual costs — the contractor bears cost risk and earns profit if costs are lower. Cost-reimbursable contracts only require payment of actual costs — the buyer bears cost risk and reclaims unused budget. Alex must VERIFY the contract type before deciding. The correct first step is always: review the contract terms.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Always check the contract first. Different contract types have completely different closeout rules. You can't assume — you verify."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Before deciding what to pay, what's the very first thing you should check? The contract TYPE determines everything about closeout.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Before deciding what to pay, what's the very first thing you should check? The contract TYPE determines everything about closeout."
+            },
+            "retryHint": "The question isn't \"how much should we pay?\" — it's \"what process should Alex follow?\" What document determines the answer to every contract closeout question?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Does a cancelled project (60% complete, never delivered) still require formal closure?",
+            "points": 150,
+            "scenario_name": "Cancelled Project Closure",
+            "situation": "Savory & Co. was planning a second location — the Downtown 2.0 project. Status: 60% complete (kitchen design done, permits obtained, contractor selected). But an economic downturn hits and investor funding is withdrawn. Elena announces: \"I'm cancelling Downtown 2.0.\" Carlos responds: \"Project's cancelled, so there's nothing to close — we just stop work and move on.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "YES — document cancellation reason, close contracts (per cancellation terms), release team, capture lessons learned, archive documentation",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "NO — closure is only for completed projects; cancelled projects just stop work",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "PARTIAL — close contracts but skip lessons learned since the project failed",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "WAIT — defer closure for 6 months to see if the project restarts",
+                "correct": false
+              }
+            ],
+            "explanation": "ALL projects require formal closure — completed, cancelled, or suspended. For Downtown 2.0: (1) Document WHY cancelled (investor withdrawal, economic downturn), (2) Close contracts per cancellation terms (may owe termination fees), (3) Release team immediately (don't strand them in limbo), (4) Capture lessons learned (investor commitment was verbal, not contractual — require signed funding commitment next time), (5) Archive documentation (may restart in future). Cancelled projects have the MOST valuable lessons because failure teaches what to AVOID.",
+            "correctFeedback": {
+              "text": "ALL projects require formal closure — completed, cancelled, or suspended. For Downtown 2.0: (1) Document WHY cancelled (investor withdrawal, economic downturn), (2) Close contracts per cancellation terms (may owe termination fees), (3) Release team immediately (don't strand them in limbo), (4) Capture lessons learned (investor commitment was verbal, not contractual — require signed funding commitment next time), (5) Archive documentation (may restart in future). Cancelled projects have the MOST valuable lessons because failure teaches what to AVOID.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Every project gets formal closure — even cancelled ones. The lessons from Downtown 2.0 are more valuable than any lesson from a successful project. Don't waste the failure."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what happens if you just 'stop work.' Contracts are still open. Team members are in limbo. Nobody documented why it failed. And the same mistake will happen again on the next project.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what happens if you just 'stop work.' Contracts are still open. Team members are in limbo. Nobody documented why it failed. And the same mistake will happen again on the next project."
+            },
+            "retryHint": "According to PMI, which project outcomes require formal closure — only successful ones, or ALL outcomes including cancellation and suspension?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Project Closure Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Work Complete vs. Project Closed",
+            "subtitle": "",
+            "content": "**Close Project or Phase** is the process of finalizing ALL activities to formally complete the project or phase (PMBOK 7th Edition, pages 106-109).\n\n**Carlos's Misconception:** \"Grand opening happened — project's done!\"\n\n**Reality:** Work Complete does NOT equal Project Closed.\n\nCompleting the deliverable (opening the restaurant) is only ONE part of closure. Formal closure requires a structured process that addresses legal obligations, organizational learning, resource management, and knowledge transfer.\n\n**Work Complete** means deliverables created, restaurant opened, customers served. **Project Closed** means sponsor acceptance signed, contracts closed out, lessons captured, team released, documentation archived, operations handed off, and celebration held. The gap between these two states is where organizations lose value, create liability, and repeat mistakes.",
+            "diagram": {
+              "image": "/images/C1L7_diagram_closure_activities.webp",
+              "alt": "Closure activities diagram"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "The 7 Formal Closure Activities",
+            "subtitle": "",
+            "content": "Every project closure requires these seven activities:\n\n1. **Formal Acceptance** — Sponsor signs acceptance document confirming deliverables meet requirements. Elena signs: \"Riverside Plaza delivered per scope baseline — 2,200 sq ft, 120 seats, opened Oct 15.\" This legally ends the PM's responsibility and confirms the project delivered what was promised.\n\n2. **Contract Closeout** — Final payments, completion certificates, procurement closure. Javier's electrical work: final $5K payment and signed completion certificate. HVAC vendor: final payment and warranty documentation. Ends contractual obligations and prevents future liability.\n\n3. **Lessons Learned** — Comprehensive retrospective capturing what worked, what didn't, and recommendations. Success: Weekly CCB meetings enabled fast decisions. Challenge: HVAC ventilation issue discovered late. Recommendation: Verify HVAC capacity during planning. This enables organizational learning and prevents repeating mistakes.\n\n4. **Resource Release** — Formal release to functional managers with performance reviews completed. Maya transitions to operations chef. Liam released and assigned to next expansion. Alex available for the next project. Resources cannot start new assignments until formally released.\n\n5. **Documentation Archive** — Store charter, plans, baselines, change logs in organizational repository. Archived: Charter v1.0, PM Plan v2.2, schedule baseline v2.1, cost baseline final ($1.215M), change log (18 CRs), lessons learned. Preserves organizational memory for audits, future reference, and legal records.\n\n6. **Operations Transfer** — Hand off deliverables to operational team with training and knowledge transfer. Alex transfers to Carlos and Jamie: operations manuals, supplier contacts, equipment warranties. Maya trains ongoing kitchen team. Ensures operations can maintain deliverables without project team involvement.\n\n7. **Team Celebration** — Recognition event acknowledging contributions. Team dinner at Riverside Plaza, recognition awards (Maya: \"Outstanding Culinary Leadership\"), thank-you speeches. Supports team morale, organizational culture, and retention."
+          },
+          {
+            "id": "tab3",
+            "title": "Contract Closeout Types",
+            "subtitle": "",
+            "content": "Contract type determines how closeout works:\n\n**Fixed-Price Contracts:**\n- Contractor agrees to deliver for a SET PRICE (e.g., $120K electrical work)\n- Contractor bears cost risk — their actual costs don't affect the buyer's payment\n- Closeout: Pay FULL contract price if work is complete, regardless of contractor's actual costs\n- Example: Javier's contract at $120K fixed, work complete, his costs were $115K — pay $120K (Javier keeps $5K profit)\n\n**Cost-Reimbursable Contracts (with NTE):**\n- Buyer reimburses contractor for ACTUAL COSTS up to a Not-To-Exceed limit\n- Buyer bears cost risk — lower actual costs mean lower payment\n- Closeout: Pay ACTUAL COSTS only, reclaim unused budget\n- Example: HVAC contract NTE $50K, actual costs $47K — pay $47K, reclaim $3K savings\n\n**Closeout Process (Both Types):** Verify work complete and accepted, review contract terms, calculate final payment per terms, obtain contractor signature on completion certificate, make final payment, release contractor from obligations, archive contract documentation."
+          },
+          {
+            "id": "tab4",
+            "title": "Closure for All Project Outcomes",
+            "subtitle": "",
+            "content": "ALL projects require formal closure — regardless of outcome:\n\n- **Completed Successfully** — Full 7-activity closure\n- **Completed Partially** — Close delivered portions, document what wasn't delivered and why\n- **Cancelled** — Document reason, close contracts per cancellation terms, release resources, capture lessons, archive documentation\n- **Suspended** — Document status, preserve documentation for potential restart, release resources\n\n**Key Insight:** Cancelled projects have the MOST valuable lessons learned. Success teaches what WORKS. Failure teaches what to AVOID. The Downtown 2.0 cancellation revealed that investor commitment was verbal, not contractual — a lesson that prevents the same mistake on every future project."
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:** Project closure is part of the **Delivery Performance Domain**. Close Project or Phase ensures formal finalization of all activities.\n\n**PMBOK 6th Edition, Section 4.7:** Close Project or Phase — the process of finalizing all activities across all Process Groups.\n\n**PMP Exam Tips:**\n- Closure questions appear in ~8% of PMP exam questions\n- Key concept: ALL projects need formal closure, including cancelled and suspended projects\n- Contract closeout follows contract terms — fixed-price vs cost-reimbursable determines payment\n- Lessons learned are especially critical for unsuccessful project outcomes\n- Closure must happen BEFORE initiating new projects"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Closing a Software Project",
+        "scenario": {
+          "title": "Closing a Software Project",
+          "description": "You've just delivered a software project on time and on budget. The Product Owner accepted the deliverables and signed formal acceptance. But formal closure isn't complete. **Current Situation:** Alex says: \"Work done isn't project closed. Let me show you how to properly close out a project with all the formal steps.\"",
+          "images": [
+            {
+              "src": "/images/C1L7_comic_transfer.webp",
+              "alt": "Transfer scenario: software project closure"
+            }
+          ],
+          "details": [
+            "Development team (5 people) waiting for formal release",
+            "Cloud hosting vendor contract ($10K/month) still active — project paying, but operations should be",
+            "Lessons learned meeting not scheduled",
+            "All documentation on your laptop — not archived in company repository",
+            "No team celebration planned"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "multi_select",
+            "question": "Which activities are REQUIRED to formally close this project? Select all that apply.",
+            "points": 150,
+            "scenario_name": "Closure Activity Selection",
+            "situation": "You've delivered the software project successfully. The Product Owner signed acceptance. Five developers are idle, the hosting contract is still billing to your project, documentation sits on your personal laptop, and no retrospective has been held.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Release the 5 developers to their next project assignments",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Transfer the $10K/month hosting contract to the operations budget",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Schedule and conduct a final lessons learned retrospective",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Upload documentation from your laptop to the company repository",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Hold a team recognition event to celebrate success",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Start planning the next sprint for new features",
+                "correct": false
+              },
+              {
+                "id": "G",
+                "text": "Continue fixing bugs reported by users",
+                "correct": false
+              }
+            ],
+            "explanation": "Five closure activities are required: (1) Release resources — developers can't start new work until formally released, (2) Transfer contracts — hosting should bill to operations, not the closed project, (3) Lessons learned — capture insights while the experience is fresh, (4) Archive documentation — company repository, not personal laptop, (5) Team celebration — acknowledge contributions and end the project on a positive note. Options F and G are NOT closure: planning new sprints is INITIATING the next project, and fixing bugs is ongoing OPERATIONS work that should be handed to the ops team.",
+            "correctFeedback": {
+              "text": "Five closure activities are required: (1) Release resources — developers can't start new work until formally released, (2) Transfer contracts — hosting should bill to operations, not the closed project, (3) Lessons learned — capture insights while the experience is fresh, (4) Archive documentation — company repository, not personal laptop, (5) Team celebration — acknowledge contributions and end the project on a positive note. Options F and G are NOT closure: planning new sprints is INITIATING the next project, and fixing bugs is ongoing OPERATIONS work that should be handed to the ops team.",
+              "character": "Alex Mitchell",
+              "characterQuote": "All five are closure activities. Resources released, contracts transferred, lessons captured, docs archived, and team celebrated. NOW the project is formally closed."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Focus on what needs to END, not what needs to START. Which activities close out this project versus beginning something new or continuing operations?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Focus on what needs to END, not what needs to START. Which activities close out this project versus beginning something new or continuing operations?"
+            },
+            "retryHint": "Closure activities END the current project. Which two options are about starting something new or continuing ongoing work rather than closing things out?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "drag_drop",
+            "question": "Drag each closure activity into the correct order:",
+            "points": 150,
+            "scenario_name": "Closure Sequence",
+            "situation": "You've identified the five closure activities. Now you need to arrange them in the proper sequence for effective project closure.",
+            "chips": [
+              {
+                "id": "capture_lessons_learned_while_fresh_in_memory",
+                "label": "Capture lessons learned (while fresh in memory)",
+                "correctZone": "position_1"
+              },
+              {
+                "id": "close_transfer_contracts_move_hosting_to_operations",
+                "label": "Close/transfer contracts (move hosting to operations)",
+                "correctZone": "position_2"
+              },
+              {
+                "id": "archive_documentation_preserve_project_records",
+                "label": "Archive documentation (preserve project records)",
+                "correctZone": "position_3"
+              },
+              {
+                "id": "release_resources_developers_to_next_assignments",
+                "label": "Release resources (developers to next assignments)",
+                "correctZone": "position_4"
+              },
+              {
+                "id": "celebrate_team_recognition_event",
+                "label": "Celebrate team (recognition event)",
+                "correctZone": "position_5"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "position_1",
+                "label": "Position 1",
+                "detail": "Yes"
+              },
+              {
+                "id": "position_2",
+                "label": "Position 2",
+                "detail": "Yes"
+              },
+              {
+                "id": "position_3",
+                "label": "Position 3",
+                "detail": "Yes"
+              },
+              {
+                "id": "position_4",
+                "label": "Position 4",
+                "detail": "Yes"
+              },
+              {
+                "id": "position_5",
+                "label": "Position 5",
+                "detail": "Yes"
+              }
+            ],
+            "explanation": "The optimal sequence is: (1) Lessons learned FIRST — capture while experience is fresh and team is together, (2) Close contracts — end financial obligations and transfer ongoing costs, (3) Archive documentation — preserve records before the team disperses, (4) Release resources — team available for next assignments after knowledge is captured, (5) Celebrate LAST — a fitting end to the project journey. The key principle: capture knowledge and close obligations BEFORE releasing people.",
+            "correctFeedback": {
+              "text": "The optimal sequence is: (1) Lessons learned FIRST — capture while experience is fresh and team is together, (2) Close contracts — end financial obligations and transfer ongoing costs, (3) Archive documentation — preserve records before the team disperses, (4) Release resources — team available for next assignments after knowledge is captured, (5) Celebrate LAST — a fitting end to the project journey. The key principle: capture knowledge and close obligations BEFORE releasing people.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Sequence matters. Lessons while they're fresh, archive before the team disperses, and always end with celebration. That's how you close a project properly."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about dependencies. What needs to happen while the whole team is still together? What should be the very last thing you do?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about dependencies. What needs to happen while the whole team is still together? What should be the very last thing you do?"
+            },
+            "retryHint": "What must happen while the whole team is still together? What activity is the natural ending point for any project?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that project closure is a FORMAL process — not just stopping work. Every project needs proper closure with seven specific activities, contract terms determine closeout rules, and even cancelled projects require formal closure to capture valuable lessons.",
+        "key_takeaways": [
+          "Work Complete =/= Project Closed: Finishing deliverables is only one part of closure. Formal closure requires a structured process with 7 specific activities.",
+          "7 Closure Activities: Formal acceptance, contract closeout, lessons learned, resource release, documentation archive, operations transfer, team celebration.",
+          "Contract Terms Rule: Fixed-price = pay agreed price. Cost-reimbursable = pay actual costs. Always verify contract type before making closeout decisions.",
+          "ALL Projects Need Closure: Completed, cancelled, or suspended — every project outcome requires formal closure. No exceptions.",
+          "Cancelled Projects Teach Most: Failed projects have the most valuable lessons learned. Success teaches what works; failure teaches what to AVOID.",
+          "Close Before You Start: Complete formal closure of the current project before initiating the next one."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L8",
+          "title": "Benefits Realization",
+          "description": "The project delivered Riverside Plaza on time and on budget — but did it deliver BUSINESS VALUE? Revenue targets hit? Customer satisfaction high? ROI achieved? Learn how to measure post-project benefits and validate that the project created the intended value."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Before creating the new project charter, what must you do FIRST?",
+            "points": 70,
+            "scenario_name": "Closure Before New Charter",
+            "situation": "Your organization just completed a major ERP implementation. The sponsor has already asked you to lead the next project — a mobile app extension. You're eager to start the new charter. The ERP system is live and users are working in it, but formal closure activities have not been performed.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Begin the new project charter since the ERP work is done",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Formally close the ERP project with all required closure activities",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Have the team continue ERP bug fixes while you start the new charter",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Transfer lessons learned from ERP directly into the new project plan",
+                "correct": false
+              }
+            ],
+            "explanation": "Formal closure must be completed before starting new projects. This ensures lessons are captured in the organizational repository (not just transferred informally), resources are formally released (they can't serve two projects), contracts are closed (prevents ongoing liability), and documentation is archived (organizational memory). Skipping closure to rush into the next project carries unfinished obligations forward and wastes learning.",
+            "correctFeedback": {
+              "text": "Formal closure must be completed before starting new projects. This ensures lessons are captured in the organizational repository (not just transferred informally), resources are formally released (they can't serve two projects), contracts are closed (prevents ongoing liability), and documentation is archived (organizational memory). Skipping closure to rush into the next project carries unfinished obligations forward and wastes learning.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Close before you initiate. Resources aren't available until released. Lessons need formal capture. Documentation needs archiving. Complete the current project's closure, then start the next one."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The ERP system being live doesn't mean the project is closed. What formal activities are still outstanding? Can you truly start something new while the old project has loose ends?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The ERP system being live doesn't mean the project is closed. What formal activities are still outstanding? Can you truly start something new while the old project has loose ends?"
+            },
+            "retryHint": "According to PMI, what must happen to the current project before a PM can initiate a new one? Think about the formal process, not just the work."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should you do during contract closeout?",
+            "points": 65,
+            "scenario_name": "Contractor Cancellation Closeout",
+            "situation": "Your project is cancelled at 70% completion. The construction contractor has already purchased materials worth $30,000 that are now unusable for other projects. The contract includes a cancellation clause requiring compensation for non-recoverable expenses. The contractor is requesting payment, and your finance team wants to pay nothing since the project is cancelled.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Pay nothing — project was cancelled so all obligations end",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Compensate the contractor per the cancellation clause terms",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Have the contractor sell materials and split any loss 50/50",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Wait until the project restarts to resolve the contract",
+                "correct": false
+              }
+            ],
+            "explanation": "Contract closeout honors contract terms — including cancellation clauses. The cancellation clause specifically addresses non-recoverable expenses, and the contractor is entitled to compensation as specified. Project cancellation does NOT void contractual obligations. The PM must review the cancellation clause, calculate compensation per its terms, obtain a termination certificate, and formally close the contract.",
+            "correctFeedback": {
+              "text": "Contract closeout honors contract terms — including cancellation clauses. The cancellation clause specifically addresses non-recoverable expenses, and the contractor is entitled to compensation as specified. Project cancellation does NOT void contractual obligations. The PM must review the cancellation clause, calculate compensation per its terms, obtain a termination certificate, and formally close the contract.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Contract terms govern closeout — even on cancelled projects. The cancellation clause exists precisely for this situation. Honor it, close the contract, and move on cleanly."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Project cancellation doesn't make contracts disappear. What does the cancellation clause specifically say about non-recoverable expenses? That clause IS the answer.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Project cancellation doesn't make contracts disappear. What does the cancellation clause specifically say about non-recoverable expenses? That clause IS the answer."
+            },
+            "retryHint": "The contract has a specific cancellation clause. What does that clause say about non-recoverable expenses? Contract terms — not feelings or assumptions — determine closeout."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "According to PMI best practices, which project likely has the MOST valuable lessons learned to capture?",
+            "points": 65,
+            "scenario_name": "Most Valuable Lessons Learned",
+            "situation": "Your organization completed three projects this year: Project A delivered on time, on budget, and met all requirements. Project B was cancelled at 40% due to scope creep and unresolved stakeholder conflicts. Project C delivered late but met quality standards after significant rework. The PMO director asks which project's lessons learned should be prioritized for capture.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Project A — successful projects show what works",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Project B — cancelled projects reveal what to AVOID",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Project C — overcoming challenges shows resilience",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "All projects equally — every project has lessons",
+                "correct": false
+              }
+            ],
+            "explanation": "Failed and cancelled projects have the most valuable lessons learned. Project B's cancellation due to scope creep and stakeholder conflicts reveals root causes of failure, warning signs that were missed, and prevention strategies for future projects. Success (Project A) teaches what works but rarely reveals what could go WRONG. Challenge recovery (Project C) teaches resilience. But complete failure (Project B) teaches what to AVOID — the most actionable and impactful type of learning for an organization.",
+            "correctFeedback": {
+              "text": "Failed and cancelled projects have the most valuable lessons learned. Project B's cancellation due to scope creep and stakeholder conflicts reveals root causes of failure, warning signs that were missed, and prevention strategies for future projects. Success (Project A) teaches what works but rarely reveals what could go WRONG. Challenge recovery (Project C) teaches resilience. But complete failure (Project B) teaches what to AVOID — the most actionable and impactful type of learning for an organization.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Don't waste the failure's learning value. Project B teaches what warning signs to watch for, what processes failed, and how to prevent cancellation in the future. That's organizational gold."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "All projects have lessons, yes. But which type of lesson is hardest to learn any other way? What does failure teach that success simply cannot?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "All projects have lessons, yes. But which type of lesson is hardest to learn any other way? What does failure teach that success simply cannot?"
+            },
+            "retryHint": "Which type of lesson is hardest to learn without actually experiencing the failure? What does Project B's cancellation teach that Projects A and C cannot?"
+          }
+        ]
+      }
+    }
+  ]
+}
