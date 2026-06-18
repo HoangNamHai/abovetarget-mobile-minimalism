@@ -143,8 +143,21 @@ Each behind its interface so domain code is untouched when toggled.
 
 ## Release / native infra workstream
 
+**Reuse PMP's app identity** (ship as an update to the same store listing):
+
+| Field | Value |
+|---|---|
+| name | `PMP Exam Pro` |
+| slug | `pmp-exam-pro` |
+| owner | `hoangnamhai` |
+| scheme | `pmp-exam-pro` |
+| iOS bundleIdentifier | `com.h2ai.pmpexampro` |
+| Android package | `com.h2ai.pmpexampro` |
+| EAS projectId | `d31b8c5a-d243-401a-af76-35f0b42342bc` |
+
+- Update the new shell's `app.json` to these values (currently `monograph-elite-native`).
 - Regenerate `android/` + `ios/` via prebuild on **Expo 56** (do not copy PMP's 54-era native projects).
-- Port `eas.json`, `app.json` (bundle IDs, permissions, plugins), `fastlane/`, signing keystores,
+- Port `eas.json`, remaining `app.json` config (permissions, plugins), `fastlane/`, signing keystores,
   Google Play upload scripts, store metadata.
 - Re-validate each native dep builds on SDK 56 — primary version-gap risk.
 
