@@ -1315,3 +1315,23 @@ git commit -m "feat(persistence): persistence factory and barrel export"
 **Type consistency:** `LessonAttempt`/`Domain` defined once (Task 1) and imported everywhere. `SqlExecutor` defined in Task 7, consumed in Tasks 8/10. `AttemptRepository` method names (`record`/`listAll`/`listRecent`/`count`/`clear`) identical across fake (Task 6), SQLite impl (Task 8), and factory (Task 10). `KeyValueStore` methods (`getString`/`setString`/`getJSON`/`setJSON`/`remove`) consistent across Tasks 2/3/9. `getLocalDateString` body identical to the version Phase 3 will reuse from `src/utils/date.ts`.
 
 **Note on SQLite testing:** native `expo-sqlite` can't run in `jest-expo`, so Tasks 7–8/10 test the adapter against a faithful in-memory mock of the `expo-sqlite` async surface (`jest-setup-mocks.js`). Real on-device SQLite is exercised when the app boots in Phase 4. This is called out so the reviewer doesn't mistake the mock for full integration coverage.
+
+## Phase 1 outcome & deferred follow-ups
+
+Phase 1 shipped: 10 tasks, full suite 26 suites / 87 tests green. Final whole-branch
+review (opus) drove a correctness fix-wave — `completedAt` is now normalized to UTC on
+`record()` in both repository impls, the in-memory fake dedups by `id` (matching SQLite's
+`INSERT OR REPLACE`), the legacy migration preserves `activeDays` into the carry-over, and
+`getJSON` guards `JSON.parse` (a corrupt blob no longer bricks `createPersistence()` at boot).
+
+Carry these into later phases:
+- **(Phase 4) SQL semantics smoke test:** the jest mock proves API shape, not SQLite type
+  coercion. At app boot, assert a recorded `score: 80` reads back as `=== 80` (number, not
+  `"80"`) — the derivations do arithmetic on `score`/`questionCount`.
+- **(Phase 3) Storage-key constants:** add `src/services/persistence/keys.ts` when settings/
+  onboarding KV keys land, so key names are compile-time visible (avoid collisions/typos).
+- **(Phase 3) Factory failure policy:** decide whether a failed `openDatabase()`/legacy
+  migration should be allowed to take down `kv`/`secure` too (currently it does — one
+  un-isolated `await` chain in `createPersistence()`).
+- **(watch) Invalid-timestamp throw:** `new Date(invalid).toISOString()` in `record()` throws
+  `RangeError`; no real input path today, revisit only if untrusted timestamps ever flow in.
