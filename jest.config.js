@@ -1,5 +1,6 @@
 module.exports = {
   preset: 'jest-expo',
+  setupFiles: ['<rootDir>/jest-setup-mocks.js'],
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
   transformIgnorePatterns: [
     '/node_modules/(?!(.pnpm|react-native|@react-native(-community)?|expo|@expo|@expo-google-fonts|react-navigation|@react-navigation|@gorhom|@shopify|uniwind|heroui-native|react-native-worklets|tailwind-variants|tailwind-merge|clsx))',
