@@ -1,3 +1,4 @@
+process.env.TZ = 'UTC';
 import type { LessonAttempt } from '../../../types/progress';
 import {
   deriveActiveDays,
@@ -18,11 +19,12 @@ function attempt(partial: Partial<LessonAttempt>): LessonAttempt {
   };
 }
 
-test('deriveActiveDays returns sorted unique local dates', () => {
+test('deriveActiveDays returns sorted unique local dates (TZ=UTC)', () => {
   const days = deriveActiveDays([
-    attempt({ completedAt: '2026-06-19T23:30:00.000-04:00' }),
-    attempt({ completedAt: '2026-06-19T01:00:00.000-04:00' }),
-    attempt({ completedAt: '2026-06-17T08:00:00.000-04:00' }),
+    attempt({ completedAt: '2026-06-19T10:00:00.000Z' }),
+    attempt({ completedAt: '2026-06-19T23:00:00.000Z' }), // same UTC day -> dedup
+    attempt({ completedAt: '2026-06-18T23:30:00.000-04:00' }), // = 2026-06-19T03:30Z -> 2026-06-19
+    attempt({ completedAt: '2026-06-17T08:00:00.000Z' }),
   ]);
   expect(days).toEqual(['2026-06-17', '2026-06-19']);
 });

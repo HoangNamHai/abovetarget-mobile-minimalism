@@ -1,4 +1,5 @@
 import type { Domain, LessonAttempt } from '../../types/progress';
+import { getLocalDateString } from '../../utils/date';
 
 export interface DomainCompletion {
   completed: number;
@@ -12,10 +13,7 @@ function round1(value: number): number {
 export function deriveActiveDays(attempts: LessonAttempt[]): string[] {
   const days = new Set<string>();
   for (const a of attempts) {
-    // ISO 8601 format includes timezone: YYYY-MM-DDTHH:MM:SS±HH:MM
-    // The YYYY-MM-DD part is the local date in that timezone
-    const dateStr = a.completedAt.split('T')[0];
-    days.add(dateStr);
+    days.add(getLocalDateString(new Date(a.completedAt)));
   }
   return Array.from(days).sort();
 }
