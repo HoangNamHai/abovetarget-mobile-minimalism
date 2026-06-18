@@ -26,6 +26,7 @@ export async function runMigrations(db: SqlExecutor): Promise<void> {
       await db.execAsync(migration.sql);
     }
   }
+  await db.runAsync('DELETE FROM schema_version;', []);
   await db.runAsync('INSERT INTO schema_version (version) VALUES (?);', [LATEST]);
 }
 
