@@ -31,11 +31,15 @@ jest.mock('expo-sqlite', () => {
           if (i >= 0) rows[i] = row; else rows.push(row);
         } else if (/delete from attempts/i.test(sql)) rows.length = 0;
       }),
-      getAllAsync: jest.fn(async (sql) => {
+      getAllAsync: jest.fn(async (sql, params = []) => {
         if (/from attempts/i.test(sql)) {
           const sorted = [...rows].sort((a, b) => b.completedAt.localeCompare(a.completedAt));
-          const m = sql.match(/limit\s+(\d+)/i);
-          return m ? sorted.slice(0, Number(m[1])) : sorted;
+          const m = sql.match(/limit\s+\?/i);
+          if (m && params.length > 0) {
+            return sorted.slice(0, params[0]);
+          }
+          const literalMatch = sql.match(/limit\s+(\d+)/i);
+          return literalMatch ? sorted.slice(0, Number(literalMatch[1])) : sorted;
         }
         return [];
       }),
