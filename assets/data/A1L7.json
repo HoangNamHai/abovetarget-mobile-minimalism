@@ -1,0 +1,665 @@
+{
+  "lessonId": "A1L7",
+  "lessonTitle": "Project Success & Value",
+  "courseId": "A1",
+  "courseName": "Introduction to Project Management",
+  "pathId": "A",
+  "pathName": "Foundation",
+  "domain": "Business Environment",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish between traditional project success (on time, on budget, meets scope) and modern value-driven success (business outcomes, stakeholder satisfaction, benefits realization)",
+    "Understand the difference between project outputs (deliverables) and project outcomes (business value)",
+    "Identify business value metrics for F&B projects (revenue, customer satisfaction, efficiency, brand reputation)",
+    "Apply benefits realization tracking to measure post-project value",
+    "Recognize that project success is defined by STAKEHOLDERS, not just PM measurements"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "ava_thompson",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "The Successful Project That Failed",
+        "intro": "The Meal Prep Service project just 'finished' on time, on budget, and delivered all planned features. Carlos throws a celebration: 'Success!' But three months later, the service is failing: Only 15 customers signed up (instead of 100), revenue is $12K/year (instead of $200K), and customer reviews are 2.3/5 stars.",
+        "failure_cards": [
+          {
+            "id": "the_celebration",
+            "icon": "📋",
+            "title": "The Celebration",
+            "summary": "All metrics green!",
+            "image": "/images/A1L7_comic_celebration.webp",
+            "details": "Savory & Co. conference room decorated with 'SUCCESS!' banner. Carlos holds champagne: 'Six months, exactly on budget, all features delivered!' But Alex notices something—his phone shows a 1-star customer review notification..."
+          },
+          {
+            "id": "three_months_later",
+            "icon": "⚠️",
+            "title": "Three Months Later",
+            "summary": "The business is failing",
+            "image": "/images/A1L7_comic_failure.webp",
+            "details": "Same conference room, now dark and gloomy. Business reports show devastating numbers: 15 customers (target: 100), $12K revenue (target: $200K). Ava storms in: 'I don't care that you finished on time. The business is FAILING!' Carlos is confused: 'We delivered everything we planned. HOW is this a failure?'"
+          },
+          {
+            "id": "the_revelation",
+            "icon": "💡",
+            "title": "The Revelation",
+            "summary": "Outputs vs Outcomes",
+            "image": "/images/A1L7_comic_revelation.webp",
+            "details": "Dr. Foster stands at a whiteboard showing two columns: 'PROJECT SUCCESS' (green checkmarks for time, budget, scope) vs 'BUSINESS VALUE' (red X marks for customers, revenue, satisfaction). 'You measured the PROJECT. But did you measure the VALUE?' Alex realizes: 'We delivered the OUTPUT... but failed to create the OUTCOME!'"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "The project was a SUCCESS. We delivered everything on time and on budget. Why is the BUSINESS failing?"
+        },
+        "learning_hook": "**Traditional project success is measured by TIME, BUDGET, and SCOPE. Modern value-driven success is measured by STAKEHOLDER SATISFACTION, BUSINESS OUTCOMES, and BENEFITS REALIZATION.** Finishing 'on time and on budget' is meaningless if the deliverable doesn't create VALUE."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "evaluate_project_success",
+        "title": "Evaluate Project Success",
+        "description": "Dr. Amelia Foster challenges Alex: 'You have three projects that all finished on time and on budget. But did they create VALUE? Evaluate each project on TWO criteria: Traditional Success AND Value Delivery.'",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Evaluate each project's success type:",
+            "points": 300,
+            "scenario_name": "Project Evaluation Matrix",
+            "situation": "For each project, evaluate BOTH traditional success (time/budget/scope) AND value delivery (business impact). Match each project assessment to the correct evaluation.",
+            "chips": [
+              {
+                "id": "meal_prep_traditional",
+                "label": "Meal Prep: Traditional ✓",
+                "correctZone": "on_time_on_budget_scope_complete"
+              },
+              {
+                "id": "meal_prep_value",
+                "label": "Meal Prep: Value ✗",
+                "correctZone": "15_customers_target_100_poor_reviews"
+              },
+              {
+                "id": "kitchen_upgrade_traditional",
+                "label": "Kitchen Upgrade: Traditional ✓",
+                "correctZone": "3_months_45k_equipment_installed"
+              },
+              {
+                "id": "kitchen_upgrade_value",
+                "label": "Kitchen Upgrade: Value ✓",
+                "correctZone": "30_faster_cooking_96k_year_savings"
+              },
+              {
+                "id": "social_media_traditional",
+                "label": "Social Media: Traditional ✓",
+                "correctZone": "2_months_15k_100_posts_delivered"
+              },
+              {
+                "id": "social_media_value",
+                "label": "Social Media: Value ✗",
+                "correctZone": "zero_revenue_impact_followers_dont_convert"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "on_time_on_budget_scope_complete",
+                "label": "On time, on budget, scope complete",
+                "detail": "ACHIEVED Traditional Success"
+              },
+              {
+                "id": "15_customers_target_100_poor_reviews",
+                "label": "15 customers (target: 100), poor reviews",
+                "detail": "FAILED to Deliver Value"
+              },
+              {
+                "id": "3_months_45k_equipment_installed",
+                "label": "3 months, $45K, equipment installed",
+                "detail": "ACHIEVED Traditional Success"
+              },
+              {
+                "id": "30_faster_cooking_96k_year_savings",
+                "label": "30% faster cooking, $9.6K/year savings",
+                "detail": "DELIVERED Business Value"
+              },
+              {
+                "id": "2_months_15k_100_posts_delivered",
+                "label": "2 months, $15K, 100 posts delivered",
+                "detail": "ACHIEVED Traditional Success"
+              },
+              {
+                "id": "zero_revenue_impact_followers_dont_convert",
+                "label": "Zero revenue impact, followers don't convert",
+                "detail": "FAILED to Deliver Value"
+              }
+            ],
+            "explanation": "ALL THREE projects achieved traditional success (on time, on budget, scope complete). But ONLY the Kitchen Upgrade delivered actual business value. Meal Prep and Social Media succeeded at execution but failed at creating value.",
+            "correctFeedback": {
+              "text": "ALL THREE projects achieved traditional success (on time, on budget, scope complete). But ONLY the Kitchen Upgrade delivered actual business value. Meal Prep and Social Media succeeded at execution but failed at creating value.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent! You correctly identified that ALL THREE projects achieved traditional success (time/budget/scope), but ONLY the Kitchen Upgrade delivered actual business value."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Did the project finish on time AND did it create value? These are two different questions.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Did the project finish on time AND did it create value? These are two different questions."
+            },
+            "retryHint": "Traditional success measures execution. Value measures impact. A project can succeed at one and fail at the other."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Why did the Meal Prep Service fail to deliver value despite finishing on time and on budget?",
+            "points": 200,
+            "scenario_name": "Root Cause Analysis",
+            "situation": "The Meal Prep Service (Project A) finished on time, on budget, and delivered all features. Yet it has only 15 customers (target: 100), $12K revenue (target: $200K), and 2.3/5 star reviews complaining about 'portions too small' and 'delivery always late.'",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project team didn't work hard enough",
+                "correct": false,
+                "whyWrong": "The team delivered everything on time and on budget—effort wasn't the problem. They worked HARD to build the WRONG thing."
+              },
+              {
+                "id": "B",
+                "text": "We built the deliverable without validating if customers wanted it or if requirements were correct (portion sizes, pricing, demand)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The project should have taken longer than 6 months",
+                "correct": false,
+                "whyWrong": "More time wouldn't have fixed the problem. We built wrong portion sizes, targeted wrong customers, and overestimated demand. More time just delivers the wrong thing slower."
+              },
+              {
+                "id": "D",
+                "text": "We should have spent more money ($120K wasn't enough)",
+                "correct": false,
+                "whyWrong": "More money doesn't fix flawed requirements. We could have spent $500K and still failed because customers don't want small portions at that price."
+              }
+            ],
+            "explanation": "The root cause: We built what was ASKED FOR without validating if customers WANTED it. Value-driven PMs validate demand BEFORE building—test with pilot customers, refine based on feedback.",
+            "correctFeedback": {
+              "text": "The root cause: We built what was ASKED FOR without validating if customers WANTED it. Value-driven PMs validate demand BEFORE building—test with pilot customers, refine based on feedback.",
+              "character": "Ava Thompson",
+              "characterQuote": "As an investor, I don't fund teams that work hard on the wrong things. I fund teams that validate assumptions and deliver value."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The team executed perfectly. The problem was WHAT they executed.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The team executed perfectly. The problem was WHAT they executed."
+            },
+            "retryHint": "Consider: What's the difference between building something correctly and building the correct thing?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Understanding Project Value",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Traditional vs Value",
+            "subtitle": "Two Success Models",
+            "content": "**Traditional Success Criteria (PMI Historical View):**\n\n**On Time** — Delivered by deadline\n**On Budget** — Spent exactly what was estimated\n**Meets Scope** — Delivered all specified requirements\n\n**Problem with Traditional View:**\nMeasures PROJECT EXECUTION, not BUSINESS VALUE. You can deliver the WRONG thing perfectly on time.\n\n**Modern Value-Driven Success (PMI PMBOK 7th Ed):**\n\n1. **Stakeholder Satisfaction** — Are stakeholders HAPPY with the result?\n2. **Business Outcomes** — Did we achieve the INTENDED PURPOSE?\n3. **Benefits Realization** — Are expected BENEFITS being realized post-project?"
+          },
+          {
+            "id": "tab2",
+            "title": "Outputs vs Outcomes",
+            "subtitle": "Critical Distinction",
+            "content": "**OUTPUTS:** What the project PRODUCES\n- 100 meal kits/week capacity\n- 5K social media followers\n- 3 new ovens installed\n\n**OUTCOMES:** What the project ACHIEVES\n- 100 customers paying $200K/year\n- Increased restaurant visits\n- 30% faster cooking, $9.6K savings\n\n**The PM Trap:**\nFocus on DELIVERING OUTPUTS (finishing tasks) instead of ACHIEVING OUTCOMES (creating value).\n\n**Key Insight:**\nSuccess is not 'Did we build it?'\nSuccess is 'Did it create value?'"
+          },
+          {
+            "id": "tab3",
+            "title": "Business Value Types",
+            "subtitle": "Four Categories",
+            "content": "**PMI Definition:** 'The net quantifiable benefit derived from a business endeavor.'\n\n**1. Financial Value (Tangible)**\nRevenue increase, cost reduction, ROI\n*Kitchen Upgrade: $800/month savings = $9.6K/year*\n\n**2. Operational Value (Tangible)**\nEfficiency, quality, capacity\n*Kitchen Upgrade: 30% faster cooking, +25% capacity*\n\n**3. Stakeholder Value (Intangible)**\nCustomer satisfaction, employee satisfaction, trust\n*Kitchen Upgrade: Chef satisfaction improved*\n\n**4. Strategic Value (Intangible)**\nBrand, competitive advantage, capabilities\n*Social Media: Followers (but failed to convert to value)*"
+          },
+          {
+            "id": "tab4",
+            "title": "Benefits Realization",
+            "subtitle": "Post-Project Tracking",
+            "content": "**Definition:** Ensuring project benefits are REALIZED and SUSTAINED after completion.\n\n**The Problem:**\nProjects END when deliverables complete. VALUE is realized AFTER.\n\n**Benefits Realization Process:**\n1. **Define Expected Benefits** (During Planning)\n2. **Establish Baseline** (Before Project)\n3. **Track Benefits Post-Project** (After Launch)\n4. **Adjust if Benefits Not Realized**\n\n**Who Owns Benefits?**\n- **Sponsor (Carlos):** Accountable for value realization\n- **Operations (Maya, Jamie):** Sustains benefits\n- **PM (Alex):** Facilitates tracking, transitions to operations"
+          },
+          {
+            "id": "tab5",
+            "title": "Key Framework",
+            "subtitle": "The 5-Element Plan",
+            "content": "**Benefits Realization Plan Elements:**\n\n**1. Expected Benefits**\n'Sell 10 franchises, generate $500K revenue, NPS > 40'\n\n**2. Baseline Metrics**\n'Current state: Zero franchises, $0 franchise revenue'\n\n**3. Measurement Plan**\n'Track sales monthly, revenue quarterly, NPS at 6 & 12 months'\n\n**4. Accountability**\n'Carlos owns revenue goal, Alex transitions to ops at month 12'\n\n**5. Adjustment Triggers**\n'If <5 franchises by month 6, adjust pricing/marketing'\n\n**NOT in Benefits Plan:** Task lists, budgets, risk registers (these are project management artifacts, not benefits tracking)"
+          }
+        ],
+        "diagram": {
+          "image": "/images/A1L7_diagram_value_framework.webp",
+          "alt": "Value-driven success framework showing outputs vs outcomes"
+        }
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "New Project: Franchise Expansion",
+        "scenario": {
+          "title": "New Project: Franchise Expansion",
+          "description": "Savory & Co. is expanding into franchising. Carlos wants to sell 10 franchise licenses in 12 months. Budget: $200K. After the Meal Prep failure, Carlos wants to ensure they REALIZE VALUE, not just deliver outputs. *Carlos: 'I've learned my lesson from Meal Prep. Help me build a Benefits Realization Plan.'*",
+          "images": [
+            {
+              "src": "/images/A1L7_comic_transfer.webp",
+              "alt": "Carlos presenting the Franchise Expansion project to Alex"
+            }
+          ],
+          "details": [
+            "**Goal:** Sell 10 franchise licenses in 12 months",
+            "**Budget:** $200K investment",
+            "**Carlos's lesson:** 'I don't just want to DELIVER a franchise package—I want to ensure we REALIZE VALUE.'"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "drag_drop",
+            "question": "Drag the 5 correct elements into the Benefits Realization Plan:",
+            "points": 200,
+            "scenario_name": "Benefits Realization Plan Builder",
+            "situation": "Build the Benefits Realization Plan by selecting the 5 correct elements. Avoid the 3 distractors that belong in other project documents.",
+            "chips": [
+              {
+                "id": "expected_benefits",
+                "label": "Expected Benefits",
+                "correctZone": "sell_10_franchises_500k_revenue_nps_40"
+              },
+              {
+                "id": "baseline_metrics",
+                "label": "Baseline Metrics",
+                "correctZone": "current_0_franchises_0_franchise_revenue"
+              },
+              {
+                "id": "measurement_plan",
+                "label": "Measurement Plan",
+                "correctZone": "track_sales_monthly_revenue_quarterly"
+              },
+              {
+                "id": "accountability",
+                "label": "Accountability",
+                "correctZone": "carlos_owns_revenue_alex_transitions_to_ops"
+              },
+              {
+                "id": "adjustment_triggers",
+                "label": "Adjustment Triggers",
+                "correctZone": "if_5_franchises_by_month_6_adjust_strategy"
+              },
+              {
+                "id": "detailed_task_list",
+                "label": "Detailed Task List",
+                "correctZone": "all_project_tasks_and_assignments"
+              },
+              {
+                "id": "project_budget",
+                "label": "Project Budget",
+                "correctZone": "detailed_cost_breakdown_by_category"
+              },
+              {
+                "id": "risk_register",
+                "label": "Risk Register",
+                "correctZone": "list_of_identified_risks_and_responses"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "sell_10_franchises_500k_revenue_nps_40",
+                "label": "Sell 10 franchises, $500K revenue, NPS > 40",
+                "detail": "BENEFITS REALIZATION PLAN"
+              },
+              {
+                "id": "current_0_franchises_0_franchise_revenue",
+                "label": "Current: 0 franchises, $0 franchise revenue",
+                "detail": "BENEFITS REALIZATION PLAN"
+              },
+              {
+                "id": "track_sales_monthly_revenue_quarterly",
+                "label": "Track sales monthly, revenue quarterly",
+                "detail": "BENEFITS REALIZATION PLAN"
+              },
+              {
+                "id": "carlos_owns_revenue_alex_transitions_to_ops",
+                "label": "Carlos owns revenue, Alex transitions to ops",
+                "detail": "BENEFITS REALIZATION PLAN"
+              },
+              {
+                "id": "if_5_franchises_by_month_6_adjust_strategy",
+                "label": "If <5 franchises by month 6, adjust strategy",
+                "detail": "BENEFITS REALIZATION PLAN"
+              },
+              {
+                "id": "all_project_tasks_and_assignments",
+                "label": "All project tasks and assignments",
+                "detail": "OTHER PROJECT DOCUMENTS"
+              },
+              {
+                "id": "detailed_cost_breakdown_by_category",
+                "label": "Detailed cost breakdown by category",
+                "detail": "OTHER PROJECT DOCUMENTS"
+              },
+              {
+                "id": "list_of_identified_risks_and_responses",
+                "label": "List of identified risks and responses",
+                "detail": "OTHER PROJECT DOCUMENTS"
+              }
+            ],
+            "explanation": "Benefits Realization Plan tracks VALUE DELIVERY: Expected Benefits, Baseline Metrics, Measurement Plan, Accountability, Adjustment Triggers. Task lists, budgets, and risk registers are project management artifacts—they belong elsewhere.",
+            "correctFeedback": {
+              "text": "Benefits Realization Plan tracks VALUE DELIVERY: Expected Benefits, Baseline Metrics, Measurement Plan, Accountability, Adjustment Triggers. Task lists, budgets, and risk registers are project management artifacts—they belong elsewhere.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Excellent! Your Benefits Realization Plan includes all 5 essential elements: Expected Benefits, Baseline, Measurement Plan, Accountability, and Adjustment Triggers."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Task lists, budgets, and risk registers help you EXECUTE the project. Benefits Realization helps you track VALUE.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Task lists, budgets, and risk registers help you EXECUTE the project. Benefits Realization helps you track VALUE."
+            },
+            "retryHint": "Benefits Plan = value tracking. Project Plan = execution tracking. Which elements measure VALUE?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Which metric BEST measures value delivery for the franchise project?",
+            "points": 100,
+            "scenario_name": "Value Metric Selection",
+            "situation": "The franchise expansion project is underway. Carlos asks Alex: 'How will we know if the project is creating VALUE, not just producing outputs?'",
+            "options": [
+              {
+                "id": "A",
+                "text": "Franchise package delivered by month 6",
+                "correct": false,
+                "whyWrong": "This is an OUTPUT metric (deliverable). It measures project execution, not value. The package could be delivered but no one buys it."
+              },
+              {
+                "id": "B",
+                "text": "Project completed within $200K budget",
+                "correct": false,
+                "whyWrong": "This is a COST metric. Being on budget doesn't mean the franchise program creates value—just that you spent what you planned."
+              },
+              {
+                "id": "C",
+                "text": "All 15 planned tasks completed on schedule",
+                "correct": false,
+                "whyWrong": "This is a SCHEDULE metric. Completing tasks doesn't equal value—the Meal Prep Service completed all tasks and still failed."
+              },
+              {
+                "id": "D",
+                "text": "5+ franchises sold and generating revenue by month 9",
+                "correct": true
+              }
+            ],
+            "explanation": "Value metrics measure OUTCOMES, not OUTPUTS. '5+ franchises sold and generating revenue' measures actual business value—people paying money for the franchise. Time, budget, and task completion are execution metrics.",
+            "correctFeedback": {
+              "text": "Value metrics measure OUTCOMES, not OUTPUTS. '5+ franchises sold and generating revenue' measures actual business value—people paying money for the franchise. Time, budget, and task completion are execution metrics.",
+              "character": "Ava Thompson",
+              "characterQuote": "Now you're thinking like an investor. I don't care about tasks—I care about results that create value."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Delivered on time, on budget, with all tasks... but is anyone buying franchises?",
+              "character": "Ava Thompson",
+              "characterQuote": "Delivered on time, on budget, with all tasks... but is anyone buying franchises?"
+            },
+            "retryHint": "Value metrics measure OUTCOMES (business impact), not OUTPUTS (deliverables completed)."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that TRADITIONAL project success (on time, on budget, meets scope) measures PROJECT EXECUTION, not BUSINESS VALUE. MODERN value-driven success measures STAKEHOLDER SATISFACTION, BUSINESS OUTCOMES, and BENEFITS REALIZATION.",
+        "key_takeaways": [
+          "TRADITIONAL SUCCESS: On time, on budget, meets scope (measures execution)",
+          "VALUE-DRIVEN SUCCESS: Stakeholder satisfaction, outcomes, benefits (measures impact)",
+          "OUTPUTS vs OUTCOMES: Outputs = what we BUILD, Outcomes = VALUE we CREATE",
+          "FOUR TYPES OF VALUE: Financial, Operational, Stakeholder, Strategic",
+          "BENEFITS REALIZATION: Track value POST-PROJECT (Expected Benefits, Baseline, Measurement, Accountability, Triggers)",
+          "THE TRAP: You can deliver the WRONG thing perfectly on time"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L8",
+          "title": "Project Integration Basics",
+          "description": "Learn how to integrate all knowledge areas into a cohesive plan."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What does this situation best demonstrate?",
+            "points": 50,
+            "scenario_name": "IT System Implementation",
+            "situation": "A project manager delivered a new inventory management system on time and under budget. However, six months after implementation, warehouse staff are bypassing the system and using spreadsheets because the system is 'too slow and complicated.' The project sponsor is frustrated.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project failed because warehouse staff need more training",
+                "correct": false,
+                "whyWrong": "Training might help, but the root cause is that the system doesn't meet user needs (slow, complicated). Training can't fix a poorly designed solution."
+              },
+              {
+                "id": "B",
+                "text": "The project achieved traditional success but failed to deliver stakeholder value",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The project was a complete failure and should be written off",
+                "correct": false,
+                "whyWrong": "The project achieved traditional success (on time, under budget). The VALUE wasn't delivered, but that's different from complete failure."
+              },
+              {
+                "id": "D",
+                "text": "The sponsor should have been more involved during the project",
+                "correct": false,
+                "whyWrong": "Sponsor involvement matters, but the core issue is that user requirements (speed, simplicity) weren't validated before delivery."
+              }
+            ],
+            "explanation": "This is a classic case of outputs without outcomes. The system was DELIVERED (output) but doesn't CREATE VALUE for users (outcome). Traditional success metrics (time/budget) were met, but stakeholder satisfaction wasn't achieved.",
+            "correctFeedback": {
+              "text": "This is a classic case of outputs without outcomes. The system was DELIVERED (output) but doesn't CREATE VALUE for users (outcome). Traditional success metrics (time/budget) were met, but stakeholder satisfaction wasn't achieved.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Correct! The inventory system was delivered on time and under budget—traditional success. But users don't use it—no stakeholder value. This is why PMI emphasizes value delivery."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "On time and under budget... but the users hate it. Is that success?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "On time and under budget... but the users hate it. Is that success?"
+            },
+            "retryHint": "Consider: What's the difference between delivering a system (output) and users actually benefiting from it (outcome)?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "According to PMI, who is primarily accountable for benefits realization after project closure?",
+            "points": 50,
+            "scenario_name": "Benefits Realization Ownership",
+            "situation": "A project to implement a customer loyalty program has been completed. The project manager delivered all features and closed the project. Three months later, the sponsor asks who is responsible for ensuring the loyalty program achieves its target of 20% increase in repeat customers.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project manager who delivered the project",
+                "correct": false,
+                "whyWrong": "PMs facilitate benefits planning and tracking during the project, but after closure, accountability transfers to the sponsor and operations."
+              },
+              {
+                "id": "B",
+                "text": "The project sponsor and operations team",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The PMO tracking all organizational benefits",
+                "correct": false,
+                "whyWrong": "PMO may track portfolio-level benefits, but individual project benefits are owned by the sponsor and operations team."
+              },
+              {
+                "id": "D",
+                "text": "Benefits realization is not tracked after project closure",
+                "correct": false,
+                "whyWrong": "Benefits realization MUST be tracked post-project—that's when value is realized. PMI emphasizes this in PMBOK 7th Edition."
+              }
+            ],
+            "explanation": "After project closure, the sponsor is accountable for ensuring benefits are realized, and the operations team sustains the capability. The PM's role ends at handover, though they may have established the tracking framework.",
+            "correctFeedback": {
+              "text": "After project closure, the sponsor is accountable for ensuring benefits are realized, and the operations team sustains the capability. The PM's role ends at handover, though they may have established the tracking framework.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Correct! The sponsor owns benefits realization, and operations sustains the capability. The PM establishes tracking during the project but transitions accountability at closure."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The project is done, but tracking value is just beginning. Whose job is that?",
+              "character": "Carlos Mendez",
+              "characterQuote": "The project is done, but tracking value is just beginning. Whose job is that?"
+            },
+            "retryHint": "Think about the sponsor's role as the 'business owner' of project benefits."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which metric BEST measures value delivery for this project?",
+            "points": 50,
+            "scenario_name": "Value Metrics Selection",
+            "situation": "A restaurant chain is planning a new mobile ordering app. The project charter states: 'Deliver mobile ordering capability by Q3.' The project manager wants to define success metrics beyond just delivery.",
+            "options": [
+              {
+                "id": "A",
+                "text": "App delivered by Q3 deadline",
+                "correct": false,
+                "whyWrong": "This is a traditional success metric (time). It measures delivery, not value. The app could be delivered but unused."
+              },
+              {
+                "id": "B",
+                "text": "Development cost within $500K budget",
+                "correct": false,
+                "whyWrong": "This is a traditional success metric (cost). Being on budget doesn't mean customers will use the app or that revenue will increase."
+              },
+              {
+                "id": "C",
+                "text": "All 15 planned features implemented",
+                "correct": false,
+                "whyWrong": "This is a traditional success metric (scope). Features delivered doesn't equal value—customers might not want or use those features."
+              },
+              {
+                "id": "D",
+                "text": "15% of orders placed through mobile app within 6 months of launch",
+                "correct": true
+              }
+            ],
+            "explanation": "Value metrics measure OUTCOMES, not OUTPUTS. '15% of orders via mobile' measures actual business value—customers using the capability. Time, budget, and features are outputs; adoption and usage are outcomes.",
+            "correctFeedback": {
+              "text": "Value metrics measure OUTCOMES, not OUTPUTS. '15% of orders via mobile' measures actual business value—customers using the capability. Time, budget, and features are outputs; adoption and usage are outcomes.",
+              "character": "Ava Thompson",
+              "characterQuote": "Excellent! Customer adoption (15% of orders) measures actual value—the app is being USED to generate business. This is the outcome that matters."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Delivered on time, on budget, with all features... but is anyone using it?",
+              "character": "Ava Thompson",
+              "characterQuote": "Delivered on time, on budget, with all features... but is anyone using it?"
+            },
+            "retryHint": "Value metrics measure OUTCOMES (business impact), not OUTPUTS (deliverables completed)."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "When should benefits realization planning START in a project?",
+            "points": 50,
+            "scenario_name": "Benefits Realization Timing",
+            "situation": "A project manager is planning a kitchen automation project. The sponsor asks when benefits realization tracking should begin.",
+            "options": [
+              {
+                "id": "A",
+                "text": "After project closure, when benefits can be measured",
+                "correct": false,
+                "whyWrong": "Too late! By closure, you've missed the opportunity to define expected benefits, establish baselines, and build measurement into the project."
+              },
+              {
+                "id": "B",
+                "text": "During project execution, as deliverables are produced",
+                "correct": false,
+                "whyWrong": "Too late for planning. Execution should follow a plan that was created earlier. You can't establish baselines during execution."
+              },
+              {
+                "id": "C",
+                "text": "During project initiation and planning, before work begins",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Benefits realization is the sponsor's responsibility, not the PM's concern",
+                "correct": false,
+                "whyWrong": "PMs facilitate benefits planning during the project—defining expected benefits, baselines, and measurement approaches. They partner with sponsors."
+              }
+            ],
+            "explanation": "Benefits realization planning starts during INITIATION (business case defines expected benefits) and PLANNING (baselines established, measurement plan created). You can't measure improvement without a baseline.",
+            "correctFeedback": {
+              "text": "Benefits realization planning starts during INITIATION (business case defines expected benefits) and PLANNING (baselines established, measurement plan created). You can't measure improvement without a baseline.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Correct! Define expected benefits in initiation, establish baselines during planning, and build tracking into the project. This enables post-project measurement."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "How can you prove improvement if you never captured the starting point?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "How can you prove improvement if you never captured the starting point?"
+            },
+            "retryHint": "Benefits measurement requires baselines and expected outcomes—both created before work begins."
+          }
+        ]
+      }
+    }
+  ]
+}

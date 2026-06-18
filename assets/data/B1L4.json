@@ -1,0 +1,778 @@
+{
+  "lessonId": "B1L4",
+  "lessonTitle": "Communication Methods & Channels",
+  "courseId": "B1",
+  "courseName": "Stakeholder & Communication Management",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Calculate communication channels using the formula n(n-1)/2 and understand exponential growth",
+    "Apply Brooks's Law: adding people increases coordination overhead, not productivity",
+    "Select appropriate synchronous vs asynchronous communication based on urgency and time zones",
+    "Identify and mitigate communication barriers (language, culture, technical, physical)",
+    "Choose rich vs lean communication channels based on message complexity and relationship needs"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "dr_amelia_foster",
+    "taylor_kim",
+    "maya_rodriguez",
+    "rashid_patel"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Communication Meltdown: 5 People to 10 People = 350% More Chaos",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. Your catering expansion project was running smoothly with 5 team members. Then Carlos \"helped\" by adding 5 more people to speed things up. The result? Catastrophe. Communication channels exploded from 10 to 45, standups tripled in length, and productivity actually DROPPED 20%.",
+        "failure_cards": [
+          {
+            "id": "communication_explosion",
+            "icon": "📋",
+            "title": "Communication Explosion",
+            "summary": "5 people grew to 10 — channels jumped from 10 to 45",
+            "image": "/images/B1L4_comic_explosion.webp",
+            "details": "Carlos added 5 new hires thinking more people means faster delivery. Instead, communication channels exploded by 350%. The small, organized team of 5 with just 10 communication paths became a chaotic group of 10 with 45 overlapping channels. Daily standups went from a crisp 10 minutes to a painful 30-minute marathon where everyone talked past each other."
+          },
+          {
+            "id": "time_zone_torture",
+            "icon": "⚠️",
+            "title": "Time Zone Torture",
+            "summary": "16-hour time zone span — no good meeting time exists",
+            "image": "/images/B1L4_comic_timezone.webp",
+            "details": "The team is now distributed across Manhattan (Alex, Carlos, Taylor), Mexico City (Maya + 3 team members), and Tokyo (Rashid coordinating with vendor Yuki Tanaka). Maya is stuck on late evening calls. Yuki is dialing in at 2 AM. There is literally no time of day when everyone can meet comfortably. Every meeting punishes at least one location."
+          },
+          {
+            "id": "replyall_apocalypse",
+            "icon": "💡",
+            "title": "Reply-All Apocalypse",
+            "summary": "127 unread emails in one morning — reply-all chaos",
+            "image": "/images/B1L4_comic_replyall.webp",
+            "details": "Alex opened his laptop Monday morning to 127 unread emails. Half were reply-all threads where people asked to be removed from the chain. Email threads branched into sub-conversations. Important decisions got buried under noise. The team spent more time managing communication than actually doing project work."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Organizational Change Consultant",
+          "quote": "Carlos, adding people doesn't accelerate delivery — it accelerates communication overhead. There's a formula for this: n(n-1)/2. Your 5-person team had 10 communication channels. Your 10-person team has 45. That's why productivity DROPPED. Welcome to Brooks's Law."
+        },
+        "learning_hook": "**Communication channels grow exponentially, not linearly.** Every new person adds (n-1) new channels. Add distributed teams and time zones? Now you need to choose synchronous vs asynchronous, rich vs lean, and overcome language, cultural, and technical barriers."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "master_communication_channels",
+        "title": "Master Communication Channels",
+        "description": "Alex's distributed team is drowning in coordination overhead. Calculate the damage, classify the right communication approaches, and match channels to needs.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "How many communication channels did the ORIGINAL 5-person team have?",
+            "points": 80,
+            "scenario_name": "Channel Calculation — Before",
+            "situation": "Alex's catering expansion project originally had 5 team members working in the same Manhattan office. Dr. Foster asks Alex to apply the Communication Channels formula: n(n-1)/2.",
+            "options": [
+              {
+                "id": "A",
+                "text": "5 channels",
+                "correct": false,
+                "whyWrong": "5 channels would be n, not n(n-1)/2. The formula accounts for every pair, not just one path per person."
+              },
+              {
+                "id": "B",
+                "text": "10 channels",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "15 channels",
+                "correct": false,
+                "whyWrong": "15 would be 5(4)/2 only if you miscalculate the division, or confuse it with a different formula."
+              },
+              {
+                "id": "D",
+                "text": "20 channels",
+                "correct": false,
+                "whyWrong": "20 is n(n-1) without dividing by 2. You'd be double-counting each channel."
+              }
+            ],
+            "explanation": "Using n(n-1)/2 where n=5: 5(4)/2 = 20/2 = 10 channels. Each of the 5 people connects to every other person, but each channel is counted once (A-to-B is the same as B-to-A).",
+            "correctFeedback": {
+              "text": "Using n(n-1)/2 where n=5: 5(4)/2 = 20/2 = 10 channels. Each of the 5 people connects to every other person, but each channel is counted once (A-to-B is the same as B-to-A).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Exactly. 10 channels is manageable. Five people, ten communication paths. Everyone knows who to talk to and information flows smoothly. Now let's see what happened when Carlos doubled the team."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Apply the formula step by step. n=5 team members. Multiply n times (n-1): that's 5 times 4 = 20. Then divide by 2 because each channel connects two people. 20 divided by 2 = 10.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Apply the formula step by step. n=5 team members. Multiply n times (n-1): that's 5 times 4 = 20. Then divide by 2 because each channel connects two people. 20 divided by 2 = 10."
+            },
+            "retryHint": "Formula is n(n-1)/2. For 5 people: 5 times 4 = 20, then divide by 2."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "How many communication channels does the expanded 10-person team have?",
+            "points": 80,
+            "scenario_name": "Channel Calculation — After",
+            "situation": "Carlos added 5 more people to the team, bringing the total to 10 members. Standups tripled in length and productivity fell 20%.",
+            "options": [
+              {
+                "id": "A",
+                "text": "20 channels",
+                "correct": false,
+                "whyWrong": "20 channels assumes doubling 10 channels, but channels grow exponentially, not linearly."
+              },
+              {
+                "id": "B",
+                "text": "30 channels",
+                "correct": false,
+                "whyWrong": "30 is triple the original 10, but the formula gives 45 — channels grow faster than team size."
+              },
+              {
+                "id": "C",
+                "text": "45 channels",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "90 channels",
+                "correct": false,
+                "whyWrong": "90 is n(n-1) without dividing by 2. Each channel is shared between two people, so divide."
+              }
+            ],
+            "explanation": "Using n(n-1)/2 where n=10: 10(9)/2 = 90/2 = 45 channels. Doubling the team from 5 to 10 didn't double the channels — it increased them by 350% (from 10 to 45). This is Brooks's Law in action.",
+            "correctFeedback": {
+              "text": "Using n(n-1)/2 where n=10: 10(9)/2 = 90/2 = 45 channels. Doubling the team from 5 to 10 didn't double the channels — it increased them by 350% (from 10 to 45). This is Brooks's Law in action.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "45 channels! Carlos doubled the team but created 4.5 times the communication complexity. This is Brooks's Law: adding manpower to a late project makes it later. Every new person adds (n-1) new paths."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "n=10 members. Apply: 10 times 9 = 90. Divide by 2 = 45. Doubling the team MORE than quadrupled the channels. That's why productivity dropped instead of increasing.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "n=10 members. Apply: 10 times 9 = 90. Divide by 2 = 45. Doubling the team MORE than quadrupled the channels. That's why productivity dropped instead of increasing."
+            },
+            "retryHint": "Formula: n(n-1)/2. For 10 people: 10 times 9 = 90, then divide by 2."
+          },
+          {
+            "q_id": "q3",
+            "type": "drag_drop",
+            "question": "Drag each communication need to the correct approach: SYNCHRONOUS (real-time) or ASYNCHRONOUS (delayed).",
+            "points": 90,
+            "scenario_name": "Synchronous vs Asynchronous",
+            "situation": "Alex's distributed team spans Manhattan (EST), Mexico City (CST), and Tokyo (JST — 14 hours ahead). Different communication needs require different approaches. Not everything can be a meeting.",
+            "chips": [
+              {
+                "id": "daily_status_updates_routine",
+                "label": "Daily status updates (routine)",
+                "correctZone": "asynchronous"
+              },
+              {
+                "id": "urgent_technical_decision_2hour_deadline",
+                "label": "Urgent technical decision (2-hour deadline)",
+                "correctZone": "synchronous"
+              },
+              {
+                "id": "resolving_conflict_between_maya_and_taylor",
+                "label": "Resolving conflict between Maya and Taylor",
+                "correctZone": "synchronous"
+              },
+              {
+                "id": "weekly_progress_report_to_carlos",
+                "label": "Weekly progress report to Carlos",
+                "correctZone": "asynchronous"
+              },
+              {
+                "id": "monthly_strategic_planning_session",
+                "label": "Monthly strategic planning session",
+                "correctZone": "synchronous"
+              },
+              {
+                "id": "sharing_meeting_notes_for_the_record",
+                "label": "Sharing meeting notes for the record",
+                "correctZone": "asynchronous"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "asynchronous",
+                "label": "ASYNCHRONOUS",
+                "detail": "Routine status respects time zones via Slack/email"
+              },
+              {
+                "id": "synchronous",
+                "label": "SYNCHRONOUS",
+                "detail": "2-hour deadlines need immediate real-time discussion"
+              }
+            ],
+            "explanation": "Synchronous communication (video, phone, in-person) is for urgent decisions, complex discussions, conflict resolution, and relationship building. Asynchronous (email, Slack, documents) is for routine updates, documentation, status reports, and respecting time zones.",
+            "correctFeedback": {
+              "text": "Synchronous communication (video, phone, in-person) is for urgent decisions, complex discussions, conflict resolution, and relationship building. Asynchronous (email, Slack, documents) is for routine updates, documentation, status reports, and respecting time zones.",
+              "character": "Taylor Kim",
+              "characterQuote": "This is exactly what I learned the hard way. Daily video standups across 14 time zones meant someone was always up in the middle of the night. We switched to async written standups and reserved sync for sprint planning and retros only."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Does this NEED real-time discussion? Or can it wait for an async response? Urgent or emotional topics go sync. Routine or informational topics go async.",
+              "character": "Taylor Kim",
+              "characterQuote": "Ask yourself: Does this NEED real-time discussion? Or can it wait for an async response? Urgent or emotional topics go sync. Routine or informational topics go async."
+            },
+            "retryHint": "Urgent + Complex + Emotional = SYNCHRONOUS. Routine + Documentation + Time zone friendly = ASYNCHRONOUS."
+          },
+          {
+            "q_id": "q4",
+            "type": "drag_drop",
+            "question": "Drag each communication need to the appropriate channel: RICH (video/in-person) or LEAN (email/document).",
+            "points": 85,
+            "scenario_name": "Rich vs Lean Channel Matching",
+            "situation": "Different communication needs require different channel \"bandwidth.\" Rich channels (video, in-person) carry more information. Lean channels (email, text) are more efficient for simple messages.",
+            "chips": [
+              {
+                "id": "explain_complex_architecture_12_integration_points",
+                "label": "Explain complex architecture (12 integration points)",
+                "correctZone": "rich"
+              },
+              {
+                "id": "send_weekly_status_update_ontime_no_blockers",
+                "label": "Send weekly status update (on-time, no blockers)",
+                "correctZone": "lean"
+              },
+              {
+                "id": "resolve_disagreement_between_maya_and_taylor",
+                "label": "Resolve disagreement between Maya and Taylor",
+                "correctZone": "rich"
+              },
+              {
+                "id": "share_meeting_notes_for_permanent_record",
+                "label": "Share meeting notes for permanent record",
+                "correctZone": "lean"
+              },
+              {
+                "id": "negotiate_contract_terms_with_tokyo_vendor",
+                "label": "Negotiate contract terms with Tokyo vendor",
+                "correctZone": "rich"
+              },
+              {
+                "id": "announce_new_expense_policy_to_50_team_members",
+                "label": "Announce new expense policy to 50 team members",
+                "correctZone": "lean"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "rich",
+                "label": "RICH",
+                "detail": "Complex topics need visual diagrams, Q&A, screen sharing"
+              },
+              {
+                "id": "lean",
+                "label": "LEAN",
+                "detail": "Routine \"no blockers\" status is efficient as email"
+              }
+            ],
+            "explanation": "Rich channels are for complexity, emotion, and relationship building. Lean channels are for routine info, documentation, and reaching large audiences efficiently.",
+            "correctFeedback": {
+              "text": "Rich channels are for complexity, emotion, and relationship building. Lean channels are for routine info, documentation, and reaching large audiences efficiently.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect channel selection. Here's my rule of thumb: if misunderstanding could cause significant damage, go rich. If it's simple information transfer, go lean."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask: Is this message complex or simple? Emotional or factual? One person or fifty? Complex + emotional + one-on-one = RICH. Simple + factual + many people = LEAN.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask: Is this message complex or simple? Emotional or factual? One person or fifty? Complex + emotional + one-on-one = RICH. Simple + factual + many people = LEAN."
+            },
+            "retryHint": "Complex topics + emotions + relationships = RICH. Simple info + routine + scale = LEAN."
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "What type of communication barrier caused this misunderstanding?",
+            "points": 85,
+            "scenario_name": "Communication Barriers",
+            "situation": "Rashid is coordinating with vendor Yuki Tanaka in Tokyo. During meetings, Yuki often says \"we will consider this carefully\" and \"perhaps we can explore options.\" Rashid interprets these as positive responses and moves forward. Weeks later, Yuki reveals he had serious concerns but didn't want to directly say no.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Language barrier — Yuki needs to improve English",
+                "correct": false,
+                "whyWrong": "This isn't a language issue — Yuki speaks English. The problem is interpretation of cultural communication style."
+              },
+              {
+                "id": "B",
+                "text": "Technical barrier — use video calls to see facial expressions",
+                "correct": false,
+                "whyWrong": "While video helps, the core issue is cultural interpretation, not the technical medium."
+              },
+              {
+                "id": "C",
+                "text": "Cultural barrier — indirect communication style misinterpreted",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Perceptual barrier — Rashid has personal bias against the vendor",
+                "correct": false,
+                "whyWrong": "This isn't about personal bias — it's about understanding different cultural communication norms."
+              }
+            ],
+            "explanation": "This is a cultural barrier. In Japanese business culture, indirect communication is common — saying \"no\" directly is considered rude. \"We will consider this carefully\" may mean \"we have concerns.\" The PM should learn cultural patterns, ask clarifying questions, and never assume \"maybe\" means \"yes\" in high-context cultures.",
+            "correctFeedback": {
+              "text": "This is a cultural barrier. In Japanese business culture, indirect communication is common — saying \"no\" directly is considered rude. \"We will consider this carefully\" may mean \"we have concerns.\" The PM should learn cultural patterns, ask clarifying questions, and never assume \"maybe\" means \"yes\" in high-context cultures.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Cultural intelligence is a PM superpower. When working with Japanese partners, listen for soft refusals and create space for concerns. 'Help me understand your perspective' works better than 'Do you agree?'"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Yuki spoke English clearly. The issue isn't language — it's cultural communication style. Japanese business culture uses indirect communication to preserve harmony. The PM must learn to recognize and adapt to these patterns.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Yuki spoke English clearly. The issue isn't language — it's cultural communication style. Japanese business culture uses indirect communication to preserve harmony. The PM must learn to recognize and adapt to these patterns."
+            },
+            "retryHint": "The vendor spoke English clearly. The issue is HOW concerns are expressed (indirectly vs directly) — that's a cultural pattern."
+          },
+          {
+            "q_id": "q6",
+            "type": "single_select",
+            "question": "What should Alex advise Carlos based on Brooks's Law?",
+            "points": 80,
+            "scenario_name": "Brooks's Law Application",
+            "situation": "Carlos wants to add 5 more people to the Toronto expansion project (currently 8 members) because the timeline is slipping. Alex remembers what happened with the catering project.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Add all 5 immediately — more people will catch up the schedule",
+                "correct": false,
+                "whyWrong": "This is exactly the mistake Carlos made before. More people = exponentially more coordination, not faster delivery."
+              },
+              {
+                "id": "B",
+                "text": "Add 5 people but extend the deadline by 2 weeks for onboarding",
+                "correct": false,
+                "whyWrong": "Even with onboarding time, the increased communication channels (28 to 78) will slow the team."
+              },
+              {
+                "id": "C",
+                "text": "Adding people will increase coordination overhead and likely make the project later",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Add people only if the budget allows for additional salaries",
+                "correct": false,
+                "whyWrong": "Budget isn't the primary concern — coordination overhead is the real problem."
+              }
+            ],
+            "explanation": "Brooks's Law states: \"Adding manpower to a late software project makes it later.\" New members need onboarding (consuming existing team time), coordination overhead increases exponentially (8 to 13 people = 28 to 78 channels), and short-term productivity DECREASES before any gains.",
+            "correctFeedback": {
+              "text": "Brooks's Law states: \"Adding manpower to a late software project makes it later.\" New members need onboarding (consuming existing team time), coordination overhead increases exponentially (8 to 13 people = 28 to 78 channels), and short-term productivity DECREASES before any gains.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I learned this the hard way on the catering project. Doubling the team didn't double productivity — it created 350% more communication overhead. I won't make that mistake again. We need to find other solutions besides throwing people at the problem."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember the catering project? Adding 5 people to 5 didn't speed things up — it created chaos. Channels jumped from 10 to 45. Brooks's Law says adding people to a late project makes it later because of coordination overhead.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Remember the catering project? Adding 5 people to 5 didn't speed things up — it created chaos. Channels jumped from 10 to 45. Brooks's Law says adding people to a late project makes it later because of coordination overhead."
+            },
+            "retryHint": "Brooks's Law: adding people to a late project makes it LATER. Think about what happened when the catering team went from 5 to 10."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Communication Channels & Selection",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Communication Channels Formula",
+            "subtitle": "",
+            "content": "A **communication channel** is a potential communication path between two people on a project team. As team size increases, channels grow exponentially.\n\n**The Formula:** Channels = n(n-1)/2\n\nWhere n = number of team members or stakeholders.\n\n| Team Size | Formula | Channels | Growth from 5 |\n|-----------|---------|----------|---------------|\n| 5 members | 5(4)/2 | 10 | Baseline |\n| 10 members | 10(9)/2 | 45 | 4.5x |\n| 15 members | 15(14)/2 | 105 | 10.5x |\n| 20 members | 20(19)/2 | 190 | 19x |\n\nDoubling team size MORE than quadruples communication complexity. This is why adding people to struggling projects often makes things worse, not better."
+          },
+          {
+            "id": "tab2",
+            "title": "Brooks's Law",
+            "subtitle": "",
+            "content": "**Brooks's Law:** \"Adding manpower to a late software project makes it later.\"\n\nThree reasons why:\n- **Onboarding cost:** New members consume existing team members' time to get up to speed\n- **Coordination explosion:** Communication channels grow exponentially with each addition\n- **Ramp-up delay:** New members are net-negative on productivity before becoming productive\n\nThe PM's job is to control team size and communication structure — not just throw resources at schedule problems."
+          },
+          {
+            "id": "tab3",
+            "title": "Synchronous vs Asynchronous",
+            "subtitle": "",
+            "content": "**Synchronous (Real-Time):** Video calls, phone, in-person, live chat\n- Immediate feedback, clarification, builds rapport\n- Requires simultaneous availability (hard across time zones)\n- Best for: urgent decisions, complex discussions, conflict resolution\n\n**Asynchronous (Delayed):** Email, Slack, recorded video, documents\n- Flexible timing, respects time zones, creates documentation\n- Slower feedback loop, potential misinterpretation without tone\n- Best for: routine updates, documentation, distributed teams\n\n**Best Practice for Distributed Teams:** Use a HYBRID approach — async for routine (respects time zones), sync for critical (rotate meeting times to share the burden)."
+          },
+          {
+            "id": "tab4",
+            "title": "Rich vs Lean Channels",
+            "subtitle": "",
+            "content": "**Rich (High-Bandwidth):** In-person, video, phone\n- Visual cues, tone of voice, immediate feedback\n- Use for: complex topics, conflict resolution, relationship building, negotiation\n\n**Lean (Low-Bandwidth):** Email, text, documents, dashboards\n- Efficient, documented, scalable to large audiences\n- Use for: routine status, simple info, documentation, one-to-many announcements\n\n**Selection Criteria:**\n- High complexity or emotion? Use RICH\n- Simple, routine, or large audience? Use LEAN\n- New relationship or conflict? Use RICH\n- Established relationship, no issues? Use LEAN"
+          },
+          {
+            "id": "tab5",
+            "title": "Communication Barriers",
+            "subtitle": "",
+            "content": "Five types of barriers PMs must recognize and mitigate:\n\n| Barrier | Example | PM Adaptation |\n|---------|---------|---------------|\n| **Language** | Yuki's limited English, idioms lost | Visual aids, simple language, confirm understanding |\n| **Cultural** | Japanese indirect \"maybe\" = American \"no\" | Learn cultural patterns, ask clarifying questions |\n| **Technical** | Mexico City's unreliable internet | Async primary, phone backup, low-bandwidth tools |\n| **Physical** | 14-hour time zone span | Overlap hours, rotating meetings, async default |\n| **Perceptual** | Assumptions, stereotypes, biases | Active listening, diverse perspectives, psychological safety |\n\n**Key Principle:** The PM adapts to barriers. Don't demand stakeholders change overnight. Work around constraints and meet people where they are.\n\n> **PMBOK Reference:** PMBOK Guide 7th Edition — Project Work Performance Domain: Communications Management (pp. 168-171), Communication Channels Formula, Communication Technology Selection, Communication Barriers and Filters.",
+            "diagram": {
+              "image": "/images/B1L4_diagram_channels_formula.webp",
+              "alt": "Communication Channel Selection Matrix"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Toronto Expansion Communication Plan",
+        "scenario": {
+          "title": "Toronto Expansion Communication Plan",
+          "description": "Carlos is launching a Toronto expansion project. Alex must design the communication structure for a globally distributed team.",
+          "images": [
+            {
+              "src": "/images/B1L4_comic_transfer.webp",
+              "alt": "Alex plans Toronto expansion communication strategy"
+            }
+          ],
+          "details": [
+            "**Team:** 8 members across 4 time zones",
+            "**Locations:** Toronto (EST), Manhattan (EST), London vendor (GMT+5), Mumbai supplier (GMT+9.5)",
+            "**Timeline:** 4 months",
+            "**Challenge:** Design efficient communication without meeting fatigue"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "How many communication channels does this 8-person Toronto expansion team have?",
+            "points": 150,
+            "scenario_name": "Calculate Toronto Channels",
+            "situation": "Alex is setting up the Toronto expansion project with 8 team members distributed across Toronto, Manhattan, London, and Mumbai. Before designing the communication plan, Alex needs to calculate the coordination overhead.",
+            "options": [
+              {
+                "id": "A",
+                "text": "16 channels",
+                "correct": false,
+                "whyWrong": "16 is 8 times 2 — that's not the channels formula. Use n(n-1)/2."
+              },
+              {
+                "id": "B",
+                "text": "24 channels",
+                "correct": false,
+                "whyWrong": "24 is 8 times 3 — still not the correct formula application."
+              },
+              {
+                "id": "C",
+                "text": "28 channels",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "56 channels",
+                "correct": false,
+                "whyWrong": "56 is n(n-1) without dividing by 2. Each channel connects two people, so divide."
+              }
+            ],
+            "explanation": "Using n(n-1)/2 where n=8: 8(7)/2 = 56/2 = 28 channels. This is manageable, but adding just 2 more people would create 45 channels. Alex needs to keep the team lean to control communication overhead.",
+            "correctFeedback": {
+              "text": "Using n(n-1)/2 where n=8: 8(7)/2 = 56/2 = 28 channels. This is manageable, but adding just 2 more people would create 45 channels. Alex needs to keep the team lean to control communication overhead.",
+              "character": "Alex Mitchell",
+              "characterQuote": "28 channels. I've learned my lesson from the catering project. Every new person adds significant coordination cost. I'll be very careful about growing this team. Adding just 2 more people would push us to 45 channels — right back in chaos territory."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Apply the formula: n(n-1)/2. For 8 members: 8 times 7 is 56, divided by 2 is 28 channels. Not as bad as our 45-channel disaster, but still significant coordination to manage.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Apply the formula: n(n-1)/2. For 8 members: 8 times 7 is 56, divided by 2 is 28 channels. Not as bad as our 45-channel disaster, but still significant coordination to manage."
+            },
+            "retryHint": "Formula: n(n-1)/2. For 8 people: 8 times 7 = 56, then divide by 2."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "multi_select",
+            "question": "Alex needs to set up communication for the Toronto team across 4 time zones (EST, EST, GMT+5, GMT+9.5). Which THREE approaches should Alex implement for an effective hybrid communication strategy?",
+            "points": 150,
+            "scenario_name": "Communication Approach Design",
+            "situation": "With 28 communication channels and a 9.5-hour time zone span (EST to GMT+9.5), Alex must design a sustainable communication strategy that balances real-time collaboration with time zone fairness.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Async Slack standups — written updates by end of each person's day",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Daily video standup at 8 AM EST requiring all 8 members",
+                "correct": false,
+                "whyWrong": "8 AM EST is 6:30 PM in Mumbai — daily sync across 9.5 hours is unsustainable and creates burnout."
+              },
+              {
+                "id": "C",
+                "text": "Video calls reserved for complex decisions, contract negotiations, and conflict",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Email-only communication to create documentation for everything",
+                "correct": false,
+                "whyWrong": "Email-only misses rich communication needed for complex decisions and relationship building."
+              },
+              {
+                "id": "E",
+                "text": "Rotating meeting times so no single location always bears the inconvenient hours",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Have each location make decisions independently and merge later",
+                "correct": false,
+                "whyWrong": "Independent decisions without coordination leads to integration problems and rework."
+              }
+            ],
+            "explanation": "The hybrid approach combines: (A) async for routine updates across time zones, (C) sync + rich for complex/emotional topics, and (E) rotating times for fairness. This minimizes meeting fatigue while ensuring critical items get proper attention.",
+            "correctFeedback": {
+              "text": "The hybrid approach combines: (A) async for routine updates across time zones, (C) sync + rich for complex/emotional topics, and (E) rotating times for fairness. This minimizes meeting fatigue while ensuring critical items get proper attention.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect hybrid strategy. Async for routine respects the 9.5-hour time span. Rich sync for complexity ensures important decisions get proper discussion. And rotating meeting times shows respect — no one's sleep matters more than anyone else's."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about urgency and complexity. Routine updates don't need real-time meetings — use async. Complex negotiations need rich, synchronous communication. And fairness across time zones requires rotating the burden.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about urgency and complexity. Routine updates don't need real-time meetings — use async. Complex negotiations need rich, synchronous communication. And fairness across time zones requires rotating the burden."
+            },
+            "retryHint": "Think hybrid: async for routine (respects time zones), sync + rich for complex topics, and rotate meeting times for fairness."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that communication channels grow **exponentially** with team size — the formula n(n-1)/2 explains why doubling a team MORE than quadruples coordination complexity. Brooks's Law reminds us that adding people to late projects makes them later. For distributed teams, the key is selecting the right mix of synchronous vs asynchronous and rich vs lean channels.",
+        "key_takeaways": [
+          "Communication Channels Formula: n(n-1)/2 — channels grow exponentially, not linearly",
+          "Brooks's Law: Adding people increases coordination tax; more people does not mean faster delivery",
+          "Synchronous (video, phone): Use for urgent decisions, complex discussions, conflict resolution",
+          "Asynchronous (email, Slack): Use for routine updates, time zone flexibility, documentation",
+          "Rich vs Lean: Match communication bandwidth to message complexity and relationship needs",
+          "PM Adapts: Overcome barriers with visual aids, cultural learning, and technical workarounds"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L5",
+          "title": "Managing Difficult Stakeholders",
+          "description": "You know HOW to communicate. Now learn how to handle stakeholders who resist, obstruct, or dominate — the difficult ones who can derail your project if not managed carefully."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "How many ADDITIONAL communication channels will adding 4 people create?",
+            "points": 50,
+            "scenario_name": "Communication Channels Increase",
+            "situation": "A project team currently has 6 members. The project manager is considering adding 4 more team members to accelerate delivery.",
+            "options": [
+              {
+                "id": "A",
+                "text": "15 additional channels",
+                "correct": false,
+                "whyWrong": "15 is the BEFORE count (6 members), not the increase. You need: After minus Before."
+              },
+              {
+                "id": "B",
+                "text": "24 additional channels",
+                "correct": false,
+                "whyWrong": "24 isn't the result of any correct formula application. Use n(n-1)/2 for both and subtract."
+              },
+              {
+                "id": "C",
+                "text": "30 additional channels",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "45 additional channels",
+                "correct": false,
+                "whyWrong": "45 is the total AFTER adding people (10 members = 45 channels), not the INCREASE from 15."
+              }
+            ],
+            "explanation": "Before (6 members): 6(5)/2 = 15 channels. After (10 members): 10(9)/2 = 45 channels. Increase: 45 - 15 = 30 additional channels. Adding 4 people (67% more people) doubled the communication complexity (200% more channels).",
+            "correctFeedback": {
+              "text": "Before (6 members): 6(5)/2 = 15 channels. After (10 members): 10(9)/2 = 45 channels. Increase: 45 - 15 = 30 additional channels. Adding 4 people (67% more people) doubled the communication complexity (200% more channels).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "This is exactly why the PMP exam tests this formula. Many managers don't realize that adding 4 people doubles the communication complexity — and they wonder why the project slowed down instead of speeding up."
+            },
+            "retryHint": "Calculate channels BEFORE (6 members) and AFTER (10 members) using n(n-1)/2, then subtract."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST approach for this complex technical discussion?",
+            "points": 50,
+            "scenario_name": "Distributed Team Meeting Strategy",
+            "situation": "A project team is distributed across New York (EST), London (GMT+0), and Singapore (GMT+8). The team has a complex technical decision requiring input from all three locations. The Singapore team member has expressed frustration about always attending 8 AM EST meetings (9 PM in Singapore).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Schedule the meeting at 8 AM EST since it's standard hours for the majority",
+                "correct": false,
+                "whyWrong": "Majority rule doesn't make it right. 9 PM meetings regularly create burnout and resentment."
+              },
+              {
+                "id": "B",
+                "text": "Use asynchronous email thread to respect all time zones",
+                "correct": false,
+                "whyWrong": "Complex technical decisions need real-time Q&A and clarification. Email is too slow for complexity."
+              },
+              {
+                "id": "C",
+                "text": "Rotate meeting times so the burden of inconvenient hours is shared equally",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Have each location make decisions independently and merge later",
+                "correct": false,
+                "whyWrong": "Independent decisions without coordination leads to integration problems and costly rework."
+              }
+            ],
+            "explanation": "Complex technical decisions require synchronous communication (real-time Q&A), but fairness matters for team morale. Rotating meeting times ensures no single location always bears the inconvenience. This maintains engagement and prevents resentment that kills distributed team productivity.",
+            "correctFeedback": {
+              "text": "Complex technical decisions require synchronous communication (real-time Q&A), but fairness matters for team morale. Rotating meeting times ensures no single location always bears the inconvenience. This maintains engagement and prevents resentment that kills distributed team productivity.",
+              "character": "Taylor Kim",
+              "characterQuote": "I call this 'sharing the pain.' When I facilitated distributed Scrum teams, rotating meeting times was non-negotiable. It's about respect and equity — no one's sleep is more valuable than anyone else's."
+            },
+            "retryHint": "Complex = needs synchronous discussion. Distributed = needs fairness. Rotation achieves both."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the MOST appropriate communication channel?",
+            "points": 50,
+            "scenario_name": "Rich vs Lean Channel Selection",
+            "situation": "A project manager needs to communicate a simple schedule change (moving a milestone by 2 days) to 45 stakeholders. The change has no impact on budget or scope.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Individual phone calls to each stakeholder",
+                "correct": false,
+                "whyWrong": "45 phone calls for a simple date change is grossly inefficient. Lean channel scales better."
+              },
+              {
+                "id": "B",
+                "text": "Town hall video meeting with all stakeholders",
+                "correct": false,
+                "whyWrong": "Coordinating 45 people for a 2-day milestone shift is overkill. Video is rich — this needs lean."
+              },
+              {
+                "id": "C",
+                "text": "Email announcement with updated schedule attached",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Text message to each stakeholder individually",
+                "correct": false,
+                "whyWrong": "Text lacks documentation and is inappropriate for professional stakeholder communication."
+              }
+            ],
+            "explanation": "This is a simple, non-controversial message going to a large audience. Low complexity + normal urgency + large audience + no emotion = LEAN channel (email). It's efficient, documented, scalable, and professional.",
+            "correctFeedback": {
+              "text": "This is a simple, non-controversial message going to a large audience. Low complexity + normal urgency + large audience + no emotion = LEAN channel (email). It's efficient, documented, scalable, and professional.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I've learned to match channel to message. Simple + many people = email. I don't schedule 45-person meetings for a 2-day date change anymore. Save rich communication for when it actually matters."
+            },
+            "retryHint": "Simple message + large audience + no controversy = LEAN (email). Rich channels are for complex or emotional topics with small groups."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What communication barrier occurred, and what should the PM do?",
+            "points": 50,
+            "scenario_name": "Communication Barrier Identification",
+            "situation": "A project manager is working with a vendor in Japan. During meetings, the vendor often says \"we will consider this carefully\" and \"perhaps we can explore options.\" The PM interprets these as positive responses and proceeds with plans. Later, the vendor reveals they had concerns but didn't want to directly say no.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Language barrier — ask the vendor to improve English proficiency",
+                "correct": false,
+                "whyWrong": "This isn't a language issue — the vendor spoke English. The problem is cultural communication style differences."
+              },
+              {
+                "id": "B",
+                "text": "Cultural barrier — learn to recognize indirect communication patterns and ask clarifying questions",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Technical barrier — use video calls instead of phone to see facial expressions",
+                "correct": false,
+                "whyWrong": "While video helps, the core issue is cultural interpretation, not the technical medium."
+              },
+              {
+                "id": "D",
+                "text": "Perceptual barrier — the PM needs training to eliminate personal bias",
+                "correct": false,
+                "whyWrong": "This isn't about personal bias — it's about understanding different cultural communication norms."
+              }
+            ],
+            "explanation": "This is a classic cultural barrier. In Japanese business culture, indirect communication is common — saying \"no\" directly is considered rude. \"We will consider this carefully\" may mean \"we have concerns.\" The PM should learn cultural patterns, ask clarifying questions (\"Are there any concerns about this approach?\"), and never assume \"maybe\" means \"yes\" in high-context cultures.",
+            "correctFeedback": {
+              "text": "This is a classic cultural barrier. In Japanese business culture, indirect communication is common — saying \"no\" directly is considered rude. \"We will consider this carefully\" may mean \"we have concerns.\" The PM should learn cultural patterns, ask clarifying questions (\"Are there any concerns about this approach?\"), and never assume \"maybe\" means \"yes\" in high-context cultures.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Cultural intelligence is a PM superpower. When working with Japanese partners, listen for soft refusals and create space for concerns. 'Help me understand your perspective' works better than 'Do you agree?'"
+            },
+            "retryHint": "The vendor spoke English clearly. The issue is HOW concerns are expressed (indirectly vs directly). That's a cultural communication pattern, not a language problem."
+          }
+        ]
+      }
+    }
+  ]
+}

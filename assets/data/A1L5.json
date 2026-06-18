@@ -1,0 +1,646 @@
+{
+  "lessonId": "A1L5",
+  "lessonTitle": "Organizational Structures",
+  "courseId": "A1",
+  "courseName": "Introduction to Project Management",
+  "pathId": "A",
+  "pathName": "Foundation",
+  "domain": "Business Environment",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand the three main organizational structures: Functional, Matrix, and Projectized",
+    "Recognize how organizational structure affects PM authority, resource allocation, and communication",
+    "Identify the advantages and disadvantages of each structure",
+    "Navigate resource conflicts in matrix organizations",
+    "Apply structure knowledge to real-world resource allocation scenarios"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "maya_rodriguez",
+    "marco_silva",
+    "elena_vasquez",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Alex's Frustration: Who Controls the Team?",
+        "intro": "Alex needs Maya for 30 hours/week on the expansion project. But Maya reports to Marco (Executive Chef), who says: \"Maya is MY team member first. She's already working 40 hours/week in the kitchen. You can have her for 10 hours max.\"",
+        "failure_cards": [
+          {
+            "id": "alexs_frustration",
+            "icon": "📋",
+            "title": "Alex's Frustration",
+            "summary": "Who's really in charge?",
+            "image": "/images/A1L5_comic_alex_frustration.webp",
+            "details": "Alex approaches Maya about a project meeting, but Marco steps in: \"Hold on. Maya is MY chef. She's critical to tonight's service.\" Alex is shocked: \"YOUR chef? I thought I was managing this project!\""
+          },
+          {
+            "id": "the_tug_of_war",
+            "icon": "⚠️",
+            "title": "The Tug of War",
+            "summary": "Two managers, one team member",
+            "image": "/images/A1L5_comic_tug_of_war.webp",
+            "details": "Maya is caught in the middle—Marco needs her for kitchen operations, Alex needs her for project work. She can't be in two places at once. Alex storms into Carlos's office: \"I can't manage this project if I don't have authority over my team!\""
+          },
+          {
+            "id": "the_structure_lesson",
+            "icon": "💡",
+            "title": "The Structure Lesson",
+            "summary": "Understanding organizational dynamics",
+            "image": "/images/A1L5_comic_structure_lesson.webp",
+            "details": "Carlos explains: \"Savory & Co. is a MATRIX organization. Maya reports to Marco AND you. You must negotiate, not command.\" Dr. Foster adds: \"Matrix is the most common—and most frustrating—structure for PMs.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Because Savory & Co. is a MATRIX organization. Maya doesn't report to you exclusively—she reports to Marco (Operations) AND you (Projects). Your authority is SHARED. Welcome to the most common—and most frustrating—organizational structure."
+        },
+        "learning_hook": "**Organizational structure determines PM AUTHORITY, RESOURCE ALLOCATION, and COMMUNICATION PATHS.** In a FUNCTIONAL structure, PMs have little authority. In a PROJECTIZED structure, PMs have full control. In a MATRIX, PMs must NEGOTIATE."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "identify_organizational_structures",
+        "title": "Identify Organizational Structures",
+        "description": "Dr. Amelia Foster presents three organizations with different structures. Identify the structure and assess PM authority in each scenario.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each scenario to the correct organizational structure:",
+            "points": 270,
+            "scenario_name": "Structure Identification",
+            "situation": "Match each scenario to its organizational structure based on reporting relationships and PM authority.",
+            "chips": [
+              {
+                "id": "tech_startup",
+                "label": "Tech Startup",
+                "correctZone": "projectized_staff_report_directly_to_pm_pm_has_full_authority"
+              },
+              {
+                "id": "savory_co",
+                "label": "Savory & Co.",
+                "correctZone": "matrix_dual_reporting_pm_has_shared_authority"
+              },
+              {
+                "id": "marketing_agency",
+                "label": "Marketing Agency",
+                "correctZone": "functional_staff_grouped_by_specialty_pm_has_no_authority"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "projectized_staff_report_directly_to_pm_pm_has_full_authority",
+                "label": "Projectized — Staff report directly to PM, PM has FULL authority",
+                "detail": "Team reports directly to PM, disbands after project"
+              },
+              {
+                "id": "matrix_dual_reporting_pm_has_shared_authority",
+                "label": "Matrix — Dual reporting, PM has SHARED authority",
+                "detail": "Maya reports to both Marco (Operations) AND Alex (Project)"
+              },
+              {
+                "id": "functional_staff_grouped_by_specialty_pm_has_no_authority",
+                "label": "Functional — Staff grouped by specialty, PM has NO authority",
+                "detail": "PM must request Devon through Creative Director"
+              }
+            ],
+            "explanation": "Tech Startup is Projectized (team reports to PM). Savory & Co. is Matrix (dual reporting). Marketing Agency is Functional (PM has no authority).",
+            "correctFeedback": {
+              "text": "Tech Startup is Projectized (team reports to PM). Savory & Co. is Matrix (dual reporting). Marketing Agency is Functional (PM has no authority).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect matching! Tech Startup = Projectized (full PM authority). Savory & Co. = Matrix (shared authority). Marketing Agency = Functional (PM is coordinator only). Understanding your organizational structure is the first step to navigating it successfully."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Can the PM assign work directly, or must they ask permission? Look at the reporting relationships. Who do team members report to? Who assigns their work?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Can the PM assign work directly, or must they ask permission? Look at the reporting relationships. Who do team members report to? Who assigns their work?"
+            },
+            "retryHint": "Focus on reporting relationships: direct to PM (Projectized), dual reporting (Matrix), or through functional manager (Functional)."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Rank the structures from LOWEST to HIGHEST PM authority. Which order is correct?",
+            "points": 130,
+            "scenario_name": "PM Authority Ranking",
+            "situation": "You need to understand the spectrum of PM authority across organizational structures.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Functional → Matrix → Projectized (lowest to highest)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Matrix → Functional → Projectized",
+                "correct": false,
+                "whyWrong": "In Functional, PM is just a coordinator with NO authority. Matrix gives PM SOME authority (shared). Functional is lower than Matrix."
+              },
+              {
+                "id": "C",
+                "text": "Projectized → Matrix → Functional",
+                "correct": false,
+                "whyWrong": "This is backwards. Projectized has the HIGHEST PM authority, not the lowest."
+              },
+              {
+                "id": "D",
+                "text": "Functional → Projectized → Matrix",
+                "correct": false,
+                "whyWrong": "Projectized gives PM FULL authority, more than Matrix (shared). Projectized is the highest."
+              }
+            ],
+            "explanation": "FUNCTIONAL gives PMs minimal authority. MATRIX gives moderate authority (shared). PROJECTIZED gives maximum authority.",
+            "correctFeedback": {
+              "text": "FUNCTIONAL gives PMs minimal authority. MATRIX gives moderate authority (shared). PROJECTIZED gives maximum authority.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect ranking! Functional (PM is coordinator) → Matrix (shared authority) → Projectized (full control). Most organizations are Matrix—master negotiation. The more authority you want, the more you need a projectized structure. But most companies are matrix—so master negotiation."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Can the PM assign work directly, or must they ask permission? Think about who controls resources in each structure. Who makes the final call?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Can the PM assign work directly, or must they ask permission? Think about who controls resources in each structure. Who makes the final call?"
+            },
+            "retryHint": "Who has the most authority: a coordinator (Functional), a shared leader (Matrix), or the sole leader (Projectized)?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "How should Alex resolve this resource conflict?",
+            "points": 100,
+            "scenario_name": "Resource Conflict Resolution",
+            "situation": "Savory & Co. (Matrix). Maya reports to Marco (40 hrs/week operations) and Alex (30 hrs/week project). Total: 70 hours requested, but Maya works 40 hrs/week.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Command Maya: \"You work for ME on this project. Tell Marco you're unavailable.\"",
+                "correct": false,
+                "whyWrong": "In a MATRIX, you can't COMMAND shared resources. Maya reports to Marco AND you. Commanding her ignores Marco's authority and creates conflict."
+              },
+              {
+                "id": "B",
+                "text": "Negotiate with Marco: \"Maya is over-allocated. Can we split her time or find another solution?\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Escalate immediately to Carlos: \"Marco won't give me Maya. Tell him to comply.\"",
+                "correct": false,
+                "whyWrong": "Escalating immediately is premature—you haven't tried negotiation. Carlos will ask: \"Did you discuss this with Marco first?\""
+              },
+              {
+                "id": "D",
+                "text": "Accept 10 hrs/week from Maya: \"Fine, I'll take what I can get.\"",
+                "correct": false,
+                "whyWrong": "Accepting 10 hrs ignores project needs. A good PM explores alternatives: adjust scope, find additional resources, or negotiate a better split."
+              }
+            ],
+            "explanation": "In a MATRIX, you must NEGOTIATE with the functional manager. Acknowledge the over-allocation, discuss options, and collaborate on solutions.",
+            "correctFeedback": {
+              "text": "In a MATRIX, you must NEGOTIATE with the functional manager. Acknowledge the over-allocation, discuss options, and collaborate on solutions.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Perfect, Alex. When you and Marco can't agree, THEN come to me. But try negotiation first."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Before escalating, have you tried working it out together? In Matrix organizations, what's the first step when you have a resource conflict with a functional manager?",
+              "character": "Elena Vasquez",
+              "characterQuote": "Before escalating, have you tried working it out together? In Matrix organizations, what's the first step when you have a resource conflict with a functional manager?"
+            },
+            "retryHint": "Matrix = shared authority. What approach respects both managers' needs?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Understanding Organizational Structures",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Why It Matters",
+            "subtitle": "",
+            "content": "Organizational structure determines:\n\n**1. PM Authority:** Can you ASSIGN tasks, or must you REQUEST?\n**2. Resource Allocation:** Do team members report to YOU, FUNCTIONAL MANAGERS, or BOTH?\n**3. Communication Paths:** Direct with team, or through functional managers?\n**4. Budget Control:** Do you CONTROL the budget, or REQUEST spending?\n**5. Team Loyalty:** Do members prioritize YOUR project or their DEPARTMENT?\n\n**PMI Emphasis:** \"The organizational structure is a key environmental factor that affects how projects are conducted.\""
+          },
+          {
+            "id": "tab2",
+            "title": "Functional",
+            "subtitle": "",
+            "content": "**Definition:** Staff grouped by SPECIALTY into departments. Team members report to FUNCTIONAL MANAGERS.\n\n**PM Role:** Coordinator/Expediter (facilitates, tracks, but NO authority)\n**PM Authority:** NONE to MINIMAL\n\n**Advantages:**\n- Clear career path for specialists\n- Efficient resource use\n- Deep expertise maintained\n\n**Disadvantages:**\n- Projects are SECONDARY priority\n- PM has NO authority (must request resources)\n- Slow decisions (through functional managers)\n\n**Example:** Marketing agency where designers report to Creative Director"
+          },
+          {
+            "id": "tab3",
+            "title": "Projectized",
+            "subtitle": "",
+            "content": "**Definition:** Staff assigned to PROJECTS full-time, report DIRECTLY to PM. Team disbands when project ends.\n\n**PM Role:** Manager with FULL authority\n**PM Authority:** HIGH (assigns tasks, approves time off, conducts reviews)\n\n**Advantages:**\n- Fast decisions (PM has authority)\n- Clear accountability\n- Strong team cohesion\n- Project is TOP priority\n\n**Disadvantages:**\n- Inefficient resource use (specialists may be idle)\n- No career path in specialty\n- Knowledge loss when project ends\n\n**Example:** Construction contractor with dedicated project crew"
+          },
+          {
+            "id": "tab4",
+            "title": "Matrix",
+            "subtitle": "",
+            "content": "**Definition:** Staff have DUAL REPORTING—functional manager AND project manager. Resource allocation is SHARED.\n\n**Three Types:**\n- **Weak Matrix:** PM has LIMITED authority (closer to functional)\n- **Balanced Matrix:** PM and functional manager have EQUAL authority\n- **Strong Matrix:** PM has SIGNIFICANT authority (closer to projectized)\n\n**Advantages:** Balance efficiency with project focus\n\n**Disadvantages:**\n- COMPLEX dual reporting\n- RESOURCE CONFLICTS\n- SLOW DECISIONS (negotiation required)\n\n**Example:** Savory & Co. where Maya reports to Marco AND Alex"
+          },
+          {
+            "id": "tab5",
+            "title": "Matrix Tips",
+            "subtitle": "How to Succeed",
+            "content": "**How to Succeed in a Matrix:**\n\n**1. Negotiate Early:**\nAgree on resource allocation BEFORE conflict arises\n\n**2. Build Relationships:**\nTreat functional managers as KEY STAKEHOLDERS\n\n**3. Escalate Strategically:**\nTry negotiation FIRST; escalate only when necessary\n\n**4. Communicate Transparently:**\nKeep functional managers informed of project needs\n\n**5. Manage Expectations:**\nClarify dual reporting for staff (\"You report to both of us\")\n\n**Remember:** In Matrix, negotiation skills matter more than authority!"
+          }
+        ],
+        "diagram": {
+          "image": "/images/A1L5_diagram_org_structures.webp",
+          "alt": "Comparison of Functional, Matrix, and Projectized organizational structures"
+        }
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "New Challenge: Multi-Site Restaurant Rollout",
+        "scenario": {
+          "title": "New Challenge: Multi-Site Restaurant Rollout",
+          "description": "Carlos plans to open 3 new Savory & Co. locations. Alex needs resources from multiple departments, but each functional manager has concerns. *Alex negotiates resources for the multi-site rollout* **Resource Details:**",
+          "images": [
+            {
+              "src": "/images/A1L5_comic_transfer.webp",
+              "alt": "Alex in meeting with functional managers discussing resource allocation"
+            }
+          ],
+          "details": [
+            "**Sofia (Server/Trainer):** Marco offers 15 hrs/week, Alex needs 30",
+            "**Nina (Marketing):** Sam offers 5 hrs/week, Alex needs 20",
+            "**Rashid (Supply Chain):** Jordan offers 25 hrs/week - no conflict"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What is Alex's authority level in this MATRIX structure?",
+            "points": 100,
+            "scenario_name": "PM Authority in Matrix",
+            "situation": "Alex is leading the multi-site rollout for Savory & Co., a matrix organization. Sofia and Nina are shared resources whose functional managers (Marco and Sam) control their day-to-day assignments.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Alex can COMMAND Sofia and Nina to prioritize the project",
+                "correct": false,
+                "whyWrong": "In Matrix, PM doesn't have unilateral authority. Sofia and Nina also report to functional managers who control their operations work."
+              },
+              {
+                "id": "B",
+                "text": "Alex must NEGOTIATE with Marco and Sam to resolve resource conflicts",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Alex has NO authority—must accept whatever functional managers offer",
+                "correct": false,
+                "whyWrong": "That's Functional structure. In Matrix, Alex has project authority and can negotiate, not just accept."
+              },
+              {
+                "id": "D",
+                "text": "Alex can escalate immediately to Carlos without negotiating",
+                "correct": false,
+                "whyWrong": "Escalating without negotiation is premature. Carlos will ask: \"Did you try working it out first?\""
+              }
+            ],
+            "explanation": "In Matrix, PM authority is SHARED. Alex can negotiate, propose alternatives, and escalate if needed—but must try collaboration first.",
+            "correctFeedback": {
+              "text": "In Matrix, PM authority is SHARED. Alex can negotiate, propose alternatives, and escalate if needed—but must try collaboration first.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Matrix means shared authority. Negotiate first, escalate if needed."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "In Matrix, who controls resources? Is it the PM alone? Think about what 'Matrix' means for PM authority.",
+              "character": "Elena Vasquez",
+              "characterQuote": "In Matrix, who controls resources? Is it the PM alone? Think about what 'Matrix' means for PM authority."
+            },
+            "retryHint": "Matrix = shared authority between PM and functional managers."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Which resource conflict should Alex prioritize for negotiation?",
+            "points": 100,
+            "scenario_name": "Prioritizing Resource Conflicts",
+            "situation": "Alex has identified three resource needs for the multi-site rollout: Sofia (offered 15 hrs/week, needs 30), Nina (offered 5 hrs/week, needs 20), and Rashid (offered 25 hrs/week, no conflict). Alex must decide which conflict to address first.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Rashid (no conflict, already has 25 hrs/week commitment)",
+                "correct": false,
+                "whyWrong": "No negotiation needed—Rashid is already available. Focus on the actual conflicts."
+              },
+              {
+                "id": "B",
+                "text": "Nina (5 hrs/week offered vs 20 needed = 75% gap, high impact on marketing)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Sofia (15 hrs vs 30 hrs, but training can be compressed)",
+                "correct": false,
+                "whyWrong": "While Sofia has a gap, Nina's 75% shortfall is more critical for multi-location marketing."
+              },
+              {
+                "id": "D",
+                "text": "Escalate all conflicts to Carlos immediately",
+                "correct": false,
+                "whyWrong": "Escalating everything immediately shows poor negotiation skills. Prioritize the biggest gap first."
+              }
+            ],
+            "explanation": "Nina has the biggest gap (75% shortfall). Address the most critical conflict first, then work on others.",
+            "correctFeedback": {
+              "text": "Nina has the biggest gap (75% shortfall). Address the most critical conflict first, then work on others.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Good thinking. Tackle the biggest problem first. If marketing fails, the whole rollout suffers."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at the numbers. Which gap is largest? Which resource has the biggest gap between what's offered and what's needed?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Look at the numbers. Which gap is largest? Which resource has the biggest gap between what's offered and what's needed?"
+            },
+            "retryHint": "Calculate the gaps: Sofia (50% gap), Nina (75% gap), Rashid (no gap). Which is most critical?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Which negotiation approach is BEST for the conversation with Sam about Nina?",
+            "points": 100,
+            "scenario_name": "Negotiation Approach",
+            "situation": "Alex has determined that Nina's resource gap is the most critical (75% shortfall). Alex needs to approach Sam, Nina's functional manager, to negotiate increased availability from 5 hours to 20 hours per week for the rollout.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Demand: \"I need Nina for 20 hours. Make it happen.\"",
+                "correct": false,
+                "whyWrong": "Demands create conflict in Matrix. Sam will push back, and you'll damage the relationship."
+              },
+              {
+                "id": "B",
+                "text": "Accept: \"Fine, I'll take the 5 hours and figure it out.\"",
+                "correct": false,
+                "whyWrong": "Accepting without exploring alternatives ignores project needs. A good PM explores options."
+              },
+              {
+                "id": "C",
+                "text": "Collaborate: \"I understand Nina is busy. Can we discuss options like splitting time, finding support, or sequencing projects?\"",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Bypass: \"I'll go directly to Carlos and have him override you.\"",
+                "correct": false,
+                "whyWrong": "Bypassing functional managers damages relationships and trust. Try collaboration first."
+              }
+            ],
+            "explanation": "Acknowledge constraints, propose options, seek collaboration. This is how successful PMs navigate Matrix organizations.",
+            "correctFeedback": {
+              "text": "Acknowledge constraints, propose options, seek collaboration. This is how successful PMs navigate Matrix organizations.",
+              "character": "Elena Vasquez",
+              "characterQuote": "This is exactly how to approach resource conflicts. Acknowledge, quantify, propose options."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Negotiation means finding solutions together, not demanding or accepting. What approach respects Sam's constraints while addressing your project needs?",
+              "character": "Elena Vasquez",
+              "characterQuote": "Negotiation means finding solutions together, not demanding or accepting. What approach respects Sam's constraints while addressing your project needs?"
+            },
+            "retryHint": "Good negotiation acknowledges constraints AND explores alternatives."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the three organizational structures: **Functional** (low PM authority), **Projectized** (high PM authority), and **Matrix** (moderate PM authority, shared). Most organizations are Matrix—which means PMs must master NEGOTIATION, not command.",
+        "key_takeaways": [
+          "FUNCTIONAL: Staff report to department heads, PM is coordinator, must REQUEST resources",
+          "PROJECTIZED: Staff report directly to PM, full authority, team disbands after project",
+          "MATRIX: Dual reporting, resource allocation NEGOTIATED, most common structure",
+          "Matrix Types: Weak (PM closer to coordinator), Balanced (equal), Strong (PM closer to manager)",
+          "Matrix Navigation: Negotiate early, build relationships, escalate strategically",
+          "PM Authority Spectrum: Functional (minimal) → Matrix (moderate) → Projectized (high)"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L6",
+          "title": "Project Constraints",
+          "description": "Learn what constraints every project faces—scope, schedule, cost, quality, resources, and risk."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What is the MOST LIKELY consequence of the project manager's action?",
+            "points": 50,
+            "scenario_name": "Resource Authority Confusion",
+            "situation": "A project manager in a balanced matrix organization needs a software developer for a critical project task. The developer's functional manager has assigned the developer to operational support duties. The project manager directly instructs the developer to prioritize the project task.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The developer will complete the project task as instructed since the PM has authority",
+                "correct": false,
+                "whyWrong": "In a balanced matrix, PM authority is SHARED with the functional manager. The PM cannot unilaterally override the functional manager's assignments."
+              },
+              {
+                "id": "B",
+                "text": "The functional manager may escalate a conflict because the PM overstepped authority boundaries",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Nothing significant—developers routinely receive instructions from multiple managers",
+                "correct": false,
+                "whyWrong": "While dual reporting is normal in matrix, bypassing the functional manager to give direct orders creates conflict."
+              },
+              {
+                "id": "D",
+                "text": "The PM will be reassigned for violating organizational policies",
+                "correct": false,
+                "whyWrong": "Reassignment is too extreme. The more likely outcome is a conflict requiring mediation."
+              }
+            ],
+            "explanation": "In a balanced matrix, PMs share authority with functional managers. Directly instructing a resource without coordinating with the functional manager oversteps boundaries and creates conflict.",
+            "correctFeedback": {
+              "text": "In a balanced matrix, PMs share authority with functional managers. Directly instructing a resource without coordinating with the functional manager oversteps boundaries and creates conflict.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Correct! In balanced matrix, authority is SHARED. The PM should have negotiated with the functional manager first, not issued direct orders. Matrix requires collaboration, not commands. Always coordinate with functional managers."
+            },
+            "retryHint": "In balanced matrix, PM authority is shared. What happens when a PM bypasses the functional manager?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "Which organizational structure BEST supports these requirements?",
+            "points": 50,
+            "scenario_name": "Organizational Structure Selection",
+            "situation": "A company is forming a team for a 2-year strategic initiative that will transform their core operations. The CEO wants the team fully dedicated to this initiative with no competing priorities. Team members will be evaluated solely on initiative outcomes.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Functional organization with a dedicated project coordinator",
+                "correct": false,
+                "whyWrong": "Functional structure means team members report to department heads with competing operational priorities. This contradicts \"fully dedicated with no competing priorities.\""
+              },
+              {
+                "id": "B",
+                "text": "Weak matrix with strong executive sponsorship",
+                "correct": false,
+                "whyWrong": "Weak matrix still has functional managers controlling resources. Team members would have operational duties competing with initiative work."
+              },
+              {
+                "id": "C",
+                "text": "Projectized organization with a dedicated project team",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Strong matrix with negotiated resource allocations",
+                "correct": false,
+                "whyWrong": "Even strong matrix has some functional manager involvement. The CEO wants \"fully dedicated\"—no negotiation, no competing priorities."
+              }
+            ],
+            "explanation": "Projectized organization is ideal when you need: (1) full-time dedication, (2) no competing priorities, (3) PM controls evaluations. The CEO's requirements match projectized perfectly.",
+            "correctFeedback": {
+              "text": "Projectized organization is ideal when you need: (1) full-time dedication, (2) no competing priorities, (3) PM controls evaluations. The CEO's requirements match projectized perfectly.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Exactly! Projectized gives the PM full authority, team members have no competing priorities, and evaluations are based on project outcomes. Perfect match. When you need total focus on a strategic initiative, projectized is the way to go."
+            },
+            "retryHint": "The CEO wants \"fully dedicated with no competing priorities.\" Only one structure provides this completely."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Matrix Conflict Resolution",
+            "situation": "A project manager and a functional manager disagree about a team member's workload allocation. The project manager needs 30 hours/week for a critical deliverable. The functional manager says the team member can only provide 15 hours due to operational commitments. Both managers have valid business justifications.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Escalate to the PMO to enforce the project's resource requirements",
+                "correct": false,
+                "whyWrong": "Escalating FIRST skips the negotiation step. The PM should try to resolve the conflict directly before involving higher authority."
+              },
+              {
+                "id": "B",
+                "text": "Accept the 15 hours and adjust the project schedule accordingly",
+                "correct": false,
+                "whyWrong": "Accepting without exploring alternatives may unnecessarily impact the project. Good PMs explore options before accepting constraints."
+              },
+              {
+                "id": "C",
+                "text": "Meet with the functional manager to explore alternatives such as additional resources or schedule adjustments",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Request that the sponsor mandate the full 30-hour allocation",
+                "correct": false,
+                "whyWrong": "Jumping to sponsor mandate skips negotiation. This also damages the relationship with the functional manager."
+              }
+            ],
+            "explanation": "In matrix organizations, negotiation is the first step. Explore alternatives: Can another resource supplement? Can scope be adjusted? Can timeline flex? Escalation comes after good-faith negotiation fails.",
+            "correctFeedback": {
+              "text": "In matrix organizations, negotiation is the first step. Explore alternatives: Can another resource supplement? Can scope be adjusted? Can timeline flex? Escalation comes after good-faith negotiation fails.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Correct! Negotiation first. Explore alternatives with the functional manager before escalating. You might find creative solutions. Most conflicts resolve through collaborative problem-solving. Escalation is the last resort."
+            },
+            "retryHint": "Matrix organizations require negotiation FIRST. What should the PM do before escalating?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the ROOT CAUSE of this problem?",
+            "points": 50,
+            "scenario_name": "Functional Organization Limitations",
+            "situation": "A project manager in a functional organization is coordinating a cross-departmental project. The PM creates the project schedule, but team members consistently prioritize their departmental work over project tasks. Deadlines are slipping.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project manager lacks leadership skills to motivate the team",
+                "correct": false,
+                "whyWrong": "The issue isn't leadership skills—it's structural. In functional organizations, the PM has no authority to override departmental priorities."
+              },
+              {
+                "id": "B",
+                "text": "In functional organizations, PMs have limited authority and team members prioritize functional work",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The team members are not committed to project success",
+                "correct": false,
+                "whyWrong": "Team members may be committed but are structurally required to prioritize departmental work. It's the structure, not their commitment."
+              },
+              {
+                "id": "D",
+                "text": "The project schedule was poorly designed without input from team members",
+                "correct": false,
+                "whyWrong": "Even a well-designed schedule faces this problem in functional organizations. The root cause is the PM's lack of authority."
+              }
+            ],
+            "explanation": "In functional organizations, team members report to functional managers who control their priorities, performance reviews, and career paths. Project work is secondary. The PM is a coordinator without authority.",
+            "correctFeedback": {
+              "text": "In functional organizations, team members report to functional managers who control their priorities, performance reviews, and career paths. Project work is secondary. The PM is a coordinator without authority.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Exactly! This is a structural limitation of functional organizations. The PM acts as coordinator but lacks authority to override departmental priorities. It's not a people problem—it's a structure problem. In functional orgs, project work competes with departmental priorities."
+            },
+            "retryHint": "In functional organizations, who has authority over team members—the PM or the functional managers?"
+          }
+        ]
+      }
+    }
+  ]
+}

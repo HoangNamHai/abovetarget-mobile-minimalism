@@ -1,0 +1,711 @@
+{
+  "lessonId": "C3L4",
+  "lessonTitle": "Quality Planning & Assurance",
+  "courseId": "C3",
+  "courseName": "Quality, Risk, Procurement",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish between Quality Assurance (defect prevention) and Quality Control (defect detection)",
+    "Select the appropriate quality tool based on problem context: Pareto Chart for prioritization, Control Chart for monitoring, Statistical Sampling for inspection",
+    "Apply the Rule of Seven to identify assignable causes in control charts",
+    "Understand the distinction between Accuracy vs Precision and Quality vs Grade",
+    "Recognize Continuous Integration as a Quality Assurance practice in software development"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "jordan_park",
+    "casey_torres",
+    "taylor_kim"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Four Quality Crises Threaten the $18 Premium Meal Prep Launch",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. The company is launching a premium meal prep service — $18 per meal, 500 meals daily, one week to launch. Jordan Park (QA Lead) has flagged four critical quality issues: portion weights that miss the target, 23 defect types overwhelming the QA team, a temperature anomaly on the prep station control chart, and an inspection bottleneck — Casey demands 100% inspection but the team can only check 50 meals per day. Casey's instinct: \"Just inspect EVERYTHING!\" But Jordan knows better: each quality tool has a specific purpose. Use the wrong one and you waste time on the wrong problem.",
+        "failure_cards": [
+          {
+            "id": "quality_crisis_dashboard",
+            "icon": "📋",
+            "title": "Quality Crisis Dashboard",
+            "summary": "Four quality crises hit simultaneously — wrong tools make everything worse",
+            "image": "/images/C3L4_comic_quality_crisis.webp",
+            "details": "Jordan flagged four problems: portion variance (128g vs 150g target), 23 defect types overwhelming QA, 8 consecutive temperature readings above the mean, and an inspection bottleneck (500 meals, 50 inspectors). Casey demanded the team \"inspect everything,\" but using one approach for all four problems wasted resources. By the time the team realized each crisis needed a different tool, two days were lost and customer pre-orders started canceling."
+          },
+          {
+            "id": "tool_mismatch_disaster",
+            "icon": "⚠️",
+            "title": "Tool Mismatch Disaster",
+            "summary": "Using Control Charts to prioritize defects wasted a full day on the wrong analysis",
+            "image": "/images/C3L4_comic_inspection_fail.webp",
+            "details": "Casey tried using a Control Chart to figure out which defects to fix first. But Control Charts monitor process stability over time — they don't rank or prioritize defect types. After a full day of charting trends, the team still didn't know which 3 of their 23 defect types to focus on. Jordan: \"You needed a Pareto Chart — rank by frequency, find the vital few. Each tool has ONE job.\" Meanwhile, the temperature anomaly went uninvestigated."
+          },
+          {
+            "id": "prevention_vs_detection",
+            "icon": "💡",
+            "title": "Prevention vs Detection",
+            "summary": "Inspecting every meal after production caught defects — but couldn't prevent them",
+            "image": "/images/C3L4_comic_prevention_lesson.webp",
+            "details": "Casey hired temporary inspectors to check every meal. They found 47 defective meals on Day 1 — and rejected them all. But the next day, the same defects reappeared. Jordan explained: \"You're doing Quality CONTROL — detecting defects after they happen. What you need is Quality ASSURANCE — training staff on proper portioning, calibrating equipment daily, preventing errors before they occur. Prevention is always cheaper than detection.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "jordan_park",
+          "name": "Jordan Park",
+          "role": "QA Lead",
+          "quote": "Quality tools aren't interchangeable. Pareto Charts prioritize. Control Charts monitor stability. Statistical Sampling handles inspection efficiently. Use the wrong tool for a problem and you'll waste time, money, and still have the same crisis."
+        },
+        "learning_hook": "**Quality management** is about matching the right tool to the right problem — and knowing whether you need prevention (QA) or detection (QC). Let's learn to select the correct quality tool for each situation and understand why prevention beats inspection."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "match_the_tool_to_the_crisis",
+        "title": "Match the Tool to the Crisis",
+        "description": "Jordan walks you through each quality crisis. For every problem, select the right quality tool and understand the underlying concept. \"Each problem has ONE best tool — match them correctly or we won't launch on time.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "How would you describe these portion measurements?",
+            "points": 100,
+            "scenario_name": "Portion Size Analysis — Accuracy vs Precision",
+            "situation": "Savory & Co.'s premium meal prep service targets 150g portions (plus or minus 5g). The last 10 measurements read: 127g, 131g, 125g, 129g, 133g, 128g, 130g, 126g, 132g, 124g. All measurements cluster tightly around 128g (plus or minus 4g) — very consistent with each other, but 22g below the 150g target. Casey asks: \"The portions are all roughly the same size — isn't that good?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accurate AND precise — measurements are good quality",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Precise but NOT accurate — consistent but off-target",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Accurate but NOT precise — on-target but inconsistent",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Neither accurate nor precise — measurements are unreliable",
+                "correct": false
+              }
+            ],
+            "explanation": "The measurements cluster tightly around 128g (PRECISE — consistent with each other) but miss the 150g target by 22g (NOT ACCURATE — far from the true value). This is a systematic bias indicating the portioning tool needs recalibration. Precision means consistency; accuracy means hitting the target. You can have one without the other.",
+            "correctFeedback": {
+              "text": "The measurements cluster tightly around 128g (PRECISE — consistent with each other) but miss the 150g target by 22g (NOT ACCURATE — far from the true value). This is a systematic bias indicating the portioning tool needs recalibration. Precision means consistency; accuracy means hitting the target. You can have one without the other.",
+              "character": "Jordan Park",
+              "characterQuote": "Exactly. Precise but not accurate — a systematic bias. The fix is recalibration, not retraining staff. If they were random (not precise), we'd retrain. Consistent but off-target means the equipment is the problem."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about two separate questions: Are the measurements CONSISTENT with each other? (That's precision.) Are they CLOSE to the 150g TARGET? (That's accuracy.) Answer each one independently.",
+              "character": "Jordan Park",
+              "characterQuote": "Think about two separate questions: Are the measurements CONSISTENT with each other? (That's precision.) Are they CLOSE to the 150g TARGET? (That's accuracy.) Answer each one independently."
+            },
+            "retryHint": "Precision = are measurements consistent WITH EACH OTHER? Accuracy = are measurements close to the TARGET? Evaluate each separately."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Which quality tool should Jordan use to prioritize which defects to fix first?",
+            "points": 100,
+            "scenario_name": "Defect Overload — Pareto Chart",
+            "situation": "Last month, Savory & Co. logged 23 different defect types in the meal prep line. The top four: missing labels (127 occurrences), wrong ingredients (98), leaking containers (71), and incorrect portions (45). The remaining 19 types combined account for 59 occurrences. Jordan's QA team has resources to fix only 5 root causes this quarter. They need to identify which defects to prioritize.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Pareto Chart — rank defects by frequency to find the vital few",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Control Chart — monitor defect rates over time",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Check Sheet — collect more defect data",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Statistical Sampling — sample defects to understand root causes",
+                "correct": false
+              }
+            ],
+            "explanation": "The Pareto Chart applies the 80/20 rule (Pareto Principle): roughly 80% of problems come from 20% of causes. Ranking defects by frequency shows the top 3 types (missing labels, wrong ingredients, leaking containers) cause approximately 74% of all complaints. Fix those \"vital few\" first for maximum impact with limited resources.",
+            "correctFeedback": {
+              "text": "The Pareto Chart applies the 80/20 rule (Pareto Principle): roughly 80% of problems come from 20% of causes. Ranking defects by frequency shows the top 3 types (missing labels, wrong ingredients, leaking containers) cause approximately 74% of all complaints. Fix those \"vital few\" first for maximum impact with limited resources.",
+              "character": "Jordan Park",
+              "characterQuote": "Pareto Chart — the 80/20 rule. Three defect types out of 23 cause nearly three-quarters of all complaints. Fix those three and we eliminate most quality issues before launch."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "We already HAVE the defect data — we don't need to collect more. And we're not monitoring trends over time. We need to RANK and PRIORITIZE. Which tool does that?",
+              "character": "Jordan Park",
+              "characterQuote": "We already HAVE the defect data — we don't need to collect more. And we're not monitoring trends over time. We need to RANK and PRIORITIZE. Which tool does that?"
+            },
+            "retryHint": "You have 23 defect types with frequency counts. You need to find the \"vital few\" causing most problems. Which tool ranks items by frequency and shows cumulative impact?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What should Jordan do about these temperature readings?",
+            "points": 100,
+            "scenario_name": "Temperature Anomaly — Rule of Seven",
+            "situation": "The prep station temperature control chart shows a mean of 4 degrees Celsius, with upper control limit at 7 degrees and lower control limit at 1 degree. The last 8 readings are: 5.2, 5.5, 5.8, 5.1, 5.6, 5.3, 5.9, and 5.4 degrees. All 8 readings are WITHIN control limits (1 to 7 degrees), but all 8 are ABOVE the 4 degree mean. Jordan says: \"Every reading is within limits, so technically we're in control. But 8 in a row above the mean — is that just random?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Nothing — all readings are within control limits, process is fine",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Investigate immediately — Rule of Seven triggered",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Wait until a reading exceeds the upper control limit (7 degrees)",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Recalibrate the control chart limits to fit the new pattern",
+                "correct": false
+              }
+            ],
+            "explanation": "The Rule of Seven states that 7 or more consecutive measurements on one side of the mean indicate an assignable (non-random) cause, EVEN IF all readings are within control limits. Eight consecutive readings above the mean is a statistically improbable pattern that signals something has changed in the process. Jordan investigated and found a clogged refrigeration filter — fixed before temperatures reached dangerous levels.",
+            "correctFeedback": {
+              "text": "The Rule of Seven states that 7 or more consecutive measurements on one side of the mean indicate an assignable (non-random) cause, EVEN IF all readings are within control limits. Eight consecutive readings above the mean is a statistically improbable pattern that signals something has changed in the process. Jordan investigated and found a clogged refrigeration filter — fixed before temperatures reached dangerous levels.",
+              "character": "Jordan Park",
+              "characterQuote": "Rule of Seven — 8 consecutive points above the mean is not random. I checked the refrigeration unit and found a clogged filter. Caught it before we hit the upper limit. That's proactive quality management."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Within limits doesn't mean everything is fine. If I flip a coin and get heads 8 times in a row, I'd check if the coin is fair. Same principle — 7 or more on one side of the mean demands investigation.",
+              "character": "Jordan Park",
+              "characterQuote": "Within limits doesn't mean everything is fine. If I flip a coin and get heads 8 times in a row, I'd check if the coin is fair. Same principle — 7 or more on one side of the mean demands investigation."
+            },
+            "retryHint": "Is it random for 8 consecutive measurements to fall on the same side of the mean? What does PMI say about 7+ consecutive points on one side?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "How should Jordan resolve the inspection bottleneck?",
+            "points": 100,
+            "scenario_name": "Inspection Bottleneck — Statistical Sampling",
+            "situation": "Casey insists on inspecting every meal before shipment: \"These are $18 premium meals! We can't ship a single defective one.\" But the team produces 500 meals daily and the QA team can inspect only 50. Hiring enough inspectors for 100% coverage would cost more than the meals themselves. Casey asks: \"How can we guarantee quality without checking every single meal?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Hire 10x more inspectors to achieve 100% inspection",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Use Statistical Sampling — inspect 10% randomly selected meals",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Skip inspection entirely and trust the process",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Inspect only the first 50 meals produced each morning",
+                "correct": false
+              }
+            ],
+            "explanation": "Statistical Sampling inspects a randomly selected subset (50 random meals = 10%) to make statistically valid predictions about the entire batch. With proper random sampling, 50 meals provide high confidence in quality estimates. This is the industry standard and PMI-endorsed approach when 100% inspection is impractical or cost-prohibitive.",
+            "correctFeedback": {
+              "text": "Statistical Sampling inspects a randomly selected subset (50 random meals = 10%) to make statistically valid predictions about the entire batch. With proper random sampling, 50 meals provide high confidence in quality estimates. This is the industry standard and PMI-endorsed approach when 100% inspection is impractical or cost-prohibitive.",
+              "character": "Casey Torres",
+              "characterQuote": "I wanted to check every meal, but you're right — random sampling gives us statistical confidence at a fraction of the cost. As long as the sample is RANDOM, not just the first 50 off the line."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "100% inspection is rarely cost-effective. Think about how scientists test water quality — they don't test every drop. They take a REPRESENTATIVE sample. What sampling approach gives statistical validity?",
+              "character": "Jordan Park",
+              "characterQuote": "100% inspection is rarely cost-effective. Think about how scientists test water quality — they don't test every drop. They take a REPRESENTATIVE sample. What sampling approach gives statistical validity?"
+            },
+            "retryHint": "You need quality assurance for 500 meals but can only inspect 50. What approach lets you draw valid conclusions about the whole batch from a subset? The key word is \"random.\""
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "How should the four scenarios be classified?",
+            "points": 100,
+            "scenario_name": "QA vs QC Classification",
+            "situation": "Jordan asks a final question: \"All four scenarios we just analyzed — measuring portions, analyzing defect frequencies, monitoring temperature charts, and sampling meals for inspection — are those Quality Assurance or Quality Control?\" Alex considers: QA prevents defects through process improvement and training. QC detects defects through inspection and testing.",
+            "options": [
+              {
+                "id": "A",
+                "text": "All four are Quality ASSURANCE (prevention)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "All four are Quality CONTROL (detection)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Scenarios 1-2 are QA, Scenarios 3-4 are QC",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "It depends on timing — before shipping is QA, after shipping is QC",
+                "correct": false
+              }
+            ],
+            "explanation": "All four scenarios involve measuring, inspecting, or analyzing AFTER work is done — that is Quality CONTROL (detection). Quality Assurance would be training staff on proper portioning technique (prevents inconsistency), implementing process improvements (prevents defects), calibrating equipment on a schedule (prevents failures), or conducting design reviews (prevents errors). QA builds quality in; QC catches defects out.",
+            "correctFeedback": {
+              "text": "All four scenarios involve measuring, inspecting, or analyzing AFTER work is done — that is Quality CONTROL (detection). Quality Assurance would be training staff on proper portioning technique (prevents inconsistency), implementing process improvements (prevents defects), calibrating equipment on a schedule (prevents failures), or conducting design reviews (prevents errors). QA builds quality in; QC catches defects out.",
+              "character": "Jordan Park",
+              "characterQuote": "All four are QC — detection after the fact. QA would be training staff BEFORE they make meals, calibrating equipment daily, designing processes that prevent errors. Prevention is always cheaper than detection."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: are these scenarios PREVENTING defects or DETECTING them? Measuring, inspecting, sampling, and monitoring are all forms of detection — even if they happen before shipping.",
+              "character": "Jordan Park",
+              "characterQuote": "Ask yourself: are these scenarios PREVENTING defects or DETECTING them? Measuring, inspecting, sampling, and monitoring are all forms of detection — even if they happen before shipping."
+            },
+            "retryHint": "Quality Assurance = PREVENTING defects (training, process design, error-proofing). Quality Control = DETECTING defects (inspection, testing, measurement). Are these scenarios preventing or detecting?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Quality Management Fundamentals",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Quality Assurance vs Quality Control",
+            "subtitle": "",
+            "content": "The most important distinction in quality management:\n\n**Quality Assurance (QA) — Prevention**\n- Focuses on PREVENTING defects by improving processes, training, and building quality into work from the start\n- Timing: Proactive — during planning and execution\n- Examples: Process audits, training programs, design reviews, error-proofing (poka-yoke), Continuous Integration\n- Cost impact: Higher upfront investment, lower long-term costs (fewer defects to fix)\n\n**Quality Control (QC) — Detection**\n- Focuses on DETECTING defects through inspection, testing, and measurement AFTER work is completed\n- Timing: Reactive — during and after execution\n- Examples: Inspections, control charts, Pareto analysis, statistical sampling, check sheets\n- Cost impact: Lower upfront investment, higher long-term costs (must fix defects found)\n\n**Key Insight:** QA builds quality in. QC catches defects out. Both are necessary, but PMI emphasizes QA (prevention) as more cost-effective than QC (detection). Prevention costs less than rework."
+          },
+          {
+            "id": "tab2",
+            "title": "Quality Tool Selection Guide",
+            "subtitle": "",
+            "content": "Each quality tool serves a specific purpose — match the tool to the problem:\n\n| Tool | Purpose | When to Use |\n|------|---------|-------------|\n| **Pareto Chart** | Prioritize defects using 80/20 rule | Multiple defect types, need to focus resources on \"vital few\" |\n| **Control Chart** | Monitor process stability over time | Need to track if process is \"in control\" or drifting |\n| **Check Sheet** | Collect raw data (tally marks) | Need to gather frequency data about events or defects |\n| **Checklist** | Verify steps completed | Need to ensure process steps are not skipped |\n| **Statistical Sampling** | Inspect subset to predict population quality | 100% inspection too expensive or impractical |\n\n**Rule of Seven:** If 7 or more consecutive measurements fall on ONE side of the mean on a control chart, investigate for an assignable (non-random) cause — even if all readings are within control limits. This rule catches problems before they escalate.",
+            "diagram": {
+              "image": "/images/C3L4_diagram_quality_framework.webp",
+              "alt": "Quality Management Framework"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Accuracy vs Precision and Quality vs Grade",
+            "subtitle": "",
+            "content": "**Accuracy vs Precision — Different Concepts, Both Matter**\n\n| Concept | Definition | Question It Answers |\n|---------|-----------|---------------------|\n| **Accuracy** | Measurements are close to the TRUE/TARGET value | Are we hitting the target? |\n| **Precision** | Measurements are consistent WITH EACH OTHER | Are we consistent? |\n\nYou can be precise without being accurate (systematic bias — recalibrate equipment). You can be accurate without being precise (random variation — improve process consistency). Ideal: both precise AND accurate.\n\n**Quality vs Grade — Low Grade Can Be Acceptable, Low Quality Cannot**\n\n| Concept | Definition | Acceptable to Be Low? |\n|---------|-----------|----------------------|\n| **Quality** | Meeting requirements and being fit for purpose | NEVER — low quality is always a problem |\n| **Grade** | Category or rank (premium vs budget, luxury vs economy) | YES — low grade may be perfectly fine |\n\nExample: A budget meal ($8, low grade) that meets all its requirements is high quality. A premium meal ($18, high grade) with defects is low quality. Grade is a design choice; quality is a performance requirement."
+          },
+          {
+            "id": "tab4",
+            "title": "Cost of Quality",
+            "subtitle": "",
+            "content": "Quality costs fall into four categories, ordered from cheapest to most expensive:\n\n1. **Prevention Costs** (cheapest) — Training, process improvement, equipment calibration\n2. **Appraisal Costs** — Inspections, testing, quality audits\n3. **Internal Failure Costs** — Rework, scrap, retesting of defective items found before delivery\n4. **External Failure Costs** (most expensive) — Warranty claims, returns, reputation damage, lawsuits\n\n**Key Insight:** Spending more on prevention REDUCES total cost of quality. It is always cheaper to prevent a defect than to find it, and cheaper to find it than to ship it to a customer."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Software Quality Crisis",
+        "scenario": {
+          "title": "Software Quality Crisis",
+          "description": "Three weeks after launching the meal prep service, Savory & Co. releases a mobile ordering app. Within 48 hours, customers report multiple bugs: app crashes, wrong orders placed, payment failures. Taylor Kim (Tech Lead): \"We tested the app before launch — I don't understand why so many bugs are appearing now.\" Jordan suggests: \"We should have used Continuous Integration. Testing once before launch isn't enough.\"",
+          "images": [
+            {
+              "src": "/images/C3L4_comic_transfer.webp",
+              "alt": "Transfer: mobile app quality crisis"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What is Continuous Integration (CI)?",
+            "points": 100,
+            "scenario_name": "What Is Continuous Integration?",
+            "situation": "Taylor asks Alex: \"What exactly IS Continuous Integration? We tested before launch — isn't that enough?\" The app was tested once at the end of a 3-month development cycle. Developers merged their code the day before launch and ran tests overnight. Dozens of bugs were found but there wasn't time to fix them all.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Testing once before launch, but more thoroughly",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Integrating and testing code FREQUENTLY — daily or multiple times daily",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Hiring more testers to find bugs at the end",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Automated deployment without any testing",
+                "correct": false
+              }
+            ],
+            "explanation": "Continuous Integration means integrating code changes frequently (often multiple times daily) with automated testing after each integration. Bugs are caught immediately when introduced — while they involve only one developer's change and are easy to fix. This is fundamentally different from \"big bang\" end-of-project testing where bugs from weeks of changes interact and are difficult to isolate.",
+            "correctFeedback": {
+              "text": "Continuous Integration means integrating code changes frequently (often multiple times daily) with automated testing after each integration. Bugs are caught immediately when introduced — while they involve only one developer's change and are easy to fix. This is fundamentally different from \"big bang\" end-of-project testing where bugs from weeks of changes interact and are difficult to isolate.",
+              "character": "Jordan Park",
+              "characterQuote": "CI catches bugs when they're introduced — one developer, one change, easy fix. End-of-project testing finds bugs after weeks of changes interact — dozens of developers, thousands of changes, nightmare to debug."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "More testing at the end is still late detection. CI changes WHEN testing happens — continuously throughout development, not once at the finish line.",
+              "character": "Taylor Kim",
+              "characterQuote": "More testing at the end is still late detection. CI changes WHEN testing happens — continuously throughout development, not once at the finish line."
+            },
+            "retryHint": "CI is about WHEN and HOW OFTEN you test, not how much. What changes if you test after every code change instead of once at the end?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "How should Continuous Integration be classified?",
+            "points": 100,
+            "scenario_name": "CI as Quality Assurance",
+            "situation": "Jordan asks Taylor: \"Is Continuous Integration a Quality Assurance practice (prevention) or Quality Control practice (detection)?\" Taylor thinks: \"CI involves automated testing, which is a form of detection. So it must be QC.\" But Jordan disagrees.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Quality CONTROL (detection) — CI detects bugs through automated testing",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Quality ASSURANCE (prevention) — CI prevents bugs from accumulating",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Neither — CI is a development practice, not quality management",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Both equally — CI is 50% prevention and 50% detection",
+                "correct": false
+              }
+            ],
+            "explanation": "CI is Quality ASSURANCE because its primary purpose is PREVENTION. By catching bugs immediately when introduced, CI prevents them from compounding with other changes and becoming harder to fix. Yes, CI uses testing (a detection mechanism), but the GOAL is prevention — stopping small bugs from becoming big systemic problems. Fix a bug when it is introduced (1 change to review) versus finding it weeks later (thousands of interacting changes to untangle).",
+            "correctFeedback": {
+              "text": "CI is Quality ASSURANCE because its primary purpose is PREVENTION. By catching bugs immediately when introduced, CI prevents them from compounding with other changes and becoming harder to fix. Yes, CI uses testing (a detection mechanism), but the GOAL is prevention — stopping small bugs from becoming big systemic problems. Fix a bug when it is introduced (1 change to review) versus finding it weeks later (thousands of interacting changes to untangle).",
+              "character": "Taylor Kim",
+              "characterQuote": "I get it now. CI uses testing to PREVENT bug accumulation. The testing serves prevention, not just detection. Finding a bug immediately after one change is prevention — finding it after months of changes is too late."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "CI does include testing, but ask yourself: what is the PURPOSE? Is it to find bugs after the fact, or to prevent them from piling up? The goal determines the classification.",
+              "character": "Jordan Park",
+              "characterQuote": "CI does include testing, but ask yourself: what is the PURPOSE? Is it to find bugs after the fact, or to prevent them from piling up? The goal determines the classification."
+            },
+            "retryHint": "QA = prevention, QC = detection. CI catches bugs EARLY to PREVENT them from compounding. What is the primary goal — preventing accumulation or detecting after the fact?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What is the KEY difference between CI and \"test at the end\" approaches?",
+            "points": 100,
+            "scenario_name": "CI vs End Testing",
+            "situation": "Taylor is still skeptical: \"Both CI and our pre-launch testing involve finding bugs. If both involve detection, how is CI different? Why would catching a bug on Day 3 be cheaper than catching it on Day 90?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "CI uses automated tests; end testing uses manual tests",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "CI catches bugs early when easier to fix; end testing finds bugs when harder and more expensive to fix",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "CI is more expensive than end testing",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "End testing is more thorough than CI",
+                "correct": false
+              }
+            ],
+            "explanation": "The key difference is WHEN bugs are found. CI catches bugs immediately after introduction — one developer, one change, easy to isolate and fix. End-of-project testing finds bugs after weeks or months of changes from many developers interacting — requiring complex detective work to isolate which change caused which bug. A bug found on Day 3 involves reviewing 1 change. A bug found on Day 90 may involve reviewing hundreds of interacting changes.",
+            "correctFeedback": {
+              "text": "The key difference is WHEN bugs are found. CI catches bugs immediately after introduction — one developer, one change, easy to isolate and fix. End-of-project testing finds bugs after weeks or months of changes from many developers interacting — requiring complex detective work to isolate which change caused which bug. A bug found on Day 3 involves reviewing 1 change. A bug found on Day 90 may involve reviewing hundreds of interacting changes.",
+              "character": "Taylor Kim",
+              "characterQuote": "A bug found immediately after one change — I know exactly where to look. A bug found after 3 months of changes from 8 developers — I have to untangle everything. CI is prevention through early detection. I'll implement it for our next release."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Both CAN use automation. Both CAN be thorough. The fundamental difference is TIMING. When is the bug found relative to when it was introduced? That determines the cost to fix.",
+              "character": "Jordan Park",
+              "characterQuote": "Both CAN use automation. Both CAN be thorough. The fundamental difference is TIMING. When is the bug found relative to when it was introduced? That determines the cost to fix."
+            },
+            "retryHint": "If a bug is introduced on Day 3, when is it cheaper to find it — Day 3 (one change to review) or Day 90 (hundreds of changes to untangle)? That timing difference is the core of CI."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to match quality tools to specific problems and distinguish between prevention (QA) and detection (QC). Quality management is not about using ALL the tools — it is about using the RIGHT tool for the RIGHT problem.",
+        "key_takeaways": [
+          "QA Prevents, QC Detects — Quality Assurance builds quality in through training, process improvement, and error-proofing. Quality Control catches defects through inspection and testing. Prevention is more cost-effective.",
+          "Pareto Prioritizes — The Pareto Chart applies the 80/20 rule to focus limited resources on the \"vital few\" causes that create most problems.",
+          "Rule of Seven Warns — 7+ consecutive points on one side of the mean on a control chart indicate an assignable cause. Investigate immediately, even if within control limits.",
+          "Statistical Sampling is Valid — Randomly selected subsets provide statistically valid quality assessments at a fraction of 100% inspection cost.",
+          "Precision Does Not Equal Accuracy — Precision is consistency with each other. Accuracy is closeness to the target. Systematic bias means high precision but low accuracy.",
+          "CI is Quality Assurance — Continuous Integration prevents bugs from accumulating by catching them early when they are easier and cheaper to fix."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think quality management meant inspecting everything at the end. Now I know each problem needs a specific tool — Pareto for prioritization, Control Charts for stability monitoring, Statistical Sampling for cost-effective inspection. And the biggest lesson: prevention beats detection every time. Investing in QA upfront costs less than fixing defects downstream."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L5",
+          "title": "Quality Control & Continuous Improvement",
+          "description": "You've mastered quality planning and assurance — now apply QC tools and improvement cycles like Plan-Do-Check-Act to continuously raise the quality bar."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Which quality tool did the PM most likely use to reach this conclusion?",
+            "points": 50,
+            "scenario_name": "Pareto Application",
+            "situation": "A project manager reviews quality data and finds that 3 defect types out of 20 are responsible for 78% of customer complaints. The PM decides to focus improvement efforts on these 3 types first, addressing the remaining 17 types only after the top 3 are resolved.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Control Chart",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Pareto Chart",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Check Sheet",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Scatter Diagram",
+                "correct": false
+              }
+            ],
+            "explanation": "The Pareto Chart applies the 80/20 rule (Pareto Principle), ranking defects by frequency to identify the \"vital few\" (3 types causing 78% of complaints) versus the \"trivial many\" (17 types causing 22%). This allows focused resource allocation for maximum impact.",
+            "correctFeedback": {
+              "text": "The Pareto Chart applies the 80/20 rule (Pareto Principle), ranking defects by frequency to identify the \"vital few\" (3 types causing 78% of complaints) versus the \"trivial many\" (17 types causing 22%). This allows focused resource allocation for maximum impact.",
+              "character": "Jordan Park",
+              "characterQuote": "Pareto Chart — rank by frequency, find the vital few. Three types out of 20 cause nearly 80% of complaints. Fix those first for maximum quality improvement."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The PM needed to PRIORITIZE defects by impact. Control Charts monitor trends, Check Sheets collect data, Scatter Diagrams show correlations. Which tool RANKS and PRIORITIZES?",
+              "character": "Jordan Park",
+              "characterQuote": "The PM needed to PRIORITIZE defects by impact. Control Charts monitor trends, Check Sheets collect data, Scatter Diagrams show correlations. Which tool RANKS and PRIORITIZES?"
+            },
+            "retryHint": "The PM ranked defect types by frequency and found that a small number caused most complaints. Which tool applies the 80/20 principle to prioritize problems?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the project manager do?",
+            "points": 50,
+            "scenario_name": "Rule of Seven",
+            "situation": "A project manager is reviewing a control chart for a manufacturing process. The chart shows 8 consecutive data points above the mean. All 8 points are within the upper and lower control limits. The manufacturing supervisor says: \"Everything looks fine — we're within limits.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Take no action since all points are within control limits",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Investigate immediately for an assignable cause",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Widen the control limits to accommodate the trend",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Wait until a point exceeds the upper control limit",
+                "correct": false
+              }
+            ],
+            "explanation": "The Rule of Seven states that 7 or more consecutive points on one side of the mean indicate a non-random assignable cause requiring investigation — even when all points are within control limits. This pattern suggests a systematic process shift that must be investigated before it worsens.",
+            "correctFeedback": {
+              "text": "The Rule of Seven states that 7 or more consecutive points on one side of the mean indicate a non-random assignable cause requiring investigation — even when all points are within control limits. This pattern suggests a systematic process shift that must be investigated before it worsens.",
+              "character": "Jordan Park",
+              "characterQuote": "Rule of Seven — 8 consecutive points above the mean is not random variation. Something changed in the process. Investigate now, before it breaches limits."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Within limits does not mean 'in control.' The Rule of Seven catches problems BEFORE they escalate. How many consecutive points on one side of the mean triggers investigation?",
+              "character": "Jordan Park",
+              "characterQuote": "Within limits does not mean 'in control.' The Rule of Seven catches problems BEFORE they escalate. How many consecutive points on one side of the mean triggers investigation?"
+            },
+            "retryHint": "Is it statistically likely for 8 consecutive measurements to fall on the same side of the mean by pure chance? What does PMI call this pattern?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "This approach is called:",
+            "points": 50,
+            "scenario_name": "Statistical Sampling",
+            "situation": "A project team is inspecting deliverables for a large project. Due to time and budget constraints, they cannot inspect 100% of the 2,000 items produced. They decide to randomly select 200 items for detailed inspection and use the results to draw conclusions about the entire batch.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Quality audit",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Statistical sampling",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Benchmarking",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Design of experiments",
+                "correct": false
+              }
+            ],
+            "explanation": "Statistical sampling inspects a randomly selected subset to make statistically valid inferences about the entire population. Random selection ensures the sample represents the whole batch. This is the standard approach when 100% inspection is impractical due to time, cost, or resource constraints.",
+            "correctFeedback": {
+              "text": "Statistical sampling inspects a randomly selected subset to make statistically valid inferences about the entire population. Random selection ensures the sample represents the whole batch. This is the standard approach when 100% inspection is impractical due to time, cost, or resource constraints.",
+              "character": "Jordan Park",
+              "characterQuote": "Statistical sampling — inspect a representative random subset to predict overall quality. It's how the entire manufacturing industry handles quality inspection at scale."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Quality audits review processes, not products. Benchmarking compares against standards. Design of experiments tests variables. What technique inspects a SUBSET to infer POPULATION quality?",
+              "character": "Jordan Park",
+              "characterQuote": "Quality audits review processes, not products. Benchmarking compares against standards. Design of experiments tests variables. What technique inspects a SUBSET to infer POPULATION quality?"
+            },
+            "retryHint": "The team is inspecting a randomly selected SUBSET of items to draw conclusions about ALL items. What is the quality term for using a representative sample to infer population quality?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "The measurements are BEST described as:",
+            "points": 50,
+            "scenario_name": "Precision vs Accuracy",
+            "situation": "A project delivers a product whose measurements consistently fall within 0.2mm of each other. However, the target specification is 5.0mm and the actual average measurement is 5.8mm — consistently 0.8mm above the target.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accurate and precise",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Accurate but not precise",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Precise but not accurate",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Neither accurate nor precise",
+                "correct": false
+              }
+            ],
+            "explanation": "The measurements are PRECISE — they are consistent with each other (within 0.2mm variation). They are NOT ACCURATE — the average of 5.8mm is 0.8mm above the 5.0mm target. This pattern indicates a systematic bias (the equipment or process consistently overshoots). The fix is recalibration to shift all measurements down by 0.8mm.",
+            "correctFeedback": {
+              "text": "The measurements are PRECISE — they are consistent with each other (within 0.2mm variation). They are NOT ACCURATE — the average of 5.8mm is 0.8mm above the 5.0mm target. This pattern indicates a systematic bias (the equipment or process consistently overshoots). The fix is recalibration to shift all measurements down by 0.8mm.",
+              "character": "Jordan Park",
+              "characterQuote": "Precise but not accurate — classic systematic bias. The measurements are tight with each other but consistently off-target. Recalibrate the equipment and you'll fix it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Evaluate precision and accuracy separately. Are the measurements CONSISTENT with each other (precision)? Are they CLOSE to the 5.0mm target (accuracy)?",
+              "character": "Jordan Park",
+              "characterQuote": "Evaluate precision and accuracy separately. Are the measurements CONSISTENT with each other (precision)? Are they CLOSE to the 5.0mm target (accuracy)?"
+            },
+            "retryHint": "Precision = consistency between measurements (0.2mm variation = very consistent). Accuracy = closeness to target (5.8mm vs 5.0mm target = 0.8mm off). Evaluate each independently."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,698 @@
+{
+  "lessonId": "C1L4",
+  "lessonTitle": "Managing Project Knowledge",
+  "courseId": "C1",
+  "courseName": "Integration Management",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish between explicit knowledge (documented, codified) and tacit knowledge (experience-based, hard to articulate)",
+    "Apply appropriate knowledge transfer techniques — mentoring, shadowing, communities of practice — based on knowledge type",
+    "Recognize that lessons learned must be captured continuously throughout the project, not only at closure",
+    "Understand the PM's role as a knowledge facilitator who builds a sharing culture and removes barriers",
+    "Prevent organizational knowledge loss when key team members depart"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "marco_rossi",
+    "liam_chen",
+    "carlos_mendez",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "15 Years of Mastery, 2 Months' Notice: Can You Save What Can't Be Written Down?",
+        "intro": "You're **Alex Mitchell**, managing the Riverside Plaza renovation at Savory & Co. Marco Rossi — head chef for 15 years, master of the wood-fired pizza that built the restaurant's reputation — just announced he's leaving for a Michelin restaurant. Carlos grabs a blank recipe card: \"Quick, write everything down!\" But Marco shakes his head: \"I've tried before. The dough 'feels right.' You can't document that.\"",
+        "failure_cards": [
+          {
+            "id": "the_knowledge_that_walks_away",
+            "icon": "📋",
+            "title": "The Knowledge That Walks Away",
+            "summary": "When an expert leaves, undocumented knowledge vanishes overnight",
+            "image": "/images/C1L4_comic_lost_knowledge.webp",
+            "details": "Marco has spent 15 years perfecting wood-fired pizza at Savory & Co. — the hydration feel, the fermentation timing, the sound of the oven at the right temperature. He announces he's accepted a position at a Michelin-starred restaurant and leaves in 2 months. Carlos panics and shoves a blank recipe card and pen at Marco: \"Write down EVERYTHING — every measurement, every step!\" But Marco's mastery lives in his hands, not on paper. The standard recipe (flour 1000g, water 650g, salt 20g, yeast 2g) captures maybe 20% of what makes his pizza exceptional. The other 80% — knowing when the dough \"feels right,\" reading the oven by its sound — cannot be written in a manual."
+          },
+          {
+            "id": "the_tacit_knowledge_gap",
+            "icon": "⚠️",
+            "title": "The Tacit Knowledge Gap",
+            "summary": "Documentation captures the recipe but misses the mastery",
+            "image": "/images/C1L4_comic_tacit_gap.webp",
+            "details": "Carlos holds up the completed recipe card triumphantly: \"There! Knowledge captured!\" But Dr. Foster draws two columns on the whiteboard — EXPLICIT vs TACIT. Explicit knowledge is the documented recipe: exact measurements, oven temperatures, cooking times. Tacit knowledge is everything else: Marco knowing by touch when hydration is right (\"slightly sticky, not wet\"), hearing when the fire is at the perfect temperature, sensing when fermentation has peaked. Carlos stares at the recipe card and then at Marco's flour-dusted hands. \"So this card is 20% of Marco's knowledge. The other 80% is... in his hands?\" Dr. Foster nods: \"Explicit can be written. Tacit must be experienced.\""
+          },
+          {
+            "id": "lessons_nobody_recorded",
+            "icon": "💡",
+            "title": "Lessons Nobody Recorded",
+            "summary": "A $3,000 mistake that was completely preventable — if anyone had captured lessons learned",
+            "image": "/images/C1L4_comic_lessons_ignored.webp",
+            "details": "Meanwhile, Maya discovers the oven supplier (FireOvens Inc.) delivered a defective thermostat, costing $3,000 and a 4-day delay. She says: \"If someone had documented lessons from the Downtown project 2 years ago, we'd know FireOvens has a history of defective parts.\" Alex searches the archives — no lessons learned document exists. The PM from that project left the company, and the knowledge left with them. Two failures, one root cause: the organization has no system for capturing and sharing knowledge. Alex realizes: managing project knowledge isn't a nice-to-have — it's how you stop repeating expensive mistakes and prevent expertise from walking out the door."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "I thought writing down the recipe was enough. But Marco's real expertise — the feel, the timing, the instinct — that can't fit on a recipe card. How do we capture what can't be written?"
+        },
+        "learning_hook": "**Documentation captures what's written. But the most valuable knowledge — expert judgment, intuition, pattern recognition — lives in people's heads.** The PM's job is to transfer BOTH types before it's too late, and to capture lessons CONTINUOUSLY so the organization never repeats the same expensive mistakes."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "save_marcos_expertise_before_he_leaves",
+        "title": "Save Marco's Expertise Before He Leaves",
+        "description": "Dr. Foster guides you through knowledge types, transfer techniques, and continuous lessons learned. \"Let's make sure Marco's 15 years of mastery don't walk out the door — and that we never lose another lesson learned.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each knowledge example into the correct category: EXPLICIT or TACIT.",
+            "points": 100,
+            "scenario_name": "Classify the Knowledge",
+            "situation": "Dr. Foster explains: \"Explicit knowledge is documented and codified — you can write it in a manual and someone can follow it exactly. Tacit knowledge is personal, experience-based know-how — hard to articulate, learned through practice and observation.\" She presents eight examples from the Riverside Plaza project and asks you to sort them.",
+            "chips": [
+              {
+                "id": "standard_pizza_dough_recipe_flour_1000g_water_650g_salt_20g_yeast_2g",
+                "label": "Standard pizza dough recipe (flour 1000g, water 650g, salt 20g, yeast 2g)",
+                "correctZone": "explicit"
+              },
+              {
+                "id": "i_can_feel_when_the_dough_hydration_is_right_slightly_sticky_but_not_wet",
+                "label": "\"I can feel when the dough hydration is right — slightly sticky but not wet\"",
+                "correctZone": "tacit"
+              },
+              {
+                "id": "project_schedule_with_task_durations_and_dependencies",
+                "label": "Project schedule with task durations and dependencies",
+                "correctZone": "explicit"
+              },
+              {
+                "id": "i_know_when_stakeholders_are_resistant_their_body_language_changes",
+                "label": "\"I know when stakeholders are resistant — their body language changes\"",
+                "correctZone": "tacit"
+              },
+              {
+                "id": "risk_register_with_probability_impact_and_response_strategies",
+                "label": "Risk register with probability, impact, and response strategies",
+                "correctZone": "explicit"
+              },
+              {
+                "id": "after_15_years_i_can_hear_when_the_oven_temperature_is_right_by_the_fire_sound",
+                "label": "\"After 15 years, I can hear when the oven temperature is right by the fire sound\"",
+                "correctZone": "tacit"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "explicit",
+                "label": "EXPLICIT",
+                "detail": "Documented measurements that anyone can read and follow exactly"
+              },
+              {
+                "id": "tacit",
+                "label": "TACIT",
+                "detail": "Sensory judgment developed through years of practice; cannot be precisely written"
+              }
+            ],
+            "explanation": "Explicit knowledge can be fully captured in documents — recipes, schedules, risk registers. Tacit knowledge involves sensory judgment, pattern recognition, and expert intuition that can only be developed through hands-on experience. The critical insight: most organizations over-invest in documenting explicit knowledge while ignoring the far more valuable tacit expertise.",
+            "correctFeedback": {
+              "text": "Explicit knowledge can be fully captured in documents — recipes, schedules, risk registers. Tacit knowledge involves sensory judgment, pattern recognition, and expert intuition that can only be developed through hands-on experience. The critical insight: most organizations over-invest in documenting explicit knowledge while ignoring the far more valuable tacit expertise.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect classification. Notice the pattern: if it contains exact numbers or can be written in a manual, it's explicit. If it involves 'feels right,' 'sounds right,' or intuition, it's tacit. Marco's recipe is explicit — his mastery is tacit."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: could someone follow this EXACTLY from a written description alone? If yes, it's explicit. If it requires practice, observation, or 'feel' to truly understand, it's tacit.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: could someone follow this EXACTLY from a written description alone? If yes, it's explicit. If it requires practice, observation, or 'feel' to truly understand, it's tacit."
+            },
+            "retryHint": "Explicit = exact numbers, documented procedures, written plans that anyone can follow. Tacit = \"feels right,\" \"sounds right,\" expert intuition, pattern recognition from experience."
+          },
+          {
+            "q_id": "q2",
+            "type": "multi_select",
+            "question": "Select the 3 MOST effective techniques for transferring Marco's TACIT knowledge to Liam. (Select exactly 3)",
+            "points": 150,
+            "scenario_name": "Select the Right Transfer Techniques",
+            "situation": "Marco's pizza mastery is roughly 80% tacit knowledge. Alex has 8 weeks before Marco leaves. Carlos suggests: \"Just have him write a detailed step-by-step guide.\" Dr. Foster shakes her head: \"That captures the 20%. We need techniques that transfer the other 80%.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Have Marco write a comprehensive step-by-step pizza manual",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Arrange Liam to shadow Marco for 6 weeks, making dough alongside him daily",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Record video of Marco demonstrating techniques while explaining his reasoning",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Establish a \"Pizza Mastery\" community of practice for ongoing technique sharing",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Send Liam to an external pizza certification course",
+                "correct": false
+              },
+              {
+                "id": "F",
+                "text": "Ask Marco to email his best tips and recipes to the entire kitchen staff",
+                "correct": false
+              }
+            ],
+            "explanation": "Tacit knowledge transfers through observation, practice, and social interaction — not documentation. Shadowing (B) lets Liam develop the same \"feel\" through daily hands-on practice with Marco. Video demonstrations (C) capture the expert's reasoning and physical technique in a way text cannot. Communities of practice (D) create an ongoing culture of knowledge sharing that outlasts any single expert's tenure.",
+            "correctFeedback": {
+              "text": "Tacit knowledge transfers through observation, practice, and social interaction — not documentation. Shadowing (B) lets Liam develop the same \"feel\" through daily hands-on practice with Marco. Video demonstrations (C) capture the expert's reasoning and physical technique in a way text cannot. Communities of practice (D) create an ongoing culture of knowledge sharing that outlasts any single expert's tenure.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent choices. Shadowing transfers the 'feel' through practice. Video captures the 'why' behind the technique. Communities of practice sustain knowledge sharing long after Marco leaves. Together, they address the 80% that a manual never could."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: does this technique involve DOING and OBSERVING, or just READING? Tacit knowledge transfers through practice and interaction, not through written documents or external courses.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: does this technique involve DOING and OBSERVING, or just READING? Tacit knowledge transfers through practice and interaction, not through written documents or external courses."
+            },
+            "retryHint": "Tacit knowledge = \"feels right,\" \"sounds right,\" expert intuition. What techniques involve learning by DOING alongside the expert, WATCHING the expert demonstrate, or creating ongoing SHARING cultures?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What should Alex do NOW to prevent this knowledge loss from happening again?",
+            "points": 100,
+            "scenario_name": "When to Capture Lessons Learned",
+            "situation": "Maya discovers FireOvens Inc. delivered a defective thermostat — $3,000 cost, 4-day delay. She says: \"The Downtown project had the SAME problem 2 years ago. If someone had documented that lesson, we'd have chosen a different supplier.\" Alex searches the archives: no lessons learned document from the Downtown project exists. The PM who ran that project left the company — and the knowledge left with them.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Add \"capture lessons learned\" to the project closure checklist for the end of this project",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Immediately document this lesson, update the approved vendor list, and share across all active projects",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Blame the previous PM for failing to document the Downtown project's lessons",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Wait until the Riverside Plaza project is finished, then compile all lessons at once",
+                "correct": false
+              }
+            ],
+            "explanation": "Knowledge management is a CONTINUOUS executing process, not an end-of-project activity. When you discover a lesson, capture it IMMEDIATELY — details are fresh, and other active projects can benefit right away. Updating the approved vendor list converts a tacit lesson (\"I know FireOvens is unreliable\") into an organizational process asset that protects future projects. Sharing across active projects prevents concurrent teams from making the same $3,000 mistake.",
+            "correctFeedback": {
+              "text": "Knowledge management is a CONTINUOUS executing process, not an end-of-project activity. When you discover a lesson, capture it IMMEDIATELY — details are fresh, and other active projects can benefit right away. Updating the approved vendor list converts a tacit lesson (\"I know FireOvens is unreliable\") into an organizational process asset that protects future projects. Sharing across active projects prevents concurrent teams from making the same $3,000 mistake.",
+              "character": "Carlos Mendez",
+              "characterQuote": "If the Downtown PM had done this 2 years ago, we'd have saved $3,000 and 4 days. We're not making that mistake again — capture it now, share it now, update the vendor list now."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The lesson exists NOW. The details are fresh NOW. Other projects might order from FireOvens TOMORROW. Why would you wait? Manage Project Knowledge is an Executing process — it happens throughout the project, not just at the end.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The lesson exists NOW. The details are fresh NOW. Other projects might order from FireOvens TOMORROW. Why would you wait? Manage Project Knowledge is an Executing process — it happens throughout the project, not just at the end."
+            },
+            "retryHint": "Manage Project Knowledge is an EXECUTING process that happens THROUGHOUT the project. When you discover something important, what's the most valuable thing you can do with it RIGHT NOW?"
+          },
+          {
+            "q_id": "q4",
+            "type": "multi_select",
+            "question": "Select the 3 actions that BEST describe the PM's role as a knowledge facilitator. (Select exactly 3)",
+            "points": 150,
+            "scenario_name": "The PM as Knowledge Facilitator",
+            "situation": "After the FireOvens incident, Alex wants to build a knowledge-sharing CULTURE at Savory & Co. — not just react to individual incidents. Dr. Foster advises: \"The PM doesn't just capture knowledge. The PM creates the CONDITIONS for knowledge to flow freely across the team and organization.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Personally document every lesson learned without involving the team",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Establish regular knowledge-sharing routines — weekly retrospectives and monthly community sessions",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Remove barriers to sharing by providing simple templates and short 15-minute sessions instead of 2-hour meetings",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Recognize and thank knowledge contributors to reinforce sharing behavior",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Restrict knowledge access to senior team members only",
+                "correct": false
+              },
+              {
+                "id": "F",
+                "text": "Delegate all knowledge management to a dedicated documentation specialist",
+                "correct": false
+              }
+            ],
+            "explanation": "The PM as knowledge facilitator creates an environment where sharing happens naturally. Regular routines (B) make knowledge capture habitual, not exceptional. Removing barriers (C) ensures sharing is EASY — simple templates and short sessions lower the effort threshold. Recognition (D) reinforces the behavior by showing that sharing is valued. Together, these build a self-sustaining knowledge culture.",
+            "correctFeedback": {
+              "text": "The PM as knowledge facilitator creates an environment where sharing happens naturally. Regular routines (B) make knowledge capture habitual, not exceptional. Removing barriers (C) ensures sharing is EASY — simple templates and short sessions lower the effort threshold. Recognition (D) reinforces the behavior by showing that sharing is valued. Together, these build a self-sustaining knowledge culture.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You understand the facilitator role perfectly. The PM doesn't hoard knowledge or outsource it — you create routines, remove friction, and reward sharing. That's how knowledge flows."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The PM's role is to make knowledge sharing EASY and REWARDING for everyone. Which actions create conditions for the whole team to share — versus actions that centralize or restrict knowledge flow?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The PM's role is to make knowledge sharing EASY and REWARDING for everyone. Which actions create conditions for the whole team to share — versus actions that centralize or restrict knowledge flow?"
+            },
+            "retryHint": "A facilitator creates CONDITIONS for others to succeed. Which actions establish routines, lower barriers, and motivate the team to share — rather than centralizing, restricting, or outsourcing the work?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Knowledge Management Toolkit",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Explicit vs Tacit Knowledge",
+            "subtitle": "",
+            "content": "Every project generates two fundamentally different types of knowledge:\n\n**Explicit Knowledge** — Documented, codified, easily shared\n- Can be written in manuals, templates, databases, and reports\n- Transfer method: documentation, file sharing, training materials\n- Examples: recipes with exact measurements, project schedules, risk registers, WBS documents, standard operating procedures\n- Strength: scalable (one manual serves 1,000 readers), consistent, searchable\n\n**Tacit Knowledge** — Personal, experience-based, hard to articulate\n- Lives in people's heads — developed through years of practice and observation\n- Transfer method: mentoring, shadowing, communities of practice, storytelling, pair work\n- Examples: \"the dough feels right,\" reading stakeholder body language, knowing which vendors deliver under pressure, sensing when a project is heading off track\n- Strength: competitive advantage (hard for competitors to copy), represents deep expertise\n\n**Why This Matters:**\n- Studies suggest tacit knowledge represents 70-80% of organizational knowledge\n- When experts leave, tacit knowledge leaves with them — unless deliberately transferred\n- Documentation alone captures only the explicit portion (the 20%)\n- Effective knowledge management addresses BOTH types with appropriate methods",
+            "diagram": {
+              "image": "/images/C1L4_diagram_knowledge_types.webp",
+              "alt": "Two types of project knowledge"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Knowledge Transfer Techniques",
+            "subtitle": "",
+            "content": "**For Explicit Knowledge:**\n- Written documentation (manuals, SOPs, templates)\n- Knowledge databases and repositories\n- Training materials and recorded presentations\n- Checklists and standard procedures\n\n**For Tacit Knowledge:**\n- **Mentoring:** Experienced person guides a less experienced learner over time\n- **Shadowing:** Learning by observing an expert perform their work daily\n- **Communities of Practice:** Groups who share expertise informally on an ongoing basis\n- **Pair Work:** Two people working together so tacit skills transfer through collaboration\n- **Video Demonstrations:** Recording experts explaining their reasoning WHILE demonstrating\n- **Storytelling:** Sharing experiences, failures, and insights through narrative\n\n**Marco's 6-Week Transfer Plan (Example):**\n\n| Weeks | Activity | Knowledge Type |\n|-------|----------|---------------|\n| 1-2 | Liam shadows Marco, observes dough technique | Tacit (feel, timing, sound) |\n| 3-4 | Liam makes dough WITH Marco, receives real-time feedback | Tacit (practice with expert) |\n| 5-6 | Liam works solo, Marco observes and coaches | Tacit (independent mastery) |\n| Ongoing | Video library of Marco's techniques with \"why\" explanations | Tacit captured visually |\n| Monthly | \"Pizza Mastery\" community sessions for all kitchen staff | Tacit through culture |\n\nResult: approximately 70% of Marco's tacit knowledge transferred (versus 20% from documentation alone)."
+          },
+          {
+            "id": "tab3",
+            "title": "Continuous Lessons Learned",
+            "subtitle": "",
+            "content": "**Common Misconception:** \"Lessons learned happen at project closure.\"\n\n**PMI Reality:** Manage Project Knowledge is an **Executing** process that happens **throughout the entire project lifecycle** — not a one-time closure activity.\n\n| Project Phase | Knowledge Activities |\n|---------------|---------------------|\n| **Planning** | Review lessons from past projects, consult expert judgment, identify knowledge gaps |\n| **Executing** | Capture lessons as events occur, conduct mentoring and shadowing, facilitate communities of practice |\n| **Monitoring** | Hold regular retrospectives, update organizational process assets, share insights across projects |\n| **Closing** | Final lessons compilation, knowledge transfer to operations, update organizational knowledge base |\n\n**Why Continuous Capture Matters:**\n- Details fade quickly — capture within 48 hours of the event\n- Other active projects can benefit IMMEDIATELY from your lessons\n- If you leave mid-project, the knowledge is already preserved\n- Waiting until closure means months of valuable insights are lost or distorted by hindsight bias"
+          },
+          {
+            "id": "tab4",
+            "title": "PM as Knowledge Facilitator",
+            "subtitle": "",
+            "content": "The PM's role is NOT to personally document everything. The PM creates the **conditions** for knowledge to flow:\n\n**Create Routines:** Weekly retrospectives (15 minutes, not 2 hours), monthly community of practice sessions, post-incident knowledge capture within 48 hours\n\n**Remove Barriers:** Simple one-page templates (not 10-page forms), short sessions (15 minutes works better than mandatory 2-hour meetings), accessible repositories (not buried in email chains)\n\n**Recognize Contributors:** Thank people who share lessons, highlight when shared knowledge prevents a mistake, celebrate the team's collective wisdom\n\n**Build Culture:** Make sharing feel safe (no blame for honest mistakes), reward curiosity and learning, integrate knowledge capture into existing workflows rather than adding extra meetings"
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:** Manage Project Knowledge aligns with the **Delivery Performance Domain** and the principle of stewardship — the PM is a steward of organizational knowledge.\n\n**Key PMBOK Concepts:**\n- Organizational Process Assets (OPAs): lessons learned, templates, historical data\n- Enterprise Environmental Factors (EEFs): organizational culture, knowledge management systems\n- Expert Judgment: a form of tacit knowledge applied to project decisions\n\n**PMP Exam Tips:**\n- Manage Project Knowledge is in the **Executing** process group — NOT Closing\n- Lessons learned should be captured **throughout** the project — the exam penalizes \"only at closure\" answers\n- Tacit knowledge requires experiential transfer methods — documentation alone is always insufficient\n- The PM facilitates knowledge sharing; the PM does not do it all alone"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "The Senior Developer's Departure",
+        "scenario": {
+          "title": "The Senior Developer's Departure",
+          "description": "You're now managing a software development project at a different company. Your senior developer — 10 years of experience, architect of the legacy codebase (50,000 lines, minimal documentation) — announces she's leaving in 4 weeks. She's the only person who understands WHY the system was built this way: the architectural trade-offs, the performance workarounds, the vendor quirks. The team must maintain and enhance this code after she leaves.",
+          "images": [
+            {
+              "src": "/images/C1L4_comic_transfer.webp",
+              "alt": "Transfer scenario — software knowledge crisis"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "drag_drop",
+            "question": "Drag each knowledge example into the correct category: EXPLICIT or TACIT.",
+            "points": 100,
+            "scenario_name": "Identify Knowledge at Risk",
+            "situation": "Before planning the transfer, you need to assess what types of knowledge the senior developer holds. Some can be documented quickly; others require hands-on transfer methods.",
+            "chips": [
+              {
+                "id": "code_comments_and_inline_documentation",
+                "label": "Code comments and inline documentation",
+                "correctZone": "explicit"
+              },
+              {
+                "id": "the_reasoning_behind_key_architectural_decisions",
+                "label": "The reasoning behind key architectural decisions",
+                "correctZone": "tacit"
+              },
+              {
+                "id": "api_endpoint_documentation",
+                "label": "API endpoint documentation",
+                "correctZone": "explicit"
+              },
+              {
+                "id": "this_module_feels_like_it_will_become_a_performance_bottleneck_at_scale",
+                "label": "\"This module feels like it will become a performance bottleneck at scale\"",
+                "correctZone": "tacit"
+              },
+              {
+                "id": "system_architecture_diagrams",
+                "label": "System architecture diagrams",
+                "correctZone": "explicit"
+              },
+              {
+                "id": "this_design_pattern_works_better_than_alternatives_for_our_specific_scale_and_use_case",
+                "label": "\"This design pattern works better than alternatives for our specific scale and use case\"",
+                "correctZone": "tacit"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "explicit",
+                "label": "EXPLICIT",
+                "detail": "Already written in the codebase; anyone can read it"
+              },
+              {
+                "id": "tacit",
+                "label": "TACIT",
+                "detail": "Experience-based judgment about trade-offs; not documented anywhere"
+              }
+            ],
+            "explanation": "The senior developer holds both explicit knowledge (existing documentation, diagrams, code comments) and tacit knowledge (architectural reasoning, performance intuitions, contextual design judgment). The explicit knowledge is already accessible — the tacit knowledge is what's truly at risk of being lost.",
+            "correctFeedback": {
+              "text": "The senior developer holds both explicit knowledge (existing documentation, diagrams, code comments) and tacit knowledge (architectural reasoning, performance intuitions, contextual design judgment). The explicit knowledge is already accessible — the tacit knowledge is what's truly at risk of being lost.",
+              "character": "Alex Mitchell",
+              "characterQuote": "The code comments and docs are already there — anyone can read them. But the 'WHY' behind architectural decisions and the performance intuitions? That's the critical tacit knowledge we need to transfer in 4 weeks."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If it's already written down and someone can read it without the developer being present, it's explicit. If it requires her explanation, experience, or judgment to understand, it's tacit.",
+              "character": "Alex Mitchell",
+              "characterQuote": "If it's already written down and someone can read it without the developer being present, it's explicit. If it requires her explanation, experience, or judgment to understand, it's tacit."
+            },
+            "retryHint": "Can someone understand this fully by READING it without the developer present? If yes = explicit. Does it require the developer's explanation, experience, or \"feel\" to grasp? If yes = tacit."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "multi_select",
+            "question": "Select the 4 MOST effective knowledge transfer techniques for this situation. (Select exactly 4)",
+            "points": 200,
+            "scenario_name": "Build the 4-Week Transfer Plan",
+            "situation": "You have 4 weeks and need to maximize knowledge transfer. The team has 3 mid-level developers who will take over the codebase. You need techniques that address BOTH explicit and tacit knowledge — and you need to start immediately.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Daily pair programming sessions where the senior dev works alongside team members on real tasks",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Recorded video walkthroughs where she explains architectural decisions and design reasoning",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Architecture decision log documenting the rationale behind every major design choice",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Weekly code review sessions where she explains patterns, trade-offs, and hidden assumptions",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Ask her to email a summary of important things to know about the codebase",
+                "correct": false
+              },
+              {
+                "id": "F",
+                "text": "Tell the team to read the existing code themselves after she leaves",
+                "correct": false
+              }
+            ],
+            "explanation": "Effective transfer uses a MIX of explicit and tacit methods: pair programming (A) transfers tacit coding instincts through daily collaboration. Video walkthroughs (B) capture her reasoning in a reusable format. Decision logs (C) convert tacit architectural reasoning into documented explicit knowledge. Code reviews (D) combine tacit explanation with practical learning. Together, these cover both knowledge types and provide multiple access channels.",
+            "correctFeedback": {
+              "text": "Effective transfer uses a MIX of explicit and tacit methods: pair programming (A) transfers tacit coding instincts through daily collaboration. Video walkthroughs (B) capture her reasoning in a reusable format. Decision logs (C) convert tacit architectural reasoning into documented explicit knowledge. Code reviews (D) combine tacit explanation with practical learning. Together, these cover both knowledge types and provide multiple access channels.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Pair programming for the daily tacit transfer. Video walkthroughs to capture reasoning permanently. Decision logs to document the 'why.' Code reviews for ongoing learning. This covers both explicit and tacit — and we start tomorrow."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "You need techniques for BOTH knowledge types. Documentation alone misses the tacit expertise. Self-study alone misses the reasoning. Which options combine hands-on practice WITH documented capture?",
+              "character": "Alex Mitchell",
+              "characterQuote": "You need techniques for BOTH knowledge types. Documentation alone misses the tacit expertise. Self-study alone misses the reasoning. Which options combine hands-on practice WITH documented capture?"
+            },
+            "retryHint": "You need both explicit methods (documentation, decision logs) AND tacit methods (hands-on collaboration, expert demonstration). Which 4 options combine both approaches and start IMMEDIATELY?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to manage project knowledge by distinguishing **explicit** from **tacit**, applying the right **transfer techniques** for each type, capturing lessons **continuously** throughout the project, and acting as a **knowledge facilitator** who builds a sharing culture.",
+        "key_takeaways": [
+          "Two Types of Knowledge: Explicit = documented (recipes, schedules, risk registers). Tacit = experience-based (\"feels right,\" expert judgment, pattern recognition). Both are essential; tacit represents ~80% of expert knowledge.",
+          "Match Techniques to Type: Explicit transfers via documentation and databases. Tacit transfers via mentoring, shadowing, communities of practice, and pair work. A manual alone captures only the 20%.",
+          "Capture Continuously: Lessons learned happen THROUGHOUT the project (Executing process), not just at closure. Capture within 48 hours while details are fresh. Share immediately across active projects.",
+          "PM Facilitates Culture: Create routines (weekly retros), remove barriers (simple templates, short sessions), recognize contributors. The PM builds the CONDITIONS for sharing — not a one-person documentation machine.",
+          "Prevent Knowledge Loss: When experts leave, start transfer IMMEDIATELY. Use a structured plan combining explicit documentation and tacit hands-on methods. Every day you wait is a day of knowledge transfer lost."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L5",
+          "title": "Monitor & Control Project Work",
+          "description": "You've executed the plan and collected work performance data. Now ANALYZE it: Are we on schedule? On budget? What variances exist? What corrective actions are needed?"
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "This is an example of which type of knowledge?",
+            "points": 50,
+            "scenario_name": "Tacit Knowledge Identification",
+            "situation": "During a project retrospective, a senior team member says: \"I know from experience that this vendor always delivers late when we order after August. It's not in any report — I just know from working with them for 5 years.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Explicit knowledge",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Tacit knowledge",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Work performance data",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Organizational process assets",
+                "correct": false
+              }
+            ],
+            "explanation": "This vendor insight is personal, experience-based knowledge that exists only in the team member's memory. It is not documented in any report, database, or organizational repository. It was accumulated through 5 years of direct experience — the hallmark of tacit knowledge. Importantly, it SHOULD be captured and converted into an organizational process asset, but it hasn't been yet.",
+            "correctFeedback": {
+              "text": "This vendor insight is personal, experience-based knowledge that exists only in the team member's memory. It is not documented in any report, database, or organizational repository. It was accumulated through 5 years of direct experience — the hallmark of tacit knowledge. Importantly, it SHOULD be captured and converted into an organizational process asset, but it hasn't been yet.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Classic tacit knowledge — valuable but trapped in one person's head. If she leaves, the next PM will order from this vendor in September and get burned. The PM's job is to capture this and make it explicit."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask: Is this knowledge documented ANYWHERE that someone else could access? Or does it exist only because of one person's direct experience? That distinction is the key.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask: Is this knowledge documented ANYWHERE that someone else could access? Or does it exist only because of one person's direct experience? That distinction is the key."
+            },
+            "retryHint": "The key phrase is \"It's not in any report — I just know.\" If knowledge isn't documented and comes from personal experience, what type is it?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "According to PMI best practices, when is the BEST time to capture lessons learned?",
+            "points": 50,
+            "scenario_name": "Lessons Learned Timing",
+            "situation": "A project manager is developing the knowledge management approach for a 12-month construction project. A team member asks: \"When should we schedule the lessons learned session?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Only during the project closure phase",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Throughout the project as events occur",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "After the sponsor formally accepts all deliverables",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "At the annual organizational review meeting",
+                "correct": false
+              }
+            ],
+            "explanation": "Manage Project Knowledge is an Executing process in PMBOK that occurs THROUGHOUT the project lifecycle — not solely at closure. Capturing lessons as events occur ensures details are fresh, other active projects can benefit immediately, and knowledge isn't lost if team members leave before closure. A 12-month project that waits until month 12 to capture lessons will have forgotten critical details from months 1-6.",
+            "correctFeedback": {
+              "text": "Manage Project Knowledge is an Executing process in PMBOK that occurs THROUGHOUT the project lifecycle — not solely at closure. Capturing lessons as events occur ensures details are fresh, other active projects can benefit immediately, and knowledge isn't lost if team members leave before closure. A 12-month project that waits until month 12 to capture lessons will have forgotten critical details from months 1-6.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Manage Project Knowledge is an Executing process — it runs throughout. Weekly retrospectives, post-incident captures, phase-gate reviews. Don't wait 12 months for a single session when you could have captured lessons every week."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about a 12-month project. If you wait until month 12, will the team remember what happened in month 2? Details fade. Other projects could have benefited from those lessons 10 months ago.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about a 12-month project. If you wait until month 12, will the team remember what happened in month 2? Details fade. Other projects could have benefited from those lessons 10 months ago."
+            },
+            "retryHint": "Manage Project Knowledge is in which PMBOK process group? (Hint: it's NOT Closing.) That tells you when it should happen."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the PM do FIRST?",
+            "points": 50,
+            "scenario_name": "Expert Departure — First Action",
+            "situation": "A critical subject matter expert with specialized domain knowledge announces she is leaving the project team in 3 weeks. Her expertise is essential for the remaining project phases, and no one else on the team has comparable knowledge. The PM must act quickly.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Ask the expert to write comprehensive documentation of everything she knows",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Identify which knowledge is explicit vs tacit and plan appropriate transfer methods for each",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Immediately begin recruiting a replacement with equivalent expertise",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Request a project timeline extension to accommodate the knowledge gap",
+                "correct": false
+              }
+            ],
+            "explanation": "Before jumping into action, the PM must ASSESS the situation. Not all of the expert's knowledge is the same type — some is explicit (already documented or easily documentable) and some is tacit (requires hands-on transfer). Identifying the split allows the PM to allocate the 3 weeks strategically: don't waste time documenting what's already written, and don't waste time writing down what can only be transferred through mentoring and practice.",
+            "correctFeedback": {
+              "text": "Before jumping into action, the PM must ASSESS the situation. Not all of the expert's knowledge is the same type — some is explicit (already documented or easily documentable) and some is tacit (requires hands-on transfer). Identifying the split allows the PM to allocate the 3 weeks strategically: don't waste time documenting what's already written, and don't waste time writing down what can only be transferred through mentoring and practice.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Assess before you act. If you jump straight to 'write everything down,' you'll waste precious time on explicit knowledge that might already be documented — while the truly valuable tacit expertise goes untransferred."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "With only 3 weeks, every day matters. But acting without assessing means you might focus on the wrong things. First understand WHAT types of knowledge are at risk, THEN plan the transfer approach.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "With only 3 weeks, every day matters. But acting without assessing means you might focus on the wrong things. First understand WHAT types of knowledge are at risk, THEN plan the transfer approach."
+            },
+            "retryHint": "You have 3 weeks and need to be strategic. What's the logical FIRST step before diving into transfer activities? Think: assess the situation, then plan, then execute."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which technique is MOST effective for transferring this type of tacit knowledge?",
+            "points": 50,
+            "scenario_name": "Most Effective Tacit Transfer Method",
+            "situation": "A project team needs to transfer a retiring engineer's 20 years of specialized troubleshooting expertise. This knowledge is almost entirely tacit — the engineer describes it as \"I just know what's wrong by the sound the machine makes and how the vibration feels.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Written troubleshooting procedures with detailed flowcharts",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "A comprehensive database of past machine failures and solutions",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Structured mentoring and shadowing where junior engineers work alongside the expert daily",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Recorded lectures where the engineer explains common problems",
+                "correct": false
+              }
+            ],
+            "explanation": "Knowledge described as \"knowing by sound and vibration feel\" is deeply tacit — it can only be developed through direct sensory experience alongside an expert. Mentoring and shadowing provide daily hands-on exposure where junior engineers hear the same sounds, feel the same vibrations, and receive real-time expert feedback on their developing judgment. No document, database, or lecture can replicate this experiential learning.",
+            "correctFeedback": {
+              "text": "Knowledge described as \"knowing by sound and vibration feel\" is deeply tacit — it can only be developed through direct sensory experience alongside an expert. Mentoring and shadowing provide daily hands-on exposure where junior engineers hear the same sounds, feel the same vibrations, and receive real-time expert feedback on their developing judgment. No document, database, or lecture can replicate this experiential learning.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When knowledge is 'I know by the sound and feel,' the ONLY effective transfer method is working alongside the expert — hearing what they hear, feeling what they feel, developing the same sensory judgment through practice."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "This engineer's knowledge is deeply sensory — sounds and vibrations. Can a flowchart teach you what a machine 'sounds like' when it's failing? Can a database teach you how a vibration 'feels'? What method involves actually EXPERIENCING these things?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "This engineer's knowledge is deeply sensory — sounds and vibrations. Can a flowchart teach you what a machine 'sounds like' when it's failing? Can a database teach you how a vibration 'feels'? What method involves actually EXPERIENCING these things?"
+            },
+            "retryHint": "The knowledge is \"I know by the sound and feel.\" Which technique puts the learner physically next to the expert, experiencing the same sounds and vibrations in real time?"
+          }
+        ]
+      }
+    }
+  ]
+}

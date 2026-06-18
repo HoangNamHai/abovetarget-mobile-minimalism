@@ -1,0 +1,705 @@
+[
+  {
+    "path": "A",
+    "pathName": "Foundation",
+    "moduleName": "Introduction to Project Management",
+    "lessons": [
+      {
+        "id": "A1L1",
+        "title": "What is Project Management?",
+        "description": "Distinguish projects (temporary, unique) from operations (ongoing, repetitive)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Business Environment",
+        "prerequisites": [],
+        "thumbnail": "/images/A1L1_comic_menu.webp",
+        "locked": false
+      },
+      {
+        "id": "A1L2",
+        "title": "The Project Manager's Role",
+        "description": "Understand the PM's three core responsibilities: Plan, Execute, Monitor & Control",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "A1L1"
+        ],
+        "thumbnail": "/images/A1L2_comic_contractor.webp",
+        "locked": false
+      },
+      {
+        "id": "A1L3",
+        "title": "Project Stakeholders",
+        "description": "Define who stakeholders are and why early identification is critical",
+        "duration": 10,
+        "maxPoints": 1000,
+        "domain": "Business Environment",
+        "prerequisites": [
+          "A1L2"
+        ],
+        "thumbnail": "/images/A1L3_comic_inspector.webp",
+        "locked": false
+      },
+      {
+        "id": "A1L4",
+        "title": "Project Life Cycles",
+        "description": "Understand the three main project life cycles: Predictive, Adaptive (Agile), and Hybrid",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Business Environment",
+        "prerequisites": [
+          "A1L3"
+        ],
+        "thumbnail": "/images/A1L4_comic_three_projects.webp",
+        "locked": false
+      },
+      {
+        "id": "A1L5",
+        "title": "Organizational Structures",
+        "description": "Understand the three main organizational structures: Functional, Matrix, and Projectized",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Business Environment",
+        "prerequisites": [
+          "A1L4"
+        ],
+        "thumbnail": "/images/A1L5_comic_alex_frustration.webp",
+        "locked": false
+      },
+      {
+        "id": "A1L6",
+        "title": "Project Constraints",
+        "description": "Identify the six major project constraints: Scope, Schedule, Cost, Quality, Resources, and Risk",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Business Environment",
+        "prerequisites": [
+          "A1L5"
+        ],
+        "thumbnail": "/images/A1L6_comic_perfect_storm.webp",
+        "locked": false
+      },
+      {
+        "id": "A1L7",
+        "title": "Project Success & Value",
+        "description": "Distinguish between traditional project success (on time, on budget, meets scope) and modern value-driven success (business outcomes, stakeholder satisfaction, benefits realization)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Business Environment",
+        "prerequisites": [
+          "A1L6"
+        ],
+        "thumbnail": "/images/A1L7_hook_card1_celebration.webp",
+        "locked": false
+      },
+      {
+        "id": "A1L8",
+        "title": "Project Integration Basics",
+        "description": "Understand Project Integration Management as the HOLISTIC view connecting all 10 knowledge areas",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Business Environment",
+        "prerequisites": [
+          "A1L7"
+        ],
+        "thumbnail": "/images/A1L8_hook_card1_simple_request.webp",
+        "locked": false
+      }
+    ]
+  },
+  {
+    "path": "B",
+    "pathName": "People",
+    "moduleName": "Stakeholder & Communication Management",
+    "lessons": [
+      {
+        "id": "B1L1",
+        "title": "Stakeholder Identification & Prioritization",
+        "description": "Identify key stakeholders in a project context using systematic stakeholder identification techniques",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [],
+        "thumbnail": "/images/B1L1_comic_overwhelmed.webp",
+        "locked": false
+      },
+      {
+        "id": "B1L2",
+        "title": "Stakeholder Power & Interest Grid",
+        "description": "Classify stakeholders using the Power/Interest Grid into 4 quadrants: Manage Closely, Keep Satisfied, Keep Informed, Monitor",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B1L1"
+        ],
+        "thumbnail": "/images/B1L2_comic_meeting_disaster.webp",
+        "locked": false
+      },
+      {
+        "id": "B1L3",
+        "title": "Stakeholder Engagement Planning",
+        "description": "Apply the Stakeholder Engagement Continuum: Unaware, Resistant, Neutral, Supportive, Leading",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B1L2"
+        ],
+        "thumbnail": "/images/B1L3_comic_unaware_cfo.webp",
+        "locked": false
+      },
+      {
+        "id": "B1L4",
+        "title": "Communication Methods & Channels",
+        "description": "Calculate communication channels using the formula n(n-1)/2 and understand exponential growth",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B1L3"
+        ],
+        "thumbnail": "/images/B1L4_comic_explosion.webp",
+        "locked": false
+      },
+      {
+        "id": "B1L5",
+        "title": "Managing Difficult Stakeholders",
+        "description": "Apply negotiation strategies (Win-Win, Win-Lose, Withdraw) based on relationship importance and power dynamics",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B1L4"
+        ],
+        "thumbnail": "/images/B1L5_comic_demanding.webp",
+        "locked": false
+      },
+      {
+        "id": "B1L6",
+        "title": "Effective Communication Planning",
+        "description": "Select appropriate communication methods (Push, Pull, Interactive) based on stakeholder needs",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B1L5"
+        ],
+        "thumbnail": "/images/B1L6_comic_email_flood.webp",
+        "locked": false
+      }
+    ]
+  },
+  {
+    "path": "B",
+    "pathName": "People",
+    "moduleName": "Team Management",
+    "lessons": [
+      {
+        "id": "B2L1",
+        "title": "Team Formation - Tuckman's Model",
+        "description": "Identify the 5 stages of Tuckman's team development model: Forming, Storming, Norming, Performing, and Adjourning",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [],
+        "thumbnail": "/images/B2L1_comic_forming.webp",
+        "locked": false
+      },
+      {
+        "id": "B2L2",
+        "title": "Building High-Performance Teams",
+        "description": "Recognize the 5 characteristics of high-performance teams: Trust, Clear Goals, Psychological Safety, Shared Accountability, Continuous Improvement",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B2L1"
+        ],
+        "thumbnail": "/images/B2L2_comic_blame.webp",
+        "locked": false
+      },
+      {
+        "id": "B2L3",
+        "title": "Conflict Resolution Strategies",
+        "description": "Identify the five conflict resolution strategies (Collaborate/Confront, Compromise, Smooth/Accommodate, Force/Direct, Withdraw/Avoid) and their outcomes (win-win, lose-lose, win-lose, yield-lose, lose-leave)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B2L2"
+        ],
+        "thumbnail": "/images/B2L3_comic_creative_clash.webp",
+        "locked": false
+      },
+      {
+        "id": "B2L4",
+        "title": "Leadership Styles",
+        "description": "Identify the five core leadership styles: Servant, Transformational, Transactional, Laissez-faire, and Autocratic/Directive",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B2L3"
+        ],
+        "thumbnail": "/images/B2L4_comic_veterans.webp",
+        "locked": false
+      },
+      {
+        "id": "B2L5",
+        "title": "Motivation & Recognition",
+        "description": "Diagnose whether a team member's motivation issue is intrinsic (challenge, growth, autonomy) or extrinsic (recognition, rewards, hygiene)",
+        "duration": 9,
+        "maxPoints": 1000,
+        "domain": "People",
+        "prerequisites": [
+          "B2L4"
+        ],
+        "thumbnail": "/images/B2L5_comic_elena.webp",
+        "locked": false
+      }
+    ]
+  },
+  {
+    "path": "C",
+    "pathName": "Process",
+    "moduleName": "Project Integration Management",
+    "lessons": [
+      {
+        "id": "C1L1",
+        "title": "Project Charter Development",
+        "description": "Understand the purpose and authority of the project charter as the formal document that authorizes the project",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [],
+        "thumbnail": "/images/C1L1_comic_budget_crisis.webp",
+        "locked": false
+      },
+      {
+        "id": "C1L2",
+        "title": "Project Management Plan",
+        "description": "Understand that the Project Management Plan integrates ALL subsidiary plans into one cohesive document",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C1L1"
+        ],
+        "thumbnail": "/images/C1L2_comic_no_plan.webp",
+        "locked": false
+      },
+      {
+        "id": "C1L3",
+        "title": "Direct & Manage Project Work",
+        "description": "Understand that Direct & Manage Project Work is THE primary execution process where plans become deliverables",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C1L2"
+        ],
+        "thumbnail": "/images/C1L3_comic_chaos.webp",
+        "locked": false
+      },
+      {
+        "id": "C1L4",
+        "title": "Managing Project Knowledge",
+        "description": "Distinguish between explicit knowledge (documented, codified) and tacit knowledge (experience-based, hard to articulate)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C1L3"
+        ],
+        "thumbnail": "/images/C1L4_comic_lost_knowledge.webp",
+        "locked": false
+      },
+      {
+        "id": "C1L5",
+        "title": "Monitor & Control Project Work",
+        "description": "Distinguish between monitoring (measuring performance against baselines) and controlling (taking corrective/preventive action)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C1L4"
+        ],
+        "thumbnail": "/images/C1L5_comic_blind_spot.webp",
+        "locked": false
+      },
+      {
+        "id": "C1L6",
+        "title": "Integrated Change Control",
+        "description": "Understand Integrated Change Control as the formal APPROVAL process for all change requests affecting baselines",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C1L5"
+        ],
+        "thumbnail": "/images/C1L6_comic_bypass.webp",
+        "locked": false
+      },
+      {
+        "id": "C1L7",
+        "title": "Project Closure",
+        "description": "Understand project closure as a FORMAL process, not just work completion",
+        "duration": 7,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C1L6"
+        ],
+        "thumbnail": "/images/C1L7_comic_incomplete_close.webp",
+        "locked": false
+      },
+      {
+        "id": "C1L8",
+        "title": "Benefits Realization",
+        "description": "Distinguish project success (time, budget, scope) from business success (benefits realized)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C1L7"
+        ],
+        "thumbnail": "/images/C1L8_comic_false_success.webp",
+        "locked": false
+      }
+    ]
+  },
+  {
+    "path": "C",
+    "pathName": "Process",
+    "moduleName": "Planning: Scope, Schedule, Cost",
+    "lessons": [
+      {
+        "id": "C2L1",
+        "title": "Cost Estimation & Budgeting",
+        "description": "Select the appropriate estimation technique (bottom-up, analogous, parametric, three-point) based on data availability and detail requirements",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [],
+        "thumbnail": "/images/C2L1_comic_budget_challenge.webp",
+        "locked": false
+      },
+      {
+        "id": "C2L2",
+        "title": "Earned Value Management",
+        "description": "Calculate core EVM metrics: PV (Planned Value), EV (Earned Value), AC (Actual Cost)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C2L1"
+        ],
+        "thumbnail": "/images/C2L2_comic_dashboard_crisis.webp",
+        "locked": false
+      },
+      {
+        "id": "C2L3",
+        "title": "Critical Path Method",
+        "description": "Identify the critical path as the longest path through a network diagram with zero float",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C2L2"
+        ],
+        "thumbnail": "/images/C2L3_comic_kitchen_delay.webp",
+        "locked": false
+      },
+      {
+        "id": "C2L4",
+        "title": "Schedule Compression Techniques",
+        "description": "Distinguish between fast tracking (parallelizing sequential activities) and crashing (adding resources to reduce duration)",
+        "duration": 7,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C2L3"
+        ],
+        "thumbnail": "/images/C2L4_comic_deadline_crisis.webp",
+        "locked": false
+      }
+    ]
+  },
+  {
+    "path": "C",
+    "pathName": "Process",
+    "moduleName": "Risk, Quality & Procurement",
+    "lessons": [
+      {
+        "id": "C3L1",
+        "title": "Risk Identification & Analysis",
+        "description": "Select the appropriate risk identification technique based on team dynamics (Brainstorming, Delphi, SWOT, Assumptions Analysis)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [],
+        "thumbnail": "/images/C3L1_comic_supplier_crisis.webp",
+        "locked": false
+      },
+      {
+        "id": "C3L2",
+        "title": "Risk Response Planning",
+        "description": "Match risk characteristics to the appropriate response strategy (Avoid, Mitigate, Transfer, Accept, Escalate)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C3L1"
+        ],
+        "thumbnail": "/images/C3L2_comic_vendor_threat.webp",
+        "locked": false
+      },
+      {
+        "id": "C3L3",
+        "title": "Risk Monitoring & Control",
+        "description": "Distinguish between residual risks (remain after response), secondary risks (caused by response), and new risks (emerge during execution)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C3L2"
+        ],
+        "thumbnail": "/images/C3L3_comic_risk_escalation.webp",
+        "locked": false
+      },
+      {
+        "id": "C3L4",
+        "title": "Quality Planning & Assurance",
+        "description": "Distinguish between Quality Assurance (defect prevention) and Quality Control (defect detection)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C3L3"
+        ],
+        "thumbnail": "/images/C3L4_comic_quality_crisis.webp",
+        "locked": false
+      },
+      {
+        "id": "C3L5",
+        "title": "Quality Control & Continuous Improvement",
+        "description": "Distinguish between inspection (defect detection) and prevention (defect avoidance) and understand prevention's cost effectiveness",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C3L4"
+        ],
+        "thumbnail": "/images/C3L5_comic_defect_pattern.webp",
+        "locked": false
+      },
+      {
+        "id": "C3L6",
+        "title": "Procurement & Contracts",
+        "description": "Select the appropriate contract type (Fixed Price, Cost Reimbursable, Time & Materials) based on scope clarity and risk tolerance",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "C3L5"
+        ],
+        "thumbnail": "/images/C3L6_comic_contract_dispute.webp",
+        "locked": false
+      }
+    ]
+  },
+  {
+    "path": "D",
+    "pathName": "Adaptive & Hybrid Delivery",
+    "moduleName": "Agile Mindset & Frameworks",
+    "lessons": [
+      {
+        "id": "D1L1",
+        "title": "Scrum Fundamentals & Roles",
+        "description": "Understand the 3 Scrum Roles: Product Owner, Scrum Master, Development Team",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [],
+        "thumbnail": "/images/D1L1_comic_backlog_hijack.webp",
+        "locked": false
+      },
+      {
+        "id": "D1L2",
+        "title": "Agile Team Formation & Dynamics",
+        "description": "Apply the optimal Agile team size principle (5-9 members, the 7±2 rule)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D1L1"
+        ],
+        "thumbnail": "/images/D1L2_comic_communication_chaos.webp",
+        "locked": false
+      },
+      {
+        "id": "D1L3",
+        "title": "Sprint Planning & Execution",
+        "description": "Understand two-part Sprint Planning: WHAT (selecting items) + HOW (task breakdown)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D1L2"
+        ],
+        "thumbnail": "/images/D1L3_comic_po_dictates.webp",
+        "locked": false
+      },
+      {
+        "id": "D1L4",
+        "title": "Daily Standup & Collaboration",
+        "description": "Recognize Daily Standup as TEAM synchronization, not a PM/PO status meeting",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D1L3"
+        ],
+        "thumbnail": "/images/D1L4_comic_interrogation.webp",
+        "locked": false
+      },
+      {
+        "id": "D1L5",
+        "title": "Sprint Review & Demos",
+        "description": "Distinguish Sprint Review (collaboration for feedback) from formal approval gates",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D1L4"
+        ],
+        "thumbnail": "/images/D1L5_comic_formal_signoff.webp",
+        "locked": false
+      },
+      {
+        "id": "D1L6",
+        "title": "Sprint Retrospectives",
+        "description": "Distinguish Sprint Retrospective (process improvement) from Sprint Review (product feedback)",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D1L5"
+        ],
+        "thumbnail": "/images/D1L6_comic_blame_game.webp",
+        "locked": false
+      },
+      {
+        "id": "D1L7",
+        "title": "Agile Principles & Values",
+        "description": "Apply the 4 Agile Manifesto values to decide when Agile is appropriate vs predictive approaches",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D1L6"
+        ],
+        "thumbnail": "/images/D1L7_comic_waiting_for_orders.webp",
+        "locked": false
+      },
+      {
+        "id": "D1L8",
+        "title": "Predictive vs Adaptive",
+        "description": "Select the appropriate development approach (predictive, adaptive, hybrid) based on project characteristics",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D1L7"
+        ],
+        "thumbnail": "/images/D1L8_comic_agile_construction.webp",
+        "locked": false
+      }
+    ]
+  },
+  {
+    "path": "D",
+    "pathName": "Adaptive & Hybrid Delivery",
+    "moduleName": "Agile Planning & Tracking",
+    "lessons": [
+      {
+        "id": "D2L1",
+        "title": "User Story Writing - INVEST Criteria",
+        "description": "Apply INVEST criteria (Independent, Negotiable, Valuable, Estimable, Small, Testable) to evaluate user story quality",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [],
+        "thumbnail": "/images/D2L1_comic_vague_story.webp",
+        "locked": false
+      },
+      {
+        "id": "D2L2",
+        "title": "Backlog Refinement & Prioritization",
+        "description": "Apply MoSCoW prioritization (Must/Should/Could/Won't-have) to balance business value with scope constraints",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D2L1"
+        ],
+        "thumbnail": "/images/D2L2_comic_opinion_wars.webp",
+        "locked": false
+      },
+      {
+        "id": "D2L3",
+        "title": "Kanban Fundamentals — Visualize Flow, Limit Work",
+        "description": "Identify the 5 core Kanban principles: visualize workflow, limit WIP, manage flow, make policies explicit, implement feedback loops",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D2L2"
+        ],
+        "thumbnail": "/images/D2L3_comic_multitasking_meltdown.webp",
+        "locked": false
+      },
+      {
+        "id": "D2L4",
+        "title": "Agile Estimation Techniques",
+        "description": "Apply Planning Poker to estimate user stories using relative sizing",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D2L3"
+        ],
+        "thumbnail": "/images/D2L4_comic_averaging_trap.webp",
+        "locked": false
+      },
+      {
+        "id": "D2L5",
+        "title": "Agile Metrics & Tracking",
+        "description": "Calculate and interpret team velocity to predict delivery timelines",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D2L4"
+        ],
+        "thumbnail": "/images/D2L5_comic_guessing_without_data.webp",
+        "locked": false
+      },
+      {
+        "id": "D2L6",
+        "title": "Definition of Done — The Quality Gate",
+        "description": "Create a team Definition of Done with quality standards that apply to every user story",
+        "duration": 8,
+        "maxPoints": 1000,
+        "domain": "Process",
+        "prerequisites": [
+          "D2L5"
+        ],
+        "thumbnail": "/images/D2L6_comic_launch_crash.webp",
+        "locked": false
+      }
+    ]
+  }
+]

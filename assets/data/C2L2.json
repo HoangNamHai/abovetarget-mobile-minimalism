@@ -1,0 +1,674 @@
+{
+  "lessonId": "C2L2",
+  "lessonTitle": "Earned Value Management",
+  "courseId": "C2",
+  "courseName": "Planning: Scope, Schedule, Cost",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Calculate core EVM metrics: PV (Planned Value), EV (Earned Value), AC (Actual Cost)",
+    "Interpret variance indicators: SV (Schedule Variance), CV (Cost Variance) to assess project health",
+    "Analyze performance indexes: SPI (Schedule Performance Index), CPI (Cost Performance Index) to predict trends",
+    "Apply forecasting formulas: EAC (Estimate at Completion) to make informed cost decisions",
+    "Use EVM data to drive corrective actions and go/no-go decisions"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "elena_santos",
+    "carlos_mendez",
+    "sam_rodriguez"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "58% Spent, 40% Done: Is Savory's Expansion Headed for Disaster?",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. The restaurant is six months into a $240,000 expansion project (new kitchen, dining room renovation, rooftop patio). At Month 6, you should be 50% complete -- but the numbers tell a different story. You've spent $140,000 (58% of budget) but only completed 40% of the work. CFO Elena Santos demands answers: \"Prove to me we're not heading for a disaster -- or tell me how bad it's going to get.\" There's a way to know for sure... Earned Value Management.",
+        "failure_cards": [
+          {
+            "id": "the_budget_review_meeting",
+            "icon": "📋",
+            "title": "The Budget Review Meeting",
+            "summary": "Elena discovers Alex has spent 58% of the budget but completed only 40% of the work",
+            "image": "/images/C2L2_comic_dashboard_crisis.webp",
+            "details": "Elena reviews the expansion spreadsheets and sees $140,000 spent against a $240,000 budget. The progress report shows only 40% complete. Carlos confirms the numbers are accurate. Elena demands data, not gut feelings: \"Can you prove we're not heading for a massive overrun?\" Alex realizes there is a way to diagnose the problem precisely -- Earned Value Management."
+          },
+          {
+            "id": "the_cost_reality_check",
+            "icon": "⚠️",
+            "title": "The Cost Reality Check",
+            "summary": "Alex breaks down the actual value earned across all three project phases",
+            "image": "/images/C2L2_comic_ev_formulas.webp",
+            "details": "In the conference room, Alex maps out the work: Kitchen ($80K budget) is 100% complete. Dining room ($100K budget) is 60% complete -- that's $60K of value earned. Rooftop patio ($60K budget) hasn't started. Elena does the math: \"So we've earned $96K of value but spent $140K to get there?\" Sam confirms: \"That's the problem.\" Alex picks up the marker: \"Let me show you how EVM can tell us exactly how fixable this really is.\""
+          },
+          {
+            "id": "the_108k_question",
+            "icon": "💡",
+            "title": "The $108K Question",
+            "summary": "EVM formulas reveal a projected $108,000 budget overrun",
+            "image": "/images/C2L2_comic_forecast.webp",
+            "details": "Alex writes the CPI formula: $96K / $140K = 0.69. Elena reacts: \"For every dollar we spend, we're only getting 69 cents of value?\" Then the forecast: EAC = $240K / 0.69 = $348,000. Sam is shocked: \"That's $108,000 over budget!\" Elena stands and makes a decision: \"Continue bleeding money, or take corrective action NOW. What do you recommend, Alex?\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "elena_santos",
+          "name": "Elena Santos",
+          "role": "CFO/Project Sponsor",
+          "quote": "I don't want gut feelings, Alex. I want DATA. Show me the numbers -- how bad is it, and can we fix it?"
+        },
+        "learning_hook": "**Earned Value Management (EVM)** transforms three simple measurements into a powerful diagnostic system that tells you: Are we behind schedule? Over budget? And most importantly -- where are we heading if we don't change course? Let's learn how to calculate, diagnose, and act."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "diagnose_savorys_cost_overrun",
+        "title": "Diagnose Savory's Cost Overrun",
+        "description": "Elena demands answers. Use EVM metrics to diagnose the expansion project's health, calculate where costs are heading, and recommend whether to continue or cut losses.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What is the Planned Value (PV) at Month 6?",
+            "points": 100,
+            "scenario_name": "Calculate Planned Value",
+            "situation": "At Month 6 of a 12-month project, Savory & Co. SHOULD be 50% complete according to the schedule. The Budget at Completion (BAC) is $240,000. Alex needs to establish the baseline for measuring performance.",
+            "options": [
+              {
+                "id": "A",
+                "text": "$96,000",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "$120,000",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "$140,000",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "$240,000",
+                "correct": false
+              }
+            ],
+            "explanation": "PV = BAC x Planned % Complete = $240,000 x 50% = $120,000. Planned Value is the baseline -- what the schedule says Savory & Co. should have accomplished by Month 6. It measures planned work value, not actual work done or money spent.",
+            "correctFeedback": {
+              "text": "PV = BAC x Planned % Complete = $240,000 x 50% = $120,000. Planned Value is the baseline -- what the schedule says Savory & Co. should have accomplished by Month 6. It measures planned work value, not actual work done or money spent.",
+              "character": "Alex Mitchell",
+              "characterQuote": "PV is our baseline -- the yardstick we measure against. It's what the schedule SAYS we should have done, not what actually happened."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: PV is based on the PLAN, not reality. At Month 6 of a 12-month project, we planned to be 50% complete. PV = BAC x Planned % = $240K x 50%.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Remember: PV is based on the PLAN, not reality. At Month 6 of a 12-month project, we planned to be 50% complete. PV = BAC x Planned % = $240K x 50%."
+            },
+            "retryHint": "PV measures what SHOULD have been done by now based on the schedule. At Month 6 of 12, what percentage of the $240K budget was planned?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What is the Cost Variance (CV)?",
+            "points": 150,
+            "scenario_name": "Calculate Cost Variance",
+            "situation": "From the previous analysis, we know PV = $120,000 (planned). Now the reality: Savory & Co. has completed 40% of total project work, meaning EV = BAC x 40% = $96,000. They have spent $140,000 (AC) to earn that $96,000 of value. Elena asks: \"How much over budget are we RIGHT NOW?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "-$44,000",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "+$44,000",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "-$24,000",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "$0 (on budget)",
+                "correct": false
+              }
+            ],
+            "explanation": "CV = EV - AC = $96,000 - $140,000 = -$44,000. Negative CV means OVER BUDGET. Savory & Co. has spent $140K but only delivered $96K of value -- a $44K cost overrun so far. Elena puts it bluntly: \"That $44K gap is money we can't get back.\"",
+            "correctFeedback": {
+              "text": "CV = EV - AC = $96,000 - $140,000 = -$44,000. Negative CV means OVER BUDGET. Savory & Co. has spent $140K but only delivered $96K of value -- a $44K cost overrun so far. Elena puts it bluntly: \"That $44K gap is money we can't get back.\"",
+              "character": "Elena Santos",
+              "characterQuote": "So we've spent $140K but only earned $96K of value? That $44K gap is money we can't get back. Now show me where this is heading."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "CV = EV minus AC. We earned $96K of value but spent $140K. Is that gap positive or negative? Think about what 'over budget' means.",
+              "character": "Elena Santos",
+              "characterQuote": "CV = EV minus AC. We earned $96K of value but spent $140K. Is that gap positive or negative? Think about what 'over budget' means."
+            },
+            "retryHint": "CV = EV - AC. Plug in: $96,000 - $140,000. Is the result positive (under budget) or negative (over budget)?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Using the typical EAC formula (EAC = BAC / CPI), what is the Estimate at Completion if current cost performance continues?",
+            "points": 150,
+            "scenario_name": "Calculate CPI and Forecast EAC",
+            "situation": "Elena wants the bottom line: \"If this efficiency continues, what will the final cost be?\" From previous calculations: EV = $96,000, AC = $140,000, BAC = $240,000. Alex calculates CPI = EV / AC = $96K / $140K = 0.69. Now he needs to forecast the final cost.",
+            "options": [
+              {
+                "id": "A",
+                "text": "$240,000 (original budget)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "$284,000",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "$348,000",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "$380,000",
+                "correct": false
+              }
+            ],
+            "explanation": "EAC = BAC / CPI = $240,000 / 0.69 = approximately $348,000. If the current efficiency continues (getting only $0.69 of value per dollar spent), Savory & Co. will finish $108,000 over the original $240K budget. CPI = 0.69 represents a 31% efficiency loss -- severe enough to require immediate corrective action.",
+            "correctFeedback": {
+              "text": "EAC = BAC / CPI = $240,000 / 0.69 = approximately $348,000. If the current efficiency continues (getting only $0.69 of value per dollar spent), Savory & Co. will finish $108,000 over the original $240K budget. CPI = 0.69 represents a 31% efficiency loss -- severe enough to require immediate corrective action.",
+              "character": "Carlos Mendez",
+              "characterQuote": "CPI = 0.69 means we're hemorrhaging 31 cents on every dollar. $348K final cost is $108K over budget. We can't wait -- we need to fix this now or shut it down."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "First calculate CPI = EV / AC. Then use EAC = BAC / CPI. A CPI below 1.0 means every remaining dollar will also be overspent at that same rate.",
+              "character": "Carlos Mendez",
+              "characterQuote": "First calculate CPI = EV / AC. Then use EAC = BAC / CPI. A CPI below 1.0 means every remaining dollar will also be overspent at that same rate."
+            },
+            "retryHint": "CPI = 0.69 means you get 69 cents of value per dollar. To deliver $240K of value at that rate, divide $240K by 0.69."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What should Alex recommend to Elena?",
+            "points": 100,
+            "scenario_name": "The Executive Decision",
+            "situation": "Alex presents the full EVM dashboard to Elena: PV = $120K, EV = $96K, AC = $140K, CV = -$44K, CPI = 0.69, EAC = $348K, projected overrun = $108K. Elena asks: \"Should we continue this project or cut our losses now?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Cancel the project immediately -- we're over budget and it's only getting worse",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Continue as planned -- cost overruns are normal in construction projects",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Continue with corrective action: cut scope, renegotiate contracts, improve efficiency",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Request an additional $108K budget and continue",
+                "correct": false
+              }
+            ],
+            "explanation": "The best recommendation is to continue with corrective actions. CPI = 0.69 is severe but the project is 40% complete with valuable work done. Options include: (1) Descope the patio to save $60K, (2) Renegotiate dining room contracts, (3) Implement tighter cost controls. EVM data drives corrective actions -- not just reporting bad news.",
+            "correctFeedback": {
+              "text": "The best recommendation is to continue with corrective actions. CPI = 0.69 is severe but the project is 40% complete with valuable work done. Options include: (1) Descope the patio to save $60K, (2) Renegotiate dining room contracts, (3) Implement tighter cost controls. EVM data drives corrective actions -- not just reporting bad news.",
+              "character": "Elena Santos",
+              "characterQuote": "This is what I need -- data-driven decisions AND a plan to fix it. Show me a revised EAC with these changes."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Consider the full picture: $140K already invested, 40% of valuable work completed, and multiple corrective options available. What does the PM recommend when CPI is critical but the project has business value?",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Consider the full picture: $140K already invested, 40% of valuable work completed, and multiple corrective options available. What does the PM recommend when CPI is critical but the project has business value?"
+            },
+            "retryHint": "CPI = 0.69 is serious but the project has value. What approach uses EVM data to CHANGE the outcome rather than just accepting or abandoning it?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The EVM Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The Three Core Metrics (PV, EV, AC)",
+            "subtitle": "",
+            "content": "Every EVM analysis starts with three measurements:\n\n- **PV (Planned Value):** What we SHOULD have done by now\n- **EV (Earned Value):** What we ACTUALLY completed\n- **AC (Actual Cost):** What we ACTUALLY spent\n\nThink of it this way: PV is the plan, EV is the reality of work, AC is the reality of spending.\n\n| Metric | Formula | What It Measures | Savory Example |\n|--------|---------|------------------|----------------|\n| **PV** | BAC x Planned % Complete | The baseline -- what SHOULD be done | $240K x 50% = $120K |\n| **EV** | BAC x Actual % Complete | Value of work ACTUALLY completed | $240K x 40% = $96K |\n| **AC** | Sum of all costs incurred | Money ACTUALLY spent | $140K spent |\n\n**Key Insight:** EV is the bridge between what we planned (PV) and what we spent (AC). Without EV, you cannot diagnose whether you are behind schedule, over budget, or both."
+          },
+          {
+            "id": "tab2",
+            "title": "Variance Analysis (SV and CV)",
+            "subtitle": "",
+            "content": "Variances tell you HOW MUCH you are off track. They are the \"symptoms\" that help diagnose the project's health.\n\n**Schedule Variance (SV) = EV - PV**\n\n| Condition | Meaning |\n|-----------|---------|\n| SV > 0 | Ahead of schedule (earned more than planned) |\n| SV = 0 | On schedule |\n| SV < 0 | Behind schedule (earned less than planned) |\n\n*Savory: SV = $96K - $120K = -$24K (behind schedule by $24K worth of work)*\n\n**Cost Variance (CV) = EV - AC**\n\n| Condition | Meaning |\n|-----------|---------|\n| CV > 0 | Under budget (earned more value than spent) |\n| CV = 0 | On budget |\n| CV < 0 | Over budget (spent more than value earned) |\n\n*Savory: CV = $96K - $140K = -$44K (over budget by $44K)*\n\n**The Diagnosis Grid:**\n\n| SV | CV | Diagnosis |\n|----|----|-----------|\n| Negative | Negative | Behind schedule AND over budget (CRISIS -- Savory's situation) |\n| Negative | Positive | Behind schedule but under budget (slow but efficient) |\n| Positive | Negative | Ahead of schedule but over budget (fast but expensive) |\n| Positive | Positive | Ahead of schedule AND under budget (IDEAL) |",
+            "diagram": {
+              "image": "/images/C2L2_diagram_ev_framework.webp",
+              "alt": "EV Framework"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Performance Indexes (SPI and CPI)",
+            "subtitle": "",
+            "content": "Variances tell you HOW MUCH you are off. Indexes tell you the TREND -- are things getting better or worse? They are ratios that show efficiency.\n\n**Schedule Performance Index (SPI) = EV / PV**\n\n| Condition | Meaning |\n|-----------|---------|\n| SPI > 1.0 | Ahead of schedule |\n| SPI = 1.0 | On schedule |\n| SPI < 1.0 | Behind schedule |\n\n*Savory: SPI = $96K / $120K = 0.80 (earning at 80% of planned rate -- 20% behind)*\n\n**Cost Performance Index (CPI) = EV / AC**\n\n| Condition | Meaning |\n|-----------|---------|\n| CPI > 1.0 | Under budget (more value per dollar) |\n| CPI = 1.0 | On budget |\n| CPI < 1.0 | Over budget (less value per dollar) |\n\n*Savory: CPI = $96K / $140K = 0.69 (getting $0.69 of value per $1 spent -- 31% waste)*\n\n**Critical Insight:** CPI stabilizes after 20-30% of work is complete. This means Savory's CPI = 0.69 is likely to continue unless corrective action is taken. It will not magically improve -- it is a reliable predictor of final cost."
+          },
+          {
+            "id": "tab4",
+            "title": "Forecasting (EAC, ETC, VAC)",
+            "subtitle": "",
+            "content": "EVM's greatest power is forecasting. Instead of waiting until project end to discover a $108K overrun, EVM predicts it at Month 6 -- giving you time to act.\n\n**Estimate at Completion (EAC) = BAC / CPI**\nProjects the final cost if current efficiency continues.\n*Savory: EAC = $240K / 0.69 = $348K (finish $108K over budget)*\n\n**Estimate to Complete (ETC) = EAC - AC**\nHow much MORE we need to spend to finish.\n*Savory: ETC = $348K - $140K = $208K (vs. $100K originally planned)*\n\n**Variance at Completion (VAC) = BAC - EAC**\nProjected final over/under budget amount.\n*Savory: VAC = $240K - $348K = -$108K (projected $108K overrun)*\n\n**EAC is NOT destiny -- it is a warning.** If Alex takes corrective action (improve efficiency, cut scope, renegotiate), CPI improves and EAC drops. EVM enables PROACTIVE management."
+          },
+          {
+            "id": "tab5",
+            "title": "EVM as a Decision Tool",
+            "subtitle": "",
+            "content": "Four steps transform numbers into actions:\n\n1. **Calculate Core Metrics** -- PV, EV, AC\n2. **Diagnose Current Status** -- CV, SV, CPI, SPI\n3. **Forecast Final Outcome** -- EAC, VAC\n4. **Make Decisions:**\n   - CPI < 0.90: URGENT corrective action needed\n   - CPI 0.90-1.0: Monitor closely, minor adjustments\n   - CPI > 1.0: Performing well, maintain practices\n\n**When CPI is Critical (<0.90), options include:**\n- Reduce scope (cut non-essential deliverables)\n- Improve efficiency (better processes, reduce rework)\n- Renegotiate contracts (vendor discounts)\n- Request more budget (with business justification)\n- Cancel project (if business case no longer viable)\n\n**Savory & Co. Decision:** CPI = 0.69 (severe). Alex recommended cutting the rooftop patio (save $60K), renegotiating the dining room contract (save $20K), and implementing tighter cost controls. Revised EAC dropped to approximately $280K -- a manageable overrun. Elena approved continuation."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Three Months Later: Did the Corrective Actions Work?",
+        "scenario": {
+          "title": "Three Months Later: Did the Corrective Actions Work?",
+          "description": "Three months after Alex's corrective actions at Month 6, Elena is reviewing the updated EVM data. Alex cut the rooftop patio from scope (saving $60K), renegotiated the dining room contract (saving $15K), and implemented tighter cost controls. The revised BAC is $180,000. At Month 9 (75% through the timeline): PV = $135,000, EV = $126,000, AC = $148,000. Elena asks: \"Show me the new CPI and EAC. Has the project recovered?\"",
+          "images": [
+            {
+              "src": "/images/C2L2_comic_transfer.webp",
+              "alt": "Before and after EVM comparison"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What is the NEW Cost Performance Index (CPI) at Month 9?",
+            "points": 100,
+            "scenario_name": "Calculate New CPI",
+            "situation": "At Month 9, with corrective actions in place, the revised project numbers are: EV = $126,000 (value of work completed) and AC = $148,000 (total money spent to date). The old CPI at Month 6 was 0.69. Elena needs to see whether efficiency has improved.",
+            "options": [
+              {
+                "id": "A",
+                "text": "0.69",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "0.85",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "0.93",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "1.15",
+                "correct": false
+              }
+            ],
+            "explanation": "CPI = EV / AC = $126,000 / $148,000 = 0.85. CPI improved from 0.69 to 0.85 -- the corrective actions are working. The project is still slightly over budget (15% inefficiency) but has recovered significantly from the 31% inefficiency at Month 6.",
+            "correctFeedback": {
+              "text": "CPI = EV / AC = $126,000 / $148,000 = 0.85. CPI improved from 0.69 to 0.85 -- the corrective actions are working. The project is still slightly over budget (15% inefficiency) but has recovered significantly from the 31% inefficiency at Month 6.",
+              "character": "Alex Mitchell",
+              "characterQuote": "CPI improved from 0.69 to 0.85. We're still not perfect, but the corrective actions cut our inefficiency nearly in half. The trend is in the right direction."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Use the CURRENT numbers: CPI = EV / AC. Don't use the old Month 6 values -- we need to see if things have improved.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Use the CURRENT numbers: CPI = EV / AC. Don't use the old Month 6 values -- we need to see if things have improved."
+            },
+            "retryHint": "CPI = EV / AC. Plug in the Month 9 numbers: $126,000 / $148,000. Has the ratio improved from the Month 6 value of 0.69?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What is the NEW Estimate at Completion (EAC)?",
+            "points": 100,
+            "scenario_name": "Forecast New EAC",
+            "situation": "With the revised BAC of $180,000 (original $240K minus the $60K patio cut) and the new CPI of 0.85, Alex needs to calculate the updated Estimate at Completion. Elena wants to know: \"How much will this project actually cost when we're done?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "$180,000 (on budget)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "$212,000",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "$348,000",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "$153,000",
+                "correct": false
+              }
+            ],
+            "explanation": "EAC = BAC / CPI = $180,000 / 0.85 = approximately $212,000. That is only $32K over the revised budget -- a massive improvement from the original $108K projected overrun. The corrective actions (scope cut + contract renegotiation + tighter controls) reduced the projected overrun by 70%.",
+            "correctFeedback": {
+              "text": "EAC = BAC / CPI = $180,000 / 0.85 = approximately $212,000. That is only $32K over the revised budget -- a massive improvement from the original $108K projected overrun. The corrective actions (scope cut + contract renegotiation + tighter controls) reduced the projected overrun by 70%.",
+              "character": "Elena Santos",
+              "characterQuote": "From $348K down to $212K. That's a $136K improvement in our forecast. The corrective actions are clearly working."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Use the REVISED BAC ($180K, not $240K) and the NEW CPI (0.85). EAC = BAC / CPI. Don't mix old and new numbers.",
+              "character": "Elena Santos",
+              "characterQuote": "Use the REVISED BAC ($180K, not $240K) and the NEW CPI (0.85). EAC = BAC / CPI. Don't mix old and new numbers."
+            },
+            "retryHint": "EAC = BAC / CPI. Use the REVISED BAC ($180K) and the CURRENT CPI (0.85). Division, not multiplication."
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What should Alex recommend to Elena about approving the final phase?",
+            "points": 100,
+            "scenario_name": "Make the Final Recommendation",
+            "situation": "Alex presents Elena with the full comparison: CPI improved from 0.69 to 0.85 (inefficiency cut nearly in half). VAC improved from -$108K to -$32K (70% reduction in projected overrun). The project is 70% complete with 3 months remaining. Elena asks: \"Should I approve the final phase budget?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Cancel the project -- we're still over budget",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Approve the final phase with close monitoring -- $32K overrun is a manageable improvement from $108K",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Approve unconditionally -- we're back on track and don't need monitoring",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Request additional $32K budget before continuing",
+                "correct": false
+              }
+            ],
+            "explanation": "CPI improved from 0.69 to 0.85. VAC improved from -$108K to -$32K (70% reduction). The corrective actions worked. The best recommendation is to approve continuation with vigilant monitoring to protect the gains. The $32K projected overrun is manageable given the business value of the completed expansion.",
+            "correctFeedback": {
+              "text": "CPI improved from 0.69 to 0.85. VAC improved from -$108K to -$32K (70% reduction). The corrective actions worked. The best recommendation is to approve continuation with vigilant monitoring to protect the gains. The $32K projected overrun is manageable given the business value of the completed expansion.",
+              "character": "Elena Santos",
+              "characterQuote": "This is exactly what I needed to see. Data showing the problem, the actions taken, and the measurable improvement. Approved with monitoring. Well done, Alex."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at the full picture: CPI improved significantly, the projected overrun dropped 70%, and 70% of the work is done. What does the data tell you to recommend?",
+              "character": "Elena Santos",
+              "characterQuote": "Look at the full picture: CPI improved significantly, the projected overrun dropped 70%, and 70% of the work is done. What does the data tell you to recommend?"
+            },
+            "retryHint": "The data shows a clear recovery trend. What recommendation balances continued progress with appropriate risk management?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **Earned Value Management (EVM)** transforms three simple measurements into a powerful diagnostic and forecasting system. By calculating PV, EV, and AC, then deriving variances, indexes, and forecasts, you can diagnose project health and drive corrective actions -- not just report bad news.",
+        "key_takeaways": [
+          "PV is the Plan -- Planned Value = BAC x Planned % Complete. It is what SHOULD have been done by now.",
+          "EV is the Reality of Work -- Earned Value = BAC x Actual % Complete. It is the budgeted value of work ACTUALLY completed.",
+          "CV Shows Budget Status -- Cost Variance = EV - AC. Negative = over budget. Savory was -$44K over at Month 6.",
+          "CPI Predicts Efficiency -- Cost Performance Index = EV / AC. Below 1.0 = over budget. CPI stabilizes after 20-30% and reliably predicts final cost.",
+          "EAC Forecasts the Future -- Estimate at Completion = BAC / CPI. Savory's $348K forecast dropped to $212K after corrective action.",
+          "EVM Drives Action -- Calculate, Diagnose, Forecast, ACT. EVM is a decision tool, not just a reporting mechanism."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "EVM transformed my status report from 'we're 40% done' (meaningless) to 'we're trending $108K over, here's my recovery plan' (actionable). That's the difference between reporting and managing. I used the data to justify corrective actions, track recovery, and earn Elena's confidence. EVM saved Savory $136K by enabling early action."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C2L3",
+          "title": "Critical Path Method (CPM)",
+          "description": "EVM tells you about cost. Now learn to forecast and compress SCHEDULE using the Critical Path Method -- finding the longest path through your project network."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What is the Earned Value (EV)?",
+            "points": 50,
+            "scenario_name": "EV Definition",
+            "situation": "A project has a Budget at Completion (BAC) of $500,000. At the end of Month 4, the project is 40% complete and has spent $220,000.",
+            "options": [
+              {
+                "id": "A",
+                "text": "$220,000",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "$200,000",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "$280,000",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "$500,000",
+                "correct": false
+              }
+            ],
+            "explanation": "EV = BAC x % Complete = $500,000 x 40% = $200,000. Earned Value measures the budgeted value of work actually completed, not the amount of money spent (that is AC).",
+            "correctFeedback": {
+              "text": "EV = BAC x % Complete = $500,000 x 40% = $200,000. Earned Value measures the budgeted value of work actually completed, not the amount of money spent (that is AC).",
+              "character": "Alex Mitchell",
+              "characterQuote": "EV is the VALUE of work completed at budgeted rates. Don't confuse it with AC (money spent) or BAC (total budget)."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "EV = BAC x Actual % Complete. The percentage of work done times the total budget gives you the value earned. What is 40% of $500K?",
+              "character": "Alex Mitchell",
+              "characterQuote": "EV = BAC x Actual % Complete. The percentage of work done times the total budget gives you the value earned. What is 40% of $500K?"
+            },
+            "retryHint": "EV = BAC x % Complete. What is 40% of $500,000?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What does this CPI indicate?",
+            "points": 50,
+            "scenario_name": "CPI Interpretation",
+            "situation": "A project has the following EVM data: EV = $180,000, AC = $200,000, CPI = 0.90.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project is 10% ahead of schedule",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The project is getting $0.90 of value for every $1.00 spent",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The project is 10% under budget",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The project will complete with 90% of the original budget",
+                "correct": false
+              }
+            ],
+            "explanation": "CPI = EV / AC. A CPI of 0.90 means for every dollar spent, you are only getting 90 cents of value -- a 10% cost inefficiency, meaning the project is over budget.",
+            "correctFeedback": {
+              "text": "CPI = EV / AC. A CPI of 0.90 means for every dollar spent, you are only getting 90 cents of value -- a 10% cost inefficiency, meaning the project is over budget.",
+              "character": "Sam Rodriguez",
+              "characterQuote": "CPI tells you cost efficiency -- value per dollar. Below 1.0 means you're getting less value than you're paying for."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "CPI measures COST performance, not schedule. A CPI below 1.0 means over budget. Think about it: you're spending $1 but only getting $0.90 of value.",
+              "character": "Sam Rodriguez",
+              "characterQuote": "CPI measures COST performance, not schedule. A CPI below 1.0 means over budget. Think about it: you're spending $1 but only getting $0.90 of value."
+            },
+            "retryHint": "CPI = EV / AC = 0.90. For every dollar you spend, how much value do you get? Is that over or under budget?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the Estimate at Completion (EAC)?",
+            "points": 50,
+            "scenario_name": "EAC Calculation",
+            "situation": "A project has BAC = $400,000. At the current status: EV = $160,000, AC = $200,000. The current cost performance is expected to continue.",
+            "options": [
+              {
+                "id": "A",
+                "text": "$400,000",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "$440,000",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "$500,000",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "$320,000",
+                "correct": false
+              }
+            ],
+            "explanation": "First, calculate CPI = EV / AC = $160K / $200K = 0.80. Then EAC = BAC / CPI = $400K / 0.80 = $500,000. The project is trending $100K over the original $400K budget.",
+            "correctFeedback": {
+              "text": "First, calculate CPI = EV / AC = $160K / $200K = 0.80. Then EAC = BAC / CPI = $400K / 0.80 = $500,000. The project is trending $100K over the original $400K budget.",
+              "character": "Elena Santos",
+              "characterQuote": "CPI = 0.80 means 20% cost overrun rate. At that efficiency, $400K of work will cost $500K. That's the power of EVM forecasting."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Two steps: First find CPI = EV / AC. Then EAC = BAC / CPI. A CPI below 1.0 means EAC will ALWAYS be higher than BAC.",
+              "character": "Elena Santos",
+              "characterQuote": "Two steps: First find CPI = EV / AC. Then EAC = BAC / CPI. A CPI below 1.0 means EAC will ALWAYS be higher than BAC."
+            },
+            "retryHint": "Step 1: CPI = EV / AC = $160K / $200K. Step 2: EAC = BAC / CPI. Division, not multiplication."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the BEST response?",
+            "points": 50,
+            "scenario_name": "Corrective Action Decision",
+            "situation": "A project shows the following status at 60% completion: CPI = 0.75 (25% cost overrun rate), SPI = 0.95 (5% behind schedule), EAC indicates a $150,000 cost overrun at completion. The project sponsor asks for your recommendation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Cancel the project immediately since CPI is below 0.80",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Continue as planned since SPI is close to 1.0",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Implement corrective actions to improve CPI before deciding on project continuation",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Request an additional $150,000 budget and continue",
+                "correct": false
+              }
+            ],
+            "explanation": "CPI = 0.75 is serious but the project is 60% complete. The best approach is to implement corrective actions first (scope cuts, efficiency improvements, contract renegotiation). Monitor CPI improvement. Cancel only if corrective actions fail and the business case no longer justifies continuation.",
+            "correctFeedback": {
+              "text": "CPI = 0.75 is serious but the project is 60% complete. The best approach is to implement corrective actions first (scope cuts, efficiency improvements, contract renegotiation). Monitor CPI improvement. Cancel only if corrective actions fail and the business case no longer justifies continuation.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "EVM data tells you to ACT, not to panic. Corrective actions first, then reassess. That's what separates project managers from project reporters."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "CPI = 0.75 is severe, but at 60% complete you have options. What approach uses the data to CHANGE the outcome rather than just accepting or abandoning the project?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "CPI = 0.75 is severe, but at 60% complete you have options. What approach uses the data to CHANGE the outcome rather than just accepting or abandoning the project?"
+            },
+            "retryHint": "At 60% complete with CPI = 0.75, what should a PM do FIRST -- give up, ignore it, ask for money, or try to fix the problem?"
+          }
+        ]
+      }
+    }
+  ]
+}

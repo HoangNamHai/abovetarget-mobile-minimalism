@@ -1,0 +1,765 @@
+{
+  "lessonId": "B1L1",
+  "lessonTitle": "Stakeholder Identification & Prioritization",
+  "courseId": "B1",
+  "courseName": "Stakeholder & Communication Management",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Identify key stakeholders in a project context using systematic stakeholder identification techniques",
+    "Apply the Salience Model (Power, Legitimacy, Urgency) to prioritize stakeholders using 3-dimensional analysis",
+    "Classify stakeholder types based on Salience dimensions (Definitive, Dominant, Dangerous, Dependent)",
+    "Use the Power-Interest Grid to map stakeholders and determine engagement strategies",
+    "Match stakeholders with appropriate engagement strategies based on their salience profile and grid position"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "ava_thompson",
+    "inspector_marcus_lee",
+    "jamie_park",
+    "kiki_nguyen",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Four Stakeholders, One Morning: Who Gets Your Attention First?",
+        "intro": "You're **Alex Mitchell**, in your second week as Project Manager at Savory & Co. The restaurant's soft launch received mixed reviews, and now four stakeholders with very different agendas are all demanding Carlos's attention at once. He turns to you: \"Everyone wants my time — the investor, the inspector, the manager, even a food blogger! Who do I prioritize?\"",
+        "failure_cards": [
+          {
+            "id": "overwhelmed_by_competing_demands",
+            "icon": "📋",
+            "title": "Overwhelmed by Competing Demands",
+            "summary": "Four stakeholders, all demanding attention simultaneously",
+            "image": "/images/B1L1_comic_overwhelmed.webp",
+            "details": "It's Monday morning at Savory & Co. Carlos stands at the host stand holding multiple message slips while his phone buzzes with notifications from Ava Thompson (investor), Inspector Lee (health department), Jamie Park (FOH manager), and Kiki Nguyen (food blogger). Alex arrives with coffee and realizes: treating everyone equally means nobody gets what they need. Carlos has been reacting to whoever is loudest, not whoever matters most."
+          },
+          {
+            "id": "the_consequences_of_getting_it_wrong",
+            "icon": "⚠️",
+            "title": "The Consequences of Getting It Wrong",
+            "summary": "Each neglected stakeholder creates a different kind of failure",
+            "image": "/images/B1L1_comic_consequences.webp",
+            "details": "Ignore the investor? Ava has a board meeting next week and controls $500K in funding — risk losing your financial backing entirely. Miss compliance deadlines? Inspector Lee has regulatory authority to shut down operations. Neglect your team? Jamie is dealing with 2 no-shows today and service quality is collapsing. Dismiss the influencer? Kiki has 50K followers and her review drops tomorrow — reputation damage goes viral. Every stakeholder matters, but not equally."
+          },
+          {
+            "id": "the_salience_model_solution",
+            "icon": "💡",
+            "title": "The Salience Model Solution",
+            "summary": "A three-dimensional framework for stakeholder prioritization",
+            "image": "/images/B1L1_comic_salience.webp",
+            "details": "Alex remembers a framework from training: the Salience Model. In the back office, Alex draws three overlapping circles on the whiteboard — Power, Legitimacy, and Urgency. Dr. Foster walks in and approves: \"The Salience Model helps you prioritize stakeholders based on THREE dimensions, not just who's loudest.\" Carlos watches with growing interest. Finally, a systematic way to decide who gets attention first."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Everyone wants my time — the investor, the inspector, the manager, even a food blogger! Who do I prioritize? I can't give everyone equal attention."
+        },
+        "learning_hook": "**Not all stakeholders are equal.** Some have POWER but no urgency. Others have URGENCY but no legitimacy. The Salience Model helps you prioritize based on THREE dimensions — so you focus on the RIGHT stakeholders at the RIGHT time."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "assess_and_prioritize_your_stakeholders",
+        "title": "Assess and Prioritize Your Stakeholders",
+        "description": "Dr. Foster guides you through the Salience Model assessment. \"Let's assess each stakeholder across three dimensions: Power, Legitimacy, and Urgency. Then place them on the Power-Interest Grid.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Based on Ava's profile, what is her Salience Model classification?",
+            "points": 80,
+            "scenario_name": "Classify Ava Thompson — Investor",
+            "situation": "Ava Thompson is Savory & Co.'s primary financial backer with a 35% stake. She provided $500K in capital and expects quarterly ROI reports. She has a board meeting next week requiring projections, and she can withdraw funding if dissatisfied.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Dominant (High Power + High Legitimacy, Low Urgency)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Dangerous (High Power + High Urgency, Low Legitimacy)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Definitive (High Power + High Legitimacy + High Urgency)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Dependent (High Legitimacy + High Urgency, Low Power)",
+                "correct": false
+              }
+            ],
+            "explanation": "Ava scores HIGH on all three Salience dimensions: Power (controls funding, can withdraw capital), Legitimacy (financial stake in project success), and Urgency (board meeting next week creates immediate time pressure). When all three dimensions are high, the stakeholder is classified as **Definitive** — the highest priority type.",
+            "correctFeedback": {
+              "text": "Ava scores HIGH on all three Salience dimensions: Power (controls funding, can withdraw capital), Legitimacy (financial stake in project success), and Urgency (board meeting next week creates immediate time pressure). When all three dimensions are high, the stakeholder is classified as **Definitive** — the highest priority type.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ava is the textbook Definitive stakeholder. All three dimensions are high — she has the power to shut you down, a rightful financial stake, and an immediate deadline. She gets your attention first."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Consider all three dimensions carefully. Does Ava have Power (can she influence project success)? Legitimacy (does she have a rightful stake)? Urgency (is her claim time-sensitive)? All three matter.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Consider all three dimensions carefully. Does Ava have Power (can she influence project success)? Legitimacy (does she have a rightful stake)? Urgency (is her claim time-sensitive)? All three matter."
+            },
+            "retryHint": "Ava controls funding (Power), owns 35% of the business (Legitimacy), and has a board meeting next week (Urgency). What type has ALL three dimensions high?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Based on Inspector Lee's profile, what is his Salience Model classification?",
+            "points": 80,
+            "scenario_name": "Classify Inspector Marcus Lee",
+            "situation": "Inspector Marcus Lee is the city health department inspector responsible for Savory & Co.'s compliance. He has regulatory authority to shut down operations for violations. The final inspection is scheduled in 3 weeks — no immediate deadline, but non-compliance is not an option.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Definitive (High Power + High Legitimacy + High Urgency)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Dominant (High Power + High Legitimacy, Low Urgency)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Dangerous (High Power + High Urgency, Low Legitimacy)",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Demanding (High Urgency only)",
+                "correct": false
+              }
+            ],
+            "explanation": "Inspector Lee has HIGH Power (regulatory authority to shut down operations) and HIGH Legitimacy (legal authority and rightful regulatory role), but LOW Urgency (inspection is 3 weeks away — no immediate time pressure). This combination of Power + Legitimacy without Urgency makes him a **Dominant** stakeholder.",
+            "correctFeedback": {
+              "text": "Inspector Lee has HIGH Power (regulatory authority to shut down operations) and HIGH Legitimacy (legal authority and rightful regulatory role), but LOW Urgency (inspection is 3 weeks away — no immediate time pressure). This combination of Power + Legitimacy without Urgency makes him a **Dominant** stakeholder.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Inspector Lee is Dominant — important and authoritative, but not immediately demanding. Don't ignore him, but don't panic either. Proactive compliance is your strategy."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about urgency carefully. When is the inspection? Is there immediate time pressure, or does Inspector Lee's timeline give you some breathing room?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about urgency carefully. When is the inspection? Is there immediate time pressure, or does Inspector Lee's timeline give you some breathing room?"
+            },
+            "retryHint": "Inspector Lee can shut you down (Power) and has legal authority (Legitimacy). But when is the inspection? Is there immediate time pressure?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Based on Kiki's profile, what is her Salience Model classification?",
+            "points": 80,
+            "scenario_name": "Classify Kiki Nguyen — Food Blogger",
+            "situation": "Kiki Nguyen is an influential local food critic with 50K+ followers. She attended the soft launch, and her review is posting tomorrow. She has no formal stake in the project but can significantly shape public perception. Her criticism could drive away customers, or her praise could fill every seat.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Definitive (High Power + High Legitimacy + High Urgency)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Dependent (High Legitimacy + High Urgency, Low Power)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Dominant (High Power + High Legitimacy, Low Urgency)",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Dangerous (Moderate Power + High Urgency, Low Legitimacy)",
+                "correct": true
+              }
+            ],
+            "explanation": "Kiki has moderate Power (no formal authority but significant reputation influence through 50K followers), LOW Legitimacy (no formal stake in the project — she's an external influencer), and HIGH Urgency (review posting tomorrow creates immediate public pressure). Power + Urgency without Legitimacy = **Dangerous** stakeholder. She can create crises but shouldn't drive project decisions.",
+            "correctFeedback": {
+              "text": "Kiki has moderate Power (no formal authority but significant reputation influence through 50K followers), LOW Legitimacy (no formal stake in the project — she's an external influencer), and HIGH Urgency (review posting tomorrow creates immediate public pressure). Power + Urgency without Legitimacy = **Dangerous** stakeholder. She can create crises but shouldn't drive project decisions.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Dangerous stakeholders are tricky. Kiki can damage your reputation overnight, but she has no formal stake. Address her concerns carefully without letting her hijack your priorities."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Does Kiki have a rightful stake in Savory & Co.? Is she an owner, employee, or regulator? Or is she an outside influencer with no formal claim?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Does Kiki have a rightful stake in Savory & Co.? Is she an owner, employee, or regulator? Or is she an outside influencer with no formal claim?"
+            },
+            "retryHint": "Kiki has influence through social media (Power) and her review drops tomorrow (Urgency). But does she have a formal stake in the business (Legitimacy)?"
+          },
+          {
+            "q_id": "q4",
+            "type": "drag_drop",
+            "question": "Drag each stakeholder to the correct Power-Interest Grid quadrant:",
+            "points": 130,
+            "scenario_name": "Power-Interest Grid Placement",
+            "situation": "Now that you've classified each stakeholder using the Salience Model, map them to the Power-Interest Grid. Remember: Power determines the vertical axis (high/low), and Interest (a combination of Legitimacy and Urgency) determines the horizontal axis.",
+            "chips": [
+              {
+                "id": "ava_thompson_investor",
+                "label": "Ava Thompson (Investor)",
+                "correctZone": "manage_closely_high_power_high_interest"
+              },
+              {
+                "id": "inspector_lee_health_inspector",
+                "label": "Inspector Lee (Health Inspector)",
+                "correctZone": "keep_satisfied_high_power_low_interest"
+              },
+              {
+                "id": "jamie_park_foh_manager",
+                "label": "Jamie Park (FOH Manager)",
+                "correctZone": "keep_informed_low_power_high_interest"
+              },
+              {
+                "id": "kiki_nguyen_food_blogger",
+                "label": "Kiki Nguyen (Food Blogger)",
+                "correctZone": "keep_informed_low_power_high_interest"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "manage_closely_high_power_high_interest",
+                "label": "Manage Closely (High Power / High Interest)",
+                "detail": "High power (controls funding) + High interest (financial stake, board meeting deadline)"
+              },
+              {
+                "id": "keep_satisfied_high_power_low_interest",
+                "label": "Keep Satisfied (High Power / Low Interest)",
+                "detail": "High power (can shut down operations) + Low interest (routine inspection, no immediate stake beyond compliance)"
+              },
+              {
+                "id": "keep_informed_low_power_high_interest",
+                "label": "Keep Informed (Low Power / High Interest)",
+                "detail": "Low power (limited strategic authority) + High interest (daily operational needs, legitimate role)"
+              }
+            ],
+            "explanation": "The Power-Interest Grid translates Salience profiles into daily management strategies. Ava (Definitive) needs the closest management. Inspector Lee (Dominant) needs proactive satisfaction. Jamie (Dependent) and Kiki (Dangerous) both need regular information, though for different reasons — Jamie has legitimate operational needs while Kiki requires monitoring for reputation management.",
+            "correctFeedback": {
+              "text": "The Power-Interest Grid translates Salience profiles into daily management strategies. Ava (Definitive) needs the closest management. Inspector Lee (Dominant) needs proactive satisfaction. Jamie (Dependent) and Kiki (Dangerous) both need regular information, though for different reasons — Jamie has legitimate operational needs while Kiki requires monitoring for reputation management.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent grid placement. Notice how Ava (Definitive) needs closest management while Inspector Lee (Dominant) needs proactive satisfaction. Different stakeholders, different strategies."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: Power determines the vertical axis (high power = top row), Interest determines horizontal (high interest = right column). Who has the power to make or break your project?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Remember: Power determines the vertical axis (high power = top row), Interest determines horizontal (high interest = right column). Who has the power to make or break your project?"
+            },
+            "retryHint": "High Power stakeholders go in the top row. High Interest stakeholders go in the right column. Who has the most formal power? Who has the most at stake?"
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "Which engagement approach is MOST appropriate for Ava Thompson (Manage Closely quadrant)?",
+            "points": 80,
+            "scenario_name": "Engagement Strategy Selection",
+            "situation": "You've placed all four stakeholders on the grid. Now Carlos asks: \"OK, so Ava is 'Manage Closely' — but what does that actually LOOK like day-to-day?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Send monthly summary reports and respond if she reaches out",
+                "correct": false,
+                "whyWrong": "Monthly reports are too infrequent for a Definitive stakeholder with an imminent board meeting. This is a \"Keep Satisfied\" approach at best."
+              },
+              {
+                "id": "B",
+                "text": "Weekly ROI updates, involve in key decisions, direct access to PM, transparent risk reporting",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Add her to the general stakeholder newsletter",
+                "correct": false,
+                "whyWrong": "A general newsletter treats Ava like a low-priority stakeholder. She has the highest Power and Interest — she deserves personalized engagement."
+              },
+              {
+                "id": "D",
+                "text": "Schedule a single kickoff meeting and check in at project close",
+                "correct": false,
+                "whyWrong": "Two touchpoints across an entire project is a \"Monitor\" approach — completely inadequate for your primary financial backer."
+              }
+            ],
+            "explanation": "\"Manage Closely\" means active, frequent engagement. Ava needs weekly updates (not monthly), involvement in key decisions (not just summaries), direct access to the PM (not filtered through newsletters), and transparent risk reporting (not just good news). This level of engagement matches her Definitive stakeholder profile.",
+            "correctFeedback": {
+              "text": "\"Manage Closely\" means active, frequent engagement. Ava needs weekly updates (not monthly), involvement in key decisions (not just summaries), direct access to the PM (not filtered through newsletters), and transparent risk reporting (not just good news). This level of engagement matches her Definitive stakeholder profile.",
+              "character": "Carlos Mendez",
+              "characterQuote": "That makes sense. Ava isn't someone you put on a mailing list. She needs to feel like a partner in this project — because she IS one."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about Ava's profile. She controls $500K in funding and has a board meeting next week. Would a monthly report or a newsletter satisfy someone with that much at stake?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about Ava's profile. She controls $500K in funding and has a board meeting next week. Would a monthly report or a newsletter satisfy someone with that much at stake?"
+            },
+            "retryHint": "Ava is Definitive (highest priority) and in the \"Manage Closely\" quadrant. What level of engagement matches the highest priority stakeholder?"
+          },
+          {
+            "q_id": "q6",
+            "type": "drag_drop",
+            "question": "Match each Salience dimension to the question it answers:",
+            "points": 50,
+            "scenario_name": "Salience Dimensions Matching",
+            "situation": "Dr. Foster tests your understanding of the three Salience dimensions before moving on.",
+            "chips": [
+              {
+                "id": "power",
+                "label": "Power",
+                "correctZone": "can_they_influence_project_success"
+              },
+              {
+                "id": "legitimacy",
+                "label": "Legitimacy",
+                "correctZone": "do_they_have_a_rightful_stake"
+              },
+              {
+                "id": "urgency",
+                "label": "Urgency",
+                "correctZone": "is_their_claim_timesensitive"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "can_they_influence_project_success",
+                "label": "Can they influence project success?",
+                "detail": "Ability to impose their will on the project"
+              },
+              {
+                "id": "do_they_have_a_rightful_stake",
+                "label": "Do they have a rightful stake?",
+                "detail": "Legal or moral claim to be involved"
+              },
+              {
+                "id": "is_their_claim_timesensitive",
+                "label": "Is their claim time-sensitive?",
+                "detail": "Immediacy and time pressure of their demands"
+              }
+            ],
+            "explanation": "The three Salience dimensions each answer a different question: Power = ability to influence, Legitimacy = rightful claim, Urgency = time sensitivity. Together, they create a 3-dimensional view of each stakeholder's priority.",
+            "correctFeedback": {
+              "text": "The three Salience dimensions each answer a different question: Power = ability to influence, Legitimacy = rightful claim, Urgency = time sensitivity. Together, they create a 3-dimensional view of each stakeholder's priority.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You've got the fundamentals locked. Power, Legitimacy, Urgency — three questions that tell you everything you need to know about where a stakeholder fits."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what each word actually means. Power is about influence and control. Legitimacy is about having a valid reason to be at the table. Urgency is about timing.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what each word actually means. Power is about influence and control. Legitimacy is about having a valid reason to be at the table. Urgency is about timing."
+            },
+            "retryHint": "Power = influence, Legitimacy = rightful claim, Urgency = time pressure. Match each to the question it answers."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Stakeholder Prioritization Toolkit",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The Salience Model",
+            "subtitle": "",
+            "content": "The **Salience Model** (Mitchell, Agle & Wood, 1997) assesses stakeholders across THREE dimensions to determine priority:\n\n**Power** — Ability to impose their will on the project\n- Can they approve or block decisions?\n- Do they control resources (budget, staff, access)?\n- Examples: Ava controls funding; Inspector Lee has regulatory shutdown authority\n\n**Legitimacy** — Rightful or legal claim to be involved\n- Do they have a formal stake (ownership, contract, legal authority)?\n- Is their involvement recognized by the project organization?\n- Examples: Ava has 35% ownership; Inspector Lee has legal authority; Jamie has an operational role; Kiki has NO formal stake\n\n**Urgency** — Time sensitivity of their claim or demand\n- Is there an immediate deadline driving their request?\n- Will delay cause significant harm?\n- Examples: Ava's board meeting is next week; Kiki's review drops tomorrow; Inspector Lee's inspection is 3 weeks away (lower urgency)\n\nThe intersection of these dimensions creates **seven stakeholder types**, each requiring a different level of attention.",
+            "diagram": {
+              "image": "/images/B1L1_diagram_salience_model.webp",
+              "alt": "Salience Model Venn Diagram"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Seven Stakeholder Types",
+            "subtitle": "",
+            "content": "The Salience Model creates seven distinct classifications based on which dimensions score high:\n\n**Three-Dimension Types (Highest Priority):**\n- **Definitive** (Power + Legitimacy + Urgency) — HIGHEST priority. All three dimensions high. Example: Ava Thompson (investor with board deadline). Demands immediate, active engagement.\n\n**Two-Dimension Types (Medium-High Priority):**\n- **Dominant** (Power + Legitimacy) — Important authority without immediate time pressure. Example: Inspector Lee (regulatory power, legal authority, inspection in 3 weeks). Proactive engagement.\n- **Dangerous** (Power + Urgency) — Can create crises but lacks formal stake. Example: Kiki Nguyen (social influence + imminent review, no formal stake). Handle carefully, don't let them hijack governance.\n- **Dependent** (Legitimacy + Urgency) — Rightful stake with time pressure but limited power. Example: Jamie Park (operational role, daily needs, limited strategic authority). Provide support and information.\n\n**One-Dimension Types (Lower Priority):**\n- **Dormant** (Power only) — Has power but no current stake or urgency. Monitor for changes.\n- **Discretionary** (Legitimacy only) — Has a rightful role but no power or urgency. Keep informed as needed.\n- **Demanding** (Urgency only) — Vocal and time-pressured but lacks power and legitimacy. Don't let noise drive decisions.\n\n**Key Insight:** Definitive stakeholders require IMMEDIATE attention. Dangerous stakeholders can create crises but should NOT drive decisions — they lack rightful stake."
+          },
+          {
+            "id": "tab3",
+            "title": "Power-Interest Grid",
+            "subtitle": "",
+            "content": "The **Power-Interest Grid** is a practical 2x2 tool for daily stakeholder management. While the Salience Model is comprehensive (3 dimensions), the grid simplifies it to two axes for quick decision-making:\n\n- **Vertical axis:** Power (High to Low) — Can they influence project outcomes?\n- **Horizontal axis:** Interest (High to Low) — How actively engaged are they?\n\n**Four Quadrant Strategies:**\n\n| Quadrant | Strategy | Description |\n|----------|----------|-------------|\n| **Manage Closely** (High Power / High Interest) | Active engagement | Weekly updates, involve in decisions, direct PM access |\n| **Keep Satisfied** (High Power / Low Interest) | Proactive satisfaction | Meet requirements efficiently, don't overwhelm with details |\n| **Keep Informed** (Low Power / High Interest) | Regular communication | Updates, address concerns, involve in relevant decisions |\n| **Monitor** (Low Power / Low Interest) | Minimal effort | Watch for changes in power or interest level |\n\n**Mapping Salience to the Grid:**\n\n| Salience Type | Grid Quadrant |\n|---------------|---------------|\n| Definitive (P+L+U) | Manage Closely |\n| Dominant (P+L) | Keep Satisfied |\n| Dependent (L+U) | Keep Informed |\n| Dangerous (P+U) | Keep Informed or Monitor |",
+            "diagram": {
+              "image": "/images/B1L1_diagram_power_interest.webp",
+              "alt": "Power-Interest Grid"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Common Mistakes",
+            "subtitle": "",
+            "content": "**Mistake 1: \"All stakeholders need equal engagement\"**\n- Truth: Definitive stakeholders need 10x more attention than Discretionary ones. Equal engagement wastes PM resources and frustrates high-priority stakeholders.\n\n**Mistake 2: \"Loud = Important\"**\n- Truth: Urgency alone doesn't equal priority. Kiki's review is urgent but she lacks legitimacy. A Demanding stakeholder (urgency only) should NOT override a Dominant one (power + legitimacy).\n\n**Mistake 3: \"Power = Formal authority only\"**\n- Truth: Power includes informal influence. Kiki has no title but her 50K followers give her real power to shape public perception. Always consider both formal and informal power.\n\n**Mistake 4: \"Stakeholder analysis is a one-time activity\"**\n- Truth: Per PMI, stakeholder identification and analysis is a CONTINUOUS process. Inspector Lee's urgency will spike as the inspection approaches. Kiki might gain legitimacy if she becomes a brand ambassador. Reassess regularly throughout the project lifecycle."
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:** Stakeholder analysis is part of the **Stakeholder Performance Domain**. The Salience Model supports Principle 2 (system interactions), and the Power-Interest Grid supports tailored engagement per PMBOK guidance.\n\n**PMP Exam Tips:**\n- Stakeholder identification appears in ~15% of PMP exam questions\n- Salience Model and Power-Interest Grid are the two most commonly tested frameworks\n- Key concept: Stakeholder analysis is iterative and continuous, not a one-time activity\n\n**Practical Use:** Salience Model for initial assessment (strategic), Power-Interest Grid for daily management (practical). Revisit both at every phase transition."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "New Stakeholder: DashCart Delivery Partner",
+        "scenario": {
+          "title": "New Stakeholder: DashCart Delivery Partner",
+          "description": "Carlos comes to Alex with news: \"We just signed with DashCart for delivery services. They're starting next week. Where do they fit in our stakeholder map?\" **DashCart Profile:**",
+          "images": [
+            {
+              "src": "/images/B1L1_comic_transfer.webp",
+              "alt": "DashCart partnership scenario"
+            }
+          ],
+          "details": [
+            "Third-party delivery service, will handle 40% of Savory & Co.'s revenue stream",
+            "Contractual partner with a 1-year agreement",
+            "Launch in 7 days — needs operational alignment immediately",
+            "Can be replaced, but doing so would cause 4-6 weeks of disruption"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Which Power-Interest Grid quadrant is MOST appropriate for DashCart?",
+            "points": 150,
+            "scenario_name": "DashCart Grid Placement",
+            "situation": "Based on DashCart's profile, you need to assess their Salience dimensions. DashCart has moderate power (affects 40% of revenue but is replaceable within 4-6 weeks), moderate-to-high legitimacy (contractual partner with formal agreement), and moderate-to-high urgency (launch in 7 days requires immediate alignment).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Manage Closely (High Power / High Interest)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Keep Satisfied (High Power / Low Interest)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Keep Informed (Low Power / High Interest)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Monitor (Low Power / Low Interest)",
+                "correct": false
+              }
+            ],
+            "explanation": "DashCart has moderate power (replaceable partner — not as high as an investor or regulator) but high interest (contractual stake and imminent launch). \"Keep Informed\" ensures they receive regular operational updates and alignment without over-investing PM time that should go to Definitive or Dominant stakeholders.",
+            "correctFeedback": {
+              "text": "DashCart has moderate power (replaceable partner — not as high as an investor or regulator) but high interest (contractual stake and imminent launch). \"Keep Informed\" ensures they receive regular operational updates and alignment without over-investing PM time that should go to Definitive or Dominant stakeholders.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Good thinking. We'll set up weekly sync calls with DashCart and share launch checklists — but they don't need to be in every strategy meeting."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about DashCart's power versus Ava's or Inspector Lee's. Can DashCart shut us down? Control our funding? Or are they a partner we could replace if needed?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about DashCart's power versus Ava's or Inspector Lee's. Can DashCart shut us down? Control our funding? Or are they a partner we could replace if needed?"
+            },
+            "retryHint": "Compare DashCart's power to Ava's and Inspector Lee's. Is DashCart's power as high? Now consider their interest — with a 7-day launch and a contract, is their interest low or high?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What's the BEST initial engagement approach for DashCart?",
+            "points": 150,
+            "scenario_name": "DashCart Engagement Strategy",
+            "situation": "You've placed DashCart in the \"Keep Informed\" quadrant. Now you need to choose the right engagement approach for the launch phase.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Schedule daily calls and include them in all project decisions",
+                "correct": false,
+                "whyWrong": "Over-engagement for a \"Keep Informed\" stakeholder. Daily calls with every partner burns PM capacity and creates dependency."
+              },
+              {
+                "id": "B",
+                "text": "Send weekly operational updates and establish clear escalation paths",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Monitor their performance metrics without direct communication",
+                "correct": false,
+                "whyWrong": "DashCart has high interest and an imminent launch. No communication will lead to misalignment and operational failures on day one."
+              },
+              {
+                "id": "D",
+                "text": "Treat them the same as Ava (investor) with weekly strategic updates",
+                "correct": false,
+                "whyWrong": "DashCart doesn't need strategic updates — they need OPERATIONAL updates. Different stakeholders need different communication content, not just different frequencies."
+              }
+            ],
+            "explanation": "Weekly operational updates with clear escalation paths match the \"Keep Informed\" strategy perfectly. You're giving DashCart what they need (operational alignment, communication channels) without over-investing PM time (daily calls) or under-investing (no communication). The key word is \"operational\" — DashCart needs operational details, not strategic updates.",
+            "correctFeedback": {
+              "text": "Weekly operational updates with clear escalation paths match the \"Keep Informed\" strategy perfectly. You're giving DashCart what they need (operational alignment, communication channels) without over-investing PM time (daily calls) or under-investing (no communication). The key word is \"operational\" — DashCart needs operational details, not strategic updates.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I'll set up a shared launch checklist and weekly sync. If issues arise, they know who to call. Clear channels, right level of engagement."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what DashCart actually needs. They're a delivery partner launching in 7 days. Do they need strategic board-level information, or operational launch details?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about what DashCart actually needs. They're a delivery partner launching in 7 days. Do they need strategic board-level information, or operational launch details?"
+            },
+            "retryHint": "\"Keep Informed\" means regular updates, not daily meetings or radio silence. What type of updates does a delivery partner need — strategic or operational?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to prioritize stakeholders using the **Salience Model** (Power, Legitimacy, Urgency) and map them to the **Power-Interest Grid** for daily management. Not all stakeholders are equal — Definitive stakeholders demand closest attention, while others need proportional engagement based on their profile.",
+        "key_takeaways": [
+          "Salience Model: Assess stakeholders across 3 dimensions — Power (can they influence success?), Legitimacy (rightful stake?), Urgency (time-sensitive?)",
+          "Seven Stakeholder Types: Definitive (highest priority), Dominant, Dependent, Dangerous, Dormant, Discretionary, Demanding",
+          "Power-Interest Grid: 4 quadrants with different strategies — Manage Closely, Keep Satisfied, Keep Informed, Monitor",
+          "Common Mistake: Not all loud stakeholders are important. Urgency alone does NOT equal priority without Power and Legitimacy",
+          "Tailored Engagement: Different stakeholders need different communication strategies — frequency, content, and channel all depend on their profile",
+          "Continuous Process: Stakeholder profiles change as projects evolve — reassess regularly"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L2",
+          "title": "Stakeholder Power & Interest Grid",
+          "description": "Dive deeper into Power TYPES (Legitimate, Expert, Referent, Persuasive) and master advanced engagement strategies for each quadrant."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Using the Salience Model, how should the PM classify this surgeon?",
+            "points": 50,
+            "scenario_name": "Dangerous Stakeholder Classification",
+            "situation": "A project manager is leading a hospital IT system upgrade. A senior surgeon with significant reputation in the hospital (but no formal project authority) is publicly criticizing the project timeline on social media, demanding immediate changes. The hospital CEO (project sponsor) has asked the PM to address this \"urgently\" before the board meeting next week.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Definitive stakeholder (Power + Legitimacy + Urgency)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Dangerous stakeholder (Power + Urgency, low Legitimacy)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Dominant stakeholder (Power + Legitimacy, low Urgency)",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Demanding stakeholder (Urgency only)",
+                "correct": false
+              }
+            ],
+            "explanation": "The surgeon has Power (reputation and ability to influence the CEO, board, and public perception), Urgency (public criticism requires response before the board meeting), but LOW Legitimacy (no formal role in the IT project). This is the \"Dangerous\" stakeholder profile — they can create crises but lack rightful project stake.",
+            "correctFeedback": {
+              "text": "The surgeon has Power (reputation and ability to influence the CEO, board, and public perception), Urgency (public criticism requires response before the board meeting), but LOW Legitimacy (no formal role in the IT project). This is the \"Dangerous\" stakeholder profile — they can create crises but lack rightful project stake.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Dangerous stakeholders need careful handling — acknowledge their power, address urgency, but don't let them hijack project governance."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Legitimacy means 'rightful stake.' Is this surgeon officially part of the project, or an influential outsider?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Legitimacy means 'rightful stake.' Is this surgeon officially part of the project, or an influential outsider?"
+            },
+            "retryHint": "The surgeon has reputation power and is creating urgency — but what about legitimacy? Does he have a formal project role?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "According to the Power-Interest Grid, which stakeholder engagement order is MOST appropriate?",
+            "points": 50,
+            "scenario_name": "Grid Engagement Priority",
+            "situation": "A PM has completed stakeholder analysis for a restaurant renovation project. The results show: City Planning Commissioner has high power (permit authority) and low interest (routine project). A Regular Customer Focus Group has low power (advisory only) and high interest (engaged advocates). A Kitchen Equipment Vendor has moderate power (delivery dependencies) and moderate interest (contracted scope). The PM has limited time and must prioritize engagement efforts.",
+            "options": [
+              {
+                "id": "A",
+                "text": "1) Focus Group (high interest), 2) Commissioner (high power), 3) Vendor (moderate both)",
+                "correct": false,
+                "whyWrong": "High interest alone doesn't determine engagement priority. The Commissioner has HIGH POWER — can block permits. Focus Group enthusiasm doesn't compensate for lack of decision authority."
+              },
+              {
+                "id": "B",
+                "text": "1) Commissioner (high power), 2) Vendor (dependencies), 3) Focus Group (advisory)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "1) Vendor (dependencies), 2) Commissioner (high power), 3) Focus Group (advisory)",
+                "correct": false,
+                "whyWrong": "Vendor has MODERATE power. Commissioner has HIGH power. Never prioritize moderate-power stakeholders over high-power ones — the Commissioner can block your entire project."
+              },
+              {
+                "id": "D",
+                "text": "All three should receive equal engagement effort",
+                "correct": false,
+                "whyWrong": "Equal engagement is inefficient. The Salience Model exists precisely to differentiate priorities."
+              }
+            ],
+            "explanation": "Power-Interest Grid prioritizes: (1) High Power stakeholders first (Commissioner = \"Keep Satisfied\"), (2) Then moderate-power dependencies (Vendor), (3) Then low-power advocates (Focus Group = \"Keep Informed\"). The Commissioner can block permits; the Focus Group can only advise.",
+            "correctFeedback": {
+              "text": "Power-Interest Grid prioritizes: (1) High Power stakeholders first (Commissioner = \"Keep Satisfied\"), (2) Then moderate-power dependencies (Vendor), (3) Then low-power advocates (Focus Group = \"Keep Informed\"). The Commissioner can block permits; the Focus Group can only advise.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I learned this the hard way. Ignored a permit officer to please customer advocates — project got delayed 6 weeks. Never again."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "High interest doesn't equal high impact. Who has the power to block you?",
+              "character": "Carlos Mendez",
+              "characterQuote": "High interest doesn't equal high impact. Who has the power to block you?"
+            },
+            "retryHint": "Power determines ability to impact the project. Who has the highest power to stop or enable success?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "How has the legal counsel's Salience classification MOST likely changed?",
+            "points": 50,
+            "scenario_name": "Stakeholder Type Shift",
+            "situation": "A software development project is in its final sprint. The company's legal counsel, who had been a Dormant stakeholder (high power, no interest or urgency), just discovered that the product may have data privacy compliance issues. She is now actively requesting meetings and documentation reviews with a 2-week regulatory deadline.",
+            "options": [
+              {
+                "id": "A",
+                "text": "From Dormant to Demanding (gained urgency only)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "From Dormant to Dangerous (gained urgency, no legitimacy)",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "From Dormant to Definitive (gained legitimacy and urgency)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "She remains Dormant because her formal role hasn't changed",
+                "correct": false,
+                "whyWrong": "Stakeholder classifications are NOT static. PMI emphasizes continuous reassessment as project conditions change."
+              }
+            ],
+            "explanation": "The legal counsel originally had only Power (dormant). Now she has gained Legitimacy (data privacy compliance is her rightful domain) and Urgency (2-week regulatory deadline). Moving from one dimension (Power) to all three (Power + Legitimacy + Urgency) makes her a Definitive stakeholder — the highest priority classification.",
+            "correctFeedback": {
+              "text": "The legal counsel originally had only Power (dormant). Now she has gained Legitimacy (data privacy compliance is her rightful domain) and Urgency (2-week regulatory deadline). Moving from one dimension (Power) to all three (Power + Legitimacy + Urgency) makes her a Definitive stakeholder — the highest priority classification.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "This is exactly why stakeholder analysis must be continuous. A Dormant stakeholder can become your top priority overnight when circumstances change."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Consider: Does the legal counsel now have a rightful claim (legitimacy) related to compliance? And does the 2-week deadline create urgency? What about her existing power?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Consider: Does the legal counsel now have a rightful claim (legitimacy) related to compliance? And does the 2-week deadline create urgency? What about her existing power?"
+            },
+            "retryHint": "The legal counsel always had power. What TWO dimensions did she just gain through the compliance discovery?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the MOST significant problem with this engagement approach?",
+            "points": 50,
+            "scenario_name": "Engagement Strategy Mismatch",
+            "situation": "A project manager is managing a new product launch. She has classified her key stakeholders and developed engagement strategies. One of her decisions: treating the company CEO (project sponsor, high power, high interest) with a \"Keep Informed\" strategy — monthly email newsletters and quarterly reports.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Monthly newsletters are too frequent for a CEO",
+                "correct": false,
+                "whyWrong": "Monthly newsletters are actually too INfrequent for a high-power, high-interest sponsor. The CEO needs weekly engagement, not less."
+              },
+              {
+                "id": "B",
+                "text": "The CEO should be in the \"Manage Closely\" quadrant with much more active engagement",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Quarterly reports are the correct frequency for all high-power stakeholders",
+                "correct": false,
+                "whyWrong": "Quarterly reports are appropriate for \"Monitor\" or \"Keep Satisfied\" stakeholders at most. High-power, high-interest stakeholders need far more frequent touchpoints."
+              },
+              {
+                "id": "D",
+                "text": "The CEO should be \"Monitored\" since sponsors don't need regular updates",
+                "correct": false,
+                "whyWrong": "Monitoring a project sponsor is the fastest way to lose organizational support. Sponsors need active engagement, not passive observation."
+              }
+            ],
+            "explanation": "The CEO is High Power (project sponsor) and High Interest (invested in product launch success). This places her firmly in the \"Manage Closely\" quadrant, requiring weekly updates, direct involvement in key decisions, and transparent risk reporting. Monthly newsletters and quarterly reports reflect a \"Keep Informed\" or even \"Monitor\" approach — dangerously inadequate for your project sponsor.",
+            "correctFeedback": {
+              "text": "The CEO is High Power (project sponsor) and High Interest (invested in product launch success). This places her firmly in the \"Manage Closely\" quadrant, requiring weekly updates, direct involvement in key decisions, and transparent risk reporting. Monthly newsletters and quarterly reports reflect a \"Keep Informed\" or even \"Monitor\" approach — dangerously inadequate for your project sponsor.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Your project sponsor is your biggest ally AND your biggest risk. Under-engaging the CEO is like ignoring your most important customer. You won't get a second chance."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what 'high power AND high interest' means on the grid. Where does that combination land? And what does that quadrant's strategy require?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about what 'high power AND high interest' means on the grid. Where does that combination land? And what does that quadrant's strategy require?"
+            },
+            "retryHint": "Plot the CEO on the grid: High Power + High Interest. What quadrant is that? And what engagement level does that quadrant require?"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "lessonId": "D1L3",
+  "lessonTitle": "Sprint Planning & Execution",
+  "courseId": "D1",
+  "courseName": "Agile Mindset & Frameworks",
+  "pathId": "D",
+  "pathName": "Adaptive & Hybrid Delivery",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand two-part Sprint Planning: WHAT (selecting items) + HOW (task breakdown)",
+    "Recognize that the Development Team self-organizes sprint backlog priorities",
+    "Apply Definition of Ready (DoR) to determine sprint inclusion",
+    "Calculate team commitment using velocity (average from past sprints)",
+    "Understand sprint backlog flexibility with PO collaboration"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "morgan_lee",
+    "maya_rodriguez",
+    "devon_brown",
+    "carlos_mendez"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Sprint 4 Fails Before It Starts: Three Planning Mistakes That Doom the Sprint",
+        "intro": "You're **Alex Mitchell**, Scrum Master at Savory & Co. Sprint 4 Planning for the Menu Innovation Lab is about to begin — but Morgan wants to dictate task order, Maya is pushing an incomplete story, and Carlos demands 143% of the team's capacity. If Sprint Planning goes wrong, the entire two-week sprint is dead on arrival. Can you fix these problems before the team commits to a plan they can't deliver?",
+        "failure_cards": [
+          {
+            "id": "the_po_dictates_sprint_work",
+            "icon": "📋",
+            "title": "The PO Dictates Sprint Work",
+            "summary": "Morgan takes over sprint backlog priorities — and the team disengages",
+            "image": "/images/D1L3_comic_po_dictates.webp",
+            "details": "Morgan told the team: \"Work on Online Ordering first, then Menu Update, then Customer Feedback.\" Devon looked confused — he knew the Menu Update had a dependency that needed to go first. But Morgan overruled him. The team stopped self-organizing and waited for Morgan's instructions on everything. Velocity dropped 30% because tasks were sequenced wrong. Alex realized too late: the PO owns PRODUCT backlog priority, but the TEAM owns SPRINT backlog task order."
+          },
+          {
+            "id": "incomplete_stories_enter_the_sprint",
+            "icon": "⚠️",
+            "title": "Incomplete Stories Enter the Sprint",
+            "summary": "Maya's \"we'll figure it out later\" approach causes mid-sprint chaos",
+            "image": "/images/D1L3_comic_incomplete_story.webp",
+            "details": "Maya convinced the team to include the \"Fusion Appetizer\" story — 5 points, no acceptance criteria, no ingredient list, no dietary restrictions defined. \"We can figure it out during the sprint!\" By Day 4, the team spent two days trying to define requirements mid-sprint. Other stories stalled. The sprint ended with three stories incomplete. Alex learned: Definition of Ready is a gate, not a suggestion. If a story isn't ready, it doesn't enter the sprint."
+          },
+          {
+            "id": "overcommitment_crushes_the_team",
+            "icon": "💡",
+            "title": "Overcommitment Crushes the Team",
+            "summary": "Carlos pushes the team to commit to 143% of capacity — guaranteed failure",
+            "image": "/images/D1L3_comic_overcommitment.webp",
+            "details": "Carlos stormed into Sprint Planning: \"Critical deadline! Commit to 40 story points!\" The team's average velocity was 28. Devon showed the data, but Carlos insisted. The team caved. By Day 8, only 22 points were complete. The team worked overtime, quality dropped, and two stories shipped with bugs. Final delivery: 26 points with defects. If they had committed to 28 clean points, they would have delivered more value with better quality."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "alex_mitchell",
+          "name": "Alex Mitchell",
+          "role": "Scrum Master",
+          "quote": "Sprint Planning has rules. The PO owns WHAT, the team owns HOW. Stories must meet Definition of Ready. And velocity is average, not wishful thinking. Get these wrong and the sprint fails before it starts."
+        },
+        "learning_hook": "**Sprint Planning** is a two-part ceremony: Part 1 (WHAT to build) is PO-led, Part 2 (HOW to build it) is Team-led. Stories must meet Definition of Ready before entering the sprint. And the team commits based on average velocity — not business pressure. Let's learn how to run Sprint Planning right."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "facilitate_sprint_4_planning",
+        "title": "Facilitate Sprint 4 Planning",
+        "description": "Alex needs your help facilitating Sprint 4 Planning for the Menu Innovation Lab. The team faces critical decisions about who owns what, which stories are ready, and how much to commit. Make the right calls.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Who should prioritize task order within the sprint backlog?",
+            "points": 100,
+            "scenario_name": "Sprint Backlog Ownership",
+            "situation": "Morgan (Product Owner) announces: \"I'll prioritize the sprint backlog tasks. Work on Online Ordering first, then Menu Update, then Customer Feedback.\" Devon looks confused and glances at Alex — he knows the Menu Update has a dependency that should go first.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Product Owner (Morgan) — they own all backlogs",
+                "correct": false,
+                "whyWrong": "Morgan owns the PRODUCT backlog (what to build and in what order). But the SPRINT backlog belongs to the Development Team. They self-organize task priorities based on technical dependencies and skills."
+              },
+              {
+                "id": "B",
+                "text": "Development Team — they self-organize sprint work",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Scrum Master (Alex) — they facilitate everything",
+                "correct": false,
+                "whyWrong": "The Scrum Master facilitates the process but doesn't direct work. Alex helps the team self-organize — he doesn't assign tasks or set sprint backlog priorities."
+              },
+              {
+                "id": "D",
+                "text": "Stakeholders — based on business urgency",
+                "correct": false,
+                "whyWrong": "Stakeholder input flows through the Product Owner into the product backlog. Stakeholders don't directly prioritize sprint work — that's the team's domain."
+              }
+            ],
+            "explanation": "The Development Team self-organizes sprint backlog priorities. They understand technical dependencies, skill availability, and optimal task sequencing better than anyone. The PO owns WHAT (Product Backlog priority); the team owns HOW (Sprint Backlog task order).",
+            "correctFeedback": {
+              "text": "The Development Team self-organizes sprint backlog priorities. They understand technical dependencies, skill availability, and optimal task sequencing better than anyone. The PO owns WHAT (Product Backlog priority); the team owns HOW (Sprint Backlog task order).",
+              "character": "Morgan Lee",
+              "characterQuote": "I see now. I prioritize the product backlog — which stories are most valuable. But the team decides task order within the sprint. They know the technical dependencies I don't."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Morgan decides WHAT is most valuable. The team decides HOW to execute it. That's distributed authority in Scrum — PO owns Product Backlog, team owns Sprint Backlog.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Morgan decides WHAT is most valuable. The team decides HOW to execute it. That's distributed authority in Scrum — PO owns Product Backlog, team owns Sprint Backlog."
+            },
+            "retryHint": "Think about two different backlogs: Product Backlog (WHAT to build) and Sprint Backlog (HOW to execute). Who owns each one?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Should the team include this story in Sprint 4?",
+            "points": 100,
+            "scenario_name": "Definition of Ready",
+            "situation": "Maya wants to include \"Create fusion appetizer\" (5 story points) in Sprint 4. Reviewing the story: acceptance criteria not defined, ingredient list missing, presentation specs unknown, dietary restrictions not identified. Only the estimate is done (5 points). Maya argues: \"We can figure out the details during the sprint. Let's just include it!\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes — 5 points helps us hit our velocity target",
+                "correct": false,
+                "whyWrong": "Velocity isn't about hitting a number — it's about delivering DONE work. An incomplete story will cause mid-sprint delays, scope creep, and potential sprint failure."
+              },
+              {
+                "id": "B",
+                "text": "No — story doesn't meet Definition of Ready, push to backlog refinement",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Yes — add placeholder tasks and clarify later",
+                "correct": false,
+                "whyWrong": "Placeholders create false progress. You can't estimate tasks for unclear requirements. This leads to discovery work mid-sprint that blows up your commitment."
+              },
+              {
+                "id": "D",
+                "text": "Split the story into smaller pieces during planning",
+                "correct": false,
+                "whyWrong": "Splitting can help with size, but you can't split undefined requirements into smaller undefined pieces. First, the story needs proper definition (acceptance criteria, details). Then consider splitting if still too large."
+              }
+            ],
+            "explanation": "The story fails Definition of Ready (DoR). Missing acceptance criteria, ingredients, specs, and dietary info means the team can't properly plan or execute. Push to backlog refinement — spend 30 minutes now instead of wasting 2 days mid-sprint on discovery work.",
+            "correctFeedback": {
+              "text": "The story fails Definition of Ready (DoR). Missing acceptance criteria, ingredients, specs, and dietary info means the team can't properly plan or execute. Push to backlog refinement — spend 30 minutes now instead of wasting 2 days mid-sprint on discovery work.",
+              "character": "Alex Mitchell",
+              "characterQuote": "DoR is a gate, not a suggestion. Stories must be ready BEFORE sprint planning. Maya, let's refine this for Sprint 5."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If we don't know the acceptance criteria, how do we know when we're done? We'll waste days figuring it out mid-sprint.",
+              "character": "Devon Brown",
+              "characterQuote": "If we don't know the acceptance criteria, how do we know when we're done? We'll waste days figuring it out mid-sprint."
+            },
+            "retryHint": "Can the team plan tasks for a story when they don't know the acceptance criteria, ingredients, or dietary restrictions? What does \"ready\" mean?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "How many story points should the team commit to?",
+            "points": 100,
+            "scenario_name": "Velocity-Based Capacity",
+            "situation": "Devon pulls up the velocity data: Sprint 1 = 25 points, Sprint 2 = 30 points, Sprint 3 = 28 points. Carlos storms in: \"Critical deadline! I need the team to commit to 40 story points this sprint!\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "40 points — meet the business need",
+                "correct": false,
+                "whyWrong": "40 points is 143% of average capacity. Overcommitting to satisfy business pressure guarantees sprint failure, team burnout, and broken trust. Velocity exists precisely to prevent this."
+              },
+              {
+                "id": "B",
+                "text": "30 points — use maximum from past sprints",
+                "correct": false,
+                "whyWrong": "Cherry-picking the maximum sprint isn't forecasting — it's gambling. The 30-point sprint might have been an outlier. Use the average for sustainable, predictable delivery."
+              },
+              {
+                "id": "C",
+                "text": "~28 points — average velocity from past sprints",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "25 points — be conservative to guarantee success",
+                "correct": false,
+                "whyWrong": "Being overly conservative wastes capacity. The team can reliably deliver 28 points. Committing to only 25 leaves value on the table. Use the average, not the minimum."
+              }
+            ],
+            "explanation": "Average velocity = (25 + 30 + 28) / 3 = 27.67, approximately 28 points. This is the sustainable, predictable forecast. The team commits to achievable work, delivering reliably sprint after sprint. Overcommitting to 40 points (143% of capacity) guarantees sprint failure.",
+            "correctFeedback": {
+              "text": "Average velocity = (25 + 30 + 28) / 3 = 27.67, approximately 28 points. This is the sustainable, predictable forecast. The team commits to achievable work, delivering reliably sprint after sprint. Overcommitting to 40 points (143% of capacity) guarantees sprint failure.",
+              "character": "Alex Mitchell",
+              "characterQuote": "28 points. That's our velocity. Sustainable pace means we deliver every sprint, not burn out trying to hit arbitrary targets."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "40 points when we average 28? That's a 43% overcommit. We'll fail and damage credibility. Use the data, not the pressure.",
+              "character": "Devon Brown",
+              "characterQuote": "40 points when we average 28? That's a 43% overcommit. We'll fail and damage credibility. Use the data, not the pressure."
+            },
+            "retryHint": "Velocity is calculated as the AVERAGE of past sprints. Not the maximum, not the minimum, and definitely not what a stakeholder wants it to be."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "Can the sprint backlog be modified during the sprint?",
+            "points": 100,
+            "scenario_name": "Sprint Backlog Flexibility",
+            "situation": "Mid-Sprint 4 discussion. Carlos asks: \"If you finish early, can you add more features?\" Taylor asks: \"What if a story turns out more complex than expected — can we remove it?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "No — sprint backlog is frozen once the sprint starts",
+                "correct": false,
+                "whyWrong": "Sprint backlog is NOT frozen. Agile is about adaptability. The team can adjust the backlog during the sprint, always in collaboration with the Product Owner and while protecting the sprint goal."
+              },
+              {
+                "id": "B",
+                "text": "Yes — team can add/remove stories with PO collaboration, maintaining sprint goal",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Only the Scrum Master can approve sprint backlog changes",
+                "correct": false,
+                "whyWrong": "The Scrum Master facilitates but doesn't control. Sprint backlog changes are negotiated between the Development Team and Product Owner. Alex helps the conversation happen — he doesn't approve or block."
+              },
+              {
+                "id": "D",
+                "text": "Only add work if finished early — never remove anything",
+                "correct": false,
+                "whyWrong": "Sometimes stories are more complex than estimated. Removing scope (with PO agreement) is better than failing the sprint goal or delivering half-done work. Flexibility goes both ways."
+              }
+            ],
+            "explanation": "Sprint backlog is flexible. If the team finishes early, they can pull more work (with PO prioritization). If complexity emerges, they can negotiate scope (with PO). The sprint GOAL is sacred; the BACKLOG is adaptable. Goal = commitment to stakeholders. Backlog = tool for achieving the goal.",
+            "correctFeedback": {
+              "text": "Sprint backlog is flexible. If the team finishes early, they can pull more work (with PO prioritization). If complexity emerges, they can negotiate scope (with PO). The sprint GOAL is sacred; the BACKLOG is adaptable. Goal = commitment to stakeholders. Backlog = tool for achieving the goal.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Sprint GOAL is stable — that's our commitment. Sprint BACKLOG is flexible — that's how we adapt to reality."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "A frozen backlog would mean we're stuck when reality doesn't match our plan. That's not Agile. We need flexibility with guardrails.",
+              "character": "Taylor Kim",
+              "characterQuote": "A frozen backlog would mean we're stuck when reality doesn't match our plan. That's not Agile. We need flexibility with guardrails."
+            },
+            "retryHint": "Think about two different things: the Sprint GOAL (why we're sprinting) and the Sprint BACKLOG (how we get there). Which one is fixed and which one adapts?"
+          },
+          {
+            "q_id": "q5",
+            "type": "drag_drop",
+            "question": "Drag each Sprint Planning activity to the correct position in the sequence:",
+            "points": 100,
+            "scenario_name": "Sprint Planning Sequence",
+            "situation": "Alex is coaching a new Scrum team on Sprint Planning. They've never done formal Sprint Planning before and need to understand the correct sequence of activities — starting with the PO presenting priorities through to the team breaking stories into tasks.",
+            "chips": [
+              {
+                "id": "po_presents_prioritized_product_backlog_items",
+                "label": "PO presents prioritized Product Backlog items",
+                "correctZone": "position_1"
+              },
+              {
+                "id": "team_asks_questions_and_clarifies_requirements",
+                "label": "Team asks questions and clarifies requirements",
+                "correctZone": "position_2"
+              },
+              {
+                "id": "team_selects_stories_based_on_velocity_forecast",
+                "label": "Team selects stories based on velocity forecast",
+                "correctZone": "position_3"
+              },
+              {
+                "id": "team_creates_sprint_goal_statement",
+                "label": "Team creates Sprint Goal statement",
+                "correctZone": "position_4"
+              },
+              {
+                "id": "team_breaks_down_stories_into_tasks_how",
+                "label": "Team breaks down stories into tasks (HOW)",
+                "correctZone": "position_5"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "position_1",
+                "label": "Position 1",
+                "detail": "Sprint Planning starts with the PO showing what's most valuable — this is Part 1 (WHAT)"
+              },
+              {
+                "id": "position_2",
+                "label": "Position 2",
+                "detail": "Team needs to understand what the PO is proposing before selecting anything"
+              },
+              {
+                "id": "position_3",
+                "label": "Position 3",
+                "detail": "After understanding the stories, team picks what fits their capacity"
+              },
+              {
+                "id": "position_4",
+                "label": "Position 4",
+                "detail": "With selected stories, team and PO agree on a unified objective for the sprint"
+              },
+              {
+                "id": "position_5",
+                "label": "Position 5",
+                "detail": "Part 2 (HOW): team self-organizes task breakdown after committing to stories"
+              }
+            ],
+            "explanation": "Sprint Planning follows a two-part structure. Part 1 (WHAT): PO presents priorities, team clarifies, team selects based on velocity, and team creates the Sprint Goal. Part 2 (HOW): team breaks stories into tasks and self-organizes execution. The PO leads Part 1; the team leads Part 2.",
+            "correctFeedback": {
+              "text": "Sprint Planning follows a two-part structure. Part 1 (WHAT): PO presents priorities, team clarifies, team selects based on velocity, and team creates the Sprint Goal. Part 2 (HOW): team breaks stories into tasks and self-organizes execution. The PO leads Part 1; the team leads Part 2.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Perfect sequence! Part 1 (WHAT): PO presents, team clarifies, team selects, sprint goal. Part 2 (HOW): task breakdown. PO leads the first half, team leads the second."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember the two-part structure. Part 1 is about WHAT to build — PO presents, team asks questions, team selects stories, then sprint goal. Part 2 is HOW — task breakdown.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Remember the two-part structure. Part 1 is about WHAT to build — PO presents, team asks questions, team selects stories, then sprint goal. Part 2 is HOW — task breakdown."
+            },
+            "retryHint": "Sprint Planning has two parts: WHAT (PO-led) and HOW (Team-led). The PO presents first, the team clarifies, selects, sets the goal, then breaks work into tasks."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Sprint Planning Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Two-Part Sprint Planning Structure",
+            "subtitle": "",
+            "content": "Sprint Planning is a collaborative ceremony with two distinct phases. Getting the structure right is essential for sprint success.\n\n\n**Part 1: WHAT to Build (PO + Team)**\n\n| Activity | Who | Purpose |\n|----------|-----|---------|\n| Present Product Backlog | Product Owner | Show highest-priority items |\n| Clarify Requirements | Team asks, PO answers | Ensure understanding |\n| Select Stories | Team decides | Match capacity to velocity |\n| Define Sprint Goal | Team + PO | Unified objective |\n\n**PO's Role:** Morgan presents priorities and answers questions.\n**Team's Role:** Ask questions, ensure clarity, select what they can deliver.\n\n**Part 2: HOW to Build It (Team Only)**\n\n| Activity | Who | Purpose |\n|----------|-----|---------|\n| Break Down Stories | Development Team | Create tasks |\n| Estimate Tasks | Development Team | Hours/effort |\n| Identify Dependencies | Development Team | Sequence work |\n| Self-Organize | Development Team | Assign tasks |\n\n**Key Insight:** The PO steps back in Part 2. The team owns HOW they execute.",
+            "diagram": {
+              "image": "/images/D1L3_diagram_two_part_planning.webp",
+              "alt": "Sprint Planning two-part framework"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Definition of Ready (DoR)",
+            "subtitle": "",
+            "content": "Before a story enters a sprint, it must meet the Definition of Ready:\n\n| Criteria | Check |\n|----------|-------|\n| Clear acceptance criteria | Required |\n| Story sized/estimated | Required |\n| Dependencies identified | Required |\n| Team understands requirements | Required |\n| No blocking issues | Required |\n\n**If a story fails DoR:** Push to backlog refinement. Don't include it in the sprint.\n\n**Maya's Lesson:** \"Figure it out during the sprint\" leads to mid-sprint delays, scope creep, and failed commitments. DoR prevents this."
+          },
+          {
+            "id": "tab3",
+            "title": "Velocity-Based Forecasting",
+            "subtitle": "",
+            "content": "**Formula:** Velocity = Sum of past sprint points / Number of sprints\n\n**Example:**\n- Sprint 1: 25 points | Sprint 2: 30 points | Sprint 3: 28 points\n- **Average Velocity:** (25 + 30 + 28) / 3 = 27.67 ≈ 28 points\n\n**Rules:**\n1. Use average, not maximum (accounts for natural variation)\n2. Use 3-5 sprints of data for reliability\n3. Reject pressure to overcommit (143% = guaranteed failure)",
+            "diagram": {
+              "image": "/images/D1L3_diagram_velocity_forecast.webp",
+              "alt": "Velocity calculation diagram"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Sprint Backlog Flexibility",
+            "subtitle": "",
+            "content": "| Element | Flexibility | Why |\n|---------|-------------|-----|\n| Sprint Goal | STABLE | Commitment to stakeholders |\n| Sprint Backlog | FLEXIBLE | Adapt to emerging reality |\n\n**When to Adjust:**\n- **Add work:** Team finishes early, pulls next priority (with PO)\n- **Remove work:** Story more complex than estimated (negotiate with PO)\n- **Always:** Protect the sprint goal"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Multi-Team Sprint Planning",
+        "scenario": {
+          "title": "Multi-Team Sprint Planning",
+          "description": "Savory & Co. is launching a mobile app. THREE Scrum teams are involved: Backend Team (velocity = 32 story points), Frontend Team (velocity = 28 story points), and QA Team (velocity = 20 story points). The Product Owner wants \"sprint alignment\" and asks all three teams to commit to 40 story points each. Alex brings you in to advise.",
+          "images": [
+            {
+              "src": "/images/D1L3_comic_transfer.webp",
+              "alt": "Multi-team sprint planning coordination"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What is wrong with requiring identical commitments across all teams?",
+            "points": 75,
+            "scenario_name": "Multi-Team Velocity",
+            "situation": "The PO says: \"For sprint alignment, all teams should commit to the same number — 40 story points each. That way we're synchronized.\" The Backend Team's velocity is 32, Frontend is 28, and QA is 20.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Nothing — sprint alignment requires identical commitments",
+                "correct": false,
+                "whyWrong": "Identical commitments ignore team capacity. QA Team (velocity 20) would commit to 200% capacity — guaranteed failure. Alignment isn't about matching numbers."
+              },
+              {
+                "id": "B",
+                "text": "Each team should commit to their OWN velocity — 32, 28, and 20 respectively",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Use the lowest team's velocity (20) for all teams",
+                "correct": false,
+                "whyWrong": "This wastes Backend's and Frontend's capacity. Backend can deliver 32 points — why limit them to 20? Each team should commit to their own realistic forecast."
+              }
+            ],
+            "explanation": "Each team has different velocity because they have different capacity, skills, and work complexity. Backend commits to 32, Frontend to 28, QA to 20. Alignment comes from coordinated goals and managed dependencies, not identical story point commitments.",
+            "correctFeedback": {
+              "text": "Each team has different velocity because they have different capacity, skills, and work complexity. Backend commits to 32, Frontend to 28, QA to 20. Alignment comes from coordinated goals and managed dependencies, not identical story point commitments.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Sprint alignment = coordinated goals and managed dependencies. NOT identical story points. Each team commits to what they can actually deliver."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what happens if QA commits to 40 when they can deliver 20. That's 200% capacity — guaranteed failure. And when QA fails, Backend and Frontend are blocked.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about what happens if QA commits to 40 when they can deliver 20. That's 200% capacity — guaranteed failure. And when QA fails, Backend and Frontend are blocked."
+            },
+            "retryHint": "Alignment means teams work toward the same product goal, not that they commit to the same number of story points. Each team's velocity is unique."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "How should teams handle cross-team dependencies in Sprint Planning?",
+            "points": 75,
+            "scenario_name": "Dependency Coordination",
+            "situation": "The Frontend Team's work depends on Backend APIs. If Backend is delayed, Frontend is blocked. Both teams are in Sprint Planning for the same two-week sprint.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Frontend should buffer their sprint with extra work in case Backend is late",
+                "correct": false,
+                "whyWrong": "Buffers hide problems. If there's a dependency risk, address it directly in Sprint Planning. Identify the specific APIs needed and sequence the work accordingly."
+              },
+              {
+                "id": "B",
+                "text": "Identify dependencies in Sprint Planning and coordinate delivery timing across teams",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Have all teams work in isolation and integrate at sprint end",
+                "correct": false,
+                "whyWrong": "End-of-sprint integration is 'big bang' thinking — exactly what Agile avoids. Dependencies should be identified and coordinated early, with integration happening throughout the sprint."
+              }
+            ],
+            "explanation": "In multi-team Sprint Planning, identify cross-team dependencies explicitly. Backend commits to delivering APIs by Day 5; Frontend plans dependent work for Days 6-10. Coordination over isolation — map the integration points and plan around them.",
+            "correctFeedback": {
+              "text": "In multi-team Sprint Planning, identify cross-team dependencies explicitly. Backend commits to delivering APIs by Day 5; Frontend plans dependent work for Days 6-10. Coordination over isolation — map the integration points and plan around them.",
+              "character": "Alex Mitchell",
+              "characterQuote": "We map dependencies in Sprint Planning. Backend knows Frontend needs APIs by Day 5. That's the integration point we all commit to."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Integration at sprint end? That's when we discover nothing works together. We need continuous integration, not a last-day surprise.",
+              "character": "Devon Brown",
+              "characterQuote": "Integration at sprint end? That's when we discover nothing works together. We need continuous integration, not a last-day surprise."
+            },
+            "retryHint": "What if Backend and Frontend planned their work together, identifying exactly when APIs need to be ready? That's coordinated Sprint Planning."
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "How should these sprint goals be coordinated?",
+            "points": 75,
+            "scenario_name": "Sprint Goal Alignment",
+            "situation": "Each team creates their own Sprint Goal: Backend says \"Complete payment API,\" Frontend says \"Build checkout UI,\" QA says \"Test checkout flow.\" The three teams are building one feature (customer checkout) but working independently.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Each team focuses on their own goal independently",
+                "correct": false,
+                "whyWrong": "Independent goals create silos. The three teams are building ONE feature (checkout). Their goals should align toward a shared outcome, not operate in isolation."
+              },
+              {
+                "id": "B",
+                "text": "Create one unified Sprint Goal that spans all three teams",
+                "correct": false,
+                "whyWrong": "A single goal across all teams can work at the product level, but each team still needs their own specific sprint goal for accountability and focus. Combine shared vision with team-level goals."
+              },
+              {
+                "id": "C",
+                "text": "Create a shared product goal with team-specific sprint goals that align to it",
+                "correct": true
+              }
+            ],
+            "explanation": "Create a shared Product Goal (\"Enable customer checkout\"), then team-specific Sprint Goals that ladder up to it. Each team knows their piece and how it connects to the whole. This balances shared vision with team-level accountability.",
+            "correctFeedback": {
+              "text": "Create a shared Product Goal (\"Enable customer checkout\"), then team-specific Sprint Goals that ladder up to it. Each team knows their piece and how it connects to the whole. This balances shared vision with team-level accountability.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Product Goal: 'Enable checkout.' Backend Goal: 'Payment API.' Frontend Goal: 'Checkout UI.' QA Goal: 'Test checkout.' Aligned but specific."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Three teams, one feature. If their goals don't connect, we ship three disconnected pieces. But one mega-goal is hard to track. Find the middle ground.",
+              "character": "Morgan Lee",
+              "characterQuote": "Three teams, one feature. If their goals don't connect, we ship three disconnected pieces. But one mega-goal is hard to track. Find the middle ground."
+            },
+            "retryHint": "Think about layers: one shared PRODUCT goal that everyone works toward, plus individual SPRINT goals that define each team's contribution. Alignment plus accountability."
+          },
+          {
+            "q_id": "transfer_q4",
+            "type": "single_select",
+            "question": "What should happen?",
+            "points": 75,
+            "scenario_name": "When Stories Fail DoR Across Teams",
+            "situation": "During multi-team Sprint Planning, the QA Team realizes the \"Payment Validation\" story lacks test criteria. Backend and Frontend already planned dependent work. QA asks: \"Can we include it anyway? We'll figure out the test criteria as we go.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Include it — other teams are depending on this story",
+                "correct": false,
+                "whyWrong": "Pressure from dependencies doesn't override DoR. If QA can't properly test the feature, the whole integration fails. Address the DoR gap first."
+              },
+              {
+                "id": "B",
+                "text": "Remove the story from all teams' sprints — no one can work on checkout",
+                "correct": false,
+                "whyWrong": "Overly conservative. Backend and Frontend can do preparatory work while QA refines the test criteria. Don't block everyone — find a path forward."
+              },
+              {
+                "id": "C",
+                "text": "QA refines test criteria immediately; other teams proceed with non-dependent work",
+                "correct": true
+              }
+            ],
+            "explanation": "QA spends 30 minutes defining test criteria (DoR fix). Meanwhile, Backend and Frontend work on stories that don't depend on QA validation. Once DoR is met, integrate the work. No blocking, no shortcuts — address the gap without halting everyone.",
+            "correctFeedback": {
+              "text": "QA spends 30 minutes defining test criteria (DoR fix). Meanwhile, Backend and Frontend work on stories that don't depend on QA validation. Once DoR is met, integrate the work. No blocking, no shortcuts — address the gap without halting everyone.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Quick fix: QA defines test criteria now. Backend starts the API. We integrate once DoR is met. No blocking, no shortcuts."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Removing everything wastes a sprint. Let's be surgical — what CAN we do while we fix the test criteria gap?",
+              "character": "Morgan Lee",
+              "characterQuote": "Removing everything wastes a sprint. Let's be surgical — what CAN we do while we fix the test criteria gap?"
+            },
+            "retryHint": "DoR is non-negotiable, but that doesn't mean everything stops. What can the other teams work on while QA fixes the gap?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned how to facilitate effective Sprint Planning using the two-part structure, Definition of Ready, velocity-based forecasting, and sprint backlog flexibility.",
+        "key_takeaways": [
+          "Sprint Planning has two parts — Part 1 (WHAT): PO presents priorities, team selects stories. Part 2 (HOW): Team breaks stories into tasks and self-organizes.",
+          "PO owns Product Backlog. Team owns Sprint Backlog. — Morgan decides WHAT is most valuable. The team decides HOW to execute. Never let the PO dictate sprint task order.",
+          "Definition of Ready is a gate, not a suggestion — Stories missing acceptance criteria, dependencies, or requirements do NOT enter the sprint. \"Figure it out later\" = mid-sprint failure.",
+          "Velocity = Average, not Maximum — Use 3-5 sprints of historical data. Reject pressure to overcommit. 143% of capacity = guaranteed sprint failure.",
+          "Sprint Goal is sacred. Sprint Backlog is flexible. — The goal is the team's commitment. The backlog adapts to reality with PO collaboration.",
+          "Multi-team alignment = coordinated goals, not identical commitments — Each team commits to their own velocity. Alignment comes from shared product goals and managed dependencies."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think Sprint Planning was just picking stories from the backlog. Now I know it's a structured ceremony with clear roles. Morgan owns the WHAT, the team owns the HOW. Stories must meet Definition of Ready. Velocity is our reality check — not a negotiation target. And when multiple teams are involved, alignment means coordinated goals, not identical numbers."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L4",
+          "title": "Daily Standup & Collaboration",
+          "description": "You've planned the sprint — now keep it on track with effective 15-minute standups, blocker identification, and sprint momentum."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What is the PRIMARY issue with this approach?",
+            "points": 50,
+            "scenario_name": "PO Assigning Tasks",
+            "situation": "During Sprint Planning, the Product Owner creates a detailed task list and assigns specific tasks to each development team member based on their expertise. The Scrum Master observes this happening.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Task assignments should be made during Daily Standups, not Sprint Planning",
+                "correct": false,
+                "whyWrong": "The timing isn't the issue — it's WHO is assigning. The Development Team self-organizes; the PO doesn't assign sprint tasks regardless of when."
+              },
+              {
+                "id": "B",
+                "text": "The Product Owner should not be assigning tasks — the team self-organizes",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Tasks should be estimated before assignment",
+                "correct": false,
+                "whyWrong": "Estimation is important, but the fundamental issue is role boundaries. The PO shouldn't be assigning tasks at all."
+              },
+              {
+                "id": "D",
+                "text": "The Scrum Master should assign tasks, not the Product Owner",
+                "correct": false,
+                "whyWrong": "Neither should assign tasks. In Scrum, NO ONE assigns tasks — the team self-organizes and members pull work."
+              }
+            ],
+            "explanation": "The Product Owner owns Product Backlog priority (WHAT), but the Development Team self-organizes Sprint Backlog tasks (HOW). Task assignment is the team's domain. In Scrum, no one assigns tasks — the team self-organizes and members pull work.",
+            "correctFeedback": {
+              "text": "The Product Owner owns Product Backlog priority (WHAT), but the Development Team self-organizes Sprint Backlog tasks (HOW). Task assignment is the team's domain. In Scrum, no one assigns tasks — the team self-organizes and members pull work.",
+              "character": "Morgan Lee",
+              "characterQuote": "I learned this the hard way. I prioritize the product backlog — WHAT we build. The team decides HOW they execute. I was overstepping into their domain."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about role boundaries in Scrum. The PO owns WHAT. The team owns HOW. Task assignment falls under HOW — so who should be doing it?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about role boundaries in Scrum. The PO owns WHAT. The team owns HOW. Task assignment falls under HOW — so who should be doing it?"
+            },
+            "retryHint": "In Scrum, the PO decides WHAT to build and the team decides HOW to build it. Task assignment is a HOW decision. Who owns HOW?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the Scrum Master recommend?",
+            "points": 50,
+            "scenario_name": "Story Lacks Acceptance Criteria",
+            "situation": "An Agile team wants to include a user story in the sprint, but the story lacks clear acceptance criteria and has unresolved dependencies. A team member suggests including it anyway to meet the velocity target.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Include the story to maintain team velocity",
+                "correct": false,
+                "whyWrong": "Velocity is about completed work, not planned work. Including an incomplete story risks mid-sprint delays and unfinished work."
+              },
+              {
+                "id": "B",
+                "text": "Split the story into smaller pieces and include part of it",
+                "correct": false,
+                "whyWrong": "Splitting can help with size, but you can't split undefined requirements. The story needs proper definition first."
+              },
+              {
+                "id": "C",
+                "text": "Exclude the story until it meets the Definition of Ready",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Include the story but add buffer time for the undefined requirements",
+                "correct": false,
+                "whyWrong": "Buffer time doesn't fix ambiguity — it just hides it. The team will still struggle with unclear requirements mid-sprint."
+              }
+            ],
+            "explanation": "Stories must meet Definition of Ready (DoR) before sprint inclusion. Missing acceptance criteria and unresolved dependencies mean the story isn't ready. Refine it first — then it can enter a future sprint properly defined.",
+            "correctFeedback": {
+              "text": "Stories must meet Definition of Ready (DoR) before sprint inclusion. Missing acceptance criteria and unresolved dependencies mean the story isn't ready. Refine it first — then it can enter a future sprint properly defined.",
+              "character": "Alex Mitchell",
+              "characterQuote": "DoR exists precisely for this situation. If we can't define 'done,' we can't deliver it. Refine first, sprint later."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Velocity is about completed, quality work — not planned work. Including incomplete stories risks mid-sprint delays and unfinished deliverables.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Velocity is about completed, quality work — not planned work. Including incomplete stories risks mid-sprint delays and unfinished deliverables."
+            },
+            "retryHint": "What gate must a story pass before it can enter a sprint? Think about what information the team needs to plan and deliver the work."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the Scrum Master advise?",
+            "points": 50,
+            "scenario_name": "Velocity and Stakeholder Pressure",
+            "situation": "A team's velocity over the past four sprints was 22, 26, 24, and 28 story points. A stakeholder requests that the team commit to 35 story points for the next sprint to meet a critical deadline.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Commit to 35 points to meet the business need",
+                "correct": false,
+                "whyWrong": "35 points is 140% of average velocity (25). Overcommitting guarantees sprint failure and damages team credibility."
+              },
+              {
+                "id": "B",
+                "text": "Commit to 28 points — the maximum achieved in past sprints",
+                "correct": false,
+                "whyWrong": "Using the maximum ignores variation. The 28-point sprint might have been an outlier. Use the average for sustainable forecasting."
+              },
+              {
+                "id": "C",
+                "text": "Commit to approximately 25 points — the average velocity",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Have the team work overtime to achieve 35 points",
+                "correct": false,
+                "whyWrong": "Overtime undermines sustainable pace — a core Agile principle. It leads to burnout, reduced quality, and lower velocity in future sprints."
+              }
+            ],
+            "explanation": "Average velocity = (22 + 26 + 24 + 28) / 4 = 25 points. This is the sustainable, predictable forecast. The team should protect sustainable pace, not cave to deadline pressure. Overcommitting guarantees sprint failure and damages team credibility.",
+            "correctFeedback": {
+              "text": "Average velocity = (22 + 26 + 24 + 28) / 4 = 25 points. This is the sustainable, predictable forecast. The team should protect sustainable pace, not cave to deadline pressure. Overcommitting guarantees sprint failure and damages team credibility.",
+              "character": "Alex Mitchell",
+              "characterQuote": "25 points. That's the math. Sustainable pace means we deliver every sprint reliably, not burn out chasing arbitrary targets."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "35 points is 140% of our average. History says we'll fail. Use the data, not the pressure.",
+              "character": "Devon Brown",
+              "characterQuote": "35 points is 140% of our average. History says we'll fail. Use the data, not the pressure."
+            },
+            "retryHint": "Calculate the average: (22 + 26 + 24 + 28) / 4 = ? The team should commit to the average, not the maximum or an arbitrary target."
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What should the team do?",
+            "points": 50,
+            "scenario_name": "Mid-Sprint Scope Change",
+            "situation": "Mid-sprint, the Development Team realizes a user story is significantly more complex than estimated. Completing it would require sacrificing other committed stories. The team is unsure whether they can modify the sprint backlog.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Complete all committed stories regardless — the sprint backlog is frozen",
+                "correct": false,
+                "whyWrong": "Sprint backlog is NOT frozen. Agile is adaptive. The team should negotiate with the Product Owner when reality doesn't match the plan."
+              },
+              {
+                "id": "B",
+                "text": "Work overtime to complete all stories as committed",
+                "correct": false,
+                "whyWrong": "Overtime violates sustainable pace and often leads to quality issues. Better to negotiate scope than burn out the team."
+              },
+              {
+                "id": "C",
+                "text": "Negotiate with the Product Owner to remove or defer lower-priority stories",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Ask the Scrum Master to approve removing stories from the sprint",
+                "correct": false,
+                "whyWrong": "The Scrum Master facilitates but doesn't approve scope changes. Scope negotiation happens between the Development Team and Product Owner."
+              }
+            ],
+            "explanation": "Sprint backlog is flexible. The team should collaborate with the PO to adjust scope while protecting the sprint goal. Remove or defer lower-priority items to accommodate the complexity. The sprint goal remains stable; the backlog adapts to reality.",
+            "correctFeedback": {
+              "text": "Sprint backlog is flexible. The team should collaborate with the PO to adjust scope while protecting the sprint goal. Remove or defer lower-priority items to accommodate the complexity. The sprint goal remains stable; the backlog adapts to reality.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Sprint goal is sacred, sprint backlog is flexible. Negotiate with the PO to adjust scope — that's how Agile handles emerging complexity."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The sprint backlog is NOT frozen. Agile is adaptive. The team negotiates scope changes with the PO while protecting the sprint goal.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The sprint backlog is NOT frozen. Agile is adaptive. The team negotiates scope changes with the PO while protecting the sprint goal."
+            },
+            "retryHint": "Who negotiates sprint backlog changes — and with whom? Think about the relationship between the team and the PO regarding scope adjustments."
+          }
+        ]
+      }
+    }
+  ]
+}

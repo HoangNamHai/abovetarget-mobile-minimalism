@@ -1,0 +1,726 @@
+{
+  "lessonId": "D1L7",
+  "lessonTitle": "Agile Principles & Values",
+  "courseId": "D1",
+  "courseName": "Agile Mindset & Frameworks",
+  "pathId": "D",
+  "pathName": "Adaptive & Hybrid Delivery",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Apply the 4 Agile Manifesto values to decide when Agile is appropriate vs predictive approaches",
+    "Distinguish servant leadership (remove impediments, coach) from command-control leadership",
+    "Use Agile collaboration techniques (swarming, mobbing, pairing) to resolve team impediments",
+    "Apply Agile practices: limit WIP, retrospectives, early feedback",
+    "Recognize flexibility and adaptability as the core Agile characteristics"
+  ],
+  "characters": [
+    "taylor_kim",
+    "carlos_mendez",
+    "maya_rodriguez",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "20 Years of Command-Control — Can Taylor Change Carlos's Mind in 5 Weeks?",
+        "intro": "You're watching **Taylor Kim**, Scrum Master at Savory & Co.'s Menu Innovation Lab. Carlos has managed teams for 20 years by assigning every task. Taylor wants the team to self-organize. Carlos calls it chaos. Dr. Foster says it's disciplined flexibility. Who's right — and what happens when nobody finishes anything despite everyone being \"busy\"?",
+        "failure_cards": [
+          {
+            "id": "waiting_for_orders",
+            "icon": "📋",
+            "title": "Waiting for Orders",
+            "summary": "The team waits for Taylor to assign every task — just like Carlos always did",
+            "image": "/images/D1L7_comic_waiting_for_orders.webp",
+            "details": "Taylor announced Sprint 1 at the kickoff meeting. Maya asked: \"So who tells us what to do?\" The entire team sat quietly, waiting for task assignments. Without understanding self-organization, the team defaulted to command-control habits. No one volunteered. No one proposed ideas. Sprint 1 produced zero deliverables because the team waited for instructions that never came."
+          },
+          {
+            "id": "blocker_isolation",
+            "icon": "⚠️",
+            "title": "Blocker Isolation",
+            "summary": "Maya struggles alone for days while the team ignores her blocker",
+            "image": "/images/D1L7_comic_blocker_isolation.webp",
+            "details": "Maya volunteered to lead a fusion pasta experiment but got stuck when her ingredient supplier cancelled. She mentioned it at standup but no one offered help. Carlos said: \"That's her responsibility.\" Maya spent 5 days trying to solve it alone. The dish was never completed. If the team had swarmed the blocker, they could have resolved it in 30 minutes."
+          },
+          {
+            "id": "wip_overload",
+            "icon": "💡",
+            "title": "WIP Overload",
+            "summary": "Everyone juggles 5 tasks — and finishes zero",
+            "image": "/images/D1L7_comic_wip_overload.webp",
+            "details": "By Week 4, every team member was working on 4-5 tasks simultaneously. Carlos was thrilled: \"Great! Everyone's busy!\" But Taylor checked the kanban board and found nothing in the \"Done\" column. Maya had 3 half-finished dishes. Devon had 4 incomplete plate designs. The team started 20 items and finished zero. Being busy is not the same as being productive."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "No 3-month plan? No task assignments? Taylor, this is CHAOS! I've managed teams for 20 years — I know what works."
+        },
+        "learning_hook": "**The Agile Manifesto** defines 4 core values that prioritize people, working solutions, collaboration, and adaptability. Servant leadership empowers teams instead of commanding them. And limiting WIP turns \"busy\" into \"productive.\" Let's learn the mindset that transformed Carlos from skeptic to believer."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "transform_the_menu_innovation_lab",
+        "title": "Transform the Menu Innovation Lab",
+        "description": "Taylor needs to shift the Menu Innovation Lab from command-control to Agile mindset. Four major challenges arise in Weeks 1-4. Help Taylor apply Agile principles to overcome each one.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each team challenge to the Agile Manifesto value that addresses it:",
+            "points": 125,
+            "scenario_name": "Manifesto Values in Action",
+            "situation": "Carlos challenges Taylor: \"Prove to me these 'Agile values' actually work. Show me how they apply to our Menu Innovation Lab.\" Taylor needs to match each real team challenge to the Agile Manifesto value that addresses it.",
+            "chips": [
+              {
+                "id": "team_waits_for_taylor_to_assign_every_task",
+                "label": "Team waits for Taylor to assign every task",
+                "correctZone": "individuals_and_interactions_over_processes_and_tools"
+              },
+              {
+                "id": "devon_refuses_to_cook_without_a_complete_3month_specification",
+                "label": "Devon refuses to cook without a complete 3-month specification",
+                "correctZone": "working_product_over_comprehensive_documentation"
+              },
+              {
+                "id": "stakeholders_never_see_progress_until_final_delivery",
+                "label": "Stakeholders never see progress until final delivery",
+                "correctZone": "customer_collaboration_over_contract_negotiation"
+              },
+              {
+                "id": "team_rigidly_follows_week_1_plan_even_when_customer_feedback_contradicts_it",
+                "label": "Team rigidly follows Week 1 plan even when customer feedback contradicts it",
+                "correctZone": "responding_to_change_over_following_a_plan"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "individuals_and_interactions_over_processes_and_tools",
+                "label": "Individuals and Interactions over Processes and Tools",
+                "detail": "Empower people to self-organize rather than relying on a task-assignment process"
+              },
+              {
+                "id": "working_product_over_comprehensive_documentation",
+                "label": "Working Product over Comprehensive Documentation",
+                "detail": "Create working prototypes now rather than waiting for perfect specs"
+              },
+              {
+                "id": "customer_collaboration_over_contract_negotiation",
+                "label": "Customer Collaboration over Contract Negotiation",
+                "detail": "Collaborate with customers through regular demos, not just final delivery"
+              },
+              {
+                "id": "responding_to_change_over_following_a_plan",
+                "label": "Responding to Change over Following a Plan",
+                "detail": "Adapt to feedback rather than sticking to an outdated plan"
+              }
+            ],
+            "explanation": "The 4 Agile Manifesto values each address a specific dysfunction. \"Individuals and interactions\" empowers self-organization. \"Working product\" encourages incremental delivery over waiting for perfect specs. \"Customer collaboration\" means ongoing feedback, not just final handoff. \"Responding to change\" means adapting when new information arrives. The Manifesto says: \"While there is value in items on the right, we value items on the left MORE.\" It is prioritization, not elimination.",
+            "correctFeedback": {
+              "text": "The 4 Agile Manifesto values each address a specific dysfunction. \"Individuals and interactions\" empowers self-organization. \"Working product\" encourages incremental delivery over waiting for perfect specs. \"Customer collaboration\" means ongoing feedback, not just final handoff. \"Responding to change\" means adapting when new information arrives. The Manifesto says: \"While there is value in items on the right, we value items on the left MORE.\" It is prioritization, not elimination.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You matched all four values to their real-world applications. The Manifesto isn't abstract theory — each value addresses a specific dysfunction that kills team productivity."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember what each value prioritizes. 'Individuals and interactions' is about empowering people. 'Working product' is about delivering results. 'Customer collaboration' is about ongoing feedback. 'Responding to change' is about adaptability.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Remember what each value prioritizes. 'Individuals and interactions' is about empowering people. 'Working product' is about delivering results. 'Customer collaboration' is about ongoing feedback. 'Responding to change' is about adaptability."
+            },
+            "retryHint": "Think about each challenge's root cause. Is it about people being disempowered? About waiting for perfect documents? About lack of feedback? About refusing to adapt? Each maps to one specific Manifesto value."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What collaboration technique should Taylor use to address Maya's blocker immediately?",
+            "points": 125,
+            "scenario_name": "Collaboration Technique for Maya's Blocker",
+            "situation": "Week 3 standup. Maya mentions: \"I've been stuck for 2 days trying to source a specific ingredient — supplier says it's unavailable.\" She does not ask for help and plans to keep struggling alone. Carlos comments: \"What's the problem? She's working on it. That's her responsibility.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Pairing — Assign one other person to help Maya",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Swarming — Multiple team members rally to resolve the impediment together RIGHT NOW",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Retrospective — Discuss the issue at the end of the sprint to prevent recurrence",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Fist of Five — Vote on whether the team should help Maya",
+                "correct": false
+              }
+            ],
+            "explanation": "Maya is blocked NOW and needs immediate help. Swarming brings multiple team members together to solve blockers quickly. Taylor said: \"Who can swarm this? Devon, you know suppliers. Let's resolve this in 30 minutes.\" They solved it in 20. Pairing (A) is acceptable for ongoing collaboration but not optimal for a critical 2-day blocker. Retrospectives (C) address past issues, not current emergencies. Fist of Five (D) is a consensus tool, not an impediment resolution technique.",
+            "correctFeedback": {
+              "text": "Maya is blocked NOW and needs immediate help. Swarming brings multiple team members together to solve blockers quickly. Taylor said: \"Who can swarm this? Devon, you know suppliers. Let's resolve this in 30 minutes.\" They solved it in 20. Pairing (A) is acceptable for ongoing collaboration but not optimal for a critical 2-day blocker. Retrospectives (C) address past issues, not current emergencies. Fist of Five (D) is a consensus tool, not an impediment resolution technique.",
+              "character": "Taylor Kim",
+              "characterQuote": "Maya's blocked NOW — she needs immediate help. Swarming brings the whole team together to crush blockers fast. We solved her supplier issue in 20 minutes flat."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I'm blocked TODAY. Waiting 2 weeks to discuss it in a retrospective doesn't help me NOW. Retrospectives are for PAST issues. Swarming is for CURRENT blockers. Don't confuse the tools!",
+              "character": "Maya Rodriguez",
+              "characterQuote": "I'm blocked TODAY. Waiting 2 weeks to discuss it in a retrospective doesn't help me NOW. Retrospectives are for PAST issues. Swarming is for CURRENT blockers. Don't confuse the tools!"
+            },
+            "retryHint": "Maya has been stuck for 2 days. Which technique brings multiple people together to solve a blocker immediately — not at the end of the sprint, and not with just one helper?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What is the PRIMARY Agile practice Taylor should implement to address this situation?",
+            "points": 125,
+            "scenario_name": "Limit WIP Intervention",
+            "situation": "Week 4. Taylor reviews the kanban board: every team member is working on 4-5 tasks simultaneously. Nothing is moving to \"Done.\" Maya is juggling 3 dishes, Devon is designing 4 plates, the marketer is researching 5 customer segments. Carlos says: \"Great! Everyone's busy!\" But Taylor notices zero completed work and lots of half-finished experiments.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Limit Work In Progress (WIP) — Focus on completing 1-2 items before starting new work",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Add more team members — Increase headcount to handle the workload",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Extend the sprint — Allow more time to complete everything",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Increase standup frequency — Meet twice daily for better coordination",
+                "correct": false
+              }
+            ],
+            "explanation": "High WIP causes low completion rates due to context-switching and multitasking overhead. Limiting WIP to 2 items per person forces the team to FINISH work before starting new work. Week 5 result: completion rate doubled — 8 dishes finished vs 0 previously. Adding people (B) does not fix the root cause of multitasking. Extending the sprint (C) delays the problem without solving it. More meetings (D) do not reduce WIP.",
+            "correctFeedback": {
+              "text": "High WIP causes low completion rates due to context-switching and multitasking overhead. Limiting WIP to 2 items per person forces the team to FINISH work before starting new work. Week 5 result: completion rate doubled — 8 dishes finished vs 0 previously. Adding people (B) does not fix the root cause of multitasking. Extending the sprint (C) delays the problem without solving it. More meetings (D) do not reduce WIP.",
+              "character": "Taylor Kim",
+              "characterQuote": "Week 5 result: We limited WIP to 2 items per person. Completion rate DOUBLED. We finished 8 dishes instead of starting 20 and finishing 0. Carlos couldn't believe it: 'Less multitasking = MORE output?'"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I thought everyone being 'busy' meant we were productive. Taylor showed me that busy and productive are not the same thing. Focus on FINISHING, not STARTING.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I thought everyone being 'busy' meant we were productive. Taylor showed me that busy and productive are not the same thing. Focus on FINISHING, not STARTING."
+            },
+            "retryHint": "Everyone is \"busy\" but nothing is getting done. The root cause is too many tasks in progress. Which practice directly limits how many items a person works on simultaneously?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "Which statement BEST describes the boundary of servant leadership?",
+            "points": 125,
+            "scenario_name": "Servant Leadership Boundaries",
+            "situation": "After 3 weeks of Agile success, a team member approaches Taylor: \"Since you're a servant leader, can you handle my conflict with Devon? And also coordinate all my meetings? And write my status reports?\" The team member believes servant leadership means Taylor should do whatever the team asks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Servant leaders should do whatever the team asks to remove all friction",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Servant leaders empower and coach, but remain ACCOUNTABLE — they do not take instructions from the team",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Servant leaders only facilitate meetings and should not get involved in team problems",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Servant leaders should assign tasks when the team struggles to self-organize",
+                "correct": false
+              }
+            ],
+            "explanation": "Servant leadership does NOT mean taking instructions from the team or doing their work. Servant leaders EMPOWER and COACH while remaining accountable. They remove impediments and create conditions for success — they do not become order-takers. Option A describes abdication (doing whatever asked). Option C is too hands-off. Option D returns to command-control. The correct balance is empowerment with accountability.",
+            "correctFeedback": {
+              "text": "Servant leadership does NOT mean taking instructions from the team or doing their work. Servant leaders EMPOWER and COACH while remaining accountable. They remove impediments and create conditions for success — they do not become order-takers. Option A describes abdication (doing whatever asked). Option C is too hands-off. Option D returns to command-control. The correct balance is empowerment with accountability.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Common misconception! Servant leadership does NOT mean taking instructions from the team or doing their work. You EMPOWER and COACH, but you're still ACCOUNTABLE. That's leadership, not servitude."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what separates servant leadership from abdication. A servant leader does not become an order-taker. They empower and coach while remaining accountable for outcomes.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what separates servant leadership from abdication. A servant leader does not become an order-taker. They empower and coach while remaining accountable for outcomes."
+            },
+            "retryHint": "Servant leadership is about empowering the team, not obeying the team. What is the difference between removing impediments and taking instructions?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Agile Mindset Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The 4 Agile Manifesto Values",
+            "subtitle": "",
+            "content": "The Agile Manifesto (2001) defines 4 core values that prioritize people, working solutions, collaboration, and adaptability over rigid processes.\n\n\n| Value | Meaning | Menu Innovation Lab Example |\n|-------|---------|---------------------------|\n| **Individuals and interactions** over processes and tools | People and communication matter more than strict processes | Taylor empowering the team to self-organize instead of dictating tasks |\n| **Working product** over comprehensive documentation | Functional increments matter more than perfect specs | \"Cook ONE prototype this week\" instead of waiting for a 3-month specification |\n| **Customer collaboration** over contract negotiation | Ongoing partnership matters more than rigid contracts | Weekly customer tastings, not \"define perfect menu upfront\" |\n| **Responding to change** over following a plan | Flexibility matters more than sticking to fixed plans | Planning 2 weeks at a time, pivoting based on customer feedback |\n\n**Critical Note:** The Manifesto says \"while there is value in items on the right, we value items on the left MORE.\" It is prioritization, not elimination. Documentation, contracts, and plans still have value.",
+            "diagram": {
+              "image": "/images/D1L7_diagram_agile_manifesto.webp",
+              "alt": "Agile Mindset Framework"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Servant Leadership Framework",
+            "subtitle": "",
+            "content": "**What Servant Leaders DO:**\n- Promote self-awareness and listening\n- Serve team members and assist their growth\n- Coach rather than control\n- Promote security, respect, and trust\n- Remove impediments and provide resources\n- Help the team reach best performance and potential\n\n**What Servant Leaders DO NOT Do:**\n- Take instructions FROM the team (still accountable)\n- Abdicate responsibility (\"you figure it out\")\n- Micromanage disguised as \"support\"\n- Become a pushover or order-taker\n\n**Key Distinction:** Servant leadership is empowerment WITH accountability, not unlimited service to the team.\n\nPMBOK Reference: PMBOK 7th Ed, pages 17-18; Agile Practice Guide, page 33",
+            "diagram": {
+              "image": "/images/D1L7_diagram_servant_leadership.webp",
+              "alt": "Servant Leadership Framework"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Collaboration Techniques",
+            "subtitle": "",
+            "content": "| Technique | Scale | When to Use | Example |\n|-----------|-------|-------------|---------|\n| **Pairing** | 2 people | Ongoing collaboration on complex task | Maya and Devon work together on plating design |\n| **Swarming** | 3-5 people | Critical blocker needs immediate resolution | Team rallies to solve Maya's ingredient sourcing |\n| **Mobbing** | Entire team | Major impediment threatening sprint | Whole team focuses on resolving kitchen equipment failure |\n\n**Key Insight:** When someone is blocked, they do not struggle alone. The TEAM removes impediments together."
+          },
+          {
+            "id": "tab4",
+            "title": "Limiting Work In Progress (WIP)",
+            "subtitle": "",
+            "content": "**The Problem:** High WIP = nothing finishes. Everyone \"busy\" but no deliverables.\n\n**The Solution:** Stop starting, start finishing. Complete your top priority before starting anything new.\n\n**Benefits:**\n- Increases completion rate\n- Reduces context-switching\n- Makes blockers visible faster\n- Improves team focus and flow\n\nPMBOK Reference: Agile Practice Guide, page 59"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Convince the Board",
+        "scenario": {
+          "title": "Convince the Board",
+          "description": "After Week 5, Carlos asks Taylor to present the Agile transformation results to the Savory & Co. board of directors. The board is skeptical: \"Agile sounds like chaos. How is this better than traditional management?\" Taylor must defend every aspect of the transformation with evidence.",
+          "images": [
+            {
+              "src": "/images/D1L7_comic_board_presentation.webp",
+              "alt": "Taylor presents Agile results to the board"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "drag_drop",
+            "question": "Drag each statement to the correct category — Agile Discipline or Agile Myth:",
+            "points": 100,
+            "scenario_name": "Discipline vs Chaos",
+            "situation": "A board member says: \"Agile is just 'no rules.' Anyone does whatever they want.\" Taylor needs to separate disciplined Agile practices from common myths about Agile being chaotic.",
+            "chips": [
+              {
+                "id": "daily_standups_at_the_same_time_every_day",
+                "label": "Daily standups at the same time every day",
+                "correctZone": "agile_discipline"
+              },
+              {
+                "id": "no_deadlines_work_whenever_inspiration_strikes",
+                "label": "No deadlines — work whenever inspiration strikes",
+                "correctZone": "agile_myth"
+              },
+              {
+                "id": "wip_limits_to_prevent_multitasking",
+                "label": "WIP limits to prevent multitasking",
+                "correctZone": "agile_discipline"
+              },
+              {
+                "id": "sprint_retrospectives_for_continuous_improvement",
+                "label": "Sprint retrospectives for continuous improvement",
+                "correctZone": "agile_discipline"
+              },
+              {
+                "id": "anyone_can_work_on_anything_without_coordination",
+                "label": "Anyone can work on anything without coordination",
+                "correctZone": "agile_myth"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "agile_discipline",
+                "label": "Agile Discipline",
+                "detail": "Regular cadence creates accountability and visibility"
+              },
+              {
+                "id": "agile_myth",
+                "label": "Agile Myth",
+                "detail": "Agile has sprints with fixed timeboxes and commitments"
+              }
+            ],
+            "explanation": "Agile has MORE structure than many people realize — just different kinds of structure. Standups, WIP limits, and retrospectives are all disciplined practices with specific rules and cadences. The myths (\"no deadlines,\" \"no coordination\") describe chaos, not Agile. As Carlos learned: \"Agile isn't chaos — it's disciplined flexibility. The team controls HOW they work, not WHETHER they work.\"",
+            "correctFeedback": {
+              "text": "Agile has MORE structure than many people realize — just different kinds of structure. Standups, WIP limits, and retrospectives are all disciplined practices with specific rules and cadences. The myths (\"no deadlines,\" \"no coordination\") describe chaos, not Agile. As Carlos learned: \"Agile isn't chaos — it's disciplined flexibility. The team controls HOW they work, not WHETHER they work.\"",
+              "character": "Carlos Mendez",
+              "characterQuote": "I thought Agile meant 'no rules.' But standups, WIP limits, retrospectives — these ARE rules. Just different ones. Agile has STRUCTURE, it's just decentralized."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember what I learned: Agile isn't the absence of rules. It's a different KIND of structure. Look for practices that have regular cadences and explicit policies.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Remember what I learned: Agile isn't the absence of rules. It's a different KIND of structure. Look for practices that have regular cadences and explicit policies."
+            },
+            "retryHint": "Agile practices have structure: regular cadences (daily standups), explicit policies (WIP limits), and planned ceremonies (retrospectives). Myths describe the absence of any structure."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Select the BEST response that explains Taylor's servant leadership role to the board:",
+            "points": 100,
+            "scenario_name": "Board Q&A on Servant Leadership",
+            "situation": "A board member asks: \"If the team 'self-organizes,' what's the Scrum Master's job? Why do we need Taylor at all? Sounds like we're paying someone to do nothing.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"Taylor assigns tasks and manages the team's schedule — just more collaboratively than Carlos did.\"",
+                "correct": false,
+                "whyWrong": "Saying Taylor \"assigns tasks\" is command-control with a friendlier label. Servant leaders do NOT assign tasks — the team chooses their own work. This answer misrepresents the role entirely."
+              },
+              {
+                "id": "B",
+                "text": "\"Taylor doesn't do anything — the team is completely autonomous and doesn't need a leader.\"",
+                "correct": false,
+                "whyWrong": "Saying Taylor \"doesn't do anything\" is abdication. Self-organizing teams still need someone to remove external impediments, coach improvement, and shield the team from distractions. Taylor is very active."
+              },
+              {
+                "id": "C",
+                "text": "\"Taylor removes obstacles, coaches the team, and creates an environment where self-organization can succeed.\"",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "\"Taylor reports to the team and does whatever they ask to keep them happy.\"",
+                "correct": false,
+                "whyWrong": "Saying Taylor \"reports to the team\" confuses servant leadership with taking instructions. Servant leaders remain accountable and do not become order-takers. They serve the team's growth, not their requests."
+              }
+            ],
+            "explanation": "Servant leaders CREATE THE CONDITIONS for success. Taylor does not assign tasks (that is command-control) or disappear (that is abdication). She actively removes blockers, coaches improvement, and protects the team's ability to self-organize. This is real leadership — empowering others rather than directing them.",
+            "correctFeedback": {
+              "text": "Servant leaders CREATE THE CONDITIONS for success. Taylor does not assign tasks (that is command-control) or disappear (that is abdication). She actively removes blockers, coaches improvement, and protects the team's ability to self-organize. This is real leadership — empowering others rather than directing them.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Taylor creates the conditions for success. She doesn't assign tasks, she doesn't disappear, and she doesn't take orders. She removes blockers, coaches growth, and protects self-organization. That's REAL leadership."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what Taylor actually DOES every day. Does she assign tasks? No. Does she do nothing? No. She actively removes blockers and coaches the team. That's servant leadership.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what Taylor actually DOES every day. Does she assign tasks? No. Does she do nothing? No. She actively removes blockers and coaches the team. That's servant leadership."
+            },
+            "retryHint": "The Scrum Master's role is active, not passive. They do not assign tasks (command-control) and they do not disappear (abdication). What do they actually do every day?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Which metric BEST demonstrates the impact of limiting WIP?",
+            "points": 100,
+            "scenario_name": "Transformation Metrics",
+            "situation": "The board asks: \"What MEASURABLE results did this Agile transformation produce? Show me numbers, not philosophy.\" Taylor needs to present the metric that best demonstrates the impact of limiting WIP.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Team satisfaction scores improved from 6/10 to 9/10",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Completion rate doubled: 8 dishes finished vs 0 previously",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Number of meetings decreased by 30%",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Team worked 20% fewer overtime hours",
+                "correct": false
+              }
+            ],
+            "explanation": "The completion rate doubling (from 0 to 8 finished dishes) is the direct, measurable outcome of limiting WIP. Before WIP limits, the team started 20 items and finished none. After limiting WIP to 2 items per person, they finished 8 dishes in one sprint. This is the most compelling metric because it directly ties to the WIP intervention. Satisfaction (A) and overtime (D) are positive but indirect. Meeting reduction (C) is unrelated to WIP.",
+            "correctFeedback": {
+              "text": "The completion rate doubling (from 0 to 8 finished dishes) is the direct, measurable outcome of limiting WIP. Before WIP limits, the team started 20 items and finished none. After limiting WIP to 2 items per person, they finished 8 dishes in one sprint. This is the most compelling metric because it directly ties to the WIP intervention. Satisfaction (A) and overtime (D) are positive but indirect. Meeting reduction (C) is unrelated to WIP.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Before: Everyone juggling 5 tasks, finishing ZERO. After: Each person focused on 2 tasks maximum, finishing EIGHT dishes in one sprint. The numbers don't lie. Less multitasking = more output."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The board wants numbers that directly show the impact of the change. Which metric is the most direct result of people working on fewer tasks at once?",
+              "character": "Carlos Mendez",
+              "characterQuote": "The board wants numbers that directly show the impact of the change. Which metric is the most direct result of people working on fewer tasks at once?"
+            },
+            "retryHint": "WIP limits reduce the number of tasks in progress. What metric directly measures whether more work is being COMPLETED as a result?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the Agile mindset transformation at Savory & Co.'s Menu Innovation Lab — from command-control chaos to disciplined flexibility.",
+        "key_takeaways": [
+          "The 4 Agile Manifesto Values prioritize individuals/interactions, working product, customer collaboration, and responding to change — while still valuing processes, documentation, contracts, and plans",
+          "Servant leadership empowers and coaches — it does not command (assigning tasks) or abdicate (doing whatever the team asks)",
+          "Swarming resolves blockers immediately — do not leave team members struggling alone for days when the team can solve it in 30 minutes",
+          "Limit WIP to increase completion — \"Stop starting, start finishing\" turned 0 finished dishes into 8 by limiting each person to 2 tasks",
+          "Agile is disciplined flexibility, not chaos — standups, WIP limits, and retrospectives provide structure while empowering the team",
+          "Flexibility and adaptability are THE most important Agile characteristics — all other skills can be learned, but without the mindset, Agile fails"
+        ],
+        "character_closing": [
+          {
+            "character": "taylor_kim",
+            "name": "Taylor Kim",
+            "quote": "The transformation wasn't about teaching Scrum ceremonies. It was about shifting MINDSET. Week 1: 'Tell us what to do.' Week 5: 'Here's what we're going to try.' That's the real victory — self-organizing teams that own their work. And Carlos? He went from 'This is chaos!' to 'You showed me a better way.' That's what happens when servant leadership meets disciplined flexibility."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L8",
+          "title": "Predictive vs Adaptive",
+          "description": "Now that you understand the Agile mindset, learn WHEN to use Agile vs predictive approaches. Decision factors include uncertainty level, requirements clarity, stakeholder availability, and organizational culture."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Empowering a Passive Team",
+            "situation": "A project manager notices that the Scrum team waits for direction instead of self-organizing. Team members say: \"Just tell us what to do and we'll do it.\" No one volunteers for tasks or proposes ideas.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Assign tasks to each team member with clear deadlines",
+                "correct": false,
+                "whyWrong": "Assigning tasks with deadlines is command-control leadership. It reinforces the exact behavior the PM should be changing. The team will never self-organize if someone always tells them what to do."
+              },
+              {
+                "id": "B",
+                "text": "Ask the team: \"What do you think is most valuable to work on this sprint?\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Escalate to management that the team lacks initiative",
+                "correct": false,
+                "whyWrong": "Escalating that the team \"lacks initiative\" blames the team for a leadership gap. The PM's job is to COACH the team toward self-organization, not report them for not already knowing how."
+              },
+              {
+                "id": "D",
+                "text": "Hire new team members who understand Agile",
+                "correct": false,
+                "whyWrong": "Hiring new people does not fix the culture. New team members will adopt the same passive behavior if the leadership approach does not change. Fix the system, not the people."
+              }
+            ],
+            "explanation": "Servant leadership starts with empowering the team to make decisions. Option B invites the team to self-organize by asking them to determine priorities. Assigning tasks (A) reinforces command-control behavior. Escalating (C) blames the team instead of coaching them. Hiring (D) does not address the root cause — the current team needs coaching to shift mindset, not replacement.",
+            "correctFeedback": {
+              "text": "Servant leadership starts with empowering the team to make decisions. Option B invites the team to self-organize by asking them to determine priorities. Assigning tasks (A) reinforces command-control behavior. Escalating (C) blames the team instead of coaching them. Hiring (D) does not address the root cause — the current team needs coaching to shift mindset, not replacement.",
+              "character": "Taylor Kim",
+              "characterQuote": "That's exactly what I did in Week 1. I asked the team what they thought was most valuable. Silence at first, then Maya volunteered. That's how self-organization starts — one question at a time."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Assigning tasks reinforces the old command-control pattern. Servant leaders coach teams toward self-organization by asking empowering questions, not by giving orders.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Assigning tasks reinforces the old command-control pattern. Servant leaders coach teams toward self-organization by asking empowering questions, not by giving orders."
+            },
+            "retryHint": "Servant leadership empowers teams through questions, not directives. Which option invites the team to take ownership of their own priorities?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is WRONG with the Scrum Master's response?",
+            "points": 50,
+            "scenario_name": "Blocker Response Timing",
+            "situation": "During daily standup, a developer mentions being blocked for 3 days on a technical issue. The Scrum Master responds: \"We'll discuss this in the retrospective next week.\" The developer sits back down, still stuck.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The Scrum Master should have assigned someone to help immediately",
+                "correct": false,
+                "whyWrong": "\"Assigning\" someone to help is command-control language. The Scrum Master should facilitate swarming by asking who can help, not by assigning a specific person. The spirit is right but the approach is wrong."
+              },
+              {
+                "id": "B",
+                "text": "The retrospective is for PAST issues; current blockers need immediate action such as swarming",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The developer should solve their own problems without team help",
+                "correct": false,
+                "whyWrong": "Agile teams are collaborative. Leaving someone stuck for 3 days violates the principle that teams remove impediments together. Individual heroics are less effective than team swarming."
+              },
+              {
+                "id": "D",
+                "text": "Daily standups should not include discussion of blockers",
+                "correct": false,
+                "whyWrong": "Blockers are one of the THREE core questions in daily standup (What did I do? What will I do? What blocks me?). Discussing blockers is a primary PURPOSE of standup."
+              }
+            ],
+            "explanation": "Retrospectives address issues from the COMPLETED sprint to prevent recurrence. Current blockers need IMMEDIATE resolution through swarming or pairing. A 3-day blocker cannot wait another week. The Scrum Master should have said: \"Who can swarm this today?\" and facilitated an immediate solution.",
+            "correctFeedback": {
+              "text": "Retrospectives address issues from the COMPLETED sprint to prevent recurrence. Current blockers need IMMEDIATE resolution through swarming or pairing. A 3-day blocker cannot wait another week. The Scrum Master should have said: \"Who can swarm this today?\" and facilitated an immediate solution.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "I was blocked for 2 days and the team swarmed it in 20 minutes. Waiting for a retrospective would have cost me the entire sprint. Current blockers need current solutions."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Retrospectives look backward to improve the future. Swarming looks at what's happening RIGHT NOW. A 3-day blocker is an emergency — don't wait a week to address it.",
+              "character": "Taylor Kim",
+              "characterQuote": "Retrospectives look backward to improve the future. Swarming looks at what's happening RIGHT NOW. A 3-day blocker is an emergency — don't wait a week to address it."
+            },
+            "retryHint": "Retrospectives address past sprint issues. What technique addresses a blocker that is happening RIGHT NOW — immediately, with team support?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What practice should the Scrum Master introduce?",
+            "points": 50,
+            "scenario_name": "WIP and Throughput",
+            "situation": "An Agile team is working on many items simultaneously. Each team member has 5-6 tasks in progress. At sprint end, very few items are marked \"Done.\" The team is exhausted from context-switching but has little to show for their effort.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Extend sprint duration to allow completion",
+                "correct": false,
+                "whyWrong": "More time does not fix multitasking behavior. A longer sprint with the same WIP habits will just produce more half-finished work over a longer period."
+              },
+              {
+                "id": "B",
+                "text": "Add more team members to increase capacity",
+                "correct": false,
+                "whyWrong": "More people with the same multitasking habits means even more tasks started and none finished. You need to fix the WIP policy, not add headcount."
+              },
+              {
+                "id": "C",
+                "text": "Limit Work In Progress (WIP) to improve flow and completion",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Increase standup frequency to twice daily",
+                "correct": false,
+                "whyWrong": "More meetings do not reduce WIP. The team needs an explicit policy limiting how many items each person works on simultaneously. Coordination without behavior change is wasted effort."
+              }
+            ],
+            "explanation": "High WIP causes low completion rates due to context-switching and multitasking overhead. Limiting WIP forces the team to finish work before starting new work, improving flow and throughput. Adding people (B) or time (A) does not address the root cause of too many tasks in progress. More meetings (D) do not change WIP behavior.",
+            "correctFeedback": {
+              "text": "High WIP causes low completion rates due to context-switching and multitasking overhead. Limiting WIP forces the team to finish work before starting new work, improving flow and throughput. Adding people (B) or time (A) does not address the root cause of too many tasks in progress. More meetings (D) do not change WIP behavior.",
+              "character": "Taylor Kim",
+              "characterQuote": "Stop starting, start finishing. That's the WIP mantra. When we limited each person to 2 items, completion rate doubled. Less multitasking = more output."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I used to think 'busy' meant 'productive.' It doesn't. The fix isn't more time or more people — it's fewer tasks per person.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I used to think 'busy' meant 'productive.' It doesn't. The fix isn't more time or more people — it's fewer tasks per person."
+            },
+            "retryHint": "The problem is too many tasks in progress per person. Which practice directly limits the number of simultaneous tasks to force completion?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "How should the Scrum Master respond?",
+            "points": 50,
+            "scenario_name": "Servant Leadership Definition",
+            "situation": "A team member approaches the Scrum Master: \"Since you're a servant leader, can you write my status reports, handle my conflicts with other team members, and coordinate all my meetings?\" The team member expects the Scrum Master to handle personal tasks as a service.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Agree to all requests — servant leaders should serve the team's every need",
+                "correct": false,
+                "whyWrong": "Doing whatever the team asks is abdication, not servant leadership. Writing someone's status reports does not empower them — it enables dependency. Servant leaders build capability, not dependency."
+              },
+              {
+                "id": "B",
+                "text": "Explain that servant leadership means empowering and coaching, not taking instructions from the team",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Refuse all requests — servant leaders only facilitate ceremonies",
+                "correct": false,
+                "whyWrong": "Servant leaders do far more than facilitate ceremonies. They actively remove impediments, coach team growth, and protect the team from distractions. This answer is too restrictive."
+              },
+              {
+                "id": "D",
+                "text": "Escalate to management that the team member does not understand roles",
+                "correct": false,
+                "whyWrong": "Escalating to management wastes a coaching opportunity. The Scrum Master should explain the servant leadership concept directly. This is a teaching moment, not a disciplinary issue."
+              }
+            ],
+            "explanation": "Servant leadership does NOT mean taking instructions from the team or doing their work. Servant leaders EMPOWER and COACH while remaining accountable. They remove impediments and create conditions for success — they do not become order-takers. Option B correctly establishes boundaries while explaining the concept. Agreeing (A) is abdication. Refusing everything (C) is too narrow. Escalating (D) avoids a coaching moment.",
+            "correctFeedback": {
+              "text": "Servant leadership does NOT mean taking instructions from the team or doing their work. Servant leaders EMPOWER and COACH while remaining accountable. They remove impediments and create conditions for success — they do not become order-takers. Option B correctly establishes boundaries while explaining the concept. Agreeing (A) is abdication. Refusing everything (C) is too narrow. Escalating (D) avoids a coaching moment.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Servant leadership is empowerment with accountability, not unlimited service. You coach, you remove impediments, you create conditions for success — but you do not become a personal assistant."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about the difference between serving the team's GROWTH and serving their REQUESTS. A servant leader coaches people to handle their own conflicts, not handles them for them.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about the difference between serving the team's GROWTH and serving their REQUESTS. A servant leader coaches people to handle their own conflicts, not handles them for them."
+            },
+            "retryHint": "Servant leadership empowers the team to grow — it does not mean doing everything the team asks. What is the difference between removing impediments and taking personal instructions?"
+          }
+        ]
+      }
+    }
+  ]
+}

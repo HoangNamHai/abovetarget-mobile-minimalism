@@ -1,0 +1,702 @@
+{
+  "lessonId": "C3L5",
+  "lessonTitle": "Quality Control & Continuous Improvement",
+  "courseId": "C3",
+  "courseName": "Quality, Risk, Procurement",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish between inspection (defect detection) and prevention (defect avoidance) and understand prevention's cost effectiveness",
+    "Apply the Cost of Quality (CoQ) framework: Cost of Conformance vs Cost of Nonconformance",
+    "Recognize when to use Kaizen (incremental) vs Six Sigma (breakthrough) based on problem scope",
+    "Understand the PDCA Cycle (Plan-Do-Check-Act) as the foundation for continuous improvement",
+    "Apply root cause analysis (5 Whys, Fishbone/Ishikawa Diagram) to prevent recurring defects"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "jordan_park",
+    "casey_martinez",
+    "dr_amelia_foster",
+    "taylor_kim"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "$12K/Month in Rework: Why Catching Defects Isn't the Same as Stopping Them",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. The premium meal prep service has been running for 3 months. Jordan Park brings a sobering report: \"We're spending $12K/month FIXING problems AFTER they occur. Our inspection team works overtime, but defects keep coming.\" Casey insists inspection is working — she catches every bad meal. But Jordan's math tells a different story: $1 in prevention saves $10 in detection and $100 in correction. Is Savory investing in the right end of the quality chain?",
+        "failure_cards": [
+          {
+            "id": "the_defect_pattern",
+            "icon": "📋",
+            "title": "The Defect Pattern",
+            "summary": "Inspection catches defects but never reduces them",
+            "image": "/images/C3L5_comic_defect_pattern.webp",
+            "details": "Casey hired two extra inspectors at $6K/month to catch every defective meal before shipping. Defect rate stayed at 8% — 40 bad meals per day, every day. Jordan: \"We're catching 40 defects daily, but PRODUCING 40 defects daily. Inspection finds problems; it doesn't stop them.\" After 3 months, Savory had spent $18K on extra inspection with zero improvement in the defect rate. The assembly line kept producing the same errors."
+          },
+          {
+            "id": "the_inspection_backlog",
+            "icon": "⚠️",
+            "title": "The Inspection Backlog",
+            "summary": "Inspection bottleneck delays shipments and burns out the team",
+            "image": "/images/C3L5_comic_inspection_backlog.webp",
+            "details": "With 500 meals per day requiring manual inspection, the QA team fell behind. Orders shipped late 3 days in a row. Casey doubled inspection hours — team morale collapsed. Jordan showed the numbers: \"We're spending $4K on inspection, $8K on rework, and $4K on customer refunds. That's $16K/month on detection and failure. A $300 barcode scanner would eliminate 15% of our labeling defects at the source.\" The team was exhausted from fighting symptoms instead of fixing causes."
+          },
+          {
+            "id": "the_root_cause_revelation",
+            "icon": "💡",
+            "title": "The Root Cause Revelation",
+            "summary": "5 Whys analysis reveals the real problem is a broken $300 scanner",
+            "image": "/images/C3L5_comic_root_cause.webp",
+            "details": "Wrong ingredient labels appeared on 15% of meals. Casey retrained staff three times — violations continued. Jordan ran a 5 Whys: Why wrong labels? Printer errors. Why? Manual SKU entry. Why manual? Barcode scanner broke 2 weeks ago. Why not replaced? Budget went to hiring inspectors. Why inspectors? Focus on detection over prevention. Root cause: a $300 scanner replacement would eliminate the defect entirely. The team had spent $2K/month inspecting labels that a working scanner would have printed correctly."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "jordan_park",
+          "name": "Jordan Park",
+          "role": "QA Lead",
+          "quote": "We're spending $16K a month catching and fixing defects. I can show you how $3K in prevention investment saves $9K in rework. Prevention isn't cutting quality — it's making quality economical."
+        },
+        "learning_hook": "**Quality control** finds defects through inspection, but **continuous improvement** prevents them through root cause analysis and process change. The 7 QC tools (Pareto charts, control charts, Ishikawa diagrams, check sheets, histograms, scatter diagrams, flowcharts) help you find patterns. PDCA, Kaizen, and Six Sigma help you fix them. Let's learn to shift from costly detection to smart prevention."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "fix_the_quality_cost_crisis",
+        "title": "Fix the Quality Cost Crisis",
+        "description": "Jordan guides you through four quality improvement decisions for Savory & Co. \"We have $16K/month in quality costs. Let's figure out where to invest for the biggest impact.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Which approach should Alex approve?",
+            "points": 125,
+            "scenario_name": "Prevention vs Detection Trade-off",
+            "situation": "Savory & Co.'s portion inconsistency defect rate is 8% (40 defective meals/day out of 500). Casey proposes hiring 2 more inspectors at $6K/month to catch ALL defects before shipping. Jordan proposes investing in portioning equipment upgrade plus training ($4K one-time + $1K/month) to REDUCE the defect rate from 8% to 2%. Casey argues: \"More inspectors means we catch every defective meal. That's guaranteed quality!\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Casey's inspection plan — hire 2 inspectors at $6K/month ongoing",
+                "correct": false,
+                "whyWrong": "Detection does not fix root cause. Savory would spend $6K/month forever while still producing 40 defective meals daily. No improvement, only ongoing expense."
+              },
+              {
+                "id": "B",
+                "text": "Jordan's prevention plan — equipment upgrade + training ($4K + $1K/month), reduce defects from 8% to 2%",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Both plans — hire inspectors AND improve the process simultaneously",
+                "correct": false,
+                "whyWrong": "Redundant spending. If prevention reduces defects to 2%, extra inspectors become unnecessary. Invest in prevention first — add inspection only if the remaining defect rate justifies it."
+              },
+              {
+                "id": "D",
+                "text": "Neither plan — accept the 8% defect rate and save money",
+                "correct": false,
+                "whyWrong": "An 8% defect rate on a premium $18 meal is unacceptable. Customers leave, reputation suffers, and $8K/month in rework continues indefinitely."
+              }
+            ],
+            "explanation": "Prevention REDUCES the defect rate at source. Jordan's plan costs $4K upfront + $1K/month but saves $6K/month in rework (from $8K down to $2K). After one month, the investment pays for itself. Casey's inspection plan costs $6K/month forever while the defect rate stays at 8%. Prevention is investment; detection is expense.",
+            "correctFeedback": {
+              "text": "Prevention REDUCES the defect rate at source. Jordan's plan costs $4K upfront + $1K/month but saves $6K/month in rework (from $8K down to $2K). After one month, the investment pays for itself. Casey's inspection plan costs $6K/month forever while the defect rate stays at 8%. Prevention is investment; detection is expense.",
+              "character": "Jordan Park",
+              "characterQuote": "Prevention fixes root causes. We spend $5K once and save $6K every month. That's the economics of quality — invest in causes, not symptoms."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Inspection CATCHES defects but doesn't REDUCE them. We'd still produce 40 bad meals daily. Ask yourself: does this fix WHY defects happen, or just find them after?",
+              "character": "Jordan Park",
+              "characterQuote": "Inspection CATCHES defects but doesn't REDUCE them. We'd still produce 40 bad meals daily. Ask yourself: does this fix WHY defects happen, or just find them after?"
+            },
+            "retryHint": "Compare the two proposals: one is an ongoing expense that catches defects, the other is an investment that reduces defects. Which one actually improves the process?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Which cost category should Alex target FIRST for reduction?",
+            "points": 125,
+            "scenario_name": "Cost of Quality Analysis",
+            "situation": "Jordan presents the Month 3 Quality Cost Dashboard. Cost of Conformance: Prevention $3K (training, maintenance) + Appraisal $5K (inspection, testing) = $8K. Cost of Nonconformance: Internal Failure $10K (rework, scrap) + External Failure $5K (refunds, warranty) = $15K. Total Cost of Quality: $23K/month. Jordan says: \"Conformance costs us $8K. Nonconformance costs us $15K. Where would YOU invest to reduce total quality costs?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Reduce prevention costs ($3K) — cut training and maintenance to save money",
+                "correct": false,
+                "whyWrong": "Prevention is investment, not waste. Cutting training and maintenance INCREASES the defect rate, which increases failure costs. You would save $3K but lose far more in rework."
+              },
+              {
+                "id": "B",
+                "text": "Reduce appraisal costs ($5K) — inspect less often",
+                "correct": false,
+                "whyWrong": "Without process improvement first, inspecting less means more defects reach customers. External failure costs would skyrocket from $5K to much higher."
+              },
+              {
+                "id": "C",
+                "text": "Reduce internal failure costs ($10K) — invest in prevention to lower the defect rate",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Reduce external failure costs ($5K) — improve customer service response",
+                "correct": false,
+                "whyWrong": "Customer service manages complaints after defects occur — it does not prevent defects. The root cause is the process producing defects, not how you handle complaints."
+              }
+            ],
+            "explanation": "Internal failure ($10K) is the largest nonconformance cost — 43% of total CoQ. The way to reduce it is by investing in prevention (training, process improvement, equipment). Prevention reduces the defect rate that causes rework and scrap. Cutting prevention or appraisal would increase failure costs. Improving customer service treats symptoms, not root causes.",
+            "correctFeedback": {
+              "text": "Internal failure ($10K) is the largest nonconformance cost — 43% of total CoQ. The way to reduce it is by investing in prevention (training, process improvement, equipment). Prevention reduces the defect rate that causes rework and scrap. Cutting prevention or appraisal would increase failure costs. Improving customer service treats symptoms, not root causes.",
+              "character": "Jordan Park",
+              "characterQuote": "Internal failure is where we're bleeding money. Every dollar we invest in prevention reduces the defect rate that creates that $10K expense. Target the biggest failure cost with prevention investment."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Be careful — some costs are INVESTMENTS that reduce other costs. Cutting prevention is like canceling your car insurance to save money. Think about which cost CAUSES the others.",
+              "character": "Jordan Park",
+              "characterQuote": "Be careful — some costs are INVESTMENTS that reduce other costs. Cutting prevention is like canceling your car insurance to save money. Think about which cost CAUSES the others."
+            },
+            "retryHint": "Look at the four cost categories. Which is the LARGEST failure cost? And what type of investment reduces failure rates?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "Based on the 5 Whys analysis, what is the best solution?",
+            "points": 125,
+            "scenario_name": "Root Cause Analysis with 5 Whys",
+            "situation": "Wrong ingredient labels appear on 15% of meals this week. Casey wants to retrain staff and inspect labels more carefully. Jordan runs a 5 Whys analysis: (1) Why wrong labels? Printer prints wrong codes. (2) Why wrong codes? Staff manually enter SKU codes, sometimes mistype. (3) Why manual entry? Barcode scanner broke 2 weeks ago. (4) Why not replaced? Budget was allocated to hiring more inspectors. (5) Why inspectors over equipment? Focus on detection instead of prevention. Root cause: broken barcode scanner ($300 replacement) forces manual entry, causing 15% defect rate.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Inspect labels more carefully — add a second check before shipping",
+                "correct": false,
+                "whyWrong": "More inspection catches defects after they are created — it does not prevent them. The scanner is still broken, manual entry continues, and 15% of labels are still wrong before inspection catches them."
+              },
+              {
+                "id": "B",
+                "text": "Replace the barcode scanner ($300) to eliminate manual entry entirely",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Hire a dedicated label inspector at $2K/month",
+                "correct": false,
+                "whyWrong": "A dedicated inspector costs $24K/year to catch defects that a $300 scanner would prevent. This is the definition of choosing expensive detection over cheap prevention."
+              },
+              {
+                "id": "D",
+                "text": "Retrain staff on accurate typing to reduce manual entry errors",
+                "correct": false,
+                "whyWrong": "Humans make typos — that is a process design issue, not a training issue. The barcode scanner exists to eliminate manual entry. Fix the process, do not blame the people."
+              }
+            ],
+            "explanation": "The 5 Whys identified the root cause: a broken $300 barcode scanner forces manual SKU entry, which causes typos, which causes 15% label defects. Replacing the scanner eliminates manual entry entirely — no more typos, no more defective labels. Prevention cost: $300 one-time. The detection alternative (dedicated inspector) would cost $24K/year to catch defects that $300 would prevent. ROI of prevention: 80x.",
+            "correctFeedback": {
+              "text": "The 5 Whys identified the root cause: a broken $300 barcode scanner forces manual SKU entry, which causes typos, which causes 15% label defects. Replacing the scanner eliminates manual entry entirely — no more typos, no more defective labels. Prevention cost: $300 one-time. The detection alternative (dedicated inspector) would cost $24K/year to catch defects that $300 would prevent. ROI of prevention: 80x.",
+              "character": "Jordan Park",
+              "characterQuote": "That's root cause thinking. $300 fixes the actual problem. Everything else just catches or manages the symptoms of a broken process. Prevention beats detection every time."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The 5 Whys traced the defect all the way back to the broken scanner. Retraining and inspecting don't fix broken equipment. What does the root cause tell you to fix?",
+              "character": "Jordan Park",
+              "characterQuote": "The 5 Whys traced the defect all the way back to the broken scanner. Retraining and inspecting don't fix broken equipment. What does the root cause tell you to fix?"
+            },
+            "retryHint": "The 5 Whys traced the defect chain back to one broken piece of equipment. What is cheaper — fixing that equipment or hiring someone to catch the errors it causes?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "At the ACT stage of PDCA, with partial results (8% down to 4%, target 2%), what should Alex do?",
+            "points": 125,
+            "scenario_name": "PDCA Cycle Application",
+            "situation": "Alex implements Jordan's prevention plan (equipment upgrade + staff training). After 2 weeks, the results are: defect rate reduced from 8% to 4% (improved, but target was 2%). Staff feedback indicates training was helpful, but the new equipment needs calibration adjustment. Dr. Foster reminds the team: \"You've completed Plan (design the improvement), Do (implement it), and Check (measure results at 4%). Now you're at the ACT stage.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Stop the improvement — it did not reach the 2% target",
+                "correct": false,
+                "whyWrong": "A 50% improvement (8% to 4%) is significant progress. PDCA is iterative — partial success informs the next cycle. Stopping abandons proven gains."
+              },
+              {
+                "id": "B",
+                "text": "Standardize the current 4% process gains, then start a new PDCA cycle to close the remaining gap to 2%",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Repeat the same training program — run it again without changes",
+                "correct": false,
+                "whyWrong": "Repeating without learning is wasteful. Staff said training was helpful but equipment needs adjustment. The next cycle should target calibration, not repeat training."
+              },
+              {
+                "id": "D",
+                "text": "Abandon this initiative and start a new improvement project on a different problem",
+                "correct": false,
+                "whyWrong": "Abandoning a partially successful initiative wastes momentum. Close the 4% to 2% gap first, then move to the next priority. Finish what you started."
+              }
+            ],
+            "explanation": "ACT in PDCA means: standardize what works (lock in the improvement from 8% to 4%), then start a new PDCA cycle to address the remaining gap (4% to 2%). Staff feedback points to equipment calibration as the next target — not more training. PDCA is iterative; continuous improvement means multiple cycles, each building on the last.",
+            "correctFeedback": {
+              "text": "ACT in PDCA means: standardize what works (lock in the improvement from 8% to 4%), then start a new PDCA cycle to address the remaining gap (4% to 2%). Staff feedback points to equipment calibration as the next target — not more training. PDCA is iterative; continuous improvement means multiple cycles, each building on the last.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent. You locked in a 50% improvement and used feedback to plan your next cycle. PDCA never stops — standardize gains, then improve further. That's continuous improvement."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "PDCA is a cycle, not a one-shot attempt. You achieved progress from 8% to 4%. The question is: do you throw that away, or build on it? And what did staff feedback tell you about where to focus next?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "PDCA is a cycle, not a one-shot attempt. You achieved progress from 8% to 4%. The question is: do you throw that away, or build on it? And what did staff feedback tell you about where to focus next?"
+            },
+            "retryHint": "PDCA is a cycle that repeats. When results are partial, do you abandon progress or lock in gains and start the next cycle? What did the staff feedback tell you about where to focus?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Quality Economics & Continuous Improvement",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Cost of Quality (CoQ) Framework",
+            "subtitle": "",
+            "content": "Quality is not free, but poor quality is more expensive. The Cost of Quality framework divides all quality-related spending into two categories:\n\n**Cost of Conformance (Investment in Quality):**\n- **Prevention Costs** — Stopping defects before they occur: training, process improvement, equipment maintenance, design reviews\n- **Appraisal Costs** — Evaluating deliverable quality: inspection labor, testing supplies, quality audits\n\n**Cost of Nonconformance (Price of Poor Quality):**\n- **Internal Failure Costs** — Defects found BEFORE delivery: rework, scrap materials, downtime\n- **External Failure Costs** — Defects found AFTER delivery: customer refunds, warranty claims, reputation damage\n\n**Investment Strategy:**\n1. Increase PREVENTION (reduces both internal and external failures)\n2. Reduce NONCONFORMANCE (highest ROI category for quality improvement)\n3. Appraisal can decrease as prevention improves processes over time\n\n**The 1-10-100 Rule:** $1 in prevention saves $10 in detection and $100 in correction. Savory example: $300 scanner (prevention) vs $24K/year inspector (detection) vs customer refunds and reputation damage (correction).\n\n*PMBOK 7th Ed, Page 143*"
+          },
+          {
+            "id": "tab2",
+            "title": "The 7 QC Tools & Root Cause Analysis",
+            "subtitle": "",
+            "content": "The 7 basic quality control tools help teams find patterns, identify root causes, and prioritize improvements:\n\n| Tool | Purpose | Savory Example |\n|------|---------|----------------|\n| **Pareto Chart** | Prioritize — 80/20 rule, vital few vs trivial many | Late delivery (56%) + wrong order (27%) = 83% of complaints |\n| **Ishikawa / Fishbone Diagram** | Root cause analysis across 6 categories (People, Process, Equipment, Materials, Environment, Measurement) | Why are labels wrong? Trace causes across categories |\n| **Control Chart** | Monitor process stability over time, detect special-cause variation | Track daily defect rate — is 8% stable or trending? |\n| **Check Sheet** | Structured data collection for defect tracking | Tally defect types per shift to find patterns |\n| **Histogram** | Show frequency distribution of defect data | Portion weight distribution — where do errors cluster? |\n| **Scatter Diagram** | Show correlation between two variables | Temperature vs spoilage rate — is there a relationship? |\n| **Flowchart** | Map process steps to find inefficiencies and failure points | Meal assembly workflow — where do defects enter? |\n\n**Root Cause Analysis Techniques:**\n- **5 Whys** — Ask \"Why?\" repeatedly (typically 5 times) to drill from symptom to root cause. Prevents treating symptoms instead of causes.\n- **Fishbone / Ishikawa Diagram** — Categorize potential causes visually across People, Process, Equipment, Materials, Environment, and Measurement.\n\n*PMBOK 7th Ed, Page 127*",
+            "diagram": {
+              "image": "/images/C3L5_diagram_seven_tools.webp",
+              "alt": "Quality improvement frameworks and the 7 QC tools"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Continuous Improvement",
+            "subtitle": "PDCA, Kaizen, Six Sigma",
+            "content": "**PDCA Cycle (Plan-Do-Check-Act):**\nThe universal foundation for all continuous improvement. Plan the change, Do it on small scale (pilot), Check the results against goals, Act to standardize if successful or revise and repeat if not. The cycle never stops — that is what makes improvement continuous.\n\n**Kaizen (Continuous Incremental Improvement):**\n- Small, ongoing improvements driven by the team\n- Bottom-up, daily focus on eliminating waste and friction\n- Best for: daily inefficiencies, process friction, team engagement\n- Savory example: Reorganize kitchen storage to save 15 minutes/day searching for utensils\n\n**Six Sigma (Data-Driven Breakthrough Improvement):**\n- Statistical analysis using DMAIC methodology (Define-Measure-Analyze-Improve-Control)\n- Target: 99.99966% defect-free (3.4 defects per million opportunities)\n- Best for: critical defects, safety issues, regulatory compliance, breakthrough improvement\n- Savory example: Food contamination at 2,000 DPMO requires statistical root cause analysis to reach target of less than 100 DPMO\n\n**Matching Methodology to Problem:**\n- Kaizen = Small + Incremental + Team-driven + Daily inefficiencies\n- Six Sigma = Large + Breakthrough + Data-driven + Critical defects\n\n*PMBOK 7th Ed, Page 145; Agile Practice Guide Page 53*"
+          },
+          {
+            "id": "tab4",
+            "title": "Prevention vs Detection",
+            "subtitle": "The Economics",
+            "content": "**Prevention** stops defects from occurring (process improvement, training, equipment). **Detection** finds defects after they are created (inspection, testing, audits). Both are necessary, but prevention has dramatically better economics.\n\n**Key Principles:**\n- Prevention reduces the NUMBER of defects produced\n- Detection only catches defects that already exist\n- As prevention improves, the need for detection decreases\n- Recurring defects despite repeated training signal a systemic (process/equipment) issue, not a people issue\n- Quality control data (inspections, defect counts) feeds back into continuous improvement — detection enables smarter prevention\n\n**Cost Comparison:**\n\n| Approach | Savory Cost | Defect Impact |\n|----------|-------------|---------------|\n| Prevention (scanner + training) | $4K + $1K/month | Reduces defects from 8% to 2% |\n| Detection (extra inspectors) | $6K/month forever | Catches defects, rate stays 8% |\n| Correction (refunds, rework) | $12K/month | Customer damage, reputation loss |"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Vancouver Location Quality Improvement",
+        "scenario": {
+          "title": "Vancouver Location Quality Improvement",
+          "description": "Savory & Co.'s Vancouver location ($900K investment) has been operating for 2 months. Three quality issues have surfaced. Your task: apply Cost of Quality analysis, root cause thinking, Pareto prioritization, and continuous improvement methodology to each situation.",
+          "images": [
+            {
+              "src": "/images/C3L5_comic_transfer.webp",
+              "alt": "Transfer scenario: Vancouver quality crisis"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Which quality tool helps prioritize these complaints, and which issue should be fixed first?",
+            "points": 100,
+            "scenario_name": "Prioritizing Customer Complaints",
+            "situation": "The Vancouver location receives 45 customer complaints per month. Breakdown: Late delivery 25 complaints (56%), Wrong order 12 complaints (27%), Missing items 8 complaints (18%). Jordan asks: \"We have limited resources for improvement. Which complaints should we tackle first, and which quality tool tells us that?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Control Chart — fix missing items first because it is the most recent trend",
+                "correct": false,
+                "whyWrong": "Control Charts monitor process stability over time — they do not prioritize which issues to fix first. Missing items at 18% is also the lowest priority, not the highest."
+              },
+              {
+                "id": "B",
+                "text": "Pareto Chart — fix late delivery + wrong order first because they represent 83% of complaints",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Check Sheet — collect more data before making any decision",
+                "correct": false,
+                "whyWrong": "Data is already collected (45 complaints with a clear breakdown). Collecting more data delays action on a problem that is already well-defined."
+              },
+              {
+                "id": "D",
+                "text": "Fishbone Diagram — analyze all three issues equally at the same time",
+                "correct": false,
+                "whyWrong": "Fishbone Diagram is for root cause analysis of a specific problem, not for prioritizing among multiple problems. First use Pareto to prioritize, then use Fishbone to analyze root causes."
+              }
+            ],
+            "explanation": "The Pareto Chart applies the 80/20 rule: the vital few causes account for the majority of problems. Late delivery (56%) + wrong order (27%) = 83% of all complaints. Fix these two, and you resolve 83% of customer issues with focused effort. Pareto prioritizes WHERE to invest limited resources for maximum impact.",
+            "correctFeedback": {
+              "text": "The Pareto Chart applies the 80/20 rule: the vital few causes account for the majority of problems. Late delivery (56%) + wrong order (27%) = 83% of all complaints. Fix these two, and you resolve 83% of customer issues with focused effort. Pareto prioritizes WHERE to invest limited resources for maximum impact.",
+              "character": "Jordan Park",
+              "characterQuote": "Pareto tells you where to focus. Two issues cause 83% of complaints. Fix those first and you've solved the vast majority of customer pain — with the least effort."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "You have 45 complaints with a clear breakdown. One tool is designed specifically for prioritizing the 'vital few' over the 'trivial many.' Which one ranks issues by frequency?",
+              "character": "Jordan Park",
+              "characterQuote": "You have 45 complaints with a clear breakdown. One tool is designed specifically for prioritizing the 'vital few' over the 'trivial many.' Which one ranks issues by frequency?"
+            },
+            "retryHint": "You have three complaint types with clear percentages. Which quality tool ranks issues by frequency to show where the biggest impact is? Think 80/20 rule."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Which cost category should Vancouver reduce FIRST, and how?",
+            "points": 100,
+            "scenario_name": "Vancouver Cost of Quality",
+            "situation": "The Vancouver Quality Cost Dashboard shows: Prevention costs $2K, Appraisal costs $6K, Internal failure costs $15K, External failure costs $8K. Total Cost of Quality: $31K/month. The pattern is familiar — low prevention, high failure.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Reduce prevention ($2K) — cut training to save money immediately",
+                "correct": false,
+                "whyWrong": "Cutting prevention INCREASES failure costs. Prevention is already the smallest category at $2K — it should grow, not shrink. This would make the $15K internal failure cost even worse."
+              },
+              {
+                "id": "B",
+                "text": "Reduce appraisal ($6K) — inspect less often to lower costs",
+                "correct": false,
+                "whyWrong": "Reducing inspection without improving processes means more defects reach customers. External failure would increase, potentially exceeding the appraisal savings."
+              },
+              {
+                "id": "C",
+                "text": "Reduce internal failure ($15K) — invest in prevention to lower the defect rate",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Reduce external failure ($8K) — improve customer service to handle complaints faster",
+                "correct": false,
+                "whyWrong": "Improving customer service manages complaints after defects occur — it does not prevent defects from happening. The process still produces the same number of failures."
+              }
+            ],
+            "explanation": "Internal failure ($15K) is the largest nonconformance cost — 48% of total CoQ. The way to reduce it is by investing MORE in prevention (training, equipment, process improvement), which reduces the defect rate that causes rework and scrap. Prevention is already the smallest cost at $2K — it should increase, not decrease.",
+            "correctFeedback": {
+              "text": "Internal failure ($15K) is the largest nonconformance cost — 48% of total CoQ. The way to reduce it is by investing MORE in prevention (training, equipment, process improvement), which reduces the defect rate that causes rework and scrap. Prevention is already the smallest cost at $2K — it should increase, not decrease.",
+              "character": "Jordan Park",
+              "characterQuote": "Same pattern as headquarters. Internal failure is the biggest cost, and prevention is the smallest investment. Increase prevention to reduce failures. The math always works the same way."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at the four categories. Two are investments (conformance) and two are prices of failure (nonconformance). Which failure cost is largest? And what type of spending reduces failure rates?",
+              "character": "Jordan Park",
+              "characterQuote": "Look at the four categories. Two are investments (conformance) and two are prices of failure (nonconformance). Which failure cost is largest? And what type of spending reduces failure rates?"
+            },
+            "retryHint": "Which is the largest FAILURE cost? And what category of spending reduces the defect rate that creates failure costs?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Why is retraining NOT solving the temperature violation problem?",
+            "points": 100,
+            "scenario_name": "Recurring Temperature Violations",
+            "situation": "The Vancouver kitchen has food temperature violations 3 times per week. Casey's response each time: retrain staff on temperature procedures. Staff have been retrained three times this month. Violations continue at the same rate. Casey is frustrated: \"We've retrained staff THREE times. Why do violations keep happening?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Staff are not paying attention — need stricter enforcement and consequences",
+                "correct": false,
+                "whyWrong": "Blaming individuals ignores systemic issues. If violations continue despite training, the cause is likely process or equipment, not individual negligence. Punishment does not fix broken thermometers."
+              },
+              {
+                "id": "B",
+                "text": "Recurring defects signal a systemic issue (equipment or process) — root cause analysis is needed",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Training content is incorrect — need to rewrite the training materials",
+                "correct": false,
+                "whyWrong": "Three separate trainings produced no improvement. If the issue were training content, at least some improvement would be expected. Consistent failure despite training points to systemic cause."
+              },
+              {
+                "id": "D",
+                "text": "Accept some violations as inevitable — zero defects is unrealistic for food service",
+                "correct": false,
+                "whyWrong": "Food temperature violations are safety-critical and regulatory. Zero tolerance is required. Accepting violations risks health code violations, lawsuits, and closure."
+              }
+            ],
+            "explanation": "Recurring defects despite multiple trainings are a classic signal of a systemic problem — broken equipment, unclear process, or environmental factor. Use the 5 Whys: Why violations? Staff skip temp checks. Why? Thermometer is slow and unreliable. Why? Old equipment not replaced. Root cause analysis finds process/equipment issues that no amount of training can fix.",
+            "correctFeedback": {
+              "text": "Recurring defects despite multiple trainings are a classic signal of a systemic problem — broken equipment, unclear process, or environmental factor. Use the 5 Whys: Why violations? Staff skip temp checks. Why? Thermometer is slow and unreliable. Why? Old equipment not replaced. Root cause analysis finds process/equipment issues that no amount of training can fix.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When training fails three times, the problem is not the people. It is the system. Root cause analysis — 5 Whys or Fishbone — will find the equipment or process failure that training cannot fix."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Three rounds of training, same defect rate. If the people understood the training (and they did), what ELSE could be causing the failures? Think process and equipment.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Three rounds of training, same defect rate. If the people understood the training (and they did), what ELSE could be causing the failures? Think process and equipment."
+            },
+            "retryHint": "The same defect keeps recurring despite multiple trainings. What does that pattern tell you about where the real problem is — people or process/equipment?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **quality control** finds defects through inspection, but **continuous improvement** prevents them through root cause analysis and process change. Prevention beats detection economically, and the PDCA cycle ensures improvement never stops.",
+        "key_takeaways": [
+          "Prevention beats detection — $1 in prevention saves $10 in detection and $100 in correction. Invest in stopping defects, not just catching them.",
+          "Cost of Quality has 4 categories — Conformance (prevention + appraisal) vs Nonconformance (internal + external failure). Target the largest failure cost with prevention investment.",
+          "Root cause, not symptoms — 5 Whys and Fishbone/Ishikawa find systemic causes. Recurring defects despite training mean process/equipment issues, not people problems.",
+          "Match methodology to problem — Kaizen for daily inefficiencies (team-driven, incremental). Six Sigma for critical defects (data-driven, breakthrough).",
+          "PDCA never stops — Plan-Do-Check-Act is continuous. Standardize gains, then start the next cycle. Quality improvement is a cycle, not a one-time project.",
+          "The 7 QC tools guide decisions — Pareto prioritizes, Fishbone finds root causes, Control Charts monitor stability, Check Sheets collect data, and Flowcharts map processes."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think quality meant more inspection. Now I know: inspection finds defects, but prevention stops them. A $300 scanner saved us $24K a year. PDCA keeps us improving every cycle. And when training doesn't fix a recurring defect, I stop blaming people and start analyzing the system. Quality isn't about spending more — it's about spending smart."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L6",
+          "title": "Procurement & Contracts",
+          "description": "You've built a quality system that prevents defects at the source. Now learn how to define quality standards in contracts and select vendors who meet them — because procurement failures create quality failures."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager do?",
+            "points": 50,
+            "scenario_name": "Recurring Defects Despite Training",
+            "situation": "A project is experiencing recurring defects despite multiple training sessions for team members. The defect rate has not changed after three rounds of retraining. The PM needs to determine the next step.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Conduct more intensive training with extended hours",
+                "correct": false,
+                "whyWrong": "More training of the same type will produce the same result. Three rounds already failed — the issue is systemic, not knowledge-based."
+              },
+              {
+                "id": "B",
+                "text": "Replace underperforming team members",
+                "correct": false,
+                "whyWrong": "Replacing team members does not fix systemic issues. New team members will encounter the same broken process or equipment and produce the same defects."
+              },
+              {
+                "id": "C",
+                "text": "Perform root cause analysis to identify systemic issues",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Increase inspection frequency to catch more defects",
+                "correct": false,
+                "whyWrong": "More inspection catches defects but does not prevent them. The defect rate stays the same — you just find more of them before shipping."
+              }
+            ],
+            "explanation": "Recurring defects despite multiple trainings indicate a systemic issue — process design, equipment failure, or environmental factor — not a training gap. Root cause analysis (5 Whys, Fishbone Diagram) identifies the true cause, enabling prevention rather than repeated detection.",
+            "correctFeedback": {
+              "text": "Recurring defects despite multiple trainings indicate a systemic issue — process design, equipment failure, or environmental factor — not a training gap. Root cause analysis (5 Whys, Fishbone Diagram) identifies the true cause, enabling prevention rather than repeated detection.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Training failed three times, so the cause is not knowledge. Root cause analysis finds what training cannot fix — broken processes, faulty equipment, or unclear procedures."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When the same intervention fails repeatedly, the problem is not the intervention's intensity — it is the wrong intervention entirely. What tool finds the REAL cause?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When the same intervention fails repeatedly, the problem is not the intervention's intensity — it is the wrong intervention entirely. What tool finds the REAL cause?"
+            },
+            "retryHint": "Three rounds of training, same defect rate. The problem is clearly not knowledge. What analysis technique finds systemic causes that training cannot address?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "To reduce total quality costs MOST effectively, the PM should focus on reducing which category?",
+            "points": 50,
+            "scenario_name": "Cost of Quality Targeting",
+            "situation": "A PM is analyzing quality costs for a manufacturing project. Prevention costs are $5K, appraisal costs are $10K, internal failure costs are $25K, and external failure costs are $15K. Total Cost of Quality is $55K. The PM needs to reduce total quality costs most effectively.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Prevention costs ($5K)",
+                "correct": false,
+                "whyWrong": "Reducing prevention INCREASES failure costs. Prevention is investment — cutting it is counterproductive and will raise the $25K internal failure cost even higher."
+              },
+              {
+                "id": "B",
+                "text": "Appraisal costs ($10K)",
+                "correct": false,
+                "whyWrong": "Without process improvement first, reducing inspection means more defects reach customers. External failures would increase, potentially offsetting any appraisal savings."
+              },
+              {
+                "id": "C",
+                "text": "Internal failure costs ($25K) by investing in prevention",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "External failure costs ($15K)",
+                "correct": false,
+                "whyWrong": "External failure is downstream of internal failure. Fixing internal failures through prevention stops defects from reaching customers, naturally reducing external failures too."
+              }
+            ],
+            "explanation": "Internal failure ($25K) is the largest nonconformance cost — 45% of total CoQ. Reducing this through prevention investment (training, process improvement, better equipment) provides the highest ROI. Prevention reduces the defect rate that causes internal failures, which also reduces external failures downstream.",
+            "correctFeedback": {
+              "text": "Internal failure ($25K) is the largest nonconformance cost — 45% of total CoQ. Reducing this through prevention investment (training, process improvement, better equipment) provides the highest ROI. Prevention reduces the defect rate that causes internal failures, which also reduces external failures downstream.",
+              "character": "Jordan Park",
+              "characterQuote": "Target the biggest failure cost with prevention investment. Reducing internal failure from $25K saves the most money and also reduces the external failures that slip through."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at all four categories. Two are investments, two are prices of failure. Cutting investment increases failure. Which failure cost is the largest target for improvement?",
+              "character": "Jordan Park",
+              "characterQuote": "Look at all four categories. Two are investments, two are prices of failure. Cutting investment increases failure. Which failure cost is the largest target for improvement?"
+            },
+            "retryHint": "Identify the largest FAILURE cost. What type of investment reduces the defect rate that creates that cost?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "The MOST appropriate improvement methodology is:",
+            "points": 50,
+            "scenario_name": "Kaizen vs Six Sigma Selection",
+            "situation": "An organization wants to reduce daily process inefficiencies through team involvement and small incremental improvements. The issues are not safety-critical and do not require statistical analysis — they are daily friction points that the team has identified and wants to fix.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Six Sigma",
+                "correct": false,
+                "whyWrong": "Six Sigma uses DMAIC and statistical analysis for critical defects requiring breakthrough improvement. Daily friction points do not need that level of rigor."
+              },
+              {
+                "id": "B",
+                "text": "Kaizen",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Total Quality Management (TQM)",
+                "correct": false,
+                "whyWrong": "TQM is an organization-wide management philosophy, not a specific improvement methodology for daily team-level inefficiencies."
+              },
+              {
+                "id": "D",
+                "text": "Statistical sampling",
+                "correct": false,
+                "whyWrong": "Statistical sampling is an inspection technique for quality control, not an improvement methodology."
+              }
+            ],
+            "explanation": "Kaizen focuses on continuous incremental improvement through team involvement. It is designed for daily inefficiencies and process friction where the team identifies and implements small changes. Six Sigma is for critical defects requiring data-driven breakthrough analysis — overkill for daily friction points.",
+            "correctFeedback": {
+              "text": "Kaizen focuses on continuous incremental improvement through team involvement. It is designed for daily inefficiencies and process friction where the team identifies and implements small changes. Six Sigma is for critical defects requiring data-driven breakthrough analysis — overkill for daily friction points.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Kaizen means 'change for better' — small daily improvements driven by the people closest to the work. Perfect match for team-identified daily inefficiencies."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The question says 'daily inefficiencies,' 'team involvement,' and 'small incremental.' Which methodology matches those three characteristics?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The question says 'daily inefficiencies,' 'team involvement,' and 'small incremental.' Which methodology matches those three characteristics?"
+            },
+            "retryHint": "Match the methodology to the problem description: small, incremental, team-driven, daily improvements. Which approach is specifically designed for that?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Using the PDCA cycle, what should the PM do at the ACT stage?",
+            "points": 50,
+            "scenario_name": "PDCA Cycle — ACT Stage",
+            "situation": "A PM implemented a process improvement that reduced defects from 8% to 4%, but the target was 2%. Staff feedback shows the training component was effective but the equipment needs further calibration. The PM is now at the ACT stage of the PDCA cycle.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Abandon the improvement since it did not reach the 2% target",
+                "correct": false,
+                "whyWrong": "A 50% improvement (8% to 4%) is significant progress. PDCA is iterative — partial success informs the next cycle rather than ending the effort."
+              },
+              {
+                "id": "B",
+                "text": "Repeat the same improvement activities without changes",
+                "correct": false,
+                "whyWrong": "Repeating without incorporating feedback from the CHECK phase is inefficient. Staff identified equipment calibration as the gap — the next cycle should address that, not repeat training."
+              },
+              {
+                "id": "C",
+                "text": "Standardize the current gains (4% level) and start a new PDCA cycle targeting the remaining gap",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Move to a different improvement initiative entirely",
+                "correct": false,
+                "whyWrong": "Abandoning a partially successful initiative wastes the momentum and gains achieved. Close the 4% to 2% gap first, then move to the next priority."
+              }
+            ],
+            "explanation": "ACT in PDCA means: standardize what works (lock in the 8% to 4% improvement), then start a new cycle to close the remaining gap (4% to 2%). Staff feedback from the CHECK phase identifies equipment calibration as the next focus area. PDCA is iterative — continuous improvement means multiple cycles building on each other.",
+            "correctFeedback": {
+              "text": "ACT in PDCA means: standardize what works (lock in the 8% to 4% improvement), then start a new cycle to close the remaining gap (4% to 2%). Staff feedback from the CHECK phase identifies equipment calibration as the next focus area. PDCA is iterative — continuous improvement means multiple cycles building on each other.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "PDCA is a cycle, not a one-shot attempt. You achieved 50% improvement and identified the next target. Standardize, then improve again. That is continuous improvement."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "50% improvement is significant. PDCA says: lock in your gains, then use what you learned (equipment needs calibration) to plan the next cycle. Do you abandon progress or build on it?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "50% improvement is significant. PDCA says: lock in your gains, then use what you learned (equipment needs calibration) to plan the next cycle. Do you abandon progress or build on it?"
+            },
+            "retryHint": "PDCA is a repeating cycle. At the ACT stage with partial results, do you abandon, repeat without learning, or build on what worked? And what did the CHECK phase feedback tell you?"
+          }
+        ]
+      }
+    }
+  ]
+}

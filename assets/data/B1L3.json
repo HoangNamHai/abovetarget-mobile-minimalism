@@ -1,0 +1,786 @@
+{
+  "lessonId": "B1L3",
+  "lessonTitle": "Stakeholder Engagement Planning",
+  "courseId": "B1",
+  "courseName": "Stakeholder & Communication Management",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Apply the Stakeholder Engagement Continuum: Unaware, Resistant, Neutral, Supportive, Leading",
+    "Prioritize stakeholders based on power level (high-power unaware stakeholders are most dangerous)",
+    "Match stakeholders to appropriate engagement strategies based on their continuum position",
+    "Design tailored engagement plans for resistant stakeholders",
+    "Sequence proactive engagement activities for high-power unaware stakeholders",
+    "Apply proactive engagement principles: early, frequent, transparent communication"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "dr_amelia_foster",
+    "sam_rodriguez",
+    "jordan_liu",
+    "ava_thompson",
+    "carlos_mendez"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "From Identification to Action: Three Stakeholders Who Could Derail Savory & Co.",
+        "intro": "Savory & Co. is expanding to a new flagship location in Manhattan's Tribeca neighborhood. **Alex Mitchell** has identified stakeholders and mapped their power and interest. But now comes the critical next step: **planning how to engage each stakeholder** and move them up the continuum.",
+        "failure_cards": [
+          {
+            "id": "the_unaware_cfo",
+            "icon": "📋",
+            "title": "The Unaware CFO",
+            "summary": "High-power stakeholder doesn't know about $2.5M budget",
+            "image": "/images/B1L3_comic_unaware_cfo.webp",
+            "details": "Sam Rodriguez, the CFO, controls budget approvals for the entire expansion. He has high power but is completely UNAWARE of the $2.5M budget request. Board approval is in 3 weeks. If Sam learns about the budget at the board meeting instead of before, he could block the entire project. High-power unaware stakeholders are the most dangerous profile because surprises at critical moments trigger rejection."
+          },
+          {
+            "id": "the_resistant_marketing_manager",
+            "icon": "⚠️",
+            "title": "The Resistant Marketing Manager",
+            "summary": "Marketing Manager actively opposing the 6-month timeline",
+            "image": "/images/B1L3_comic_resistant_marketing.webp",
+            "details": "Jordan Liu, the Marketing Manager, has high power over brand launch approvals. He's RESISTANT to the timeline, citing that good food influencers book 4-6 months out and social media campaigns need 3 months lead time. He's been vocal in meetings: \"Six months for a flagship launch? My competitors take 12 months minimum.\" Ignoring his resistance risks blocking marketing approvals entirely."
+          },
+          {
+            "id": "the_engagement_framework",
+            "icon": "💡",
+            "title": "The Engagement Framework",
+            "summary": "Dr. Foster reveals the 5-level Engagement Continuum",
+            "image": "/images/B1L3_comic_engagement.webp",
+            "details": "Dr. Foster draws the Stakeholder Engagement Continuum on the whiteboard: Unaware, Resistant, Neutral, Supportive, Leading. She maps Sam, Jordan, and Ava to their current levels and shows the desired movement arrows. Alex realizes that different stakeholders need different engagement strategies based on where they ARE and where they need to BE."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "Consultant",
+          "quote": "Stakeholder identification is step one. Engagement PLANNING is where the real work begins. You can't treat all stakeholders the same."
+        },
+        "learning_hook": "**Every stakeholder sits somewhere on the Engagement Continuum.** Your job as PM: move them UP — from Unaware to Aware, from Resistant to Supportive, from Neutral to Leading. Get the strategy wrong, and stakeholders block your project. Get it right, and they become your champions."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "plan_the_engagement_strategy",
+        "title": "Plan the Engagement Strategy",
+        "description": "Alex has 18 identified stakeholders. The Stakeholder Engagement Assessment Matrix shows dangerous gaps. Three stakeholders need immediate attention.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What is Sam's CURRENT position on the Engagement Continuum?",
+            "points": 80,
+            "scenario_name": "Classify Sam Rodriguez",
+            "situation": "Sam Rodriguez (CFO) doesn't know about the $2.5M budget request for the Manhattan expansion. Board approval is in 3 weeks. He has high power over budget decisions.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Resistant — he opposes the budget",
+                "correct": false,
+                "whyWrong": "Sam can't resist what he doesn't know about. Resistance requires awareness first."
+              },
+              {
+                "id": "B",
+                "text": "Unaware — he doesn't know about the project budget",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Neutral — he's aware but undecided",
+                "correct": false,
+                "whyWrong": "Neutral means aware but uncommitted. Sam has no awareness at all."
+              },
+              {
+                "id": "D",
+                "text": "Supportive — he'll approve when he sees the numbers",
+                "correct": false,
+                "whyWrong": "Supportive assumes he knows and approves. He hasn't been informed."
+              }
+            ],
+            "explanation": "Sam is UNAWARE because he doesn't know about the $2.5M budget request. He can't resist or support something he doesn't know about. This is the most dangerous position for a high-power stakeholder.",
+            "correctFeedback": {
+              "text": "Sam is UNAWARE because he doesn't know about the $2.5M budget request. He can't resist or support something he doesn't know about. This is the most dangerous position for a high-power stakeholder.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Exactly. Sam isn't resisting — he doesn't even know yet. That's what makes this so dangerous. When high-power stakeholders are surprised at critical moments, they react with rejection."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Sam can't oppose or support something he doesn't know about. He's completely in the dark. What level describes someone who has NO awareness of the project?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Sam can't oppose or support something he doesn't know about. He's completely in the dark. What level describes someone who has NO awareness of the project?"
+            },
+            "retryHint": "Sam doesn't know the budget request exists. What engagement level describes someone with zero awareness?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Which stakeholder should Alex prioritize for IMMEDIATE engagement and why?",
+            "points": 80,
+            "scenario_name": "Prioritize the Danger",
+            "situation": "Alex's Stakeholder Engagement Assessment Matrix shows: Sam (CFO, high power, unaware), Jordan (Marketing, high power, resistant), Ava (Investor, high power, neutral), Community Board (low power, neutral).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Jordan Liu — resistant stakeholders are the biggest threat",
+                "correct": false,
+                "whyWrong": "Jordan is dangerous, but he's at least engaged. Sam doesn't even know the project exists."
+              },
+              {
+                "id": "B",
+                "text": "Ava Thompson — neutral investors could pull funding",
+                "correct": false,
+                "whyWrong": "Ava is neutral — not actively threatening the project. Sam could block everything."
+              },
+              {
+                "id": "C",
+                "text": "Sam Rodriguez — high power + unaware is the MOST dangerous combination",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Community Board — they could cause neighborhood opposition",
+                "correct": false,
+                "whyWrong": "Low-power stakeholders are lower priority regardless of interest level."
+              }
+            ],
+            "explanation": "High-power + Unaware = MOST DANGEROUS. Sam can block the entire project when he discovers the $2.5M budget at the board meeting. Resistant stakeholders are dangerous too, but at least they're engaged. Unaware high-power stakeholders are ticking time bombs.",
+            "correctFeedback": {
+              "text": "High-power + Unaware = MOST DANGEROUS. Sam can block the entire project when he discovers the $2.5M budget at the board meeting. Resistant stakeholders are dangerous too, but at least they're engaged. Unaware high-power stakeholders are ticking time bombs.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "High-power unaware stakeholders are time bombs. The longer they stay unaware, the bigger the explosion when they finally learn. Sam is your Priority 1."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about risk. Which combination poses the greatest threat? A stakeholder who's fighting you at least knows about the project. What about one who doesn't know at all?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about risk. Which combination poses the greatest threat? A stakeholder who's fighting you at least knows about the project. What about one who doesn't know at all?"
+            },
+            "retryHint": "Which combination is most dangerous: high power + unaware, high power + resistant, or low power + neutral?"
+          },
+          {
+            "q_id": "q3",
+            "type": "drag_drop",
+            "question": "Drag each stakeholder to their correct engagement strategy:",
+            "points": 100,
+            "scenario_name": "Match Stakeholders to Strategies",
+            "situation": "Now that Alex understands priorities, he needs to match each stakeholder to the RIGHT engagement strategy.",
+            "chips": [
+              {
+                "id": "sam_rodriguez_cfo",
+                "label": "Sam Rodriguez (CFO)",
+                "correctZone": "immediate_1on1"
+              },
+              {
+                "id": "jordan_liu_marketing",
+                "label": "Jordan Liu (Marketing)",
+                "correctZone": "tailored_engagement"
+              },
+              {
+                "id": "ava_thompson_investor",
+                "label": "Ava Thompson (Investor)",
+                "correctZone": "champion_building"
+              },
+              {
+                "id": "community_board",
+                "label": "Community Board",
+                "correctZone": "keep_informed"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "immediate_1on1",
+                "label": "Immediate 1-on-1",
+                "detail": "Schedule proactive meeting THIS WEEK — share budget details BEFORE board approval"
+              },
+              {
+                "id": "tailored_engagement",
+                "label": "Tailored Engagement",
+                "detail": "Address specific timeline concerns, involve in creative solutions"
+              },
+              {
+                "id": "champion_building",
+                "label": "Champion Building",
+                "detail": "Regular executive updates, involve in key decisions, position as advocate"
+              },
+              {
+                "id": "keep_informed",
+                "label": "Keep Informed",
+                "detail": "Monthly updates and quarterly community meetings"
+              }
+            ],
+            "explanation": "Each engagement level needs a different strategy. Unaware high-power stakeholders need immediate proactive engagement. Resistant stakeholders need tailored plans addressing specific concerns. Neutral stakeholders you want as champions need involvement. Low-power interested stakeholders need regular updates.",
+            "correctFeedback": {
+              "text": "Each engagement level needs a different strategy. Unaware high-power stakeholders need immediate proactive engagement. Resistant stakeholders need tailored plans addressing specific concerns. Neutral stakeholders you want as champions need involvement. Low-power interested stakeholders need regular updates.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You matched each stakeholder to the right strategy. The key insight: engagement effort should match stakeholder power AND their current position on the continuum."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Consider each stakeholder's power level AND their current engagement level. An unaware CFO needs a very different approach than a neutral community board.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Consider each stakeholder's power level AND their current engagement level. An unaware CFO needs a very different approach than a neutral community board."
+            },
+            "retryHint": "Match urgency to danger: unaware + high power needs the most immediate action. Resistant needs tailored plans. Neutral champions need involvement. Low power needs updates."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What is Alex's BEST response to move Jordan from Resistant toward Supportive?",
+            "points": 100,
+            "scenario_name": "Engage Resistant Jordan",
+            "situation": "Alex meets with Jordan Liu one-on-one. Jordan says: \"Six months for a flagship launch? My team can't build brand awareness that fast. Good food influencers book 4-6 months out, and our social media campaign needs 3 months lead time.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"The timeline is set by leadership. We need you to make it work.\"",
+                "correct": false,
+                "whyWrong": "Authority without understanding creates resentment. Jordan has legitimate concerns — dismissing them deepens resistance."
+              },
+              {
+                "id": "B",
+                "text": "\"I understand it's tight. What if we just do a smaller launch?\"",
+                "correct": false,
+                "whyWrong": "Compromising on scope before understanding the root cause is premature. First explore if timing can be creatively addressed."
+              },
+              {
+                "id": "C",
+                "text": "\"What if we started influencer outreach immediately — today — while other planning continues? That buys you 3 extra months of lead time.\"",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "\"Let me escalate this to Carlos and get the timeline extended.\"",
+                "correct": false,
+                "whyWrong": "Premature escalation before exploring solutions damages Alex's credibility and suggests he can't solve problems directly."
+              }
+            ],
+            "explanation": "The best approach combines curious inquiry with problem-solving. By understanding Jordan's specific concern (influencer lead times) and offering a creative solution (start outreach immediately rather than waiting), Alex addresses the root cause without compromising the timeline.",
+            "correctFeedback": {
+              "text": "The best approach combines curious inquiry with problem-solving. By understanding Jordan's specific concern (influencer lead times) and offering a creative solution (start outreach immediately rather than waiting), Alex addresses the root cause without compromising the timeline.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Brilliant. You addressed Jordan's SPECIFIC concern with a creative solution that maintains the timeline. This is textbook tailored engagement — understand root causes, involve them in solutions."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Jordan has a legitimate concern about influencer lead times. The best response addresses his specific issue without compromising the project timeline or escalating prematurely.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Jordan has a legitimate concern about influencer lead times. The best response addresses his specific issue without compromising the project timeline or escalating prematurely."
+            },
+            "retryHint": "Jordan's real concern is influencer lead times (4-6 months). How can you give him more lead time WITHOUT extending the project timeline?"
+          },
+          {
+            "q_id": "q5",
+            "type": "drag_drop",
+            "question": "Drag activities into the correct sequence:",
+            "points": 80,
+            "scenario_name": "Engagement Sequence for Sam",
+            "situation": "Alex needs to engage Sam Rodriguez (CFO, high-power, unaware) BEFORE the board meeting in 3 weeks. Order these engagement activities chronologically.",
+            "chips": [
+              {
+                "id": "step_1",
+                "label": "Step 1",
+                "correctZone": "first"
+              },
+              {
+                "id": "step_2",
+                "label": "Step 2",
+                "correctZone": "second"
+              },
+              {
+                "id": "step_3",
+                "label": "Step 3",
+                "correctZone": "third"
+              },
+              {
+                "id": "step_4",
+                "label": "Step 4",
+                "correctZone": "fourth"
+              },
+              {
+                "id": "step_5",
+                "label": "Step 5",
+                "correctZone": "fifth"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "first",
+                "label": "First",
+                "detail": "Research Sam's communication preferences and priorities"
+              },
+              {
+                "id": "second",
+                "label": "Second",
+                "detail": "Prepare ROI analysis and budget justification"
+              },
+              {
+                "id": "third",
+                "label": "Third",
+                "detail": "Hold 1-on-1 meeting — share project details and business case"
+              },
+              {
+                "id": "fourth",
+                "label": "Fourth",
+                "detail": "Follow up on Sam's questions and concerns"
+              },
+              {
+                "id": "fifth",
+                "label": "Fifth",
+                "detail": "Confirm Sam's support before the board meeting"
+              }
+            ],
+            "explanation": "Proactive engagement follows a logical flow: Research (understand the stakeholder) then Prepare (build your case) then Meet (execute engagement) then Follow up (address concerns) then Confirm (verify movement on the continuum). Each step builds on the previous one.",
+            "correctFeedback": {
+              "text": "Proactive engagement follows a logical flow: Research (understand the stakeholder) then Prepare (build your case) then Meet (execute engagement) then Follow up (address concerns) then Confirm (verify movement on the continuum). Each step builds on the previous one.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect sequence. Notice how each step enables the next. You can't address concerns before hearing them, and you can't confirm support before engaging. This is the proactive engagement playbook."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about dependencies. What must happen before the meeting? What can only happen after? Each activity enables the next.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about dependencies. What must happen before the meeting? What can only happen after? Each activity enables the next."
+            },
+            "retryHint": "Follow the logic: you must understand someone before preparing for them, prepare before meeting, meet before following up, and follow up before confirming."
+          },
+          {
+            "q_id": "q6",
+            "type": "multi_select",
+            "question": "Select ALL approaches that are WRONG when dealing with a resistant high-power stakeholder: (Select 3)",
+            "points": 60,
+            "scenario_name": "What NOT to Do",
+            "situation": "Alex is planning how to handle Jordan's resistance to the timeline. He wants to make sure he avoids common mistakes.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Ignore the resistance and hope they come around",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Develop a tailored engagement plan addressing specific concerns",
+                "correct": false,
+                "whyWrong": "Developing a tailored engagement plan is the CORRECT approach. Understanding specific concerns and designing targeted strategies is exactly how PMs should handle resistant stakeholders."
+              },
+              {
+                "id": "C",
+                "text": "Compromise project objectives to win their support",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Understand their specific concerns before proposing solutions",
+                "correct": false,
+                "whyWrong": "Understanding concerns before proposing solutions is the CORRECT approach. Root cause analysis prevents wasted effort and shows respect for the stakeholder's perspective."
+              },
+              {
+                "id": "E",
+                "text": "Escalate to the sponsor immediately without trying direct engagement",
+                "correct": true
+              }
+            ],
+            "minSelections": 3,
+            "maxSelections": 3,
+            "explanation": "Three things to NEVER do with resistant stakeholders: (1) Ignore resistance — it escalates, never goes away. (2) Compromise objectives — undermines project integrity. (3) Escalate prematurely — try direct tailored engagement first. The correct approaches are understanding concerns and developing tailored plans.",
+            "correctFeedback": {
+              "text": "Three things to NEVER do with resistant stakeholders: (1) Ignore resistance — it escalates, never goes away. (2) Compromise objectives — undermines project integrity. (3) Escalate prematurely — try direct tailored engagement first. The correct approaches are understanding concerns and developing tailored plans.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You identified all three mistakes. Ignoring resistance lets it grow. Compromising objectives weakens the project. Escalating prematurely damages your credibility. Always try tailored direct engagement first."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what makes resistance worse: ignoring it? giving in to it? or passing it to someone else? All three are mistakes.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what makes resistance worse: ignoring it? giving in to it? or passing it to someone else? All three are mistakes."
+            },
+            "retryHint": "Three wrong approaches: one is passive (doing nothing), one surrenders (changing the project), one avoids (passing the problem up). Find all three."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Engagement Continuum Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The 5-Level Continuum",
+            "subtitle": "",
+            "content": "The **Stakeholder Engagement Continuum** defines five levels of stakeholder engagement. Your job as PM: move stakeholders UP the continuum through tailored, proactive strategies.\n\n| Level | Definition | Example |\n|-------|-----------|---------|\n| **UNAWARE** | Doesn't know about the project | Sam (CFO) — no idea about $2.5M budget |\n| **RESISTANT** | Knows but opposes the project | Jordan (Marketing) — opposing the timeline |\n| **NEUTRAL** | Aware but on the fence | Ava (Investor) — neither supporting nor opposing |\n| **SUPPORTIVE** | Supports the project when asked | Target for Sam and Jordan |\n| **LEADING** | Actively champions the project to others | Target for Ava |\n\n**PMBOK Reference:** PMBOK 7th Edition, Stakeholder Engagement Assessment Matrix",
+            "diagram": {
+              "image": "/images/B1L3_diagram_engagement_continuum.webp",
+              "alt": "Engagement Continuum"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "The Danger Rule",
+            "subtitle": "",
+            "content": "When prioritizing stakeholder engagement, high-power unaware stakeholders are the MOST DANGEROUS.\n\n**Why?**\n- They have power to block your project\n- They don't know about it (yet)\n- When they become aware at late stages, they often react negatively\n- \"Why wasn't I informed?\" becomes \"I'm blocking this until I understand it\"\n\n**Prioritization Order:**\n1. **Priority 1:** High-Power + Unaware (MOST DANGEROUS) — Sam\n2. **Priority 2:** High-Power + Resistant — Jordan\n3. **Priority 3:** High-Power + Neutral — Ava\n4. **Priority 4:** Low-Power + Any level — Community Board\n\n**PMBOK Reference:** PMBOK 7th Edition, Stakeholder Prioritization"
+          },
+          {
+            "id": "tab3",
+            "title": "Strategies by Level",
+            "subtitle": "",
+            "content": "Each engagement level requires a different strategy:\n\n| Level | Strategy | Savory & Co. Example |\n|-------|----------|---------------------|\n| **UNAWARE** | Immediate proactive 1-on-1 engagement before critical decisions | Sam: Meet THIS WEEK, 3 weeks before board approval |\n| **RESISTANT** | Tailored plan — understand specific concerns, involve in solutions | Jordan: Address influencer timeline, find creative sequencing |\n| **NEUTRAL** | Proactive updates, involve in key decisions, demonstrate value | Ava: Regular executive updates, position as champion |\n| **SUPPORTIVE** | Maintain engagement — keep informed, recognize contributions | Continue regular communication |\n| **LEADING** | Leverage influence — involve in decisions, ask them to champion | Ava (target): Ask her to advocate to the board |\n\n**Key Insight:** Match engagement effort to stakeholder's power AND current level. Don't over-engage low-power stakeholders or under-engage high-power ones.\n\n**PMBOK Reference:** PMBOK 6th Edition, Section 13.2 — Plan Stakeholder Engagement"
+          },
+          {
+            "id": "tab4",
+            "title": "Tailored Plans for Resistant Stakeholders",
+            "subtitle": "",
+            "content": "When stakeholders are actively resistant, generic communication WON'T work. A tailored engagement plan includes:\n\n1. **Root Cause Analysis:** What are their SPECIFIC concerns? (Jordan: influencer lead times)\n2. **Communication Preferences:** How do they prefer to receive information? (1-on-1 vs email vs meeting)\n3. **Involvement Opportunities:** How can they help shape solutions? (Jordan: revised marketing timeline)\n4. **Feedback Mechanisms:** How will you show you're addressing concerns? (Regular check-ins)\n5. **Milestones:** When will you check engagement level? (Week 2: Neutral? Week 4: Supportive?)\n\n**What NOT to Do:**\n- Do not ignore resistance (it escalates)\n- Do not compromise project objectives to win them over\n- Do not escalate prematurely (try direct engagement first)\n- Do not call large meetings to address one person's concerns\n\n**PMBOK Reference:** PMBOK 7th Edition, Proactive Engagement"
+          },
+          {
+            "id": "tab5",
+            "title": "Proactive Engagement Principles",
+            "subtitle": "",
+            "content": "**Three principles for effective stakeholder engagement:**\n\n**1. EARLY** — Engage stakeholders as soon as they're identified\n- Don't wait for critical decisions to introduce yourself\n- The earlier you engage, the more time to build relationships\n\n**2. FREQUENT** — Regular touchpoints maintain engagement momentum\n- Schedule recurring check-ins with high-power stakeholders\n- Adjust frequency based on stakeholder needs and project phase\n\n**3. TRANSPARENT** — Share honest information, including challenges\n- Stakeholders who feel informed are more likely to support\n- Hiding problems destroys trust when they surface later\n\n> **Important:** Engagement is a PROCESS, not an event. Each interaction builds on the previous one. Rush it, and you're back to square one."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "The Surprise Stakeholder",
+        "scenario": {
+          "title": "The Surprise Stakeholder",
+          "description": "Alex discovers a NEW stakeholder he missed during identification: **Elena Vasquez** (HR Manager) has high power over staffing approvals and is currently UNAWARE of the expansion project — which requires hiring 40 new employees. Staffing plan approval is needed in 2 weeks.",
+          "images": [
+            {
+              "src": "/images/B1L3_comic_transfer.webp",
+              "alt": "Transfer scenario"
+            }
+          ],
+          "details": [
+            "**Stakeholder:** Elena Vasquez (HR Manager)",
+            "**Power Level:** High (controls all staffing approvals)",
+            "**Current Level:** Unaware (been on leave, missed all communications)",
+            "**Critical Deadline:** Staffing approval meeting in 2 weeks",
+            "**Risk:** If Elena learns about 40 hires at the approval meeting without prior engagement, she could block or delay staffing"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What combination BEST describes Elena's stakeholder profile and why she's a priority?",
+            "points": 150,
+            "scenario_name": "Assess the Situation",
+            "situation": "Alex discovers Elena Vasquez (HR Manager) has been on leave and missed all project communications. She controls staffing approvals for the 40 new hires needed for the Manhattan expansion. The staffing approval meeting is in 2 weeks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "High power + Unaware = Most dangerous priority. She can block staffing approvals and doesn't know the project exists.",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "High power + Resistant = Needs tailored engagement plan. She's actively opposing the staffing plan.",
+                "correct": false,
+                "whyWrong": "Elena isn't resistant — she's UNAWARE. She can't oppose something she doesn't know about."
+              },
+              {
+                "id": "C",
+                "text": "Low power + High interest = Keep informed. HR doesn't have real authority over operations.",
+                "correct": false,
+                "whyWrong": "HR has HIGH power over staffing approvals. Underestimating stakeholder power leads to unexpected blockers."
+              },
+              {
+                "id": "D",
+                "text": "Medium power + Neutral = Monitor and keep satisfied. She'll go along with whatever leadership decides.",
+                "correct": false,
+                "whyWrong": "Elena has HIGH power and is UNAWARE, not neutral. This is the most dangerous combination."
+              }
+            ],
+            "explanation": "Elena is High Power (controls staffing approvals) + Unaware (doesn't know about the project). This is the MOST DANGEROUS combination. She could block the entire staffing plan when she discovers 40 hires are needed at the approval meeting.",
+            "correctFeedback": {
+              "text": "Elena is High Power (controls staffing approvals) + Unaware (doesn't know about the project). This is the MOST DANGEROUS combination. She could block the entire staffing plan when she discovers 40 hires are needed at the approval meeting.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "High-power unaware stakeholders are time bombs. The longer they stay unaware, the bigger the explosion when they finally learn. Engage immediately."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Elena can't resist something she doesn't know about. And HR absolutely has high power over staffing decisions. What level describes zero awareness combined with high power?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Elena can't resist something she doesn't know about. And HR absolutely has high power over staffing decisions. What level describes zero awareness combined with high power?"
+            },
+            "retryHint": "Elena doesn't know the project exists and she controls staffing approvals. What engagement level + power level is that?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What is Alex's BEST first action with Elena?",
+            "points": 150,
+            "scenario_name": "Select the Strategy",
+            "situation": "Elena Vasquez (HR Manager) is high-power and unaware of the expansion project. Alex has 2 weeks before the staffing approval meeting where Elena will need to approve 40 new hires. Alex needs to choose the right engagement approach.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Add Elena to the project email distribution list so she receives future updates",
+                "correct": false,
+                "whyWrong": "Email is PASSIVE engagement. Elena may not read it before the approval meeting, leaving her effectively unaware."
+              },
+              {
+                "id": "B",
+                "text": "Schedule an immediate 1-on-1 meeting with Elena THIS WEEK to share project details and address her concerns before the approval meeting",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Ask Carlos (GM) to inform Elena about the project on Alex's behalf",
+                "correct": false,
+                "whyWrong": "Delegating engagement reduces Alex's credibility and misses the opportunity to build a direct relationship."
+              },
+              {
+                "id": "D",
+                "text": "Wait until the staffing approval meeting to present the comprehensive plan — more efficient than multiple meetings",
+                "correct": false,
+                "whyWrong": "Waiting until approval is REACTIVE. Elena will feel blindsided by 40 hires she's hearing about for the first time."
+              }
+            ],
+            "explanation": "Immediate 1-on-1 meeting is the RIGHT strategy for high-power unaware stakeholders. This gives time to share context, explain staffing needs with rationale, hear concerns, address questions, and build support BEFORE the formal approval.",
+            "correctFeedback": {
+              "text": "Immediate 1-on-1 meeting is the RIGHT strategy for high-power unaware stakeholders. This gives time to share context, explain staffing needs with rationale, hear concerns, address questions, and build support BEFORE the formal approval.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Proactive engagement is investment. Reactive damage control is emergency spending. The ROI on proactive is always better."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Elena is high-power and unaware. She needs ACTIVE, immediate engagement — not passive emails, delegated communication, or surprise presentations at approval meetings.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Elena is high-power and unaware. She needs ACTIVE, immediate engagement — not passive emails, delegated communication, or surprise presentations at approval meetings."
+            },
+            "retryHint": "High-power + unaware = immediate proactive engagement. What's the most direct, active approach?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the **Stakeholder Engagement Continuum** and how to design tailored strategies that move stakeholders from Unaware to Leading.",
+        "key_takeaways": [
+          "The Engagement Continuum has 5 levels: Unaware, Resistant, Neutral, Supportive, Leading",
+          "High-power + Unaware = MOST DANGEROUS — engage them immediately with proactive 1-on-1 meetings",
+          "Resistant stakeholders need TAILORED engagement plans addressing their specific concerns",
+          "Proactive engagement means early, frequent, and transparent communication BEFORE critical decisions",
+          "The engagement sequence is: Research, Prepare, Meet, Follow up, Confirm",
+          "Never ignore resistance, compromise objectives, or escalate before trying direct engagement"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L4",
+          "title": "Communication Methods & Channels",
+          "description": "You've learned WHO to engage and HOW to move them up the continuum. Now learn WHAT communication methods work best — push, pull, and interactive."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager do FIRST?",
+            "points": 50,
+            "scenario_name": "Unaware Executive",
+            "situation": "During a restaurant expansion project, the project manager discovers that a senior VP who controls IT infrastructure approvals is unaware of the project. The project needs IT sign-off for the new POS system installation in 4 weeks. The VP has high power but has not been included in any project communications.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Add the VP to the project distribution list and send a summary email",
+                "correct": false,
+                "whyWrong": "Email is passive engagement. A high-power unaware stakeholder needs active, immediate engagement."
+              },
+              {
+                "id": "B",
+                "text": "Wait until the IT approval meeting to present the POS requirements",
+                "correct": false,
+                "whyWrong": "Waiting until approval is reactive. The VP will feel blindsided by requirements they're hearing for the first time."
+              },
+              {
+                "id": "C",
+                "text": "Schedule an immediate meeting with the VP to share project details and understand their concerns before the approval deadline",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Ask the project sponsor to inform the VP about the project requirements",
+                "correct": false,
+                "whyWrong": "Delegating stakeholder engagement reduces the PM's credibility and misses the chance to build a direct relationship."
+              }
+            ],
+            "explanation": "High-power unaware stakeholders are the most dangerous profile. The PM should proactively engage them immediately with a direct meeting to share project details, explain benefits, and address concerns BEFORE critical approval decisions.",
+            "correctFeedback": {
+              "text": "High-power unaware stakeholders are the most dangerous profile. The PM should proactively engage them immediately with a direct meeting to share project details, explain benefits, and address concerns BEFORE critical approval decisions.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "A meeting you schedule is engagement. A meeting that surprises them is damage control."
+            },
+            "retryHint": "High-power + unaware = immediate proactive engagement. What's the most direct approach?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST approach for the project manager?",
+            "points": 50,
+            "scenario_name": "Resistant Department Head",
+            "situation": "A department head is actively resistant to a new restaurant management system, stating that the training timeline is too aggressive and will disrupt operations. She has high power over user adoption and has expressed concerns in multiple meetings but hasn't received a response addressing her specific issues.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Escalate to the project sponsor to mandate compliance",
+                "correct": false,
+                "whyWrong": "Escalation before direct engagement damages the relationship and is premature."
+              },
+              {
+                "id": "B",
+                "text": "Develop a tailored engagement plan addressing her specific training concerns and involve her in designing solutions",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Proceed with the project and hope she comes around once she sees the benefits",
+                "correct": false,
+                "whyWrong": "Ignoring resistance from a high-power stakeholder is dangerous. Resistance escalates, never fades."
+              },
+              {
+                "id": "D",
+                "text": "Extend the training timeline to match her request",
+                "correct": false,
+                "whyWrong": "Compromising project objectives to win over a stakeholder undermines project integrity."
+              }
+            ],
+            "explanation": "When a stakeholder is actively resistant, the PM should develop a tailored engagement plan that addresses their SPECIFIC concerns. Understand root causes, involve them in solutions, and show transparency.",
+            "correctFeedback": {
+              "text": "When a stakeholder is actively resistant, the PM should develop a tailored engagement plan that addresses their SPECIFIC concerns. Understand root causes, involve them in solutions, and show transparency.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Resistance is information. It tells you what concerns need addressing. Listen to it, don't fight it."
+            },
+            "retryHint": "Resistant stakeholders need TAILORED engagement — address specific concerns, involve in solutions."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What engagement strategy should the project manager use?",
+            "points": 50,
+            "scenario_name": "Neutral Investor",
+            "situation": "A key investor in a restaurant expansion project is currently neutral — aware of the project but neither supporting nor opposing it. The project manager wants to move the investor to a \"leading\" position where they actively champion the project to other stakeholders.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Monitor the investor with minimal communication since they're not actively opposing",
+                "correct": false,
+                "whyWrong": "Monitor strategy is for low-power, low-interest stakeholders. A key investor needs active engagement."
+              },
+              {
+                "id": "B",
+                "text": "Provide regular executive updates, involve them in key decisions, and position them as a project champion",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Send monthly email updates to keep them informed of progress",
+                "correct": false,
+                "whyWrong": "Keep Informed maintains neutral but doesn't move them to Leading. Championing requires deeper involvement."
+              },
+              {
+                "id": "D",
+                "text": "Wait until the investor shows interest before increasing engagement",
+                "correct": false,
+                "whyWrong": "Waiting is reactive. Moving a stakeholder to Leading requires proactive engagement that demonstrates value."
+              }
+            ],
+            "explanation": "To move a high-power stakeholder from Neutral to Leading, the PM needs to demonstrate strategic value, involve them in key decisions, and create opportunities for them to champion the project.",
+            "correctFeedback": {
+              "text": "To move a high-power stakeholder from Neutral to Leading, the PM needs to demonstrate strategic value, involve them in key decisions, and create opportunities for them to champion the project.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Champions aren't born — they're created through involvement and ownership."
+            },
+            "retryHint": "Leading stakeholders actively champion the project. What type of engagement creates that behavior?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which stakeholder should the project manager prioritize for IMMEDIATE engagement?",
+            "points": 50,
+            "scenario_name": "Stakeholder Prioritization",
+            "situation": "A project manager has identified four stakeholders: (1) An executive sponsor who is supportive, (2) A vendor manager who is neutral, (3) A regulatory inspector who is unaware of the project and has high power over permit approvals needed next month, and (4) A team lead who is resistant to the timeline.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The executive sponsor (supportive) to leverage their influence",
+                "correct": false,
+                "whyWrong": "Supportive stakeholders are valuable but not urgent. They're already engaged positively."
+              },
+              {
+                "id": "B",
+                "text": "The team lead (resistant) to address their timeline concerns",
+                "correct": false,
+                "whyWrong": "Resistant stakeholders need attention, but unaware high-power stakeholders are MORE dangerous."
+              },
+              {
+                "id": "C",
+                "text": "The regulatory inspector (unaware, high power) to prevent permit approval issues",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "The vendor manager (neutral) to secure their support",
+                "correct": false,
+                "whyWrong": "Neutral stakeholders are lower priority than unaware high-power stakeholders."
+              }
+            ],
+            "explanation": "Prioritization rule: High-power + Unaware = MOST DANGEROUS. The regulatory inspector has high power over permits and is completely unaware. If they learn about the project at the approval stage, they could block permits.",
+            "correctFeedback": {
+              "text": "Prioritization rule: High-power + Unaware = MOST DANGEROUS. The regulatory inspector has high power over permits and is completely unaware. If they learn about the project at the approval stage, they could block permits.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Power determines impact. Unawareness determines surprise. High power + surprise = blocked project."
+            },
+            "retryHint": "Which stakeholder combination is MOST dangerous: high power + unaware, high power + resistant, or low power + neutral?"
+          }
+        ]
+      }
+    }
+  ]
+}

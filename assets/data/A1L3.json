@@ -1,0 +1,595 @@
+{
+  "lessonId": "A1L3",
+  "lessonTitle": "Project Stakeholders",
+  "courseId": "A1",
+  "courseName": "Introduction to Project Management",
+  "pathId": "A",
+  "pathName": "Foundation",
+  "domain": "Business Environment",
+  "estimatedDuration": 600,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Define who stakeholders are and why early identification is critical",
+    "Distinguish between stakeholder, customer, sponsor, and end user",
+    "Identify stakeholders across internal and external categories",
+    "Understand stakeholder impact on project scope, decisions, and outcomes",
+    "Recognize the risks of missing key stakeholders during project initiation"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "inspector_lee",
+    "ava",
+    "maya_rodriguez",
+    "jamie",
+    "rashid"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Alex's Mistake: Three Angry Stakeholders",
+        "intro": "You're **Alex Mitchell**, now in your third week as PM at Savory & Co. Carlos assigned you the restaurant expansion project—opening a second location across town. You scheduled a kickoff meeting with Carlos, Maya, and the construction team.\n\nBut the day before the meeting, three people stormed into your office. They're furious they weren't included. And each one has the power to derail your project.",
+        "failure_cards": [
+          {
+            "id": "health_inspector_violation",
+            "icon": "📋",
+            "title": "Health Inspector Violation",
+            "summary": "Redesign required—code 3.4.2 violated",
+            "image": "/images/A1L3_comic_inspector.webp",
+            "details": "Inspector Lee examined your floor plan and found critical violations. \"You designed a kitchen without consulting ME? This violates health code 3.4.2. Sink placement is wrong, ventilation clearances are inadequate. You'll have to redesign everything—that's $45K and 6 weeks of delays.\""
+          },
+          {
+            "id": "owner_blindsided",
+            "icon": "⚠️",
+            "title": "Owner Blindsided",
+            "summary": "Layout decisions made without approval",
+            "image": "/images/A1L3_comic_investor.webp",
+            "details": "Ava (Franchise Owner) reviewed your design and was furious. \"I'm the one who will OWN and OPERATE this location, and you made layout decisions without my approval? I wanted 120-seat capacity—you designed 80 seats! Who's managing this project?\""
+          },
+          {
+            "id": "end_user_excluded",
+            "icon": "💡",
+            "title": "End User Excluded",
+            "summary": "Workflow design ignored operational needs",
+            "image": "/images/A1L3_comic_enduser.webp",
+            "details": "Jamie (FOH Manager) will work in this space daily. \"I'm the one managing customer service here, and NO ONE asked me about the workflow! The customer entrance is in the wrong place—servers will cross paths with guests constantly.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Alex, I should have been clearer. Stakeholders aren't just the people DOING the work. They're anyone who AFFECTS or is AFFECTED BY the project. You missed three critical ones—and now we're paying for it."
+        },
+        "learning_hook": "**Missing stakeholders early leads to costly rework, scope changes, and damaged relationships.** Let's learn who stakeholders really are—and how to identify ALL of them before it's too late."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "identify_and_categorize_stakeholders",
+        "title": "Identify and Categorize Stakeholders",
+        "description": "Carlos gives Alex a second chance: \"Before we go any further, identify ALL stakeholders. Then categorize them so we know who to engage and how.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "multi_select",
+            "question": "Which THREE stakeholders have the HIGHEST POWER to impact project decisions? (Select 3)",
+            "points": 250,
+            "scenario_name": "Stakeholder Identification",
+            "situation": "Restaurant expansion project (new location across town). Budget: $850K, Timeline: 6 months.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Carlos Mendez (GM) - Project sponsor, approves budget",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Ava (Franchise Owner) - Will own/operate location, controls business decisions",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Inspector Lee (Health Inspector) - Must approve permits",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Maya Rodriguez (Lead Chef) - Will transfer to new location",
+                "correct": false,
+                "whyWrong": "Maya is an important team member, but she doesn't have high POWER to impact decisions. She executes the plan rather than approving budgets or permits."
+              },
+              {
+                "id": "E",
+                "text": "Local Residents Near New Location - Affected by noise, traffic",
+                "correct": false,
+                "whyWrong": "Local residents are stakeholders (affected by the project), but they don't have direct POWER over project decisions. They can file complaints but can't approve budgets or permits."
+              },
+              {
+                "id": "F",
+                "text": "Alex's Friend (Software Engineer at Another Company)",
+                "correct": false,
+                "whyWrong": "Alex's friend has no connection to this project—they don't affect it and aren't affected by it. Personal relationships don't make someone a stakeholder."
+              }
+            ],
+            "minSelections": 3,
+            "maxSelections": 3,
+            "explanation": "HIGH-POWER stakeholders can make or break the project: Carlos (sponsor) controls budget, Ava (owner) controls business decisions and will accept the deliverable, and Inspector Lee can halt construction with permit denial. Other stakeholders matter but have less direct power over key decisions.",
+            "correctFeedback": {
+              "text": "HIGH-POWER stakeholders can make or break the project: Carlos (sponsor) controls budget, Ava (owner) controls business decisions and will accept the deliverable, and Inspector Lee can halt construction with permit denial. Other stakeholders matter but have less direct power over key decisions.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Exactly right, Alex. In PM, we focus first on stakeholders who can make or break the project. That's me, Ava, and any regulator who can stop us."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Can this person approve funding, deny permits, or shut down the project? That's HIGH POWER.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Ask yourself: Can this person approve funding, deny permits, or shut down the project? That's HIGH POWER."
+            },
+            "retryHint": "HIGH-POWER = can approve funding, deny permits, or halt the project. Look for decision-makers, not just team members."
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Match each stakeholder to their PRIMARY role in the project:",
+            "points": 250,
+            "scenario_name": "Sponsor vs Customer vs End User",
+            "situation": "Now categorize the key stakeholders by their primary role in the project.",
+            "chips": [
+              {
+                "id": "carlos_mendez_gm",
+                "label": "Carlos Mendez (GM)",
+                "correctZone": "sponsor"
+              },
+              {
+                "id": "ava_franchise_owner",
+                "label": "Ava (Franchise Owner)",
+                "correctZone": "customer"
+              },
+              {
+                "id": "jamie_foh_manager",
+                "label": "Jamie (FOH Manager)",
+                "correctZone": "end_user"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "sponsor",
+                "label": "Sponsor",
+                "detail": "Authorizes project, provides funding/resources"
+              },
+              {
+                "id": "customer",
+                "label": "Customer",
+                "detail": "Receives deliverable, defines success criteria"
+              },
+              {
+                "id": "end_user",
+                "label": "End User",
+                "detail": "Uses deliverable in daily operations"
+              }
+            ],
+            "explanation": "Sponsor (authorizes/funds), Customer (receives/accepts), End User (uses daily). These are distinct roles that require different engagement strategies.",
+            "correctFeedback": {
+              "text": "Sponsor (authorizes/funds), Customer (receives/accepts), End User (uses daily). These are distinct roles that require different engagement strategies.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I see now—Carlos approves the project, Ava receives and accepts the deliverable, and Jamie uses it daily. Different roles require different engagement strategies."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what each person DOES: Who approves? Who receives? Who uses it daily?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about what each person DOES: Who approves? Who receives? Who uses it daily?"
+            },
+            "retryHint": "Sponsor = authorizes/funds. Customer = receives/accepts deliverable. End User = uses daily."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Understanding Project Stakeholders",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Definition",
+            "subtitle": "What is a Stakeholder?",
+            "content": "**PMI Definition:** \"Stakeholders are individuals, groups, or organizations who may AFFECT, be AFFECTED BY, or PERCEIVE THEMSELVES to be AFFECTED BY a decision, activity, or outcome of a project.\"\n\n**Two Key Criteria:**\n\n1. **Affects the project:** Has influence on decisions, resources, scope, timeline\n   - Example: Sponsor approves budget, Inspector approves permits\n\n2. **Affected by the project:** Impacted by outcomes, deliverables, or processes\n   - Example: End users, local residents, investors\n\n**Key Insight:** Stakeholders aren't just \"people working on the project.\" They include:\n- People with **AUTHORITY** (sponsor, regulatory agencies)\n- People with **INTEREST** (investors, customers, end users)\n- People **IMPACTED** (local residents, supply chain, team members)"
+          },
+          {
+            "id": "tab2",
+            "title": "Four Roles",
+            "subtitle": "Key Stakeholder Roles",
+            "content": "**Sponsor:**\n- **Definition:** Person or group who AUTHORIZES the project and provides RESOURCES\n- **Role:** Approves charter, approves budget, resolves escalated issues\n- **Example:** Carlos (GM) authorizes expansion, approves $850K budget\n\n**Customer:**\n- **Definition:** Person or group who RECEIVES and ACCEPTS the project deliverable\n- **Role:** Defines acceptance criteria, validates deliverable meets needs\n- **Example:** Ava (Franchise Owner) receives new location, defines success criteria\n\n**End User:**\n- **Definition:** Person or group who will ACTUALLY USE the deliverable daily\n- **Role:** Provides operational requirements, validates usability\n- **Example:** Jamie (FOH Manager) works in new location daily\n\n**Team Member:**\n- **Definition:** Person who PERFORMS the project work, contributes expertise\n- **Role:** Executes tasks, provides technical input, builds deliverable\n- **Example:** Maya (Lead Chef) designs kitchen, contributes culinary expertise"
+          },
+          {
+            "id": "tab3",
+            "title": "Internal vs External",
+            "subtitle": "Stakeholder Categories",
+            "content": "**Internal Stakeholders:**\n- **Definition:** Part of the PERFORMING ORGANIZATION (your company)\n- **Examples:** Carlos (GM), Maya (Chef), Jamie (FOH Manager), Alex (PM)\n- **Characteristics:** Direct organizational authority, aligned with company goals\n\n**External Stakeholders:**\n- **Definition:** OUTSIDE the performing organization\n- **Examples:** Ava (Franchise Owner), Inspector Lee (Regulatory), Construction Team, Local Residents\n- **Characteristics:** Limited organizational authority, influenced through relationships\n\n**Key Insight:** External stakeholders are often UNDERESTIMATED. Inspector Lee (external) has MORE power than Maya (internal) because he can shut down the project entirely.",
+            "diagram": {
+              "image": "/images/A1L3_diagram_stakeholder_categories.webp",
+              "alt": "Stakeholder Categories"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Why Early ID",
+            "subtitle": "Why Early Identification Matters",
+            "content": "**The Cost of Missing Stakeholders:**\n\n- **Inspector Lee (Regulatory)**\n  - What Happened: Kitchen violates health code 3.4.2\n  - Cost: $45K redesign, 6-week delay\n\n- **Ava (Franchise Owner)**\n  - What Happened: 80-seat design vs. 120-seat requirement\n  - Cost: Redesign or accept lower capacity\n\n- **Jamie (End User)**\n  - What Happened: Inefficient customer workflow\n  - Cost: Operational problems after opening\n\n**PMI Principle:** \"Stakeholders should be identified throughout the project life cycle and analyzed for levels of interest, expectations, influence, and impact.\"\n\nBut **EARLY identification** (during Initiating) prevents costly rework."
+          },
+          {
+            "id": "tab5",
+            "title": "How to Identify",
+            "subtitle": "Identification Techniques",
+            "content": "**Identification Techniques:**\n\n1. **Ask the Sponsor:** \"Carlos, who else should I involve in this project?\"\n2. **Review Similar Projects:** Check lessons learned from past restaurant openings\n3. **Analyze the Project:**\n   - Deliverable: Who receives it?\n   - Processes: Who controls permits, construction, hiring?\n   - Impacts: Who's affected by noise, traffic, changes?\n4. **Use Categories:** Internal/External, Upstream/Downstream\n5. **Brainstorm with Team:** Maya might say \"Don't forget supply chain vendors\"\n\n**Best Practice:** Create a stakeholder register EARLY and update throughout the project."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Online Ordering System",
+        "scenario": {
+          "title": "Online Ordering System",
+          "description": "Carlos wants to launch an online ordering system for Savory & Co. Customers can order takeout/delivery, pay online, and track orders in real-time.",
+          "images": [
+            {
+              "src": "/images/A1L3_comic_transfer.webp",
+              "alt": "Online Ordering System"
+            }
+          ],
+          "details": [
+            "**Budget:** $120K",
+            "**Timeline:** 4 months",
+            "**Goal:** Increase takeout revenue by 60%"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "multi_select",
+            "question": "Which TWO stakeholders will be MOST AFFECTED by the online ordering system once it launches? (Select 2)",
+            "points": 150,
+            "scenario_name": "Most Affected Stakeholders",
+            "situation": "Savory & Co. is launching an online ordering system (budget: $120K, 4-month timeline). Customers will order takeout/delivery via app, and the kitchen must fulfill those orders in real-time alongside dine-in service.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Customers - Will use app/website to order",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Maya (Lead Chef) - Kitchen must fulfill online orders",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Carlos (GM - Sponsor)",
+                "correct": false,
+                "whyWrong": "Carlos sponsors the project and wants ROI, but he won't be directly AFFECTED by day-to-day operations of the ordering system. He approves it but doesn't use it daily."
+              },
+              {
+                "id": "D",
+                "text": "Software Development Vendor - Contractor building the system",
+                "correct": false,
+                "whyWrong": "The vendor builds the system but isn't affected by it after launch. Their work ends when the system goes live—they're not daily users."
+              },
+              {
+                "id": "E",
+                "text": "Local Newspaper",
+                "correct": false,
+                "whyWrong": "The newspaper might cover the launch, but they don't affect project decisions and aren't directly affected by the ordering system."
+              }
+            ],
+            "minSelections": 2,
+            "maxSelections": 2,
+            "explanation": "AFFECTED stakeholders use or operate the system daily. Customers use the app to order; Maya's kitchen receives those orders. Carlos approves but doesn't use it; the vendor builds but doesn't operate it.",
+            "correctFeedback": {
+              "text": "AFFECTED stakeholders use or operate the system daily. Customers use the app to order; Maya's kitchen receives those orders. Carlos approves but doesn't use it; the vendor builds but doesn't operate it.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Good thinking. When we launch, customers and Maya's team are the ones who'll feel it most. I just check the reports."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: After we launch, who touches this system every day? That's who's most affected.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Ask yourself: After we launch, who touches this system every day? That's who's most affected."
+            },
+            "retryHint": "MOST AFFECTED = uses the system daily. Think: Who places orders? Who fulfills orders?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "drag_drop",
+            "question": "Match each stakeholder to their role in the online ordering system project:",
+            "points": 150,
+            "scenario_name": "Match Stakeholder Roles",
+            "situation": "The online ordering system project has multiple stakeholders with different relationships to the project. Carlos approved the $120K budget, customers will place orders through the app, and an external software vendor is contracted to build the platform.",
+            "chips": [
+              {
+                "id": "carlos_gm",
+                "label": "Carlos (GM)",
+                "correctZone": "sponsor"
+              },
+              {
+                "id": "customers",
+                "label": "Customers",
+                "correctZone": "end_user"
+              },
+              {
+                "id": "software_vendor",
+                "label": "Software Vendor",
+                "correctZone": "team_member_contractor"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "sponsor",
+                "label": "Sponsor",
+                "detail": "Authorizes project, provides funding"
+              },
+              {
+                "id": "end_user",
+                "label": "End User",
+                "detail": "Will use the app/website daily"
+              },
+              {
+                "id": "team_member_contractor",
+                "label": "Team Member/Contractor",
+                "detail": "Performs the project work"
+              }
+            ],
+            "explanation": "Carlos is the SPONSOR (authorizes and funds). Customers are END USERS (they'll use the app to order food). The Software Vendor is a TEAM MEMBER/CONTRACTOR (they perform the development work).",
+            "correctFeedback": {
+              "text": "Carlos is the SPONSOR (authorizes and funds). Customers are END USERS (they'll use the app to order food). The Software Vendor is a TEAM MEMBER/CONTRACTOR (they perform the development work).",
+              "character": "Alex Mitchell",
+              "characterQuote": "Same categories, different project. Sponsor authorizes, end users use, team members build. This framework works for any project."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about each person's relationship to the project: Do they approve it, use it, or build it?",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about each person's relationship to the project: Do they approve it, use it, or build it?"
+            },
+            "retryHint": "Sponsor = approves. End User = uses daily. Team Member = builds."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that stakeholders are anyone who **AFFECTS** or is **AFFECTED BY** the project. Early identification prevents costly rework, scope misalignment, and damaged relationships. Understanding stakeholder roles (sponsor, customer, end user, team member) helps you engage them appropriately.",
+        "key_takeaways": [
+          "Stakeholder Definition: Anyone who affects, is affected by, or perceives themselves affected by the project",
+          "Not Just the Team: Stakeholders include sponsors, customers, end users, regulators, investors, community, vendors",
+          "Early Identification is Critical: Missing stakeholders leads to rework ($45K redesign), scope misalignment (ROI issues), and unusable deliverables",
+          "Four Key Roles: Sponsor (authorizes), Customer (receives), End User (uses daily), Team Member (performs work)",
+          "Internal vs External: External stakeholders (regulators, investors) often have MORE power than internal ones",
+          "Create a Stakeholder Register: Document all stakeholders early and update throughout the project"
+        ],
+        "character_closing": [
+          {
+            "character": "carlos_mendez",
+            "name": "Carlos Mendez",
+            "quote": "You learned this the hard way, Alex. Missing stakeholders cost us $45K and 6 weeks. But you won't make that mistake again. EVERY person affected by or affecting the project IS a stakeholder."
+          },
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I thought stakeholders were just the core team. Now I know—regulators, investors, end users, community, vendors—they're ALL stakeholders. I'll create a stakeholder register for every project from day one."
+          }
+        ],
+        "xp_earned": 145,
+        "next_lesson": {
+          "id": "A1L4",
+          "title": "Project Life Cycles",
+          "description": "Learn how to approach projects—predictive, adaptive, or hybrid life cycles, and when to use each approach."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Should the neighborhood association be included as stakeholders?",
+            "points": 50,
+            "scenario_name": "Stakeholder Definition",
+            "situation": "A project manager is creating the stakeholder register for a new construction project. A team member suggests including the local neighborhood association because they may file noise complaints during construction, even though they have no formal authority over the project.",
+            "options": [
+              {
+                "id": "A",
+                "text": "No, because they have no formal authority over the project",
+                "correct": false,
+                "whyWrong": "Formal authority is not required to be a stakeholder. The PMI definition includes anyone who affects or is affected by the project—the neighborhood association can file complaints that delay permits."
+              },
+              {
+                "id": "B",
+                "text": "No, because they are not part of the performing organization",
+                "correct": false,
+                "whyWrong": "External stakeholders don't need to be part of your organization. Many critical stakeholders (regulators, community members, vendors) are external and can significantly impact your project."
+              },
+              {
+                "id": "C",
+                "text": "Yes, because they may be affected by the project and could influence its execution",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Yes, but only if they sign a formal agreement with the project",
+                "correct": false,
+                "whyWrong": "No formal agreement is required to be a stakeholder. Anyone who affects or is affected by the project is a stakeholder, regardless of contractual relationships."
+              }
+            ],
+            "explanation": "Stakeholders include anyone who may affect, be affected by, or perceive themselves to be affected by the project. The neighborhood association is affected by construction noise and could influence the project through complaints or permit challenges.",
+            "correctFeedback": {
+              "text": "Stakeholders include anyone who may affect, be affected by, or perceive themselves to be affected by the project. The neighborhood association is affected by construction noise and could influence the project through complaints or permit challenges.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Smart thinking. I've seen projects delayed for months because PMs ignored community stakeholders. Include them early, engage them proactively."
+            },
+            "retryHint": "Does the neighborhood association affect or get affected by the project? Formal authority is not required to be a stakeholder."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "Who is the SPONSOR of this project?",
+            "points": 50,
+            "scenario_name": "Sponsor vs Customer",
+            "situation": "A software company is developing a custom application for a client. The client's CEO approved and funded the project. The client's operations team will use the application daily. The company's development team is building the application.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The development team, because they are building the application",
+                "correct": false,
+                "whyWrong": "The development team are TEAM MEMBERS—they perform the work but don't authorize or fund the project. Building something doesn't make you the sponsor."
+              },
+              {
+                "id": "B",
+                "text": "The operations team, because they will use the application",
+                "correct": false,
+                "whyWrong": "The operations team are END USERS—they'll use the deliverable daily but didn't authorize or fund the project. Using something doesn't make you the sponsor."
+              },
+              {
+                "id": "C",
+                "text": "The client's CEO, because they approved and funded the project",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "The project manager, because they are managing the project",
+                "correct": false,
+                "whyWrong": "The project manager manages execution but doesn't authorize or fund the project. Managing something doesn't make you the sponsor—that authority comes from above."
+              }
+            ],
+            "explanation": "The sponsor is the person or group who authorizes the project and provides resources (funding, authority). The client's CEO approved and funded the project, making them the sponsor. The operations team are end users; the development team are team members.",
+            "correctFeedback": {
+              "text": "The sponsor is the person or group who authorizes the project and provides resources (funding, authority). The client's CEO approved and funded the project, making them the sponsor. The operations team are end users; the development team are team members.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Sponsor = authorizes and funds. That's the CEO in this case. Different from the team who builds and the users who use."
+            },
+            "retryHint": "Sponsor = authorizes + funds. Who approved and funded this project?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the MOST likely cause of this situation?",
+            "points": 50,
+            "scenario_name": "Early Stakeholder Identification",
+            "situation": "During project execution, the project manager discovers that a regulatory agency must approve the project deliverable before it can be released. This requirement was not identified during planning. The approval process takes 8 weeks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The project charter was not properly approved",
+                "correct": false,
+                "whyWrong": "Charter approval is about authorizing the project, not identifying stakeholders. A properly approved charter doesn't guarantee complete stakeholder identification—that's a separate process."
+              },
+              {
+                "id": "B",
+                "text": "Stakeholder identification was incomplete during project initiation",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The regulatory agency changed their requirements mid-project",
+                "correct": false,
+                "whyWrong": "The scenario states the requirement \"was not identified during planning\"—not that it changed. Regulatory requirements typically exist before projects start; the PM simply didn't identify this stakeholder."
+              },
+              {
+                "id": "D",
+                "text": "The project schedule was too aggressive",
+                "correct": false,
+                "whyWrong": "Schedule aggressiveness isn't the root cause—the problem is that the 8-week requirement wasn't known. Even a generous schedule would be wrong if key stakeholder requirements aren't identified."
+              }
+            ],
+            "explanation": "Discovering a regulatory approval requirement during execution indicates that stakeholder identification was incomplete during initiation. Regulatory agencies are external stakeholders that should be identified early to account for their requirements and timelines.",
+            "correctFeedback": {
+              "text": "Discovering a regulatory approval requirement during execution indicates that stakeholder identification was incomplete during initiation. Regulatory agencies are external stakeholders that should be identified early to account for their requirements and timelines.",
+              "character": "Inspector Lee",
+              "characterQuote": "I've seen this many times. PMs forget about regulatory stakeholders until it's too late. Identify us early, or face delays."
+            },
+            "retryHint": "Why wasn't this requirement known during planning? What process should have identified regulatory stakeholders?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which stakeholder engagement should be prioritized FIRST?",
+            "points": 50,
+            "scenario_name": "Internal vs External Stakeholders",
+            "situation": "A project manager is prioritizing stakeholder engagement. The CFO (internal) wants monthly cost reports. A government inspector (external) requires safety certification before product launch.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The CFO, because internal stakeholders always take priority",
+                "correct": false,
+                "whyWrong": "Internal stakeholders don't automatically take priority. Priority should be based on IMPACT—who can stop the project? The inspector has veto power over the launch."
+              },
+              {
+                "id": "B",
+                "text": "The CFO, because financial reporting is critical to project success",
+                "correct": false,
+                "whyWrong": "Financial reporting is important but doesn't block the project. Missing a cost report delays information; missing safety certification stops the launch entirely."
+              },
+              {
+                "id": "C",
+                "text": "The government inspector, because their requirements can stop the project",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Both equally, because all stakeholders deserve the same attention",
+                "correct": false,
+                "whyWrong": "Stakeholders should NOT receive equal attention—prioritize based on impact and urgency. The inspector can stop the project; the CFO's needs, while important, are less critical to project completion."
+              }
+            ],
+            "explanation": "External stakeholders with regulatory power (government inspector) can stop the project entirely if their requirements aren't met. While the CFO's needs are important, safety certification is a mandatory gate that must be addressed first.",
+            "correctFeedback": {
+              "text": "External stakeholders with regulatory power (government inspector) can stop the project entirely if their requirements aren't met. While the CFO's needs are important, safety certification is a mandatory gate that must be addressed first.",
+              "character": "Carlos Mendez",
+              "characterQuote": "The CFO can wait a week for a report. The inspector can shut down the entire launch. Prioritize based on impact, not hierarchy."
+            },
+            "retryHint": "Which stakeholder can STOP the project if their needs aren't met? Prioritize based on impact, not internal vs external."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,775 @@
+{
+  "lessonId": "D2L2",
+  "lessonTitle": "Backlog Refinement & Prioritization",
+  "courseId": "D2",
+  "courseName": "Agile Practices & Tools",
+  "pathId": "D",
+  "pathName": "Adaptive & Hybrid Delivery",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Apply MoSCoW prioritization (Must/Should/Could/Won't-have) to balance business value with scope constraints",
+    "Calculate WSJF scores using Cost of Delay and Job Duration to maximize economic value delivery",
+    "Use the Kano Model to classify features as Basic Expectations, Performance Payoffs, or Delighters",
+    "Distinguish Definition of Ready (DoR) criteria that make stories sprint-ready",
+    "Understand that backlog refinement is ONGOING (10-15% of sprint time), not one-time"
+  ],
+  "characters": [
+    "morgan_lee",
+    "taylor_kim",
+    "jordan_park",
+    "carlos_mendez",
+    "alex_mitchell"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "32 Stories, 8 Slots: Opinion Wars Are About to Derail Sprint Planning",
+        "intro": "You're **Morgan Lee**, Product Owner at Savory & Co. The digital ordering system backlog has 32 user stories but Sprint 2 only has capacity for 8-10. Sprint Planning is in 2 days, and three stakeholders are arguing over what gets built first. Marketing says \"Filters first!\" Operations demands \"Reports!\" Carlos shouts \"Whatever makes money!\" Without a structured approach, Morgan is stuck choosing between gut feelings. Taylor steps in: \"Stop guessing. Use structured prioritization — MoSCoW, WSJF, Kano.\"",
+        "failure_cards": [
+          {
+            "id": "opinionbased_prioritization",
+            "icon": "📋",
+            "title": "Opinion-Based Prioritization",
+            "summary": "Morgan prioritizes based on who shouts loudest — and picks the wrong stories",
+            "image": "/images/D2L2_comic_opinion_wars.webp",
+            "details": "Without frameworks, Morgan picked stories championed by the most vocal stakeholders. Marketing's social sharing feature went into Sprint 2 while basic payment security was deferred. Result: the app launched without SSL compliance, customers refused to enter credit card info, and the ordering system had zero transactions on launch day. Carlos: \"We built what people WANTED, not what customers NEEDED.\""
+          },
+          {
+            "id": "blocked_sprint",
+            "icon": "⚠️",
+            "title": "Blocked Sprint",
+            "summary": "No Definition of Ready means blocked stories enter the sprint",
+            "image": "/images/D2L2_comic_blocked_sprint.webp",
+            "details": "Morgan pulled the payment gateway story into Sprint 2 without checking dependencies. Three days in, the team discovered the legal review for PCI compliance wasn't complete. Development halted. The team couldn't proceed, couldn't pivot, and wasted 5 days of sprint capacity waiting. Taylor: \"If we'd checked Definition of Ready, we'd have caught the legal blocker BEFORE sprint planning.\""
+          },
+          {
+            "id": "wrong_priority_order",
+            "icon": "💡",
+            "title": "Wrong Priority Order",
+            "summary": "Without WSJF, the team builds a low-value feature while losing $2,000/week",
+            "image": "/images/D2L2_comic_wrong_priority.webp",
+            "details": "Morgan chose the loyalty points feature (Carlos's favorite) over checkout optimization. Meanwhile, cart abandonment was costing $2,000 per week. After 3 sprints, loyalty was live but only 4% of users engaged. Cart abandonment had grown to $8,000/week in lost revenue. Jordan: \"If we'd calculated WSJF, checkout had higher economic urgency. We optimized for opinion instead of value.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "taylor_kim",
+          "name": "Taylor Kim",
+          "role": "Scrum Master",
+          "quote": "Without frameworks, prioritization is a popularity contest. MoSCoW separates must-haves from nice-to-haves. WSJF calculates economic value per effort. Kano identifies what customers truly expect. Data beats opinions — every time."
+        },
+        "learning_hook": "**Backlog refinement** is the ongoing process of reviewing, clarifying, and prioritizing user stories so only sprint-ready, high-value work enters the sprint. Learn three prioritization frameworks (MoSCoW, WSJF, Kano) and the Definition of Ready that prevents blocked sprints."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "prioritize_the_savory_co_backlog",
+        "title": "Prioritize the Savory & Co. Backlog",
+        "description": "Morgan has 32 user stories for the digital ordering system. Sprint capacity allows only 8-10 stories. Help Morgan prioritize using MoSCoW, WSJF, and Kano Model, then apply Definition of Ready to select sprint-ready stories.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each filter story to the correct MoSCoW category based on usage data and MVP criticality:",
+            "points": 125,
+            "scenario_name": "MoSCoW Prioritization",
+            "situation": "Morgan has 6 menu filtering user stories. Sprint capacity allows only 3. Marketing says \"We need ALL filters!\" Taylor says \"MoSCoW helps separate must-haves from nice-to-haves.\" Usage data shows: Category filter (87% users), Dietary restriction filter (42%), Price range filter (18%), Chef recommendation filter (9%), Spice level filter (7%), Cuisine origin filter (5%).",
+            "chips": [
+              {
+                "id": "category_filter_87_usage",
+                "label": "Category filter (87% usage)",
+                "correctZone": "musthave"
+              },
+              {
+                "id": "dietary_filter_42_usage",
+                "label": "Dietary filter (42% usage)",
+                "correctZone": "musthave"
+              },
+              {
+                "id": "price_range_filter_18_usage",
+                "label": "Price range filter (18% usage)",
+                "correctZone": "shouldhave"
+              },
+              {
+                "id": "chef_recommendation_9_usage",
+                "label": "Chef recommendation (9% usage)",
+                "correctZone": "couldhave"
+              },
+              {
+                "id": "spice_level_filter_7_usage",
+                "label": "Spice level filter (7% usage)",
+                "correctZone": "couldhave"
+              },
+              {
+                "id": "cuisine_origin_filter_5_usage",
+                "label": "Cuisine origin filter (5% usage)",
+                "correctZone": "wonthave"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "musthave",
+                "label": "MUST-HAVE",
+                "detail": "MVP critical — 87% of users need category browsing to find food"
+              },
+              {
+                "id": "shouldhave",
+                "label": "SHOULD-HAVE",
+                "detail": "Important but workarounds exist — users can browse by category instead"
+              },
+              {
+                "id": "couldhave",
+                "label": "COULD-HAVE",
+                "detail": "Nice-to-have enhancement — only 9% would use it"
+              },
+              {
+                "id": "wonthave",
+                "label": "WON'T-HAVE",
+                "detail": "Defer — only 5% demand, out of scope for this release"
+              }
+            ],
+            "explanation": "MoSCoW categorizes by criticality: Must-have (>40% usage, MVP fails without it), Should-have (15-40%, important but workarounds exist), Could-have (5-15%, nice enhancement), Won't-have (<5%, defer). Category and Dietary cover the majority of user needs. Price is useful but not critical. Chef, Spice, and Cuisine are enhancements for future sprints.",
+            "correctFeedback": {
+              "text": "MoSCoW categorizes by criticality: Must-have (>40% usage, MVP fails without it), Should-have (15-40%, important but workarounds exist), Could-have (5-15%, nice enhancement), Won't-have (<5%, defer). Category and Dietary cover the majority of user needs. Price is useful but not critical. Chef, Spice, and Cuisine are enhancements for future sprints.",
+              "character": "Taylor Kim",
+              "characterQuote": "Perfect MoSCoW! Must-haves cover 87% + 42% of user needs. Marketing said 'ALL filters!' but data says only 2 are MVP critical. Data beats opinions."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about which filters users NEED versus WANT. 87% usage means almost everyone needs it — that's a Must. 5% usage means almost nobody will miss it — that's a Won't.",
+              "character": "Taylor Kim",
+              "characterQuote": "Think about which filters users NEED versus WANT. 87% usage means almost everyone needs it — that's a Must. 5% usage means almost nobody will miss it — that's a Won't."
+            },
+            "retryHint": "Must-have = MVP fails without it (>40% users). Should-have = important but survivable (15-40%). Could-have = nice enhancement (5-15%). Won't-have = defer (<5%)."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Using WSJF (Cost of Delay / Job Duration), which story should Morgan prioritize for Sprint 2?",
+            "points": 125,
+            "scenario_name": "WSJF Priority Calculation",
+            "situation": "Sprint 2 has capacity for ONE high-effort story. Morgan must choose between checkout optimization and loyalty points. Checkout: Business Value 3, Time Criticality 5, Risk Reduction 4, Duration 13 points (CoD = 12, WSJF = 12/13 = 0.92). Loyalty: Business Value 5, Time Criticality 2, Risk Reduction 1, Duration 8 points (CoD = 8, WSJF = 8/8 = 1.00). Carlos wants loyalty. Maya says checkout is losing conversions.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Checkout Performance (higher CoD of 12)",
+                "correct": false,
+                "whyWrong": "Higher CoD alone doesn't determine priority. WSJF considers BOTH value AND duration. Checkout has higher CoD (12) but also higher duration (13), resulting in lower WSJF (0.92)."
+              },
+              {
+                "id": "B",
+                "text": "Loyalty Points (higher WSJF of 1.00 vs 0.92)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Both stories in parallel to satisfy everyone",
+                "correct": false,
+                "whyWrong": "Running stories in parallel exceeds sprint capacity and splits team focus. Agile teams should complete high-priority items first, not multitask."
+              },
+              {
+                "id": "D",
+                "text": "Escalate to Carlos since he's the CFO",
+                "correct": false,
+                "whyWrong": "WSJF provides an objective, data-driven answer. Escalating to a stakeholder when you have the math undermines structured prioritization."
+              }
+            ],
+            "explanation": "WSJF = Cost of Delay / Job Duration. Checkout: CoD (3+5+4) = 12, WSJF = 12/13 = 0.92. Loyalty: CoD (5+2+1) = 8, WSJF = 8/8 = 1.00. Loyalty has higher WSJF because it delivers comparable value in LESS time (8 pts vs 13). WSJF optimizes for economic return per unit of effort — not just total value.",
+            "correctFeedback": {
+              "text": "WSJF = Cost of Delay / Job Duration. Checkout: CoD (3+5+4) = 12, WSJF = 12/13 = 0.92. Loyalty: CoD (5+2+1) = 8, WSJF = 8/8 = 1.00. Loyalty has higher WSJF because it delivers comparable value in LESS time (8 pts vs 13). WSJF optimizes for economic return per unit of effort — not just total value.",
+              "character": "Jordan Park",
+              "characterQuote": "WSJF proves loyalty wins! Even though checkout has higher Cost of Delay (12 vs 8), loyalty delivers more value per effort. Duration matters — WSJF optimizes for economic return, not just urgency."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Don't just compare Cost of Delay. WSJF divides CoD by Duration — a story with lower CoD can still win if it takes much less time. Calculate both scores and compare.",
+              "character": "Jordan Park",
+              "characterQuote": "Don't just compare Cost of Delay. WSJF divides CoD by Duration — a story with lower CoD can still win if it takes much less time. Calculate both scores and compare."
+            },
+            "retryHint": "WSJF = Cost of Delay / Duration. Calculate both scores: which story delivers more value per unit of effort?"
+          },
+          {
+            "q_id": "q3",
+            "type": "drag_drop",
+            "question": "Drag each feature to its correct Kano classification:",
+            "points": 125,
+            "scenario_name": "Kano Model Classification",
+            "situation": "Marketing proposes 6 features for the digital ordering system. Morgan needs to classify them using the Kano Model to determine MVP priorities. Basic Expectations must come first (absence = dissatisfaction), Performance Payoffs add competitive parity, and Delighters are unexpected wow features.",
+            "chips": [
+              {
+                "id": "order_confirmation_email",
+                "label": "Order confirmation email",
+                "correctZone": "basic_expectation"
+              },
+              {
+                "id": "payment_security_ssl_pci",
+                "label": "Payment security (SSL/PCI)",
+                "correctZone": "basic_expectation"
+              },
+              {
+                "id": "menu_photos",
+                "label": "Menu photos",
+                "correctZone": "basic_expectation"
+              },
+              {
+                "id": "realtime_order_tracking",
+                "label": "Real-time order tracking",
+                "correctZone": "performance_payoff"
+              },
+              {
+                "id": "ar_menu_visualization",
+                "label": "AR menu visualization",
+                "correctZone": "delighter"
+              },
+              {
+                "id": "ai_personalized_recommendations",
+                "label": "AI personalized recommendations",
+                "correctZone": "delighter"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "basic_expectation",
+                "label": "Basic Expectation",
+                "detail": "Every competitor has this — absence causes immediate dissatisfaction"
+              },
+              {
+                "id": "performance_payoff",
+                "label": "Performance Payoff",
+                "detail": "More tracking detail = better satisfaction; competitive parity with modern apps"
+              },
+              {
+                "id": "delighter",
+                "label": "Delighter",
+                "detail": "No competitor has this — unexpected wow that creates excitement"
+              }
+            ],
+            "explanation": "Kano Model classifies features by customer reaction. Basic Expectations (confirmation, security, photos) are non-negotiable — customers expect them and absence causes dissatisfaction. Performance Payoffs (tracking) improve satisfaction linearly — more = better. Delighters (AR, AI) are unexpected — they create excitement but customers don't miss what they never expected. MVP priority: Basic first, Performance second, Delighters if capacity allows.",
+            "correctFeedback": {
+              "text": "Kano Model classifies features by customer reaction. Basic Expectations (confirmation, security, photos) are non-negotiable — customers expect them and absence causes dissatisfaction. Performance Payoffs (tracking) improve satisfaction linearly — more = better. Delighters (AR, AI) are unexpected — they create excitement but customers don't miss what they never expected. MVP priority: Basic first, Performance second, Delighters if capacity allows.",
+              "character": "Morgan Lee",
+              "characterQuote": "Kano changes how I prioritize! Basics are MVP non-negotiables — customers expect order confirmation and secure payments. AR visualization is exciting but not critical. Basics FIRST, Delighters can wait."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: would customers be UPSET if this feature was missing? If yes, it's a Basic Expectation. Would they be SURPRISED and delighted? That's a Delighter. Would more of it make them happier? That's Performance.",
+              "character": "Morgan Lee",
+              "characterQuote": "Ask yourself: would customers be UPSET if this feature was missing? If yes, it's a Basic Expectation. Would they be SURPRISED and delighted? That's a Delighter. Would more of it make them happier? That's Performance."
+            },
+            "retryHint": "Basic = absence causes dissatisfaction, presence is neutral. Performance = more is better (linear). Delighter = unexpected wow, absence doesn't hurt."
+          },
+          {
+            "q_id": "q4",
+            "type": "multi_select",
+            "question": "Which stories meet Definition of Ready for Sprint 2? Select all that apply.",
+            "points": 125,
+            "scenario_name": "Definition of Ready Assessment",
+            "situation": "Sprint Planning is in 2 hours. Morgan has 5 stories. Only stories meeting ALL Definition of Ready criteria can enter the sprint. DoR requires: (1) User story format, (2) Acceptance criteria (3+), (3) Estimated by team, (4) Dependencies resolved. Story 1 — Payment Gateway: format yes, AC yes, estimated yes, blocked by legal review. Story 2 — Menu Search: all criteria met. Story 3 — Analytics Dashboard: no format, no AC, not estimated. Story 4 — Add to Cart: all criteria met. Story 5 — Social Sharing: all criteria met.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Story 1: Payment Gateway (format, AC, estimated — blocked by legal)",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Story 2: Menu Search (all DoR criteria met)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Story 3: Analytics Dashboard (no format, no AC, not estimated)",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Story 4: Add to Cart (all DoR criteria met)",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Story 5: Social Sharing (all DoR criteria met)",
+                "correct": true
+              }
+            ],
+            "explanation": "Definition of Ready requires ALL criteria: user story format, acceptance criteria, team estimate, AND no unresolved dependencies. Stories 2, 4, and 5 meet every criterion. Story 1 fails despite good format/AC/estimate because it's blocked by legal (dependency not resolved). Story 3 fails three criteria — it needs refinement before it's sprint-ready.",
+            "correctFeedback": {
+              "text": "Definition of Ready requires ALL criteria: user story format, acceptance criteria, team estimate, AND no unresolved dependencies. Stories 2, 4, and 5 meet every criterion. Story 1 fails despite good format/AC/estimate because it's blocked by legal (dependency not resolved). Story 3 fails three criteria — it needs refinement before it's sprint-ready.",
+              "character": "Taylor Kim",
+              "characterQuote": "Definition of Ready prevents sprint failure! Payment is blocked — wait for legal. Analytics is too vague — back to refinement. Search, Cart, and Sharing meet ALL criteria. Only pull ready stories into the sprint!"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "ALL four DoR criteria must pass. One red X means the story is NOT ready. Check each story: format, AC, estimated, dependencies. Any single failure disqualifies it.",
+              "character": "Taylor Kim",
+              "characterQuote": "ALL four DoR criteria must pass. One red X means the story is NOT ready. Check each story: format, AC, estimated, dependencies. Any single failure disqualifies it."
+            },
+            "retryHint": "DoR is all-or-nothing: format, AC, estimated, AND no blockers. One missing criterion means \"not ready.\" Which stories pass every single check?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Prioritization Frameworks for Agile Teams",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "MoSCoW Prioritization",
+            "subtitle": "",
+            "content": "MoSCoW is a prioritization technique for sorting requirements by criticality:\n\n| Category | Criteria | Action |\n|----------|----------|--------|\n| **MUST-HAVE** | MVP fails without it, >50% users need it | Build FIRST |\n| **SHOULD-HAVE** | Important but workarounds exist, 20-50% users | Build IF capacity allows |\n| **COULD-HAVE** | Nice-to-have, enhances experience, <20% users | Defer to next sprint |\n| **WON'T-HAVE** | Out of scope for this release, <5% users | Exclude from release |\n\n**When to Use:** MVP scoping, fixed-deadline projects, stakeholder alignment when opinions conflict.\n\n**Decision Rule:** Must-haves FIRST, then Should-haves IF capacity allows. Never sacrifice a Must for a Could.\n\n*PMBOK Reference: PMBOK 7th Ed, page 164*"
+          },
+          {
+            "id": "tab2",
+            "title": "WSJF (Weighted Shortest Job First)",
+            "subtitle": "",
+            "content": "WSJF calculates economic priority by comparing value delivered to effort required:\n\n**Formula:** WSJF = Cost of Delay (CoD) / Job Duration\n\n**Cost of Delay** = Business Value + Time Criticality + Risk Reduction (each rated 1-10)\n\n| Factor | What It Measures | Example |\n|--------|------------------|---------|\n| **Business Value** | Revenue, satisfaction, strategic alignment | Loyalty = 5 (20% more repeat purchases) |\n| **Time Criticality** | Urgency, market window, deadlines | Checkout = 5 (losing $2K/week NOW) |\n| **Risk Reduction** | Prevents problems, enables other work | Checkout = 4 (prevents degradation) |\n| **Job Duration** | Story points or time estimate | Loyalty = 8, Checkout = 13 |\n\n**Priority Rule:** Higher WSJF = Higher priority (more value in less time). A story with lower total value can still win if it takes significantly less effort.\n\n*PMBOK Reference: Agile Practice Guide, page 58*",
+            "diagram": {
+              "image": "/images/D2L2_diagram_wsjf_formula.webp",
+              "alt": "WSJF Framework Diagram"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Kano Model",
+            "subtitle": "",
+            "content": "The Kano Model classifies features by customer reaction:\n\n| Type | Customer Reaction | MVP Priority |\n|------|-------------------|--------------|\n| **Basic Expectation** | Absence = Dissatisfaction, Presence = Neutral | HIGHEST (non-negotiable) |\n| **Performance Payoff** | More = Better (linear satisfaction) | MEDIUM (competitive parity) |\n| **Delighter** | Unexpected wow, Absence = OK | LOW (if capacity allows) |\n\n**Prioritization Rule:** Basic → Performance → Delighter. Never sacrifice a Basic Expectation for a Delighter.\n\n*PMBOK Reference: PMBOK 7th Ed, page 142*",
+            "diagram": {
+              "image": "/images/D2L2_diagram_kano_model.webp",
+              "alt": "Kano Model Diagram"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Definition of Ready (DoR)",
+            "subtitle": "",
+            "content": "The Definition of Ready is a checklist that determines whether a story is sprint-ready:\n\n1. **User story format:** \"As a [user], I want [goal], so that [benefit]\"\n2. **Acceptance criteria:** 3+ testable criteria\n3. **Estimated:** Team consensus (planning poker)\n4. **Dependencies resolved:** No external blockers\n\n| Definition of Ready | Definition of Done |\n|--------------------|-------------------|\n| Can we START work? | Can we STOP work? |\n| Entry criteria for sprint | Exit criteria for story |\n| Before development | After development |\n\n**Key Insight:** Backlog refinement is ONGOING — 10-15% of every sprint should be devoted to grooming the backlog. It's not a one-time event.\n\n*PMBOK Reference: Agile Practice Guide, page 151*"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Tokyo Expansion Prioritization",
+        "scenario": {
+          "title": "Tokyo Expansion Prioritization",
+          "description": "Savory & Co. is expanding to Tokyo ($2.5M investment). Morgan has 4 high-priority stories for Sprint 1, but capacity allows only 2 stories (20 story points total). Use WSJF and Kano to make data-driven decisions for the international launch.",
+          "images": [
+            {
+              "src": "/images/D2L2_comic_transfer.webp",
+              "alt": "Transfer scenario: Tokyo expansion"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What is the correct WSJF ranking from highest to lowest priority?",
+            "points": 100,
+            "scenario_name": "WSJF Ranking for Tokyo",
+            "situation": "Morgan must rank 4 stories by WSJF for the Tokyo launch. Story A (Japanese Menu Localization): BV=5, TC=5, RR=3, Duration=8, CoD=13, WSJF=1.625. Story B (Yen Currency Support): BV=5, TC=5, RR=4, Duration=13, CoD=14, WSJF=1.077. Story C (Tokyo Delivery Zones): BV=3, TC=2, RR=1, Duration=5, CoD=6, WSJF=1.200. Story D (Chopstick Preference): BV=2, TC=1, RR=1, Duration=3, CoD=4, WSJF=1.333.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Currency (14 CoD) → Menu → Delivery → Chopsticks",
+                "correct": false,
+                "whyWrong": "Ranks by CoD alone, ignoring Duration. Currency has the highest CoD (14) but the lowest WSJF (1.077) because it takes 13 points — the most effort."
+              },
+              {
+                "id": "B",
+                "text": "Menu (1.625) → Chopsticks (1.333) → Delivery (1.200) → Currency (1.077)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Delivery → Chopsticks → Menu → Currency",
+                "correct": false,
+                "whyWrong": "Completely wrong ordering — neither by CoD nor WSJF. Delivery (1.200) is third, not first."
+              },
+              {
+                "id": "D",
+                "text": "Menu → Currency → Delivery → Chopsticks",
+                "correct": false,
+                "whyWrong": "Places Currency second, but its WSJF (1.077) is actually the lowest of all four stories."
+              }
+            ],
+            "explanation": "WSJF ranking: Menu (1.625) → Chopsticks (1.333) → Delivery (1.200) → Currency (1.077). Menu Localization has the highest WSJF despite Currency having higher CoD (14 vs 13) because Menu requires less effort (8 SP vs 13). WSJF optimizes for economic return per unit of effort, not just total value.",
+            "correctFeedback": {
+              "text": "WSJF ranking: Menu (1.625) → Chopsticks (1.333) → Delivery (1.200) → Currency (1.077). Menu Localization has the highest WSJF despite Currency having higher CoD (14 vs 13) because Menu requires less effort (8 SP vs 13). WSJF optimizes for economic return per unit of effort, not just total value.",
+              "character": "Jordan Park",
+              "characterQuote": "Menu Localization wins because WSJF considers BOTH value AND duration. Currency has higher CoD but takes 63% more effort. WSJF optimizes for economic return per unit of effort."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Don't rank by Cost of Delay alone — divide by Duration. A story with CoD 14 and Duration 13 has lower WSJF than one with CoD 13 and Duration 8. Do the math!",
+              "character": "Jordan Park",
+              "characterQuote": "Don't rank by Cost of Delay alone — divide by Duration. A story with CoD 14 and Duration 13 has lower WSJF than one with CoD 13 and Duration 8. Do the math!"
+            },
+            "retryHint": "WSJF = CoD / Duration. Calculate each: 13/8, 14/13, 6/5, 4/3. Then rank from highest to lowest."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Which 2 stories should Morgan select for Sprint 1?",
+            "points": 100,
+            "scenario_name": "Sprint Selection with Constraints",
+            "situation": "Sprint 1 capacity is 20 story points. Based on the WSJF ranking (Menu=1.625, Chopsticks=1.333, Delivery=1.200, Currency=1.077), Morgan must select the 2 stories that maximize value within capacity. Story sizes: Menu (8 SP), Chopsticks (3 SP), Delivery (5 SP), Currency (13 SP).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Currency (13 SP) + Menu (8 SP) = 21 SP — exceeds capacity",
+                "correct": false,
+                "whyWrong": "13 + 8 = 21 points, exceeding the 20-point sprint capacity. Over-committing leads to unfinished work and broken sprint goals."
+              },
+              {
+                "id": "B",
+                "text": "Menu (8 SP) + Chopsticks (3 SP) = 11 SP — highest WSJF, fits capacity",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Delivery (5 SP) + Chopsticks (3 SP) = 8 SP — skips highest WSJF story",
+                "correct": false,
+                "whyWrong": "Skips Menu Localization, which has the highest WSJF (1.625). Always start with the highest-priority item."
+              },
+              {
+                "id": "D",
+                "text": "Menu (8 SP) + Delivery (5 SP) = 13 SP — skips Chopsticks (higher WSJF)",
+                "correct": false,
+                "whyWrong": "Skips Chopsticks (WSJF 1.333) in favor of Delivery (WSJF 1.200). Follow the WSJF ranking order — don't skip higher-ranked stories."
+              }
+            ],
+            "explanation": "Menu (WSJF 1.625) + Chopsticks (WSJF 1.333) = highest combined WSJF within 20-point capacity (11 SP total). Currency exceeds capacity when paired with Menu. Delivery and Chopsticks skip the #1 WSJF story. Follow WSJF ranking order and select from the top until capacity is reached.",
+            "correctFeedback": {
+              "text": "Menu (WSJF 1.625) + Chopsticks (WSJF 1.333) = highest combined WSJF within 20-point capacity (11 SP total). Currency exceeds capacity when paired with Menu. Delivery and Chopsticks skip the #1 WSJF story. Follow WSJF ranking order and select from the top until capacity is reached.",
+              "character": "Morgan Lee",
+              "characterQuote": "Menu + Chopsticks delivers the highest combined value within capacity. Currency goes to Sprint 2. WSJF ranking + capacity constraints = optimal sprint planning!"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Follow the WSJF ranking from top to bottom. Pick the highest-ranked story first, then the next highest that still fits within your 20-point capacity.",
+              "character": "Morgan Lee",
+              "characterQuote": "Follow the WSJF ranking from top to bottom. Pick the highest-ranked story first, then the next highest that still fits within your 20-point capacity."
+            },
+            "retryHint": "Start from the top of the WSJF ranking and add stories until capacity is reached. Which combination gives the highest-ranked stories within 20 points?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "drag_drop",
+            "question": "Drag each Tokyo feature to its correct Kano classification:",
+            "points": 100,
+            "scenario_name": "Kano Classification for Tokyo",
+            "situation": "Morgan must classify 4 Tokyo-specific features using the Kano Model to set MVP priorities. The Tokyo market expects native language support and local confirmation standards. Payment options vary by local preference. Seasonal theming is unique to Japanese culture.",
+            "chips": [
+              {
+                "id": "japanese_language_interface",
+                "label": "Japanese language interface",
+                "correctZone": "basic_expectation"
+              },
+              {
+                "id": "order_confirmation_in_japanese",
+                "label": "Order confirmation in Japanese",
+                "correctZone": "basic_expectation"
+              },
+              {
+                "id": "local_payment_options_suica_paypay",
+                "label": "Local payment options (Suica, PayPay)",
+                "correctZone": "performance_payoff"
+              },
+              {
+                "id": "cherry_blossom_seasonal_menu_theming",
+                "label": "Cherry blossom seasonal menu theming",
+                "correctZone": "delighter"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "basic_expectation",
+                "label": "Basic Expectation",
+                "detail": "Customers expect native language — absence causes immediate dissatisfaction"
+              },
+              {
+                "id": "performance_payoff",
+                "label": "Performance Payoff",
+                "detail": "More payment options = better experience; competitive parity with local apps"
+              },
+              {
+                "id": "delighter",
+                "label": "Delighter",
+                "detail": "Unexpected cultural touch — creates excitement but absence doesn't hurt"
+              }
+            ],
+            "explanation": "In the Tokyo market, Japanese language and Japanese confirmation are Basic Expectations — customers won't tolerate an English-only app. Local payment options (Suica, PayPay) are Performance Payoffs — more options linearly increase satisfaction and match local competitors. Cherry blossom theming is a Delighter — a unique cultural touch that surprises and delights but isn't expected.",
+            "correctFeedback": {
+              "text": "In the Tokyo market, Japanese language and Japanese confirmation are Basic Expectations — customers won't tolerate an English-only app. Local payment options (Suica, PayPay) are Performance Payoffs — more options linearly increase satisfaction and match local competitors. Cherry blossom theming is a Delighter — a unique cultural touch that surprises and delights but isn't expected.",
+              "character": "Taylor Kim",
+              "characterQuote": "Basic Expectations in Tokyo: Japanese language is non-negotiable. Local payments are Performance — competitive advantage. Cherry blossom theme is a Delighter — wow factor, but not MVP critical. Prioritize: Basic → Performance → Delighter."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Would Tokyo customers be UPSET if it's missing? That's Basic. Would more options make them happier? That's Performance. Would they be pleasantly surprised? That's a Delighter.",
+              "character": "Taylor Kim",
+              "characterQuote": "Would Tokyo customers be UPSET if it's missing? That's Basic. Would more options make them happier? That's Performance. Would they be pleasantly surprised? That's a Delighter."
+            },
+            "retryHint": "Basic = customers expect it (absence = anger). Performance = more = better (linear). Delighter = pleasant surprise (absence = no reaction)."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered backlog refinement and prioritization using three frameworks that replace opinion-based decisions with data-driven prioritization.",
+        "key_takeaways": [
+          "MoSCoW separates must-haves from nice-to-haves — Must (>50% users, MVP critical), Should (important, workarounds exist), Could (nice-to-have), Won't (defer)",
+          "WSJF optimizes for economic value per effort — Formula: Cost of Delay / Job Duration. Higher WSJF = higher priority",
+          "Kano Model classifies by customer reaction — Basic Expectations first (absence = dissatisfaction), then Performance Payoffs, then Delighters",
+          "Definition of Ready prevents blocked sprints — Format, AC, Estimated, No Blockers — ALL must pass before a story enters the sprint",
+          "Backlog refinement is ongoing — Devote 10-15% of every sprint to grooming, not a one-time event",
+          "Data beats opinions — When stakeholders argue, show them the frameworks and the math"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to let the loudest stakeholder set priorities. Now I use MoSCoW for scope decisions, WSJF for economic ranking, and Kano for customer-centric classification. When Carlos pushes his favorites, I show him the WSJF scores. Frameworks give you the authority to say 'the data disagrees' — and that's more powerful than any argument."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L3",
+          "title": "Kanban Fundamentals",
+          "description": "You have a prioritized backlog — now learn to manage work flow using Kanban boards, WIP limits, and cycle time metrics."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What technique should the Product Owner use FIRST to align stakeholders on priorities?",
+            "points": 50,
+            "scenario_name": "Stakeholder Alignment Technique",
+            "situation": "A Product Owner has 20 user stories for MVP launch. Stakeholders disagree on priorities — Marketing wants social features, Operations wants reporting, Finance wants payment processing. Each department insists their features are most important.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Let the CEO decide priorities to end the disagreement",
+                "correct": false,
+                "whyWrong": "Delegating to the CEO avoids the PO's responsibility and doesn't create a repeatable prioritization process. The CEO may not have user data to make informed decisions."
+              },
+              {
+                "id": "B",
+                "text": "Apply MoSCoW to categorize stories by user criticality and MVP requirements",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Build all features in parallel to satisfy every department",
+                "correct": false,
+                "whyWrong": "Building everything in parallel exceeds capacity and fragments team focus. Agile prioritizes delivering the MOST valuable items first."
+              },
+              {
+                "id": "D",
+                "text": "Prioritize based on which department has the largest budget",
+                "correct": false,
+                "whyWrong": "Budget size doesn't correlate with user need. The largest department might want the least critical features."
+              }
+            ],
+            "explanation": "MoSCoW provides objective categorization: Must-have (MVP critical), Should-have (important), Could-have (nice), Won't-have (defer). This separates emotional stakeholder preferences from data-driven priorities based on user needs and MVP requirements. It gives the PO a framework to push back on opinion-based demands.",
+            "correctFeedback": {
+              "text": "MoSCoW provides objective categorization: Must-have (MVP critical), Should-have (important), Could-have (nice), Won't-have (defer). This separates emotional stakeholder preferences from data-driven priorities based on user needs and MVP requirements. It gives the PO a framework to push back on opinion-based demands.",
+              "character": "Taylor Kim",
+              "characterQuote": "MoSCoW transforms 'who shouts loudest' into 'what users need most.' Must-haves are data-driven, not department-driven."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When stakeholders argue, you need an objective framework — not a tiebreaker from the CEO. What technique categorizes stories by criticality and user need?",
+              "character": "Taylor Kim",
+              "characterQuote": "When stakeholders argue, you need an objective framework — not a tiebreaker from the CEO. What technique categorizes stories by criticality and user need?"
+            },
+            "retryHint": "Which technique objectively sorts features into Must/Should/Could/Won't categories based on user data, not department politics?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "Using WSJF, which feature should be prioritized?",
+            "points": 50,
+            "scenario_name": "WSJF Comparison",
+            "situation": "Two features compete for Sprint 2. Feature A has Business Value 8, Time Criticality 3, Risk Reduction 2, Duration 10 points. Feature B has Business Value 5, Time Criticality 5, Risk Reduction 4, Duration 7 points.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Feature A — it has higher Business Value (8 vs 5)",
+                "correct": false,
+                "whyWrong": "Business Value is only one of three CoD components. Feature B actually has higher total CoD (14 vs 13) AND lower duration — both favor Feature B."
+              },
+              {
+                "id": "B",
+                "text": "Feature B — it has higher WSJF score (2.00 vs 1.30)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Both features equally — their total CoD is similar",
+                "correct": false,
+                "whyWrong": "While CoD is similar (13 vs 14), Duration is very different (10 vs 7). WSJF accounts for this difference, making Feature B clearly superior."
+              },
+              {
+                "id": "D",
+                "text": "Cannot determine without knowing team velocity",
+                "correct": false,
+                "whyWrong": "WSJF uses story points (Duration) from the data given. Team velocity determines sprint capacity, not individual story priority."
+              }
+            ],
+            "explanation": "Feature A: CoD = 8+3+2 = 13, WSJF = 13/10 = 1.30. Feature B: CoD = 5+5+4 = 14, WSJF = 14/7 = 2.00. Feature B has higher WSJF (2.00 > 1.30) because it delivers comparable value in LESS time. WSJF optimizes for economic return per unit of effort, not just total business value.",
+            "correctFeedback": {
+              "text": "Feature A: CoD = 8+3+2 = 13, WSJF = 13/10 = 1.30. Feature B: CoD = 5+5+4 = 14, WSJF = 14/7 = 2.00. Feature B has higher WSJF (2.00 > 1.30) because it delivers comparable value in LESS time. WSJF optimizes for economic return per unit of effort, not just total business value.",
+              "character": "Jordan Park",
+              "characterQuote": "Feature B wins because WSJF considers effort too. Higher business value doesn't automatically mean higher priority — duration matters."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "WSJF = Cost of Delay / Duration. Calculate both scores — don't just compare one factor like Business Value.",
+              "character": "Jordan Park",
+              "characterQuote": "WSJF = Cost of Delay / Duration. Calculate both scores — don't just compare one factor like Business Value."
+            },
+            "retryHint": "Calculate WSJF for both: CoD = BV + TC + RR, then divide by Duration. Which score is higher?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the team do with this story?",
+            "points": 50,
+            "scenario_name": "Blocked Story Decision",
+            "situation": "A Scrum team identifies that a user story has clear acceptance criteria and estimates, but depends on a third-party API that won't be available for 3 weeks. Sprint Planning is tomorrow.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Pull it into the current sprint and wait for the API",
+                "correct": false,
+                "whyWrong": "Pulling a blocked story wastes sprint capacity. The team can't make progress until the API is available in 3 weeks — the entire sprint would be wasted on this story."
+              },
+              {
+                "id": "B",
+                "text": "Keep it in the backlog until the dependency is resolved — it doesn't meet Definition of Ready",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Estimate the story at 0 points since they can't work on it",
+                "correct": false,
+                "whyWrong": "The story already has a valid estimate. Changing it to 0 points doesn't resolve the dependency — it just hides the problem."
+              },
+              {
+                "id": "D",
+                "text": "Split the story into smaller pieces to work around the API dependency",
+                "correct": false,
+                "whyWrong": "Splitting may not resolve the dependency. If all parts need the API, splitting creates multiple blocked stories instead of one."
+              }
+            ],
+            "explanation": "Definition of Ready requires ALL criteria met: format, acceptance criteria, estimated, AND dependencies resolved. An unresolved external dependency (third-party API in 3 weeks) means the story is NOT sprint-ready. Pulling blocked stories into sprints causes idle time, wasted capacity, and missed sprint goals.",
+            "correctFeedback": {
+              "text": "Definition of Ready requires ALL criteria met: format, acceptance criteria, estimated, AND dependencies resolved. An unresolved external dependency (third-party API in 3 weeks) means the story is NOT sprint-ready. Pulling blocked stories into sprints causes idle time, wasted capacity, and missed sprint goals.",
+              "character": "Taylor Kim",
+              "characterQuote": "DoR saved you from a blocked sprint. The story has good AC and estimates, but the API dependency is a hard blocker. Wait until it's resolved, then it's ready."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Definition of Ready has four criteria. Even if three pass, one failure means 'not ready.' Which criterion is this story failing?",
+              "character": "Taylor Kim",
+              "characterQuote": "Definition of Ready has four criteria. Even if three pass, one failure means 'not ready.' Which criterion is this story failing?"
+            },
+            "retryHint": "Definition of Ready requires ALL criteria to pass — including \"dependencies resolved.\" What happens when you pull a blocked story into a sprint?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Using the Kano Model, how should the Product Owner respond?",
+            "points": 50,
+            "scenario_name": "Kano Model Application",
+            "situation": "Marketing wants to add an AR menu visualization feature (no competitor has this) to the MVP. The team has already committed to order confirmation email and payment security for Sprint 1. Sprint capacity is full.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Add AR to Sprint 1 to differentiate from competitors immediately",
+                "correct": false,
+                "whyWrong": "Sprint capacity is full. Adding AR means removing something else — and the existing items are Basic Expectations that can't be sacrificed."
+              },
+              {
+                "id": "B",
+                "text": "Remove payment security to make room for the AR feature",
+                "correct": false,
+                "whyWrong": "Payment security is a Basic Expectation — removing it would prevent customers from trusting the app with credit card information. Absence = immediate dissatisfaction."
+              },
+              {
+                "id": "C",
+                "text": "Explain that AR is a Delighter while confirmation and security are Basic Expectations — Basics must come first",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Delay the MVP launch to include all three features",
+                "correct": false,
+                "whyWrong": "Delaying MVP for a Delighter feature violates Kano prioritization. Basics and Performance features ship first; Delighters are added in subsequent releases."
+              }
+            ],
+            "explanation": "Kano Model priority: Basic Expectations (confirmation, security) FIRST because absence causes customer dissatisfaction. AR visualization is a Delighter — unexpected and exciting but not MVP critical. You never sacrifice a Basic Expectation for a Delighter. Basics prevent dissatisfaction; Delighters can wait for later sprints when capacity allows.",
+            "correctFeedback": {
+              "text": "Kano Model priority: Basic Expectations (confirmation, security) FIRST because absence causes customer dissatisfaction. AR visualization is a Delighter — unexpected and exciting but not MVP critical. You never sacrifice a Basic Expectation for a Delighter. Basics prevent dissatisfaction; Delighters can wait for later sprints when capacity allows.",
+              "character": "Morgan Lee",
+              "characterQuote": "Kano makes this clear: removing payment security (Basic) for AR (Delighter) would cause real customer harm. Basics are non-negotiable. AR goes to Sprint 2."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about customer reaction. What happens if you REMOVE payment security? Now what happens if you DON'T add AR? Which absence causes more damage?",
+              "character": "Morgan Lee",
+              "characterQuote": "Think about customer reaction. What happens if you REMOVE payment security? Now what happens if you DON'T add AR? Which absence causes more damage?"
+            },
+            "retryHint": "Kano priority: Basic → Performance → Delighter. Which category is AR? Which category are confirmation and security? Can you sacrifice a higher-priority category for a lower one?"
+          }
+        ]
+      }
+    }
+  ]
+}

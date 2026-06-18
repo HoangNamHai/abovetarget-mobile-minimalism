@@ -1,0 +1,777 @@
+{
+  "lessonId": "D2L5",
+  "lessonTitle": "Agile Metrics & Tracking",
+  "courseId": "D2",
+  "courseName": "Agile Tools & Techniques",
+  "pathId": "D",
+  "pathName": "Agile",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Calculate and interpret team velocity to predict delivery timelines",
+    "Distinguish between burn-down charts and burn-up charts and when to use each",
+    "Read cumulative flow diagrams (CFD) to identify bottlenecks in workflow",
+    "Measure and differentiate lead time from cycle time for different stakeholder perspectives",
+    "Use metrics for continuous improvement, not blame"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "morgan_lee",
+    "carlos_mendez",
+    "maya_rodriguez",
+    "devon_brown"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "60 Points Remaining, No Launch Date: Can Metrics Predict When We Ship?",
+        "intro": "You're **Alex Mitchell**, Scrum Master at Savory & Co. The digital ordering system has 60 story points left in the backlog. Carlos needs a launch date for the executive team, but Morgan can only say \"60 points remaining\" without translating that into calendar time. Alex opens the metrics dashboard — velocity charts, burn-down slopes, and flow diagrams — convinced the data holds the answer. Carlos is skeptical: \"I need a DATE, not graphs.\" Can Alex turn raw metrics into a concrete forecast?",
+        "failure_cards": [
+          {
+            "id": "guessing_without_data",
+            "icon": "📋",
+            "title": "Guessing Without Data",
+            "summary": "Alex guesses \"4 weeks\" without consulting velocity data",
+            "image": "/images/D2L5_comic_guessing_without_data.webp",
+            "details": "Under pressure from Carlos, Alex estimated the launch date by gut feeling: \"We've got 60 points left, maybe 4 weeks?\" Two sprints later, only 34 points were done. The team had averaged 17 points per sprint, not the 30 Alex assumed. Carlos told the executives \"4 weeks\" and now the project is publicly behind schedule. Alex: \"I should have calculated velocity instead of guessing.\""
+          },
+          {
+            "id": "invisible_scope_creep",
+            "icon": "⚠️",
+            "title": "Invisible Scope Creep",
+            "summary": "Burn-down chart hid scope changes — the team looked \"behind\" when scope actually grew",
+            "image": "/images/D2L5_comic_invisible_scope.webp",
+            "details": "Morgan reported: \"We completed 18 story points this sprint.\" But the burn-down showed work remaining INCREASED from 42 to 49 points. Carlos exploded: \"You completed work but there's MORE left? What happened?\" Morgan had added 25 new stories mid-sprint but only used a burn-down chart, which doesn't show scope changes. A burn-up chart would have revealed both completed work AND the scope increase — explaining the gap without blaming the team."
+          },
+          {
+            "id": "hidden_bottleneck",
+            "icon": "💡",
+            "title": "Hidden Bottleneck",
+            "summary": "Work piled up in Testing for weeks — no one noticed until velocity collapsed",
+            "image": "/images/D2L5_comic_hidden_bottleneck.webp",
+            "details": "Development was completing stories at a steady pace, but velocity dropped from 20 to 8 points over three sprints. Carlos demanded answers. Alex finally checked the cumulative flow diagram and discovered: the Testing band had been bulging for weeks. Devon's QA queue had 15 stories waiting while only 3 were getting tested per sprint. Work was \"done\" in development but stuck in testing. Without CFD monitoring, the bottleneck went undetected until delivery ground to a halt."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "I don't need fancy graphs. I need to know: when does the digital ordering system launch? Give me a date I can tell the executives — backed by actual data, not guesses."
+        },
+        "learning_hook": "**Agile metrics** transform uncertainty into data-driven forecasts. Velocity predicts delivery dates. Burn-down and burn-up charts track progress with or without scope changes. Cumulative flow diagrams reveal hidden bottlenecks. Lead time and cycle time measure speed from different perspectives. Let's learn to read these metrics and use them for improvement — not blame."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "mastering_the_metrics_dashboard",
+        "title": "Mastering the Metrics Dashboard",
+        "description": "Carlos demands a launch date. Morgan needs to explain scope changes. Devon's testing queue is growing. Alex must use the right metrics to answer each question — and teach the team to read the dashboard.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Based on the team's velocity, how many sprints are needed to complete the remaining 60 story points?",
+            "points": 100,
+            "scenario_name": "Velocity Forecast",
+            "situation": "The team completed 18 story points in Sprint 1, 22 in Sprint 2, and 16 in Sprint 3. There are 60 story points remaining in the backlog. Carlos asks: \"How many more sprints until we launch?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "3 sprints (60 / 20 = 3, using committed points average)",
+                "correct": false,
+                "whyWrong": "Uses committed points (20) instead of completed points (18.7). Velocity measures what the team ACTUALLY delivers, not what they plan to deliver."
+              },
+              {
+                "id": "B",
+                "text": "4 sprints (velocity = (18+22+16)/3 = 18.7; 60 / 18.7 = 3.2, round up to 4)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "2 sprints (use highest sprint of 22 as velocity)",
+                "correct": false,
+                "whyWrong": "Using only the highest sprint (22) is overly optimistic. One great sprint doesn't represent sustainable capacity."
+              },
+              {
+                "id": "D",
+                "text": "5 sprints (use lowest sprint of 16 as velocity for safety)",
+                "correct": false,
+                "whyWrong": "Using only the lowest sprint (16) is overly pessimistic. Velocity averages account for natural variation across sprints."
+              }
+            ],
+            "explanation": "Velocity is the average of COMPLETED story points: (18+22+16)/3 = 18.7 points per sprint. Remaining work (60) divided by velocity (18.7) = 3.2 sprints, rounded up to 4 sprints. Use average completed points — not committed, not highest, not lowest.",
+            "correctFeedback": {
+              "text": "Velocity is the average of COMPLETED story points: (18+22+16)/3 = 18.7 points per sprint. Remaining work (60) divided by velocity (18.7) = 3.2 sprints, rounded up to 4 sprints. Use average completed points — not committed, not highest, not lowest.",
+              "character": "Carlos Mendez",
+              "characterQuote": "60 divided by 18.7 equals 3.2 sprints — so 4 sprints, roughly 8 weeks. That's a forecast I can give the executives. Data, not guessing."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Velocity uses COMPLETED points, not committed. And we average across sprints — don't cherry-pick the best or worst sprint. Average gives us the most reliable forecast.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Velocity uses COMPLETED points, not committed. And we average across sprints — don't cherry-pick the best or worst sprint. Average gives us the most reliable forecast."
+            },
+            "retryHint": "Velocity = average COMPLETED points per sprint. Add up what was actually finished in each sprint, divide by number of sprints, then divide remaining work by that average."
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Drag each chart type to the stakeholder whose need it best serves:",
+            "points": 100,
+            "scenario_name": "Burn-down vs Burn-up Chart Selection",
+            "situation": "Two stakeholders need different types of progress visibility. Carlos wants a simple \"are we on track?\" view showing work remaining each day. Morgan needs to explain to executives why the team completed 18 points but didn't finish the sprint scope of 25 — because 7 new stories were added mid-sprint.",
+            "chips": [
+              {
+                "id": "burndown_chart",
+                "label": "Burn-down Chart",
+                "correctZone": "carlos_show_me_work_remaining"
+              },
+              {
+                "id": "burnup_chart",
+                "label": "Burn-up Chart",
+                "correctZone": "morgan_show_completed_work_and_scope_changes"
+              },
+              {
+                "id": "velocity_chart",
+                "label": "Velocity Chart",
+                "correctZone": "neither_predicts_future_sprints_not_daily_progress"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "carlos_show_me_work_remaining",
+                "label": "Carlos — \"Show me work remaining\"",
+                "detail": "Burn-down displays a single line of remaining work over time, ideal for simple on-track checks"
+              },
+              {
+                "id": "morgan_show_completed_work_and_scope_changes",
+                "label": "Morgan — \"Show completed work AND scope changes\"",
+                "detail": "Burn-up shows two lines: completed work rising and total scope, making scope additions visible"
+              },
+              {
+                "id": "neither_predicts_future_sprints_not_daily_progress",
+                "label": "Neither — \"Predicts future sprints, not daily progress\"",
+                "detail": "Velocity forecasts delivery across sprints, not within-sprint daily tracking"
+              }
+            ],
+            "explanation": "Burn-down shows work REMAINING (simple on-track check). Burn-up shows work COMPLETED plus a scope line — when scope changes mid-sprint, burn-up reveals WHY completion percentage shifted. Burn-down just shows \"you're behind\" without explaining scope growth.",
+            "correctFeedback": {
+              "text": "Burn-down shows work REMAINING (simple on-track check). Burn-up shows work COMPLETED plus a scope line — when scope changes mid-sprint, burn-up reveals WHY completion percentage shifted. Burn-down just shows \"you're behind\" without explaining scope growth.",
+              "character": "Morgan Lee",
+              "characterQuote": "Burn-up saved me. Stakeholders could see that scope grew from 18 to 25 points mid-sprint. We didn't underdeliver — they added work. Burn-down would have just shown us 'behind.'"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what each chart SHOWS. Burn-down has ONE line (remaining). Burn-up has TWO lines (completed + scope). Which one reveals scope changes?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about what each chart SHOWS. Burn-down has ONE line (remaining). Burn-up has TWO lines (completed + scope). Which one reveals scope changes?"
+            },
+            "retryHint": "Burn-down = ONE line showing work remaining (simple). Burn-up = TWO lines showing completed work AND total scope (explains scope changes). Match each chart to who needs what information."
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What does the bulging Testing band in the CFD indicate?",
+            "points": 100,
+            "scenario_name": "Reading the Cumulative Flow Diagram",
+            "situation": "The team's CFD shows four workflow bands over 6 weeks: To Do (blue), In Progress (yellow), Testing (orange), and Done (green). In weeks 5-6, the orange Testing band grows noticeably thicker while the green Done band stays nearly flat. Devon reports: \"I have 15 stories waiting for QA but can only test 3 per sprint.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team needs to add more stories to the backlog",
+                "correct": false,
+                "whyWrong": "Adding more stories increases the To Do band, not Testing. The problem is work stuck in Testing, not insufficient backlog."
+              },
+              {
+                "id": "B",
+                "text": "Development is moving too slowly",
+                "correct": false,
+                "whyWrong": "Development is actually moving FAST — that's why Testing is overwhelmed. Stories are arriving at QA faster than Devon can process them."
+              },
+              {
+                "id": "C",
+                "text": "Testing is a bottleneck — work arrives faster than QA can process it",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Story points are estimated incorrectly",
+                "correct": false,
+                "whyWrong": "Estimation accuracy affects velocity predictions, not flow bottlenecks. The CFD shows a real workflow constraint regardless of point accuracy."
+              }
+            ],
+            "explanation": "A bulging band in the CFD means work is accumulating at that stage faster than it's being processed — a bottleneck. The Testing band bulging while Done stays flat means stories are completing development but getting stuck waiting for QA. This is a systemic flow issue, not a people issue.",
+            "correctFeedback": {
+              "text": "A bulging band in the CFD means work is accumulating at that stage faster than it's being processed — a bottleneck. The Testing band bulging while Done stays flat means stories are completing development but getting stuck waiting for QA. This is a systemic flow issue, not a people issue.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Bulging band equals bottleneck. The CFD is your early warning system. If you see a band growing thicker, work is piling up at that stage. Address it before delivery stalls completely."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at WHERE the band bulges. I have 15 stories in my queue and can only test 3 per sprint. That's not a speed problem in development — it's a flow problem in testing.",
+              "character": "Devon Brown",
+              "characterQuote": "Look at WHERE the band bulges. I have 15 stories in my queue and can only test 3 per sprint. That's not a speed problem in development — it's a flow problem in testing."
+            },
+            "retryHint": "In a CFD, when one band gets thicker, work is accumulating there. Which stage has the thickest band? That's where work is stuck."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What is the correct interpretation of these two metrics?",
+            "points": 100,
+            "scenario_name": "Lead Time vs Cycle Time",
+            "situation": "Story US-105 was added to the backlog on Day 1 (customer request), moved to In Progress on Day 8 (development started), and reached Done on Day 12 (completed). The customer asks: \"Why did my feature take 12 days?\" The team says: \"We only worked on it for 4 days.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team measured incorrectly — it should be either 12 or 4 days, not both",
+                "correct": false,
+                "whyWrong": "Both measurements are correct — they simply measure different perspectives. Lead time is for customers; cycle time is for the team."
+              },
+              {
+                "id": "B",
+                "text": "Lead time is 12 days (customer perspective: request to delivery) and cycle time is 4 days (team perspective: start to done) — both are correct",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cycle time includes the 8-day backlog wait, so both metrics equal 12 days",
+                "correct": false,
+                "whyWrong": "Cycle time specifically EXCLUDES backlog wait. It starts when work BEGINS, not when it's requested. Including wait time would make it identical to lead time."
+              },
+              {
+                "id": "D",
+                "text": "Lead time only measures active work time, so it should be 4 days",
+                "correct": false,
+                "whyWrong": "Lead time includes ALL time from request to delivery, including waiting. Active work time only is cycle time."
+              }
+            ],
+            "explanation": "Lead Time = request to delivery (Day 1 to Day 12 = 12 days). This is the CUSTOMER's experience. Cycle Time = work started to done (Day 8 to Day 12 = 4 days). This is the TEAM's efficiency. The 8-day gap was backlog wait time. Both metrics are correct — they measure different things for different audiences.",
+            "correctFeedback": {
+              "text": "Lead Time = request to delivery (Day 1 to Day 12 = 12 days). This is the CUSTOMER's experience. Cycle Time = work started to done (Day 8 to Day 12 = 4 days). This is the TEAM's efficiency. The 8-day gap was backlog wait time. Both metrics are correct — they measure different things for different audiences.",
+              "character": "Morgan Lee",
+              "characterQuote": "The customer waited 12 days (lead time). The team worked 4 days (cycle time). The 8-day gap is backlog prioritization time. To improve customer experience, reduce that wait."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Lead time and cycle time are BOTH valid — they just measure different things. Lead time = customer's total wait. Cycle time = team's active work. The gap between them is queue time.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Lead time and cycle time are BOTH valid — they just measure different things. Lead time = customer's total wait. Cycle time = team's active work. The gap between them is queue time."
+            },
+            "retryHint": "Lead time starts when the customer REQUESTS the feature. Cycle time starts when the team BEGINS working. The difference is queue/wait time."
+          },
+          {
+            "q_id": "q5",
+            "type": "multi_select",
+            "question": "What causes unstable velocity? Select all that apply.",
+            "points": 100,
+            "scenario_name": "Velocity Stability",
+            "situation": "The team's velocity over 5 sprints has been wildly inconsistent: 10, 30, 5, 25, 10 points. Alex is concerned because unstable velocity makes forecasting unreliable. The team needs to identify root causes.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Inconsistent team composition (people joining and leaving mid-sprint)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Vague Definition of Done (different completion standards each sprint)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Poor story refinement (unclear acceptance criteria causing rework)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Too many total story points in the backlog",
+                "correct": false,
+                "whyWrong": "Backlog size doesn't affect velocity. Velocity measures what gets DONE per sprint, regardless of how much is waiting. A large backlog doesn't make the team faster or slower."
+              },
+              {
+                "id": "E",
+                "text": "External interruptions (support requests derailing sprint focus)",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Using Fibonacci sequence for estimation",
+                "correct": false,
+                "whyWrong": "Fibonacci sequence is an estimation technique. Whether you use 1-2-3-5-8 or T-shirt sizes, the estimation scale doesn't cause velocity swings — process issues do."
+              }
+            ],
+            "explanation": "Unstable velocity signals process problems: changing team members (A), inconsistent quality standards (B), unclear requirements causing rework (C), and external disruptions pulling focus from sprint commitments (E). Backlog size and estimation scales don't cause sprint-to-sprint volatility — process instability does.",
+            "correctFeedback": {
+              "text": "Unstable velocity signals process problems: changing team members (A), inconsistent quality standards (B), unclear requirements causing rework (C), and external disruptions pulling focus from sprint commitments (E). Backlog size and estimation scales don't cause sprint-to-sprint volatility — process instability does.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Velocity swings from 5 to 30 points tell me our process is inconsistent. Fix the root causes — stable team, clear DoD, refined stories, protected sprint focus — and velocity will stabilize."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "High or low velocity isn't the problem — inconsistency is. Look at what CHANGES between sprints: team members, standards, clarity, or focus. Those are your root causes.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "High or low velocity isn't the problem — inconsistency is. Look at what CHANGES between sprints: team members, standards, clarity, or focus. Those are your root causes."
+            },
+            "retryHint": "Think about what changes between sprints that could cause output to swing from 5 to 30 points. Is it the backlog? The estimation method? Or something about the team and process?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Agile Metrics Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Velocity",
+            "subtitle": "Predicting Delivery",
+            "content": "**Formula:** Velocity = Average COMPLETED story points per sprint\n\n| Sprint | Committed | Completed | Use for Velocity |\n|--------|-----------|-----------|------------------|\n| Sprint 1 | 20 | 18 | 18 |\n| Sprint 2 | 25 | 22 | 22 |\n| Sprint 3 | 20 | 16 | 16 |\n| **Average** | — | — | **(18+22+16)/3 = 18.7** |\n\n**Forecasting:** Remaining Points / Velocity = Sprints to Complete\n- 60 points / 18.7 = 3.2 sprints = **4 sprints (8 weeks)**\n\n**Key Rule:** Use COMPLETED points, never committed. Velocity measures actual delivery capacity.",
+            "diagram": {
+              "image": "/images/D2L5_diagram_metrics_dashboard.webp",
+              "alt": "Agile metrics dashboard overview"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Burn-down vs Burn-up Charts",
+            "subtitle": "",
+            "content": "| Chart | What It Shows | Best For |\n|-------|---------------|----------|\n| **Burn-down** | Work REMAINING over time (single line descending) | Simple \"on track?\" sprint check |\n| **Burn-up** | Work COMPLETED + Scope line (two lines) | Explaining scope changes to stakeholders |\n\n**Why Burn-up Matters:** When scope changes mid-sprint, burn-down only shows \"you're behind.\" Burn-up shows WHY — the scope line jumped when new stories were added. This protects the team from unfair blame.",
+            "diagram": {
+              "image": "/images/D2L5_diagram_burndown_vs_burnup.webp",
+              "alt": "Burn-down and burn-up chart comparison"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Cumulative Flow Diagram (CFD)",
+            "subtitle": "",
+            "content": "The CFD shows work items in each workflow state as stacked colored bands over time.\n\n| CFD Pattern | What It Means | Action |\n|-------------|---------------|--------|\n| Band **BULGES** | Bottleneck — work piling up at that stage | Swarm resources, limit WIP |\n| Done band **FLAT** | Nothing finishing despite work in progress | Find and address the constraint |\n| Bands **DIVERGE** | Scope growing faster than capacity | Prioritize ruthlessly, reduce WIP |\n| Bands **PARALLEL** | Healthy flow — work moves smoothly through stages | Maintain current process |",
+            "diagram": {
+              "image": "/images/D2L5_diagram_cfd_bottleneck.webp",
+              "alt": "CFD bottleneck identification"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Lead Time vs Cycle Time",
+            "subtitle": "",
+            "content": "| Metric | Definition | Perspective | Optimize By |\n|--------|------------|-------------|-------------|\n| **Lead Time** | Request to Done | Customer experience | Better backlog prioritization |\n| **Cycle Time** | Work Started to Done | Team efficiency | Limiting WIP, removing blockers |\n\n**Example:** Lead Time = 12 days. Cycle Time = 4 days. Gap = 8 days waiting in the backlog. To improve customer satisfaction, reduce that 8-day queue time through better prioritization.\n\n**Key Insight:** Metrics are for IMPROVEMENT, not punishment. A bulging CFD band is a process problem to solve together — not someone's fault."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Sprint 4 Crisis",
+        "scenario": {
+          "title": "Sprint 4 Crisis",
+          "description": "Sprint 4 just ended with alarming metrics: velocity dropped from 16 to 12 points, the CFD shows a bulging Testing band, cycle time increased from 4 to 6 days, and the burn-down shows the team committed 20 points but only completed 12. Carlos calls an emergency meeting: \"What's going wrong and how do we fix it?\"",
+          "images": [
+            {
+              "src": "/images/D2L5_comic_sprint4_crisis.webp",
+              "alt": "Sprint 4 metrics crisis"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Based on the CFD showing a bulging Testing band, what is the PRIMARY root cause of the velocity drop?",
+            "points": 100,
+            "scenario_name": "Root Cause from CFD",
+            "situation": "The Sprint 4 CFD shows the Testing band growing significantly thicker over the past two weeks while the Done band remains nearly flat. Devon reports that 15 stories are waiting for QA but he can only process 3 per sprint. Carlos asks Alex: \"What's the primary cause of our delivery slowdown?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team is not working hard enough and needs to increase effort",
+                "correct": false,
+                "whyWrong": "\"Work harder\" ignores what the data shows. The CFD reveals a PROCESS bottleneck, not an effort problem. Metrics inform improvement, not blame."
+              },
+              {
+                "id": "B",
+                "text": "Testing is bottlenecked — work arrives at QA faster than Devon can process it",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Development is moving too slowly to keep up with sprint commitments",
+                "correct": false,
+                "whyWrong": "Development is actually producing stories efficiently — that's WHY the Testing queue is growing. The bottleneck is downstream in QA."
+              },
+              {
+                "id": "D",
+                "text": "Story point estimates were too aggressive for Sprint 4",
+                "correct": false,
+                "whyWrong": "Estimation accuracy might affect planning, but the CFD shows a clear flow constraint. Even perfectly estimated stories would pile up in Testing."
+              }
+            ],
+            "explanation": "The bulging Testing band in the CFD reveals a QA bottleneck: stories are completing development but accumulating in the testing queue. Velocity dropped because work can't reach \"Done\" if it's stuck in Testing. This is a systemic flow issue, not an individual effort problem.",
+            "correctFeedback": {
+              "text": "The bulging Testing band in the CFD reveals a QA bottleneck: stories are completing development but accumulating in the testing queue. Velocity dropped because work can't reach \"Done\" if it's stuck in Testing. This is a systemic flow issue, not an individual effort problem.",
+              "character": "Alex Mitchell",
+              "characterQuote": "The CFD tells the story clearly. Work is flowing INTO testing faster than it flows OUT. That's why velocity dropped — stories can't reach Done if they're stuck in QA."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look at the Testing band — it's bulging because 15 stories are waiting for me but I can only test 3 per sprint. The constraint is in MY queue, not in development speed.",
+              "character": "Devon Brown",
+              "characterQuote": "Look at the Testing band — it's bulging because 15 stories are waiting for me but I can only test 3 per sprint. The constraint is in MY queue, not in development speed."
+            },
+            "retryHint": "The CFD shows which band is growing thicker. That's where work is stuck. Is the problem in development speed or in what happens AFTER development?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "multi_select",
+            "question": "Which actions should the team take to address the Testing bottleneck? Select all appropriate responses.",
+            "points": 100,
+            "scenario_name": "Addressing the Bottleneck",
+            "situation": "Alex has identified Testing as the bottleneck. Carlos wants immediate action: \"We can't have another sprint like this. What do we do?\" The team needs to select the right combination of responses to address both the immediate backlog and the underlying process issue.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Swarm Testing — have developers assist Devon with QA this sprint",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Limit WIP in Development — prevent more stories from piling up in Testing",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Hold a retrospective to investigate the systemic root cause",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Tell the team to work harder and longer hours",
+                "correct": false,
+                "whyWrong": "\"Work harder\" ignores the systemic issue. The team is already productive — the problem is workflow distribution, not effort. Longer hours lead to burnout without fixing the constraint."
+              },
+              {
+                "id": "E",
+                "text": "Ignore the metrics and assume next sprint will naturally improve",
+                "correct": false,
+                "whyWrong": "The CFD shows a worsening trend. Bottlenecks don't self-correct — they compound as more work enters the queue each sprint."
+              }
+            ],
+            "explanation": "A three-pronged approach works best: Swarming (A) clears the immediate backlog by having developers help test. WIP limits (B) prevent future pile-up by slowing the flow into Testing. A retrospective (C) investigates WHY the bottleneck formed — maybe QA needs better tools, automation, or additional capacity. \"Work harder\" and ignoring data don't solve process problems.",
+            "correctFeedback": {
+              "text": "A three-pronged approach works best: Swarming (A) clears the immediate backlog by having developers help test. WIP limits (B) prevent future pile-up by slowing the flow into Testing. A retrospective (C) investigates WHY the bottleneck formed — maybe QA needs better tools, automation, or additional capacity. \"Work harder\" and ignoring data don't solve process problems.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "I'll help Devon test this sprint — that clears the immediate queue. But we also need WIP limits so we don't flood testing again, and a retro to find the real root cause."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Metrics show a PROCESS problem. You need actions that fix the process: clear the queue, prevent future pile-up, and investigate root cause. Effort and hope aren't process fixes.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Metrics show a PROCESS problem. You need actions that fix the process: clear the queue, prevent future pile-up, and investigate root cause. Effort and hope aren't process fixes."
+            },
+            "retryHint": "You need to address three things: the immediate backlog (clear it), the flow problem (prevent recurrence), and the root cause (understand why). Which options cover all three?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What is the correct interpretation of the velocity drop from 16 to 12 points?",
+            "points": 100,
+            "scenario_name": "Interpreting the Velocity Drop",
+            "situation": "After addressing the bottleneck plan, Carlos asks: \"Velocity dropped from 16 to 12 points. Does that mean the team is getting worse?\" Alex needs to give Carlos the correct interpretation so leadership doesn't misuse the metric.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team is becoming less productive and needs performance improvement",
+                "correct": false,
+                "whyWrong": "Using velocity to judge team performance misuses the metric. Velocity measures flow through the system, not team effort. The bottleneck reduced throughput."
+              },
+              {
+                "id": "B",
+                "text": "The velocity drop is a SYMPTOM of the Testing bottleneck — work can't reach Done, so velocity falls",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Story points should be recalibrated because estimates are too large",
+                "correct": false,
+                "whyWrong": "Recalibrating points doesn't address the flow constraint. Even with smaller estimates, stories would still pile up in Testing."
+              },
+              {
+                "id": "D",
+                "text": "Velocity naturally fluctuates between sprints, so no action is needed",
+                "correct": false,
+                "whyWrong": "While small fluctuations are normal, a drop from 16 to 12 combined with a bulging CFD band indicates a real problem. Dismissing it risks the bottleneck worsening."
+              }
+            ],
+            "explanation": "Lower velocity is a SYMPTOM, not the disease. The CFD already showed that work is stuck in Testing — stories can't reach \"Done\" status, which means they don't count toward velocity. Fix the bottleneck (the cause) and velocity will recover (the symptom resolves). Using velocity to blame the team misuses the metric.",
+            "correctFeedback": {
+              "text": "Lower velocity is a SYMPTOM, not the disease. The CFD already showed that work is stuck in Testing — stories can't reach \"Done\" status, which means they don't count toward velocity. Fix the bottleneck (the cause) and velocity will recover (the symptom resolves). Using velocity to blame the team misuses the metric.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Carlos, velocity didn't drop because the team got worse. It dropped because completed stories are stuck in Testing and can't reach Done. Fix the bottleneck and velocity will recover."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Be careful not to treat symptoms as the disease. If work is stuck upstream of Done, velocity MUST drop. The question isn't 'why is velocity low?' — it's 'why can't work reach Done?'",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Be careful not to treat symptoms as the disease. If work is stuck upstream of Done, velocity MUST drop. The question isn't 'why is velocity low?' — it's 'why can't work reach Done?'"
+            },
+            "retryHint": "The CFD already told you work is stuck in Testing. If stories can't reach \"Done,\" what happens to the velocity number? Is the team the problem, or the flow?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to read and use the core agile metrics that transform \"I don't know when we'll finish\" into data-driven forecasts and actionable insights.",
+        "key_takeaways": [
+          "Velocity = average COMPLETED points per sprint — Use it to forecast delivery (remaining work / velocity = sprints needed). Never use committed points.",
+          "Burn-down shows work remaining; Burn-up shows completed work AND scope changes — Use burn-up when you need to explain scope growth to stakeholders.",
+          "CFD reveals bottlenecks — A bulging band means work is piling up at that stage. Address it by swarming, limiting WIP, and investigating root cause.",
+          "Lead time = customer wait (request to done); Cycle time = team efficiency (start to done) — The gap between them is queue time you can reduce through better prioritization.",
+          "Metrics inform improvement, NOT blame — A velocity drop or CFD bulge is a process signal, not a performance judgment. Use data to solve problems together."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Before learning these metrics, I guessed at launch dates and missed bottlenecks until they killed delivery. Now I calculate velocity for forecasts, use burn-up charts to explain scope changes, read CFDs to catch bottlenecks early, and track lead time to improve customer experience. The biggest lesson? Metrics are for improvement, not punishment. When Carlos sees a velocity drop, I show him the CFD — it's not the team failing, it's a process we can fix together."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L6",
+          "title": "Definition of Done",
+          "description": "You've learned to measure delivery with metrics — now define what \"done\" actually means so every story point represents real, shippable value."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What is the team's velocity, and how many sprints are needed?",
+            "points": 50,
+            "scenario_name": "Calculating Velocity",
+            "situation": "A Scrum team completed 20, 25, and 15 story points in their last three sprints. The Product Owner needs to forecast how many sprints remain for the 40 remaining story points in the backlog.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Velocity is 25 (highest sprint); 2 sprints needed",
+                "correct": false,
+                "whyWrong": "Using the highest sprint (25) is optimistic bias. One strong sprint doesn't represent sustainable capacity."
+              },
+              {
+                "id": "B",
+                "text": "Velocity is 20 (average: (20+25+15)/3); 2 sprints needed (40/20 = 2)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Velocity is 15 (lowest sprint for conservative estimate); 3 sprints needed",
+                "correct": false,
+                "whyWrong": "Using the lowest sprint (15) is pessimistic bias. Velocity should average natural variation, not assume the worst."
+              },
+              {
+                "id": "D",
+                "text": "Velocity is 60 (sum of all sprints); less than 1 sprint needed",
+                "correct": false,
+                "whyWrong": "Velocity is an AVERAGE per sprint, not a cumulative total. Summing points across sprints doesn't produce a meaningful rate."
+              }
+            ],
+            "explanation": "Velocity is the average of completed story points: (20+25+15)/3 = 20 points per sprint. Remaining backlog (40) divided by velocity (20) = 2 sprints. Use the average — not highest, lowest, or total.",
+            "correctFeedback": {
+              "text": "Velocity is the average of completed story points: (20+25+15)/3 = 20 points per sprint. Remaining backlog (40) divided by velocity (20) = 2 sprints. Use the average — not highest, lowest, or total.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Average of completed points gives us a reliable forecast. 40 remaining at 20 per sprint means 2 more sprints. I can plan around that."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Velocity is always the AVERAGE of completed points across sprints. Don't pick the best sprint, worst sprint, or add them all up. Average gives the most reliable prediction.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Velocity is always the AVERAGE of completed points across sprints. Don't pick the best sprint, worst sprint, or add them all up. Average gives the most reliable prediction."
+            },
+            "retryHint": "Velocity is a RATE (points per sprint), not a total. Calculate the average of completed points across all sprints, then divide remaining work by that rate."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "Which chart BEST supports the Product Owner's explanation?",
+            "points": 50,
+            "scenario_name": "Choosing the Right Chart",
+            "situation": "A Product Owner completed 18 story points during the sprint, but the sprint scope grew from 20 to 25 points because stakeholders added new requirements mid-sprint. The Product Owner needs to explain to executives why the team didn't finish the full scope despite strong velocity.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Burn-down chart showing work remaining decreased",
+                "correct": false,
+                "whyWrong": "Burn-down only shows remaining work. It would show \"7 points left\" without explaining that 5 of those were NEW stories, making the team look like they underperformed."
+              },
+              {
+                "id": "B",
+                "text": "Burn-up chart showing completed work AND scope increase",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Velocity chart showing consistent sprint-over-sprint delivery",
+                "correct": false,
+                "whyWrong": "Velocity charts show sprint-over-sprint trends, not within-sprint scope changes. It can't explain mid-sprint additions."
+              },
+              {
+                "id": "D",
+                "text": "Gantt chart showing timeline milestones",
+                "correct": false,
+                "whyWrong": "Gantt charts show timeline-based scheduling, not agile sprint metrics or scope changes."
+              }
+            ],
+            "explanation": "The burn-up chart shows two lines: completed work climbing (18 points done) AND total scope with a visible jump (from 20 to 25 when stories were added). This explains the gap: the team delivered 18 of the original 20 points, but 5 new points were added. Burn-down would just show \"behind\" without explaining why.",
+            "correctFeedback": {
+              "text": "The burn-up chart shows two lines: completed work climbing (18 points done) AND total scope with a visible jump (from 20 to 25 when stories were added). This explains the gap: the team delivered 18 of the original 20 points, but 5 new points were added. Burn-down would just show \"behind\" without explaining why.",
+              "character": "Morgan Lee",
+              "characterQuote": "Burn-up is my go-to for stakeholder conversations. It shows we delivered 18 points of strong work — and the reason we're 'behind' is that scope grew by 5 points mid-sprint."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When scope changes mid-sprint, you need a chart that shows BOTH completed work and scope movement. Only one chart type shows two lines — which one?",
+              "character": "Alex Mitchell",
+              "characterQuote": "When scope changes mid-sprint, you need a chart that shows BOTH completed work and scope movement. Only one chart type shows two lines — which one?"
+            },
+            "retryHint": "The PO needs to show TWO things: work completed AND scope growth. Which chart type shows both as separate lines?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the Scrum Master recommend?",
+            "points": 50,
+            "scenario_name": "CFD Interpretation",
+            "situation": "A team's cumulative flow diagram shows the \"In Progress\" band growing significantly thicker over the past two weeks while the \"Done\" band remains nearly flat. The Scrum Master is reviewing the CFD during the sprint retrospective.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Add more user stories to the backlog to keep developers busy",
+                "correct": false,
+                "whyWrong": "Adding more backlog items doesn't address work stuck in progress. More input into a bottlenecked system makes the congestion worse."
+              },
+              {
+                "id": "B",
+                "text": "Increase the team's velocity target for the next sprint",
+                "correct": false,
+                "whyWrong": "Velocity targets don't solve flow problems. The issue isn't insufficient effort — it's work trapped between stages."
+              },
+              {
+                "id": "C",
+                "text": "Investigate the bottleneck and consider swarming or implementing WIP limits",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Extend the sprint duration to give more time for completion",
+                "correct": false,
+                "whyWrong": "Extending sprint duration masks the bottleneck without addressing it. Work will still pile up in progress regardless of sprint length."
+              }
+            ],
+            "explanation": "A bulging \"In Progress\" band with a flat \"Done\" band means work is accumulating but not finishing — a classic bottleneck. The Scrum Master should investigate what's blocking completion, potentially swarm resources to clear the queue, and implement WIP limits to prevent recurrence.",
+            "correctFeedback": {
+              "text": "A bulging \"In Progress\" band with a flat \"Done\" band means work is accumulating but not finishing — a classic bottleneck. The Scrum Master should investigate what's blocking completion, potentially swarm resources to clear the queue, and implement WIP limits to prevent recurrence.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Bulging band plus flat Done tells me work is stuck. Investigate the constraint, swarm to clear the immediate queue, and set WIP limits so it doesn't happen again."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "More stories or longer sprints don't fix a bottleneck — they make it worse. You need to understand WHY work isn't flowing to Done and remove that constraint.",
+              "character": "Devon Brown",
+              "characterQuote": "More stories or longer sprints don't fix a bottleneck — they make it worse. You need to understand WHY work isn't flowing to Done and remove that constraint."
+            },
+            "retryHint": "When work accumulates in one stage (band bulges) and nothing reaches Done (band stays flat), the problem is a bottleneck. What actions address flow constraints?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What accounts for the 11-day difference between lead time and cycle time?",
+            "points": 50,
+            "scenario_name": "Lead Time vs Cycle Time",
+            "situation": "A customer submitted a feature request that took 14 days from request to delivery. The development team's data shows the cycle time for the feature was only 3 days. The customer is unhappy about the 14-day wait and the team is confused because they worked efficiently.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team measured cycle time incorrectly and should include the full 14 days",
+                "correct": false,
+                "whyWrong": "Cycle time is measured correctly — it starts when work BEGINS, not when it's requested. Including queue time would make it identical to lead time, eliminating a useful distinction."
+              },
+              {
+                "id": "B",
+                "text": "11 days were spent waiting in the backlog before development started (lead time includes queue time)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Story point estimates didn't translate accurately to calendar days",
+                "correct": false,
+                "whyWrong": "Story points and calendar time are different concerns. The 11-day gap is specifically backlog wait time, not an estimation issue."
+              },
+              {
+                "id": "D",
+                "text": "The customer's original request was unclear, causing delays in understanding requirements",
+                "correct": false,
+                "whyWrong": "Requirements clarity affects cycle time (rework), not the 11-day backlog wait. The feature sat in queue before anyone even looked at it."
+              }
+            ],
+            "explanation": "Lead Time (14 days) = total time from customer request to delivery, including ALL waiting time. Cycle Time (3 days) = active work time from start to done. The 11-day gap was backlog queue time — the request sat waiting for prioritization. To improve customer experience, reduce that queue time through better prioritization.",
+            "correctFeedback": {
+              "text": "Lead Time (14 days) = total time from customer request to delivery, including ALL waiting time. Cycle Time (3 days) = active work time from start to done. The 11-day gap was backlog queue time — the request sat waiting for prioritization. To improve customer experience, reduce that queue time through better prioritization.",
+              "character": "Morgan Lee",
+              "characterQuote": "The team worked efficiently — 3 days of cycle time proves that. But the customer waited 11 extra days in the backlog. Better prioritization reduces that gap and improves customer satisfaction."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Lead time measures the CUSTOMER's experience. Cycle time measures the TEAM's efficiency. The gap between them is time the work spent WAITING, not being worked on.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Lead time measures the CUSTOMER's experience. Cycle time measures the TEAM's efficiency. The gap between them is time the work spent WAITING, not being worked on."
+            },
+            "retryHint": "Lead time starts at the customer's REQUEST. Cycle time starts when the team BEGINS working. What was happening during the days between those two events?"
+          }
+        ]
+      }
+    }
+  ]
+}

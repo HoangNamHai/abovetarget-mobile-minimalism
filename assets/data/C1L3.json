@@ -1,0 +1,736 @@
+{
+  "lessonId": "C1L3",
+  "lessonTitle": "Direct & Manage Project Work",
+  "courseId": "C1",
+  "courseName": "Integration Management",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand that Direct & Manage Project Work is THE primary execution process where plans become deliverables",
+    "Identify the 4 key outputs of execution: deliverables, work performance data, change requests, and document updates",
+    "Distinguish between work performance DATA (raw observations) and work performance INFORMATION (analyzed comparisons)",
+    "Recognize the PM's role as coordinator and integrator during execution — not a micromanager",
+    "Apply execution coordination principles to resolve real-world dependency and change scenarios"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "dr_amelia_foster",
+    "maya_rodriguez",
+    "javier_torres"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Construction Day: Three Crises, One Project Manager",
+        "intro": "You're **Alex Mitchell**, three weeks into the Riverside Plaza construction project for Savory & Co. The pizza oven arrives two days early, the electrical hookup isn't finished, and the HVAC team just discovered the ventilation can't handle the oven's heat output. Carlos turns to you: \"Why isn't anyone DOING anything? MANAGE this!\" But managing doesn't mean micromanaging — it means coordinating.",
+        "failure_cards": [
+          {
+            "id": "execution_chaos_begins",
+            "icon": "📋",
+            "title": "Execution Chaos Begins",
+            "summary": "Early delivery, unfinished electrical, and an overwhelmed GM demanding action",
+            "image": "/images/C1L3_comic_chaos.webp",
+            "details": "It's Week 3 at the Riverside Plaza construction site. The pizza oven supplier delivers two days early, but Javier's electrical team needs two more days to finish the 60-amp hookup. Carlos arrives on site, sees the oven crate sitting idle, and erupts: \"Why isn't anyone DOING anything?\" Alex calmly reviews the dependency chain — the oven can't be installed until electrical is ready. Reacting to the loudest voice isn't project management."
+          },
+          {
+            "id": "the_micromanager_trap",
+            "icon": "⚠️",
+            "title": "The Micromanager Trap",
+            "summary": "Micromanaging contractors creates bottlenecks and resentment",
+            "image": "/images/C1L3_comic_micromanager.webp",
+            "details": "Carlos wants Alex to \"tell Javier to work faster\" and \"tell HVAC to skip the upgrade.\" But Javier is an expert electrician — he knows his work better than Alex does. If Alex dictates wire routing and installation methods, Alex becomes a bottleneck for every technical decision. Meanwhile, the HVAC ventilation problem goes unaddressed because Alex is busy micromanaging details instead of coordinating the big picture. Micromanagement = bottleneck. Coordination = integration."
+          },
+          {
+            "id": "data_without_context",
+            "icon": "💡",
+            "title": "Data Without Context",
+            "summary": "Collecting raw data is not enough — analysis turns DATA into INFORMATION",
+            "image": "/images/C1L3_comic_data_confusion.webp",
+            "details": "Alex's clipboard shows raw observations: \"Electrical 60% complete. HVAC: $45K spent. Oven delivered Aug 12.\" Carlos reads it and shrugs: \"So what? Is that good or bad?\" Raw numbers without comparison to baselines are just DATA. DATA becomes INFORMATION only when analyzed: \"Electrical is 5 days behind schedule. HVAC is $5K over budget due to ventilation upgrade. Oven arrived 2 days early, creating a coordination issue.\" Dr. Foster explains: DATA is collected during execution. INFORMATION is created during monitoring."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Everyone's busy but nothing's connecting. The oven's here, electrical isn't ready, and now HVAC says we need an $8,000 upgrade? Alex, MANAGE this!"
+        },
+        "learning_hook": "**Plans don't execute themselves.** Direct & Manage Project Work is THE execution process — where the PM plan becomes real deliverables. But the PM's job isn't to do all the work or micromanage experts. It's to coordinate dependencies, collect work performance data, and integrate changes as reality unfolds."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "execute_coordinate_integrate",
+        "title": "Execute, Coordinate, Integrate",
+        "description": "Dr. Foster guides you through the execution process. \"Direct & Manage is where rubber meets road. Let's see if you can coordinate like a PM — not micromanage like a nervous GM.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "multi_select",
+            "question": "Which activities are PART OF Direct & Manage Project Work? (Select 4)",
+            "points": 100,
+            "scenario_name": "Identify Execution Activities",
+            "situation": "Dr. Foster explains: \"Direct & Manage Project Work is THE execution process. But some activities belong to other process groups — Initiating, Monitoring & Controlling, or Closing. A good PM knows which activities happen during execution and which don't.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Execute work packages according to the project management plan",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Produce project deliverables",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Approve the project charter",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Collect work performance data",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Perform Earned Value Analysis",
+                "correct": false
+              },
+              {
+                "id": "F",
+                "text": "Implement approved change requests",
+                "correct": true
+              }
+            ],
+            "minSelections": 4,
+            "maxSelections": 4,
+            "explanation": "Direct & Manage is about DOING: executing work packages, producing deliverables, collecting raw data, and implementing approved changes. Charter approval is Initiating (before execution). Earned Value Analysis is Monitoring & Controlling (analyzing data, not collecting it). Execution = action. Monitoring = analysis.",
+            "correctFeedback": {
+              "text": "Direct & Manage is about DOING: executing work packages, producing deliverables, collecting raw data, and implementing approved changes. Charter approval is Initiating (before execution). Earned Value Analysis is Monitoring & Controlling (analyzing data, not collecting it). Execution = action. Monitoring = analysis.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You identified the four core execution activities. During Direct & Manage you execute work, produce deliverables, collect data, and implement approved changes. Analysis and authorization happen in other processes."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Is this activity about DOING work, or about ANALYZING work? Direct & Manage is the doing. Charter approval happens before execution. EVM happens during monitoring.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Is this activity about DOING work, or about ANALYZING work? Direct & Manage is the doing. Charter approval happens before execution. EVM happens during monitoring."
+            },
+            "retryHint": "Direct & Manage is about DOING: executing, producing, collecting observations, and implementing approved changes. Analysis, authorization, and closeout happen in other process groups."
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Drag each statement to the correct category: DATA (raw observation) or INFORMATION (analyzed comparison).",
+            "points": 150,
+            "scenario_name": "DATA vs INFORMATION — Classification",
+            "situation": "Alex is collecting observations from the construction site. Dr. Foster draws two columns on the whiteboard: \"DATA (Raw Observations)\" and \"INFORMATION (Analyzed).\" She challenges Alex: \"Sort these statements correctly. This distinction shows up constantly on the PMP exam.\"",
+            "chips": [
+              {
+                "id": "electrical_work_is_60_complete_as_of_august_15",
+                "label": "\"Electrical work is 60% complete as of August 15\"",
+                "correctZone": "data_raw"
+              },
+              {
+                "id": "electrical_work_is_5_days_behind_schedule_compared_to_baseline",
+                "label": "\"Electrical work is 5 days behind schedule compared to baseline\"",
+                "correctZone": "information_analyzed"
+              },
+              {
+                "id": "spent_45000_on_hvac_work_in_august",
+                "label": "\"Spent $45,000 on HVAC work in August\"",
+                "correctZone": "data_raw"
+              },
+              {
+                "id": "hvac_costs_are_5000_over_budget_due_to_ventilation_upgrade",
+                "label": "\"HVAC costs are $5,000 over budget due to ventilation upgrade\"",
+                "correctZone": "information_analyzed"
+              },
+              {
+                "id": "pizza_oven_delivered_august_12",
+                "label": "\"Pizza oven delivered August 12\"",
+                "correctZone": "data_raw"
+              },
+              {
+                "id": "pizza_oven_arrived_2_days_early_creating_coordination_issue_with_electrical",
+                "label": "\"Pizza oven arrived 2 days early, creating coordination issue with electrical\"",
+                "correctZone": "information_analyzed"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "data_raw",
+                "label": "DATA (Raw)",
+                "detail": "Raw percentage and date — no comparison to any baseline"
+              },
+              {
+                "id": "information_analyzed",
+                "label": "INFORMATION (Analyzed)",
+                "detail": "Compared actual completion to the schedule baseline to calculate variance"
+              }
+            ],
+            "explanation": "DATA is raw observations collected during execution — percentages, dollar amounts, dates with no comparison. INFORMATION is created when you analyze DATA against baselines — calculating variances (\"5 days behind\"), identifying budget impacts (\"$5K over\"), and assessing downstream effects (\"creating coordination issue\"). Direct & Manage produces DATA. Monitor & Control transforms DATA into INFORMATION.",
+            "correctFeedback": {
+              "text": "DATA is raw observations collected during execution — percentages, dollar amounts, dates with no comparison. INFORMATION is created when you analyze DATA against baselines — calculating variances (\"5 days behind\"), identifying budget impacts (\"$5K over\"), and assessing downstream effects (\"creating coordination issue\"). Direct & Manage produces DATA. Monitor & Control transforms DATA into INFORMATION.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect classification. DATA is what you OBSERVE during execution. INFORMATION is what you CREATE during monitoring by comparing observations to baselines. This distinction is fundamental to project control."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Look for baseline comparisons: 'behind schedule,' 'over budget,' 'days early.' These comparisons indicate INFORMATION. Raw numbers, dates, and percentages without comparison are DATA.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Look for baseline comparisons: 'behind schedule,' 'over budget,' 'days early.' These comparisons indicate INFORMATION. Raw numbers, dates, and percentages without comparison are DATA."
+            },
+            "retryHint": "Ask yourself: Does this statement compare to a plan or baseline? If yes, it's INFORMATION. If it's just a raw fact (percentage, date, dollar amount) with no comparison, it's DATA."
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What should Alex do as PM coordinating execution?",
+            "points": 150,
+            "scenario_name": "Coordinate the Execution Crisis",
+            "situation": "Here's the situation at Riverside Plaza: - **Plan:** Pizza oven delivery Aug 14. Electrical hookup Aug 10-13 (4 days). Oven installation Aug 14-16 (3 days). - **Reality:** Oven supplier offers early delivery Aug 12 (2 days early). Electrical needs 2 more days (ready Aug 15). HVAC team discovers ventilation can't support oven heat — upgrade needed: +$8K, +3 days. Carlos demands: \"Just tell the electrical contractor to work faster!\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accept early delivery and store the oven on-site until electrical is ready",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Reject early delivery and stick to the original August 14 plan exactly",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Delay oven delivery to Aug 17 (after electrical + HVAC). Coordinate the full sequence. Submit change request for +$8K and +3 days.",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Tell the electrical contractor to work faster to meet the original timeline",
+                "correct": false
+              }
+            ],
+            "explanation": "The PM coordinates the full dependency chain: Electrical finishes Aug 15, HVAC upgrade takes 3 days (Aug 16-18), then oven installation. The HVAC issue changes both cost (+$8K) and schedule (+3 days), requiring a formal change request through Integrated Change Control. The PM doesn't micromanage contractors (\"work faster\") or ignore emerging issues (HVAC ventilation).",
+            "correctFeedback": {
+              "text": "The PM coordinates the full dependency chain: Electrical finishes Aug 15, HVAC upgrade takes 3 days (Aug 16-18), then oven installation. The HVAC issue changes both cost (+$8K) and schedule (+3 days), requiring a formal change request through Integrated Change Control. The PM doesn't micromanage contractors (\"work faster\") or ignore emerging issues (HVAC ventilation).",
+              "character": "Carlos Mendez",
+              "characterQuote": "You didn't just manage the chaos — you COORDINATED it. Electrical, HVAC, oven delivery all aligned in sequence, and you submitted the change request for approval. That's integration management."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about the full dependency chain. Electrical must finish first, then HVAC upgrade, then oven installation. What about the cost and schedule impact? Those need formal change control.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about the full dependency chain. Electrical must finish first, then HVAC upgrade, then oven installation. What about the cost and schedule impact? Those need formal change control."
+            },
+            "retryHint": "The PM coordinates dependencies (electrical then HVAC then oven), integrates changes (HVAC upgrade affects schedule and cost), and submits change requests for baseline impacts. Don't micromanage contractors or ignore emerging issues."
+          },
+          {
+            "q_id": "q4",
+            "type": "drag_drop",
+            "question": "Drag each item to its correct output category.",
+            "points": 100,
+            "scenario_name": "Identify the 4 Key Outputs",
+            "situation": "Dr. Foster puts four labeled boxes on the whiteboard: Deliverables, Work Performance Data, Change Requests, and Document Updates. She places eight example items on the table: \"Match each example to the correct output category.\"",
+            "chips": [
+              {
+                "id": "completed_kitchen_buildout",
+                "label": "Completed kitchen buildout",
+                "correctZone": "deliverables"
+              },
+              {
+                "id": "electrical_60_complete_status_observation",
+                "label": "\"Electrical 60% complete\" (status observation)",
+                "correctZone": "work_performance_data"
+              },
+              {
+                "id": "hvac_upgrade_request_8k_3_days",
+                "label": "HVAC upgrade request: +$8K, +3 days",
+                "correctZone": "change_requests"
+              },
+              {
+                "id": "updated_risk_register_with_hvac_ventilation_risk",
+                "label": "Updated risk register with HVAC ventilation risk",
+                "correctZone": "document_updates"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "deliverables",
+                "label": "Deliverables",
+                "detail": "A tangible product/result — the actual work output"
+              },
+              {
+                "id": "work_performance_data",
+                "label": "Work Performance Data",
+                "detail": "Raw observation collected during execution"
+              },
+              {
+                "id": "change_requests",
+                "label": "Change Requests",
+                "detail": "Formal request to modify cost and schedule baselines"
+              },
+              {
+                "id": "document_updates",
+                "label": "Document Updates",
+                "detail": "Project document updated based on execution findings"
+              }
+            ],
+            "explanation": "Direct & Manage Project Work produces four outputs: (1) Deliverables — the actual products, results, and capabilities created; (2) Work Performance Data — raw observations collected during execution; (3) Change Requests — formal requests to modify baselines when execution reveals necessary changes; (4) Document Updates — updates to project documents like the issue log, risk register, and lessons learned.",
+            "correctFeedback": {
+              "text": "Direct & Manage Project Work produces four outputs: (1) Deliverables — the actual products, results, and capabilities created; (2) Work Performance Data — raw observations collected during execution; (3) Change Requests — formal requests to modify baselines when execution reveals necessary changes; (4) Document Updates — updates to project documents like the issue log, risk register, and lessons learned.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "All four outputs matched correctly. Deliverables are what you BUILD. Data is what you OBSERVE. Change requests are what you SUBMIT. Document updates are what you RECORD. Together, they are the complete output of execution."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what each item IS. A completed kitchen is something you built (deliverable). A percentage is something you observed (data). A budget/schedule modification request is a change request. An updated risk register is a document update.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about what each item IS. A completed kitchen is something you built (deliverable). A percentage is something you observed (data). A budget/schedule modification request is a change request. An updated risk register is a document update."
+            },
+            "retryHint": "Ask: Did we BUILD it (deliverable)? Did we OBSERVE it (data)? Are we asking to CHANGE baselines (change request)? Did we UPDATE a project document (document update)?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Execution Process Explained",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "What Is Direct & Manage Project Work?",
+            "subtitle": "",
+            "content": "**Direct & Manage Project Work** is the process of leading and performing the work defined in the project management plan and implementing approved changes to achieve project objectives. It is THE primary execution process.\n\n| Aspect | Detail |\n|--------|--------|\n| **Process Group** | Executing (the \"doing\" phase) |\n| **Performed By** | PM coordinates; team executes |\n| **Key Inputs** | Project management plan, approved change requests, EEFs, OPAs |\n| **Key Outputs** | Deliverables, work performance data, change requests, document updates |\n| **Frequency** | Continuous throughout execution |\n\n**Why It Matters:**\n- Transforms plans into actual deliverables\n- Acts as the coordination hub across all knowledge areas\n- Serves as the data collection point for monitoring\n- Surfaces changes as reality diverges from the plan\n\n**Key Insight:** The PM plan says \"build kitchen.\" Direct & Manage actually makes it happen. But the PM doesn't do all the work — they coordinate and integrate across teams while the team executes in their areas of expertise."
+          },
+          {
+            "id": "tab2",
+            "title": "The 4 Key Outputs",
+            "subtitle": "",
+            "content": "Every time Direct & Manage Project Work runs, it produces four categories of output:\n\n**1. Deliverables**\n- Products, results, or capabilities produced by the project\n- Example: Completed kitchen buildout, installed equipment, trained staff\n- These are the tangible outcomes stakeholders care about\n\n**2. Work Performance Data**\n- Raw, unanalyzed observations collected during execution\n- Example: \"Electrical 60% complete,\" \"Spent $45K on HVAC,\" \"Oven delivered Aug 12\"\n- Important: DATA is collected here — INFORMATION is created later during monitoring\n\n**3. Change Requests**\n- Formal requests to modify scope, schedule, or cost baselines\n- Example: HVAC ventilation upgrade — +$8K budget, +3 days schedule\n- These go through Integrated Change Control (C1L6) for approval\n\n**4. Document Updates**\n- Updates to project documents based on execution findings\n- Example: Updated risk register, issue log entries, lessons learned\n- Routine updates that don't require change control approval",
+            "diagram": {
+              "image": "/images/C1L3_diagram_execution_outputs.webp",
+              "alt": "Execution outputs diagram"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "DATA vs INFORMATION",
+            "subtitle": "",
+            "content": "The most commonly tested distinction on the PMP exam related to execution:\n\n| Aspect | Work Performance DATA | Work Performance INFORMATION |\n|--------|----------------------|------------------------------|\n| **Created During** | Execution (Direct & Manage) | Monitoring (Monitor & Control) |\n| **Nature** | Raw observations | Analyzed comparisons to baselines |\n| **Example** | \"60% complete\" | \"5 days behind schedule\" |\n| **Purpose** | Input to monitoring process | Basis for decisions and reports |\n\n**The Flow:**\n1. **Execute** — Collect DATA (\"Electrical 60% complete\")\n2. **Monitor** — Analyze into INFORMATION (\"5 days behind baseline\")\n3. **Decide** — Take corrective action or submit change request\n4. **Execute** — Implement approved changes\n5. **Repeat** throughout the project lifecycle\n\n**PMP Exam Tip:** If a question asks what Direct & Manage produces, the answer is DATA (raw). If it asks what Monitor & Control produces, the answer is INFORMATION (analyzed). Reports are outputs of monitoring, not execution."
+          },
+          {
+            "id": "tab4",
+            "title": "Coordinator vs Micromanager",
+            "subtitle": "",
+            "content": "The PM's execution role is to coordinate dependencies, integrate across knowledge areas, collect data, and remove impediments — NOT to micromanage individual tasks.\n\n| Coordinator (Correct PM Role) | Micromanager (Wrong Approach) |\n|-------------------------------|-------------------------------|\n| \"Electrical must finish before oven installation\" | \"Run the conduit along this exact route\" |\n| \"Javier, what's your status? When will you be ready?\" | \"Are you sure you need 60-amp service?\" |\n| \"I'll expedite the city permit\" | \"Use brand X wire, install outlets here\" |\n| \"Let's align on the revised timeline\" | \"Work faster to meet the deadline\" |\n\n**Why Coordination Wins:**\n- **Team expertise utilized** — Javier knows electrical better than Alex\n- **Parallel work enabled** — Teams self-organize within their domains\n- **PM focuses on integration** — Dependencies, changes, and data flow\n- **No bottleneck** — Decisions don't all funnel through the PM"
+          },
+          {
+            "id": "tab5",
+            "title": "Common Execution Mistakes",
+            "subtitle": "",
+            "content": "**Mistake 1: \"Execution will go exactly according to plan\"**\nPlans are baselines, not scripts. Expect surprises. Collect data. Submit change requests when reality diverges.\n\n**Mistake 2: \"The PM does all the work\"**\nThe PM would be a bottleneck. The PM coordinates; the team executes in their expertise areas.\n\n**Mistake 3: \"Collect data only when problems occur\"**\nYou miss early warning signs. Systematic, regular data collection catches issues before they become crises.\n\n**Mistake 4: \"Ignore small changes\"**\nSmall changes accumulate into scope creep. Assess the cumulative impact of every change, no matter how minor.\n\n**Mistake 5: \"Execute whatever comes up\"**\nCreates scope creep. Execute THE PLAN with approved changes only — not every request that walks through the door."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Software Sprint: Coordinate the Blockers",
+        "scenario": {
+          "title": "Software Sprint: Coordinate the Blockers",
+          "description": "You've been reassigned from Savory & Co.'s construction project to a software development project mid-sprint. The team lead briefs you: **Current Sprint Status:** **Total Impact:** +3 days delay (database schema +1 day, testing tool +2 days)",
+          "images": [
+            {
+              "src": "/images/C1L3_comic_transfer.webp",
+              "alt": "Software sprint coordination scenario"
+            }
+          ],
+          "details": [
+            "**Backend Dev:** \"API completed, but we need a new auth_tokens database table. Adds 1 day.\"",
+            "**Frontend Dev:** \"UI mockups approved. Starting implementation today.\"",
+            "**QA:** \"Testing tool license expired. Procurement is processing — expect a 2-day delay.\"",
+            "**Tech Writer:** \"I'm blocked. I need API docs from Backend before I can start user documentation.\""
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "multi_select",
+            "question": "Which team members do you need status updates from to collect work performance data? (Select 4)",
+            "points": 100,
+            "scenario_name": "Collect Work Performance Data",
+            "situation": "As the PM coordinating execution, your first job is to collect work performance data from the team. You need status updates from everyone actually executing work packages — not stakeholders outside the sprint.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Backend Dev (API status + database schema issue)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Frontend Dev (UI implementation status)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "QA (Testing tool license issue)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Tech Writer (Blocked on API docs)",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "CEO (Not directly involved in sprint work)",
+                "correct": false
+              }
+            ],
+            "minSelections": 4,
+            "maxSelections": 4,
+            "explanation": "Work performance DATA comes from everyone actually executing work packages: Backend (API + schema), Frontend (UI implementation), QA (testing readiness), and Tech Writer (documentation status — even though she's blocked, her status IS data). The CEO isn't executing sprint work — status from non-executing stakeholders isn't work performance data.",
+            "correctFeedback": {
+              "text": "Work performance DATA comes from everyone actually executing work packages: Backend (API + schema), Frontend (UI implementation), QA (testing readiness), and Tech Writer (documentation status — even though she's blocked, her status IS data). The CEO isn't executing sprint work — status from non-executing stakeholders isn't work performance data.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I need status from everyone doing the work: Backend, Frontend, QA, and Tech Writer. That's my work performance DATA — raw observations I'll analyze later during monitoring."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Work performance DATA comes from people actually executing work packages. Ask: Who is doing sprint work? Collect status from them. The CEO isn't writing code or running tests.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Work performance DATA comes from people actually executing work packages. Ask: Who is doing sprint work? Collect status from them. The CEO isn't writing code or running tests."
+            },
+            "retryHint": "Collect data from everyone DOING the work in this sprint. The CEO may be a stakeholder, but he isn't executing any work packages."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "How should you coordinate this dependency as PM?",
+            "points": 100,
+            "scenario_name": "Coordinate the Blocker",
+            "situation": "You've identified a dependency blocker: Tech Writer is waiting for API documentation from Backend Dev. Backend finished the API code but hasn't written the docs yet. Tech Writer can't start user documentation until she has the API reference.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Tell Tech Writer to start writing documentation without the API docs",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Facilitate the handoff: ensure Backend provides API docs to Tech Writer on a clear timeline",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Tell Backend Dev to work faster on the documentation",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Wait 2 days and check back to see if it resolves itself",
+                "correct": false
+              }
+            ],
+            "explanation": "The PM facilitates handoffs and removes blockers — without micromanaging HOW the work gets done. \"Backend, when can you get API docs to Tech Writer? What do you need from me to make that happen?\" This coordinates the dependency while respecting Backend's expertise.",
+            "correctFeedback": {
+              "text": "The PM facilitates handoffs and removes blockers — without micromanaging HOW the work gets done. \"Backend, when can you get API docs to Tech Writer? What do you need from me to make that happen?\" This coordinates the dependency while respecting Backend's expertise.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I don't tell Backend HOW to write docs — I facilitate the handoff. 'When can you get API docs to Tech Writer? Let me help remove any blockers.' That's coordination."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Your role is to make the handoff happen smoothly. Connect the people, clarify the timing, remove obstacles. Don't dictate HOW they work, skip quality steps, or wait passively.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Your role is to make the handoff happen smoothly. Connect the people, clarify the timing, remove obstacles. Don't dictate HOW they work, skip quality steps, or wait passively."
+            },
+            "retryHint": "The PM coordinates handoffs and removes blockers. Connect the right people, establish timelines, and clear obstacles — without dictating HOW experts do their work."
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "What is the correct integration approach?",
+            "points": 100,
+            "scenario_name": "Integrate the Changes",
+            "situation": "You've collected the data: the sprint is facing a +3 day delay (database schema change adds 1 day, testing tool license adds 2 days). The original sprint deadline is Friday. These delays push completion to the following Wednesday.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Push the team to work faster to stay on the original Friday schedule",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Work with the Product Owner to decide: extend the sprint 3 days OR descope features to meet Friday",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Submit a change request without consulting the Product Owner",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Ignore the delay and hope the team can absorb it",
+                "correct": false
+              }
+            ],
+            "explanation": "Scope and schedule tradeoffs require Product Owner input. The PM presents options with data: \"We're 3 days over. Option A: extend to Wednesday. Option B: descope feature X to hit Friday.\" The PO decides. The PM doesn't push for impossible timelines, make unilateral scope decisions, or ignore documented delays.",
+            "correctFeedback": {
+              "text": "Scope and schedule tradeoffs require Product Owner input. The PM presents options with data: \"We're 3 days over. Option A: extend to Wednesday. Option B: descope feature X to hit Friday.\" The PO decides. The PM doesn't push for impossible timelines, make unilateral scope decisions, or ignore documented delays.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I can't make scope/schedule tradeoffs alone. The Product Owner decides: extend the sprint or descope. My job is to present the options backed by data."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Integration means coordinating across all aspects — including stakeholders. The Product Owner owns scope prioritization. Present options with data, then facilitate the decision.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Integration means coordinating across all aspects — including stakeholders. The Product Owner owns scope prioritization. Present options with data, then facilitate the decision."
+            },
+            "retryHint": "The PM presents options with data. The Product Owner decides on scope/schedule tradeoffs. Don't push impossible timelines, act unilaterally, or ignore documented impacts."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that Direct & Manage Project Work is THE execution process — where the project management plan becomes real deliverables. The PM coordinates dependencies, collects work performance data, integrates changes through formal change control, and enables the team to execute in their areas of expertise. Coordination beats micromanagement every time.",
+        "key_takeaways": [
+          "THE Execution Process: Direct & Manage is where the PM plan becomes reality — deliverables created, work completed, changes surfaced",
+          "4 Key Outputs: Deliverables, work performance data, change requests, and document updates — know all four for the PMP exam",
+          "DATA vs INFORMATION: DATA = raw observations collected during execution. INFORMATION = analyzed comparisons to baselines created during monitoring. Direct & Manage produces DATA, not INFORMATION",
+          "Coordinate, Don't Micromanage: The PM manages dependencies and integration — the team executes in their domains of expertise. Coordination enables parallel work; micromanagement creates bottlenecks",
+          "Execution Reveals Changes: Surprises always emerge during execution. Submit formal change requests through Integrated Change Control — never ignore or unilaterally approve baseline changes"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L4",
+          "title": "Managing Project Knowledge",
+          "description": "Execution generates knowledge — lessons learned, expert judgment, tacit and explicit knowledge. How do you capture, share, and reuse this knowledge so future projects benefit from today's experiences?"
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "This team member's report is an example of:",
+            "points": 50,
+            "scenario_name": "Work Performance Data Recognition",
+            "situation": "During project execution, a team member reports to the PM: \"We completed 40% of the testing work package.\" The PM records this observation and continues collecting status from other team members.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Work performance data",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Work performance information",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Work performance report",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Expert judgment",
+                "correct": false
+              }
+            ],
+            "explanation": "\"40% complete\" is a raw observation — a percentage with no comparison to any baseline. It's work performance DATA, collected during execution (Direct & Manage). To become INFORMATION, it would need analysis: \"40% complete vs. 50% planned = 10% behind schedule.\" Reports are formatted communications of INFORMATION to stakeholders. Expert judgment is specialized knowledge applied to decisions.",
+            "correctFeedback": {
+              "text": "\"40% complete\" is a raw observation — a percentage with no comparison to any baseline. It's work performance DATA, collected during execution (Direct & Manage). To become INFORMATION, it would need analysis: \"40% complete vs. 50% planned = 10% behind schedule.\" Reports are formatted communications of INFORMATION to stakeholders. Expert judgment is specialized knowledge applied to decisions.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "'40% complete' is DATA — a raw observation. To become INFORMATION, it needs baseline comparison: '40% complete vs. 50% planned = 10% behind schedule.' Know the difference."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask: Is this comparing to a baseline? '40% complete' is just a raw fact. It becomes INFORMATION only when compared to the plan: '10% behind schedule.'",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask: Is this comparing to a baseline? '40% complete' is just a raw fact. It becomes INFORMATION only when compared to the plan: '10% behind schedule.'"
+            },
+            "retryHint": "DATA = raw observation with no baseline comparison. INFORMATION = analyzed comparison to baselines. Which one is \"40% complete\"?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the PM do?",
+            "points": 50,
+            "scenario_name": "PM Role During Execution",
+            "situation": "A contractor approaches the PM with a technical question about how to route electrical conduit through the ceiling space. The contractor has 15 years of experience and has done similar installations dozens of times. The PM has no electrical expertise.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Provide detailed instructions on the exact routing path",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Defer to the contractor's expertise and ensure coordination with other teams",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Escalate the technical question to the project sponsor",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Stop all work until the PM researches the optimal routing",
+                "correct": false
+              }
+            ],
+            "explanation": "The PM coordinates — the team executes. A 15-year electrical contractor knows conduit routing far better than the PM. The PM's value is ensuring the routing coordinates with HVAC, plumbing, and other teams. Technical decisions belong to technical experts; integration decisions belong to the PM.",
+            "correctFeedback": {
+              "text": "The PM coordinates — the team executes. A 15-year electrical contractor knows conduit routing far better than the PM. The PM's value is ensuring the routing coordinates with HVAC, plumbing, and other teams. Technical decisions belong to technical experts; integration decisions belong to the PM.",
+              "character": "Alex Mitchell",
+              "characterQuote": "The contractor knows electrical routing better than I ever will. My job is to make sure his work coordinates with HVAC, plumbing, and the inspection schedule — not to dictate technical details."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If the PM makes every technical decision, they become a bottleneck. Trust the experts for technical work. The PM's role is coordination and integration across teams.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "If the PM makes every technical decision, they become a bottleneck. Trust the experts for technical work. The PM's role is coordination and integration across teams."
+            },
+            "retryHint": "The PM coordinates across teams. Technical experts make technical decisions. Who knows conduit routing better — the 15-year contractor or the PM?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the PM's FIRST action?",
+            "points": 50,
+            "scenario_name": "Execution Issue Response",
+            "situation": "During execution, an unexpected issue emerges: the HVAC system requires a ventilation upgrade that will cost $15,000 additional budget and add 5 extra days to the schedule. Both exceed the PM's authority thresholds. The team is waiting for direction.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Immediately approve the additional budget and time",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Tell the team to work within the original budget and schedule",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Document the issue and submit a change request through Integrated Change Control",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Cancel the project due to the budget overrun",
+                "correct": false
+              }
+            ],
+            "explanation": "Changes to scope, schedule, or cost baselines that exceed the PM's authority require formal change control. The PM documents the issue, assesses the impact, and submits a change request for evaluation and approval. The PM doesn't approve changes beyond their authority, deny reality, or make extreme decisions without proper process.",
+            "correctFeedback": {
+              "text": "Changes to scope, schedule, or cost baselines that exceed the PM's authority require formal change control. The PM documents the issue, assesses the impact, and submits a change request for evaluation and approval. The PM doesn't approve changes beyond their authority, deny reality, or make extreme decisions without proper process.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Correct process: Document the issue, submit the change request, get approval through Integrated Change Control, then implement. That's the sequence."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Changes to baselines go through formal change control. Don't approve beyond your authority, deny the reality of the issue, or jump to project cancellation.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Changes to baselines go through formal change control. Don't approve beyond your authority, deny the reality of the issue, or jump to project cancellation."
+            },
+            "retryHint": "When execution reveals changes that exceed your authority, the process is: Document, Submit change request, Get approval, then Implement. What's the first step?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which of the following is NOT an output of Direct & Manage Project Work?",
+            "points": 50,
+            "scenario_name": "Identify the Non-Output",
+            "situation": "A PMP exam question asks you to identify the outputs of Direct & Manage Project Work. You recall four key outputs from studying, but the exam includes a tricky distractor.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Deliverables",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Work performance data",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Change requests",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Work performance reports",
+                "correct": true
+              }
+            ],
+            "explanation": "Direct & Manage produces four outputs: deliverables, work performance data, change requests, and document updates. Work performance REPORTS are outputs of Monitor & Control Project Work, not Direct & Manage. The flow is: Execution produces DATA, Monitoring analyzes DATA into INFORMATION, then INFORMATION is formatted into REPORTS for stakeholders.",
+            "correctFeedback": {
+              "text": "Direct & Manage produces four outputs: deliverables, work performance data, change requests, and document updates. Work performance REPORTS are outputs of Monitor & Control Project Work, not Direct & Manage. The flow is: Execution produces DATA, Monitoring analyzes DATA into INFORMATION, then INFORMATION is formatted into REPORTS for stakeholders.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Direct & Manage outputs DATA (raw). Monitor & Control analyzes DATA into INFORMATION, then creates REPORTS. Reports are communication outputs from monitoring — not execution outputs."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember the output flow: DATA (execution) then INFORMATION (monitoring) then REPORTS (monitoring). Direct & Manage produces the first step — DATA — not the last step — REPORTS.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Remember the output flow: DATA (execution) then INFORMATION (monitoring) then REPORTS (monitoring). Direct & Manage produces the first step — DATA — not the last step — REPORTS."
+            },
+            "retryHint": "Direct & Manage outputs: deliverables, data, change requests, document updates. REPORTS come from monitoring, not execution. DATA flows into INFORMATION flows into REPORTS."
+          }
+        ]
+      }
+    }
+  ]
+}

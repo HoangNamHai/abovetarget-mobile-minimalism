@@ -1,0 +1,633 @@
+{
+  "lessonId": "C1L5",
+  "lessonTitle": "Monitor & Control Project Work",
+  "courseId": "C1",
+  "courseName": "Integration Management",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish between monitoring (measuring performance against baselines) and controlling (taking corrective/preventive action)",
+    "Calculate schedule variance, cost variance, and scope variance using Actual vs Baseline comparisons",
+    "Distinguish corrective actions (fix current deviations) from preventive actions (prevent future problems)",
+    "Apply tolerance thresholds to determine when a variance requires action vs monitoring",
+    "Understand the DATA to INFORMATION to REPORTS flow in the Monitoring & Controlling process group"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "sam_rodriguez",
+    "javier_torres",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Three Variances, One Morning: Which Ones Actually Need Fixing?",
+        "intro": "You're **Alex Mitchell**, managing the Riverside Plaza restaurant build-out for Savory & Co. It's Week 10 of a 14-week project. You've been collecting work performance data from execution — raw numbers on electrical progress, HVAC spending, and staffing counts. Carlos storms in demanding a simple answer: \"Are we on track or not?!\" But raw data doesn't answer that question. You need to ANALYZE it against baselines, calculate variances, and figure out which ones actually require action — and which ones are noise.",
+        "failure_cards": [
+          {
+            "id": "the_blind_spot",
+            "icon": "📋",
+            "title": "The Blind Spot",
+            "summary": "Raw data without analysis creates a dangerous illusion of control",
+            "image": "/images/C1L5_comic_blind_spot.webp",
+            "details": "Alex has dashboards showing \"80% electrical complete,\" \"$52K HVAC spent,\" and \"11 staff hired.\" But none of these numbers mean anything without baselines. Carlos sees \"80% complete\" and assumes everything is fine. Sam sees \"$52K spent\" and panics. Javier sees \"11 hired\" and shrugs. Same data, three different interpretations — because nobody has compared actual to planned. Data without analysis is just noise. The project could be failing, and nobody would know until it's too late."
+          },
+          {
+            "id": "the_wrong_action",
+            "icon": "⚠️",
+            "title": "The Wrong Action",
+            "summary": "Reacting to every variance wastes resources and creates new problems",
+            "image": "/images/C1L5_comic_wrong_action.webp",
+            "details": "When Alex finally analyzes the data — 10% behind on electrical, $7K over on HVAC, 4 people short on staffing — Carlos explodes: \"Fix ALL of it! We're behind on everything!\" He wants to hire emergency electricians, renegotiate the HVAC contract, and rush-hire all remaining staff in one week. But not every variance needs the same response. Overreacting to small variances burns contingency reserves, overwhelms the team, and can actually cause NEW problems. The cure becomes worse than the disease."
+          },
+          {
+            "id": "the_tolerance_threshold",
+            "icon": "💡",
+            "title": "The Tolerance Threshold",
+            "summary": "A systematic framework separates signal from noise",
+            "image": "/images/C1L5_comic_threshold.webp",
+            "details": "Dr. Foster calms the room with a whiteboard diagram: three zones — GREEN (within tolerance, monitor), YELLOW (approaching threshold, watch closely), RED (exceeds tolerance, take action). She explains that electrical is on the critical path (RED — any delay pushes the opening date). HVAC's $7K overrun is only 0.6% of the $1.2M budget (GREEN — absorb from contingency). Staffing can operate soft opening with 11 people (GREEN — hire remaining before grand opening). Not all variances are equal. Tolerance thresholds tell you which ones demand immediate action."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "I wanted Alex to fix everything at once. But Dr. Foster showed me — only electrical is critical. The rest can wait. Prioritize by impact, not by panic."
+        },
+        "learning_hook": "**Not all variances require action.** Monitoring measures performance against baselines. Controlling takes corrective or preventive action. The key skill is knowing WHEN to act — and that requires tolerance thresholds, not gut reactions."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "analyze_the_variances_and_decide",
+        "title": "Analyze the Variances and Decide",
+        "description": "Dr. Foster guides you through variance analysis. \"First, transform DATA into INFORMATION by comparing actuals to baselines. Then assess each variance against tolerance thresholds. Only THEN decide on action.\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "multi_select",
+            "question": "Select ALL correct variance statements.",
+            "points": 150,
+            "scenario_name": "Calculate the Variances",
+            "situation": "Riverside Plaza is at Week 10 of 14. Alex has collected raw work performance data from execution. Now it's time to analyze that data against baselines. Here are the numbers:",
+            "options": [
+              {
+                "id": "A",
+                "text": "Schedule Variance (Electrical): 10% behind baseline — 80% actual vs 90% planned",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Schedule Variance (Electrical): 10% ahead of schedule — performing better than planned",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Cost Variance (HVAC): $7,000 over budget — $52K actual vs $45K planned",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Cost Variance (HVAC): $7,000 under budget — spending less than planned",
+                "correct": false
+              },
+              {
+                "id": "E",
+                "text": "Scope Variance (Staffing): 4 people short — 11 actual vs 15 planned",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Scope Variance (Staffing): 4 extra people hired — exceeded the staffing plan",
+                "correct": false
+              }
+            ],
+            "explanation": "Variance = Actual minus Baseline. Electrical: 80% - 90% = -10% (behind schedule). HVAC: $52K - $45K = +$7K (over budget). Staffing: 11 - 15 = -4 (short of plan). All three variances are unfavorable — actual performance is worse than planned in every area.",
+            "correctFeedback": {
+              "text": "Variance = Actual minus Baseline. Electrical: 80% - 90% = -10% (behind schedule). HVAC: $52K - $45K = +$7K (over budget). Staffing: 11 - 15 = -4 (short of plan). All three variances are unfavorable — actual performance is worse than planned in every area.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect variance calculations. Schedule is 10% behind, cost is $7K over, and staffing is 4 short. All unfavorable. Now the real question: which ones need immediate action?"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember the formula: Actual minus Baseline. If actual is LESS than planned for schedule or scope, that's behind/short (bad). If actual is MORE than planned for cost, that's over budget (bad).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Remember the formula: Actual minus Baseline. If actual is LESS than planned for schedule or scope, that's behind/short (bad). If actual is MORE than planned for cost, that's over budget (bad)."
+            },
+            "retryHint": "Calculate each one: 80% minus 90% = -10% (behind). $52K minus $45K = +$7K (over). 11 minus 15 = -4 (short). All three are unfavorable results."
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Drag each action to the correct category: CORRECTIVE (fix current) or PREVENTIVE (prevent future).",
+            "points": 150,
+            "scenario_name": "Corrective vs Preventive Actions",
+            "situation": "Alex and Dr. Foster have identified six proposed actions to address the variances. Before implementing them, each action must be classified correctly — because corrective actions fix CURRENT problems (bring performance back to baseline) while preventive actions prevent FUTURE problems (avoid new variances from occurring).",
+            "chips": [
+              {
+                "id": "add_2_electricians_to_catch_up_to_the_90_baseline",
+                "label": "Add 2 electricians to catch up to the 90% baseline",
+                "correctZone": "corrective"
+              },
+              {
+                "id": "review_hvac_contractor_estimates_for_all_remaining_work_packages",
+                "label": "Review HVAC contractor estimates for all remaining work packages",
+                "correctZone": "preventive"
+              },
+              {
+                "id": "hire_2_line_cooks_and_2_servers_to_meet_the_staffing_plan",
+                "label": "Hire 2 line cooks and 2 servers to meet the staffing plan",
+                "correctZone": "corrective"
+              },
+              {
+                "id": "establish_weekly_cost_reviews_to_catch_overruns_early",
+                "label": "Establish weekly cost reviews to catch overruns early",
+                "correctZone": "preventive"
+              },
+              {
+                "id": "use_contingency_reserve_to_absorb_the_7k_hvac_overrun",
+                "label": "Use contingency reserve to absorb the $7K HVAC overrun",
+                "correctZone": "corrective"
+              },
+              {
+                "id": "create_an_electrical_inspection_checklist_for_future_work_packages",
+                "label": "Create an electrical inspection checklist for future work packages",
+                "correctZone": "preventive"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "corrective",
+                "label": "CORRECTIVE",
+                "detail": "Fixes the CURRENT 10% schedule delay on electrical work"
+              },
+              {
+                "id": "preventive",
+                "label": "PREVENTIVE",
+                "detail": "Prevents FUTURE cost overruns by catching estimate errors before they happen"
+              }
+            ],
+            "explanation": "Corrective actions address problems that ALREADY EXIST — the delay has happened, the overrun has occurred, the gap is real. Preventive actions address problems that HAVEN'T HAPPENED YET — reviews, checklists, and monitoring processes that reduce the likelihood of future variances. Both types are submitted as change requests through the CCB.",
+            "correctFeedback": {
+              "text": "Corrective actions address problems that ALREADY EXIST — the delay has happened, the overrun has occurred, the gap is real. Preventive actions address problems that HAVEN'T HAPPENED YET — reviews, checklists, and monitoring processes that reduce the likelihood of future variances. Both types are submitted as change requests through the CCB.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent classification. Corrective actions fix today's problems: adding electricians, hiring staff, using reserves. Preventive actions avoid tomorrow's: cost reviews, estimate checks, inspection checklists. You need BOTH."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself one question for each action: Has the problem already occurred, or am I trying to stop something from happening in the future? Current problem = corrective. Future risk = preventive.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself one question for each action: Has the problem already occurred, or am I trying to stop something from happening in the future? Current problem = corrective. Future risk = preventive."
+            },
+            "retryHint": "Look for time cues. \"Catch up,\" \"meet the plan,\" and \"absorb\" fix existing gaps (corrective). \"For future,\" \"to catch early,\" and \"remaining work\" prevent new problems (preventive)."
+          },
+          {
+            "q_id": "q3",
+            "type": "multi_select",
+            "question": "Select ALL correct action decisions based on tolerance thresholds.",
+            "points": 200,
+            "scenario_name": "Tolerance Threshold Decision",
+            "situation": "Now Alex must decide which variances EXCEED tolerance and require immediate action. Dr. Foster provides the tolerance framework:",
+            "options": [
+              {
+                "id": "A",
+                "text": "Electrical (10% behind, critical path) — TAKE ACTION: Add electricians to recover schedule",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Electrical (10% behind, critical path) — MONITOR ONLY: 10% is a small variance, no action needed",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "HVAC ($7K over, 0.6% of budget) — TAKE ACTION: Cut HVAC costs immediately to eliminate overrun",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "HVAC ($7K over, 0.6% of budget) — MONITOR: Absorb from contingency, continue tracking",
+                "correct": true
+              },
+              {
+                "id": "E",
+                "text": "Staffing (4 short) — TAKE ACTION: Rush-hire all 4 positions this week before soft opening",
+                "correct": false
+              },
+              {
+                "id": "F",
+                "text": "Staffing (4 short) — MONITOR: Operate soft opening with 11, hire remaining before grand opening",
+                "correct": true
+              }
+            ],
+            "explanation": "Only electrical exceeds tolerance — it's on the critical path, and any delay directly pushes the opening date. HVAC's $7K overrun is just 0.6% of the $1.2M budget, well within the 5% threshold — absorb from contingency and monitor. Staffing is 4 short, but 11 people can run a soft opening — hire the remaining 4 before the grand opening, not in a panic rush. Prioritize by impact, not by panic.",
+            "correctFeedback": {
+              "text": "Only electrical exceeds tolerance — it's on the critical path, and any delay directly pushes the opening date. HVAC's $7K overrun is just 0.6% of the $1.2M budget, well within the 5% threshold — absorb from contingency and monitor. Staffing is 4 short, but 11 people can run a soft opening — hire the remaining 4 before the grand opening, not in a panic rush. Prioritize by impact, not by panic.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I wanted everything fixed immediately. But Alex showed me: electrical is the only critical one. HVAC is a rounding error on a $1.2M budget. And we can open with 11 staff. Prioritize by impact!"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Not all variances need the same response. Check each one: Does it impact the critical path? Does it exceed the tolerance threshold? If neither, monitor it — don't waste resources on problems that can wait.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Not all variances need the same response. Check each one: Does it impact the critical path? Does it exceed the tolerance threshold? If neither, monitor it — don't waste resources on problems that can wait."
+            },
+            "retryHint": "Critical path = zero tolerance, always act. Cost under 5% of budget = within tolerance, use contingency. Operations can continue with current staff = defer hiring to a logical timeline."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Monitor & Control Toolkit",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Monitor vs Control",
+            "subtitle": "",
+            "content": "The **Monitor & Control Project Work** process (PMBOK Section 4.5) has TWO distinct activities that work together:\n\n**Monitoring** — Measuring and tracking performance against baselines\n- Collect work performance data from execution\n- Compare actuals to baselines (schedule, cost, scope)\n- Calculate variances and identify trends\n- Example: \"Electrical is 10% behind the schedule baseline\"\n\n**Controlling** — Taking corrective or preventive action when variances exceed tolerance\n- Implement corrective actions to fix current deviations\n- Implement preventive actions to avoid future problems\n- Submit change requests through the CCB\n- Example: \"Add 2 electricians to recover the 10% schedule delay\"\n\n**Key Insight:** Monitoring without controlling = measurement without action (you know you're sinking but don't plug the hole). Controlling without monitoring = action without information (you're guessing blindly at what to fix). You need BOTH working together continuously throughout the project."
+          },
+          {
+            "id": "tab2",
+            "title": "Variance Analysis",
+            "subtitle": "",
+            "content": "**Variance = Actual - Baseline.** This simple formula is the foundation of all monitoring and controlling. Three types of variance appear on the PMP exam:\n\n**Schedule Variance (SV)** — Measures time performance\n- Formula: Actual % Complete minus Baseline % Complete\n- Negative = behind schedule (actual progress less than planned)\n- Example: 80% - 90% = -10% (behind)\n\n**Cost Variance (CV)** — Measures budget performance\n- Formula: Actual Cost minus Budgeted Cost\n- Positive = over budget (spent more than planned)\n- Example: $52K - $45K = +$7K (over budget)\n\n**Scope Variance** — Measures deliverable completion\n- Formula: Actual Deliverables minus Planned Deliverables\n- Negative = under-delivered (fewer items than planned)\n- Example: 11 - 15 = -4 (short of plan)\n\n**Important:** Variance tells you HOW FAR you deviated. Tolerance thresholds tell you WHETHER to act.",
+            "diagram": {
+              "image": "/images/C1L5_diagram_variance_analysis.webp",
+              "alt": "Variance Analysis Framework"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Corrective vs Preventive Actions",
+            "subtitle": "",
+            "content": "Both action types are change requests processed through the Change Control Board (CCB):\n\n**Corrective Actions** — Fix CURRENT deviations from baseline\n- The problem already exists and you're bringing performance back to plan\n- \"We're 10% behind — add resources to catch up\"\n- \"We're $7K over — use contingency reserve\"\n- \"We're 4 staff short — hire to meet the plan\"\n\n**Preventive Actions** — Prevent FUTURE problems from occurring\n- The problem hasn't happened yet and you're reducing the risk\n- \"Review remaining contractor estimates to avoid future overruns\"\n- \"Establish weekly cost reviews to catch variances early\"\n- \"Create inspection checklists to prevent future rework\"\n\n**PMP Exam Tip:** The exam frequently tests whether you can distinguish corrective from preventive. Ask: \"Has this problem already occurred?\" If yes = corrective. If no = preventive."
+          },
+          {
+            "id": "tab4",
+            "title": "Tolerance Thresholds",
+            "subtitle": "",
+            "content": "**Not all variances require action.** The decision framework uses tolerance thresholds to separate signal from noise:\n\n**Step 1 — Does it impact the critical path?**\n- YES: Corrective action required (zero tolerance for critical path delays)\n- NO: Continue to Step 2\n\n**Step 2 — Does the variance exceed the tolerance threshold?**\n- YES: Corrective action required (variance is too large to absorb)\n- NO: Monitor and continue (variance is within acceptable range)\n\n**Step 3 — Is there a trend suggesting future problems?**\n- YES: Preventive action recommended (get ahead of the issue)\n- NO: Continue monitoring at current frequency\n\n**Common Thresholds:**\n- Schedule: Critical path = 0 tolerance; non-critical = +/- 5 days float\n- Cost: >5% of total budget = action required; <5% = use contingency\n- Scope: Required deliverables = 0 tolerance; nice-to-have = flexible"
+          },
+          {
+            "id": "tab5",
+            "title": "DATA to INFORMATION to REPORTS",
+            "subtitle": "",
+            "content": "The Monitoring & Controlling process group transforms raw observations into stakeholder communications through a three-stage pipeline:\n\n**Stage 1 — Work Performance DATA** (created during Execution)\n- Raw observations and measurements: \"80% complete,\" \"$52K spent,\" \"11 hired\"\n- No analysis, no context, no comparison to baselines\n- Created by: Direct and Manage Project Work\n\n**Stage 2 — Work Performance INFORMATION** (created during Monitoring)\n- Analyzed data compared against baselines: \"10% behind,\" \"$7K over,\" \"4 short\"\n- Includes variance calculations, trend analysis, and threshold assessments\n- Created by: Monitor and Control Project Work\n\n**Stage 3 — Work Performance REPORTS** (distributed to stakeholders)\n- Packaged information with recommendations: status reports, dashboards, forecasts\n- Includes current status, variance analysis, forecasts, and recommended actions\n- Used by: stakeholders for decision-making\n\n**PMP Exam Tip:** The exam tests which process creates DATA (Execution), which creates INFORMATION (Monitoring), and which uses REPORTS (stakeholders). This is a frequently tested concept."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "A Software Project in Trouble",
+        "scenario": {
+          "title": "A Software Project in Trouble",
+          "description": "Alex is mentoring a colleague managing a software development project. The colleague brings performance data and asks for help applying the Monitor & Control framework: **Work Performance Data at Month 4:** **Tolerance Thresholds:**",
+          "images": [
+            {
+              "src": "/images/C1L5_comic_transfer.webp",
+              "alt": "Software project variance scenario"
+            }
+          ],
+          "details": [
+            "Scope: 12 features planned over 6 months, $600K budget",
+            "Current status: Month 4 of 6",
+            "Features: 6 completed (Planned: 8 by Month 4)",
+            "Cost: $420K spent (Planned: $400K)",
+            "Quality: 15 defects found (Threshold: 10 or fewer)",
+            "Schedule: Features are on the critical milestone path — zero tolerance",
+            "Cost: Variances > 5% of budget require action",
+            "Quality: More than 10 defects requires action"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "multi_select",
+            "question": "Select ALL variances that EXCEED tolerance and require corrective action.",
+            "points": 150,
+            "scenario_name": "Identify Which Variances Exceed Tolerance",
+            "situation": "Alex's colleague has calculated the variances: Schedule is -2 features (25% behind), Cost is +$20K (5% over budget, right at the threshold), and Quality is +5 defects (50% above the 10-defect threshold). Now the colleague must determine which variances exceed tolerance and require corrective action.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Schedule: 2 features behind on a critical milestone — exceeds zero-tolerance threshold",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Cost: $20K over budget (exactly 5%) — at the action threshold, requires attention",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Quality: 15 defects vs 10 threshold — 50% over the acceptable limit",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "None of the variances exceed tolerance — continue monitoring all three",
+                "correct": false
+              }
+            ],
+            "explanation": "Unlike the Riverside Plaza scenario where only electrical needed action, this software project has ALL THREE variances exceeding tolerance. Schedule impacts a critical milestone (zero tolerance). Cost is at exactly 5% (the action threshold — borderline cases typically require action). Quality exceeds the defect threshold by 50%. Different projects have different tolerance profiles — the same framework produces different results depending on the specific thresholds and context.",
+            "correctFeedback": {
+              "text": "Unlike the Riverside Plaza scenario where only electrical needed action, this software project has ALL THREE variances exceeding tolerance. Schedule impacts a critical milestone (zero tolerance). Cost is at exactly 5% (the action threshold — borderline cases typically require action). Quality exceeds the defect threshold by 50%. Different projects have different tolerance profiles — the same framework produces different results depending on the specific thresholds and context.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Unlike Riverside Plaza where only electrical was critical, here ALL three exceed tolerance. Same framework, different situation, different result. That's the power of systematic analysis."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Check each variance against its specific threshold. Schedule: is it on the critical path? Cost: is it above 5%? Quality: is it above 10 defects? Compare carefully.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Check each variance against its specific threshold. Schedule: is it on the critical path? Cost: is it above 5%? Quality: is it above 10 defects? Compare carefully."
+            },
+            "retryHint": "Features are on a critical milestone (zero tolerance for delay). Cost is at exactly 5% of budget (the action threshold). Defects are at 15 vs a limit of 10. How many of these exceed their thresholds?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Which corrective action approach BEST addresses all three variances?",
+            "points": 150,
+            "scenario_name": "Recommend the Corrective Action Plan",
+            "situation": "All three variances exceed tolerance in this software project. The colleague asks Alex: \"What's the best integrated response? I can't just throw resources at everything.\" Alex needs to recommend a balanced approach that addresses each variance with an appropriate action — not overreacting or underreacting.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Add developers for schedule recovery, implement code reviews for quality, request budget increase for cost",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Cancel 2 features to get back on schedule, ignore the defect count, absorb the cost overrun from contingency",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Continue monitoring all three and report status to the sponsor next month",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Replace the entire development team to reset velocity and quality",
+                "correct": false
+              }
+            ],
+            "explanation": "Each variance exceeding tolerance needs its own targeted corrective action. Schedule: add developers to recover the 2-feature gap (resource-based recovery). Quality: implement code reviews to reduce defect rate (process improvement). Cost: request a formal budget increase since the overrun exceeds the 5% threshold (financial corrective action). This integrated approach addresses all three issues proportionally without overreacting (replacing the team) or underreacting (monitoring and waiting).",
+            "correctFeedback": {
+              "text": "Each variance exceeding tolerance needs its own targeted corrective action. Schedule: add developers to recover the 2-feature gap (resource-based recovery). Quality: implement code reviews to reduce defect rate (process improvement). Cost: request a formal budget increase since the overrun exceeds the 5% threshold (financial corrective action). This integrated approach addresses all three issues proportionally without overreacting (replacing the team) or underreacting (monitoring and waiting).",
+              "character": "Alex Mitchell",
+              "characterQuote": "Each variance gets a targeted response. Schedule: more resources. Quality: better process. Cost: formal budget request. Address each one specifically — don't use a sledgehammer where a scalpel works."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When all three variances exceed tolerance, you can't ignore any of them. But you also can't panic. Each one needs a proportional response — not too much, not too little.",
+              "character": "Alex Mitchell",
+              "characterQuote": "When all three variances exceed tolerance, you can't ignore any of them. But you also can't panic. Each one needs a proportional response — not too much, not too little."
+            },
+            "retryHint": "Each variance needs a proportional response: resources for schedule, process improvement for quality, and formal request for cost. Which option addresses all three specifically?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to transform raw work performance DATA into actionable INFORMATION through variance analysis, and to use tolerance thresholds to determine which variances require corrective action versus continued monitoring. The key insight: not every deviation from plan is a crisis — but every critical path delay and threshold breach demands a response.",
+        "key_takeaways": [
+          "Monitor + Control: Monitoring measures performance against baselines. Controlling takes corrective or preventive action. Both are required — one without the other fails.",
+          "Variance Analysis: Actual minus Baseline = Variance. Negative schedule = behind. Positive cost = over budget. Negative scope = under-delivered.",
+          "Corrective vs Preventive: Corrective actions fix CURRENT deviations (problem already exists). Preventive actions prevent FUTURE problems (problem hasn't occurred yet). Both go through the CCB.",
+          "Tolerance Thresholds: Not all variances need action. Critical path = zero tolerance. Cost under 5% = use contingency. Assess each variance against its specific threshold before acting.",
+          "DATA to INFORMATION: Execution creates DATA (raw observations). Monitoring transforms DATA into INFORMATION (analyzed against baselines). Reports communicate INFORMATION to stakeholders."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L6",
+          "title": "Integrated Change Control",
+          "description": "You've identified variances and recommended corrective actions. But WHO approves changes? How do you evaluate impacts across all baselines? Learn the formal change control process that governs every corrective and preventive action."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What is the cost variance, and what does it indicate?",
+            "points": 50,
+            "scenario_name": "Cost Variance Calculation",
+            "situation": "A project manager reviews the monthly performance report and finds: Actual cost is $150,000 and Planned cost is $140,000. The project sponsor asks for a quick variance summary before the steering committee meeting in one hour.",
+            "options": [
+              {
+                "id": "A",
+                "text": "+$10K over budget — actual spending exceeded the plan by $10,000",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "-$10K under budget — the project is spending less than planned",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "+$10K under budget — a positive variance means favorable performance",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "-$10K over budget — the project is in trouble with negative variance",
+                "correct": false
+              }
+            ],
+            "explanation": "Cost Variance = Actual Cost minus Budgeted Cost. $150K - $140K = +$10K. The positive number means actual spending EXCEEDED the plan — the project is over budget by $10,000. For cost, positive variance = overspending (unfavorable). This is the opposite of schedule variance where positive = ahead (favorable).",
+            "correctFeedback": {
+              "text": "Cost Variance = Actual Cost minus Budgeted Cost. $150K - $140K = +$10K. The positive number means actual spending EXCEEDED the plan — the project is over budget by $10,000. For cost, positive variance = overspending (unfavorable). This is the opposite of schedule variance where positive = ahead (favorable).",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Cost variance: Actual minus Budget. $150K minus $140K equals +$10K over budget. Positive cost variance means overspending — we need to watch this trend."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: for cost, spending MORE than planned is bad. $150K is more than $140K. Actual minus Budget gives you the direction and magnitude.",
+              "character": "Sam Rodriguez",
+              "characterQuote": "Remember: for cost, spending MORE than planned is bad. $150K is more than $140K. Actual minus Budget gives you the direction and magnitude."
+            },
+            "retryHint": "Actual ($150K) minus Planned ($140K) = +$10K. For cost, spending more than planned means over budget. Positive cost variance = unfavorable."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the PM do FIRST?",
+            "points": 50,
+            "scenario_name": "Critical Path Variance Response",
+            "situation": "A PM discovers that a critical path activity is 15% behind the schedule baseline. The project completion date is contractually fixed — any delay triggers penalty clauses. The team suggests waiting until the next weekly meeting to discuss options.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Continue monitoring and report the status at the next weekly team meeting",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Analyze the impact and recommend corrective action immediately",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Request the sponsor to extend the project deadline to remove the pressure",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Remove the delayed activity from the critical path by reassigning dependencies",
+                "correct": false
+              }
+            ],
+            "explanation": "Critical path delays have ZERO tolerance — they directly extend the project completion date. With contractual penalties at stake, waiting until the next weekly meeting could cost the project dearly. The PM must analyze the impact immediately (how many days will this add?) and recommend corrective actions (fast-tracking, crashing, resource reallocation) to recover the schedule.",
+            "correctFeedback": {
+              "text": "Critical path delays have ZERO tolerance — they directly extend the project completion date. With contractual penalties at stake, waiting until the next weekly meeting could cost the project dearly. The PM must analyze the impact immediately (how many days will this add?) and recommend corrective actions (fast-tracking, crashing, resource reallocation) to recover the schedule.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Critical path variance is never 'wait and see.' Analyze the impact now, recommend corrective actions immediately — adding resources, fast-tracking, or crashing. Every day of delay on the critical path is a day added to the end date."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Critical path means zero tolerance. Any delay on the critical path pushes the project end date. With contractual penalties in play, what's the cost of waiting a week?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Critical path means zero tolerance. Any delay on the critical path pushes the project end date. With contractual penalties in play, what's the cost of waiting a week?"
+            },
+            "retryHint": "Critical path = zero tolerance. The project has contractual penalty clauses. What's the PM's first responsibility when a zero-tolerance threshold is breached?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which of the following is an example of a PREVENTIVE action?",
+            "points": 50,
+            "scenario_name": "Preventive Action Identification",
+            "situation": "A project has experienced two consecutive sprints of quality issues — increasing defect rates in the testing phase. The PM wants to take action to prevent the situation from getting worse in upcoming sprints while also addressing the current backlog of defects.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Adding testers to work through the current backlog of defects",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Implementing mandatory code reviews before any code enters the testing phase",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Using contingency reserve to cover the cost of rework on existing defects",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Reworking the 12 deliverables that failed their quality inspection last sprint",
+                "correct": false
+              }
+            ],
+            "explanation": "Preventive actions prevent FUTURE problems that haven't occurred yet. Implementing code reviews is a process improvement that catches defects BEFORE they enter testing — preventing future quality issues. The other three options all address problems that already exist: the defect backlog (A), the cost overrun from rework (C), and the failed deliverables (D) are all corrective actions.",
+            "correctFeedback": {
+              "text": "Preventive actions prevent FUTURE problems that haven't occurred yet. Implementing code reviews is a process improvement that catches defects BEFORE they enter testing — preventing future quality issues. The other three options all address problems that already exist: the defect backlog (A), the cost overrun from rework (C), and the failed deliverables (D) are all corrective actions.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Code reviews prevent future defects by catching errors upstream — before they ever reach testing. That's a textbook preventive action: solving a problem that hasn't happened yet."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: has this problem already occurred? Working on existing defects, paying for existing rework, and fixing existing failures are all corrective. Only one option prevents FUTURE problems.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: has this problem already occurred? Working on existing defects, paying for existing rework, and fixing existing failures are all corrective. Only one option prevents FUTURE problems."
+            },
+            "retryHint": "Corrective = fix what's broken NOW. Preventive = stop future breakage. Which option creates a NEW process to catch problems BEFORE they happen?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "At what point did work performance DATA become work performance INFORMATION?",
+            "points": 50,
+            "scenario_name": "DATA vs INFORMATION",
+            "situation": "During a project status meeting, a team member reports: \"We completed 45 user stories this sprint.\" The PM then compares this to the sprint baseline of 50 user stories and reports to the sponsor: \"We're 10% behind our sprint velocity target, which may impact the release date if the trend continues.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "When the team member reported \"45 user stories completed\"",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "When the PM compared 45 actual to the 50-story baseline and calculated 10% behind",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "When the sponsor received the status report",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "When the project management plan originally defined the 50-story baseline",
+                "correct": false
+              }
+            ],
+            "explanation": "Work performance DATA is raw observations from execution — \"45 user stories completed\" is an unanalyzed fact. DATA becomes INFORMATION when it is compared against baselines and analyzed — \"10% behind the 50-story target\" adds context, meaning, and implications. The sponsor receiving the report is the REPORTS stage (information packaged for stakeholders). The baseline definition is part of Planning, not Monitoring.",
+            "correctFeedback": {
+              "text": "Work performance DATA is raw observations from execution — \"45 user stories completed\" is an unanalyzed fact. DATA becomes INFORMATION when it is compared against baselines and analyzed — \"10% behind the 50-story target\" adds context, meaning, and implications. The sponsor receiving the report is the REPORTS stage (information packaged for stakeholders). The baseline definition is part of Planning, not Monitoring.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "DATA is created during Execution: '45 stories done.' INFORMATION is created during Monitoring: '10% behind baseline.' REPORTS communicate that information to stakeholders. Three distinct stages."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about when meaning was added. Raw numbers are DATA. Analyzed comparisons are INFORMATION. Packaged communications are REPORTS. Which moment transformed a number into an insight?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about when meaning was added. Raw numbers are DATA. Analyzed comparisons are INFORMATION. Packaged communications are REPORTS. Which moment transformed a number into an insight?"
+            },
+            "retryHint": "DATA = raw number (\"45 stories\"). INFORMATION = analyzed comparison (\"10% behind the 50-story baseline\"). At which step did analysis happen?"
+          }
+        ]
+      }
+    }
+  ]
+}

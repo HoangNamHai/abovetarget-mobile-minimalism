@@ -1,0 +1,725 @@
+{
+  "lessonId": "B2L1",
+  "lessonTitle": "Team Formation - Tuckman's Model",
+  "courseId": "B2",
+  "courseName": "Team Leadership & Development",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Identify the 5 stages of Tuckman's team development model: Forming, Storming, Norming, Performing, and Adjourning",
+    "Recognize behavioral indicators characteristic of each development stage",
+    "Apply appropriate PM interventions for each stage (team charter in Forming, conflict resolution in Storming, etc.)",
+    "Understand that teams can regress to earlier stages when changes occur (e.g., new members, role changes)",
+    "Distinguish between Norming and Performing stages based on team autonomy and self-organization"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "elena_vasquez",
+    "marco_silva",
+    "maya_rodriguez",
+    "sam_rodriguez",
+    "jamie_park",
+    "taylor_kim",
+    "carlos_mendez"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Five Strangers. One Team. Can You Guide Them to High Performance?",
+        "intro": "You're **Alex Mitchell**, assembling a cross-functional team for Savory & Co.'s biggest initiative: The Culinary Innovation Challenge. Five people who've never worked together. Twelve weeks to design, test, and launch a new fusion menu. And Elena Vasquez just gave you a warning you won't forget.",
+        "failure_cards": [
+          {
+            "id": "awkward_silence",
+            "icon": "📋",
+            "title": "Awkward Silence",
+            "summary": "Five strangers, zero direction",
+            "image": "/images/B2L1_comic_forming.webp",
+            "details": "The kickoff meeting. Marco mentions his 15 years of culinary experience. Taylor stays quiet, nodding nervously. Maya asks: \"So... how do we make decisions?\" Jamie asks: \"Who's responsible for what?\" Everyone's polite. Too polite. No one knows the rules. No one knows their role. They all look to Alex for guidance — and Alex isn't sure what to do first."
+          },
+          {
+            "id": "the_explosion",
+            "icon": "⚠️",
+            "title": "The Explosion",
+            "summary": "\"Trust my instincts!\" vs \"We need DATA!\"",
+            "image": "/images/B2L1_comic_storming.webp",
+            "details": "Marco (chef): \"I've been doing this for 15 years. Trust my instincts.\" Maya (product): \"We need customer data. We can't just guess what they want!\" Sam (finance): \"Both ideas are too expensive. We need to cut costs.\" Taylor and Jamie stay silent. Work has stopped. The team is tearing apart — and Alex doesn't know whether to step in or step back."
+          },
+          {
+            "id": "elenas_warning",
+            "icon": "💡",
+            "title": "Elena's Warning",
+            "summary": "\"Teams follow predictable stages...\"",
+            "image": "/images/B2L1_comic_norming.webp",
+            "details": "Elena Vasquez pulled Alex aside: \"New teams follow Tuckman's model: Forming, Storming, Norming, Performing, Adjourning. Push them too fast, they'll crack. Intervene too late, they'll stagnate. Miss a stage? Your project is chaos.\" She draws five overlapping circles on the whiteboard. Finally, a roadmap for turning strangers into a high-performing team."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "elena_vasquez",
+          "name": "Elena Vasquez",
+          "role": "HR Manager",
+          "quote": "Teams don't become high-performing overnight. They go through predictable stages. Your job as PM is to recognize each stage and provide the right support. Push them too fast, and they'll crack. Intervene too late, and they'll stagnate."
+        },
+        "learning_hook": "**Every team follows the same journey** — from polite strangers to clashing egos to unified high performers. The difference between success and failure? Recognizing which stage your team is in and providing the RIGHT intervention at the RIGHT time."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "guide_the_team_through_development",
+        "title": "Guide the Team Through Development",
+        "description": "Elena coaches you through five critical moments — one for each Tuckman stage. For each scenario, diagnose the stage and select the right PM intervention.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each stage to its correct position in the sequence:",
+            "points": 100,
+            "scenario_name": "Tuckman's Stages in Order",
+            "situation": "Before diving into the team scenarios, Elena tests your foundational knowledge. She draws five boxes on the whiteboard and hands you five sticky notes. \"Put Tuckman's 5 stages in the correct order, from team formation to disbandment.\"",
+            "chips": [
+              {
+                "id": "forming",
+                "label": "Forming",
+                "correctZone": "position_1"
+              },
+              {
+                "id": "storming",
+                "label": "Storming",
+                "correctZone": "position_2"
+              },
+              {
+                "id": "norming",
+                "label": "Norming",
+                "correctZone": "position_3"
+              },
+              {
+                "id": "performing",
+                "label": "Performing",
+                "correctZone": "position_4"
+              },
+              {
+                "id": "adjourning",
+                "label": "Adjourning",
+                "correctZone": "position_5"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "position_1",
+                "label": "Position 1"
+              },
+              {
+                "id": "position_2",
+                "label": "Position 2"
+              },
+              {
+                "id": "position_3",
+                "label": "Position 3"
+              },
+              {
+                "id": "position_4",
+                "label": "Position 4"
+              },
+              {
+                "id": "position_5",
+                "label": "Position 5"
+              }
+            ],
+            "explanation": "Tuckman's model follows a predictable sequence: Forming (orientation) -> Storming (conflict) -> Norming (cohesion) -> Performing (high efficiency) -> Adjourning (closure). Teams must progress through each stage — they can't skip ahead to Performing without first working through Storming and Norming.",
+            "correctFeedback": {
+              "text": "Tuckman's model follows a predictable sequence: Forming (orientation) -> Storming (conflict) -> Norming (cohesion) -> Performing (high efficiency) -> Adjourning (closure). Teams must progress through each stage — they can't skip ahead to Performing without first working through Storming and Norming.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Perfect! You've got the roadmap. Forming, Storming, Norming, Performing, Adjourning. Now the question is: can you recognize each stage when you see it in the real world?"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Review the sequence. Think about what comes first: polite introductions, or conflicts? And what comes last: high performance, or saying goodbye? Each stage has a purpose — skip one, and your team will struggle.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Review the sequence. Think about what comes first: polite introductions, or conflicts? And what comes last: high performance, or saying goodbye? Each stage has a purpose — skip one, and your team will struggle."
+            },
+            "retryHint": "What comes first — polite introductions, or conflicts? And what comes last — high performance, or saying goodbye?"
+          },
+          {
+            "q_id": "q2",
+            "type": "multi_select",
+            "question": "Select ALL behaviors that indicate the team is in the FORMING stage (select 3):",
+            "points": 100,
+            "scenario_name": "Diagnose Forming Stage",
+            "situation": "It's Week 1. The kickoff meeting for the Culinary Innovation Challenge. Five team members have just met for the first time. Marco mentions his 15 years of experience. Taylor stays quiet, nodding nervously. Maya asks: \"How do we make decisions? Do we vote?\" Jamie asks: \"Who's responsible for each deliverable?\" No one disagrees with anything — everyone is \"too nice.\" The team looks to Alex for direction on every decision.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Maya asks about decision-making processes and team rules",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Marco and Maya argue heatedly about the menu approach",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Taylor stays quiet and looks to Alex for direction",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "The team solves a problem independently without asking Alex",
+                "correct": false
+              },
+              {
+                "id": "E",
+                "text": "No one disagrees with anything — everyone is \"too nice\"",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Team members openly challenge each other's ideas",
+                "correct": false
+              }
+            ],
+            "explanation": "Forming stage indicators include: uncertainty about roles and processes (Maya asking about decision-making), dependence on the leader (Taylor looking to Alex), and excessive politeness (no disagreements). The team is orienting — they're strangers figuring out how to work together. Arguments (B, F) indicate Storming, and independent problem-solving (D) indicates Performing.",
+            "correctFeedback": {
+              "text": "Forming stage indicators include: uncertainty about roles and processes (Maya asking about decision-making), dependence on the leader (Taylor looking to Alex), and excessive politeness (no disagreements). The team is orienting — they're strangers figuring out how to work together. Arguments (B, F) indicate Storming, and independent problem-solving (D) indicates Performing.",
+              "character": "Alex Mitchell",
+              "characterQuote": "They're polite, but I can see the uncertainty. Maya wants to know how we decide things. Taylor's looking to me for every answer. No one's disagreeing — yet. Classic Forming. I need to provide structure before work begins."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When a team is 'too nice,' they're in Forming. Real work hasn't started yet. Look for signs of uncertainty, leader dependence, and absence of conflict — those are Forming indicators.",
+              "character": "Elena Vasquez",
+              "characterQuote": "When a team is 'too nice,' they're in Forming. Real work hasn't started yet. Look for signs of uncertainty, leader dependence, and absence of conflict — those are Forming indicators."
+            },
+            "retryHint": "Is there any real conflict here? Or is everyone just being polite and asking questions? That's your clue."
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What's the BEST PM intervention for Alex right now?",
+            "points": 100,
+            "scenario_name": "Storming Intervention",
+            "situation": "Week 3. Conflict has erupted. Marco (chef) wants to design the menu based on expertise: \"I've been doing this for 15 years — trust my instincts.\" Maya (product) pushes back: \"We need customer data. We can't just guess what they want!\" Sam (finance) interrupts: \"Both ideas are too expensive!\" Work has stopped. Taylor and Jamie stay silent, looking uncomfortable.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Remove Marco from the team — he's causing the conflict",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Step in as decision-maker and tell the team what to do",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Facilitate conflict resolution: help the team find common ground and integrate their ideas",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Wait for the conflicts to resolve naturally — stay out of it",
+                "correct": false
+              }
+            ],
+            "explanation": "Storming is NORMAL and NECESSARY. The PM's role is to facilitate healthy conflict resolution using confronting/problem-solving — not to avoid, suppress, or command. Help the team find common ground: \"How can we combine chef expertise WITH customer data WITHIN budget?\" Integration, not elimination.",
+            "correctFeedback": {
+              "text": "Storming is NORMAL and NECESSARY. The PM's role is to facilitate healthy conflict resolution using confronting/problem-solving — not to avoid, suppress, or command. Help the team find common ground: \"How can we combine chef expertise WITH customer data WITHIN budget?\" Integration, not elimination.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Perfect response. Storming feels uncomfortable, but it's where teams learn to integrate diverse perspectives. You facilitated — you didn't dictate. That's the difference between a PM and a boss."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If you remove Marco, you reset to Forming with a new member. If you command a decision, you create resentment. If you wait, conflicts fester. The PM must facilitate resolution — not avoid it.",
+              "character": "Elena Vasquez",
+              "characterQuote": "If you remove Marco, you reset to Forming with a new member. If you command a decision, you create resentment. If you wait, conflicts fester. The PM must facilitate resolution — not avoid it."
+            },
+            "retryHint": "What's the difference between facilitating and commanding? One builds ownership, the other creates resentment."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "How should Alex respond to reinforce the Norming stage?",
+            "points": 100,
+            "scenario_name": "Norming Recognition",
+            "situation": "Week 6. After Alex facilitated several conflict resolution sessions, the team has found common ground. Marco agreed to incorporate customer feedback. Maya agreed to trust Marco's expertise on execution. The team created a decision-making framework together. Maya says to Alex: \"I feel like we're finally a TEAM now. What should we do differently going forward?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "\"Great! I'll take over more decision-making to make sure we stay on track.\"",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "\"Good progress! I'm going to recognize what's working and give you more autonomy to make decisions.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "\"Perfect — we can skip ahead to high performance now. No more conflicts, right?\"",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "\"Let's redo the team charter since things have changed so much.\"",
+                "correct": false
+              }
+            ],
+            "explanation": "Norming teams need REINFORCEMENT (recognize progress) and GRADUAL AUTONOMY (delegate more). Don't micromanage — and don't assume Norming equals Performing. The team is building cohesion, but they're not yet autonomous high performers. Stay available for support while increasing their decision-making freedom.",
+            "correctFeedback": {
+              "text": "Norming teams need REINFORCEMENT (recognize progress) and GRADUAL AUTONOMY (delegate more). Don't micromanage — and don't assume Norming equals Performing. The team is building cohesion, but they're not yet autonomous high performers. Stay available for support while increasing their decision-making freedom.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "I appreciate that, Alex. We worked hard to find common ground with Marco. It feels good to have your trust — and to know you see our progress."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Norming is fragile. Teams can regress to Storming if disrupted. Reinforce what's working, give them room to grow, but don't abandon them — and don't take over.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Norming is fragile. Teams can regress to Storming if disrupted. Reinforce what's working, give them room to grow, but don't abandon them — and don't take over."
+            },
+            "retryHint": "What does a team need after working through conflicts? Recognition for their progress and room to grow — not more control or a restart."
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "What should Alex do NOW?",
+            "points": 100,
+            "scenario_name": "Performing vs. Micromanagement",
+            "situation": "Week 9. The team is humming. When a supplier issue arises (ingredient delay), the team solves it independently in 2 hours without escalating to Alex. Maya suggests an alternative ingredient, Marco adapts the recipe, Sam approves the cost, Jamie coordinates logistics, and Taylor updates the project tracker. Alex observes: \"They didn't even ask me.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Step back and let them operate autonomously — provide support only when requested",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Re-engage in daily decision-making to maintain control and visibility",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Create new ground rules to prevent the team from becoming complacent",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Celebrate immediately and start planning the team's transition to new projects",
+                "correct": false
+              }
+            ],
+            "explanation": "Performing teams are autonomous, efficient, and self-organizing. The PM's role shifts to REMOVING OBSTACLES and PROVIDING RESOURCES — not directing work. They solved a complex, multi-stakeholder problem in 2 hours without escalation. Trust them. They've earned it.",
+            "correctFeedback": {
+              "text": "Performing teams are autonomous, efficient, and self-organizing. The PM's role shifts to REMOVING OBSTACLES and PROVIDING RESOURCES — not directing work. They solved a complex, multi-stakeholder problem in 2 hours without escalation. Trust them. They've earned it.",
+              "character": "Alex Mitchell",
+              "characterQuote": "They didn't need me. That's not a failure — that's success. I built a team that can handle challenges independently. Now I focus on clearing their path and removing any obstacles."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "A high-performing team doesn't need constant oversight. If you start micromanaging now, you'll undo everything you've built. Trust the process.",
+              "character": "Carlos Mendez",
+              "characterQuote": "A high-performing team doesn't need constant oversight. If you start micromanaging now, you'll undo everything you've built. Trust the process."
+            },
+            "retryHint": "When a team solves problems without asking you, what does that mean? And what does a PM do when they're no longer needed for daily decisions?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Tuckman's 5-Stage Model",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The 5 Stages Overview",
+            "subtitle": "",
+            "content": "Bruce Tuckman identified a predictable pattern: teams go through 5 stages as they mature from strangers to high performers. Understanding this model helps PMs diagnose where their team is and provide the right support.\n\n| Stage | Summary | Team Behaviors | PM Focus |\n|-------|---------|----------------|----------|\n| **1. Forming** | Orientation | Polite, uncertain, dependent on leader | Provide clarity and structure |\n| **2. Storming** | Conflict | Disagreements, power struggles, tension | Facilitate conflict resolution |\n| **3. Norming** | Cohesion | Unity emerging, collaboration improving | Reinforce progress, increase autonomy |\n| **4. Performing** | High Efficiency | Autonomous, self-organizing, interdependent | Step back, remove obstacles |\n| **5. Adjourning** | Closure | Reflecting, celebrating, transitioning | Facilitate closure and transitions |\n\n**Key Insight:** Teams don't skip stages — they must progress through each one. Trying to force a Forming team to Perform will fail.",
+            "diagram": {
+              "image": "/images/B2L1_diagram_tuckman_stages.webp",
+              "alt": "Tuckman's 5-Stage Model Diagram"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Forming & Storming",
+            "subtitle": "",
+            "content": "**Stage 1: Forming (Orientation & Dependence)**\nThe team has just been assembled. Members are polite, cautious, and uncertain.\n\n- Behavioral indicators: Politeness, uncertainty about roles, high dependence on the PM, testing boundaries, excitement mixed with anxiety\n- PM interventions: Create a TEAM CHARTER (goals, roles, decision-making), facilitate introductions, set clear expectations, provide meeting structure\n- Key tool: Team Charter — document goals, roles, decision-making processes, and communication norms\n\n**Stage 2: Storming (Conflict & Competition)**\nWork has begun and individual differences emerge. Conflicts arise — this is NORMAL and NECESSARY.\n\n- Behavioral indicators: Open disagreements, interpersonal conflicts, power struggles, frustration, some members withdraw, productivity may DROP temporarily\n- PM interventions: Facilitate conflict resolution (confronting/problem-solving), encourage open communication, find common ground\n- Critical warning: Removing members during Storming RESETS the team to Forming. Don't avoid Storming — it's necessary for growth."
+          },
+          {
+            "id": "tab3",
+            "title": "Norming & Performing",
+            "subtitle": "",
+            "content": "**Stage 3: Norming (Cohesion & Collaboration)**\nAfter working through conflicts, cohesion develops. Members appreciate each other's strengths.\n\n- Behavioral indicators: Conflicts resolved, sense of unity, collaboration improves, team members support each other\n- PM interventions: Recognize progress, reinforce positive behaviors, gradually increase autonomy, stay vigilant for regression\n\n**Stage 4: Performing (Autonomy & High Efficiency)**\nThe team is at peak efficiency. Autonomous, self-organizing, solving problems independently.\n\n- Behavioral indicators: High productivity, independent decision-making, problems solved quickly without PM escalation, high morale\n- PM interventions: Step back and trust the team, remove obstacles, recognize achievements, monitor without intruding\n- Critical warning: Micromanaging a Performing team can cause regression to Storming."
+          },
+          {
+            "id": "tab4",
+            "title": "Adjourning & Regression",
+            "subtitle": "",
+            "content": "**Stage 5: Adjourning (Closure & Transition)**\nThe project ends and the team disbands. Often overlooked but essential.\n\n- PM interventions: Conduct retrospective, celebrate accomplishments, acknowledge emotions, facilitate smooth transitions, document lessons learned\n\n**Teams Can REGRESS:** Major changes can push a Performing team back to Storming or even Forming:\n- New member joins -> Triggers Forming/Storming with integration\n- Key member leaves -> Disrupts established dynamics\n- Role changes -> Uncertainty resurfaces\n- Major setback -> Trust may be damaged\n\nPM Action: If regression occurs, RE-FACILITATE the earlier stage. Don't panic — it's recoverable."
+          },
+          {
+            "id": "tab5",
+            "title": "PMI Framework Connections",
+            "subtitle": "",
+            "content": "**PMBOK 7th Edition:** Tuckman's Model is referenced in the Team Performance Domain (Section 3.1). Team development is a continuous responsibility, not a one-time activity.\n\n**PMP Exam Tips:**\n- Tuckman's Model appears frequently in People domain questions (~42% of exam)\n- Key concept: Storming is NECESSARY — don't suppress, avoid, or skip it\n- Team charter should be created during Forming stage, before significant work begins\n- Teams can regress when major changes occur — regression is normal and recoverable\n- Norming is NOT the same as Performing: Norming builds cohesion; Performing delivers results autonomously"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Team Regression After Major Change",
+        "scenario": {
+          "title": "Team Regression After Major Change",
+          "description": "Three months later, Alex's Performing team is humming on a NEW project. Then disaster strikes: **Marco (Executive Chef and culinary lead) leaves the company** for a new opportunity. Alex replaces him with **Devon Brown**, a talented sous chef with a completely different working style. Within ONE WEEK: Devon and Maya clash over decision-making authority (\"Who's in charge of culinary direction now?\"). Sam questions whether Devon understands the budget constraints. Taylor feels uncertain about their role again. Jamie says: \"We were working so well together. Now everything feels chaotic.\"",
+          "images": [
+            {
+              "src": "/images/B2L1_comic_transfer.webp",
+              "alt": "Team regression when Devon joins the team"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "After Devon joins and conflicts emerge, what Tuckman stage is the team currently in?",
+            "points": 100,
+            "scenario_name": "Diagnose the Regression",
+            "situation": "After Devon joins and conflicts emerge, the team's productivity has dropped. Devon and Maya are arguing about authority, Sam is questioning Devon's budget awareness, and Taylor has gone quiet again. Jamie observes that \"everything feels chaotic.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Still Performing — just a temporary setback",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Adjourning — the original team is ending",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Storming — conflicts and uncertainty have re-emerged",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Forming — they're a completely new team now",
+                "correct": false
+              }
+            ],
+            "explanation": "The team has REGRESSED from Performing to Storming. Devon's different working style and the power vacuum from Marco's departure triggered conflicts about authority and decision-making. This is normal when major changes occur — but Alex must RE-FACILITATE Storming to help the team recover.",
+            "correctFeedback": {
+              "text": "The team has REGRESSED from Performing to Storming. Devon's different working style and the power vacuum from Marco's departure triggered conflicts about authority and decision-making. This is normal when major changes occur — but Alex must RE-FACILITATE Storming to help the team recover.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Regression is normal. The team isn't broken — they just need to re-integrate. Facilitate the conflicts, help Devon find their place, and they'll climb back to Performing."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Major changes disrupt established dynamics. Look at the behaviors: conflicts about authority, uncertainty, dropped productivity. Which Tuckman stage has those indicators?",
+              "character": "Elena Vasquez",
+              "characterQuote": "Major changes disrupt established dynamics. Look at the behaviors: conflicts about authority, uncertainty, dropped productivity. Which Tuckman stage has those indicators?"
+            },
+            "retryHint": "Look at the behaviors: conflicts about authority, uncertainty about roles, dropped productivity. Which stage has these indicators?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "multi_select",
+            "question": "Select the 3 interventions Alex should use to help the team recover (select 3):",
+            "points": 200,
+            "scenario_name": "Select Recovery Interventions",
+            "situation": "You've diagnosed the regression to Storming. Now you need to plan Alex's recovery strategy to help the team re-integrate Devon and rebuild their high-performing dynamics.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Re-facilitate introductions for Devon — help the team get to know them",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Facilitate conflict resolution between Devon and Maya about authority",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Update the team charter with Devon's input on roles and decision-making",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Remove Devon — they're disrupting a high-performing team",
+                "correct": false
+              },
+              {
+                "id": "E",
+                "text": "Wait for conflicts to resolve naturally — the team figured it out before",
+                "correct": false
+              },
+              {
+                "id": "F",
+                "text": "Skip ahead to Performing — just tell them to work together like before",
+                "correct": false
+              }
+            ],
+            "explanation": "The correct recovery plan addresses each regression stage: Re-facilitating introductions (Forming element), resolving the authority conflict between Devon and Maya (Storming element), and updating the charter (re-establishing Norming agreements). Together, these three interventions help the team progress back through the stages with Devon integrated.",
+            "correctFeedback": {
+              "text": "The correct recovery plan addresses each regression stage: Re-facilitating introductions (Forming element), resolving the authority conflict between Devon and Maya (Storming element), and updating the charter (re-establishing Norming agreements). Together, these three interventions help the team progress back through the stages with Devon integrated.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I can't skip the stages. Devon needs integration. Maya and Devon need to resolve their authority conflict. And the whole team needs updated agreements. We'll get back to Performing — but we have to earn it again."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Regression requires re-facilitation. You can't skip back to Performing — the team must work through the earlier stages again. Think about what worked the FIRST time: structure, conflict resolution, clear agreements.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Regression requires re-facilitation. You can't skip back to Performing — the team must work through the earlier stages again. Think about what worked the FIRST time: structure, conflict resolution, clear agreements."
+            },
+            "retryHint": "Think about what worked the FIRST time: structure (charter), conflict resolution (facilitation), and clear agreements (roles). The team needs those again — with Devon included."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to recognize the 5 stages of Tuckman's team development model and apply appropriate PM interventions at each stage. You also understand that teams can REGRESS when major changes occur — and that's okay, as long as you re-facilitate.",
+        "key_takeaways": [
+          "5 Stages in Order: Forming -> Storming -> Norming -> Performing -> Adjourning — teams must progress through each stage sequentially",
+          "Forming Needs Structure: Create a team charter, clarify roles, set expectations before work begins",
+          "Storming is NECESSARY: Don't suppress, avoid, or punish conflict — facilitate resolution and help the team integrate diverse perspectives",
+          "Norming Needs Reinforcement: Recognize progress and gradually increase autonomy, but stay vigilant for regression",
+          "Performing Needs Trust: Step back, remove obstacles, and trust the team — micromanaging causes regression",
+          "Regression is Normal: Major changes (new members, departures, role changes) can push teams backward — re-facilitate earlier stages"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I watched this team transform from strangers to high performers — and then handle regression when Marco left. The key was recognizing where they were and giving them what they needed at each stage. Forming needed structure. Storming needed facilitation. Norming needed recognition. Performing needed trust. And when Devon joined, I didn't panic — I re-facilitated."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L2",
+          "title": "Building High-Performance Teams",
+          "description": "You understand how teams develop. Now learn how to accelerate their path to high performance through trust-building, psychological safety, and team effectiveness strategies."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "When should the project manager create the team charter?",
+            "points": 50,
+            "scenario_name": "Team Charter Timing",
+            "situation": "A project manager is assembling a new cross-functional team for a 6-month product development initiative. The team members come from different departments and have never worked together. During the kickoff meeting, several team members ask questions about decision-making authority and role responsibilities.",
+            "options": [
+              {
+                "id": "A",
+                "text": "After the first major conflict emerges, to establish rules for resolution",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "During the Forming stage, before significant work begins",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Once the team reaches Norming, when they're ready to collaborate",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "At project closure, to document lessons learned",
+                "correct": false
+              }
+            ],
+            "explanation": "Team charters should be created during FORMING stage. Early commitment to clear goals, roles, ground rules, and decision-making processes prevents misunderstandings and sets the team up for success. The questions about decision-making and role responsibilities are classic Forming indicators — address them with a charter now.",
+            "correctFeedback": {
+              "text": "Team charters should be created during FORMING stage. Early commitment to clear goals, roles, ground rules, and decision-making processes prevents misunderstandings and sets the team up for success. The questions about decision-making and role responsibilities are classic Forming indicators — address them with a charter now.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Early structure prevents later chaos. A team charter in Forming gives everyone clarity before disagreements emerge. Those questions about roles and decision-making? The charter answers them."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "If you wait until conflicts emerge to create structure, you're playing catch-up. Create the charter during Forming — set expectations before problems arise.",
+              "character": "Elena Vasquez",
+              "characterQuote": "If you wait until conflicts emerge to create structure, you're playing catch-up. Create the charter during Forming — set expectations before problems arise."
+            },
+            "retryHint": "When does a team most need clarity about roles and decision-making? Before work starts, or after problems emerge?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the Scrum Master recognize about this situation?",
+            "points": 50,
+            "scenario_name": "Storming Misconception",
+            "situation": "During a sprint retrospective, a Scrum Master notices that two senior developers are arguing heatedly about the technical approach for an upcoming feature. Other team members look uncomfortable. The team has been working together for three weeks and this is their first significant disagreement.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team has failed to bond properly and needs team-building activities",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "This is normal Storming behavior and an opportunity for the team to grow",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The arguing developers should be separated to prevent further conflict",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The team has regressed from Performing due to the technical challenge",
+                "correct": false
+              }
+            ],
+            "explanation": "Storming (conflict and competing ideas) is a NORMAL and NECESSARY stage of team development. It's not a failure — it's how teams learn to integrate diverse perspectives. The Scrum Master should facilitate healthy conflict resolution, helping the team work through their differences and build stronger collaboration.",
+            "correctFeedback": {
+              "text": "Storming (conflict and competing ideas) is a NORMAL and NECESSARY stage of team development. It's not a failure — it's how teams learn to integrate diverse perspectives. The Scrum Master should facilitate healthy conflict resolution, helping the team work through their differences and build stronger collaboration.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Conflict is uncomfortable, but it's where teams learn to work through differences. This team is progressing normally — three weeks in, first major disagreement. Facilitate the discussion, don't shut it down."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Storming isn't failure — it's growth. Teams that never storm never truly integrate diverse perspectives. A team 3 weeks in having their first conflict is progressing normally.",
+              "character": "Elena Vasquez",
+              "characterQuote": "Storming isn't failure — it's growth. Teams that never storm never truly integrate diverse perspectives. A team 3 weeks in having their first conflict is progressing normally."
+            },
+            "retryHint": "The team has been together 3 weeks and this is their FIRST major conflict. Is that abnormal, or expected team development?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the project manager anticipate?",
+            "points": 50,
+            "scenario_name": "Regression Triggers",
+            "situation": "A project team has been performing exceptionally well for several months, completing deliverables ahead of schedule and collaborating effectively. The project sponsor announces that two key team members will be reassigned to a higher-priority initiative and will be replaced by new team members next week.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team will continue performing at the same level since the project is going well",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The team may regress to earlier development stages as they integrate new members",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The new members will immediately adopt the team's high-performing culture",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The project should be paused until the new members are fully onboarded",
+                "correct": false
+              }
+            ],
+            "explanation": "Team regression is triggered by significant changes: new members joining, key members leaving, role changes, or organizational restructuring. Even high-performing teams can regress to Storming or Forming when team composition changes significantly. The PM should anticipate regression and plan to re-facilitate.",
+            "correctFeedback": {
+              "text": "Team regression is triggered by significant changes: new members joining, key members leaving, role changes, or organizational restructuring. Even high-performing teams can regress to Storming or Forming when team composition changes significantly. The PM should anticipate regression and plan to re-facilitate.",
+              "character": "Carlos Mendez",
+              "characterQuote": "High performance isn't permanent. When the team composition changes, expect some turbulence. The PM's job is to guide them back through the stages — regression is recoverable."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Major changes disrupt team dynamics. New members don't automatically integrate into a high-performing culture — they must be onboarded, relationships rebuilt, and roles renegotiated.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Major changes disrupt team dynamics. New members don't automatically integrate into a high-performing culture — they must be onboarded, relationships rebuilt, and roles renegotiated."
+            },
+            "retryHint": "What happens to team dynamics when key members leave and new ones join? Does everything stay the same, or does integration take work?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What does this behavior indicate about the team's development stage?",
+            "points": 50,
+            "scenario_name": "Performing Recognition",
+            "situation": "A cross-functional team is working on a restaurant renovation project. When the HVAC contractor announces a two-week delay, the team quickly reorganizes their work schedule, identifies alternative sequencing, negotiates with other vendors, and presents a revised plan to stakeholders — all within 24 hours and without escalating to the project manager.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team is in Norming — they're working well together but still need PM guidance",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "The team is in Performing — they're autonomous, self-organizing, and solving problems independently",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The team is avoiding the PM, which indicates underlying trust issues from unresolved Storming",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "The team is ready for Adjourning since they no longer need PM involvement",
+                "correct": false
+              }
+            ],
+            "explanation": "Performing teams are autonomous, self-organizing, and interdependent. They solve complex problems independently without PM escalation. This is the hallmark of high performance — the PM can focus on removing obstacles and providing resources, not making daily decisions.",
+            "correctFeedback": {
+              "text": "Performing teams are autonomous, self-organizing, and interdependent. They solve complex problems independently without PM escalation. This is the hallmark of high performance — the PM can focus on removing obstacles and providing resources, not making daily decisions.",
+              "character": "Alex Mitchell",
+              "characterQuote": "They didn't need me. They identified the problem, collaborated on solutions, and presented to stakeholders — in 24 hours. That's high performance. My job now is to clear their path."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "A team that solves a major problem in 24 hours without escalating? That's exactly what high performance looks like. Not needing PM direction isn't avoidance — it's capability.",
+              "character": "Carlos Mendez",
+              "characterQuote": "A team that solves a major problem in 24 hours without escalating? That's exactly what high performance looks like. Not needing PM direction isn't avoidance — it's capability."
+            },
+            "retryHint": "What kind of team handles complex, multi-stakeholder problems independently and quickly, without needing PM direction?"
+          }
+        ]
+      }
+    }
+  ]
+}

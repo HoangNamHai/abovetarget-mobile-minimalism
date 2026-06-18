@@ -1,0 +1,573 @@
+{
+  "lessonId": "A1L4",
+  "lessonTitle": "Project Life Cycles",
+  "courseId": "A1",
+  "courseName": "Introduction to Project Management",
+  "pathId": "A",
+  "pathName": "Foundation",
+  "domain": "Business Environment",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Understand the three main project life cycles: Predictive, Adaptive (Agile), and Hybrid",
+    "Recognize the characteristics of each life cycle approach",
+    "Identify when to use predictive vs adaptive vs hybrid based on project characteristics",
+    "Understand the relationship between requirements certainty and approach selection",
+    "Apply life cycle selection criteria to real-world F&B scenarios"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "morgan_lee",
+    "maya_rodriguez",
+    "dr_amelia_foster"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Carlos's Question: Agile, Waterfall, or Hybrid?",
+        "intro": "Carlos presents you with THREE simultaneous projects and says: 'Choose the right approach for each one. I've heard about Agile, Waterfall, and something called Hybrid. But I don't know which to use when.'",
+        "failure_cards": [
+          {
+            "id": "carloss_three_projects",
+            "icon": "📋",
+            "title": "Carlos's Three Projects",
+            "summary": "Three different projects, one PM",
+            "image": "/images/A1L4_comic_carlos_projects.webp",
+            "details": "Carlos has three major initiatives starting next month: a new restaurant construction (fixed requirements), a menu innovation lab (needs experimentation), and catering expansion (business model clear, operations unclear). He thinks Agile should work for all of them because it's 'modern and flexible.'"
+          },
+          {
+            "id": "the_contractors_warning",
+            "icon": "⚠️",
+            "title": "The Contractor's Warning",
+            "summary": "Not all work follows the same rules",
+            "image": "/images/A1L4_comic_contractor_warning.webp",
+            "details": "The construction contractor says: 'You can't iterate on a foundation. Get the permits right FIRST.' Meanwhile, Maya in the test kitchen says: 'But recipes? We NEED customer feedback to know what works!' Two completely different needs."
+          },
+          {
+            "id": "the_hybrid_question",
+            "icon": "💡",
+            "title": "The Hybrid Question",
+            "summary": "Sometimes you need both approaches",
+            "image": "/images/A1L4_comic_hybrid_question.webp",
+            "details": "A corporate client approved the catering business model but wants to experiment with menu offerings. Dr. Foster appears: 'Sounds like you need a blend of approaches.' Alex realizes: 'So different projects need different life cycles!'"
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "Alex, we have three projects starting next month. I've heard we should use 'Agile' for everything because it's modern and flexible. But our contractor says the building construction MUST follow a sequential plan. What's the right approach for each?"
+        },
+        "learning_hook": "**Not all projects are the same.** PREDICTIVE approaches work when requirements are clear and change is costly. ADAPTIVE approaches work when requirements are uncertain and iteration is needed. HYBRID blends both. The right choice depends on project characteristics, not trends."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "match_projects_to_life_cycles",
+        "title": "Match Projects to Life Cycles",
+        "description": "",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each project to the correct life cycle approach:",
+            "points": 300,
+            "scenario_name": "Life Cycle Matching",
+            "situation": "Match each project to the best life cycle approach based on its characteristics.",
+            "chips": [
+              {
+                "id": "chip",
+                "label": "Chip",
+                "correctZone": "description"
+              },
+              {
+                "id": "construction",
+                "label": "Construction",
+                "correctZone": "fixed_requirements_sequential_phases_high_change_cost"
+              },
+              {
+                "id": "menu_lab",
+                "label": "Menu Lab",
+                "correctZone": "unclear_requirements_needs_customer_feedback_low_change_cost"
+              },
+              {
+                "id": "catering_expansion",
+                "label": "Catering Expansion",
+                "correctZone": "business_model_clear_operations_uncertain"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "description",
+                "label": "Description",
+                "detail": "Correct Zone"
+              },
+              {
+                "id": "fixed_requirements_sequential_phases_high_change_cost",
+                "label": "Fixed requirements, sequential phases, high change cost",
+                "detail": "Predictive (Waterfall)"
+              },
+              {
+                "id": "unclear_requirements_needs_customer_feedback_low_change_cost",
+                "label": "Unclear requirements, needs customer feedback, low change cost",
+                "detail": "Adaptive (Agile)"
+              },
+              {
+                "id": "business_model_clear_operations_uncertain",
+                "label": "Business model clear, operations uncertain",
+                "detail": "Hybrid"
+              }
+            ],
+            "explanation": "Construction fits Predictive (fixed requirements, costly change). Menu Lab fits Adaptive (uncertain requirements, needs iteration). Catering fits Hybrid (clear business model, uncertain operations).",
+            "correctFeedback": {
+              "text": "Construction fits Predictive (fixed requirements, costly change). Menu Lab fits Adaptive (uncertain requirements, needs iteration). Catering fits Hybrid (clear business model, uncertain operations).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You've grasped the key principle: match the approach to the project's characteristics, not to trends or preferences."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Do we know exactly what we need upfront, or do we need to experiment to find out?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Do we know exactly what we need upfront, or do we need to experiment to find out?"
+            },
+            "retryHint": "Think about requirements certainty and change cost for each project."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Why is ADAPTIVE (Agile) the best approach for the Menu Innovation Lab project?",
+            "points": 200,
+            "scenario_name": "Rationale Selection",
+            "situation": "You've matched Menu Innovation Lab to Adaptive (Agile). Now explain why.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Agile is modern and trendy, so it's always better than Waterfall",
+                "correct": false,
+                "whyWrong": "Agile isn't 'better' than Predictive — it's DIFFERENT. The right approach depends on project characteristics."
+              },
+              {
+                "id": "B",
+                "text": "Requirements are uncertain, customer feedback is critical, and change is expected",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Agile is faster than Waterfall, so we'll finish the project sooner",
+                "correct": false,
+                "whyWrong": "Agile isn't inherently faster. It delivers value INCREMENTALLY, but total duration depends on scope and complexity."
+              },
+              {
+                "id": "D",
+                "text": "Agile doesn't require planning, so we can start immediately",
+                "correct": false,
+                "whyWrong": "Agile requires CONTINUOUS planning (every sprint/iteration), not NO planning."
+              }
+            ],
+            "explanation": "Adaptive fits when requirements are UNCERTAIN (need experimentation), CHANGE is EXPECTED (refining recipes), and CUSTOMER FEEDBACK is CRITICAL (taste tests shape the solution).",
+            "correctFeedback": {
+              "text": "Adaptive fits when requirements are UNCERTAIN (need experimentation), CHANGE is EXPECTED (refining recipes), and CUSTOMER FEEDBACK is CRITICAL (taste tests shape the solution).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "You've grasped the key principle: Use Adaptive when you need to LEARN your way to the solution. Predictive assumes you already KNOW the solution upfront."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Do we know exactly what recipes will succeed, or do we need to experiment to find out?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Do we know exactly what recipes will succeed, or do we need to experiment to find out?"
+            },
+            "retryHint": "Think about what makes menu development different from construction. What do you NOT know upfront?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Understanding Project Life Cycles",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The Life Cycle Spectrum",
+            "subtitle": "",
+            "content": "PMI doesn't mandate ONE approach. Projects exist on a **continuum** from fully predictive to fully adaptive, with hybrid in between.\n\n**PREDICTIVE ←—— HYBRID ——→ ADAPTIVE**\n\n- **Predictive:** Sequential, upfront planning, low change\n- **Hybrid:** Blended approaches, phased + iterative\n- **Adaptive:** Iterative, continuous planning, high change\n\n**Key Insight:** The 'best' approach depends on project characteristics, not personal preference or industry trends."
+          },
+          {
+            "id": "tab2",
+            "title": "Predictive (Waterfall)",
+            "subtitle": "",
+            "content": "**Definition:** Sequential approach where project phases happen in order. Detailed planning upfront, then execute with minimal changes.\n\n**Characteristics:**\n- **Requirements:** Clearly defined upfront\n- **Planning:** Comprehensive upfront\n- **Change:** Low tolerance (costly and disruptive)\n- **Delivery:** Single deliverable at the end\n\n**When to Use:**\n- Requirements are CLEAR and STABLE\n- Change is COSTLY\n- Regulatory/Compliance requirements\n\n**Example:** New restaurant construction — you can't iterate on a foundation!"
+          },
+          {
+            "id": "tab3",
+            "title": "Adaptive (Agile)",
+            "subtitle": "",
+            "content": "**Definition:** Iterative approach where requirements and solutions evolve through collaboration. Work happens in short cycles (sprints/iterations) with continuous feedback.\n\n**Characteristics:**\n- **Requirements:** Uncertain or evolving\n- **Planning:** Continuous (plan each iteration)\n- **Change:** High tolerance (expected and welcomed)\n- **Delivery:** Incremental deliverables\n\n**When to Use:**\n- Requirements are UNCERTAIN\n- Innovation/experimentation needed\n- Customer feedback is critical\n\n**Example:** Menu Innovation Lab — recipes evolve based on taste tests!"
+          },
+          {
+            "id": "tab4",
+            "title": "Hybrid",
+            "subtitle": "",
+            "content": "**Definition:** Combines predictive and adaptive elements. PLAN using predictive (upfront business case), then EXECUTE using adaptive (iterative development).\n\n**Characteristics:**\n- **Requirements:** Partially defined\n- **Planning:** Upfront for stable elements, continuous for uncertain\n- **Change:** Moderate tolerance\n- **Delivery:** Phased increments\n\n**When to Use:**\n- Some requirements CLEAR, others UNCERTAIN\n- Stakeholders want PREDICTABILITY for big decisions, FLEXIBILITY for execution\n\n**Example:** Catering Expansion — business model fixed, operations iterate!"
+          },
+          {
+            "id": "tab5",
+            "title": "Decision Guide",
+            "subtitle": "How to Choose",
+            "content": "**Key Questions to Ask:**\n\n**1. How certain are requirements?**\n- Clear & Stable → Predictive\n- Uncertain & Evolving → Adaptive\n- Partially Defined → Hybrid\n\n**2. How costly is change?**\n- High cost → Predictive\n- Low cost → Adaptive\n- Moderate → Hybrid\n\n**3. How involved are stakeholders?**\n- Upfront + Milestones → Predictive\n- Continuously → Adaptive\n- Phased → Hybrid\n\n**Remember:** Choose based on PROJECT CHARACTERISTICS, not trends!"
+          }
+        ],
+        "diagram": {
+          "image": "/images/A1L4_diagram_life_cycle.webp",
+          "alt": "Life Cycle Continuum"
+        }
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Three More Projects",
+        "scenario": {
+          "title": "Three More Projects",
+          "description": "*Carlos has three NEW projects — choose the right life cycle for each* Carlos presents three NEW projects to Alex. Apply what you learned — choose the right life cycle for each project.",
+          "images": [
+            {
+              "src": "/images/A1L4_comic_transfer.webp",
+              "alt": "Transfer Scenario"
+            }
+          ],
+          "details": [
+            "**Project 1:** Food Safety Compliance (fixed by regulation, 90-day deadline)",
+            "**Project 2:** Social Media Campaign (uncertain, needs testing)",
+            "**Project 3:** Franchise Expansion (business model clear, operations uncertain)"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Health department mandates new tracking system. Requirements are FIXED by regulation. Timeline: 90 days. What approach fits best?",
+            "points": 100,
+            "scenario_name": "Food Safety Compliance",
+            "situation": "The health department has mandated that Savory & Co. implement a new food safety tracking system across all locations. All requirements are defined by regulation with a strict 90-day compliance deadline.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Predictive — fixed requirements, compliance deadline, no iteration needed",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Adaptive — iterate on health codes based on feedback",
+                "correct": false,
+                "whyWrong": "Compliance requirements are FIXED by regulation — you can't iterate on health codes."
+              },
+              {
+                "id": "C",
+                "text": "Hybrid — some requirements clear, others uncertain",
+                "correct": false,
+                "whyWrong": "There are no uncertain elements here — all requirements are defined by regulation."
+              }
+            ],
+            "explanation": "Compliance projects have FIXED requirements defined by regulation. You can't 'iterate' on health codes.",
+            "correctFeedback": {
+              "text": "Compliance projects have FIXED requirements defined by regulation. You can't 'iterate' on health codes.",
+              "character": "Carlos Mendez",
+              "characterQuote": "The health department won't negotiate on requirements. We just need to implement exactly what they mandate."
+            },
+            "retryHint": "Compliance requirements are defined by regulators. Can you experiment with health codes?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "Launch Instagram/TikTok campaign to attract younger customers. Requirements are UNCERTAIN (need to test content types). Timeline: 3 months ongoing. What approach fits best?",
+            "points": 100,
+            "scenario_name": "Social Media Campaign",
+            "situation": "Carlos wants Savory & Co. to launch an Instagram and TikTok campaign targeting younger customers. The team has no prior social media data, so content types, posting frequency, and messaging all need to be tested over a 3-month period.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Predictive — plan all content upfront, execute sequentially",
+                "correct": false,
+                "whyWrong": "You can't predict which content will go viral. Marketing campaigns need continuous iteration."
+              },
+              {
+                "id": "B",
+                "text": "Adaptive — test content, measure engagement, iterate based on feedback",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Hybrid — fixed content plan with some flexibility",
+                "correct": false,
+                "whyWrong": "There's no fixed component here — all content is experimental."
+              }
+            ],
+            "explanation": "Social media success requires experimentation. You don't know what will resonate until you test it.",
+            "correctFeedback": {
+              "text": "Social media success requires experimentation. You don't know what will resonate until you test it.",
+              "character": "Morgan Lee",
+              "characterQuote": "Marketing is all about testing and learning. What works this week might not work next week. That's why we need to stay adaptive."
+            },
+            "retryHint": "Social media success depends on testing and learning. What approach supports continuous experimentation?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Expand Savory & Co. into franchise model. Business model is CLEAR (fees, royalties), but operations are UNCERTAIN (training, support). Timeline: 6 months. What approach fits best?",
+            "points": 100,
+            "scenario_name": "Franchise Expansion",
+            "situation": "Savory & Co. is expanding into a franchise model. The business model — including franchise fees, royalty structure, and brand standards — is already defined and approved by investors. However, operational details like franchisee training programs and ongoing support processes still need to be developed through trial and feedback.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Predictive — plan everything upfront, execute sequentially",
+                "correct": false,
+                "whyWrong": "Operations (training, support) are uncertain and need iteration with franchisees."
+              },
+              {
+                "id": "B",
+                "text": "Adaptive — iterate on everything including business model",
+                "correct": false,
+                "whyWrong": "The business model (fees, royalties, brand) must be fixed upfront."
+              },
+              {
+                "id": "C",
+                "text": "Hybrid — predictive for business model, adaptive for operations",
+                "correct": true
+              }
+            ],
+            "explanation": "Franchise expansion has CLEAR business requirements (fees, royalties) but UNCERTAIN operations (training, support). Hybrid balances predictive governance with adaptive execution.",
+            "correctFeedback": {
+              "text": "Franchise expansion has CLEAR business requirements (fees, royalties) but UNCERTAIN operations (training, support). Hybrid balances predictive governance with adaptive execution.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I need the business model locked in for investors, but we should iterate on how we support franchisees."
+            },
+            "retryHint": "Some requirements are clear (business model), others are uncertain (operations). What approach handles both?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the three main project life cycles: **Predictive** (sequential, fixed requirements), **Adaptive** (iterative, uncertain requirements), and **Hybrid** (blended). The right approach depends on requirements certainty, change cost, and stakeholder involvement — not trends or personal preference.",
+        "key_takeaways": [
+          "PREDICTIVE (Waterfall): Sequential phases, upfront planning, low change tolerance. Use when requirements are CLEAR and STABLE.",
+          "ADAPTIVE (Agile): Iterative cycles, continuous planning, high change tolerance. Use when requirements are UNCERTAIN and EVOLVING.",
+          "HYBRID: Blends both — upfront planning for stable elements, iterative execution for uncertain elements.",
+          "Selection Criteria: Requirements certainty, change cost, stakeholder involvement",
+          "PMI Approach: Life cycle CONTINUUM (not one-size-fits-all). TAILOR the approach to the project context.",
+          "Common Mistake: Choosing Agile because it's trendy, or Predictive because it's familiar. Choose based on PROJECT CHARACTERISTICS."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L5",
+          "title": "Organizational Structures",
+          "description": "Learn how organizational structure affects your authority, resources, and project approach."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Which development approach should the project manager recommend?",
+            "points": 50,
+            "scenario_name": "Software Development Approach",
+            "situation": "A software company is building a new mobile banking app. The regulatory requirements for security and compliance are strictly defined by banking authorities. However, the user interface and customer features need extensive user testing and iteration based on customer feedback. The project has a fixed compliance deadline of 6 months.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Predictive approach for the entire project to meet the compliance deadline",
+                "correct": false,
+                "whyWrong": "While compliance requirements are fixed, the UI/UX features need iteration."
+              },
+              {
+                "id": "B",
+                "text": "Adaptive approach for the entire project to allow maximum flexibility",
+                "correct": false,
+                "whyWrong": "Banking compliance requirements are non-negotiable and fixed by regulators."
+              },
+              {
+                "id": "C",
+                "text": "Hybrid approach: predictive for compliance, adaptive for user features",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Let the development team choose their preferred methodology",
+                "correct": false,
+                "whyWrong": "Approach selection should be based on project characteristics, not team preference."
+              }
+            ],
+            "explanation": "This project has BOTH fixed requirements (regulatory compliance) AND uncertain requirements (user experience). Hybrid is ideal.",
+            "correctFeedback": {
+              "text": "This project has BOTH fixed requirements (regulatory compliance) AND uncertain requirements (user experience). Hybrid is ideal.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "When you have both fixed AND uncertain requirements, hybrid gives you the best of both worlds."
+            },
+            "retryHint": "Think about which requirements are fixed (compliance) and which need iteration (user experience). What approach handles both?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What does this situation demonstrate about the predictive life cycle?",
+            "points": 50,
+            "scenario_name": "Construction Project Scope Change",
+            "situation": "A project manager is overseeing the construction of a new restaurant. Three months in, the investor requests adding a rooftop bar — a significant scope change. The foundation and framing are already complete.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Predictive projects cannot accommodate any changes",
+                "correct": false,
+                "whyWrong": "Predictive projects CAN accommodate changes through formal change control, but changes are costly and disruptive."
+              },
+              {
+                "id": "B",
+                "text": "The project should have used an adaptive approach instead",
+                "correct": false,
+                "whyWrong": "Construction requires predictive because you can't 'iterate' on a foundation."
+              },
+              {
+                "id": "C",
+                "text": "Changes in predictive projects are possible but require formal change control and may significantly impact cost/schedule",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "The PM should reject all scope changes in predictive projects",
+                "correct": false,
+                "whyWrong": "PMs don't reject changes — they assess impacts and facilitate decisions."
+              }
+            ],
+            "explanation": "Predictive projects CAN handle changes, but through formal change control because changes are costly.",
+            "correctFeedback": {
+              "text": "Predictive projects CAN handle changes, but through formal change control because changes are costly.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Adding a rooftop bar now means structural changes, permit updates, and timeline extension. Let's present the investor with the real cost."
+            },
+            "retryHint": "Consider: predictive projects have formal change control. What happens when a change is requested?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the project manager tell the product owner about the timeline?",
+            "points": 50,
+            "scenario_name": "Agile Team Velocity",
+            "situation": "An Agile team developing a new restaurant ordering app has completed 4 two-week sprints. Their velocity has stabilized at 24 story points per sprint. The product owner wants to know when all 120 remaining story points will be completed.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Exactly 5 sprints (10 weeks) based on velocity calculation",
+                "correct": false,
+                "whyWrong": "While the math suggests 5 sprints, agile planning acknowledges uncertainty."
+              },
+              {
+                "id": "B",
+                "text": "Approximately 5 sprints, but this is a forecast subject to change as the backlog evolves",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cannot predict — Agile doesn't allow timeline forecasting",
+                "correct": false,
+                "whyWrong": "Agile absolutely allows forecasting using velocity."
+              },
+              {
+                "id": "D",
+                "text": "The team should commit to completing all work in 4 sprints to show improvement",
+                "correct": false,
+                "whyWrong": "Forcing commitment beyond demonstrated velocity undermines sustainable pace."
+              }
+            ],
+            "explanation": "In Adaptive (Agile), velocity enables forecasting (120 ÷ 24 = ~5 sprints), but forecasts are APPROXIMATE because velocity varies, priorities may change, and new items may be discovered.",
+            "correctFeedback": {
+              "text": "In Adaptive (Agile), velocity enables forecasting (120 ÷ 24 = ~5 sprints), but forecasts are APPROXIMATE because velocity varies, priorities may change, and new items may be discovered.",
+              "character": "Morgan Lee",
+              "characterQuote": "I'll plan for 5 sprints, but we'll re-evaluate after each one. That's the beauty of adaptive planning."
+            },
+            "retryHint": "Agile uses velocity for forecasting, but treats forecasts as approximations. What's the right way to communicate this?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What should the project manager recommend as the PRIMARY basis for selecting the life cycle approach?",
+            "points": 50,
+            "scenario_name": "Life Cycle Selection Criteria",
+            "situation": "A restaurant chain is considering two project approaches for developing a new loyalty program. The IT director suggests predictive because 'it provides more control.' The marketing director suggests agile because 'it's more innovative.' Neither has analyzed the project characteristics.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Choose based on which department has more organizational influence",
+                "correct": false,
+                "whyWrong": "Life cycle selection should be based on project characteristics, not organizational politics."
+              },
+              {
+                "id": "B",
+                "text": "Analyze project characteristics: requirements certainty, change tolerance, stakeholder involvement needs",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Default to hybrid as a compromise between the two directors",
+                "correct": false,
+                "whyWrong": "Hybrid should be chosen when project characteristics require it, not as a political compromise."
+              },
+              {
+                "id": "D",
+                "text": "Use whatever approach the team is most experienced with",
+                "correct": false,
+                "whyWrong": "Team experience matters, but approach selection should START with project characteristics."
+              }
+            ],
+            "explanation": "PMI emphasizes TAILORING — selecting the approach based on project characteristics, not personal preferences, trends, or politics.",
+            "correctFeedback": {
+              "text": "PMI emphasizes TAILORING — selecting the approach based on project characteristics, not personal preferences, trends, or politics.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The right approach depends on the project, not the people arguing about it. Start with the characteristics."
+            },
+            "retryHint": "PMI emphasizes tailoring based on project characteristics. What factors should the PM analyze?"
+          }
+        ]
+      }
+    }
+  ]
+}

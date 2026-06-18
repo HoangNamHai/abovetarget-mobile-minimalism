@@ -1,0 +1,775 @@
+{
+  "lessonId": "D2L4",
+  "lessonTitle": "Agile Estimation Techniques",
+  "courseId": "D2",
+  "courseName": "Agile Planning & Tracking",
+  "pathId": "D",
+  "pathName": "Agile",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Apply Planning Poker to estimate user stories using relative sizing",
+    "Use T-Shirt sizing for rapid estimation of epics and roadmap items",
+    "Distinguish between story points and time-based estimates",
+    "Facilitate estimation discussions when divergence reveals hidden assumptions",
+    "Select appropriate estimation technique based on context"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "morgan_lee",
+    "maya_rodriguez",
+    "devon_brown",
+    "taylor_kim"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "18 Stories, 2 Hours, Zero Consensus: Why Can't the Team Just Estimate in Hours?",
+        "intro": "You're **Alex Mitchell**, Scrum Master at Savory & Co. Sprint Planning starts in 2 hours and the backlog has 18 user stories that need estimates. Taylor wants to estimate in hours like the old days. Morgan wants delivery dates. But when the team plays Planning Poker for Story US-101 (\"Filter menu by dietary restrictions\"), Maya estimates 2 points and Devon estimates 8 points. Morgan suggests averaging to 5 and moving on. But Alex knows that 2-versus-8 divergence is hiding something critical the team hasn't discussed yet.",
+        "failure_cards": [
+          {
+            "id": "the_averaging_trap",
+            "icon": "📋",
+            "title": "The Averaging Trap",
+            "summary": "Morgan averages the estimates — and the team underestimates by 60%",
+            "image": "/images/D2L4_comic_averaging_trap.webp",
+            "details": "Without discussion, the team averaged Maya's 2 and Devon's 8 to get 5 points. Mid-sprint, the team discovered that dietary restriction data didn't exist in the database — schema changes, data migration, and backfilling 200 menu items were needed. The story actually required 13 points of effort. The sprint failed because averaging destroyed the signal that divergence was sending."
+          },
+          {
+            "id": "the_hours_trap",
+            "icon": "⚠️",
+            "title": "The Hours Trap",
+            "summary": "Taylor estimates in hours — and every estimate becomes a deadline",
+            "image": "/images/D2L4_comic_hours_trap.webp",
+            "details": "Taylor estimated Story US-101 at \"8 hours.\" Morgan immediately asked: \"So it'll be done by Wednesday?\" When it took 14 hours, Morgan was frustrated: \"You said 8 hours!\" Taylor: \"I said 8 hours of effort, not calendar time!\" Hours create false precision and invite micromanagement. Every estimate becomes a promise, and every miss becomes a failure."
+          },
+          {
+            "id": "the_silent_estimation",
+            "icon": "💡",
+            "title": "The Silent Estimation",
+            "summary": "Maya speaks first — and anchors every estimate downward",
+            "image": "/images/D2L4_comic_silent_estimation.webp",
+            "details": "When the team estimated one story at a time, Maya always spoke first: \"That's a 3.\" Everyone else adjusted slightly: 3, 3, 2, 3. But Maya's experience masked complexity that junior team members would have caught. When Devon finally spoke up mid-sprint: \"Wait, this needs database changes!\" it was too late. Anchoring bias silenced independent thinking."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "alex_mitchell",
+          "name": "Alex Mitchell",
+          "role": "Scrum Master",
+          "quote": "That 2-versus-8 divergence wasn't a problem to average away. It was a gift — it revealed a hidden dependency we would have discovered mid-sprint otherwise. Divergence is the most valuable signal in estimation."
+        },
+        "learning_hook": "**Planning Poker** uses simultaneous reveal, Fibonacci sequence, and team discussion to produce better estimates than any individual expert. Story points measure relative complexity — not hours. And when estimates diverge, the discussion that follows is where the real value lies. Let's learn the three estimation techniques every agile team needs."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "mastering_agile_estimation",
+        "title": "Mastering Agile Estimation",
+        "description": "The team needs to estimate 18 stories before Sprint Planning. Alex teaches Planning Poker, story points, and when to use each estimation technique.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "As the facilitator, what should Alex do NEXT?",
+            "points": 100,
+            "scenario_name": "The Divergence Dilemma",
+            "situation": "During Planning Poker for Story US-101 (\"Filter menu by dietary restrictions\"), Maya estimates 2 points and Devon estimates 8 points. Taylor estimates 5. Morgan suggests: \"Let's just average to 5 and move on — we have 17 more stories.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Average the estimates: (2+8+5)/3 = 5 points",
+                "correct": false,
+                "whyWrong": "Averaging (5 points) destroys the signal. Maya's 2 and Devon's 8 reflect different assumptions about scope — averaging hides the gap instead of resolving it. The story actually needed 8+ points."
+              },
+              {
+                "id": "B",
+                "text": "Ask Maya (2) and Devon (8) to explain their assumptions, then have the team re-estimate",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Ask Morgan (Product Owner) to decide the correct estimate",
+                "correct": false,
+                "whyWrong": "The Product Owner does NOT estimate. Morgan can clarify requirements but should not dictate point values. Estimation is a development team responsibility."
+              },
+              {
+                "id": "D",
+                "text": "Use the highest estimate (8) to be safe",
+                "correct": false,
+                "whyWrong": "Using the highest estimate (8) is safer than averaging but misses the learning opportunity. The team doesn't understand WHY it's 8, so they can't plan accordingly or split the story."
+              }
+            ],
+            "explanation": "When estimates diverge significantly, the facilitator asks the highest and lowest estimators to explain their reasoning. This discussion reveals hidden assumptions — Maya assumed dietary data exists, Devon knew it didn't. After discussion, the team re-estimates with shared understanding. This is the core value of Planning Poker: divergence triggers discussion that uncovers what individuals miss.",
+            "correctFeedback": {
+              "text": "When estimates diverge significantly, the facilitator asks the highest and lowest estimators to explain their reasoning. This discussion reveals hidden assumptions — Maya assumed dietary data exists, Devon knew it didn't. After discussion, the team re-estimates with shared understanding. This is the core value of Planning Poker: divergence triggers discussion that uncovers what individuals miss.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Maya assumed the dietary data existed. Devon knew it didn't. That 2-versus-8 gap saved us from a mid-sprint surprise. Discussion is the point — not the number."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Averaging destroys information. The gap between 2 and 8 is telling you something important. Ask the outliers WHY they estimated differently.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Averaging destroys information. The gap between 2 and 8 is telling you something important. Ask the outliers WHY they estimated differently."
+            },
+            "retryHint": "When estimates diverge by more than 3x, that gap contains critical information. What step in Planning Poker comes after simultaneous reveal?"
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Drag each estimation technique to the work type it's best suited for:",
+            "points": 100,
+            "scenario_name": "Technique Selection",
+            "situation": "The backlog contains two types of work: 18 sprint-ready user stories with clear acceptance criteria, and 5 high-level epics that span multiple sprints. Alex needs the team to use the right estimation technique for each type.",
+            "chips": [
+              {
+                "id": "planning_poker_fibonacci",
+                "label": "Planning Poker (Fibonacci)",
+                "correctZone": "sprintready_stories_needing_accurate_estimates"
+              },
+              {
+                "id": "tshirt_sizing_xs_s_m_l_xl",
+                "label": "T-Shirt Sizing (XS/S/M/L/XL)",
+                "correctZone": "highlevel_epics_for_roadmap_planning"
+              },
+              {
+                "id": "affinity_estimation",
+                "label": "Affinity Estimation",
+                "correctZone": "large_backlog_needing_rapid_categorization"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "sprintready_stories_needing_accurate_estimates",
+                "label": "Sprint-ready stories needing accurate estimates",
+                "detail": "Planning Poker provides high accuracy through discussion and simultaneous reveal — ideal for sprint-level stories"
+              },
+              {
+                "id": "highlevel_epics_for_roadmap_planning",
+                "label": "High-level epics for roadmap planning",
+                "detail": "T-Shirt sizing is fast and coarse-grained — perfect for epics where precision isn't needed yet"
+              },
+              {
+                "id": "large_backlog_needing_rapid_categorization",
+                "label": "Large backlog needing rapid categorization",
+                "detail": "Affinity estimation uses silent sorting into size groups — fastest technique for bulk estimation"
+              }
+            ],
+            "explanation": "Each technique trades off speed versus accuracy. Planning Poker is slowest but most accurate (5-10 min/story) — use it for sprint stories. T-Shirt sizing is fast and coarse (1-2 min/epic) — use it for roadmap-level items. Affinity Estimation is the fastest (15 min for 20+ stories) — use it when you need to categorize a large backlog quickly before refining priorities.",
+            "correctFeedback": {
+              "text": "Each technique trades off speed versus accuracy. Planning Poker is slowest but most accurate (5-10 min/story) — use it for sprint stories. T-Shirt sizing is fast and coarse (1-2 min/epic) — use it for roadmap-level items. Affinity Estimation is the fastest (15 min for 20+ stories) — use it when you need to categorize a large backlog quickly before refining priorities.",
+              "character": "Taylor Kim",
+              "characterQuote": "We estimated 5 epics with T-shirts in 10 minutes, then spent 45 minutes on Planning Poker for 8 sprint stories. Right precision for each context — I finally get it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what each technique optimizes for. Planning Poker optimizes for accuracy through discussion. T-Shirt sizing optimizes for speed at the epic level. Affinity optimizes for bulk categorization.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about what each technique optimizes for. Planning Poker optimizes for accuracy through discussion. T-Shirt sizing optimizes for speed at the epic level. Affinity optimizes for bulk categorization."
+            },
+            "retryHint": "Match precision to need: high precision for sprint stories (Planning Poker), coarse sizing for epics (T-Shirts), and speed for large backlogs (Affinity)."
+          },
+          {
+            "q_id": "q3",
+            "type": "multi_select",
+            "question": "Which statements about story points are TRUE? Select all that apply.",
+            "points": 100,
+            "scenario_name": "Story Points Truth Test",
+            "situation": "Taylor says: \"I estimated Story US-105 at 5 points. Morgan asked how many hours that is. I said 5 hours.\" Maya corrects Taylor, explaining that story points are not the same as hours.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Story points measure calendar time (5 points = 5 hours)",
+                "correct": false,
+                "whyWrong": "Story points do NOT measure time. A 5-point story might take a senior developer 4 hours and a junior 12 hours. The complexity is the same; the time is not. Equating points to hours defeats their purpose."
+              },
+              {
+                "id": "B",
+                "text": "Story points measure relative complexity, effort, and risk",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Story points are team-specific (Team A's 5 does not equal Team B's 5)",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Story points should be converted to hours for scheduling",
+                "correct": false,
+                "whyWrong": "Converting story points to hours reintroduces all the problems story points solve: false precision, micromanagement, and person-dependent estimates. Use velocity instead."
+              },
+              {
+                "id": "E",
+                "text": "Velocity (points/sprint) makes delivery predictable without hourly tracking",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "The Fibonacci sequence forces appropriate imprecision for larger estimates",
+                "correct": true
+              }
+            ],
+            "explanation": "Story points are an ABSTRACT measure of relative complexity, effort, and risk — not calendar time. They are team-specific because each team calibrates differently. Velocity (average points completed per sprint) enables delivery forecasting without converting to hours. The Fibonacci sequence (1, 2, 3, 5, 8, 13) forces appropriate imprecision — large work has more uncertainty, so you can't meaningfully distinguish 6 from 7.",
+            "correctFeedback": {
+              "text": "Story points are an ABSTRACT measure of relative complexity, effort, and risk — not calendar time. They are team-specific because each team calibrates differently. Velocity (average points completed per sprint) enables delivery forecasting without converting to hours. The Fibonacci sequence (1, 2, 3, 5, 8, 13) forces appropriate imprecision — large work has more uncertainty, so you can't meaningfully distinguish 6 from 7.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "5 points might take me 4 hours but take Taylor 10 hours. The point value is the same because the complexity is the same. We track velocity, not hours."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Story points are not hours. They measure complexity, not time. If you can convert points to hours, you're doing it wrong.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Story points are not hours. They measure complexity, not time. If you can convert points to hours, you're doing it wrong."
+            },
+            "retryHint": "Story points measure three dimensions: complexity, effort, and uncertainty. They are abstract and team-specific. What makes delivery predictable if not hours?"
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What should the team estimate for this story?",
+            "points": 100,
+            "scenario_name": "Fibonacci Gaps",
+            "situation": "A story is more complex than the team's 5-point baseline but less complex than their 8-point reference story. Team members are debating between 6 and 7 points. Alex reminds them the Fibonacci sequence does not include 6 or 7.",
+            "options": [
+              {
+                "id": "A",
+                "text": "5 points — round down to be optimistic",
+                "correct": false,
+                "whyWrong": "Rounding down to 5 is optimistic and ignores the uncertainty that comes with larger work. If the team thinks it's bigger than 5, it's probably 8."
+              },
+              {
+                "id": "B",
+                "text": "6 or 7 points — use the actual number they think is right",
+                "correct": false,
+                "whyWrong": "6 and 7 are not on the Fibonacci scale. Using non-Fibonacci numbers defeats the purpose of forcing appropriate imprecision. The team would debate endlessly between 6 and 7 with no meaningful difference."
+              },
+              {
+                "id": "C",
+                "text": "8 points — round up because larger work has more uncertainty",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "13 points — add buffer for safety",
+                "correct": false,
+                "whyWrong": "13 points is a significant overestimate. The story is between 5 and 8 — jumping to 13 wastes capacity and signals the story should be split, which isn't warranted here."
+              }
+            ],
+            "explanation": "The Fibonacci sequence intentionally skips 6 and 7. Why? Larger work has more uncertainty — you cannot meaningfully distinguish \"6\" from \"7\" with confidence. When work falls between 5 and 8, round UP to 8 to acknowledge that uncertainty. Fibonacci forces appropriate imprecision: the gaps grow as numbers increase because so does uncertainty.",
+            "correctFeedback": {
+              "text": "The Fibonacci sequence intentionally skips 6 and 7. Why? Larger work has more uncertainty — you cannot meaningfully distinguish \"6\" from \"7\" with confidence. When work falls between 5 and 8, round UP to 8 to acknowledge that uncertainty. Fibonacci forces appropriate imprecision: the gaps grow as numbers increase because so does uncertainty.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Fibonacci forces us to admit 'I can't tell if this is 6 or 7, so it's probably 8.' That humility improves accuracy over time."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The Fibonacci sequence gaps are intentional. Between 5 and 8, there's no 6 or 7. When in doubt, round up — uncertainty grows with complexity.",
+              "character": "Alex Mitchell",
+              "characterQuote": "The Fibonacci sequence gaps are intentional. Between 5 and 8, there's no 6 or 7. When in doubt, round up — uncertainty grows with complexity."
+            },
+            "retryHint": "The Fibonacci sequence goes 1, 2, 3, 5, 8, 13. There is no 6 or 7. When a story falls between two Fibonacci values, which direction should you round and why?"
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "What Planning Poker rule specifically prevents anchoring bias?",
+            "points": 100,
+            "scenario_name": "Avoiding Anchoring Bias",
+            "situation": "During a Planning Poker session, Maya (the most senior developer) is about to share her estimate first. She often estimates lower because of her experience, which tends to pull the team's estimates down.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The Product Owner assigns the estimate based on priority",
+                "correct": false,
+                "whyWrong": "The Product Owner does NOT estimate. The PO clarifies requirements and answers questions, but estimation is the development team's responsibility."
+              },
+              {
+                "id": "B",
+                "text": "All team members reveal their cards simultaneously after a countdown",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "The Scrum Master picks the median estimate",
+                "correct": false,
+                "whyWrong": "The Scrum Master facilitates discussion but does not pick estimates. Estimates come from team consensus after discussion of divergence."
+              },
+              {
+                "id": "D",
+                "text": "Team members estimate in order from most junior to most senior",
+                "correct": false,
+                "whyWrong": "Estimating in order (junior to senior) still creates anchoring — junior members anchor to the first estimate and senior members feel pressure to validate. Only simultaneous reveal eliminates anchoring."
+              }
+            ],
+            "explanation": "Simultaneous reveal is the key anti-anchoring mechanism in Planning Poker. If Maya says \"2\" first, others unconsciously anchor to 2 and adjust slightly. By revealing all cards at the same time after silent estimation, each person commits to their independent assessment before seeing others. This produces genuine divergence when assumptions differ — which is exactly what the team needs to surface.",
+            "correctFeedback": {
+              "text": "Simultaneous reveal is the key anti-anchoring mechanism in Planning Poker. If Maya says \"2\" first, others unconsciously anchor to 2 and adjust slightly. By revealing all cards at the same time after silent estimation, each person commits to their independent assessment before seeing others. This produces genuine divergence when assumptions differ — which is exactly what the team needs to surface.",
+              "character": "Alex Mitchell",
+              "characterQuote": "If Maya says '2' first, everyone anchors to her number. Simultaneous reveal means Devon's '8' shows up honestly — and that gap is where the real conversation happens."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what happens when the most experienced person speaks first. Does everyone else estimate independently, or do they adjust toward that anchor?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Think about what happens when the most experienced person speaks first. Does everyone else estimate independently, or do they adjust toward that anchor?"
+            },
+            "retryHint": "Anchoring bias means the first number spoken influences everyone else. What mechanism ensures NO ONE sees another's estimate before committing to their own?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Agile Estimation Toolkit",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Planning Poker Process",
+            "subtitle": "",
+            "content": "Planning Poker uses six steps to produce team-consensus estimates:\n\n| Step | Action | Purpose |\n|------|--------|---------|\n| 1 | PO reads story + acceptance criteria | Shared understanding |\n| 2 | Team asks clarifying questions | Reduce assumptions |\n| 3 | Silent estimation (pick card privately) | Avoid anchoring bias |\n| 4 | Simultaneous reveal (countdown: 3, 2, 1, flip!) | Independent thinking |\n| 5 | Discuss divergence (highest and lowest explain) | Uncover hidden assumptions |\n| 6 | Re-estimate until consensus | Shared commitment |\n\n**Why Simultaneous Reveal Matters:** If Maya says \"2 points\" first, others unconsciously anchor to 2 and adjust slightly. Simultaneous reveal ensures independent estimates — and genuine divergence when assumptions differ."
+          },
+          {
+            "id": "tab2",
+            "title": "The Fibonacci Scale",
+            "subtitle": "",
+            "content": "The Fibonacci sequence (1, 2, 3, 5, 8, 13, 21) is used because gaps increase with size — reflecting growing uncertainty:\n\n| Points | Meaning | Savory Example |\n|--------|---------|----------------|\n| 1 | Trivial | Change button label on menu app |\n| 2 | Simple | Add a form field to reservation page |\n| 3 | Moderate | New API endpoint for order status |\n| 5 | Complex | Feature with multiple UI components |\n| 8 | Very complex | Major database refactoring |\n| 13 | Epic-level | Needs splitting into smaller stories |\n| ? | Unclear | Story needs refinement before estimating |\n\n**Why gaps increase:** Large work has more uncertainty. You cannot meaningfully distinguish 14 from 15, so the scale forces you to choose 13 or 21.",
+            "diagram": {
+              "image": "/images/D2L4_diagram_fibonacci_scale.webp",
+              "alt": "Fibonacci estimation scale with examples"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Story Points vs Hours",
+            "subtitle": "",
+            "content": "| Aspect | Hours | Story Points |\n|--------|-------|--------------|\n| **Precision** | False precision (\"8.5 hours\") | Appropriate imprecision (5 or 8) |\n| **Varies by person** | Yes (senior: 4h, junior: 12h) | No (same complexity = same points) |\n| **Creates pressure** | \"It's been 10 hours!\" | No hourly tracking |\n| **Enables** | Micromanagement | Velocity-based forecasting |\n\n**Story points measure three dimensions:**\n1. **Complexity** — Technical difficulty, algorithm complexity\n2. **Effort** — Amount of work, testing, integration\n3. **Uncertainty** — Unknown requirements, new technology"
+          },
+          {
+            "id": "tab4",
+            "title": "Estimation Technique Comparison",
+            "subtitle": "",
+            "content": "| Technique | Best For | Speed | Accuracy | Method |\n|-----------|----------|-------|----------|--------|\n| Planning Poker | Sprint-ready stories | 5-10 min/story | High | Fibonacci cards, discussion |\n| T-Shirt Sizing | Epics, roadmap items | 1-2 min/epic | Low | XS/S/M/L/XL categories |\n| Affinity Estimation | Large backlogs (20+ items) | 15 min/20 stories | Medium | Silent sorting into groups |\n\n**Velocity makes delivery predictable:**\n- Sprint 1: 20 points completed\n- Sprint 2: 22 points completed\n- Sprint 3: 18 points completed\n- Average Velocity: 20 points/sprint\n- 100 points remaining: ~5 sprints to completion",
+            "diagram": {
+              "image": "/images/D2L4_diagram_techniques_comparison.webp",
+              "alt": "Three estimation techniques compared"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Facilitating Your Own Planning Poker",
+        "scenario": {
+          "title": "Facilitating Your Own Planning Poker",
+          "description": "A different agile team at Savory & Co. is estimating stories for the new catering module. You're facilitating their first Planning Poker session. Story US-210: \"As a catering manager, I want to generate custom menus for events (dietary restrictions, budget constraints, headcount).\" **Planning Poker Round 1 results:**",
+          "images": [
+            {
+              "src": "/images/D2L4_comic_transfer.webp",
+              "alt": "Transfer scenario: catering team estimation"
+            }
+          ],
+          "details": [
+            "Maya: 3 points (\"Menu template data exists. Just build filter UI and PDF export.\")",
+            "Devon: 13 points (\"Wait — do we have budget calculation logic? Pricing engine?\")",
+            "Taylor: 8 points (\"Feels bigger than Maya thinks but I'm not sure why.\")"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "What does the 3-versus-13 divergence most likely reveal?",
+            "points": 100,
+            "scenario_name": "Diagnosing the Divergence",
+            "situation": "During Planning Poker for Story US-210, Maya estimates 3 points and Devon estimates 13 points. The spread is significant — a 10-point gap between the lowest and highest estimates.",
+            "options": [
+              {
+                "id": "A",
+                "text": "The team can't estimate properly and needs more training",
+                "correct": false,
+                "whyWrong": "The team is estimating correctly — divergence IS the process working. Planning Poker is designed to surface differences in assumptions, not produce instant agreement."
+              },
+              {
+                "id": "B",
+                "text": "Maya and Devon have different assumptions about what scope is included",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Someone is \"wrong\" and should change their estimate immediately",
+                "correct": false,
+                "whyWrong": "Neither Maya nor Devon is \"wrong.\" They have different assumptions about scope (does pricing exist?). Forcing someone to change without discussion wastes the learning opportunity."
+              },
+              {
+                "id": "D",
+                "text": "The story is too vague to estimate and should be removed from the sprint",
+                "correct": false,
+                "whyWrong": "The story may need clarification, but removing it entirely is premature. The divergence discussion will reveal exactly what needs clarifying — that's the point."
+              }
+            ],
+            "explanation": "Divergence reveals assumption gaps, not skill gaps. Maya assumes the pricing engine already exists (so the story is just UI + PDF = 3 points). Devon knows no pricing logic exists (so the story includes building a pricing engine = 13 points). Neither is \"wrong\" — they have different information about what scope is included. The Planning Poker discussion will align their understanding.",
+            "correctFeedback": {
+              "text": "Divergence reveals assumption gaps, not skill gaps. Maya assumes the pricing engine already exists (so the story is just UI + PDF = 3 points). Devon knows no pricing logic exists (so the story includes building a pricing engine = 13 points). Neither is \"wrong\" — they have different information about what scope is included. The Planning Poker discussion will align their understanding.",
+              "character": "Alex Mitchell",
+              "characterQuote": "This is exactly what happened with Story US-101. Maya and Devon aren't disagreeing — they're working from different information. The discussion will align them."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Divergence isn't a problem to fix — it's information to unpack. Ask yourself: WHY would two experienced developers estimate so differently for the same story?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Divergence isn't a problem to fix — it's information to unpack. Ask yourself: WHY would two experienced developers estimate so differently for the same story?"
+            },
+            "retryHint": "When two experienced developers estimate 3 and 13 for the same story, what's more likely — one of them can't estimate, or they're making different assumptions about what work is included?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "As the facilitator, what is your BEST next step?",
+            "points": 100,
+            "scenario_name": "Facilitator Response",
+            "situation": "As the facilitator, you've seen the 3-versus-13 divergence for Story US-210. Morgan (Product Owner) says: \"Let's just average to 8 and move on. We have more stories to estimate.\" The team looks to you for direction.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Average the estimates: (3+8+13)/3 = 8 points",
+                "correct": false,
+                "whyWrong": "Averaging to 8 hides the assumption gap. If pricing logic doesn't exist (Devon's assumption), the actual work is 13+ points. Averaging produces a number that reflects no one's actual understanding."
+              },
+              {
+                "id": "B",
+                "text": "Ask Maya (3) and Devon (13) to explain their assumptions, then have the team re-estimate",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Pick Devon's 13 since he identified additional complexity",
+                "correct": false,
+                "whyWrong": "Picking Devon's 13 is safer than averaging but skips the discussion. The team doesn't understand WHY it's 13, so they can't plan the work effectively or identify opportunities to split the story."
+              },
+              {
+                "id": "D",
+                "text": "Tell the team to compromise on 8 as a middle ground",
+                "correct": false,
+                "whyWrong": "Compromise (8) is averaging by another name. It doesn't resolve the underlying question: does pricing logic exist or not? That factual question has a factual answer."
+              }
+            ],
+            "explanation": "The facilitator's job is to surface assumptions, not impose estimates. Ask: \"Maya, does your 3 assume pricing logic exists? Devon, what pricing work would your 13 include?\" This targeted questioning uncovers the exact gap. After both explain, the team re-estimates with shared understanding — they might converge on 13, or decide to split the story.",
+            "correctFeedback": {
+              "text": "The facilitator's job is to surface assumptions, not impose estimates. Ask: \"Maya, does your 3 assume pricing logic exists? Devon, what pricing work would your 13 include?\" This targeted questioning uncovers the exact gap. After both explain, the team re-estimates with shared understanding — they might converge on 13, or decide to split the story.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Facilitators don't average, pick, or compromise. We ask questions. 'Maya, tell us about your 3. Devon, tell us about your 13.' The truth is in the gap."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Averaging destroys the signal. Picking the highest is safer but misses the learning. The facilitator's only tool is the right question: 'Why do you see it differently?'",
+              "character": "Alex Mitchell",
+              "characterQuote": "Averaging destroys the signal. Picking the highest is safer but misses the learning. The facilitator's only tool is the right question: 'Why do you see it differently?'"
+            },
+            "retryHint": "The facilitator's most powerful tool is a question, not a number. What question would reveal why Maya and Devon see this story so differently?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Now that everyone knows pricing logic doesn't exist, what should happen next?",
+            "points": 100,
+            "scenario_name": "After Clarification",
+            "situation": "Morgan (PO) confirms: \"No pricing logic exists — it's all manual in Excel currently. We'd need to build budget calculation from scratch.\" Maya's eyes widen: \"Oh, I had no idea. That changes everything.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Force consensus at 8 points as the middle ground",
+                "correct": false,
+                "whyWrong": "Forcing 8 ignores the new information. Everyone now knows pricing must be built from scratch — an 8-point compromise doesn't reflect that reality."
+              },
+              {
+                "id": "B",
+                "text": "Accept Devon's 13 since his assumption was correct",
+                "correct": false,
+                "whyWrong": "Devon's assumption was correct, but the team still needs to re-estimate together. Accepting one person's number — even the right person — skips the team alignment that makes Planning Poker valuable."
+              },
+              {
+                "id": "C",
+                "text": "Have the team re-estimate now that everyone shares the same understanding",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Remove the story from the sprint since it's too complex",
+                "correct": false,
+                "whyWrong": "Removing the story is premature. The story is now well-understood. The team can estimate it accurately or split it into smaller, manageable pieces. Complexity isn't a reason to avoid — it's a reason to plan carefully."
+              }
+            ],
+            "explanation": "With shared understanding (pricing logic must be built from scratch), the team re-estimates together. They might converge on 13, or decide to split the story into \"menu generation\" (5 points) and \"pricing engine\" (8 points). The key outcome is aligned understanding — the team moves forward with a number everyone believes in, not an imposed compromise.",
+            "correctFeedback": {
+              "text": "With shared understanding (pricing logic must be built from scratch), the team re-estimates together. They might converge on 13, or decide to split the story into \"menu generation\" (5 points) and \"pricing engine\" (8 points). The key outcome is aligned understanding — the team moves forward with a number everyone believes in, not an imposed compromise.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Now everyone knows pricing doesn't exist. Re-estimate. The team might land on 13, or they might split the story. Either way, they're making an informed decision together."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Even though Devon was 'right' about pricing, you still re-estimate. The team needs to own the estimate together — that's what builds commitment and accuracy over time.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Even though Devon was 'right' about pricing, you still re-estimate. The team needs to own the estimate together — that's what builds commitment and accuracy over time."
+            },
+            "retryHint": "New information has been revealed. What does the Planning Poker process say to do after discussing divergence? Think about Step 6."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that agile teams use **story points** (abstract complexity measure) instead of hours because relative sizing is more accurate. **Planning Poker** ensures team discussion through simultaneous reveal, **T-Shirt sizing** handles epics quickly, and **Affinity Estimation** speeds through large backlogs. Most importantly, divergence during estimation is VALUABLE — it reveals hidden assumptions that would otherwise surface mid-sprint.",
+        "key_takeaways": [
+          "Story points measure complexity, not time — 5 points is NOT 5 hours. Story points capture complexity, effort, and uncertainty as a relative measure",
+          "Planning Poker prevents anchoring bias — Simultaneous reveal ensures independent estimates. Divergence triggers discussion that uncovers hidden assumptions",
+          "Divergence is a GIFT, not a problem — When Maya estimated 2 and Devon estimated 8, the gap revealed a missing database dependency. Never average away divergence",
+          "Match technique to context — Planning Poker for sprint stories (accuracy), T-Shirt sizing for epics (speed), Affinity Estimation for large backlogs (bulk categorization)",
+          "Fibonacci forces appropriate imprecision — Gaps grow with numbers because uncertainty grows with complexity. Between 5 and 8, round up to 8",
+          "Velocity enables forecasting without hours — Track points completed per sprint, and delivery dates become predictable without micromanaging individual hours"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think estimation was about getting the 'right number.' Now I know the number is secondary — the DISCUSSION is the point. When Maya said 2 and Devon said 8, that gap revealed a hidden database dependency we would have discovered mid-sprint. Planning Poker isn't a voting mechanism. It's a structured way to surface what individuals know but the team hasn't discussed yet."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L5",
+          "title": "Agile Metrics & Tracking",
+          "description": "You've estimated the work — now track progress using velocity charts, burndown charts, and cumulative flow diagrams to keep stakeholders informed and the team on track."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the Scrum Master do FIRST?",
+            "points": 50,
+            "scenario_name": "Handling Divergence",
+            "situation": "During Planning Poker, one team member estimates 2 points while another estimates 13 points for the same user story. The Scrum Master notices the significant divergence and must decide what to do next.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Use the average (7.5 points) to save time",
+                "correct": false,
+                "whyWrong": "Averaging (7.5) hides the assumption gap. If the 13-point estimator identified complexity the 2-point estimator missed, the real effort is closer to 13 — and averaging will cause a mid-sprint failure."
+              },
+              {
+                "id": "B",
+                "text": "Ask both team members to explain their reasoning",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Defer to the more senior developer's estimate",
+                "correct": false,
+                "whyWrong": "Seniority doesn't determine correctness. A junior developer might spot integration complexity that a senior developer overlooks because of familiarity bias. Both perspectives matter."
+              },
+              {
+                "id": "D",
+                "text": "Mark the story as \"unclear\" and skip it",
+                "correct": false,
+                "whyWrong": "Skipping the story wastes the estimation opportunity. The divergence discussion will clarify exactly what's unclear, making the story estimable."
+              }
+            ],
+            "explanation": "Significant divergence (2 vs 13) indicates the estimators have different assumptions about scope, complexity, or technical approach. The Scrum Master should ask both to explain their reasoning — this discussion often reveals hidden dependencies, scope misunderstandings, or technical risks that no individual spotted alone. This is the core value of Planning Poker.",
+            "correctFeedback": {
+              "text": "Significant divergence (2 vs 13) indicates the estimators have different assumptions about scope, complexity, or technical approach. The Scrum Master should ask both to explain their reasoning — this discussion often reveals hidden dependencies, scope misunderstandings, or technical risks that no individual spotted alone. This is the core value of Planning Poker.",
+              "character": "Alex Mitchell",
+              "characterQuote": "A 2-versus-13 gap is a gold mine. One person sees something the other doesn't. Ask them both to explain — the truth is in the discussion."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Averaging destroys the signal. Deferring to seniority silences fresh perspectives. The process is clear: discuss, then re-estimate.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Averaging destroys the signal. Deferring to seniority silences fresh perspectives. The process is clear: discuss, then re-estimate."
+            },
+            "retryHint": "What does significant divergence in Planning Poker always indicate? Different assumptions. What Planning Poker step addresses different assumptions?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST response from the development team?",
+            "points": 50,
+            "scenario_name": "Story Points vs Hours",
+            "situation": "A Product Owner asks the development team: \"How many hours will this 5-point user story take? I need to update the project timeline for stakeholders.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Provide an hour estimate to help the Product Owner plan",
+                "correct": false,
+                "whyWrong": "Providing hours reintroduces false precision and invites micromanagement. \"This 5-point story should take 20 hours\" becomes a deadline, not an estimate."
+              },
+              {
+                "id": "B",
+                "text": "Explain that story points measure relative complexity, and use velocity to forecast delivery dates instead",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Refuse to provide any estimate until the story is fully refined",
+                "correct": false,
+                "whyWrong": "Refusing to help the PO plan is unhelpful. The team should explain HOW to use velocity for forecasting — offering a better tool, not refusing to help."
+              },
+              {
+                "id": "D",
+                "text": "Convert story points to hours using a standard formula (1 point = 4 hours)",
+                "correct": false,
+                "whyWrong": "There is no standard conversion formula. A 5-point story might take a senior developer 8 hours and a junior developer 20 hours. Points measure complexity, not time."
+              }
+            ],
+            "explanation": "Story points measure relative complexity, effort, and risk — not calendar time. Teams track velocity (average points completed per sprint) to forecast delivery dates. If the team completes 20 points per sprint and 60 points remain, stakeholders can expect approximately 3 sprints. This is more reliable than hourly estimates because velocity accounts for real-world factors like meetings, interruptions, and learning curves.",
+            "correctFeedback": {
+              "text": "Story points measure relative complexity, effort, and risk — not calendar time. Teams track velocity (average points completed per sprint) to forecast delivery dates. If the team completes 20 points per sprint and 60 points remain, stakeholders can expect approximately 3 sprints. This is more reliable than hourly estimates because velocity accounts for real-world factors like meetings, interruptions, and learning curves.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Our velocity is 20 points per sprint. With 60 points remaining, tell stakeholders 3 sprints. That's MORE reliable than converting each story to hours."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Converting points to hours defeats the purpose. Story points remove person-dependent time estimates. Use velocity for forecasting instead.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Converting points to hours defeats the purpose. Story points remove person-dependent time estimates. Use velocity for forecasting instead."
+            },
+            "retryHint": "Story points are not hours. What metric do agile teams use to forecast delivery dates without converting points to time?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Which estimation approach is MOST appropriate for this situation?",
+            "points": 50,
+            "scenario_name": "Large Backlog Estimation",
+            "situation": "A team needs to estimate 25 user stories before the next sprint planning session, which starts in 30 minutes. There is not enough time to run full Planning Poker sessions for every story.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Planning Poker for all 25 stories (thorough but slow)",
+                "correct": false,
+                "whyWrong": "Planning Poker for 25 stories would take 2-4 hours (5-10 minutes each). There is only 30 minutes available — this approach is thorough but not feasible."
+              },
+              {
+                "id": "B",
+                "text": "T-Shirt sizing for all 25 stories (fast but imprecise)",
+                "correct": false,
+                "whyWrong": "T-Shirt sizing for all 25 stories is fast but doesn't provide enough precision for sprint-ready stories. Sprint planning needs Fibonacci-level granularity (3 vs 5 vs 8)."
+              },
+              {
+                "id": "C",
+                "text": "Affinity Estimation to quickly categorize all stories, then Planning Poker for the highest-priority ones",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Skip estimation and let developers self-assign based on capacity",
+                "correct": false,
+                "whyWrong": "Skipping estimation means the team has no data for sprint capacity planning. Without estimates, the team risks overcommitting or undercommitting the sprint."
+              }
+            ],
+            "explanation": "With 25 stories and 30 minutes, a hybrid approach works best. Affinity Estimation rapidly categorizes all stories into relative size groups (Small/Medium/Large) in about 15 minutes using silent sorting. Then use the remaining time for Planning Poker on the highest-priority stories being pulled into the sprint. This gives accurate estimates where precision matters most while ensuring the full backlog is sized.",
+            "correctFeedback": {
+              "text": "With 25 stories and 30 minutes, a hybrid approach works best. Affinity Estimation rapidly categorizes all stories into relative size groups (Small/Medium/Large) in about 15 minutes using silent sorting. Then use the remaining time for Planning Poker on the highest-priority stories being pulled into the sprint. This gives accurate estimates where precision matters most while ensuring the full backlog is sized.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Affinity gets all 25 stories roughly sized in 15 minutes. Then spend 15 minutes on Planning Poker for the top 5-6 sprint candidates. Right precision at the right level."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "25 stories in 30 minutes means you need a speed-first technique for the bulk, then precision for the priorities. Which two techniques combine speed and accuracy?",
+              "character": "Alex Mitchell",
+              "characterQuote": "25 stories in 30 minutes means you need a speed-first technique for the bulk, then precision for the priorities. Which two techniques combine speed and accuracy?"
+            },
+            "retryHint": "You need speed for 25 stories AND precision for sprint candidates. Which two techniques could you combine in 30 minutes?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Based on velocity data, how many sprints should stakeholders expect until completion?",
+            "points": 50,
+            "scenario_name": "Velocity Forecasting",
+            "situation": "A team's velocity has been consistently 30 story points per sprint for the past 4 sprints. The remaining backlog contains 90 story points. A stakeholder asks how many sprints until the project is complete.",
+            "options": [
+              {
+                "id": "A",
+                "text": "1-2 sprints (the team will accelerate as they gain experience)",
+                "correct": false,
+                "whyWrong": "Assuming acceleration without evidence is optimistic bias. Velocity has been stable at 30 for 4 sprints — there's no data to suggest the team will suddenly speed up."
+              },
+              {
+                "id": "B",
+                "text": "3 sprints (90 points / 30 points per sprint = 3)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "4-5 sprints (add significant buffer for uncertainty)",
+                "correct": false,
+                "whyWrong": "Adding 1-2 extra sprints of buffer contradicts the velocity data. Four sprints of consistency at 30 points is strong evidence. Excessive buffering undermines trust in the team's data."
+              },
+              {
+                "id": "D",
+                "text": "Cannot be determined without converting story points to hours",
+                "correct": false,
+                "whyWrong": "Story points plus velocity explicitly avoid the need for hour conversion. Velocity-based forecasting (90/30 = 3 sprints) is more reliable than summing individual hour estimates."
+              }
+            ],
+            "explanation": "Velocity (30 points/sprint over 4 sprints) provides reliable forecasting. 90 remaining points divided by 30 points/sprint equals 3 sprints. Consistent velocity over 4 sprints gives high confidence in this forecast. This demonstrates why story points plus velocity are superior to hourly estimates — delivery prediction requires no time tracking, just historical throughput data.",
+            "correctFeedback": {
+              "text": "Velocity (30 points/sprint over 4 sprints) provides reliable forecasting. 90 remaining points divided by 30 points/sprint equals 3 sprints. Consistent velocity over 4 sprints gives high confidence in this forecast. This demonstrates why story points plus velocity are superior to hourly estimates — delivery prediction requires no time tracking, just historical throughput data.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Four sprints of consistent velocity at 30 points gives us high confidence. 90 divided by 30 equals 3 sprints. No hours needed — velocity does the forecasting."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Velocity is the most reliable forecasting tool in agile. If the team has been completing 30 points per sprint consistently, what does simple division tell you?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Velocity is the most reliable forecasting tool in agile. If the team has been completing 30 points per sprint consistently, what does simple division tell you?"
+            },
+            "retryHint": "Velocity = average points completed per sprint. With 4 sprints of consistent data at 30 points, what's the simplest calculation for 90 remaining points?"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,705 @@
+{
+  "lessonId": "A1L1",
+  "lessonTitle": "What is Project Management?",
+  "courseId": "A1",
+  "courseName": "Introduction to Project Management",
+  "pathId": "A",
+  "pathName": "Foundation",
+  "domain": "Business Environment",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish projects (temporary, unique) from operations (ongoing, repetitive)",
+    "Understand the triple constraint (Scope, Time, Cost) and trade-offs",
+    "Identify project success factors: objectives, stakeholder satisfaction, value delivery",
+    "Recognize when work should be project vs operational",
+    "Apply PM fundamentals to real restaurant scenarios"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "morgan_lee",
+    "maya_rodriguez"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Alex's First Day: Three Failed Projects at Savory & Co.",
+        "intro": "You're **Alex Mitchell**, the newly hired Project Manager at Savory & Co., a popular restaurant chain. Your boss, **Carlos Mendez** (General Manager), is skeptical about why they need project management.",
+        "failure_cards": [
+          {
+            "id": "menu_launch_disaster",
+            "icon": "📋",
+            "title": "Menu Launch Disaster",
+            "summary": "6 months late, 50% over budget",
+            "image": "/images/A1L1_comic_menu.webp",
+            "details": "The new seasonal menu was supposed to launch in October for the fall rush. Instead, it dragged on until April — 6 months late. Recipe testing wasn't finished, suppliers weren't lined up, and the budget ballooned from $20K to $30K. Customers complained about the old menu getting stale, and competitors gained market share."
+          },
+          {
+            "id": "kitchen_renovation_abandoned",
+            "icon": "⚠️",
+            "title": "Kitchen Renovation Abandoned",
+            "summary": "Stopped mid-construction, never completed",
+            "image": "/images/A1L1_comic_kitchen.webp",
+            "details": "Started upgrading the kitchen with new equipment and layout. Halfway through, the project just... stopped. No one knew who was in charge. The contractor kept asking questions no one could answer. Equipment sat in boxes for months. The kitchen operated at half capacity, and staff morale tanked. Eventually, they just put the old equipment back."
+          },
+          {
+            "id": "pos_system_implementation",
+            "icon": "💡",
+            "title": "POS System Implementation",
+            "summary": "Installed but never used — $35K wasted",
+            "image": "/images/A1L1_comic_pos.webp",
+            "details": "Bought a fancy new Point-of-Sale system for $35K. IT installed it, but no one trained the staff. Servers didn't know how to use it. Managers didn't know how to run reports. After 2 weeks of chaos and customer complaints, they switched back to the old system. The new one still sits there, unused."
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "carlos_mendez",
+          "name": "Carlos Mendez",
+          "role": "General Manager",
+          "quote": "You're here to fix our track record. But first, you need to understand something fundamental about our business."
+        },
+        "learning_hook": "**All work is NOT the same.** Some work needs project management, some doesn't. Let's learn the difference."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "classify_each_type_of_work",
+        "title": "Classify Each Type of Work",
+        "description": "Savory & Co. has three types of work happening right now. Which ones are PROJECTS and which are OPERATIONS?",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "Is this a PROJECT or OPERATIONS?",
+            "points": 80,
+            "scenario_name": "Daily Food Service",
+            "situation": "Every day, the kitchen prepares lunch and dinner for 200+ customers using established recipes and procedures.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Project (temporary, unique)",
+                "correct": false,
+                "whyWrong": "Projects have defined end dates and create unique deliverables. Daily food service has no end date — it continues indefinitely using established, repetitive processes."
+              },
+              {
+                "id": "B",
+                "text": "Operations (ongoing, repetitive)",
+                "correct": true
+              }
+            ],
+            "explanation": "Daily food service is OPERATIONS because it's ongoing (no end date) and repetitive (same process every day).",
+            "correctFeedback": {
+              "text": "Daily food service is OPERATIONS because it's ongoing (no end date) and repetitive (same process every day).",
+              "character": "Carlos Mendez",
+              "characterQuote": "Right. We've been running daily service for 10 years. There's no 'finish line' — we just keep doing it, day after day. That's operations."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about it: we serve meals every single day. There's no deadline, no unique deliverable. We're not creating something new — we're sustaining the business.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about it: we serve meals every single day. There's no deadline, no unique deliverable. We're not creating something new — we're sustaining the business."
+            },
+            "retryHint": "Consider: Does daily food service have an end date? Is each day's service unique or the same process repeated?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "Is this a PROJECT or OPERATIONS?",
+            "points": 80,
+            "scenario_name": "Menu Innovation Lab",
+            "situation": "Creating 12 new seasonal dishes for fall menu. Launch date: October 1. Budget: $25K. This is a one-time initiative.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Project (temporary, unique)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Operations (ongoing, repetitive)",
+                "correct": false,
+                "whyWrong": "Operations are ongoing with no defined end date. This initiative has a specific deadline (October 1), a budget ($25K), and creates something unique (12 new dishes) — all hallmarks of a project."
+              }
+            ],
+            "explanation": "Menu Innovation Lab is a PROJECT because it has a defined end date (Oct 1) and creates something unique (12 new dishes).",
+            "correctFeedback": {
+              "text": "Menu Innovation Lab is a PROJECT because it has a defined end date (Oct 1) and creates something unique (12 new dishes).",
+              "character": "Maya Rodriguez",
+              "characterQuote": "This is exactly the kind of work that failed before because no one managed it like a project. A clear deadline, budget, and scope — that's what makes it manageable."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: creating NEW dishes is different from cooking existing ones every day. One is a one-time effort with a deadline, the other is ongoing work.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Remember: creating NEW dishes is different from cooking existing ones every day. One is a one-time effort with a deadline, the other is ongoing work."
+            },
+            "retryHint": "Check the three clues: Is there a deadline? A budget? A unique deliverable? What kind of work has all three?"
+          },
+          {
+            "q_id": "q3",
+            "type": "drag_drop",
+            "question": "Drag each constraint to match the project detail:",
+            "points": 85,
+            "scenario_name": "Match the Triple Constraint",
+            "situation": "Now that you identified this as a project, let's break down the constraints.",
+            "chips": [
+              {
+                "id": "scope",
+                "label": "SCOPE",
+                "correctZone": "what_will_be_delivered"
+              },
+              {
+                "id": "time",
+                "label": "TIME",
+                "correctZone": "when_must_it_be_done"
+              },
+              {
+                "id": "cost",
+                "label": "COST",
+                "correctZone": "how_much_can_be_spent"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "what_will_be_delivered",
+                "label": "What will be delivered?",
+                "detail": "12 new seasonal dishes"
+              },
+              {
+                "id": "when_must_it_be_done",
+                "label": "When must it be done?",
+                "detail": "October 1 deadline"
+              },
+              {
+                "id": "how_much_can_be_spent",
+                "label": "How much can be spent?",
+                "detail": "$25K budget"
+              }
+            ],
+            "explanation": "The triple constraint defines every project: SCOPE (what), TIME (when), COST (how much).",
+            "correctFeedback": {
+              "text": "The triple constraint defines every project: SCOPE (what), TIME (when), COST (how much).",
+              "character": "Morgan Lee",
+              "characterQuote": "The triple constraint is like a three-legged stool. Change one leg, and the whole thing wobbles. That's why PMs obsess over balancing all three."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what each constraint actually limits. Scope limits the work, time limits the schedule, cost limits the spending.",
+              "character": "Morgan Lee",
+              "characterQuote": "Think about what each constraint actually limits. Scope limits the work, time limits the schedule, cost limits the spending."
+            },
+            "retryHint": "SCOPE answers 'what?', TIME answers 'when?', COST answers 'how much?' Match each to the right question."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What happens if the team focuses ONLY on time (meeting the October 1 deadline)?",
+            "points": 85,
+            "scenario_name": "Triple Constraint Trade-offs",
+            "situation": "The Menu Innovation Lab team is under pressure to meet the October 1 deadline. The chef suggests focusing ONLY on hitting the launch date, no matter what.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Quality improves (more time for testing)",
+                "correct": false,
+                "whyWrong": "Rushing to meet a deadline *reduces* time for testing, not increases it."
+              },
+              {
+                "id": "B",
+                "text": "Scope or cost likely increases",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Stakeholders are more satisfied",
+                "correct": false,
+                "whyWrong": "Rushing often leads to quality issues and corner-cutting, which *decreases* satisfaction."
+              },
+              {
+                "id": "D",
+                "text": "Nothing changes (constraints are independent)",
+                "correct": false,
+                "whyWrong": "The triple constraint is interconnected — scope, time, and cost are NOT independent."
+              }
+            ],
+            "explanation": "Focusing ONLY on the deadline creates pressure. The team might: cut corners on testing (quality drops), pay rush fees (cost increases), or reduce dish count (scope decreases). The triple constraint is interconnected — you can't optimize one without impacting others.",
+            "correctFeedback": {
+              "text": "Focusing ONLY on the deadline creates pressure. The team might: cut corners on testing (quality drops), pay rush fees (cost increases), or reduce dish count (scope decreases). The triple constraint is interconnected — you can't optimize one without impacting others.",
+              "character": "Morgan Lee",
+              "characterQuote": "This is what killed our kitchen renovation. Everyone focused on 'getting it done fast' without accepting the trade-offs. You can't cheat physics — or the triple constraint."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Imagine a triangle with three sides. If you pull one corner in, the other sides have to adjust. That's exactly how scope, time, and cost work together.",
+              "character": "Morgan Lee",
+              "characterQuote": "Imagine a triangle with three sides. If you pull one corner in, the other sides have to adjust. That's exactly how scope, time, and cost work together."
+            },
+            "retryHint": "The three constraints are connected. If you lock in time, what happens to scope and cost? Think about the trade-offs."
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "Is this a PROJECT or OPERATIONS?",
+            "points": 80,
+            "scenario_name": "Restaurant Expansion",
+            "situation": "Savory & Co. wants to open a second location across town. Site selection, construction, permits, hiring, training. Grand opening: 6 months from now. Budget: $850K. After opening, the new location operates independently.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Project (temporary, unique)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Operations (ongoing, repetitive)",
+                "correct": false,
+                "whyWrong": "The expansion work has a clear end date (grand opening) and creates something unique (new location). While running the restaurant afterward is operations, the act of building and opening it is a project with defined constraints ($850K budget, 6-month timeline)."
+              }
+            ],
+            "explanation": "Restaurant expansion is a PROJECT because it's temporary (ends at grand opening), unique (new location, one-time setup), and has defined constraints. After opening, running the location becomes operations.",
+            "correctFeedback": {
+              "text": "Restaurant expansion is a PROJECT because it's temporary (ends at grand opening), unique (new location, one-time setup), and has defined constraints. After opening, running the location becomes operations.",
+              "character": "Carlos Mendez",
+              "characterQuote": "This is exactly the distinction I needed to understand. Building the restaurant is a project. Running it afterward is operations. Two completely different management approaches."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: when does this work finish? If there's a clear endpoint, it's probably a project. If it just keeps going, it's operations.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Ask yourself: when does this work finish? If there's a clear endpoint, it's probably a project. If it just keeps going, it's operations."
+            },
+            "retryHint": "Does opening a new location have a finish line? What happens after the grand opening — is that the same work or different work?"
+          },
+          {
+            "q_id": "q6",
+            "type": "single_select",
+            "question": "What's the risk of this approach?",
+            "points": 90,
+            "scenario_name": "Carlos's Approach — Risk Assessment",
+            "situation": "For the restaurant expansion, Carlos says: \"Just focus on getting it open fast. We'll worry about budget later. Speed is what matters for competitive advantage.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "No risk — time is most important",
+                "correct": false,
+                "whyWrong": "Ignoring budget constraints always carries risk. 'Worry about it later' leads to nasty surprises."
+              },
+              {
+                "id": "B",
+                "text": "Cost overruns likely",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Quality automatically improves with speed",
+                "correct": false,
+                "whyWrong": "Speed typically *reduces* quality, not improves it. Rushing leads to shortcuts and corner-cutting."
+              },
+              {
+                "id": "D",
+                "text": "Stakeholder satisfaction guaranteed",
+                "correct": false,
+                "whyWrong": "Stakeholder satisfaction depends on meeting expectations across *all* dimensions — not just speed."
+              }
+            ],
+            "explanation": "Rushing leads to cost overruns: premium contractor rates (2x normal), expedited permit fees, overtime pay, cutting corners on training. The triple constraint forces trade-offs — you can't ignore cost and expect no consequences.",
+            "correctFeedback": {
+              "text": "Rushing leads to cost overruns: premium contractor rates (2x normal), expedited permit fees, overtime pay, cutting corners on training. The triple constraint forces trade-offs — you can't ignore cost and expect no consequences.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I've made this mistake before. The POS system project — we rushed it, ignored the training budget, and wasted $35K. Now I understand why: you can't just ignore one constraint and expect everything to work out."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I used to think speed was everything. But every shortcut has a price tag. Sometimes that price is money, sometimes it's quality, sometimes both.",
+              "character": "Carlos Mendez",
+              "characterQuote": "I used to think speed was everything. But every shortcut has a price tag. Sometimes that price is money, sometimes it's quality, sometimes both."
+            },
+            "retryHint": "When you prioritize speed above all else and ignore budget, what typically happens to costs? Think about rush fees and overtime."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Understanding PM Fundamentals",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "What is a Project?",
+            "subtitle": "",
+            "content": "A **project** is a TEMPORARY endeavor undertaken to create a UNIQUE product, service, or result.\n\n**Key characteristics:**\n- **TEMPORARY**: Has a definite beginning and end\n- **UNIQUE**: Creates something new or different\n- **Progressive Elaboration**: Details become clearer over time\n\n**Examples at Savory & Co.:**\n- Menu Innovation Lab (Oct 1 deadline, 12 new dishes)\n- Kitchen Renovation (one-time upgrade)\n- POS System Implementation (specific end goal)",
+            "diagram": {
+              "image": "/images/A1L1_diagram_project_vs_ops.webp",
+              "alt": "Project vs Operations"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "What are Operations?",
+            "subtitle": "",
+            "content": "**Operations** are ONGOING, REPETITIVE activities that sustain the business day-to-day.\n\n**Key characteristics:**\n- **ONGOING**: No planned end date\n- **REPETITIVE**: Same processes repeated regularly\n- **STANDARDIZED**: Established procedures and workflows\n\n**Examples at Savory & Co.:**\n- Daily food service (every lunch and dinner)\n- Weekly inventory checks\n- Monthly payroll processing\n- Routine equipment maintenance"
+          },
+          {
+            "id": "tab3",
+            "title": "The Triple Constraint (Iron Triangle)",
+            "subtitle": "",
+            "content": "Every project must balance **three interconnected constraints**:\n\n**SCOPE** — What work will be done?\n- Deliverables, features, requirements\n- Defines project boundaries\n\n**TIME** — When will it be completed?\n- Schedule, deadlines, milestones\n- Timeline for delivery\n\n**COST** — How much will it cost?\n- Budget, resources, expenses\n- Financial constraints\n\n**The Trade-off Rule:**\nChanging ONE constraint affects the OTHERS:\n- Cut budget → Reduce scope OR extend timeline\n- Add features → Increase cost OR extend timeline\n- Accelerate schedule → Increase cost OR reduce scope\n\n**Quality** sits at the center — affected by all three!",
+            "diagram": {
+              "image": "/images/A1L1_diagram_triple_constraint.webp",
+              "alt": "Triple Constraint"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "What Does a PM Do?",
+            "subtitle": "",
+            "content": "**Project Management** is the application of knowledge, skills, tools, and techniques to project activities to meet project requirements.\n\n**Core Responsibilities:**\n- **Define** project scope and objectives\n- **Plan** how the work will be done\n- **Execute** the plan and manage the team\n- **Monitor** progress and make adjustments\n- **Close** the project and capture lessons learned\n\n**Key Skills:**\n- Leadership and communication\n- Problem-solving and decision-making\n- Stakeholder management\n- Risk identification and mitigation"
+          },
+          {
+            "id": "tab5",
+            "title": "Success Factors",
+            "subtitle": "",
+            "content": "**Project success** is measured by THREE factors:\n\n**1. Meeting Objectives**\n- Delivered on time, on budget, within scope\n- Quality standards met\n- All requirements fulfilled\n\n**2. Stakeholder Satisfaction**\n- Customers are happy with the result\n- Team feels supported and valued\n- Sponsors see the value\n\n**3. Value Delivery**\n- Business benefits realized\n- Return on investment achieved\n- Strategic goals advanced\n\n> **Important:** A project can finish \"on time and on budget\" but still FAIL if stakeholders aren't satisfied or the business doesn't get value!"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Technology Upgrade at Savory & Co.",
+        "scenario": {
+          "title": "Technology Upgrade at Savory & Co.",
+          "description": "Carlos wants to upgrade the Point-of-Sale (POS) system at all three restaurant locations.",
+          "images": [
+            {
+              "src": "/images/A1L1_comic_transfer_challenge.webp",
+              "alt": "Carlos presents the POS upgrade"
+            },
+            {
+              "src": "/images/A1L1_comic_transfer_analysis.webp",
+              "alt": "Alex applies the triple constraint"
+            }
+          ],
+          "details": [
+            "**Timeline:** 90 days (go-live by Q4 start)",
+            "**Budget:** $45,000",
+            "**Scope:** 3 locations, data migration, staff training"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Based on what you've learned, is this POS upgrade a **PROJECT** or **OPERATIONS**?",
+            "points": 150,
+            "scenario_name": "PROJECT or OPERATIONS?",
+            "situation": "Carlos wants to upgrade the POS system at all three Savory & Co. locations within 90 days and a $45,000 budget, including data migration and staff training.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Project (temporary, unique, with defined constraints)",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Operations (ongoing, repetitive work)",
+                "correct": false,
+                "whyWrong": "Operations are ongoing activities with no defined end date. This POS upgrade has a clear endpoint (90 days), a budget ($45K), and creates a unique result — all project characteristics."
+              }
+            ],
+            "explanation": "The POS upgrade has all three characteristics of a project: temporary (90-day timeline), unique (new system implementation), and defined constraints (scope, time, cost).",
+            "correctFeedback": {
+              "text": "The POS upgrade has all three characteristics of a project: temporary (90-day timeline), unique (new system implementation), and defined constraints (scope, time, cost).",
+              "character": "Carlos Mendez",
+              "characterQuote": "This is exactly what went wrong last time. We treated the POS upgrade like just another task, not a project. No wonder it failed. Now we know better."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about our failed POS implementation. Was that supposed to go on forever? No — it was supposed to finish. The problem was no one managed it like a project.",
+              "character": "Carlos Mendez",
+              "characterQuote": "Think about our failed POS implementation. Was that supposed to go on forever? No — it was supposed to finish. The problem was no one managed it like a project."
+            },
+            "retryHint": "Check for the three project characteristics: Is there an end date? A budget? A unique deliverable?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "drag_drop",
+            "question": "Identify the triple constraint for this POS upgrade project:",
+            "points": 150,
+            "scenario_name": "Identify the Triple Constraint",
+            "situation": "The POS upgrade project has been approved. Alex needs to map the project details to the triple constraint framework to ensure all three constraints are clearly defined before planning begins.",
+            "chips": [
+              {
+                "id": "scope",
+                "label": "SCOPE",
+                "correctZone": "what_will_be_delivered"
+              },
+              {
+                "id": "time",
+                "label": "TIME",
+                "correctZone": "when_must_it_be_done"
+              },
+              {
+                "id": "cost",
+                "label": "COST",
+                "correctZone": "how_much_can_be_spent"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "what_will_be_delivered",
+                "label": "What will be delivered?",
+                "detail": "New POS at 3 locations, data migrated, staff trained"
+              },
+              {
+                "id": "when_must_it_be_done",
+                "label": "When must it be done?",
+                "detail": "90 days to go-live"
+              },
+              {
+                "id": "how_much_can_be_spent",
+                "label": "How much can be spent?",
+                "detail": "$45K budget"
+              }
+            ],
+            "explanation": "Understanding these constraints upfront is exactly what was missing from the failed POS project.",
+            "correctFeedback": {
+              "text": "Understanding these constraints upfront is exactly what was missing from the failed POS project.",
+              "character": "Morgan Lee",
+              "characterQuote": "This is how we should have analyzed the original POS project. When you know all three constraints upfront, you can plan realistically instead of just hoping things work out."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: scope is the 'what', time is the 'when', cost is the 'how much'. Each one limits a different aspect of the project.",
+              "character": "Morgan Lee",
+              "characterQuote": "Remember: scope is the 'what', time is the 'when', cost is the 'how much'. Each one limits a different aspect of the project."
+            },
+            "retryHint": "Match each constraint to what it controls: SCOPE = deliverables, TIME = deadline, COST = budget."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the fundamental difference between **projects** and **operations**, and how the **triple constraint** governs all projects.",
+        "key_takeaways": [
+          "Projects are TEMPORARY and create UNIQUE results",
+          "Operations are ONGOING and REPETITIVE",
+          "The triple constraint: Scope, Time, Cost (with Quality at the center)",
+          "Changing one constraint affects the others",
+          "Project success = objectives + stakeholder satisfaction + value",
+          "Not all work needs project management — only projects do"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L2",
+          "title": "The Project Manager's Role",
+          "description": "Learn what a PM actually does and the skills needed to succeed."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "Which statement BEST describes these two initiatives?",
+            "points": 50,
+            "scenario_name": "Restaurant Chain Expansion",
+            "situation": "A national restaurant chain is evaluating two initiatives: (1) Opening a new flagship location in downtown Seattle with a grand opening scheduled for June 15th and a $2.1M budget, and (2) Continuing daily meal service across their existing 47 locations using standardized recipes and procedures.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Both are projects because they involve restaurant work",
+                "correct": false,
+                "whyWrong": "Not all restaurant work is a project. Daily meal service is ongoing and repetitive with no end date."
+              },
+              {
+                "id": "B",
+                "text": "The new location is a project; daily meal service is operations",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Both are operations because they're part of ongoing business",
+                "correct": false,
+                "whyWrong": "The new flagship location has a specific end date (June 15), budget ($2.1M), and creates something unique."
+              },
+              {
+                "id": "D",
+                "text": "The new location is operations; daily meal service is a project",
+                "correct": false,
+                "whyWrong": "This reverses the correct classification entirely."
+              }
+            ],
+            "explanation": "The new flagship location is a PROJECT because it's temporary (ends at grand opening), unique (new location), and has defined constraints ($2.1M, June 15). Daily meal service is OPERATIONS because it's ongoing and repetitive.",
+            "correctFeedback": {
+              "text": "The new flagship location is a PROJECT because it's temporary (ends at grand opening), unique (new location), and has defined constraints ($2.1M, June 15). Daily meal service is OPERATIONS because it's ongoing and repetitive.",
+              "character": "Carlos Mendez",
+              "characterQuote": "This is exactly the kind of analysis that helps us decide how to manage different types of work. Projects need project management; operations need operational excellence."
+            },
+            "retryHint": "Look for the key differences: Does each initiative have an end date? Is each one creating something new or repeating established processes?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "According to the triple constraint principle, what is the MOST appropriate response?",
+            "points": 50,
+            "scenario_name": "Constraint Trade-off Decision",
+            "situation": "You're managing a restaurant POS system upgrade project. The original plan was: 90-day timeline, $50,000 budget, 5 locations. The CFO just informed you the budget has been cut to $35,000 due to unexpected expenses elsewhere. The go-live date cannot change because it's tied to the busy holiday season.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Proceed as planned and absorb the cost overrun later",
+                "correct": false,
+                "whyWrong": "Ignoring budget constraints leads to uncontrolled overruns."
+              },
+              {
+                "id": "B",
+                "text": "Reduce scope by implementing at fewer locations or cutting features",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Extend the timeline to reduce costs through slower implementation",
+                "correct": false,
+                "whyWrong": "The scenario specifically states the timeline cannot change."
+              },
+              {
+                "id": "D",
+                "text": "Inform the team the project is no longer feasible and cancel it",
+                "correct": false,
+                "whyWrong": "Cancellation is premature. Reducing scope can make the project viable."
+              }
+            ],
+            "explanation": "When cost is reduced and time is fixed, the triple constraint requires adjusting scope. You might implement at 3 locations instead of 5, or remove some features. This maintains the interconnected balance of constraints.",
+            "correctFeedback": {
+              "text": "When cost is reduced and time is fixed, the triple constraint requires adjusting scope. You might implement at 3 locations instead of 5, or remove some features. This maintains the interconnected balance of constraints.",
+              "character": "Morgan Lee",
+              "characterQuote": "The triple constraint isn't about saying 'no' — it's about having honest conversations about trade-offs. When one side of the triangle moves, the others must adjust."
+            },
+            "retryHint": "Time is locked, cost is reduced. According to the triple constraint, what must change to maintain balance?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "Based on project success criteria, how should this project be evaluated?",
+            "points": 50,
+            "scenario_name": "Project Success Evaluation",
+            "situation": "A restaurant completed their kitchen renovation project on time (8 weeks) and under budget ($180K vs. $200K planned). However, the new layout makes it difficult for servers to pick up orders efficiently, leading to longer customer wait times. Staff morale has dropped, and customers have complained about slow service since reopening.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Complete success — it finished on time and under budget",
+                "correct": false,
+                "whyWrong": "Time and budget are only one of three success factors. Stakeholder satisfaction and value delivery also matter."
+              },
+              {
+                "id": "B",
+                "text": "Partial success — met time/cost but failed on satisfaction and value delivery",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Complete failure — stakeholder complaints override all other metrics",
+                "correct": false,
+                "whyWrong": "While satisfaction is important, the project did achieve some objectives. \"Complete failure\" would mean failing on all three."
+              },
+              {
+                "id": "D",
+                "text": "Cannot be evaluated until financial results are available",
+                "correct": false,
+                "whyWrong": "Project success can be evaluated immediately based on the three factors."
+              }
+            ],
+            "explanation": "Project success is measured by THREE factors: meeting objectives (time, cost, scope), stakeholder satisfaction, AND value delivery. This project met the first but failed on the other two — staff and customers are unhappy, and the business is seeing negative impacts.",
+            "correctFeedback": {
+              "text": "Project success is measured by THREE factors: meeting objectives (time, cost, scope), stakeholder satisfaction, AND value delivery. This project met the first but failed on the other two — staff and customers are unhappy, and the business is seeing negative impacts.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "This is why experienced PMs focus on outcomes, not just outputs. Finishing on time means nothing if the result doesn't actually help the business."
+            },
+            "retryHint": "Consider all three success factors: objectives met, stakeholder satisfaction, and value delivery. How did this project perform on each?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which activity is BEST classified as a PROJECT?",
+            "points": 50,
+            "scenario_name": "Work Classification Challenge",
+            "situation": "A hotel chain's corporate office is reviewing their activities.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Processing nightly room revenue reports across all properties",
+                "correct": false,
+                "whyWrong": "Nightly reports are processed every night indefinitely — ongoing, repetitive, no end date."
+              },
+              {
+                "id": "B",
+                "text": "Conducting weekly housekeeping inspections using standard checklists",
+                "correct": false,
+                "whyWrong": "Weekly inspections are repetitive and ongoing with no planned end date."
+              },
+              {
+                "id": "C",
+                "text": "Developing and launching a new mobile app for guest check-in by Q3",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Managing the monthly vendor payment cycle for all locations",
+                "correct": false,
+                "whyWrong": "Monthly payment cycles repeat every month indefinitely — standard operational work."
+              }
+            ],
+            "explanation": "The mobile app development is a PROJECT: it's temporary (ends at Q3 launch), creates a unique deliverable (new app), and has defined constraints. The other activities are OPERATIONS: ongoing, repetitive processes that sustain daily business.",
+            "correctFeedback": {
+              "text": "The mobile app development is a PROJECT: it's temporary (ends at Q3 launch), creates a unique deliverable (new app), and has defined constraints. The other activities are OPERATIONS: ongoing, repetitive processes that sustain daily business.",
+              "character": "Carlos Mendez",
+              "characterQuote": "The key question is always: 'Does this work have a finish line?' Operations keep running; projects reach completion and end."
+            },
+            "retryHint": "Which activity has a deadline, creates something new, and will eventually be 'done'? That's your project."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,798 @@
+{
+  "lessonId": "B1L2",
+  "lessonTitle": "Stakeholder Power & Interest Grid",
+  "courseId": "B1",
+  "courseName": "Stakeholder & Communication Management",
+  "pathId": "B",
+  "pathName": "People",
+  "domain": "People",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Classify stakeholders using the Power/Interest Grid into 4 quadrants: Manage Closely, Keep Satisfied, Keep Informed, Monitor",
+    "Identify stakeholder power types (Legitimate, Expert, Referent, Persuasive) and their implications for engagement",
+    "Tailor communication strategies and engagement levels based on power and interest combinations",
+    "Prioritize stakeholders in crisis situations based on power level (high power stakeholders take priority)",
+    "Recognize when to reassess stakeholder classifications as project dynamics change"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "dr_amelia_foster",
+    "ava_thompson",
+    "carlos_mendez",
+    "inspector_lee",
+    "maya_rodriguez",
+    "jamie_park"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "Alex's Stakeholder Meeting Disaster",
+        "intro": "You're **Alex Mitchell**, managing Savory & Co.'s ambitious **$200,000 upscale tasting menu project**. You've identified 12 key stakeholders and scheduled weekly hour-long meetings with ALL of them. Big mistake.",
+        "failure_cards": [
+          {
+            "id": "the_meeting_marathon",
+            "icon": "📋",
+            "title": "The Meeting Marathon",
+            "summary": "12 weekly meetings — wrong approach for everyone",
+            "image": "/images/B1L2_comic_meeting_disaster.webp",
+            "details": "Alex scheduled identical weekly hour-long meetings with every stakeholder, from lead investor Ava Thompson to HR coordinator Elena Vasquez. Ava felt her time was wasted on operational details she didn't need. Inspector Lee was annoyed by discussions about wine pairings when he only cared about compliance. Elena sat confused through budget meetings that had nothing to do with staffing paperwork."
+          },
+          {
+            "id": "stakeholder_frustration_boils_over",
+            "icon": "⚠️",
+            "title": "Stakeholder Frustration Boils Over",
+            "summary": "Key stakeholders disengage, meetings collapse",
+            "image": "/images/B1L2_comic_wrong_strategy.webp",
+            "details": "By Week 3, Ava emailed Carlos: \"I'm pulling out of weekly meetings. Alex doesn't respect my time.\" Inspector Lee declined all meeting invites: \"Call me for compliance ONLY.\" Jamie and Devon felt over-managed with daily check-ins. At the next weekly meeting, only 2 of 12 stakeholders showed up. Alex sat alone in a conference room full of empty chairs."
+          },
+          {
+            "id": "dr_foster_introduces_the_framework",
+            "icon": "💡",
+            "title": "Dr. Foster Introduces the Framework",
+            "summary": "The Power/Interest Grid changes everything",
+            "image": "/images/B1L2_comic_framework.webp",
+            "details": "Dr. Amelia Foster arrived with a simple framework. \"Not all stakeholders need the same attention. It's about POWER and INTEREST.\" She drew a 2x2 grid on the whiteboard. Alex realized: Ava needs close management, but Elena just needs monitoring. Inspector Lee needs to be kept satisfied — not bombarded with updates. \"Let's classify your 12 stakeholders and fix this.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "dr_amelia_foster",
+          "name": "Dr. Amelia Foster",
+          "role": "PMI Consultant",
+          "quote": "The Power/Interest Grid is your roadmap to stakeholder engagement. High-power, high-interest stakeholders like Ava need close management. High-power, low-interest stakeholders like Inspector Lee need to be kept satisfied without over-engagement. Match your strategy to their position on the grid."
+        },
+        "learning_hook": "**Treating all stakeholders the same wastes your time and frustrates everyone.** Learn how to classify stakeholders by POWER (ability to influence) and INTEREST (level of concern), then tailor your engagement strategy to each quadrant."
+      },
+      "cta": "Start Learning"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "map_the_power_interest_grid",
+        "title": "Map the Power/Interest Grid",
+        "description": "Dr. Foster hands Alex a set of stakeholder cards. \"Classify each stakeholder based on their POWER (ability to influence the project) and INTEREST (level of concern about outcomes).\"",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "drag_drop",
+            "question": "Drag each stakeholder to the correct category — does this person belong in \"Manage Closely\" (High Power + High Interest) or NOT?",
+            "points": 80,
+            "scenario_name": "High Power + High Interest — Manage Closely",
+            "situation": "The Power/Interest Grid has 4 quadrants. The top-right quadrant is \"Manage Closely\" — for stakeholders with BOTH high power AND high interest. These people can make or break your project AND care deeply about outcomes.",
+            "chips": [
+              {
+                "id": "ava_thompson_lead_investor",
+                "label": "Ava Thompson (Lead Investor)",
+                "correctZone": "manage_closely"
+              },
+              {
+                "id": "maya_rodriguez_lead_chef",
+                "label": "Maya Rodriguez (Lead Chef)",
+                "correctZone": "manage_closely"
+              },
+              {
+                "id": "kiki_nguyen_food_critic",
+                "label": "Kiki Nguyen (Food Critic)",
+                "correctZone": "manage_closely"
+              },
+              {
+                "id": "inspector_lee_health_inspector",
+                "label": "Inspector Lee (Health Inspector)",
+                "correctZone": "not_manage_closely"
+              },
+              {
+                "id": "elena_vasquez_hr_manager",
+                "label": "Elena Vasquez (HR Manager)",
+                "correctZone": "not_manage_closely"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "manage_closely",
+                "label": "Manage Closely",
+                "detail": "Controls $200K budget approval AND owns 35% stake"
+              },
+              {
+                "id": "not_manage_closely",
+                "label": "Not Manage Closely",
+                "detail": "High power but LOW interest — only cares about compliance"
+              }
+            ],
+            "explanation": "\"Manage Closely\" stakeholders have BOTH high power (can influence outcomes) AND high interest (care deeply about the project). Ava controls the budget and is invested in ROI. Maya's expertise drives menu quality and her reputation depends on success. Kiki's review can make or break public perception and she's actively engaged.",
+            "correctFeedback": {
+              "text": "\"Manage Closely\" stakeholders have BOTH high power (can influence outcomes) AND high interest (care deeply about the project). Ava controls the budget and is invested in ROI. Maya's expertise drives menu quality and her reputation depends on success. Kiki's review can make or break public perception and she's actively engaged.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect! Ava, Maya, and Kiki all belong in Manage Closely. They have the power to impact your project AND they care deeply about the outcome. Give them frequent meetings and involve them in key decisions."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask two questions: Can this person significantly impact the project? Do they care deeply about the outcome? Only if BOTH answers are yes do they belong in Manage Closely.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask two questions: Can this person significantly impact the project? Do they care deeply about the outcome? Only if BOTH answers are yes do they belong in Manage Closely."
+            },
+            "retryHint": "HIGH Power = can approve/block budget, decisions, or reputation. HIGH Interest = cares deeply about project success. Both must be true for \"Manage Closely.\""
+          },
+          {
+            "q_id": "q2",
+            "type": "drag_drop",
+            "question": "Drag each stakeholder to the correct category — \"Keep Satisfied\" or NOT?",
+            "points": 80,
+            "scenario_name": "High Power + Low Interest — Keep Satisfied",
+            "situation": "The top-left quadrant is \"Keep Satisfied\" — stakeholders with high power but low interest. They CAN stop your project but don't want to be bothered with details.",
+            "chips": [
+              {
+                "id": "inspector_lee_health_inspector",
+                "label": "Inspector Lee (Health Inspector)",
+                "correctZone": "keep_satisfied"
+              },
+              {
+                "id": "carlos_mendez_general_manager",
+                "label": "Carlos Mendez (General Manager)",
+                "correctZone": "keep_satisfied"
+              },
+              {
+                "id": "ava_thompson_lead_investor",
+                "label": "Ava Thompson (Lead Investor)",
+                "correctZone": "not_keep_satisfied"
+              },
+              {
+                "id": "sam_rodriguez_finance_manager",
+                "label": "Sam Rodriguez (Finance Manager)",
+                "correctZone": "not_keep_satisfied"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "keep_satisfied",
+                "label": "Keep Satisfied",
+                "detail": "Regulatory authority to shut down operations, but only cares about compliance"
+              },
+              {
+                "id": "not_keep_satisfied",
+                "label": "Not Keep Satisfied",
+                "detail": "High power AND high interest — belongs in Manage Closely"
+              }
+            ],
+            "explanation": "\"Keep Satisfied\" stakeholders have HIGH power (can veto or shut things down) but LOW interest (they don't want detailed involvement). Inspector Lee can shut down operations but only cares about compliance — don't invite him to menu creativity meetings. Carlos has executive authority but delegated the project to Alex.",
+            "correctFeedback": {
+              "text": "\"Keep Satisfied\" stakeholders have HIGH power (can veto or shut things down) but LOW interest (they don't want detailed involvement). Inspector Lee can shut down operations but only cares about compliance — don't invite him to menu creativity meetings. Carlos has executive authority but delegated the project to Alex.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Exactly! Inspector Lee and Carlos have the power to block your project, but they don't want to be in every meeting. Meet their specific needs — compliance for Lee, oversight reports for Carlos — without over-engaging."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Keep Satisfied means HIGH power but LOW interest. These stakeholders can stop your project but don't want detailed involvement. Over-engaging them wastes their time and makes you look inefficient.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Keep Satisfied means HIGH power but LOW interest. These stakeholders can stop your project but don't want detailed involvement. Over-engaging them wastes their time and makes you look inefficient."
+            },
+            "retryHint": "Can this person STOP your project? Yes = High Power. Do they want detailed, frequent involvement? No = Low Interest. Both true = Keep Satisfied."
+          },
+          {
+            "q_id": "q3",
+            "type": "drag_drop",
+            "question": "Match each stakeholder to their PRIMARY power type:",
+            "points": 85,
+            "scenario_name": "Power Type Identification",
+            "situation": "Understanding WHERE a stakeholder's power comes from helps you tailor engagement. There are 4 types of stakeholder power.",
+            "chips": [
+              {
+                "id": "ava_thompson_budget_approval_authority",
+                "label": "Ava Thompson (budget approval authority)",
+                "correctZone": "legitimate_power"
+              },
+              {
+                "id": "maya_rodriguez_culinary_expertise",
+                "label": "Maya Rodriguez (culinary expertise)",
+                "correctZone": "expert_power"
+              },
+              {
+                "id": "kiki_nguyen_culinary_world_influence",
+                "label": "Kiki Nguyen (culinary world influence)",
+                "correctZone": "referent_power"
+              },
+              {
+                "id": "jordan_liu_controls_public_messaging",
+                "label": "Jordan Liu (controls public messaging)",
+                "correctZone": "persuasive_power"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "legitimate_power",
+                "label": "Legitimate Power",
+                "detail": "Power from official role or position"
+              },
+              {
+                "id": "expert_power",
+                "label": "Expert Power",
+                "detail": "Power from specialized knowledge and skills"
+              },
+              {
+                "id": "referent_power",
+                "label": "Referent Power",
+                "detail": "Power from reputation and admiration"
+              },
+              {
+                "id": "persuasive_power",
+                "label": "Persuasive Power",
+                "detail": "Power from information access and communication"
+              }
+            ],
+            "explanation": "Legitimate power comes from formal authority (titles, budget control). Expert power comes from specialized knowledge. Referent power comes from reputation and influence. Persuasive power comes from access to information and communication ability.",
+            "correctFeedback": {
+              "text": "Legitimate power comes from formal authority (titles, budget control). Expert power comes from specialized knowledge. Referent power comes from reputation and influence. Persuasive power comes from access to information and communication ability.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Excellent! Each power type requires a different engagement approach. Respect Ava's formal authority, defer to Maya's expertise, leverage Kiki's influence, and provide Jordan with accurate information."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about WHERE each person's influence comes from. Is it their title? Their knowledge? Their reputation? Their access to information? That determines the power type.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about WHERE each person's influence comes from. Is it their title? Their knowledge? Their reputation? Their access to information? That determines the power type."
+            },
+            "retryHint": "Legitimate = job title/authority. Expert = specialized knowledge. Referent = reputation/admiration. Persuasive = information/communication ability."
+          },
+          {
+            "q_id": "q4",
+            "type": "multi_select",
+            "question": "Select ALL stakeholders who belong in the \"Keep Informed\" quadrant:",
+            "points": 85,
+            "scenario_name": "Low Power + High Interest — Keep Informed",
+            "situation": "The bottom-right quadrant is \"Keep Informed\" — stakeholders with low power but high interest. They care deeply about outcomes but don't control strategic decisions.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Sam Rodriguez (Finance Manager) — tracks budget but doesn't approve it",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Jamie Park (FOH Manager) — needs to train staff for upscale service",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Devon Brown (Sous Chef) — executes Maya's vision, daily work affected",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Ava Thompson (Lead Investor) — controls budget approval",
+                "correct": false
+              },
+              {
+                "id": "E",
+                "text": "Rashid Patel (Supply Chain) — must establish new vendor relationships",
+                "correct": true
+              },
+              {
+                "id": "F",
+                "text": "Elena Vasquez (HR Manager) — handles staffing paperwork only",
+                "correct": false
+              }
+            ],
+            "explanation": "Sam, Jamie, Devon, and Rashid all have LOW power (no strategic decision authority) but HIGH interest (their daily work depends on project success). Ava has HIGH power (Manage Closely). Elena has LOW interest (Monitor).",
+            "correctFeedback": {
+              "text": "Sam, Jamie, Devon, and Rashid all have LOW power (no strategic decision authority) but HIGH interest (their daily work depends on project success). Ava has HIGH power (Manage Closely). Elena has LOW interest (Monitor).",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "These team members care about the project but can't make strategic decisions. Give them regular bi-weekly updates and invite their input — but don't micromanage them."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Low Power means they can't approve budgets or block decisions. High Interest means their work is directly affected. Which stakeholders fit BOTH criteria?",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Low Power means they can't approve budgets or block decisions. High Interest means their work is directly affected. Which stakeholders fit BOTH criteria?"
+            },
+            "retryHint": "Low Power = cannot approve/block strategic decisions. High Interest = daily work directly affected by project. Select everyone who fits BOTH."
+          },
+          {
+            "q_id": "q5",
+            "type": "single_select",
+            "question": "Which quadrant do Elena and the local blogger belong in, and what is the correct strategy?",
+            "points": 85,
+            "scenario_name": "Monitor Quadrant + Full Grid Review",
+            "situation": "Two stakeholders remain: Elena Vasquez (HR Manager, handles staffing paperwork) and a local food blogger (occasional coverage, limited reach). Neither has decision authority, and neither is deeply invested in project outcomes.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Keep Informed — send them regular bi-weekly updates",
+                "correct": false,
+                "whyWrong": "Bi-weekly updates waste time on stakeholders who don't need or want them."
+              },
+              {
+                "id": "B",
+                "text": "Keep Satisfied — meet their needs without over-engaging",
+                "correct": false,
+                "whyWrong": "Keep Satisfied is for HIGH power stakeholders. Elena and the blogger have LOW power."
+              },
+              {
+                "id": "C",
+                "text": "Monitor — minimal effort, check occasionally for changes",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Manage Closely — include them in all key decisions",
+                "correct": false,
+                "whyWrong": "Manage Closely is for stakeholders with BOTH high power AND high interest."
+              }
+            ],
+            "explanation": "Low Power + Low Interest = Monitor. Elena handles paperwork unrelated to the tasting menu. The blogger may or may not cover the launch. Minimal investment of your time — just check periodically in case their power or interest changes.",
+            "correctFeedback": {
+              "text": "Low Power + Low Interest = Monitor. Elena handles paperwork unrelated to the tasting menu. The blogger may or may not cover the launch. Minimal investment of your time — just check periodically in case their power or interest changes.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Not every stakeholder needs your attention. Elena and the blogger are Low Power + Low Interest. A quarterly check-in is sufficient. Spend your energy on stakeholders who can actually impact or be impacted by your project."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about Elena: Can she block your project? No. Does she care deeply about the tasting menu? No. When both answers are 'no,' the strategy is simple: monitor.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Think about Elena: Can she block your project? No. Does she care deeply about the tasting menu? No. When both answers are 'no,' the strategy is simple: monitor."
+            },
+            "retryHint": "Low Power + Low Interest = which quadrant? What's the lightest-touch strategy?"
+          },
+          {
+            "q_id": "q6",
+            "type": "single_select",
+            "question": "Why did Alex's one-size-fits-all approach fail?",
+            "points": 85,
+            "scenario_name": "Engagement Strategy Mismatch",
+            "situation": "Alex is reviewing his original meeting schedule. He had scheduled identical weekly hour-long meetings with ALL 12 stakeholders.",
+            "options": [
+              {
+                "id": "A",
+                "text": "He didn't schedule enough meetings — should have been daily",
+                "correct": false,
+                "whyWrong": "MORE meetings would make the problem worse. Inspector Lee was already annoyed by weekly meetings."
+              },
+              {
+                "id": "B",
+                "text": "He should have only met with the investor and ignored everyone else",
+                "correct": false,
+                "whyWrong": "Ignoring other stakeholders creates operational failures and misalignment."
+              },
+              {
+                "id": "C",
+                "text": "Different quadrants require different engagement strategies — one size does NOT fit all",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Stakeholder meetings are unnecessary in project management",
+                "correct": false,
+                "whyWrong": "Stakeholder meetings are essential — but they must be tailored to each quadrant."
+              }
+            ],
+            "explanation": "The Power/Interest Grid exists because different stakeholders need different levels of engagement. Over-engaging low-interest stakeholders (Inspector Lee) annoys them. Under-engaging high-power stakeholders (Ava) creates blockers. The grid helps you match strategy to position.",
+            "correctFeedback": {
+              "text": "The Power/Interest Grid exists because different stakeholders need different levels of engagement. Over-engaging low-interest stakeholders (Inspector Lee) annoys them. Under-engaging high-power stakeholders (Ava) creates blockers. The grid helps you match strategy to position.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I finally see it. Ava needs weekly 1:1s, Inspector Lee needs compliance-only contact, Jamie needs bi-weekly updates, and Elena just needs periodic check-ins. Four different strategies for four different quadrants."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "My mistake was treating everyone the same. But the answer isn't 'more meetings' or 'fewer meetings' — it's the RIGHT meetings for the RIGHT people.",
+              "character": "Alex Mitchell",
+              "characterQuote": "My mistake was treating everyone the same. But the answer isn't 'more meetings' or 'fewer meetings' — it's the RIGHT meetings for the RIGHT people."
+            },
+            "retryHint": "The grid has 4 quadrants with 4 different strategies. What does that tell you about using ONE approach for everyone?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Understanding the Power/Interest Grid",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "The Power/Interest Grid Framework",
+            "subtitle": "",
+            "content": "The **Power/Interest Grid** (also called Stakeholder Salience Model) classifies stakeholders based on two dimensions:\n\n- **POWER:** Ability to influence project success (budget approval, regulatory authority, reputation impact)\n- **INTEREST:** Level of concern about project outcomes (career stake, financial stake, operational impact)\n\n**The 4 Quadrants:**\n\n| | LOW INTEREST | HIGH INTEREST |\n|---------|--------------|---------------|\n| **HIGH POWER** | **KEEP SATISFIED** — Meet their needs, don't over-engage | **MANAGE CLOSELY** — Frequent meetings, involve in decisions |\n| **LOW POWER** | **MONITOR** — Minimal effort, check occasionally | **KEEP INFORMED** — Regular updates, proactive communication |\n\n**Key Insight:** Match your engagement strategy to each quadrant. Not all stakeholders need the same attention.",
+            "diagram": {
+              "image": "/images/B1L2_diagram_power_interest_grid.webp",
+              "alt": "Power/Interest Grid"
+            }
+          },
+          {
+            "id": "tab2",
+            "title": "Engagement Strategies by Quadrant",
+            "subtitle": "",
+            "content": "**MANAGE CLOSELY (High Power + High Interest)**\n- **Who:** Ava (investor), Maya (chef), Kiki (critic)\n- **Strategy:** Weekly meetings, involve in decisions, immediate response\n- **Risk if Ignored:** Project blockers, budget cuts, negative publicity\n\n**KEEP SATISFIED (High Power + Low Interest)**\n- **Who:** Inspector Lee (regulator), Carlos (GM)\n- **Strategy:** Meet their specific needs without over-engaging\n- **Risk if Over-Engaged:** Annoyance, perception of PM as inefficient\n\n**KEEP INFORMED (Low Power + High Interest)**\n- **Who:** Sam, Jamie, Devon, Jordan, Rashid\n- **Strategy:** Regular bi-weekly updates, invite feedback\n- **Risk if Over-Managed:** Wasted PM time, micromanagement perception\n\n**MONITOR (Low Power + Low Interest)**\n- **Who:** Elena (HR), Local blogger\n- **Strategy:** Minimal effort, check for power/interest changes\n- **Communication:** Very low (quarterly or as needed)"
+          },
+          {
+            "id": "tab3",
+            "title": "Stakeholder Power Types",
+            "subtitle": "",
+            "content": "**4 Types of Stakeholder Power:**\n\n1. **Legitimate Power** — From official role or position\n   - Examples: Ava (budget approval), Inspector Lee (regulatory authority), Carlos (executive)\n\n2. **Expert Power** — From specialized knowledge and skills\n   - Examples: Maya (culinary expertise), Dr. Foster (PMI expertise)\n\n3. **Referent Power** — From reputation and influence\n   - Examples: Kiki (culinary world influence), Maya (team respect)\n\n4. **Persuasive Power** — From information access and communication ability\n   - Examples: Jordan (marketing messaging), Sam (financial reporting)"
+          },
+          {
+            "id": "tab4",
+            "title": "Crisis Prioritization Rule",
+            "subtitle": "",
+            "content": "**Key Principle:** In crisis situations, prioritize by POWER first, then INTEREST.\n\n**Why?** High-power stakeholders can STOP your project. Even with low interest, their authority is non-negotiable.\n\n**Example:** Two urgent issues arise simultaneously:\n1. Kiki (critic) tweets disappointment about quality rumors\n2. Inspector Lee (regulator) schedules surprise compliance inspection\n\n**Correct Prioritization:** Inspector Lee FIRST — regulatory power can shut down operations. Kiki's concern can be addressed AFTER compliance is secured. Regulatory > Reputation in crisis."
+          },
+          {
+            "id": "tab5",
+            "title": "When to Reassess Classifications",
+            "subtitle": "",
+            "content": "Power and interest levels change throughout the project lifecycle.\n\n**Triggers for Reassessment:**\n1. **Project Phase Changes** — Carlos shifts from LOW to HIGH interest approaching launch\n2. **Organizational Changes** — New executive joins, inspector replaced\n3. **Personal Changes** — Sam gets promoted to CFO (power increases)\n4. **Project Issues** — Budget overrun increases Ava's scrutiny\n5. **External Events** — Competitor launches similar concept\n\n**PM Action:** Review the Grid at major milestones and after significant events.\n\n**PMBOK Reference:** PMBOK 7th Edition — Stakeholder Performance Domain, Section 2.2"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Mid-Project Crisis at Savory & Co.",
+        "scenario": {
+          "title": "Mid-Project Crisis at Savory & Co.",
+          "description": "It's Week 6 of the tasting menu project. Alex receives two urgent notifications simultaneously. **Crisis Details:**",
+          "images": [
+            {
+              "src": "/images/B1L2_comic_transfer.webp",
+              "alt": "Alex faces a dual crisis"
+            }
+          ],
+          "details": [
+            "**Issue 1:** Kiki Nguyen (food critic) tweets: \"Disappointed to hear Savory & Co. is cutting corners on sourcing. Expected better. #TastingMenuFail\"",
+            "**Issue 2:** Inspector Lee emails: \"Conducting unscheduled compliance inspection tomorrow 9am. Ensure all documentation ready.\"",
+            "**Time available:** 2 hours before end of day"
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "You have 2 hours. Which stakeholder do you prioritize FIRST?",
+            "points": 150,
+            "scenario_name": "Crisis Prioritization",
+            "situation": "It's Week 6 of Savory & Co.'s tasting menu project. Alex receives two urgent issues simultaneously: Kiki Nguyen (food critic, 50K+ followers) tweets \"#TastingMenuFail\" about sourcing concerns, AND Inspector Lee (health inspector) emails that he's conducting an unscheduled compliance inspection tomorrow at 9am. Alex has only 2 hours before end of day.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Kiki (critic) — her tweet is public and damaging reputation immediately",
+                "correct": false,
+                "whyWrong": "Kiki's tweet is a reputation issue — concerning but not an immediate operational blocker."
+              },
+              {
+                "id": "B",
+                "text": "Inspector Lee (regulator) — regulatory compliance is non-negotiable",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Both equally — delegate Kiki to marketing, handle Inspector Lee yourself",
+                "correct": false,
+                "whyWrong": "While delegation is smart, Inspector Lee requires YOUR attention for PM-level compliance decisions."
+              },
+              {
+                "id": "D",
+                "text": "Neither — escalate both to Carlos for decision",
+                "correct": false,
+                "whyWrong": "Escalating routine crises wastes sponsor time. You have the framework to prioritize — use it."
+              }
+            ],
+            "explanation": "Inspector Lee has regulatory power that can shut down operations entirely. His inspection is time-bound (tomorrow 9am) and cannot be rescheduled. Kiki's reputation concern is serious but addressable AFTER compliance is secured. Regulatory authority trumps reputation in crisis.",
+            "correctFeedback": {
+              "text": "Inspector Lee has regulatory power that can shut down operations entirely. His inspection is time-bound (tomorrow 9am) and cannot be rescheduled. Kiki's reputation concern is serious but addressable AFTER compliance is secured. Regulatory authority trumps reputation in crisis.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Exactly right! In crisis, HIGH POWER stakeholders take priority — especially regulatory. Inspector Lee has Legitimate power that can stop your project. Kiki has Referent power through reputation, which can be rebuilt. Authority stops projects; reputation can be repaired."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Ask yourself: Which stakeholder can STOP my project tomorrow? Inspector Lee can shut down operations. That's where you focus first.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Ask yourself: Which stakeholder can STOP my project tomorrow? Inspector Lee can shut down operations. That's where you focus first."
+            },
+            "retryHint": "Compare power types: Kiki has Referent power (reputation). Inspector Lee has Legitimate power (regulatory authority). Which is non-negotiable?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "drag_drop",
+            "question": "After the crisis, Alex updates engagement strategies. Match each stakeholder to their CORRECT engagement frequency:",
+            "points": 150,
+            "scenario_name": "Post-Crisis Engagement Plan",
+            "situation": "After handling the dual crisis — Inspector Lee's compliance inspection passed and Kiki's concerns were addressed — Alex realizes his engagement plan needs a complete overhaul. He sits down with Dr. Foster to redesign stakeholder engagement frequencies based on the Power/Interest Grid quadrants.",
+            "chips": [
+              {
+                "id": "ava_thompson_manage_closely",
+                "label": "Ava Thompson (Manage Closely)",
+                "correctZone": "weekly_11_meetings_formal_reports"
+              },
+              {
+                "id": "inspector_lee_keep_satisfied",
+                "label": "Inspector Lee (Keep Satisfied)",
+                "correctZone": "asneeded_for_compliance_events_only"
+              },
+              {
+                "id": "jamie_park_keep_informed",
+                "label": "Jamie Park (Keep Informed)",
+                "correctZone": "biweekly_team_updates_shared_dashboard"
+              },
+              {
+                "id": "elena_vasquez_monitor",
+                "label": "Elena Vasquez (Monitor)",
+                "correctZone": "quarterly_checkin_or_as_needed"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "weekly_11_meetings_formal_reports",
+                "label": "Weekly 1:1 meetings + formal reports",
+                "detail": "High-power investor expects direct access and close collaboration"
+              },
+              {
+                "id": "asneeded_for_compliance_events_only",
+                "label": "As-needed for compliance events only",
+                "detail": "Regulator wants documented, compliance-specific contact — not general updates"
+              },
+              {
+                "id": "biweekly_team_updates_shared_dashboard",
+                "label": "Bi-weekly team updates + shared dashboard",
+                "detail": "Operational staff need regular info but not micromanagement"
+              },
+              {
+                "id": "quarterly_checkin_or_as_needed",
+                "label": "Quarterly check-in or as needed",
+                "detail": "Administrative role with minimal project involvement"
+              }
+            ],
+            "explanation": "Each quadrant has a matching engagement frequency. Manage Closely gets the most attention (weekly). Keep Satisfied gets targeted, low-frequency contact. Keep Informed gets regular but efficient updates. Monitor gets minimal touch.",
+            "correctFeedback": {
+              "text": "Each quadrant has a matching engagement frequency. Manage Closely gets the most attention (weekly). Keep Satisfied gets targeted, low-frequency contact. Keep Informed gets regular but efficient updates. Monitor gets minimal touch.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I finally understand — the engagement strategy MUST match the quadrant. Ava gets close management, Inspector Lee gets compliance-focused contact, Jamie gets regular updates, and Elena gets periodic check-ins. This is so much more efficient!"
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Match the strategy to the quadrant. Over-engagement frustrates low-interest stakeholders. Under-engagement alienates high-power stakeholders. Balance is key.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Match the strategy to the quadrant. Over-engagement frustrates low-interest stakeholders. Under-engagement alienates high-power stakeholders. Balance is key."
+            },
+            "retryHint": "Manage Closely = highest frequency. Keep Satisfied = targeted and low. Keep Informed = regular but efficient. Monitor = minimal."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered the **Power/Interest Grid** — the essential tool for stakeholder classification. By understanding where each stakeholder falls on the grid, you can tailor your engagement strategy so everyone gets the right level of attention.",
+        "key_takeaways": [
+          "Power/Interest Grid has 4 quadrants — each requires a different engagement strategy",
+          "Manage Closely (HP+HI): Weekly meetings, involve in decisions, close collaboration",
+          "Keep Satisfied (HP+LI): Meet their needs without over-engagement",
+          "Keep Informed (LP+HI): Regular updates, don't micromanage",
+          "Monitor (LP+LI): Minimal effort, check for changes",
+          "Crisis Rule: High POWER stakeholders take priority — especially regulatory"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L3",
+          "title": "Stakeholder Engagement Planning",
+          "description": "You learned to CLASSIFY stakeholders. Now learn to ENGAGE them — moving stakeholders through the engagement continuum from Unaware to Resistant to Neutral to Supportive to Leading."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "According to the Power/Interest Grid, what is the BEST approach for engaging the marketing team?",
+            "points": 50,
+            "scenario_name": "Keep Informed Strategy",
+            "situation": "A project manager identifies that the marketing team has high interest in the website redesign project but limited authority over budget or technical decisions.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Schedule weekly 1:1 meetings with each marketing team member",
+                "correct": false,
+                "whyWrong": "Weekly 1:1s are for Manage Closely quadrant — over-engagement for low-power stakeholders."
+              },
+              {
+                "id": "B",
+                "text": "Include them in the stakeholder register but minimize communication",
+                "correct": false,
+                "whyWrong": "Low Power + HIGH Interest requires proactive communication, not minimal. That's a Monitor strategy."
+              },
+              {
+                "id": "C",
+                "text": "Provide regular project updates and solicit their input on marketing-related decisions",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Escalate their concerns to the sponsor for resolution",
+                "correct": false,
+                "whyWrong": "Unnecessary escalation. The PM can manage Keep Informed stakeholders directly."
+              }
+            ],
+            "explanation": "Low Power + High Interest stakeholders belong in the \"Keep Informed\" quadrant. They care about outcomes but don't have decision-making authority. The correct strategy is regular proactive communication and soliciting their input on areas within their expertise.",
+            "correctFeedback": {
+              "text": "Low Power + High Interest stakeholders belong in the \"Keep Informed\" quadrant. They care about outcomes but don't have decision-making authority. The correct strategy is regular proactive communication and soliciting their input on areas within their expertise.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Perfect application of the grid. The marketing team doesn't need 1:1s, but they do need to know what's happening. Keep them informed, leverage their expertise."
+            },
+            "retryHint": "Low Power + High Interest = Keep Informed. What does \"Keep Informed\" look like? Regular updates + relevant input opportunities."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the PM do FIRST?",
+            "points": 50,
+            "scenario_name": "High-Power Unaware Stakeholder",
+            "situation": "During project execution, a PM discovers that a senior executive with budget authority is unaware of a significant scope change that was approved by the project sponsor.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Continue with the approved change since the sponsor approved it",
+                "correct": false,
+                "whyWrong": "High-power stakeholders should be informed of significant changes. Continuing without informing risks later conflict."
+              },
+              {
+                "id": "B",
+                "text": "Immediately brief the executive on the scope change and its implications",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Wait until the next scheduled status meeting to mention the change",
+                "correct": false,
+                "whyWrong": "Waiting creates risk. High-power stakeholders expect timely communication on significant changes."
+              },
+              {
+                "id": "D",
+                "text": "Ask the sponsor to inform the executive instead",
+                "correct": false,
+                "whyWrong": "While appropriate to coordinate, the PM should take initiative to inform high-power stakeholders promptly."
+              }
+            ],
+            "explanation": "A senior executive with budget authority is a HIGH POWER stakeholder. If they're unaware of significant changes, they could become a blocker when they discover the change later. Proactive briefing maintains trust and prevents conflict.",
+            "correctFeedback": {
+              "text": "A senior executive with budget authority is a HIGH POWER stakeholder. If they're unaware of significant changes, they could become a blocker when they discover the change later. Proactive briefing maintains trust and prevents conflict.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "High-power stakeholders who feel blindsided become project blockers. Brief them proactively. Even if the sponsor approved it, other high-power stakeholders should be kept informed."
+            },
+            "retryHint": "High Power + Unaware = RISK. What reduces that risk? Proactive communication."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What type of power does this developer have?",
+            "points": 50,
+            "scenario_name": "Power Type Identification",
+            "situation": "The lead developer on a software project frequently influences team decisions through their deep technical knowledge, even though they report to the project manager and have no formal authority over the project.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Legitimate Power",
+                "correct": false,
+                "whyWrong": "Legitimate power comes from formal position/role. The developer has no formal project authority."
+              },
+              {
+                "id": "B",
+                "text": "Expert Power",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Referent Power",
+                "correct": false,
+                "whyWrong": "Referent power comes from admiration/reputation. This describes technical knowledge influence specifically."
+              },
+              {
+                "id": "D",
+                "text": "Coercive Power",
+                "correct": false,
+                "whyWrong": "Coercive power involves punishment or negative consequences. Not applicable here."
+              }
+            ],
+            "explanation": "Expert Power derives from specialized knowledge, skills, or expertise. The developer influences decisions not through formal authority (Legitimate) or personal charisma (Referent), but through technical knowledge that others respect and defer to.",
+            "correctFeedback": {
+              "text": "Expert Power derives from specialized knowledge, skills, or expertise. The developer influences decisions not through formal authority (Legitimate) or personal charisma (Referent), but through technical knowledge that others respect and defer to.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Expert power is incredibly valuable in technical projects. The developer may have more influence on technical decisions than the PM, even without formal authority. Wise PMs leverage expert power, not compete with it."
+            },
+            "retryHint": "The developer's influence comes from \"deep technical knowledge.\" Which power type relates to specialized knowledge?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "Which Power/Interest Grid quadrant does this stakeholder belong in?",
+            "points": 50,
+            "scenario_name": "Keep Satisfied vs Manage Closely",
+            "situation": "A regulatory agency must approve the project deliverable before it can be released. The agency representative has expressed that they only want to be contacted about compliance matters and not general project updates.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Manage Closely (High Power, High Interest)",
+                "correct": false,
+                "whyWrong": "The representative explicitly stated LOW interest in general updates. High Power + Low Interest = Keep Satisfied."
+              },
+              {
+                "id": "B",
+                "text": "Keep Satisfied (High Power, Low Interest)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Keep Informed (Low Power, High Interest)",
+                "correct": false,
+                "whyWrong": "Regulatory approval authority = HIGH POWER. They have veto power over the deliverable."
+              },
+              {
+                "id": "D",
+                "text": "Monitor (Low Power, Low Interest)",
+                "correct": false,
+                "whyWrong": "Regulatory approval authority = HIGH POWER. Cannot be in Monitor quadrant."
+              }
+            ],
+            "explanation": "The regulatory agency has HIGH POWER (approval authority can stop the project) but LOW INTEREST (only wants compliance information, not general updates). This places them in \"Keep Satisfied\" — meet their specific needs without over-engaging.",
+            "correctFeedback": {
+              "text": "The regulatory agency has HIGH POWER (approval authority can stop the project) but LOW INTEREST (only wants compliance information, not general updates). This places them in \"Keep Satisfied\" — meet their specific needs without over-engaging.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "The agency told you exactly what they want: compliance matters only. Respect that. Keep them satisfied by meeting their needs without unnecessary communication."
+            },
+            "retryHint": "The agency can block your deliverable (HIGH POWER) but only wants compliance contact (LOW INTEREST). Which quadrant combines these?"
+          }
+        ]
+      }
+    }
+  ]
+}

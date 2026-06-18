@@ -1,0 +1,707 @@
+{
+  "lessonId": "D1L4",
+  "lessonTitle": "Daily Standup & Collaboration",
+  "courseId": "D1",
+  "courseName": "Agile Foundations: Scrum & Kanban",
+  "pathId": "D",
+  "pathName": "Agile/Hybrid Approaches",
+  "domain": "Process",
+  "estimatedDuration": 480,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Recognize Daily Standup as TEAM synchronization, not a PM/PO status meeting",
+    "Apply the 3 Questions framework effectively to keep standup focused",
+    "Understand the 15-minute timebox is fixed regardless of team size or sprint length",
+    "Use the parking lot technique to defer detailed discussions without losing them",
+    "Recognize the Scrum Master as facilitator and impediment remover, not task assigner",
+    "Apply compromise for uncontrollable constraints like time zone conflicts"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "morgan_lee",
+    "maya_rodriguez",
+    "devon_brown",
+    "taylor_kim"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "45-Minute \"Standup\": How Did a 15-Minute Meeting Become an Interrogation Session?",
+        "intro": "You're **Alex Mitchell**, Scrum Master for the Menu Innovation Lab at Savory & Co. It's Sprint 2, Day 3. The Daily Standup was supposed to be 15 minutes. Instead, Morgan (Product Owner) is interrogating Maya about ingredient decisions. Devon and Maya are debating JavaScript frameworks while the chefs check their phones. The clock hits 38 minutes and counting. You realize: nobody on this team actually knows what Daily Standup is FOR.",
+        "failure_cards": [
+          {
+            "id": "the_interrogation",
+            "icon": "📋",
+            "title": "The Interrogation",
+            "summary": "Morgan turns standup into a detailed Q&A session",
+            "image": "/images/D1L4_comic_interrogation.webp",
+            "details": "Morgan pointed at Maya: \"Explain why you chose Thai basil over holy basil. I need details.\" Maya spent 7 minutes explaining her reasoning while the rest of the team checked their phones. One person done, four more to go. At this rate, standup would run 35+ minutes. Morgan treated it as HER status meeting — asking detailed questions, demanding explanations. The team stood there, disengaged, wondering why they were required to attend."
+          },
+          {
+            "id": "the_framework_debate",
+            "icon": "⚠️",
+            "title": "The Framework Debate",
+            "summary": "A technical debate hijacks standup for 13 minutes",
+            "image": "/images/D1L4_comic_framework_debate.webp",
+            "details": "Devon mentioned he was choosing between React and Vue.js for the recipe app. Maya jumped in: \"React! Way better community support.\" Devon crossed his arms: \"But Vue has a gentler learning curve.\" For 13 minutes, they debated while three chefs whispered to each other: \"Why are we here for this?\" Taylor yawned. The standup became a technical forum that only two people cared about."
+          },
+          {
+            "id": "the_breaking_point",
+            "icon": "💡",
+            "title": "The Breaking Point",
+            "summary": "38 minutes in, Alex realizes this is not a standup — it is an interrogation",
+            "image": "/images/D1L4_comic_breaking_point.webp",
+            "details": "Alex checked his stopwatch: 38 minutes. Morgan was now grilling Taylor about her testing approach. Taylor looked overwhelmed. Alex stepped forward: \"STOP. This isn't a standup. This is a 45-minute interrogation session.\" He looked at the team: \"Daily Standup is 15 minutes. Team sync, not status report. We need to fix this — starting tomorrow.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "alex_mitchell",
+          "name": "Alex Mitchell",
+          "role": "Scrum Master",
+          "quote": "38 minutes. One person interrogated. Two people debating frameworks. Three chefs wondering why they're here. This isn't a standup — it's everything a standup should NOT be. Tomorrow, we fix this."
+        },
+        "learning_hook": "**The Daily Standup** is a 15-minute timebox where the TEAM synchronizes with each other — not a status meeting where members report to management. Let's learn the 3 Questions framework, the parking lot technique, and how Scrum Masters keep standups focused and efficient."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "fix_the_broken_standup",
+        "title": "Fix the Broken Standup",
+        "description": "Alex is resetting standup expectations for the team. Help him coach Morgan, manage technical debates, and establish proper standup practices.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What should Alex (Scrum Master) do in this situation?",
+            "points": 150,
+            "scenario_name": "Standup Purpose — Coach Morgan",
+            "situation": "It's Day 4. Alex is trying to reset expectations. During standup, Maya gives her update: \"Yesterday I finalized the Thai basil recipe. Today I'll work on plating. No blockers.\" Morgan immediately interrupts: \"Wait, Maya — why did you choose Thai basil over holy basil? Can you explain your reasoning? I need to understand the rationale.\" Maya looks at Alex, uncertain how to respond.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Let Morgan ask her questions — she's the Product Owner and needs information",
+                "correct": false,
+                "whyWrong": "This treats standup as a status meeting for the PO, which undermines team self-organization and wastes everyone's time on one person's questions."
+              },
+              {
+                "id": "B",
+                "text": "Intervene: \"Morgan, standup is for team synchronization, not detailed explanations. Let's defer your question to after standup.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Ask Morgan not to attend future standups since she's disrupting the flow",
+                "correct": false,
+                "whyWrong": "Don't exclude stakeholders — coach them on proper standup behavior instead. POs are welcome to attend and listen."
+              },
+              {
+                "id": "D",
+                "text": "Extend the standup to 30 minutes to accommodate Morgan's questions",
+                "correct": false,
+                "whyWrong": "Never extend the timebox. 15 minutes is non-negotiable. The solution is better facilitation, not more time."
+              }
+            ],
+            "explanation": "Daily Standup is TEAM synchronization — members share progress and blockers with EACH OTHER, not report to the PM/PO. Morgan can attend and listen, but should not interrogate. Alex correctly defers detailed questions to an offline discussion after standup ends.",
+            "correctFeedback": {
+              "text": "Daily Standup is TEAM synchronization — members share progress and blockers with EACH OTHER, not report to the PM/PO. Morgan can attend and listen, but should not interrogate. Alex correctly defers detailed questions to an offline discussion after standup ends.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Standup is for TEAM synchronization. Morgan can listen, but the team talks to each other. Detailed questions go offline. 15 minutes, focused, team-driven."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I thought standup was my chance to get status updates from the team. But Alex is right — I can get those answers offline without holding everyone hostage.",
+              "character": "Morgan Lee",
+              "characterQuote": "I thought standup was my chance to get status updates from the team. But Alex is right — I can get those answers offline without holding everyone hostage."
+            },
+            "retryHint": "Who is the audience for standup updates — the Product Owner, or the rest of the team? Think about who benefits from hearing each update."
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What should Alex do when detailed technical discussions derail the standup?",
+            "points": 150,
+            "scenario_name": "Parking Lot Technique",
+            "situation": "After Maya's update, Devon shares: \"Yesterday I designed the recipe app wireframe. Today I'll start coding. I'm deciding between React and Vue.js.\" Maya immediately jumps in: \"I think React is better — more community support.\" Devon pushes back: \"But Vue.js has a gentler learning curve.\" They start debating intensely. The three chefs look at each other, confused about why they're discussing JavaScript frameworks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Let them continue — it's important for the team to resolve technical decisions together",
+                "correct": false,
+                "whyWrong": "Detailed discussions don't belong in standup — they derail the 15-minute timebox and waste time for uninvolved team members like the chefs."
+              },
+              {
+                "id": "B",
+                "text": "Use parking lot technique: \"Great topic — let's parking lot it. Maya and Devon, discuss after standup. Let's continue.\"",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Stop the standup completely and resolve the framework decision now since it's blocking Devon",
+                "correct": false,
+                "whyWrong": "Important topics should be addressed, but not during standup. Stopping the standup for one topic disrespects everyone else's time."
+              },
+              {
+                "id": "D",
+                "text": "Tell Maya and Devon this isn't relevant to standup and they shouldn't bring up technical topics",
+                "correct": false,
+                "whyWrong": "Technical topics CAN be mentioned as blockers or plans. It's the extended discussion and debate that should be deferred, not the topic itself."
+              }
+            ],
+            "explanation": "The parking lot technique defers detailed discussions to AFTER standup with only interested members. This keeps standup focused, respects the 15-minute timebox, and doesn't waste time for team members who don't need to hear the debate. Maya and Devon can discuss React vs Vue after standup — the chefs can leave.",
+            "correctFeedback": {
+              "text": "The parking lot technique defers detailed discussions to AFTER standup with only interested members. This keeps standup focused, respects the 15-minute timebox, and doesn't waste time for team members who don't need to hear the debate. Maya and Devon can discuss React vs Vue after standup — the chefs can leave.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Alex parking-lotted our framework debate. After standup, Devon and I discussed for 20 minutes. The chefs left — didn't waste their time. Problem solved, timebox protected."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Technical topics CAN be mentioned in standup — it's the detailed discussion that gets deferred. Note it, move on, circle back after with just the people who care.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Technical topics CAN be mentioned in standup — it's the detailed discussion that gets deferred. Note it, move on, circle back after with just the people who care."
+            },
+            "retryHint": "The standup should stay within 15 minutes. What technique captures important topics without derailing the meeting? Think: acknowledge, defer, continue."
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What is the correct timebox for Daily Standup according to Scrum?",
+            "points": 100,
+            "scenario_name": "15-Minute Timebox Rule",
+            "situation": "During Sprint 3 planning, the team discusses standup logistics. Maya says: \"Our standups run 20-25 minutes. We should officially extend them to 30 minutes.\" Taylor asks: \"Shouldn't we do 10 minutes since we're only 5 people?\" Morgan adds: \"Does sprint length matter? We're doing 2-week sprints — maybe we need longer standups?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "10 minutes for small teams (5 people), 15 for medium, 20 for large",
+                "correct": false,
+                "whyWrong": "The timebox doesn't scale with team size. If standup takes longer with more people, the updates are too detailed — fix facilitation, not duration."
+              },
+              {
+                "id": "B",
+                "text": "15 minutes for 1-week sprints, 30 minutes for 2-week sprints",
+                "correct": false,
+                "whyWrong": "The timebox doesn't scale with sprint length. Daily standup serves the same purpose regardless of whether sprints are 1 week or 4 weeks."
+              },
+              {
+                "id": "C",
+                "text": "15 minutes — fixed timebox, regardless of team size or sprint length",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Team decides based on their needs since self-organization allows them to choose",
+                "correct": false,
+                "whyWrong": "While teams self-organize their WORK, the 15-minute timebox is a framework rule, not a team decision. Some Scrum rules are fixed."
+              }
+            ],
+            "explanation": "Daily Standup is ALWAYS 15 minutes — a Scrum rule that is non-negotiable. Team size doesn't matter (5 or 10 people). Sprint length doesn't matter (1-week or 4-week). If your standup takes longer with more people, the problem is facilitation, not the timebox.",
+            "correctFeedback": {
+              "text": "Daily Standup is ALWAYS 15 minutes — a Scrum rule that is non-negotiable. Team size doesn't matter (5 or 10 people). Sprint length doesn't matter (1-week or 4-week). If your standup takes longer with more people, the problem is facilitation, not the timebox.",
+              "character": "Taylor Kim",
+              "characterQuote": "I thought small teams could do 10 minutes. But Alex clarified: 15 minutes is the rule, regardless of team size or sprint length. Non-negotiable."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The 15-minute timebox isn't a suggestion — it's a Scrum framework rule. Teams enforce it through facilitation and parking lot, not by extending the clock.",
+              "character": "Alex Mitchell",
+              "characterQuote": "The 15-minute timebox isn't a suggestion — it's a Scrum framework rule. Teams enforce it through facilitation and parking lot, not by extending the clock."
+            },
+            "retryHint": "Is the 15-minute timebox a guideline teams can adjust, or a fixed Scrum rule? Think about what would happen if every team changed the timebox to suit their preference."
+          },
+          {
+            "q_id": "q4",
+            "type": "single_select",
+            "question": "What should Alex (Scrum Master) do with this impediment?",
+            "points": 100,
+            "scenario_name": "Scrum Master Impediment Removal",
+            "situation": "After standup, Maya mentions: \"I'm blocked waiting for nutrition analysis data from Taylor — he hasn't responded to my email for 2 days.\" The data is critical for Maya to finalize recipe specifications this sprint.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Assign Taylor to prioritize Maya's request immediately during standup",
+                "correct": false,
+                "whyWrong": "Scrum Masters don't assign tasks — teams are self-organizing. Also, don't derail standup with task assignment discussions."
+              },
+              {
+                "id": "B",
+                "text": "Tell Maya to be more patient — Taylor is busy with other work",
+                "correct": false,
+                "whyWrong": "Dismissing blockers fails the team. Impediment removal is a CORE Scrum Master responsibility — not optional."
+              },
+              {
+                "id": "C",
+                "text": "After standup, follow up with Taylor to help remove Maya's blocker",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Escalate to Morgan (PO) to decide priority between Maya's and Taylor's work",
+                "correct": false,
+                "whyWrong": "This blocker is a coordination issue, not a priority decision requiring PO involvement. The SM can resolve it directly."
+              }
+            ],
+            "explanation": "The Scrum Master's role is to REMOVE IMPEDIMENTS. Alex notes the blocker during standup, then works after standup to unblock Maya. This is servant leadership in action — facilitating solutions without assigning tasks or controlling what the team works on.",
+            "correctFeedback": {
+              "text": "The Scrum Master's role is to REMOVE IMPEDIMENTS. Alex notes the blocker during standup, then works after standup to unblock Maya. This is servant leadership in action — facilitating solutions without assigning tasks or controlling what the team works on.",
+              "character": "Alex Mitchell",
+              "characterQuote": "I noted Maya's blocker during standup. After we finished, I found Taylor — had the data to Maya within 2 hours. That's what impediment removal looks like."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Alex doesn't assign tasks — that would undermine our self-organization. But he DOES remove obstacles. He followed up with Taylor after standup and got me unblocked.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Alex doesn't assign tasks — that would undermine our self-organization. But he DOES remove obstacles. He followed up with Taylor after standup and got me unblocked."
+            },
+            "retryHint": "What is one of the Scrum Master's primary responsibilities? Think about what \"servant leadership\" means in the context of team obstacles."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "The Daily Standup Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Team Synchronization, NOT Status Meeting",
+            "subtitle": "",
+            "content": "The fundamental shift in understanding Daily Standup:\n\n| Predictive Status Meeting | Agile Daily Standup |\n|--------------------------|---------------------|\n| Team reports TO PM/authority | Team talks TO EACH OTHER |\n| PM asks detailed questions | Brief updates only |\n| 30-60 minutes | 15 minutes (fixed) |\n| Focus: accountability upward | Focus: coordination sideways |\n| PM controls the meeting | Team owns the meeting |\n\n**What Standup IS FOR:**\n- **SYNCHRONIZE:** Share what everyone is working on\n- **COORDINATE:** Identify dependencies and overlaps\n- **SURFACE BLOCKERS:** Make impediments visible so they can be removed\n- **TEAM OWNERSHIP:** Team talks to team, not to management\n\n**What Standup is NOT FOR:**\n- Status reporting to PM/PO (they can listen, not interrogate)\n- Detailed problem-solving (use parking lot)\n- Performance reviews (those happen in 1-on-1s)\n- Task assignment (team self-organizes)"
+          },
+          {
+            "id": "tab2",
+            "title": "The 3 Questions Framework",
+            "subtitle": "",
+            "content": "Each team member answers three questions — 1-2 minutes per person:\n\n1. **\"What did I do YESTERDAY?\"** — Share completed work so team knows progress\n   - Brief: \"Finalized Thai basil recipe, tested it.\"\n   - NOT: \"Let me explain my entire process...\"\n\n2. **\"What will I do TODAY?\"** — Share planned work so team can coordinate\n   - Brief: \"Working on plating design for fusion taco.\"\n   - NOT: \"I'll continue various tasks and see...\"\n\n3. **\"What BLOCKERS do I have?\"** — Surface obstacles so SM can help remove them\n   - Specific: \"Blocked waiting for nutrition data from Taylor.\"\n   - NOT: \"Everything's fine\" (when it isn't)\n\n**Target:** 1-2 minutes per person = 5-10 minutes for a 5-person team, leaving buffer within the 15-minute timebox.",
+            "diagram": {
+              "image": "/images/D1L4_diagram_three_questions.webp",
+              "alt": "3 Questions Framework diagram"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Essential Standup Practices",
+            "subtitle": "",
+            "content": "**15-Minute Timebox (Non-Negotiable):**\n\n| Myth | Reality |\n|------|---------|\n| \"Small teams need less time\" | 15 minutes regardless of team size |\n| \"Longer sprints need longer standups\" | 15 minutes regardless of sprint length |\n| \"We can vote on duration\" | Not negotiable — it's a Scrum rule |\n| \"Just extend when needed\" | Use parking lot instead of extending |\n\n**Parking Lot Technique:**\n- When detailed discussion arises during standup, the SM says: \"Great topic — let's parking lot it.\"\n- After standup, interested members stay to discuss. Everyone else leaves.\n- The topic is addressed at the RIGHT time with the RIGHT people.\n- Parking lot is not avoidance — it is better time management.\n\n**Scrum Master as Facilitator:**\n\n| Scrum Master DOES | Scrum Master does NOT |\n|-------------------|----------------------|\n| Facilitate (keep on track) | Assign tasks |\n| Enforce 15-min timebox | Interrogate team |\n| Manage parking lot | Solve problems during standup |\n| Listen for impediments | Dominate conversation |\n| Remove blockers AFTER standup | Control what team works on |",
+            "diagram": {
+              "image": "/images/D1L4_diagram_standup_flow.webp",
+              "alt": "Daily Standup flow and parking lot"
+            }
+          },
+          {
+            "id": "tab4",
+            "title": "Time Zone Compromise",
+            "subtitle": "",
+            "content": "When dealing with uncontrollable constraints like distributed teams:\n\n- 9am EST = 6am PST (too early for SF)\n- 12pm EST = 9am PST (mid-work disruption for NYC)\n- **10am EST = 7am PST** (slightly inconvenient for BOTH = compromise)\n\n**Principle:** Find a time acceptable to all, even if perfect for none. Prefer synchronous (live video) over async (Slack updates) because real-time coordination is the core benefit of standup.\n\n**PMBOK Reference:** Agile Practice Guide, pages 51-53; PMBOK 7th Edition, page 168"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "Designing a Distributed Standup",
+        "scenario": {
+          "title": "Designing a Distributed Standup",
+          "description": "Savory & Co. is expanding. The Menu Innovation Lab now has 8 members across 4 time zones: 3 in NYC (EST), 2 in Denver (MST), 2 in SF (PST), and 1 in London (GMT). Alex needs to design a Daily Standup that works for this distributed team. Challenges include time zone differences, requests for async standup, arguments for 30-minute meetings, and recurring technical debates.",
+          "images": [
+            {
+              "src": "/images/D1L4_comic_transfer.webp",
+              "alt": "Transfer scenario: distributed team standup"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "How should Alex handle time zone conflicts for the distributed team?",
+            "points": 100,
+            "scenario_name": "Time Zone Strategy",
+            "situation": "The distributed team cannot agree on a standup time. 8am EST works for NYC but is 5am PST for SF and 1pm for London. Team members are complaining about inconvenient times. Alex needs to find an approach that respects all time zones.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Let the majority vote on standup time — NYC has the most people",
+                "correct": false,
+                "whyWrong": "Majority vote creates winners and losers. The SF and London members would always lose, building resentment and reducing engagement."
+              },
+              {
+                "id": "B",
+                "text": "Use compromise: find a time slightly inconvenient for all but acceptable (11am EST = 8am PST = 4pm GMT)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Cancel synchronous standup — too hard to coordinate across 4 time zones",
+                "correct": false,
+                "whyWrong": "Canceling synchronous standup loses the real-time coordination benefit, which is the entire purpose. Only go async if absolutely no common time exists."
+              },
+              {
+                "id": "D",
+                "text": "Run two separate standups for each hemisphere to avoid time zone issues",
+                "correct": false,
+                "whyWrong": "Two separate standups defeat the purpose of TEAM synchronization. The whole team needs to hear each other's updates to coordinate effectively."
+              }
+            ],
+            "explanation": "Compromise means finding a time acceptable to all, even if perfect for none. 11am EST = 8am PST = 4pm GMT works because everyone can participate, though no one gets their ideal time. This maintains the synchronous coordination benefit while respecting all locations.",
+            "correctFeedback": {
+              "text": "Compromise means finding a time acceptable to all, even if perfect for none. 11am EST = 8am PST = 4pm GMT works because everyone can participate, though no one gets their ideal time. This maintains the synchronous coordination benefit while respecting all locations.",
+              "character": "Alex Mitchell",
+              "characterQuote": "11am EST isn't anyone's first choice. But everyone can make it work. That's compromise — slightly inconvenient for all, acceptable to all. The real-time coordination is worth it."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Voting sounds democratic, but it just means the majority wins and the minority suffers. Compromise means everyone adjusts a little. That's how distributed teams build trust.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Voting sounds democratic, but it just means the majority wins and the minority suffers. Compromise means everyone adjusts a little. That's how distributed teams build trust."
+            },
+            "retryHint": "When a constraint is outside the team's control (like geography), what conflict resolution technique finds middle ground? Think: everyone adjusts a little."
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "single_select",
+            "question": "What is the best approach for this distributed team's Daily Standup?",
+            "points": 100,
+            "scenario_name": "Sync vs Async Format",
+            "situation": "Several team members suggest using async Slack updates instead of a live video standup. They argue it would be easier with 4 time zones and everyone could post updates at their own convenience. Alex must decide between synchronous and asynchronous standup.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Switch to async Slack updates to avoid time zone scheduling hassles",
+                "correct": false,
+                "whyWrong": "Async updates lose real-time coordination. People post and forget. Dependencies and blockers don't get surfaced until hours later when someone reads the thread."
+              },
+              {
+                "id": "B",
+                "text": "Synchronous live video call at the compromise time for real-time coordination",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Email daily status reports to the Scrum Master each morning",
+                "correct": false,
+                "whyWrong": "Email status reports turn standup into a reporting exercise for the SM — the opposite of team synchronization. Team members never see each other's updates."
+              },
+              {
+                "id": "D",
+                "text": "Let each person choose sync or async based on their preference",
+                "correct": false,
+                "whyWrong": "Mixed formats mean some people are always out of sync. The team can't coordinate if half the members aren't present for live discussion."
+              }
+            ],
+            "explanation": "Prefer SYNCHRONOUS standup even with time zone challenges. Live standup enables real-time coordination — team members can ask quick clarifying questions, identify dependencies on the spot, and surface blockers immediately. Async loses this spontaneous coordination benefit. Only use async if truly no common time exists.",
+            "correctFeedback": {
+              "text": "Prefer SYNCHRONOUS standup even with time zone challenges. Live standup enables real-time coordination — team members can ask quick clarifying questions, identify dependencies on the spot, and surface blockers immediately. Async loses this spontaneous coordination benefit. Only use async if truly no common time exists.",
+              "character": "Devon Brown",
+              "characterQuote": "Async updates felt easier, but we missed the real-time interaction. When Maya mentioned she needed my API data, I jumped in immediately: 'I'll have it by noon.' That can't happen in async."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Async Slack posts become a chore people forget. Live video keeps the team connected and enables real-time problem-solving. The 15-minute investment pays for itself.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Async Slack posts become a chore people forget. Live video keeps the team connected and enables real-time problem-solving. The 15-minute investment pays for itself."
+            },
+            "retryHint": "What is the PRIMARY benefit of Daily Standup — written documentation of status, or real-time team coordination? Which format delivers that benefit?"
+          },
+          {
+            "q_id": "transfer_q3",
+            "type": "single_select",
+            "question": "Should Alex increase the standup duration to 30 minutes for the 8-person team?",
+            "points": 100,
+            "scenario_name": "Duration for Larger Team",
+            "situation": "With 8 members now on the team (up from 5), one member argues: \"8 people need 30 minutes — more people means more time for everyone to share their updates.\" Others agree that 15 minutes felt tight even with 5 people.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Yes, 30 minutes for 8 people is reasonable",
+                "correct": false,
+                "whyWrong": "The 15-minute timebox is a Scrum framework rule, not adjustable by team size. Longer standups reduce energy and engagement."
+              },
+              {
+                "id": "B",
+                "text": "No, 15 minutes is fixed regardless of team size — coach the team on brevity",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Let the team vote on a comfortable duration",
+                "correct": false,
+                "whyWrong": "Duration is not a team decision. Some Scrum rules are fixed — teams self-organize their WORK, not the framework ceremonies' timeboxes."
+              },
+              {
+                "id": "D",
+                "text": "Split into two 15-minute standups with 4 people each",
+                "correct": false,
+                "whyWrong": "Splitting the team into two standups defeats the purpose of whole-team synchronization. Everyone needs to hear everyone's updates."
+              }
+            ],
+            "explanation": "15 minutes is FIXED regardless of team size. If 8 people can't finish in 15 minutes, the updates are too detailed — the solution is better facilitation and brevity, not more time. Each person should take less than 2 minutes. The Scrum Guide also recommends keeping development teams to 10 or fewer members.",
+            "correctFeedback": {
+              "text": "15 minutes is FIXED regardless of team size. If 8 people can't finish in 15 minutes, the updates are too detailed — the solution is better facilitation and brevity, not more time. Each person should take less than 2 minutes. The Scrum Guide also recommends keeping development teams to 10 or fewer members.",
+              "character": "Taylor Kim",
+              "characterQuote": "With 8 people at under 2 minutes each, we finish in 14 minutes. It works when everyone stays brief and parks detailed topics. The timebox isn't the problem — our updates are."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Extending the timebox is never the answer. If standup runs long, the updates are too detailed. Coach brevity: 3 questions, 1-2 minutes, park everything else.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Extending the timebox is never the answer. If standup runs long, the updates are too detailed. Coach brevity: 3 questions, 1-2 minutes, park everything else."
+            },
+            "retryHint": "Does the Scrum Guide allow teams to adjust the Daily Standup timebox based on team size? What should change instead — the timebox, or the detail level of updates?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **Daily Standup** is a 15-minute team synchronization event — not a status meeting for management. The Scrum Master facilitates, enforces the timebox, and removes impediments after standup ends.",
+        "key_takeaways": [
+          "Daily Standup is TEAM synchronization — Team members share with EACH OTHER, not report to PM/PO. Management can listen but should not interrogate.",
+          "3 Questions Framework keeps it focused — \"What did I do yesterday? What will I do today? What blockers do I have?\" — 1-2 minutes per person.",
+          "15 minutes is FIXED — Non-negotiable Scrum rule. Does not change based on team size, sprint length, or team preference.",
+          "Parking lot technique defers detailed discussions to after standup with interested members only. It protects the timebox without losing important topics.",
+          "Scrum Master facilitates and removes impediments — Does NOT assign tasks, interrogate, or control. Servant leadership in action.",
+          "Compromise for time zones — When constraints are beyond team control, find a time acceptable to all, even if perfect for none. Prefer synchronous over async."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Our standup went from a 45-minute interrogation to a 13-minute team sync. Morgan listens instead of interrogating. Maya and Devon parking-lot their debates. I note blockers during standup and remove them after. The 3 Questions framework plus a strict 15-minute timebox changed everything. Daily Standup isn't about reporting UP — it's about coordinating ACROSS."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L5",
+          "title": "Sprint Review & Demos",
+          "description": "The sprint is ending. It's time to demonstrate what the team built, gather stakeholder feedback, and adapt the Product Backlog. Sprint Review is where the team shows working product — not a slide deck."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the Scrum Master do?",
+            "points": 50,
+            "scenario_name": "PO Interrogation",
+            "situation": "A Scrum Master notices that the Product Owner has been using Daily Standup to ask team members detailed questions about their work and request thorough explanations. The standup regularly runs 30+ minutes as a result. Other team members are visibly disengaged.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Allow it since the PO needs information about team progress",
+                "correct": false,
+                "whyWrong": "Allowing interrogation undermines team self-organization and wastes the entire team's time on one person's information needs."
+              },
+              {
+                "id": "B",
+                "text": "Coach the PO that standup is for team synchronization, not status reporting, and suggest following up offline",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Exclude the PO from future standups to prevent disruption",
+                "correct": false,
+                "whyWrong": "Excluding stakeholders is not the Scrum Master's role. The correct approach is coaching proper standup behavior while welcoming attendance."
+              },
+              {
+                "id": "D",
+                "text": "Extend standup time to accommodate the PO's questions",
+                "correct": false,
+                "whyWrong": "Extending the timebox masks the real problem (misuse of standup purpose). 15 minutes is non-negotiable."
+              }
+            ],
+            "explanation": "Daily Standup is for TEAM synchronization — members share with each other, not report to authority figures. The Scrum Master should coach the PO on proper standup etiquette while suggesting alternative communication channels for detailed questions. The PO is welcome to attend and listen but should not turn it into an interrogation.",
+            "correctFeedback": {
+              "text": "Daily Standup is for TEAM synchronization — members share with each other, not report to authority figures. The Scrum Master should coach the PO on proper standup etiquette while suggesting alternative communication channels for detailed questions. The PO is welcome to attend and listen but should not turn it into an interrogation.",
+              "character": "Morgan Lee",
+              "characterQuote": "I used to treat standup as MY status meeting. Alex coached me: listen during standup, ask detailed questions offline. Way more efficient for everyone."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Don't exclude the PO — coach them. And never extend the timebox. The solution is better behavior, not more time.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Don't exclude the PO — coach them. And never extend the timebox. The solution is better behavior, not more time."
+            },
+            "retryHint": "What is the Scrum Master's approach when someone misuses a ceremony — exclude them, accommodate them, or coach them?"
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What is the BEST action for the Scrum Master?",
+            "points": 50,
+            "scenario_name": "Technical Debate Derailment",
+            "situation": "During Daily Standup, two developers begin an in-depth technical discussion about architecture decisions. The discussion has been going on for 8 minutes with other team members waiting. The 15-minute timebox is almost expired with 3 people still to go.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Let them continue since technical decisions are important for the team",
+                "correct": false,
+                "whyWrong": "Technical decisions matter, but standup is not the venue. Three team members haven't given their updates yet — their time is being wasted."
+              },
+              {
+                "id": "B",
+                "text": "Interrupt and use the parking lot technique to defer the discussion to after standup",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "End the standup immediately and schedule a separate architecture meeting",
+                "correct": false,
+                "whyWrong": "Ending standup without hearing from remaining members means those blockers and updates go unshared. The SM should park the debate AND complete the standup."
+              },
+              {
+                "id": "D",
+                "text": "Ask the developers to resolve the issue before the next standup",
+                "correct": false,
+                "whyWrong": "Telling developers to \"resolve it before next standup\" doesn't help them collaborate and doesn't protect today's standup timebox."
+              }
+            ],
+            "explanation": "The parking lot technique is specifically designed for this situation. Note the topic, defer it to after standup with interested members only. This respects the 15-minute timebox and doesn't waste time for team members uninvolved in the architectural discussion. Three people still need to share their updates.",
+            "correctFeedback": {
+              "text": "The parking lot technique is specifically designed for this situation. Note the topic, defer it to after standup with interested members only. This respects the 15-minute timebox and doesn't waste time for team members uninvolved in the architectural discussion. Three people still need to share their updates.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Alex parking-lotted our debate. After standup, we resolved it in 20 minutes with just the people who cared. Everyone else got back to work."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "I wanted to keep debating during standup, but Alex was right — the chefs didn't need to hear about React vs Vue. Park it, finish standup, then deep-dive.",
+              "character": "Devon Brown",
+              "characterQuote": "I wanted to keep debating during standup, but Alex was right — the chefs didn't need to hear about React vs Vue. Park it, finish standup, then deep-dive."
+            },
+            "retryHint": "What technique captures important topics for later discussion while protecting the standup timebox? The goal is not to kill the discussion — just to move it."
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What is the correct Daily Standup duration according to Scrum?",
+            "points": 50,
+            "scenario_name": "Timebox Duration",
+            "situation": "A Scrum team has 9 members and is running 3-week sprints. During the Sprint Retrospective, Taylor suggests reducing standup to 10 minutes since the team is \"efficient.\" Devon argues for 25 minutes due to the team's size. The team asks: \"What does Scrum actually say?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "10 minutes for efficient teams that don't need the full time",
+                "correct": false,
+                "whyWrong": "Even efficient teams keep the 15-minute timebox. Finishing early is fine, but the maximum is always 15 minutes — not adjustable downward."
+              },
+              {
+                "id": "B",
+                "text": "25 minutes for larger teams with 9 members",
+                "correct": false,
+                "whyWrong": "Team size doesn't change the timebox. If 9 people can't finish in 15 minutes, the problem is update detail level, not the timebox."
+              },
+              {
+                "id": "C",
+                "text": "15 minutes — fixed regardless of team size or sprint length",
+                "correct": true
+              },
+              {
+                "id": "D",
+                "text": "Let the team vote and decide democratically",
+                "correct": false,
+                "whyWrong": "Duration is a framework rule, not a democratic decision. Teams self-organize their WORK, not the ceremony constraints."
+              }
+            ],
+            "explanation": "Daily Standup is timeboxed to 15 minutes — a Scrum rule that is non-negotiable. It doesn't vary based on team size (whether 5 or 10 people) or sprint length (whether 1-week or 4-week sprints). Teams enforce this through facilitation and the parking lot technique, not by adjusting the clock.",
+            "correctFeedback": {
+              "text": "Daily Standup is timeboxed to 15 minutes — a Scrum rule that is non-negotiable. It doesn't vary based on team size (whether 5 or 10 people) or sprint length (whether 1-week or 4-week sprints). Teams enforce this through facilitation and the parking lot technique, not by adjusting the clock.",
+              "character": "Taylor Kim",
+              "characterQuote": "I thought 'efficient' meant we could shorten it. But 15 minutes is the rule — and it gives us buffer for the days when things come up."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "The timebox is 15 minutes, period. Not 10, not 25, not 'whatever the team votes.' Some Scrum rules are fixed to create consistency.",
+              "character": "Alex Mitchell",
+              "characterQuote": "The timebox is 15 minutes, period. Not 10, not 25, not 'whatever the team votes.' Some Scrum rules are fixed to create consistency."
+            },
+            "retryHint": "Is the 15-minute Daily Standup timebox a recommendation or a rule? Can teams modify it based on their specific circumstances?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What conflict resolution technique is MOST appropriate?",
+            "points": 50,
+            "scenario_name": "Time Zone Compromise",
+            "situation": "An Agile team is distributed across three time zones: New York (EST), Denver (MST), and San Francisco (PST). The current 9am EST standup works well for New York but is 6am PST for San Francisco. SF team members are complaining about the early hour and threatening to skip standup altogether.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Force — New York has the most team members, so keep 9am EST",
+                "correct": false,
+                "whyWrong": "Force (majority rules) creates winners and losers. The SF members would feel undervalued and disengaged, reducing team cohesion."
+              },
+              {
+                "id": "B",
+                "text": "Compromise — Find a time slightly inconvenient for all but acceptable (e.g., 10am EST / 7am PST)",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Avoid — Cancel synchronous standup and switch to async Slack updates",
+                "correct": false,
+                "whyWrong": "Avoidance (canceling synchronous standup) eliminates the real-time coordination benefit entirely. Only go async when absolutely no common time exists."
+              },
+              {
+                "id": "D",
+                "text": "Smooth — Tell San Francisco the early time builds discipline and team spirit",
+                "correct": false,
+                "whyWrong": "Smoothing (minimizing the concern) dismisses legitimate complaints. Early morning meetings impact work quality and morale."
+              }
+            ],
+            "explanation": "When dealing with constraints beyond the team's control (like time zones), compromise is the appropriate technique. Find a middle ground where everyone adjusts slightly — the goal is acceptability for all, even if perfect for none. 10am EST / 8am MST / 7am PST means everyone shifts a bit.",
+            "correctFeedback": {
+              "text": "When dealing with constraints beyond the team's control (like time zones), compromise is the appropriate technique. Find a middle ground where everyone adjusts slightly — the goal is acceptability for all, even if perfect for none. 10am EST / 8am MST / 7am PST means everyone shifts a bit.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Compromise isn't anyone's first choice. But 10am EST / 7am PST means NYC waits a bit and SF wakes a bit earlier. Everyone can make it. That's how distributed teams work."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Force means the majority wins and the minority suffers. That builds resentment, not collaboration. Compromise means everyone adjusts — that builds trust.",
+              "character": "Maya Rodriguez",
+              "characterQuote": "Force means the majority wins and the minority suffers. That builds resentment, not collaboration. Compromise means everyone adjusts — that builds trust."
+            },
+            "retryHint": "When everyone is affected by an external constraint, what approach ensures no one group bears the entire burden? Think: shared adjustment."
+          }
+        ]
+      }
+    }
+  ]
+}

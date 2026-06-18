@@ -1,0 +1,599 @@
+{
+  "lessonId": "C2L4",
+  "lessonTitle": "Schedule Compression Techniques",
+  "courseId": "C2",
+  "courseName": "Planning: Scope, Schedule, Cost",
+  "pathId": "C",
+  "pathName": "Process",
+  "domain": "Process",
+  "estimatedDuration": 420,
+  "scoring": {
+    "totalPoints": 1000,
+    "challengePoints": 500,
+    "transferPoints": 300,
+    "practicePoints": 200,
+    "masteryThreshold": 750,
+    "passingThreshold": 600
+  },
+  "learningObjectives": [
+    "Distinguish between fast tracking (parallelizing sequential activities) and crashing (adding resources to reduce duration)",
+    "Select the appropriate compression technique based on dependencies, budget, and risk",
+    "Identify that only critical path activities can be compressed to reduce total project duration",
+    "Recognize trade-offs: fast tracking increases risk, crashing increases cost",
+    "Apply PMI best practice: try fast tracking first (least costly option), then crash if needed"
+  ],
+  "characters": [
+    "alex_mitchell",
+    "carlos_mendez",
+    "sam_taylor",
+    "rashid_khan"
+  ],
+  "screens": [
+    {
+      "screen_number": 1,
+      "screen_type": "hook",
+      "duration": 60,
+      "content": {
+        "headline": "3 Weeks to Cut, $60K to Spend: Which Activities Do You Compress — and How?",
+        "intro": "You're **Alex Mitchell**, PM at Savory & Co. You've secured a high-profile restaurant opening contract with celebrity chef Marcus Chen — a career-defining opportunity. The original 12-week project was on track until the venue's landlord moves the grand opening forward by 3 weeks to align with a major food festival. Carlos wants to \"throw money at everything\" with overtime and extra crews, but that approach could cost $40K+ and blow the $60K remaining budget. You need a smarter strategy: fast track where possible, crash only where necessary.",
+        "failure_cards": [
+          {
+            "id": "the_deadline_bomb",
+            "icon": "📋",
+            "title": "The Deadline Bomb",
+            "summary": "The landlord moves the grand opening up 3 weeks — and Carlos wants to crash everything",
+            "image": "/images/C2L4_comic_deadline_crisis.webp",
+            "details": "Carlos bursts into the conference room: \"The grand opening is moving up THREE WEEKS for the Downtown Food Festival!\" Alex pulls up the Gantt chart — the critical path is 12 weeks, and the new deadline gives them only 9. Carlos pounds the table: \"Hire double the contractors, work 24/7!\" But Sam holds up the budget spreadsheet: \"We have $60K left. Crashing everything with overtime could cost $40K+ and blow the budget.\" Panic is not a compression strategy."
+          },
+          {
+            "id": "crashing_without_analysis",
+            "icon": "⚠️",
+            "title": "Crashing Without Analysis",
+            "summary": "Crashing every activity wastes budget on non-critical work",
+            "image": "/images/C2L4_comic_crashing_risks.webp",
+            "details": "Alex panicked and added overtime to ALL activities — including furniture delivery and signage installation. Total cost: $45K. But furniture and signage weren't on the critical path. Compressing them saved zero days on the overall schedule. Alex wasted $18K on non-critical activities that had float. Sam: \"We spent $18K compressing work that didn't affect the deadline at all. Now we don't have budget to crash the activities that actually matter.\" Lesson: Only compress critical path activities."
+          },
+          {
+            "id": "fast_tracking_a_hard_dependency",
+            "icon": "💡",
+            "title": "Fast Tracking a Hard Dependency",
+            "summary": "Fast tracking across a hard dependency causes rework, safety violations, and inspection failure",
+            "image": "/images/C2L4_comic_fast_tracking.webp",
+            "details": "To save time, Alex started equipment installation before electrical and plumbing were complete. Ovens were installed without power connections. Refrigerators sat without water lines. When the health inspector arrived: \"These units aren't connected to utilities. This fails inspection.\" Cost of rework: $10K+. Schedule impact: 2 weeks of delay — worse than the original problem. Rashid: \"Equipment NEEDS completed utilities. That's a hard dependency you can't fast track around.\""
+          }
+        ],
+        "carousel": {
+          "enabled": true,
+          "autoPlay": false,
+          "showIndicators": true,
+          "aspectRatio": "1:1"
+        },
+        "character_quote": {
+          "character": "sam_taylor",
+          "name": "Sam Taylor",
+          "role": "Financial Analyst",
+          "quote": "Carlos wants to throw $40K at overtime. But if we're smart about WHICH activities we compress and HOW we compress them, we can save 3 weeks for half that cost. Fast track where we can, crash only where we must."
+        },
+        "learning_hook": "**Schedule compression** means shortening the project timeline without reducing scope. PMI defines two techniques: **fast tracking** (running activities in parallel) and **crashing** (adding resources). Each has different costs, risks, and rules. The key: only compress critical path activities, and try fast tracking first because it costs less."
+      },
+      "cta": "Learn More"
+    },
+    {
+      "screen_number": 2,
+      "screen_type": "challenge",
+      "duration": 180,
+      "interaction": {
+        "type": "compress_the_celebrity_chef_timeline",
+        "title": "Compress the Celebrity Chef Timeline",
+        "description": "You must analyze three critical path activities and select the right compression technique for each. A budget tracker shows the cost impact of your decisions. Target: compress 3 weeks within the $60K budget.",
+        "questions": [
+          {
+            "q_id": "q1",
+            "type": "single_select",
+            "question": "What is the BEST compression technique for electrical and plumbing?",
+            "points": 175,
+            "scenario_name": "Electrical & Plumbing Compression",
+            "situation": "Electrical and plumbing work is currently sequential — one crew does electrical first (2 weeks), then plumbing (2 weeks), totaling 4 weeks on the critical path. Rashid reports: \"SpeedyPlumb Inc. can run plumbing while ElectraPlumb handles electrical. Different zones, no interference. It's $15K for two separate crews working simultaneously.\" Alternatively, overtime for the current single contractor costs $20K and reduces duration from 4 weeks to only 2.5 weeks. No building code prevents parallel work in separate zones.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Fast track: Hire a second contractor to run electrical and plumbing in parallel — saves 2 weeks at $15K",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Crash: Add more workers to the existing contractor's single crew",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Do nothing: This activity cannot be compressed without violating building codes",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Crash: Pay overtime for weekend work to finish in 2.5 weeks at $20K",
+                "correct": false
+              }
+            ],
+            "explanation": "Fast tracking is ideal here. Electrical and plumbing operate in different zones with no hard dependency preventing parallel work. Hiring a second contractor parallelizes sequential work at $15K, saving 2 full weeks. This follows PMI best practice: try fast tracking first because it is the least costly effective option. Overtime crashing costs $20K for only 1.5 weeks saved — worse on both cost and time.",
+            "correctFeedback": {
+              "text": "Fast tracking is ideal here. Electrical and plumbing operate in different zones with no hard dependency preventing parallel work. Hiring a second contractor parallelizes sequential work at $15K, saving 2 full weeks. This follows PMI best practice: try fast tracking first because it is the least costly effective option. Overtime crashing costs $20K for only 1.5 weeks saved — worse on both cost and time.",
+              "character": "Rashid Khan",
+              "characterQuote": "Smart move. Two crews, two zones, no interference. You just saved 2 weeks for $15K instead of spending $20K on overtime for less compression. That's efficient project management."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about WHY this activity takes 4 weeks. It's not that the work is slow — it's that the crew does one trade, then the other. What if you had two crews working at the same time?",
+              "character": "Sam Taylor",
+              "characterQuote": "Think about WHY this activity takes 4 weeks. It's not that the work is slow — it's that the crew does one trade, then the other. What if you had two crews working at the same time?"
+            },
+            "retryHint": "The work takes 4 weeks because one crew does electrical THEN plumbing sequentially. What if separate crews worked at the same time in different zones?"
+          },
+          {
+            "q_id": "q2",
+            "type": "single_select",
+            "question": "What is the BEST compression technique for equipment installation?",
+            "points": 175,
+            "scenario_name": "Equipment Installation Compression",
+            "situation": "Kitchen equipment installation takes 3 weeks with a 2-person crew. This activity has a HARD DEPENDENCY on completed electrical and plumbing — ovens need power outlets, refrigerators need water lines, ventilation needs electrical connections. Equipment literally cannot function without completed utilities. Rashid confirms: \"The vendor can provide a 4-person crew instead of 2. That's $12K extra but cuts installation from 3 weeks to 1.5 weeks. But they definitely need completed utilities — that's non-negotiable.\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Fast track: Start equipment installation before electrical and plumbing are complete",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Crash: Add more installers to reduce duration from 3 weeks to 1.5 weeks at $12K",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Do nothing: 3 weeks is the minimum safe installation time",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Fast track: Overlap equipment installation with staff training",
+                "correct": false
+              }
+            ],
+            "explanation": "Crashing is the correct technique here because fast tracking is impossible — equipment installation has a hard dependency on completed utilities. Ovens need power, refrigerators need water lines. The vendor confirmed a 4-person crew can safely complete installation in 1.5 weeks instead of 3. Installation duration is resource-dependent: more installers means faster completion. Budget allows the $12K expenditure.",
+            "correctFeedback": {
+              "text": "Crashing is the correct technique here because fast tracking is impossible — equipment installation has a hard dependency on completed utilities. Ovens need power, refrigerators need water lines. The vendor confirmed a 4-person crew can safely complete installation in 1.5 weeks instead of 3. Installation duration is resource-dependent: more installers means faster completion. Budget allows the $12K expenditure.",
+              "character": "Rashid Khan",
+              "characterQuote": "Right call. You can't install ovens without power outlets — that's physics, not bureaucracy. But doubling the crew cuts the time in half. Crashing is the only option when hard dependencies block fast tracking."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Remember: equipment NEEDS completed utilities. Can you fast track across a hard dependency? Or do you need a different technique that adds resources instead of rearranging sequence?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Remember: equipment NEEDS completed utilities. Can you fast track across a hard dependency? Or do you need a different technique that adds resources instead of rearranging sequence?"
+            },
+            "retryHint": "Can equipment work without power outlets and water lines? If the answer is no, fast tracking across that dependency is impossible. What other technique adds resources to speed up work?"
+          },
+          {
+            "q_id": "q3",
+            "type": "single_select",
+            "question": "What is the BEST compression technique for staff training?",
+            "points": 150,
+            "scenario_name": "Staff Training Compression",
+            "situation": "The staff training program takes 2 weeks total: 1 week of classroom training (safety protocols, menu theory, health codes) followed by 1 week of hands-on training with the installed equipment. Sam notes: \"We've already committed $27K to electrical and equipment compression. We have $33K left. Adding trainers costs $8K to compress training to 1 week total. But I'm wondering — does ALL the training really need to wait for equipment installation?\"",
+            "options": [
+              {
+                "id": "A",
+                "text": "Fast track: Run classroom training in parallel with equipment installation, then hands-on training after",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Crash: Hire additional trainers to compress training from 2 weeks to 1 week at $8K",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Reduce training to 1 week by cutting safety content to meet the deadline",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Do nothing: 2 weeks of training is non-negotiable for safety compliance",
+                "correct": false
+              }
+            ],
+            "explanation": "This is smart fast tracking. Classroom training (safety protocols, menu theory, health codes) does NOT depend on installed equipment, so it can run in parallel with equipment installation. Hands-on training (1 week) still happens after installation, respecting the real dependency. You save approximately 0.5 weeks at ZERO cost. After already spending $27K, preserving budget for contingencies is wise. PMI principle: try the least costly option first.",
+            "correctFeedback": {
+              "text": "This is smart fast tracking. Classroom training (safety protocols, menu theory, health codes) does NOT depend on installed equipment, so it can run in parallel with equipment installation. Hands-on training (1 week) still happens after installation, respecting the real dependency. You save approximately 0.5 weeks at ZERO cost. After already spending $27K, preserving budget for contingencies is wise. PMI principle: try the least costly option first.",
+              "character": "Sam Taylor",
+              "characterQuote": "Brilliant. You identified that classroom training has no real dependency on equipment. Zero additional cost, and we preserve $33K for contingencies. That's the kind of analysis that separates good PMs from reactive ones."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Not all of training requires installed equipment. Which parts of the training program could happen earlier — while equipment is still being installed? Think about hard versus soft dependencies.",
+              "character": "Sam Taylor",
+              "characterQuote": "Not all of training requires installed equipment. Which parts of the training program could happen earlier — while equipment is still being installed? Think about hard versus soft dependencies."
+            },
+            "retryHint": "Training has two parts: classroom (theory) and hands-on (equipment). Does the classroom portion truly need installed equipment? What if one part could start earlier?"
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 3,
+      "screen_type": "reason",
+      "duration": 120,
+      "microTeach": {
+        "title": "Fast Tracking vs Crashing Decision Framework",
+        "tabs": [
+          {
+            "id": "tab1",
+            "title": "Two Techniques for Schedule Compression",
+            "subtitle": "",
+            "content": "When you must shorten a project schedule without reducing scope, PMI defines exactly two techniques:\n\n**Fast Tracking** — Performing activities IN PARALLEL that were originally planned in SEQUENCE.\n- Cost impact: No cost increase (or minimal for coordination)\n- Risk impact: Risk INCREASES (coordination complexity, potential rework)\n- When to use: Activities CAN be parallelized (no hard dependencies), budget is tight\n- Example: Run plumbing and electrical in parallel with separate crews\n\n**Crashing** — Adding RESOURCES to critical path activities to reduce their duration.\n- Cost impact: Cost INCREASES (overtime, additional staff, expedited delivery)\n- Risk impact: May increase slightly (quality issues if resources are unfamiliar)\n- When to use: Hard dependencies prevent fast tracking, budget is available\n- Example: Add 2 more installers to equipment crew to finish faster\n\n**PMI Best Practice:** Try fast tracking FIRST because it is the least costly option. Use crashing when fast tracking is not feasible or not sufficient."
+          },
+          {
+            "id": "tab2",
+            "title": "The Decision Framework",
+            "subtitle": "",
+            "content": "Follow this decision tree when choosing a compression technique:\n\n1. **Is the activity on the critical path?**\n   - No: Do NOT compress it. Compressing non-critical activities (those with float) does NOT reduce total project duration. You would waste resources for zero schedule benefit.\n   - Yes: Proceed to step 2.\n\n2. **Are there hard dependencies preventing parallel work?**\n   - Yes: Fast tracking is NOT feasible. Consider crashing (step 3).\n   - No: Fast tracking IS possible. Compare cost and risk with crashing.\n\n3. **Is budget available for additional resources?**\n   - No: Fast track if possible. If not feasible, negotiate deadline or scope with stakeholders.\n   - Yes: Choose the least costly effective option. PMI best practice: try fast tracking first.\n\n4. **Does the activity involve quality or safety that cannot be rushed?**\n   - Yes: Do NOT compress by cutting content. Crash with more resources to maintain full quality, or fast track other activities.\n   - No: Proceed with your chosen technique.\n\n**Key Principle:** Cutting scope or reducing quality is NOT schedule compression. It is scope reduction, which violates PMI ethics when it compromises safety or contractual obligations.",
+            "diagram": {
+              "image": "/images/C2L4_diagram_compression.webp",
+              "alt": "Fast Tracking vs Crashing Decision Framework"
+            }
+          },
+          {
+            "id": "tab3",
+            "title": "Application to the Celebrity Chef Project",
+            "subtitle": "",
+            "content": "| Activity | Technique | Why | Cost | Time Saved |\n|----------|-----------|-----|------|------------|\n| Electrical & Plumbing | **Fast Track** | No hard dependency between zones. Separate crews work simultaneously. | $15K | 2 weeks |\n| Equipment Installation | **Crash** | Hard dependency on utilities. Cannot start early. More installers = faster. | $12K | 1.5 weeks |\n| Staff Training | **Fast Track** | Classroom training has no dependency on equipment. Only hands-on does. | $0 | 0.5 weeks |\n| **Total** | | | **$27K** | **4 weeks** |\n\n**Results:** Compressed 4 weeks (exceeded the 3-week target by 1 week) for $27K of the $60K budget. Budget remaining: $33K for contingencies. Zero safety shortcuts. Zero quality compromises.\n\n**Contrast with Carlos's approach:** Crashing everything with overtime would have cost $40K+ and likely caused quality issues from fatigued workers. Strategic compression cost 33% less and achieved more."
+          },
+          {
+            "id": "tab4",
+            "title": "Critical Path Focus",
+            "subtitle": "",
+            "content": "**Why only critical path activities matter:**\n\nThe critical path is the longest sequence of dependent activities that determines total project duration. Non-critical activities have float (slack time) — compressing them does NOT reduce the project end date.\n\n- **Wrong:** Compressing furniture delivery (non-critical, has 2 weeks of float) saves zero days on the schedule\n- **Right:** Compressing electrical work (on critical path) directly reduces total project duration\n\n**Before compressing anything:** Identify the critical path using CPM (Critical Path Method). Focus ALL compression efforts on critical path activities only. Every dollar and hour spent compressing non-critical activities is wasted."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 4,
+      "screen_type": "transfer",
+      "duration": 90,
+      "content": {
+        "title": "The Second Location Crisis",
+        "scenario": {
+          "title": "The Second Location Crisis",
+          "description": "Two months later, Savory & Co. is opening a SECOND location. The project is 2 weeks behind schedule, and the lease start date is FIXED — you start paying rent whether or not you're open. The original budget of $150K has been exceeded by $8K, but an additional $15K contingency has been approved if absolutely necessary. Three critical path activities remain:",
+          "images": [
+            {
+              "src": "/images/C2L4_comic_transfer.webp",
+              "alt": "Transfer scenario: second restaurant location"
+            }
+          ],
+          "details": [
+            "**Interior Painting (2 weeks):** Can be crashed with more painters. Vendor quote: +$6K for extra crew = 1 week duration.",
+            "**Furniture Delivery (1 week):** Manufacturer lead time is FIXED and cannot be expedited by any means.",
+            "**IT/POS System Installation (1.5 weeks):** Currently sequential: network setup (0.5 weeks), then POS installation (1 week). Can be done by separate vendors in parallel. Cost: +$4K for separate POS installer = 0.5 weeks total duration."
+          ]
+        },
+        "questions": [
+          {
+            "q_id": "transfer_q1",
+            "type": "single_select",
+            "question": "Which compression strategy saves 2 weeks at the LOWEST cost?",
+            "points": 150,
+            "scenario_name": "Optimal Compression Strategy",
+            "situation": "You need to compress exactly 2 weeks from the remaining critical path to avoid paying rent on an empty restaurant. You have $15K contingency available. Painting can be crashed ($6K, saves 1 week). Furniture lead time is fixed. IT/POS can be fast tracked with separate vendors ($4K, saves 1 week).",
+            "options": [
+              {
+                "id": "A",
+                "text": "Crash painting ($6K, save 1 week) + Fast track IT/POS ($4K, save 1 week) = $10K total, 2 weeks saved",
+                "correct": true
+              },
+              {
+                "id": "B",
+                "text": "Crash painting ($6K, save 1 week) + Negotiate with furniture vendor to expedite delivery",
+                "correct": false
+              },
+              {
+                "id": "C",
+                "text": "Fast track IT/POS only ($4K, save 1 week) and negotiate a 1-week delay with stakeholders",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Crash both painting AND IT/POS installation for maximum speed",
+                "correct": false
+              }
+            ],
+            "explanation": "The optimal strategy combines both techniques: crash painting ($6K, saves 1 week) because it is resource-dependent, and fast track IT/POS ($4K, saves 1 week) because network setup and POS installation can run in parallel with separate vendors. Total: $10K for 2 weeks compressed, well within the $15K contingency. Furniture cannot be compressed (fixed lead time) — accept constraints you cannot change.",
+            "correctFeedback": {
+              "text": "The optimal strategy combines both techniques: crash painting ($6K, saves 1 week) because it is resource-dependent, and fast track IT/POS ($4K, saves 1 week) because network setup and POS installation can run in parallel with separate vendors. Total: $10K for 2 weeks compressed, well within the $15K contingency. Furniture cannot be compressed (fixed lead time) — accept constraints you cannot change.",
+              "character": "Alex Mitchell",
+              "characterQuote": "Same framework as the celebrity chef project. Identify what's compressible, choose the right technique for each, and accept fixed constraints. $10K to save 2 weeks of rent payments is an easy decision."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Three activities, but only two are compressible. One has a fixed lead time you can't change. For the other two: which can you parallelize, and which needs more resources?",
+              "character": "Sam Taylor",
+              "characterQuote": "Three activities, but only two are compressible. One has a fixed lead time you can't change. For the other two: which can you parallelize, and which needs more resources?"
+            },
+            "retryHint": "Which activities can be compressed? What technique fits each? Furniture is fixed. Painting needs more resources. IT/POS has sequential work that could run in parallel. What combination saves 2 weeks at the lowest cost?"
+          },
+          {
+            "q_id": "transfer_q2",
+            "type": "drag_drop",
+            "question": "Drag each compression approach to the correct activity:",
+            "points": 150,
+            "scenario_name": "Why Not Compress Furniture?",
+            "situation": "Carlos asks: \"Why aren't we compressing ALL three remaining activities? Aren't we leaving time on the table?\" You need to explain why each activity gets a different treatment.",
+            "chips": [
+              {
+                "id": "fast_track_parallelize_with_separate_vendors",
+                "label": "Fast Track (parallelize with separate vendors)",
+                "correctZone": "it_pos_installation"
+              },
+              {
+                "id": "crash_add_more_painters",
+                "label": "Crash (add more painters)",
+                "correctZone": "interior_painting"
+              },
+              {
+                "id": "cannot_compress_fixed_external_constraint",
+                "label": "Cannot Compress (fixed external constraint)",
+                "correctZone": "furniture_delivery"
+              }
+            ],
+            "dropZones": [
+              {
+                "id": "it_pos_installation",
+                "label": "IT/POS Installation",
+                "detail": "Network setup and POS installation can run simultaneously with separate vendors — no hard dependency between them"
+              },
+              {
+                "id": "interior_painting",
+                "label": "Interior Painting",
+                "detail": "Painting is resource-dependent — more painters cover more area faster. Cannot be parallelized because it is a single activity"
+              },
+              {
+                "id": "furniture_delivery",
+                "label": "Furniture Delivery",
+                "detail": "Manufacturer lead time is fixed regardless of budget or resources. No amount of crashing or fast tracking changes external supply chain timelines"
+              }
+            ],
+            "explanation": "Each activity requires a different approach based on its constraints. IT/POS has sequential sub-tasks with no hard dependency — fast track by parallelizing. Painting is a single resource-dependent activity — crash by adding more painters. Furniture has a fixed external constraint — accept it and focus compression efforts elsewhere. Understanding WHY each technique applies is as important as knowing the techniques themselves.",
+            "correctFeedback": {
+              "text": "Each activity requires a different approach based on its constraints. IT/POS has sequential sub-tasks with no hard dependency — fast track by parallelizing. Painting is a single resource-dependent activity — crash by adding more painters. Furniture has a fixed external constraint — accept it and focus compression efforts elsewhere. Understanding WHY each technique applies is as important as knowing the techniques themselves.",
+              "character": "Rashid Khan",
+              "characterQuote": "Exactly right. You matched the technique to the constraint. That's the decision framework in action — not every activity can be compressed the same way, and some can't be compressed at all."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Think about what's preventing each activity from finishing faster. Is it sequencing (fast track)? Is it resource quantity (crash)? Or is it an external constraint you can't control (accept it)?",
+              "character": "Rashid Khan",
+              "characterQuote": "Think about what's preventing each activity from finishing faster. Is it sequencing (fast track)? Is it resource quantity (crash)? Or is it an external constraint you can't control (accept it)?"
+            },
+            "retryHint": "For each activity, ask: Is the bottleneck sequencing, resource quantity, or an external constraint? The answer determines which technique to apply — or whether to accept the constraint."
+          }
+        ]
+      }
+    },
+    {
+      "screen_number": 5,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the two PMI-approved schedule compression techniques and when to use each one. The key is analyzing dependencies, costs, and risks for each activity rather than applying a blanket approach.",
+        "key_takeaways": [
+          "Fast Tracking = Parallelize — Run sequential activities simultaneously. Low or no cost, but higher coordination risk. Try this FIRST.",
+          "Crashing = Add Resources — More people, overtime, or expedited delivery. Increases cost, but respects hard dependencies. Use when fast tracking is not feasible.",
+          "Critical Path Only — ONLY compress critical path activities. Compressing non-critical activities (with float) wastes resources and saves zero days on the schedule.",
+          "Respect Hard Dependencies — Some activities CANNOT be fast tracked due to technical requirements. Violating hard dependencies causes rework, safety hazards, and inspection failures.",
+          "Never Cut Quality for Schedule — Reducing scope or cutting safety content is NOT compression. It is scope reduction with unacceptable risks. PMI ethics prohibit compromising quality for schedule.",
+          "PMI Best Practice — Try fast tracking first (least costly), then crash if fast tracking is insufficient or infeasible. Choose the option that achieves the target at the lowest cost."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Carlos wanted to throw $40K at overtime — crash everything, work 24/7. I showed him a smarter approach: fast track where dependencies allow it, crash only where hard dependencies prevent parallelization, and accept constraints you can't change. We compressed 4 weeks for $27K, under budget with zero safety shortcuts. That's the difference between panic and project management."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L1",
+          "title": "Risk Identification & Analysis",
+          "description": "You compressed the schedule — but fast tracking and crashing both introduce new risks. Learn how to identify, analyze, and prioritize risks so you can manage the consequences of your compression decisions."
+        }
+      },
+      "cta": "Continue to Practice"
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "practice",
+      "duration": 180,
+      "content": {
+        "title": "PMP Practice Questions",
+        "description": "Test your knowledge with real PMP-style questions",
+        "showTimer": true,
+        "questions": [
+          {
+            "q_id": "practice_1",
+            "type": "single_select",
+            "question": "What should the project manager recommend?",
+            "points": 50,
+            "scenario_name": "Least Costly Compression",
+            "situation": "A project is 3 weeks behind schedule. The project manager analyzes the critical path and identifies two activities: Activity A is currently sequential (design then testing) with no technical dependency — they use different resources and can be parallelized. Activity B is at minimum resource level and adding developers would speed completion. The sponsor wants the LEAST COSTLY approach.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Crash Activity A and fast track Activity B",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Fast track Activity A first, then crash Activity B if needed",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Crash both activities simultaneously for maximum speed",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Negotiate a 3-week extension with the sponsor",
+                "correct": false
+              }
+            ],
+            "explanation": "PMI best practice: try fast tracking first because it is the least costly option. Activity A can be parallelized (fast track at low or no cost). If additional compression is needed, crash Activity B by adding resources. This sequence minimizes cost while achieving the required compression.",
+            "correctFeedback": {
+              "text": "PMI best practice: try fast tracking first because it is the least costly option. Activity A can be parallelized (fast track at low or no cost). If additional compression is needed, crash Activity B by adding resources. This sequence minimizes cost while achieving the required compression.",
+              "character": "Sam Taylor",
+              "characterQuote": "Fast track first, crash second. You achieve the same compression for less money. That's PMI best practice applied correctly."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Which activity can be parallelized at low cost? Start there. PMI says: try fast tracking first because it costs less than crashing.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Which activity can be parallelized at low cost? Start there. PMI says: try fast tracking first because it costs less than crashing."
+            },
+            "retryHint": "Which activity can run tasks in parallel at low cost? Which one needs more resources? PMI says try the cheaper option first."
+          },
+          {
+            "q_id": "practice_2",
+            "type": "single_select",
+            "question": "What should the PM do?",
+            "points": 50,
+            "scenario_name": "Testing Phase Compression",
+            "situation": "During execution, the PM discovers the project is 2 weeks behind schedule but $20K under budget. The program manager suggests compressing the testing phase from 3 weeks to 1.5 weeks by \"working smarter, not harder.\" Testing includes integration testing, user acceptance testing, and security validation.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Accept the suggestion — testing can be reduced with better efficiency",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Crash testing by adding more testers to reduce duration while maintaining full test coverage",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Fast track testing by running integration and UAT in parallel",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Reduce test coverage to critical paths only to meet the deadline",
+                "correct": false
+              }
+            ],
+            "explanation": "Crashing with more testers is correct. Budget is available ($20K under), and adding testers maintains full test coverage while compressing duration. \"Working smarter\" often means cutting scope, which compromises quality. UAT typically depends on integration testing completion (hard dependency), making fast tracking risky. Never reduce test coverage to meet a deadline.",
+            "correctFeedback": {
+              "text": "Crashing with more testers is correct. Budget is available ($20K under), and adding testers maintains full test coverage while compressing duration. \"Working smarter\" often means cutting scope, which compromises quality. UAT typically depends on integration testing completion (hard dependency), making fast tracking risky. Never reduce test coverage to meet a deadline.",
+              "character": "Rashid Khan",
+              "characterQuote": "Budget is available, and quality cannot be cut. More testers, same test coverage, faster completion. That's a clean crash."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "When you have budget and need to maintain quality, how do you speed things up without cutting corners? Think about what crashing actually means.",
+              "character": "Sam Taylor",
+              "characterQuote": "When you have budget and need to maintain quality, how do you speed things up without cutting corners? Think about what crashing actually means."
+            },
+            "retryHint": "You have budget available and need full test coverage. What technique adds resources to go faster without cutting scope?"
+          },
+          {
+            "q_id": "practice_3",
+            "type": "single_select",
+            "question": "What should the PM recommend?",
+            "points": 50,
+            "scenario_name": "Non-Critical Activity Compression",
+            "situation": "A PM receives pressure from the sponsor to compress a software project. The critical path runs through Requirements, Design, Development, Testing, and Deployment. Documentation runs in parallel with a 2-week float. The sponsor suggests speeding up documentation to show progress.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Compress documentation to show stakeholder responsiveness",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Explain that compressing documentation won't reduce project duration and focus on critical path activities",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Compress both documentation and development simultaneously",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Move documentation resources to development to crash the critical path",
+                "correct": false
+              }
+            ],
+            "explanation": "Documentation has float — it is NOT on the critical path. Compressing non-critical activities does NOT reduce total project duration. The PM should educate the sponsor and focus compression efforts exclusively on critical path activities (Requirements, Design, Development, Testing, Deployment).",
+            "correctFeedback": {
+              "text": "Documentation has float — it is NOT on the critical path. Compressing non-critical activities does NOT reduce total project duration. The PM should educate the sponsor and focus compression efforts exclusively on critical path activities (Requirements, Design, Development, Testing, Deployment).",
+              "character": "Alex Mitchell",
+              "characterQuote": "I made this mistake at the celebrity chef project — compressing furniture delivery that wasn't on the critical path. Wasted $18K for zero schedule benefit. Only critical path activities matter."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Does documentation have float? If so, compressing it won't change the project end date. Focus your compression efforts where they actually affect the timeline.",
+              "character": "Dr. Amelia Foster",
+              "characterQuote": "Does documentation have float? If so, compressing it won't change the project end date. Focus your compression efforts where they actually affect the timeline."
+            },
+            "retryHint": "Is documentation on the critical path? Does it have float? If an activity has float, does compressing it change the project end date?"
+          },
+          {
+            "q_id": "practice_4",
+            "type": "single_select",
+            "question": "What is the BEST compression approach?",
+            "points": 50,
+            "scenario_name": "Hard Dependency Analysis",
+            "situation": "A construction project PM needs to compress the schedule by 2 weeks. The critical path is: Foundation work (4 weeks) then Structural framing (3 weeks) then Roofing (2 weeks). Foundation has a HARD dependency on completed soil testing. Structural framing requires a completed foundation. The foundation contractor confirms a larger crew can reduce foundation work from 4 weeks to 2 weeks.",
+            "options": [
+              {
+                "id": "A",
+                "text": "Fast track foundation and soil testing to save 2 weeks",
+                "correct": false
+              },
+              {
+                "id": "B",
+                "text": "Crash foundation with additional crews to reduce from 4 weeks to 2 weeks",
+                "correct": true
+              },
+              {
+                "id": "C",
+                "text": "Fast track roofing to overlap with framing",
+                "correct": false
+              },
+              {
+                "id": "D",
+                "text": "Fast track framing and foundation simultaneously",
+                "correct": false
+              }
+            ],
+            "explanation": "Foundation has a hard dependency on soil testing (cannot start without results) and framing has a hard dependency on foundation (cannot frame without a foundation). Fast tracking across these dependencies is impossible. Crashing foundation with a larger crew reduces it from 4 weeks to 2 weeks, achieving the 2-week compression target. The contractor confirmed this is safe and feasible.",
+            "correctFeedback": {
+              "text": "Foundation has a hard dependency on soil testing (cannot start without results) and framing has a hard dependency on foundation (cannot frame without a foundation). Fast tracking across these dependencies is impossible. Crashing foundation with a larger crew reduces it from 4 weeks to 2 weeks, achieving the 2-week compression target. The contractor confirmed this is safe and feasible.",
+              "character": "Rashid Khan",
+              "characterQuote": "Hard dependencies are non-negotiable. You can't pour a foundation without soil test results, and you can't frame without a foundation. Crashing the foundation with more crews is the only viable path."
+            },
+            "incorrectFeedback": {
+              "useOptionSpecific": true,
+              "fallbackText": "Can you build a foundation before you know the soil composition? Can you frame a building with no foundation? Hard dependencies exist for a reason. What technique works when you can't rearrange the sequence?",
+              "character": "Alex Mitchell",
+              "characterQuote": "Can you build a foundation before you know the soil composition? Can you frame a building with no foundation? Hard dependencies exist for a reason. What technique works when you can't rearrange the sequence?"
+            },
+            "retryHint": "All three activities have hard dependencies connecting them. When fast tracking is impossible, what is the other compression technique? And which activity has a contractor who confirmed faster completion is feasible?"
+          }
+        ]
+      }
+    }
+  ]
+}
