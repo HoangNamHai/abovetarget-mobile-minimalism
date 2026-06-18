@@ -27,3 +27,11 @@ test('listRecent caps and count/clear work', async () => {
   await repo.clear();
   expect(await repo.count()).toBe(0);
 });
+
+test('record normalizes completedAt to UTC before storing', async () => {
+  const db = await openDatabase();
+  const repo = new SqliteAttemptRepository(db);
+  await repo.record(attempt('x', '2026-06-18T23:30:00.000-04:00'));
+  const all = await repo.listAll();
+  expect(all[0].completedAt).toBe('2026-06-19T03:30:00.000Z');
+});

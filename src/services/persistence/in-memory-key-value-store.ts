@@ -18,7 +18,12 @@ export class InMemoryKeyValueStore implements KeyValueStore {
 
   async getJSON<T>(key: string): Promise<T | null> {
     const raw = await this.getString(key);
-    return raw === null ? null : (JSON.parse(raw) as T);
+    if (raw === null) return null;
+    try {
+      return JSON.parse(raw) as T;
+    } catch {
+      return null;
+    }
   }
 
   async setJSON<T>(key: string, value: T): Promise<void> {

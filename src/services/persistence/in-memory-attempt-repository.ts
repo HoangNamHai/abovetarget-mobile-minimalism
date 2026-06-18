@@ -13,7 +13,13 @@ export class InMemoryAttemptRepository implements AttemptRepository {
   }
 
   async record(attempt: LessonAttempt): Promise<void> {
-    this.attempts.push(attempt);
+    const normalized: LessonAttempt = {
+      ...attempt,
+      completedAt: new Date(attempt.completedAt).toISOString(),
+    };
+    const idx = this.attempts.findIndex((a) => a.id === normalized.id);
+    if (idx >= 0) this.attempts[idx] = normalized;
+    else this.attempts.push(normalized);
   }
 
   async listAll(): Promise<LessonAttempt[]> {

@@ -13,16 +13,19 @@ test('transformLegacyProgress extracts attempts and carry-over', () => {
     recentAttempts: [attempt],
     streakFreeze: { available: 1, weekStart: '2026-06-15', usedDates: [] },
     bestStreak: 7,
+    activeDays: ['2026-06-18', '2026-06-19'],
   });
   expect(result.attempts).toEqual([attempt]);
   expect(result.carryOver.bestStreak).toBe(7);
   expect(result.carryOver.streakFreeze).toEqual({ available: 1, weekStart: '2026-06-15', usedDates: [] });
+  expect(result.carryOver.activeDays).toEqual(['2026-06-18', '2026-06-19']);
 });
 
 test('transformLegacyProgress tolerates missing fields', () => {
   const result = transformLegacyProgress({});
   expect(result.attempts).toEqual([]);
   expect(result.carryOver.bestStreak).toBe(0);
+  expect(result.carryOver.activeDays).toEqual([]);
 });
 
 test('runLegacyMigration seeds attempts and marks done', async () => {

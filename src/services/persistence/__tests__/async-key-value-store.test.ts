@@ -25,3 +25,8 @@ test('remove deletes the key', async () => {
   await kv.remove('k');
   expect(await kv.getString('k')).toBeNull();
 });
+
+test('getJSON returns null for corrupt JSON', async () => {
+  await AsyncStorage.setItem('bad', 'not-json{');
+  expect(await new AsyncKeyValueStore().getJSON('bad')).toBeNull();
+});

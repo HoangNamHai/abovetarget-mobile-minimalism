@@ -15,13 +15,14 @@ export interface LegacyProgressBlob {
 
 export function transformLegacyProgress(blob: LegacyProgressBlob): {
   attempts: LessonAttempt[];
-  carryOver: { streakFreeze: unknown; bestStreak: number };
+  carryOver: { streakFreeze: unknown; bestStreak: number; activeDays: string[] };
 } {
   return {
     attempts: blob.recentAttempts ?? [],
     carryOver: {
       streakFreeze: blob.streakFreeze ?? null,
       bestStreak: blob.bestStreak ?? 0,
+      activeDays: blob.activeDays ?? [],
     },
   };
 }

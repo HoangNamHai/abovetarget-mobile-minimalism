@@ -36,3 +36,19 @@ test('count and clear', async () => {
   await repo.clear();
   expect(await repo.count()).toBe(0);
 });
+
+test('record dedups by id, newest write wins', async () => {
+  const repo = new InMemoryAttemptRepository();
+  await repo.record(attempt('dup', '2026-06-18T10:00:00.000Z'));
+  await repo.record({ ...attempt('dup', '2026-06-19T10:00:00.000Z'), score: 99 });
+  const all = await repo.listAll();
+  expect(all).toHaveLength(1);
+  expect(all[0].score).toBe(99);
+});
+
+test('record normalizes completedAt to UTC Z', async () => {
+  const repo = new InMemoryAttemptRepository();
+  await repo.record(attempt('x', '2026-06-18T23:30:00.000-04:00'));
+  const all = await repo.listAll();
+  expect(all[0].completedAt).toBe('2026-06-19T03:30:00.000Z');
+});

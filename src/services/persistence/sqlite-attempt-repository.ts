@@ -8,9 +8,10 @@ export class SqliteAttemptRepository implements AttemptRepository {
   constructor(private readonly db: SqlExecutor) {}
 
   async record(a: LessonAttempt): Promise<void> {
+    const completedAt = new Date(a.completedAt).toISOString();
     await this.db.runAsync(
       `INSERT OR REPLACE INTO attempts (${COLUMNS}) VALUES (?, ?, ?, ?, ?, ?, ?);`,
-      [a.id, a.lessonId, a.lessonTitle, a.questionCount, a.score, a.completedAt, a.domain],
+      [a.id, a.lessonId, a.lessonTitle, a.questionCount, a.score, completedAt, a.domain],
     );
   }
 
