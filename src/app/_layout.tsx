@@ -16,6 +16,7 @@ import { SoundProvider } from '../contexts/sound-context';
 import { SubscriptionProvider } from '../contexts/subscription-context';
 import { BrandProvider } from '../theme/brand-context';
 import { initMonitoring, wrapRoot } from '../services/infra/monitoring';
+import { NetworkProvider } from '../contexts/network-context';
 
 initMonitoring();
 
@@ -24,27 +25,29 @@ function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <BottomSheetModalProvider>
-          <BrandProvider>
-            <PersistenceProvider>
-              <SettingsProvider>
-                <SoundProvider>
-                  <AuthProvider>
-                    <ProgressProvider>
-                      <OnboardingProvider>
-                        <SubscriptionProvider>
-                          <LessonProvider>
-                            <FontGate>
-                              <Stack screenOptions={{ headerShown: false }} />
-                            </FontGate>
-                          </LessonProvider>
-                        </SubscriptionProvider>
-                      </OnboardingProvider>
-                    </ProgressProvider>
-                  </AuthProvider>
-                </SoundProvider>
-              </SettingsProvider>
-            </PersistenceProvider>
-          </BrandProvider>
+          <NetworkProvider>
+            <BrandProvider>
+              <PersistenceProvider>
+                <SettingsProvider>
+                  <SoundProvider>
+                    <AuthProvider>
+                      <ProgressProvider>
+                        <OnboardingProvider>
+                          <SubscriptionProvider>
+                            <LessonProvider>
+                              <FontGate>
+                                <Stack screenOptions={{ headerShown: false }} />
+                              </FontGate>
+                            </LessonProvider>
+                          </SubscriptionProvider>
+                        </OnboardingProvider>
+                      </ProgressProvider>
+                    </AuthProvider>
+                  </SoundProvider>
+                </SettingsProvider>
+              </PersistenceProvider>
+            </BrandProvider>
+          </NetworkProvider>
         </BottomSheetModalProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
