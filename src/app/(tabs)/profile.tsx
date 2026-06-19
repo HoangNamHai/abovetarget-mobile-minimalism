@@ -1,19 +1,24 @@
-import React from 'react';
-import { ScrollView, StyleSheet, Switch, View } from 'react-native';
+import Constants from 'expo-constants';
+import * as WebBrowser from 'expo-web-browser';
+import React, { useState } from 'react';
+import { Alert, Linking, ScrollView, StyleSheet, Switch, View } from 'react-native';
+import { REVENUECAT_DISABLED } from '../../config/revenuecat';
+import { LEGAL_LINKS } from '../../config/links';
 import { SHOW_DEV_OPTIONS } from '../../config/feature-flags';
+import { useAppAuth } from '../../contexts/auth-context';
 import { useOnboarding } from '../../contexts/onboarding-context';
 import { useProgress } from '../../contexts/progress-context';
 import { useSettings } from '../../contexts/settings-context';
 import { useSubscription } from '../../contexts/subscription-context';
 import { useLessonLimit } from '../../hooks/use-lesson-limit';
+import { useLocalNotifications } from '../../hooks/use-local-notifications';
 import { Hairline } from '../../components/primitives/Hairline';
+import { PressableFeedback } from '../../components/primitives/PressableFeedback';
 import { Txt } from '../../components/primitives/Txt';
 import { Button } from '../../components/primitives/Button';
 import { TOKENS } from '../../theme/tokens';
 
 // ─── Dev options section ──────────────────────────────────────────────────────
-// Isolated so its hooks (useOnboarding, useProgress, useLessonLimit) only run
-// when SHOW_DEV_OPTIONS=true causes this component to mount.
 
 function DevOptionsSection() {
   const { resetOnboarding } = useOnboarding();
@@ -38,9 +43,17 @@ function DevOptionsSection() {
   );
 }
 
-// ─── Row ─────────────────────────────────────────────────────────────────────
+// ─── Rows ─────────────────────────────────────────────────────────────────────
 
-function Row({ label, value, onValueChange }: { label: string; value: boolean; onValueChange: (v: boolean) => void }) {
+function ToggleRow({
+  label,
+  value,
+  onValueChange,
+}: {
+  label: string;
+  value: boolean;
+  onValueChange: (v: boolean) => void;
+}) {
   return (
     <View style={styles.row}>
       <Txt variant="body" style={styles.rowLabel}>{label}</Txt>
@@ -49,11 +62,92 @@ function Row({ label, value, onValueChange }: { label: string; value: boolean; o
   );
 }
 
+function LinkRow({ label, onPress }: { label: string; onPress: () => void }) {
+  return (
+    <PressableFeedback onPress={onPress}>
+      <View style={styles.row}>
+        <Txt variant="body" style={styles.rowLabel}>{label}</Txt>
+        <Txt variant="label" style={styles.chevron}>›</Txt>
+      </View>
+    </PressableFeedback>
+  );
+}
+
+function InfoRow({ label, value }: { label: string; value: string }) {
+  return (
+    <View style={styles.row}>
+      <Txt variant="body" style={styles.rowLabel}>{label}</Txt>
+      <Txt variant="label" style={styles.infoValue}>{value}</Txt>
+    </View>
+  );
+}
+
 // ─── Profile screen ───────────────────────────────────────────────────────────
 
 export default function Profile() {
   const { settings, setHaptics, setSounds, setNotifications } = useSettings();
-  const { isPremium } = useSubscription();
+  const { isPremium, restorePurchases } = useSubscription();
+  const { isSignedIn, user, signOut } = useAppAuth();
+  const { reminderTime, setReminderTime, isAvailable: notificationsAvailable } =
+    useLocalNotifications();
+  const [restoring, setRestoring] = useState(false);
+
+  const appVersion = Constants.expoConfig?.version ?? '—';
+
+  // Notifications: persist the preference AND actually schedule / cancel the
+  // OS-level daily reminder. The stored flag only stays on if permission was
+  // granted and a reminder was scheduled.
+  const handleNotificationsToggle = async (enabled: boolean) => {
+    if (enabled) {
+      const time = reminderTime !== 'disabled' ? reminderTime : 'morning';
+      const scheduled = await setReminderTime(time);
+      await setNotifications(scheduled);
+      if (!scheduled) {
+        Alert.alert(
+          'Notifications unavailable',
+          notificationsAvailable
+            ? 'Enable notifications for this app in your device settings to get daily reminders.'
+            : 'Reminders require a development/production build (not Expo Go).',
+        );
+      }
+    } else {
+      await setReminderTime('disabled');
+      await setNotifications(false);
+    }
+  };
+
+  const handleRestore = async () => {
+    setRestoring(true);
+    try {
+      await restorePurchases();
+      Alert.alert('Restore complete', 'Your purchases have been restored.');
+    } catch {
+      Alert.alert('Restore failed', 'We could not restore your purchases. Please try again.');
+    } finally {
+      setRestoring(false);
+    }
+  };
+
+  const handleSignOut = () => {
+    Alert.alert('Sign out', 'Are you sure you want to sign out?', [
+      { text: 'Cancel', style: 'cancel' },
+      { text: 'Sign Out', style: 'destructive', onPress: () => signOut() },
+    ]);
+  };
+
+  // Web links open in an in-app browser (Safari View Controller / Custom Tab);
+  // mail/other schemes hand off to the OS (mail composer).
+  const openLink = async (url: string) => {
+    try {
+      if (/^https?:/i.test(url)) {
+        await WebBrowser.openBrowserAsync(url);
+      } else {
+        await Linking.openURL(url);
+      }
+    } catch {
+      Alert.alert('Could not open link');
+    }
+  };
 
   return (
     <ScrollView
@@ -61,30 +155,73 @@ export default function Profile() {
       contentContainerStyle={styles.content}
       showsVerticalScrollIndicator={false}
     >
-      {/* Subscription status */}
+      {/* Account */}
       <View style={styles.section}>
         <Txt variant="label" style={styles.sectionHeader}>ACCOUNT</Txt>
         <View style={styles.card}>
+          {isSignedIn && user?.email ? (
+            <>
+              <InfoRow label="Email" value={user.email} />
+              <Hairline />
+            </>
+          ) : null}
           <View style={styles.row}>
             <Txt variant="body" style={styles.rowLabel}>Status</Txt>
             <Txt variant="label" style={[styles.statusBadge, isPremium ? styles.premium : styles.free]}>
               {isPremium ? 'PREMIUM' : 'FREE'}
             </Txt>
           </View>
+          {/* Restore Purchases — only meaningful when RevenueCat is live */}
+          {!REVENUECAT_DISABLED && (
+            <>
+              <Hairline />
+              <LinkRow
+                label={restoring ? 'Restoring…' : 'Restore Purchases'}
+                onPress={restoring ? () => {} : handleRestore}
+              />
+            </>
+          )}
+          {/* Sign Out — only when authenticated (Clerk active) */}
+          {isSignedIn && (
+            <>
+              <Hairline />
+              <LinkRow label="Sign Out" onPress={handleSignOut} />
+            </>
+          )}
         </View>
       </View>
 
       <Hairline />
 
-      {/* Settings toggles */}
+      {/* Preferences */}
       <View style={styles.section}>
         <Txt variant="label" style={styles.sectionHeader}>PREFERENCES</Txt>
         <View style={styles.card}>
-          <Row label="Haptics" value={settings.haptics} onValueChange={(v) => setHaptics(v)} />
+          <ToggleRow label="Haptics" value={settings.haptics} onValueChange={(v) => setHaptics(v)} />
           <Hairline />
-          <Row label="Sounds" value={settings.sounds} onValueChange={(v) => setSounds(v)} />
+          <ToggleRow label="Sounds" value={settings.sounds} onValueChange={(v) => setSounds(v)} />
           <Hairline />
-          <Row label="Notifications" value={settings.notifications} onValueChange={(v) => setNotifications(v)} />
+          <ToggleRow
+            label="Notifications"
+            value={settings.notifications}
+            onValueChange={handleNotificationsToggle}
+          />
+        </View>
+      </View>
+
+      <Hairline />
+
+      {/* About */}
+      <View style={styles.section}>
+        <Txt variant="label" style={styles.sectionHeader}>ABOUT</Txt>
+        <View style={styles.card}>
+          <LinkRow label="Terms of Service" onPress={() => openLink(LEGAL_LINKS.termsOfService)} />
+          <Hairline />
+          <LinkRow label="Privacy Policy" onPress={() => openLink(LEGAL_LINKS.privacyPolicy)} />
+          <Hairline />
+          <LinkRow label="Contact Support" onPress={() => openLink(LEGAL_LINKS.support)} />
+          <Hairline />
+          <InfoRow label="Version" value={appVersion} />
         </View>
       </View>
 
@@ -125,7 +262,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: TOKENS['outline-variant'],
     backgroundColor: TOKENS['surface-container-lowest'],
-    borderRadius: 2,
+    borderRadius: 4,
   },
   row: {
     flexDirection: 'row',
@@ -137,6 +274,14 @@ const styles = StyleSheet.create({
   rowLabel: {
     fontSize: 16,
     color: TOKENS['on-background'],
+  },
+  chevron: {
+    fontSize: 22,
+    color: TOKENS.outline,
+  },
+  infoValue: {
+    fontSize: 14,
+    color: TOKENS.outline,
   },
   statusBadge: {
     fontSize: 11,

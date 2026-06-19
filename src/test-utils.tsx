@@ -7,6 +7,7 @@ import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { AuthProvider } from './contexts/auth-context';
 import { OnboardingProvider } from './contexts/onboarding-context';
 import { PersistenceProvider } from './contexts/persistence-context';
 import { ProgressProvider } from './contexts/progress-context';
@@ -27,13 +28,15 @@ export function TestProviders({ children }: Props) {
           <BrandProvider>
             <PersistenceProvider value={createInMemoryPersistence()}>
               <SettingsProvider>
-                <SubscriptionProvider>
-                  <OnboardingProvider>
-                    <ProgressProvider>
-                      {children}
-                    </ProgressProvider>
-                  </OnboardingProvider>
-                </SubscriptionProvider>
+                <AuthProvider>
+                  <SubscriptionProvider>
+                    <OnboardingProvider>
+                      <ProgressProvider>
+                        {children}
+                      </ProgressProvider>
+                    </OnboardingProvider>
+                  </SubscriptionProvider>
+                </AuthProvider>
               </SettingsProvider>
             </PersistenceProvider>
           </BrandProvider>

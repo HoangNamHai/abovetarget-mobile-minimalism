@@ -1,11 +1,17 @@
-import { BottomSheetModal, BottomSheetView } from '@gorhom/bottom-sheet';
-import React, { useCallback, useEffect, useRef } from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useCallback } from 'react';
+import { Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLesson } from '../../contexts/lesson-context';
 import { TOKENS } from '../../theme/tokens';
 import { Button } from '../primitives/Button';
-import { Hairline } from '../primitives/Hairline';
 import { Txt } from '../primitives/Txt';
+import { RichText } from '../primitives/RichText';
+import { ACCENTS } from '../../theme/accents';
+import { FireworkBurst } from './FireworkBurst';
+
+const SUCCESS_GREEN = ACCENTS.success;
+const RETRY_RED = ACCENTS.error;
+const REVEAL_INK = ACCENTS.revealInk;
 
 // ─── Props ────────────────────────────────────────────────────────────────────
 
@@ -16,19 +22,14 @@ type Props = {
 };
 
 // ─── FeedbackModal ────────────────────────────────────────────────────────────
+//
+// Bottom-anchored feedback dialog shown after "Check Answer". Implemented with a
+// plain React Native Modal (a previous @gorhom/bottom-sheet version rendered
+// invisibly on the New Architecture, soft-locking the lesson).
 
 export function FeedbackModal({ onSuccessNext, onRetry, onReveal }: Props) {
   const { state, closeModal } = useLesson();
-  const sheetRef = useRef<BottomSheetModal>(null);
-
-  // Present / dismiss the sheet based on lesson modal state
-  useEffect(() => {
-    if (state.modalVisible) {
-      sheetRef.current?.present();
-    } else {
-      sheetRef.current?.dismiss();
-    }
-  }, [state.modalVisible]);
+  const insets = useSafeAreaInsets();
 
   const handleSuccess = useCallback(() => {
     onSuccessNext();
@@ -45,40 +46,50 @@ export function FeedbackModal({ onSuccessNext, onRetry, onReveal }: Props) {
     closeModal();
   }, [onReveal, closeModal]);
 
-  const handleDismiss = useCallback(() => {
-    closeModal();
-  }, [closeModal]);
+  const sheetColor =
+    state.modalType === 'success'
+      ? SUCCESS_GREEN
+      : state.modalType === 'retry'
+        ? RETRY_RED
+        : REVEAL_INK;
 
   return (
-    <BottomSheetModal
-      ref={sheetRef}
-      snapPoints={['75%']}
-      enableDynamicSizing={false}
-      onDismiss={handleDismiss}
+    <Modal
+      visible={state.modalVisible}
+      transparent
+      animationType="slide"
+      statusBarTranslucent
+      onRequestClose={closeModal}
     >
-      <BottomSheetView style={styles.sheetView}>
-        {state.modalVisible && state.modalType === 'success' && (
-          <SuccessBody
-            points={state.modalData?.points}
-            explanation={state.modalData?.explanation}
-            onAction={handleSuccess}
-          />
-        )}
-        {state.modalVisible && state.modalType === 'retry' && (
-          <RetryBody
-            hint={state.modalData?.hint}
-            onAction={handleRetry}
-          />
-        )}
-        {state.modalVisible && state.modalType === 'reveal' && (
-          <RevealBody
-            correctAnswer={state.modalData?.correctAnswer}
-            explanation={state.modalData?.explanation}
-            onAction={handleReveal}
-          />
-        )}
-      </BottomSheetView>
-    </BottomSheetModal>
+      <View style={styles.overlay}>
+        <Pressable style={styles.backdrop} onPress={closeModal} />
+        <View style={[styles.sheet, { backgroundColor: sheetColor }]}>
+          <ScrollView
+            bounces={false}
+            contentContainerStyle={{ paddingHorizontal: 24, paddingTop: 28, paddingBottom: insets.bottom + 24 }}
+          >
+            {state.modalType === 'success' && (
+              <SuccessBody
+                points={state.modalData?.points}
+                explanation={state.modalData?.explanation}
+                onAction={handleSuccess}
+              />
+            )}
+            {state.modalType === 'retry' && (
+              <RetryBody hint={state.modalData?.hint} onAction={handleRetry} />
+            )}
+            {state.modalType === 'reveal' && (
+              <RevealBody
+                correctAnswer={state.modalData?.correctAnswer}
+                explanation={state.modalData?.explanation}
+                onAction={handleReveal}
+              />
+            )}
+          </ScrollView>
+        </View>
+        {state.modalType === 'success' && <FireworkBurst />}
+      </View>
+    </Modal>
   );
 }
 
@@ -92,20 +103,20 @@ type SuccessBodyProps = {
 
 function SuccessBody({ points, explanation, onAction }: SuccessBodyProps) {
   return (
-    <View style={[styles.body, { backgroundColor: TOKENS['surface-container-lowest'] }]}>
-      <Txt variant="display" style={[styles.headline, { color: TOKENS['on-background'] }]}>
+    <View>
+      <Txt variant="display" style={[styles.headline, { color: '#ffffff' }]}>
         EXCELLENT WORK.
       </Txt>
       {points != null && (
-        <Txt variant="label" style={[styles.points, { color: TOKENS.primary }]}>
+        <Txt variant="label" style={[styles.points, { color: '#ffffff' }]}>
           +{points} pts
         </Txt>
       )}
-      <Hairline />
+      <View style={styles.lightDivider} />
       {explanation != null && (
-        <Txt variant="body" style={[styles.explanation, { color: TOKENS['on-background'] }]}>
+        <RichText style={[styles.explanation, { color: 'rgba(255,255,255,0.92)' }]}>
           {explanation}
-        </Txt>
+        </RichText>
       )}
       <View style={styles.footer}>
         <Button label="Continue" onPress={onAction} />
@@ -123,14 +134,14 @@ type RetryBodyProps = {
 
 function RetryBody({ hint, onAction }: RetryBodyProps) {
   return (
-    <View style={[styles.body, { backgroundColor: '#DC2626' }]}>
+    <View>
       <Txt variant="display" style={[styles.headline, { color: '#ffffff' }]}>
         NOT QUITE.
       </Txt>
       {hint != null && (
-        <Txt variant="body" style={[styles.explanation, { color: 'rgba(255,255,255,0.9)' }]}>
+        <RichText style={[styles.explanation, { color: 'rgba(255,255,255,0.9)' }]}>
           {hint}
-        </Txt>
+        </RichText>
       )}
       <View style={styles.footer}>
         <Button label="Try Again" onPress={onAction} />
@@ -149,23 +160,23 @@ type RevealBodyProps = {
 
 function RevealBody({ correctAnswer, explanation, onAction }: RevealBodyProps) {
   return (
-    <View style={[styles.body, { backgroundColor: TOKENS['surface-container-lowest'] }]}>
-      <Txt variant="display" style={[styles.headline, { color: TOKENS['on-background'] }]}>
+    <View>
+      <Txt variant="display" style={[styles.headline, { color: '#ffffff' }]}>
         HERE'S THE ANSWER.
       </Txt>
       {correctAnswer != null && (
-        <Txt variant="label" style={[styles.label, { color: TOKENS.primary }]}>
+        <Txt variant="label" style={[styles.label, { color: '#ffffff' }]}>
           {correctAnswer}
         </Txt>
       )}
-      <Hairline />
+      <View style={styles.lightDivider} />
       {explanation != null && (
-        <Txt variant="body" style={[styles.explanation, { color: TOKENS['on-background'] }]}>
+        <RichText style={[styles.explanation, { color: 'rgba(255,255,255,0.92)' }]}>
           {explanation}
-        </Txt>
+        </RichText>
       )}
       <View style={styles.footer}>
-        <Button label="Continue" onPress={onAction} />
+        <Button label="Continue" onPress={onAction} variant="secondary" />
       </View>
     </View>
   );
@@ -174,18 +185,23 @@ function RevealBody({ correctAnswer, explanation, onAction }: RevealBodyProps) {
 // ─── Styles ───────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
-  sheetView: {
+  overlay: {
     flex: 1,
+    justifyContent: 'flex-end',
   },
-  body: {
-    flex: 1,
-    paddingHorizontal: 20,
-    paddingTop: 24,
-    paddingBottom: 32,
+  backdrop: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.4)',
+  },
+  sheet: {
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+    maxHeight: '85%',
+    overflow: 'hidden',
   },
   headline: {
-    fontSize: 48,
-    lineHeight: 52,
+    fontSize: 36,
+    lineHeight: 44,
     marginBottom: 16,
     textTransform: 'uppercase',
   },
@@ -199,13 +215,17 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     marginBottom: 8,
   },
+  lightDivider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: 'rgba(255,255,255,0.35)',
+  },
   explanation: {
-    fontSize: 16,
-    lineHeight: 24,
+    fontSize: 18,
+    lineHeight: 28,
     marginTop: 16,
     marginBottom: 24,
   },
   footer: {
-    marginTop: 'auto',
+    marginTop: 8,
   },
 });

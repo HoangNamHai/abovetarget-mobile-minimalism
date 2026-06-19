@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <DashboardScreen
       onStartStudy={() => router.push('/(tabs)/lessons')}
-      onJoinArena={() => router.push('/(tabs)/lessons')}
+      onOpenLesson={(lessonId) => router.push(`/lesson/${lessonId}`)}
+      onOpenDomain={(domain) => router.push(`/(tabs)/lessons?domain=${domain}`)}
     />
   );
 }

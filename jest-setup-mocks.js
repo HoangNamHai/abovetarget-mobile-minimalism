@@ -2,6 +2,24 @@ jest.mock('@react-native-async-storage/async-storage', () =>
   require('@react-native-async-storage/async-storage/jest/async-storage-mock'),
 );
 
+// react-native-safe-area-context ships its jest mock only as untransformed .tsx,
+// so provide a minimal inline equivalent: zero insets + passthrough components.
+jest.mock('react-native-safe-area-context', () => {
+  const React = require('react');
+  const { View } = require('react-native');
+  const inset = { top: 0, right: 0, bottom: 0, left: 0 };
+  const frame = { x: 0, y: 0, width: 390, height: 844 };
+  return {
+    SafeAreaProvider: ({ children }) => React.createElement(React.Fragment, null, children),
+    SafeAreaView: ({ children, ...props }) => React.createElement(View, props, children),
+    useSafeAreaInsets: () => inset,
+    useSafeAreaFrame: () => frame,
+    SafeAreaInsetsContext: React.createContext(inset),
+    SafeAreaFrameContext: React.createContext(frame),
+    initialWindowMetrics: { insets: inset, frame },
+  };
+});
+
 jest.mock('expo-secure-store', () => {
   const mem = new Map();
   return {

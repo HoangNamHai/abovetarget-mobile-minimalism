@@ -4,10 +4,11 @@ import { createInMemoryPersistence } from '../../../services/persistence';
 import { PersistenceProvider } from '../../../contexts/persistence-context';
 import { SettingsProvider } from '../../../contexts/settings-context';
 import { SubscriptionProvider } from '../../../contexts/subscription-context';
+import { AuthProvider } from '../../../contexts/auth-context';
 import Profile from '../profile';
 
 const wrap = ({ children }: { children: ReactNode }) => (
-  <PersistenceProvider value={createInMemoryPersistence()}><SubscriptionProvider><SettingsProvider>{children}</SettingsProvider></SubscriptionProvider></PersistenceProvider>
+  <PersistenceProvider value={createInMemoryPersistence()}><SubscriptionProvider><AuthProvider><SettingsProvider>{children}</SettingsProvider></AuthProvider></SubscriptionProvider></PersistenceProvider>
 );
 
 test('profile shows a settings control', async () => {

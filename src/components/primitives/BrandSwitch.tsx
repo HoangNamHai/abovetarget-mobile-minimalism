@@ -1,15 +1,16 @@
-import * as Haptics from 'expo-haptics';
 import React from 'react';
+import { useHaptics } from '../../hooks/use-haptics';
 import { useBrand } from '../../theme/brand-context';
 import { PressableFeedback } from './PressableFeedback';
 import { Txt } from './Txt';
 
 export function BrandSwitch() {
   const { brand, toggleBrand } = useBrand();
+  const { impact } = useHaptics();
   const other = brand === 'monograph' ? 'ELITE' : 'MONOGRAPH';
 
   function handlePress() {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    impact();
     toggleBrand();
   }
 

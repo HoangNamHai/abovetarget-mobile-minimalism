@@ -5,6 +5,10 @@ import { cardVariants } from '../../theme/variants';
 import { TOKENS } from '../../theme/tokens';
 import { PressableFeedback } from '../primitives/PressableFeedback';
 import { Txt } from '../primitives/Txt';
+import { ACCENTS } from '../../theme/accents';
+
+// Accent used to highlight the chosen (not-yet-checked) answer.
+const SELECTED_BLUE = ACCENTS.selection;
 
 type Option = {
   key: string;
@@ -17,22 +21,33 @@ type Props = {
   selected: boolean;
   brand: Brand;
   onPress: () => void;
+  /** A previously-chosen wrong answer: rendered greyed-out, struck-through, inert. */
+  disabled?: boolean;
 };
 
-export function QuizOption({ option, selected, brand, onPress }: Props) {
+export function QuizOption({ option, selected, brand, onPress, disabled = false }: Props) {
   const isElite = brand === 'elite';
 
   const baseClassName = cardVariants({ brand });
   const containerStyle = [
     styles.base,
-    selected ? styles.selected : styles.unselected,
+    // `disabled` (a locked wrong answer) wins over the selected fill.
+    disabled ? styles.disabled : selected ? styles.selected : styles.unselected,
   ];
 
-  const labelColor = selected ? TOKENS['on-primary'] : TOKENS['on-background'];
-  const keyColor = selected ? 'rgba(255,255,255,0.6)' : TOKENS.outline;
+  const labelColor = disabled
+    ? TOKENS.outline
+    : selected
+      ? TOKENS['on-primary']
+      : TOKENS['on-background'];
+  const keyColor = disabled
+    ? TOKENS.outline
+    : selected
+      ? 'rgba(255,255,255,0.6)'
+      : TOKENS.outline;
 
   return (
-    <PressableFeedback onPress={onPress}>
+    <PressableFeedback onPress={onPress} disabled={disabled}>
       <View className={baseClassName} style={containerStyle}>
         <View style={styles.row}>
           {isElite && (
@@ -40,7 +55,14 @@ export function QuizOption({ option, selected, brand, onPress }: Props) {
               {option.key}.
             </Txt>
           )}
-          <Txt variant="body" style={[styles.label, { color: labelColor }]}>
+          <Txt
+            variant="body"
+            style={[
+              styles.label,
+              { color: labelColor },
+              disabled && { textDecorationLine: 'line-through' },
+            ]}
+          >
             {option.label}
           </Txt>
         </View>
@@ -56,10 +78,15 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   selected: {
-    backgroundColor: TOKENS.primary,
-    borderColor: TOKENS.primary,
+    backgroundColor: SELECTED_BLUE,
+    borderColor: SELECTED_BLUE,
   },
   unselected: {},
+  disabled: {
+    backgroundColor: TOKENS['surface-container'],
+    borderColor: TOKENS['outline-variant'],
+    opacity: 0.6,
+  },
   row: {
     flexDirection: 'row',
     alignItems: 'center',

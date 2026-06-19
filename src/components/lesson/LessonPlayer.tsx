@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
+import { Pressable, View } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { useLesson } from '../../contexts/lesson-context';
+import { TOKENS } from '../../theme/tokens';
 import { Txt } from '../primitives/Txt';
 import { HookScreen } from './screens/HookScreen';
 import { ChallengeScreen } from './screens/ChallengeScreen';
@@ -22,8 +25,52 @@ type Props = {
   lessonId: string;
 };
 
+function LessonHeader({ progress, onExit }: { progress: number; onExit: () => void }) {
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 16,
+        paddingHorizontal: 20,
+        paddingTop: 8,
+        paddingBottom: 12,
+      }}
+    >
+      <Pressable
+        onPress={onExit}
+        hitSlop={12}
+        accessibilityRole="button"
+        accessibilityLabel="Exit lesson"
+        style={{ padding: 4 }}
+      >
+        <MaterialIcons name="close" size={24} color={TOKENS['on-background']} />
+      </Pressable>
+      <View
+        style={{
+          flex: 1,
+          height: 6,
+          borderRadius: 3,
+          backgroundColor: TOKENS['surface-container-highest'],
+          overflow: 'hidden',
+        }}
+        accessibilityRole="progressbar"
+        accessibilityValue={{ now: Math.round(progress), min: 0, max: 100 }}
+      >
+        <View
+          style={{
+            height: '100%',
+            width: `${Math.max(0, Math.min(100, progress))}%`,
+            backgroundColor: TOKENS.primary,
+          }}
+        />
+      </View>
+    </View>
+  );
+}
+
 export function LessonPlayer({ lessonId }: Props) {
-  const { loadLesson, exitLesson, state, currentScreen } = useLesson();
+  const { loadLesson, exitLesson, state, currentScreen, progress } = useLesson();
 
   useEffect(() => {
     loadLesson(lessonId);
@@ -32,41 +79,64 @@ export function LessonPlayer({ lessonId }: Props) {
     };
   }, [lessonId, loadLesson, exitLesson]);
 
+  const handleExit = () => {
+    exitLesson();
+    router.back();
+  };
+
+  let content: React.ReactNode;
+
   if (state.loading || !currentScreen) {
-    return (
+    content = (
       <View className="flex-1 bg-surface items-center justify-center">
         <Txt variant="body" className="text-on-surface">
           Loading…
         </Txt>
       </View>
     );
+  } else {
+    switch (currentScreen.screen_type) {
+      case 'hook':
+        content = <HookScreen screen={currentScreen as HookScreenType} />;
+        break;
+      case 'challenge':
+        content = <ChallengeScreen screen={currentScreen as ChallengeScreenType} />;
+        break;
+      case 'reason':
+        content = <ReasonScreen screen={currentScreen as ReasonScreenType} />;
+        break;
+      case 'practice':
+        content = <PracticeScreen screen={currentScreen as PracticeScreenType} />;
+        break;
+      case 'transfer':
+        content = <TransferScreen screen={currentScreen as TransferScreenType} />;
+        break;
+      case 'wrap':
+        content = (
+          <WrapScreen
+            screen={currentScreen as WrapScreenType}
+            onFinish={() => router.back()}
+          />
+        );
+        break;
+      default:
+        content = (
+          <View className="flex-1 bg-surface items-center justify-center">
+            <Txt variant="body" className="text-on-surface">
+              Unknown screen type
+            </Txt>
+          </View>
+        );
+    }
   }
 
-  switch (currentScreen.screen_type) {
-    case 'hook':
-      return <HookScreen screen={currentScreen as HookScreenType} />;
-    case 'challenge':
-      return <ChallengeScreen screen={currentScreen as ChallengeScreenType} />;
-    case 'reason':
-      return <ReasonScreen screen={currentScreen as ReasonScreenType} />;
-    case 'practice':
-      return <PracticeScreen screen={currentScreen as PracticeScreenType} />;
-    case 'transfer':
-      return <TransferScreen screen={currentScreen as TransferScreenType} />;
-    case 'wrap':
-      return (
-        <WrapScreen
-          screen={currentScreen as WrapScreenType}
-          onFinish={() => router.back()}
-        />
-      );
-    default:
-      return (
-        <View className="flex-1 bg-surface items-center justify-center">
-          <Txt variant="body" className="text-on-surface">
-            Unknown screen type
-          </Txt>
-        </View>
-      );
-  }
+  // Lesson screens render full-bleed ScrollViews; add a top safe-area inset so
+  // headings clear the status bar / dynamic island instead of rendering under it.
+  // A persistent header gives the user a way out and shows lesson progress.
+  return (
+    <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: TOKENS.surface }}>
+      <LessonHeader progress={progress} onExit={handleExit} />
+      <View style={{ flex: 1 }}>{content}</View>
+    </SafeAreaView>
+  );
 }

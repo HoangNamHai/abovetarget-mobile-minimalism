@@ -13,7 +13,6 @@ export type { Domain, LessonAttempt };
 
 export interface DomainProgress {
   completed: number;
-  total: number;
   averageScore: number;
 }
 
@@ -58,9 +57,9 @@ export const DEFAULT_PROGRESS: UserProgress = {
   totalLessonsCompleted: 0,
   averageScore: 0,
   domainProgress: {
-    people: { completed: 0, total: 50, averageScore: 0 },
-    process: { completed: 0, total: 50, averageScore: 0 },
-    business: { completed: 0, total: 50, averageScore: 0 },
+    people: { completed: 0, averageScore: 0 },
+    process: { completed: 0, averageScore: 0 },
+    business: { completed: 0, averageScore: 0 },
   },
   recentAttempts: [],
   streakFreeze: {

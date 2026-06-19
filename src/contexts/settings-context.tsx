@@ -153,3 +153,10 @@ export function useSettings(): SettingsContextValue {
   if (!ctx) throw new Error('useSettings must be used within a SettingsProvider');
   return ctx;
 }
+
+// Non-throwing accessor for low-level primitives (e.g. Button) that may render
+// in contexts without a SettingsProvider (isolated tests). Falls back to the
+// default settings so reads like `settings.haptics` always work.
+export function useSettingsOptional(): AppSettings {
+  return useContext(SettingsContext)?.settings ?? DEFAULT_SETTINGS;
+}

@@ -1,37 +1,54 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
 import { useProgress } from '../../contexts/progress-context';
+import { useLearningHome } from '../../hooks/use-learning-home';
+import { DOMAIN_ORDER } from '../../data/domains';
 import { TOKENS } from '../../theme/tokens';
+import type { Domain } from '../../types/progress';
 import { Button } from '../primitives/Button';
 import { Hairline } from '../primitives/Hairline';
+import { PressableFeedback } from '../primitives/PressableFeedback';
 import { Txt } from '../primitives/Txt';
 
 type Props = {
+  /** Browse the full lessons list. */
   onStartStudy: () => void;
-  onJoinArena?: () => void;
+  /** Deep-link straight into a specific lesson. */
+  onOpenLesson?: (lessonId: string) => void;
+  /** Open the lessons list filtered to one domain. */
+  onOpenDomain?: (domain: Domain) => void;
 };
 
-const DOMAIN_LABELS = {
+const DOMAIN_LABELS: Record<Domain, { label: string; sub: string }> = {
   people: { label: '01. People', sub: 'Interpersonal Leadership' },
   process: { label: '02. Process', sub: 'Operational Optimization' },
-  business: { label: '03. Business', sub: 'Strategic Market Growth' },
-} as const;
+  business: { label: '03. Business Env.', sub: 'Strategy, Compliance & Value' },
+};
 
-type DomainKey = keyof typeof DOMAIN_LABELS;
-
-export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
+export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }: Props) {
   const { progress, getCurrentStreak, getCurrentMilestone } = useProgress();
+  const { nextLesson, allCaughtUp, lessonsToday, dailyGoal, goalMet, lessonsCompleted, mastery, domainTotals } =
+    useLearningHome();
   const streak = getCurrentStreak();
   const milestone = getCurrentMilestone();
 
-  const domains: Array<{ key: DomainKey; label: string; pct: string; bar: number; sub: string }> = (
-    ['people', 'process', 'business'] as DomainKey[]
-  ).map((key) => {
-    const dp = progress.domainProgress[key];
-    const bar = dp.total > 0 ? dp.completed / dp.total : 0;
-    const pct = `${Math.round(bar * 100)}%`;
-    return { key, label: DOMAIN_LABELS[key].label, pct, bar, sub: DOMAIN_LABELS[key].sub };
+  const domains = DOMAIN_ORDER.map((key) => {
+    const completed = progress.domainProgress[key].completed;
+    const total = domainTotals[key];
+    const bar = total > 0 ? Math.min(completed / total, 1) : 0;
+    return {
+      key,
+      ...DOMAIN_LABELS[key],
+      pct: `${Math.round(bar * 100)}%`,
+      bar,
+      count: `${completed}/${total}`,
+    };
   });
+
+  const handleContinue = () => {
+    if (nextLesson && onOpenLesson) onOpenLesson(nextLesson.id);
+    else onStartStudy();
+  };
 
   return (
     <ScrollView
@@ -48,14 +65,11 @@ export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
           borderBottomWidth: 1,
           borderBottomColor: TOKENS.primary,
           paddingBottom: 16,
-          marginBottom: 32,
+          marginBottom: 24,
         }}
       >
         <View>
-          <Txt
-            variant="label"
-            style={{ fontSize: 11, letterSpacing: 4, color: TOKENS.outline, marginBottom: 4 }}
-          >
+          <Txt variant="label" style={{ fontSize: 11, letterSpacing: 4, color: TOKENS.outline, marginBottom: 4 }}>
             CURRENT STREAK
           </Txt>
           <Txt
@@ -75,54 +89,83 @@ export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
         </View>
       </View>
 
-      {/* Points */}
-      <View style={{ marginBottom: 32 }}>
-        <Txt
-          variant="label"
-          style={{ fontSize: 11, letterSpacing: 4, color: TOKENS.outline, marginBottom: 4 }}
-        >
-          TOTAL POINTS
-        </Txt>
-        <Txt
-          variant="display"
-          style={{ fontSize: 40, lineHeight: 40, color: TOKENS['on-background'], letterSpacing: -1 }}
-        >
-          {progress.totalLessonsCompleted} PTS
-        </Txt>
+      {/* Today's goal */}
+      <TodayStrip lessonsToday={lessonsToday} dailyGoal={dailyGoal} goalMet={goalMet} />
+
+      {/* Stats: lessons completed + mastery */}
+      <View style={{ flexDirection: 'row', marginTop: 24, marginBottom: 24 }}>
+        <Stat label="LESSONS DONE" value={`${lessonsCompleted}`} />
+        <Stat label="MASTERY" value={`${mastery}%`} />
       </View>
 
       <Hairline />
 
-      {/* Next Milestone */}
+      {/* Continue Learning — primary action */}
+      <View
+        style={{
+          marginTop: 24,
+          marginBottom: 24,
+          backgroundColor: TOKENS.primary,
+          padding: 28,
+          borderRadius: 4,
+        }}
+      >
+        <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: 'rgba(255,255,255,0.7)', marginBottom: 10 }}>
+          {allCaughtUp ? 'ALL CAUGHT UP' : 'CONTINUE LEARNING'}
+        </Txt>
+        <Txt
+          variant="display"
+          style={{ fontSize: 26, lineHeight: 30, color: TOKENS['on-primary'], marginBottom: allCaughtUp ? 20 : 6 }}
+        >
+          {allCaughtUp ? "YOU'VE FINISHED EVERY LESSON." : nextLesson!.title}
+        </Txt>
+        {!allCaughtUp && (
+          <Txt variant="label" style={{ fontSize: 11, letterSpacing: 2, color: 'rgba(255,255,255,0.7)', marginBottom: 20 }}>
+            {nextLesson!.domain.toUpperCase()} · {nextLesson!.duration} MIN
+          </Txt>
+        )}
+        <Button
+          label={allCaughtUp ? 'Review Lessons' : 'Continue'}
+          onPress={handleContinue}
+          variant="secondary"
+        />
+      </View>
+
+      <Hairline />
+
+      {/* Next Milestone — now shows real progress to the next tier */}
       <View
         style={{
           borderWidth: 1,
           borderColor: TOKENS['outline-variant'],
           backgroundColor: TOKENS['surface-container-lowest'],
-          borderRadius: 2,
+          borderRadius: 4,
           padding: 24,
           marginTop: 24,
           marginBottom: 24,
         }}
       >
-        <Txt
-          variant="display"
-          style={{ fontSize: 20, letterSpacing: -0.5, color: TOKENS['on-background'], marginBottom: 8 }}
-        >
+        <Txt variant="display" style={{ fontSize: 18, letterSpacing: -0.5, color: TOKENS['on-background'], marginBottom: 12 }}>
           NEXT MILESTONE: {milestone.name.toUpperCase()}
         </Txt>
-        <Txt
-          variant="body"
-          style={{ fontSize: 13, lineHeight: 20, color: TOKENS.outline, marginBottom: 20 }}
-        >
-          You are nearing the professional tier. Keep completing lessons to unlock the next milestone.
+        <View style={{ width: '100%', height: 6, backgroundColor: TOKENS['surface-container-highest'], borderRadius: 3 }}>
+          <View
+            style={{
+              height: '100%',
+              borderRadius: 3,
+              backgroundColor: TOKENS.primary,
+              width: `${Math.round(milestone.progress)}%`,
+            }}
+          />
+        </View>
+        <Txt variant="body" style={{ fontSize: 13, lineHeight: 20, color: TOKENS.outline, marginTop: 12 }}>
+          {Math.round(milestone.progress)}% of the way to {milestone.name}. Keep your scores up to get there.
         </Txt>
-        <Button label="Start Study" onPress={onStartStudy} />
       </View>
 
       <Hairline />
 
-      {/* Challenge Arenas */}
+      {/* Your Progress (domains) — tappable to jump into that domain */}
       <View style={{ marginTop: 24, marginBottom: 24 }}>
         <Txt
           variant="display"
@@ -133,93 +176,102 @@ export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
             borderBottomWidth: 1,
             borderBottomColor: TOKENS.primary,
             paddingBottom: 12,
-            marginBottom: 16,
+            marginBottom: 8,
           }}
         >
-          CHALLENGE ARENAS
+          YOUR PROGRESS
         </Txt>
 
-        {domains.map((arena) => (
-          <View
-            key={arena.key}
-            style={{
-              borderBottomWidth: 1,
-              borderBottomColor: TOKENS['outline-variant'],
-              paddingVertical: 16,
-            }}
-          >
-            <View
-              style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 }}
-            >
-              <Txt
-                variant="label"
-                style={{ fontSize: 11, letterSpacing: 2, color: TOKENS['on-background'] }}
-              >
-                {arena.label}
-              </Txt>
-              <Txt
-                variant="label"
-                style={{ fontSize: 11, letterSpacing: 2, color: TOKENS.outline }}
-              >
-                {arena.pct}
-              </Txt>
-            </View>
-            {/* Progress bar */}
+        {domains.map((d) => (
+          <PressableFeedback key={d.key} onPress={() => onOpenDomain?.(d.key)}>
             <View
               style={{
-                width: '100%',
-                height: 2,
-                backgroundColor: TOKENS['surface-container-highest'],
+                borderBottomWidth: 1,
+                borderBottomColor: TOKENS['outline-variant'],
+                paddingVertical: 16,
               }}
             >
-              <View
-                style={{
-                  height: '100%',
-                  backgroundColor: TOKENS.primary,
-                  width: `${Math.round(arena.bar * 100)}%`,
-                }}
-              />
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 }}>
+                <Txt variant="label" style={{ fontSize: 15, letterSpacing: 1, color: TOKENS['on-background'] }}>
+                  {d.label}
+                </Txt>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <Txt variant="label" style={{ fontSize: 12, letterSpacing: 1, color: TOKENS['surface-dim'] }}>
+                    {d.count}
+                  </Txt>
+                  <Txt variant="label" style={{ fontSize: 14, letterSpacing: 1, color: TOKENS.outline }}>
+                    {d.pct}
+                  </Txt>
+                  <Txt variant="label" style={{ fontSize: 18, color: TOKENS.outline }}>›</Txt>
+                </View>
+              </View>
+              <View style={{ width: '100%', height: 2, backgroundColor: TOKENS['surface-container-highest'] }}>
+                <View style={{ height: '100%', backgroundColor: TOKENS.primary, width: `${Math.round(d.bar * 100)}%` }} />
+              </View>
+              <Txt variant="label" style={{ fontSize: 13, letterSpacing: 0.5, color: TOKENS.outline, marginTop: 8 }}>
+                {d.sub}
+              </Txt>
             </View>
-            <Txt
-              variant="label"
-              style={{ fontSize: 9, letterSpacing: 2, color: TOKENS.outline, marginTop: 8 }}
-            >
-              {arena.sub}
-            </Txt>
-          </View>
+          </PressableFeedback>
         ))}
       </View>
 
-      <Hairline />
-
-      {/* Join Arena CTA */}
-      <View
-        style={{
-          marginTop: 32,
-          backgroundColor: TOKENS.primary,
-          padding: 32,
-          borderRadius: 2,
-        }}
-      >
-        <Txt
-          variant="display"
-          style={{ fontSize: 28, lineHeight: 32, color: TOKENS['on-primary'], marginBottom: 8 }}
-        >
-          ELEVATE YOUR POSITION.
-        </Txt>
-        <Txt
-          variant="label"
-          style={{
-            fontSize: 11,
-            letterSpacing: 3,
-            color: 'rgba(255,255,255,0.8)',
-            marginBottom: 24,
-          }}
-        >
-          JOIN THE GLOBAL ARENA. COMPETE WITH TOP-TIER MONOGRAPHS FOR INDUSTRY DOMINANCE.
-        </Txt>
-        {onJoinArena && <Button label="Join Arena" onPress={onJoinArena} variant="secondary" />}
-      </View>
+      {/* Browse all lessons */}
+      <Button label="Browse All Lessons" onPress={onStartStudy} variant="secondary" />
     </ScrollView>
+  );
+}
+
+// ─── Today strip ──────────────────────────────────────────────────────────────
+
+function TodayStrip({
+  lessonsToday,
+  dailyGoal,
+  goalMet,
+}: {
+  lessonsToday: number;
+  dailyGoal: number;
+  goalMet: boolean;
+}) {
+  const dots = Math.max(dailyGoal, 1);
+  return (
+    <View>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+        <Txt variant="label" style={{ fontSize: 11, letterSpacing: 4, color: TOKENS.outline }}>
+          TODAY
+        </Txt>
+        <Txt variant="label" style={{ fontSize: 12, letterSpacing: 1, color: goalMet ? TOKENS.primary : TOKENS.outline }}>
+          {goalMet ? 'GOAL MET ✓' : `${Math.min(lessonsToday, dailyGoal)} / ${dailyGoal} LESSONS`}
+        </Txt>
+      </View>
+      <View style={{ flexDirection: 'row', gap: 6 }}>
+        {Array.from({ length: dots }).map((_, i) => (
+          <View
+            key={i}
+            style={{
+              flex: 1,
+              height: 6,
+              borderRadius: 3,
+              backgroundColor: i < lessonsToday ? TOKENS.primary : TOKENS['surface-container-highest'],
+            }}
+          />
+        ))}
+      </View>
+    </View>
+  );
+}
+
+// ─── Stat ─────────────────────────────────────────────────────────────────────
+
+function Stat({ label, value }: { label: string; value: string }) {
+  return (
+    <View style={{ flex: 1 }}>
+      <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: TOKENS.outline, marginBottom: 4 }}>
+        {label}
+      </Txt>
+      <Txt variant="display" style={{ fontSize: 40, lineHeight: 44, color: TOKENS['on-background'], letterSpacing: -1 }}>
+        {value}
+      </Txt>
+    </View>
   );
 }

@@ -1,5 +1,5 @@
-import * as Haptics from 'expo-haptics';
 import React from 'react';
+import { useHaptics } from '../../hooks/use-haptics';
 import { PressableFeedback } from './PressableFeedback';
 import { Txt } from './Txt';
 
@@ -13,9 +13,10 @@ type Props = {
 
 export function Button({ label, onPress, variant = 'primary' }: Props) {
   const isPrimary = variant === 'primary';
+  const { impact } = useHaptics();
 
   function handlePress() {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    impact();
     onPress();
   }
 

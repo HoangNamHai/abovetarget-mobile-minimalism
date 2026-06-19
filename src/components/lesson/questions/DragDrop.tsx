@@ -4,7 +4,10 @@ import { useLesson } from '../../../contexts/lesson-context';
 import { useCheckAnswer } from '../use-check-answer';
 import { dragDropPlacement, allChipsPlaced } from '../scoring';
 import { Txt } from '../../primitives/Txt';
+import { Appear } from '../../primitives/Appear';
 import { Button } from '../../primitives/Button';
+import { QuestionPrompt } from './QuestionPrompt';
+import { TOKENS } from '../../../theme/tokens';
 import type { DragChip, DragDropQuestion } from '../../../types/lesson';
 
 export function DragDrop({
@@ -75,16 +78,16 @@ export function DragDrop({
 
   return (
     <View style={{ gap: 16 }}>
-      <Txt variant="display">{question.question}</Txt>
+      <QuestionPrompt>{question.question}</QuestionPrompt>
 
       {/* Drop Zones */}
       <View style={{ gap: 12 }}>
-        {question.dropZones.map((zone) => {
+        {question.dropZones.map((zone, idx) => {
           const placed = zoneChips(zone.id);
 
           return (
+            <Appear key={zone.id} index={idx + 1}>
             <Pressable
-              key={zone.id}
               testID={`zone-${zone.id}`}
               disabled={done}
               onPress={() => {
@@ -93,15 +96,24 @@ export function DragDrop({
               }}
               style={{
                 borderWidth: 1,
-                borderColor: selectedChipId ? '#6B7FD7' : '#D1D5DB',
-                borderRadius: 8,
+                borderColor: selectedChipId && !done ? TOKENS.primary : TOKENS['outline-variant'],
+                borderRadius: 4,
                 padding: 12,
                 minHeight: 56,
-                backgroundColor: selectedChipId && !done ? '#F0F3FF' : '#F9FAFB',
+                backgroundColor:
+                  selectedChipId && !done
+                    ? TOKENS['surface-container-low']
+                    : TOKENS['surface-container-lowest'],
               }}
             >
-              <Txt variant="label">{zone.label}</Txt>
-              {zone.detail ? <Txt variant="body">{zone.detail}</Txt> : null}
+              <Txt variant="label" style={{ color: TOKENS['on-background'] }}>
+                {zone.label}
+              </Txt>
+              {zone.detail ? (
+                <Txt variant="body" style={{ color: TOKENS.outline }}>
+                  {zone.detail}
+                </Txt>
+              ) : null}
               {/* Render ALL placed chips in the zone */}
               {placed.map((chip) => (
                 <Pressable
@@ -116,15 +128,18 @@ export function DragDrop({
                     marginTop: 8,
                     paddingVertical: 6,
                     paddingHorizontal: 12,
-                    backgroundColor: '#E0E7FF',
-                    borderRadius: 16,
+                    backgroundColor: TOKENS.primary,
+                    borderRadius: 999,
                     alignSelf: 'flex-start',
                   }}
                 >
-                  <Txt variant="body">{chip.label}</Txt>
+                  <Txt variant="body" style={{ color: TOKENS['on-primary'] }}>
+                    {chip.label}
+                  </Txt>
                 </Pressable>
               ))}
             </Pressable>
+            </Appear>
           );
         })}
       </View>
@@ -132,34 +147,50 @@ export function DragDrop({
       {/* Chip Tray */}
       {!done && trayChips.length > 0 && (
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
-          {trayChips.map((chip) => (
-            <Pressable
-              key={chip.id}
-              disabled={done}
-              onPress={() => {
-                if (done) return;
-                const next = selectedChipIdRef.current === chip.id ? null : chip.id;
-                selectChip(next);
-              }}
-              style={{
-                paddingVertical: 8,
-                paddingHorizontal: 16,
-                backgroundColor: selectedChipId === chip.id ? '#6B7FD7' : '#E5E7EB',
-                borderRadius: 20,
-              }}
-            >
-              <Txt variant="body">{chip.label}</Txt>
-            </Pressable>
+          {trayChips.map((chip, i) => (
+            // Capped stagger: keeps a nice cascade on first load while staying
+            // snappy when a single chip re-mounts (returned from a drop zone).
+            <Appear key={chip.id} delay={Math.min(i, 6) * 50}>
+              <Pressable
+                disabled={done}
+                onPress={() => {
+                  if (done) return;
+                  const next = selectedChipIdRef.current === chip.id ? null : chip.id;
+                  selectChip(next);
+                }}
+                style={{
+                  paddingVertical: 8,
+                  paddingHorizontal: 16,
+                  backgroundColor:
+                    selectedChipId === chip.id ? TOKENS.primary : TOKENS['surface-container-high'],
+                  borderWidth: 1,
+                  borderColor:
+                    selectedChipId === chip.id ? TOKENS.primary : TOKENS['outline-variant'],
+                  borderRadius: 999,
+                }}
+              >
+                <Txt
+                  variant="body"
+                  style={{
+                    color: selectedChipId === chip.id ? TOKENS['on-primary'] : TOKENS['on-background'],
+                  }}
+                >
+                  {chip.label}
+                </Txt>
+              </Pressable>
+            </Appear>
           ))}
         </View>
       )}
 
       {/* Check Answer button — only rendered when all chips are placed */}
       {!done && canCheck && (
-        <Button
-          label="Check Answer"
-          onPress={() => checkAnswer(question, isLastQuestion)}
-        />
+        <Appear>
+          <Button
+            label="Check Answer"
+            onPress={() => checkAnswer(question, isLastQuestion)}
+          />
+        </Appear>
       )}
     </View>
   );

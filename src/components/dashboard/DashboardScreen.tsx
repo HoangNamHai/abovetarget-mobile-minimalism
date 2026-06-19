@@ -1,19 +1,25 @@
 import React from 'react';
 import { useBrand } from '../../theme/brand-context';
+import type { Domain } from '../../types/progress';
 import { EliteDashboard } from './EliteDashboard';
 import { MonographDashboard } from './MonographDashboard';
 
 type Props = {
   onStartStudy: () => void;
-  onJoinArena: () => void;
+  onOpenLesson?: (lessonId: string) => void;
+  onOpenDomain?: (domain: Domain) => void;
 };
 
-export function DashboardScreen({ onStartStudy, onJoinArena }: Props) {
+export function DashboardScreen({ onStartStudy, onOpenLesson, onOpenDomain }: Props) {
   const { brand } = useBrand();
 
   if (brand === 'elite') {
-    return <EliteDashboard onStartStudy={onStartStudy} onJoinArena={onJoinArena} />;
+    return (
+      <EliteDashboard onStartStudy={onStartStudy} onOpenLesson={onOpenLesson} onOpenDomain={onOpenDomain} />
+    );
   }
 
-  return <MonographDashboard onStartStudy={onStartStudy} onJoinArena={onJoinArena} />;
+  return (
+    <MonographDashboard onStartStudy={onStartStudy} onOpenLesson={onOpenLesson} onOpenDomain={onOpenDomain} />
+  );
 }

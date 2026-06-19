@@ -62,11 +62,11 @@ import { render, screen } from '@testing-library/react-native';
 import { TestProviders } from '../../../test-utils';
 import { DashboardScreen } from '../DashboardScreen';
 
-test('shows a start-study control', async () => {
+test('shows a browse-lessons control', async () => {
   await render(
     <TestProviders>
-      <DashboardScreen onStartStudy={() => {}} onJoinArena={() => {}} />
+      <DashboardScreen onStartStudy={() => {}} />
     </TestProviders>,
   );
-  expect(screen.getByText(/study/i)).toBeTruthy();
+  expect(screen.getByText(/browse all lessons/i)).toBeTruthy();
 });

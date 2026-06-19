@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ScrollView, View } from 'react-native';
 import type { TransferScreen as TransferScreenType } from '../../../types/lesson';
 import { Txt } from '../../primitives/Txt';
+import { RichText } from '../../primitives/RichText';
+import { Appear } from '../../primitives/Appear';
 import { Button } from '../../primitives/Button';
 import { Hairline } from '../../primitives/Hairline';
 import { QuestionRunner } from './QuestionRunner';
@@ -17,23 +19,31 @@ export function TransferScreen({ screen }: Props) {
     const { scenario } = screen.content;
     return (
       <ScrollView className="flex-1 bg-surface" contentContainerStyle={{ padding: 24, gap: 24 }}>
-        <Txt variant="display" className="text-on-surface">
-          {scenario.title}
-        </Txt>
-        <Hairline />
-        <Txt variant="body" className="text-on-surface leading-relaxed">
-          {scenario.description}
-        </Txt>
+        <Appear index={0}>
+          <Txt variant="display" className="text-on-surface" style={{ fontSize: 24, lineHeight: 33 }}>
+            {scenario.title}
+          </Txt>
+          <Hairline />
+        </Appear>
+        <Appear index={1}>
+          <RichText className="text-on-surface text-lg leading-relaxed">
+            {scenario.description}
+          </RichText>
+        </Appear>
         {scenario.details && scenario.details.length > 0 && (
-          <View style={{ gap: 8 }}>
-            {scenario.details.map((detail, i) => (
-              <Txt key={i} variant="body" className="text-on-surface">
-                {detail}
-              </Txt>
-            ))}
-          </View>
+          <Appear index={2}>
+            <View style={{ gap: 8 }}>
+              {scenario.details.map((detail, i) => (
+                <RichText key={i} className="text-on-surface text-base leading-relaxed">
+                  {detail}
+                </RichText>
+              ))}
+            </View>
+          </Appear>
         )}
-        <Button label="Start" onPress={() => setStarted(true)} />
+        <Appear index={3}>
+          <Button label="Start" onPress={() => setStarted(true)} />
+        </Appear>
       </ScrollView>
     );
   }

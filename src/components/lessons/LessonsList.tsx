@@ -9,10 +9,20 @@ import { Txt } from '../primitives/Txt';
 import { Hairline } from '../primitives/Hairline';
 import { PressableFeedback } from '../primitives/PressableFeedback';
 import { TOKENS } from '../../theme/tokens';
+import type { Domain } from '../../types/progress';
+import type { Lesson } from '../../types/lesson';
+import { DOMAIN_OF, DOMAIN_TITLE } from '../../data/domains';
 
-export function LessonsList() {
+type Props = {
+  domainFilter?: Domain;
+};
+
+export function LessonsList({ domainFilter }: Props) {
   const { progress } = useProgress();
   const completedIds = new Set(progress.recentAttempts.map((a) => a.lessonId));
+
+  const matches = (lesson: Lesson) =>
+    !domainFilter || DOMAIN_OF[lesson.domain] === domainFilter;
 
   return (
     <ScrollView
@@ -20,7 +30,31 @@ export function LessonsList() {
       contentContainerStyle={{ paddingBottom: 32 }}
       showsVerticalScrollIndicator={false}
     >
-      {lessonsIndex.map((module) => (
+      {domainFilter && (
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingHorizontal: 16,
+            paddingVertical: 12,
+            backgroundColor: TOKENS['surface-container'],
+          }}
+        >
+          <Txt variant="label" style={{ fontSize: 12, letterSpacing: 1, color: TOKENS['on-background'] }}>
+            FILTERED: {DOMAIN_TITLE[domainFilter].toUpperCase()}
+          </Txt>
+          <PressableFeedback onPress={() => router.replace('/(tabs)/lessons')}>
+            <Txt variant="label" style={{ fontSize: 12, letterSpacing: 1, color: TOKENS.primary }}>
+              SHOW ALL ›
+            </Txt>
+          </PressableFeedback>
+        </View>
+      )}
+      {lessonsIndex
+        .map((module) => ({ ...module, lessons: module.lessons.filter(matches) }))
+        .filter((module) => module.lessons.length > 0)
+        .map((module) => (
         <View key={module.moduleName}>
           {/* Module header */}
           <View
@@ -55,86 +89,45 @@ export function LessonsList() {
           </View>
           <Hairline />
 
-          {/* Lesson rows */}
-          {module.lessons.map((lesson, index) => {
+          {/* Lesson cards */}
+          {module.lessons.map((lesson) => {
             const done = completedIds.has(lesson.id);
             return (
-              <React.Fragment key={lesson.id}>
-                <PressableFeedback onPress={() => router.push(`/lesson/${lesson.id}`)}>
-                  <View
-                    style={{
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      paddingHorizontal: 16,
-                      paddingVertical: 12,
-                      backgroundColor: TOKENS['surface-container-lowest'],
-                    }}
-                  >
-                    {/* Thumbnail */}
+              <PressableFeedback key={lesson.id} onPress={() => router.push(`/lesson/${lesson.id}`)}>
+                <View
+                  style={{
+                    marginHorizontal: 16,
+                    marginTop: 16,
+                    borderRadius: 8,
+                    overflow: 'hidden',
+                    borderWidth: 1,
+                    borderColor: TOKENS['outline-variant'],
+                    backgroundColor: TOKENS['surface-container-lowest'],
+                  }}
+                >
+                  {/* Hero image */}
+                  <View>
                     <Image
                       source={getLessonThumbnail(lesson.thumbnail)}
                       style={{
-                        width: 72,
-                        height: 52,
-                        borderRadius: 6,
+                        width: '100%',
+                        aspectRatio: 16 / 9,
                         backgroundColor: TOKENS['surface-container'],
                       }}
                       contentFit="cover"
+                      transition={200}
                     />
 
-                    {/* Text content */}
-                    <View style={{ flex: 1, marginLeft: 12 }}>
-                      <Txt
-                        variant="label"
-                        style={{
-                          fontSize: 14,
-                          fontWeight: '600',
-                          color: TOKENS['on-background'],
-                          marginBottom: 2,
-                        }}
-                        numberOfLines={2}
-                      >
-                        {lesson.title}
-                      </Txt>
-                      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                        <Txt
-                          variant="label"
-                          style={{
-                            fontSize: 11,
-                            color: TOKENS.outline,
-                          }}
-                        >
-                          {lesson.domain}
-                        </Txt>
-                        <Txt
-                          variant="label"
-                          style={{
-                            fontSize: 11,
-                            color: TOKENS['surface-dim'],
-                          }}
-                        >
-                          •
-                        </Txt>
-                        <Txt
-                          variant="label"
-                          style={{
-                            fontSize: 11,
-                            color: TOKENS.outline,
-                          }}
-                        >
-                          {lesson.duration} min
-                        </Txt>
-                      </View>
-                    </View>
-
-                    {/* Done badge */}
+                    {/* Done badge — overlaid on the image */}
                     {done && (
                       <View
                         style={{
-                          marginLeft: 8,
-                          paddingHorizontal: 8,
-                          paddingVertical: 3,
-                          borderRadius: 12,
+                          position: 'absolute',
+                          top: 10,
+                          right: 10,
+                          paddingHorizontal: 10,
+                          paddingVertical: 4,
+                          borderRadius: 999,
                           backgroundColor: TOKENS.primary,
                         }}
                       >
@@ -145,6 +138,7 @@ export function LessonsList() {
                             fontWeight: '700',
                             color: TOKENS['on-primary'],
                             letterSpacing: 0.5,
+                            textTransform: 'uppercase',
                           }}
                         >
                           Done
@@ -152,12 +146,38 @@ export function LessonsList() {
                       </View>
                     )}
                   </View>
-                </PressableFeedback>
-                {index < module.lessons.length - 1 && <Hairline />}
-              </React.Fragment>
+
+                  {/* Text content */}
+                  <View style={{ paddingHorizontal: 16, paddingVertical: 14 }}>
+                    <Txt
+                      variant="label"
+                      style={{
+                        fontSize: 17,
+                        fontWeight: '700',
+                        color: TOKENS['on-background'],
+                        marginBottom: 6,
+                      }}
+                      numberOfLines={2}
+                    >
+                      {lesson.title}
+                    </Txt>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                      <Txt variant="label" style={{ fontSize: 12, color: TOKENS.outline }}>
+                        {lesson.domain}
+                      </Txt>
+                      <Txt variant="label" style={{ fontSize: 12, color: TOKENS['surface-dim'] }}>
+                        •
+                      </Txt>
+                      <Txt variant="label" style={{ fontSize: 12, color: TOKENS.outline }}>
+                        {lesson.duration} min
+                      </Txt>
+                    </View>
+                  </View>
+                </View>
+              </PressableFeedback>
             );
           })}
-          <Hairline />
+          <View style={{ height: 8 }} />
         </View>
       ))}
     </ScrollView>

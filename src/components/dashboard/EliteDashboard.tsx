@@ -3,13 +3,15 @@ import React from 'react';
 import { ScrollView, View } from 'react-native';
 
 import { TOKENS } from '../../theme/tokens';
+import type { Domain } from '../../types/progress';
 import { Button } from '../primitives/Button';
 import { Hairline } from '../primitives/Hairline';
 import { Txt } from '../primitives/Txt';
 
 type Props = {
   onStartStudy: () => void;
-  onJoinArena: () => void;
+  onOpenLesson?: (lessonId: string) => void;
+  onOpenDomain?: (domain: Domain) => void;
 };
 
 const PROGRESS_RINGS = [
@@ -28,7 +30,7 @@ const ARENAS = [
 // SessionContext removed — Elite brand not shipped yet; stub with zeros.
 const ELITE_SESSION_STUB = { streak: 0, points: 0 };
 
-export function EliteDashboard({ onStartStudy, onJoinArena }: Props) {
+export function EliteDashboard({ onStartStudy }: Props) {
   const state = ELITE_SESSION_STUB;
 
   return (
@@ -223,7 +225,7 @@ export function EliteDashboard({ onStartStudy, onJoinArena }: Props) {
           borderWidth: 1,
           borderColor: TOKENS['outline-variant'],
           backgroundColor: TOKENS['surface-container-lowest'],
-          borderRadius: 2,
+          borderRadius: 4,
           overflow: 'hidden',
         }}
       >
@@ -257,28 +259,28 @@ export function EliteDashboard({ onStartStudy, onJoinArena }: Props) {
         </View>
       </View>
 
-      {/* Join Arena CTA */}
+      {/* Keep-going CTA */}
       <View
         style={{
           marginTop: 32,
           backgroundColor: TOKENS.primary,
           padding: 32,
-          borderRadius: 2,
+          borderRadius: 4,
         }}
       >
         <Txt
           variant="display"
           style={{ fontSize: 28, lineHeight: 32, color: TOKENS['on-primary'], marginBottom: 12 }}
         >
-          ELEVATE YOUR POSITION.
+          KEEP THE MOMENTUM.
         </Txt>
         <Txt
           variant="label"
           style={{ fontSize: 11, letterSpacing: 3, color: 'rgba(255,255,255,0.8)', marginBottom: 24 }}
         >
-          JOIN THE GLOBAL ARENA. COMPETE WITH ELITE PROFESSIONALS FOR INDUSTRY DOMINANCE.
+          ONE LESSON A DAY COMPOUNDS INTO MASTERY. PICK UP WHERE YOU LEFT OFF.
         </Txt>
-        <Button label="Join Arena" onPress={onJoinArena} variant="secondary" />
+        <Button label="Browse Lessons" onPress={onStartStudy} variant="secondary" />
       </View>
     </ScrollView>
   );

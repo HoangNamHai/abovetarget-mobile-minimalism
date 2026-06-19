@@ -3,8 +3,9 @@ import { View } from 'react-native';
 import { useLesson } from '../../../contexts/lesson-context';
 import { useCheckAnswer } from '../use-check-answer';
 import { QuizOption } from '../../quiz/QuizOption';
+import { Appear } from '../../primitives/Appear';
 import { Button } from '../../primitives/Button';
-import { Txt } from '../../primitives/Txt';
+import { QuestionPrompt } from './QuestionPrompt';
 import type { MultiSelectQuestion } from '../../../types/lesson';
 
 export function MultiSelect({ question, isLastQuestion }: { question: MultiSelectQuestion; isLastQuestion: boolean }) {
@@ -15,21 +16,25 @@ export function MultiSelect({ question, isLastQuestion }: { question: MultiSelec
 
   return (
     <View style={{ gap: 16 }}>
-      <Txt variant="display">{question.question}</Txt>
+      <QuestionPrompt>{question.question}</QuestionPrompt>
       <View style={{ gap: 12 }}>
-        {question.options.map((opt) => (
-          <View key={opt.id} pointerEvents={done ? 'none' : 'auto'}>
-            <QuizOption
-              option={{ key: opt.id, label: opt.text }}
-              selected={selected.includes(opt.id)}
-              brand="monograph"
-              onPress={() => toggleMultiSelect(question.q_id, opt.id, question.maxSelections)}
-            />
-          </View>
+        {question.options.map((opt, i) => (
+          <Appear key={opt.id} index={i + 1}>
+            <View pointerEvents={done ? 'none' : 'auto'}>
+              <QuizOption
+                option={{ key: opt.id, label: opt.text }}
+                selected={selected.includes(opt.id)}
+                brand="monograph"
+                onPress={() => toggleMultiSelect(question.q_id, opt.id, question.maxSelections)}
+              />
+            </View>
+          </Appear>
         ))}
       </View>
       {!done && (
-        <Button label="Check Answer" onPress={() => checkAnswer(question, isLastQuestion)} />
+        <Appear index={question.options.length + 1}>
+          <Button label="Check Answer" onPress={() => checkAnswer(question, isLastQuestion)} />
+        </Appear>
       )}
     </View>
   );

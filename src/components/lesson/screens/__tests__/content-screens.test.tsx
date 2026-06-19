@@ -1,3 +1,15 @@
+// Mock expo-router so router.replace()/back() don't crash in tests
+jest.mock('expo-router', () => ({
+  router: { push: jest.fn(), replace: jest.fn(), back: jest.fn() },
+}));
+
+// Mock expo-image (WrapScreen renders the next-lesson thumbnail)
+jest.mock('expo-image', () => {
+  const React = require('react');
+  const { View } = require('react-native');
+  return { Image: ({ testID }: { testID?: string }) => React.createElement(View, { testID }) };
+});
+
 import React, { type ReactNode } from 'react';
 import { render, waitFor } from '@testing-library/react-native';
 import { createInMemoryPersistence } from '../../../../services/persistence';

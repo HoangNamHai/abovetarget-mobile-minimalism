@@ -4,13 +4,16 @@ import { createInMemoryPersistence } from '../../../services/persistence';
 import { PersistenceProvider } from '../../../contexts/persistence-context';
 import { ProgressProvider } from '../../../contexts/progress-context';
 import { SubscriptionProvider } from '../../../contexts/subscription-context';
+import { OnboardingProvider } from '../../../contexts/onboarding-context';
 import { MonographDashboard } from '../MonographDashboard';
 
 const wrap = (p = createInMemoryPersistence()) =>
   ({ children }: { children: ReactNode }) => (
     <PersistenceProvider value={p}>
       <SubscriptionProvider>
-        <ProgressProvider>{children}</ProgressProvider>
+        <OnboardingProvider>
+          <ProgressProvider>{children}</ProgressProvider>
+        </OnboardingProvider>
       </SubscriptionProvider>
     </PersistenceProvider>
   );
