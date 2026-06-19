@@ -1,12 +1,5 @@
-import BottomSheet, {
-  BottomSheetModal,
-  BottomSheetView,
-} from '@gorhom/bottom-sheet';
-import * as Haptics from 'expo-haptics';
-import React, { useCallback, useEffect, useRef } from 'react';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useSession } from '../../contexts/session-context';
-import { questionById } from '../../data/questions';
 import { Brand } from '../../theme/brand-context';
 import { TOKENS } from '../../theme/tokens';
 import { Button } from '../primitives/Button';
@@ -112,64 +105,9 @@ export function IncorrectBody({ explanation, onDismiss, brand }: FeedbackBodyPro
   );
 }
 
-// ─── Container sheet ──────────────────────────────────────────────────────────
-
-export function FeedbackSheet() {
-  const { state, dispatch } = useSession();
-  const sheetRef = useRef<BottomSheetModal>(null);
-
-  const dismiss = useCallback(() => {
-    dispatch({ type: 'DISMISS_RESULT' });
-    sheetRef.current?.dismiss();
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (state.result === 'correct') {
-      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      sheetRef.current?.present();
-    } else if (state.result === 'incorrect') {
-      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
-      sheetRef.current?.present();
-    } else {
-      sheetRef.current?.dismiss();
-    }
-  }, [state.result]);
-
-  const explanation =
-    state.activeQuestionId != null
-      ? (questionById(state.activeQuestionId)?.explanation ?? '')
-      : '';
-
-  // Infer brand from the active question; fall back to 'monograph'
-  const brand: Brand =
-    state.activeQuestionId != null
-      ? (questionById(state.activeQuestionId)?.brand ?? 'monograph')
-      : 'monograph';
-
-  return (
-    <BottomSheetModal
-      ref={sheetRef}
-      snapPoints={['75%']}
-      enableDynamicSizing={false}
-      onDismiss={() => dispatch({ type: 'DISMISS_RESULT' })}
-    >
-      <BottomSheetView style={styles.sheetView}>
-        {state.result === 'correct' ? (
-          <CorrectBody explanation={explanation} onDismiss={dismiss} brand={brand} />
-        ) : (
-          <IncorrectBody explanation={explanation} onDismiss={dismiss} brand={brand} />
-        )}
-      </BottomSheetView>
-    </BottomSheetModal>
-  );
-}
-
 // ─── Styles ───────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
-  sheetView: {
-    flex: 1,
-  },
   body: {
     flex: 1,
     paddingHorizontal: 20,

@@ -11,7 +11,6 @@ import { LessonProvider } from '../contexts/lesson-context';
 import { OnboardingProvider } from '../contexts/onboarding-context';
 import { PersistenceProvider } from '../contexts/persistence-context';
 import { ProgressProvider } from '../contexts/progress-context';
-import { SessionProvider } from '../contexts/session-context';
 import { SettingsProvider } from '../contexts/settings-context';
 import { SoundProvider } from '../contexts/sound-context';
 import { SubscriptionProvider } from '../contexts/subscription-context';
@@ -31,11 +30,9 @@ export default function RootLayout() {
                       <OnboardingProvider>
                         <SubscriptionProvider>
                           <LessonProvider>
-                            <SessionProvider>
-                              <FontGate>
-                                <Stack screenOptions={{ headerShown: false }} />
-                              </FontGate>
-                            </SessionProvider>
+                            <FontGate>
+                              <Stack screenOptions={{ headerShown: false }} />
+                            </FontGate>
                           </LessonProvider>
                         </SubscriptionProvider>
                       </OnboardingProvider>
