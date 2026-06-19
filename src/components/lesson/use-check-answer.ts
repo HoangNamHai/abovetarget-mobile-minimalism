@@ -87,11 +87,13 @@ export function useCheckAnswer() {
         } else if (attempt < MAX_ATTEMPTS) {
           const correctZoneOf: Record<string, string> = {};
           for (const chip of (question as DragDropQuestion).chips) correctZoneOf[chip.id] = chip.correctZone;
-          // clear any zone holding a mis-placed chip (keep correct placements)
+          // Keep only correctly-placed chips per zone; remove mis-placed ones
           for (const [zoneId, content] of Object.entries(answers)) {
-            const chips = Array.isArray(content) ? content : [content];
-            const hasWrong = chips.some((c) => c && correctZoneOf[c.id] !== zoneId);
-            if (hasWrong) setDropZoneAnswer(qid, zoneId, null);
+            const chips = Array.isArray(content) ? content : content ? [content] : [];
+            const kept = chips.filter((c) => correctZoneOf[c.id] === zoneId);
+            if (kept.length !== chips.length) {
+              setDropZoneAnswer(qid, zoneId, kept.length ? kept : null);
+            }
           }
           showRetryModal({ hint: (question as DragDropQuestion).retryHint });
         } else {

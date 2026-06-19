@@ -52,3 +52,33 @@ test('wrong placement to MAX_ATTEMPTS reveals and scores zero', async () => {
   expect(result.current.lesson.state.modalType).toBe('reveal');
   expect(result.current.lesson.state.questionScores['q2']).toBe(0);
 });
+
+test('chips>zones question (transfer_q2) is completable when all chips placed correctly', async () => {
+  const { result } = await harness();
+  // Load A1L2 and find the transfer screen
+  await act(async () => { await result.current.lesson.loadLesson('A1L2'); });
+  const transferScreen = result.current.lesson.state.lessonData!.screens.find(
+    (s: { screen_type: string }) => s.screen_type === 'transfer',
+  );
+  const q = (transferScreen as any).content.questions.find(
+    (q: { q_id: string }) => q.q_id === 'transfer_q2',
+  ) as DragDropQuestion;
+
+  // Group chips by correctZone and place them as arrays
+  const chipsByZone: Record<string, typeof q.chips> = {};
+  for (const chip of q.chips) {
+    if (!chipsByZone[chip.correctZone]) chipsByZone[chip.correctZone] = [];
+    chipsByZone[chip.correctZone].push(chip);
+  }
+
+  await act(async () => {
+    for (const [zoneId, chips] of Object.entries(chipsByZone)) {
+      result.current.lesson.setDropZoneAnswer('transfer_q2', zoneId, chips);
+    }
+  });
+
+  await act(async () => { result.current.check.checkAnswer(q, false); });
+
+  expect(result.current.lesson.state.modalType).toBe('success');
+  expect(result.current.lesson.state.questionScores['transfer_q2']).toBeGreaterThan(0);
+});
