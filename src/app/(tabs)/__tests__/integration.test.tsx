@@ -55,43 +55,16 @@ jest.mock('expo-image', () => {
   };
 });
 
-// Mock FlashList with a FlatList-like implementation
-jest.mock('@shopify/flash-list', () => {
-  const React = require('react');
-  const { View } = require('react-native');
-  return {
-    FlashList: ({ data, renderItem, keyExtractor, ...rest }: any) => {
-      return React.createElement(
-        View,
-        null,
-        (data || []).map((item: any, index: number) => {
-          const key = keyExtractor ? keyExtractor(item, index) : String(index);
-          return React.createElement(View, { key }, renderItem({ item, index }));
-        }),
-      );
-    },
-  };
-});
-
-// Mock react-native-color-matrix-image-filters (native; not available in Jest)
-jest.mock('react-native-color-matrix-image-filters', () => {
-  const React = require('react');
-  const { View } = require('react-native');
-  return {
-    Grayscale: ({ children }: any) => React.createElement(View, null, children),
-  };
-});
-
-import { render, screen } from '@testing-library/react-native';
+import { render, screen, waitFor } from '@testing-library/react-native';
 import { TestProviders } from '../../../test-utils';
 import Profile from '../profile';
 
-test('brand switch flips profile takeaways styling without crashing', async () => {
+test('profile screen renders settings controls', async () => {
   await render(
     <TestProviders>
       <Profile />
     </TestProviders>,
   );
-  // Default brand is 'monograph' so MonographTakeaways renders "Projects are Temporary"
-  expect(screen.getByText(/Structural Brutalism|Projects are Temporary/i)).toBeTruthy();
+  // Profile shows haptics/sounds/notifications toggles
+  await waitFor(() => expect(screen.getAllByText(/haptics|sounds|notifications/i).length).toBeGreaterThan(0));
 });

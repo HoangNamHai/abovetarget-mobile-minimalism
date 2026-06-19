@@ -1,7 +1,7 @@
 import { Image } from 'expo-image';
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { useSession } from '../../contexts/session-context';
+
 import { TOKENS } from '../../theme/tokens';
 import { Button } from '../primitives/Button';
 import { Hairline } from '../primitives/Hairline';
@@ -25,8 +25,11 @@ const ARENAS = [
   { label: 'VENTURE CAPITAL DYNAMICS', modules: '1/5 MODULES', pct: 20 },
 ];
 
+// SessionContext removed — Elite brand not shipped yet; stub with zeros.
+const ELITE_SESSION_STUB = { streak: 0, points: 0 };
+
 export function EliteDashboard({ onStartStudy, onJoinArena }: Props) {
-  const { state } = useSession();
+  const state = ELITE_SESSION_STUB;
 
   return (
     <ScrollView
