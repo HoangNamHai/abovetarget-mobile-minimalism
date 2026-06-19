@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 import { useLesson } from '../../contexts/lesson-context';
 import { MAX_ATTEMPTS } from '../../contexts/reducers/lesson-reducer';
-import { isSingleSelectCorrect, pointsForAttempt, correctOptionOf, isMultiSelectCorrect, correctOptionsOf } from './scoring';
-import type { Question, MultiSelectQuestion } from '../../types/lesson';
+import { isSingleSelectCorrect, pointsForAttempt, correctOptionOf, isMultiSelectCorrect, correctOptionsOf, isDragDropCorrect, allChipsPlaced } from './scoring';
+import type { Question, MultiSelectQuestion, DragDropQuestion } from '../../types/lesson';
 
 export function useCheckAnswer() {
   const {
@@ -10,6 +10,7 @@ export function useCheckAnswer() {
     incrementAttempt,
     addDisabledChoice,
     toggleMultiSelect,
+    setDropZoneAnswer,
     recordQuestionScore,
     markQuestionCompleted,
     showSuccessModal,
@@ -73,14 +74,50 @@ export function useCheckAnswer() {
         return;
       }
 
-      // drag_drop: Slice 3 (no-op for now)
+      if (question.type === 'drag_drop') {
+        const qid = (question as DragDropQuestion).q_id;
+        const answers = state.dropZoneAnswers[qid] ?? {};
+        if (!allChipsPlaced(question as DragDropQuestion, answers)) return; // wait until everything is placed
+        const attempt = incrementAttempt(qid);
+        if (isDragDropCorrect(question as DragDropQuestion, answers)) {
+          const pts = pointsForAttempt((question as DragDropQuestion).points, attempt);
+          recordQuestionScore(qid, pts);
+          markQuestionCompleted(qid);
+          showSuccessModal({ points: pts, explanation: (question as DragDropQuestion).explanation, isLastQuestion });
+        } else if (attempt < MAX_ATTEMPTS) {
+          const correctZoneOf: Record<string, string> = {};
+          for (const chip of (question as DragDropQuestion).chips) correctZoneOf[chip.id] = chip.correctZone;
+          // Keep only correctly-placed chips per zone; remove mis-placed ones
+          for (const [zoneId, content] of Object.entries(answers)) {
+            const chips = Array.isArray(content) ? content : content ? [content] : [];
+            const kept = chips.filter((c) => correctZoneOf[c.id] === zoneId);
+            if (kept.length !== chips.length) {
+              setDropZoneAnswer(qid, zoneId, kept.length ? kept : null);
+            }
+          }
+          showRetryModal({ hint: (question as DragDropQuestion).retryHint });
+        } else {
+          recordQuestionScore(qid, 0);
+          markQuestionCompleted(qid);
+          const zoneLabel: Record<string, string> = {};
+          for (const z of (question as DragDropQuestion).dropZones) zoneLabel[z.id] = z.label;
+          showRevealModal({
+            correctAnswer: (question as DragDropQuestion).chips.map((c) => `${c.label} → ${zoneLabel[c.correctZone] ?? c.correctZone}`).join('; '),
+            explanation: (question as DragDropQuestion).explanation,
+            isLastQuestion,
+          });
+        }
+        return;
+      }
     },
     [
       state.answers,
       state.multiSelectAnswers,
+      state.dropZoneAnswers,
       incrementAttempt,
       addDisabledChoice,
       toggleMultiSelect,
+      setDropZoneAnswer,
       recordQuestionScore,
       markQuestionCompleted,
       showSuccessModal,

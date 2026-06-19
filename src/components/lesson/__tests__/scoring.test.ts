@@ -1,5 +1,5 @@
-import { isSingleSelectCorrect, pointsForAttempt, correctOptionOf, isMultiSelectCorrect, correctOptionsOf } from '../scoring';
-import type { SingleSelectQuestion, MultiSelectQuestion } from '../../../types/lesson';
+import { isSingleSelectCorrect, pointsForAttempt, correctOptionOf, isMultiSelectCorrect, correctOptionsOf, isDragDropCorrect, allChipsPlaced, dragDropPlacement } from '../scoring';
+import type { SingleSelectQuestion, MultiSelectQuestion, DragDropQuestion, DragChip } from '../../../types/lesson';
 
 const q = {
   type: 'single_select',
@@ -46,4 +46,27 @@ test('isMultiSelectCorrect requires the exact correct set', () => {
 
 test('correctOptionsOf returns all correct options', () => {
   expect(correctOptionsOf(mq).map((o) => o.id)).toEqual(['A', 'B', 'C']);
+});
+
+const c = (id: string, correctZone: string): DragChip => ({ id, label: id, correctZone });
+const dq = {
+  type: 'drag_drop', q_id: 'd1', question: 'Match', points: 250,
+  chips: [c('x', 'z1'), c('y', 'z2')],
+  dropZones: [{ id: 'z1', label: 'Z1' }, { id: 'z2', label: 'Z2' }],
+} as DragDropQuestion;
+
+test('dragDropPlacement maps chip ids to their zone', () => {
+  const answers = { z1: c('x', 'z1'), z2: c('y', 'z2') };
+  expect(dragDropPlacement(answers)).toEqual({ x: 'z1', y: 'z2' });
+});
+
+test('allChipsPlaced is true only when every chip is in a zone', () => {
+  expect(allChipsPlaced(dq, { z1: c('x', 'z1') })).toBe(false);
+  expect(allChipsPlaced(dq, { z1: c('x', 'z1'), z2: c('y', 'z2') })).toBe(true);
+});
+
+test('isDragDropCorrect requires every chip in its correctZone', () => {
+  expect(isDragDropCorrect(dq, { z1: c('x', 'z1'), z2: c('y', 'z2') })).toBe(true);
+  expect(isDragDropCorrect(dq, { z1: c('y', 'z2'), z2: c('x', 'z1') })).toBe(false); // swapped
+  expect(isDragDropCorrect(dq, { z1: c('x', 'z1') })).toBe(false);                    // incomplete
 });
