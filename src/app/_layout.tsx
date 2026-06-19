@@ -6,7 +6,15 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { FontGate } from '../components/FontGate';
+import { AuthProvider } from '../contexts/auth-context';
+import { LessonProvider } from '../contexts/lesson-context';
+import { OnboardingProvider } from '../contexts/onboarding-context';
+import { PersistenceProvider } from '../contexts/persistence-context';
+import { ProgressProvider } from '../contexts/progress-context';
 import { SessionProvider } from '../contexts/session-context';
+import { SettingsProvider } from '../contexts/settings-context';
+import { SoundProvider } from '../contexts/sound-context';
+import { SubscriptionProvider } from '../contexts/subscription-context';
 import { BrandProvider } from '../theme/brand-context';
 
 export default function RootLayout() {
@@ -15,11 +23,27 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <BottomSheetModalProvider>
           <BrandProvider>
-            <SessionProvider>
-              <FontGate>
-                <Stack screenOptions={{ headerShown: false }} />
-              </FontGate>
-            </SessionProvider>
+            <PersistenceProvider>
+              <SettingsProvider>
+                <SoundProvider>
+                  <AuthProvider>
+                    <ProgressProvider>
+                      <OnboardingProvider>
+                        <SubscriptionProvider>
+                          <LessonProvider>
+                            <SessionProvider>
+                              <FontGate>
+                                <Stack screenOptions={{ headerShown: false }} />
+                              </FontGate>
+                            </SessionProvider>
+                          </LessonProvider>
+                        </SubscriptionProvider>
+                      </OnboardingProvider>
+                    </ProgressProvider>
+                  </AuthProvider>
+                </SoundProvider>
+              </SettingsProvider>
+            </PersistenceProvider>
           </BrandProvider>
         </BottomSheetModalProvider>
       </SafeAreaProvider>

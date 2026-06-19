@@ -14,6 +14,8 @@
 
 - Expo SDK 56, `jest-expo`. Run the full suite with `npm test` (sets `TZ=UTC`); a single file with `npx jest <path>`.
 - Test style: plain `test('...', () => {})` / `test('...', async () => {})`, no `describe` required. Use `renderHook`/`act` from `@testing-library/react-native` for hooks/providers.
+- **RNTL is ASYNC in this repo (verified in Task 1):** `render(...)` and `renderHook(...)` return promises — you MUST `await` them (`const { result } = await renderHook(...)`, `const { getByText } = await render(...)`), or `result`/`getByText`/`screen` will be undefined. Make those tests `async`. (The plan's test snippets already show `await renderHook`; apply the same to any `render(...)` whose result you query.)
+- **Asserting a hook throws outside its provider:** React 19 surfaces render-time throws through the scheduler, so `expect(() => render(...)).toThrow()` does NOT work. Use an error boundary that records the error via `static getDerivedStateFromError`, `await render(<Boundary><Probe/></Boundary>)`, then assert on the captured error — see `src/contexts/__tests__/persistence-context.test.tsx` for the exact pattern. (Most provider tests don't need this; only explicit throw-guard cases do.)
 - **Domain code depends only on the persistence interfaces** (`KeyValueStore`, `SecureKeyValueStore`, `AttemptRepository`) obtained via `usePersistence()` — never `import AsyncStorage`/`expo-secure-store`/`expo-sqlite` in a context/hook.
 - Reuse Phase 1 exports from `src/services/persistence` (`createPersistence`, `createInMemoryPersistence`, `Persistence`, `InMemoryKeyValueStore`, `InMemoryAttemptRepository`, `deriveActiveDays`, `deriveDomainCompletion`, `deriveOverall`) and Phase 1 types from `src/types/progress.ts` (`Domain`, `DOMAINS`, `isDomain`, `LessonAttempt`).
 - Reuse Phase 2 content from `src/data/lessons-data.ts` (`getLessonData`), `src/data/sound-config.ts` (`SOUND_CONFIGS`), `src/types/lesson.ts`, `src/types/sound.ts`.
@@ -244,7 +246,7 @@ function wrapper(persistence = createInMemoryPersistence()) {
 }
 
 test('defaults to system theme with everything enabled', async () => {
-  const { result } = renderHook(() => useSettings(), { wrapper: wrapper() });
+  const { result } = await renderHook(() => useSettings(), { wrapper: wrapper() });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   expect(result.current.settings).toEqual({
     theme: 'system',
@@ -256,7 +258,7 @@ test('defaults to system theme with everything enabled', async () => {
 
 test('setHaptics persists and updates state', async () => {
   const persistence = createInMemoryPersistence();
-  const { result } = renderHook(() => useSettings(), { wrapper: wrapper(persistence) });
+  const { result } = await renderHook(() => useSettings(), { wrapper: wrapper(persistence) });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   await act(async () => {
     await result.current.setHaptics(false);
@@ -268,7 +270,7 @@ test('setHaptics persists and updates state', async () => {
 test('loads persisted theme on mount', async () => {
   const persistence = createInMemoryPersistence();
   await persistence.kv.setString('@app/theme', 'dark');
-  const { result } = renderHook(() => useSettings(), { wrapper: wrapper(persistence) });
+  const { result } = await renderHook(() => useSettings(), { wrapper: wrapper(persistence) });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   expect(result.current.settings.theme).toBe('dark');
 });
@@ -492,14 +494,14 @@ function wrapper(persistence = createInMemoryPersistence()) {
 }
 
 test('starts not-onboarded after load', async () => {
-  const { result } = renderHook(() => useOnboarding(), { wrapper: wrapper() });
+  const { result } = await renderHook(() => useOnboarding(), { wrapper: wrapper() });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   expect(result.current.hasCompletedOnboarding).toBe(false);
 });
 
 test('completeOnboarding persists flag and preferences', async () => {
   const persistence = createInMemoryPersistence();
-  const { result } = renderHook(() => useOnboarding(), { wrapper: wrapper(persistence) });
+  const { result } = await renderHook(() => useOnboarding(), { wrapper: wrapper(persistence) });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   act(() => result.current.setDailyGoal(3));
   await act(async () => {
@@ -517,7 +519,7 @@ test('loads completed state from persistence', async () => {
   await persistence.kv.setJSON('userPreferences', {
     goals: ['pass-pmp'], dailyGoal: 2, onboardingCompletedAt: 1,
   });
-  const { result } = renderHook(() => useOnboarding(), { wrapper: wrapper(persistence) });
+  const { result } = await renderHook(() => useOnboarding(), { wrapper: wrapper(persistence) });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   expect(result.current.hasCompletedOnboarding).toBe(true);
   expect(result.current.dailyGoal).toBe(2);
@@ -589,7 +591,7 @@ import { SubscriptionProvider, useSubscription } from '../subscription-context';
 
 test('auth stub reports signed-out and not loading', () => {
   const wrapper = ({ children }: { children: ReactNode }) => <AuthProvider>{children}</AuthProvider>;
-  const { result } = renderHook(() => useAppAuth(), { wrapper });
+  const { result } = await renderHook(() => useAppAuth(), { wrapper });
   expect(result.current.isSignedIn).toBe(false);
   expect(result.current.isLoading).toBe(false);
   expect(result.current.user).toBeNull();
@@ -599,7 +601,7 @@ test('subscription stub reports premium (RevenueCat disabled)', () => {
   const wrapper = ({ children }: { children: ReactNode }) => (
     <SubscriptionProvider>{children}</SubscriptionProvider>
   );
-  const { result } = renderHook(() => useSubscription(), { wrapper });
+  const { result } = await renderHook(() => useSubscription(), { wrapper });
   expect(result.current.isPremium).toBe(true);
   expect(result.current.isInitialized).toBe(true);
 });
@@ -930,7 +932,7 @@ function wrapper(persistence = createInMemoryPersistence()) {
 
 test('records an attempt to both the aggregate and the attempts log', async () => {
   const persistence = createInMemoryPersistence();
-  const { result } = renderHook(() => useProgress(), { wrapper: wrapper(persistence) });
+  const { result } = await renderHook(() => useProgress(), { wrapper: wrapper(persistence) });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   await act(async () => {
     await result.current.recordLessonAttempt({
@@ -945,7 +947,7 @@ test('records an attempt to both the aggregate and the attempts log', async () =
 
 test('resetProgress clears aggregate and attempts log', async () => {
   const persistence = createInMemoryPersistence();
-  const { result } = renderHook(() => useProgress(), { wrapper: wrapper(persistence) });
+  const { result } = await renderHook(() => useProgress(), { wrapper: wrapper(persistence) });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   await act(async () => {
     await result.current.recordLessonAttempt({
@@ -1004,7 +1006,7 @@ function wrapper(persistence = createInMemoryPersistence()) {
 }
 
 test('starts with the full free quota for a non-premium user', async () => {
-  const { result } = renderHook(() => useLessonLimit(), { wrapper: wrapper() });
+  const { result } = await renderHook(() => useLessonLimit(), { wrapper: wrapper() });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   expect(result.current.lessonsCompletedToday).toBe(0);
   expect(result.current.remainingLessons).toBe(3);
@@ -1013,7 +1015,7 @@ test('starts with the full free quota for a non-premium user', async () => {
 
 test('consumeLesson increments and persists; limit reached at 3', async () => {
   const persistence = createInMemoryPersistence();
-  const { result } = renderHook(() => useLessonLimit(), { wrapper: wrapper(persistence) });
+  const { result } = await renderHook(() => useLessonLimit(), { wrapper: wrapper(persistence) });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   await act(async () => { await result.current.consumeLesson(); });
   await act(async () => { await result.current.consumeLesson(); });
@@ -1078,7 +1080,7 @@ import { SoundProvider, useSoundContext } from '../sound-context';
 const wrapper = ({ children }: { children: ReactNode }) => <SoundProvider>{children}</SoundProvider>;
 
 test('initializes a sound state and reports availability', async () => {
-  const { result } = renderHook(() => useSoundContext(), { wrapper });
+  const { result } = await renderHook(() => useSoundContext(), { wrapper });
   await waitFor(() => expect(result.current.isLoading).toBe(false));
   expect(result.current.soundState).not.toBeNull();
   // Audio playback deferred to Phase 5 — nothing is "available" yet.
@@ -1256,8 +1258,8 @@ jest.mock('expo-linking', () => ({
   addEventListener: () => ({ remove: () => {} }),
 }));
 
-test('the full domain provider stack mounts children', () => {
-  const { getByText } = render(
+test('the full domain provider stack mounts children', async () => {
+  const { getByText } = await render(
     <PersistenceProvider value={createInMemoryPersistence()}>
       <SettingsProvider>
         <SoundProvider>
