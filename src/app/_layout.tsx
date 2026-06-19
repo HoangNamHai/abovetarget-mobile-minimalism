@@ -15,8 +15,11 @@ import { SettingsProvider } from '../contexts/settings-context';
 import { SoundProvider } from '../contexts/sound-context';
 import { SubscriptionProvider } from '../contexts/subscription-context';
 import { BrandProvider } from '../theme/brand-context';
+import { initMonitoring, wrapRoot } from '../services/infra/monitoring';
 
-export default function RootLayout() {
+initMonitoring();
+
+function RootLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
@@ -47,3 +50,5 @@ export default function RootLayout() {
     </GestureHandlerRootView>
   );
 }
+
+export default wrapRoot(RootLayout);
