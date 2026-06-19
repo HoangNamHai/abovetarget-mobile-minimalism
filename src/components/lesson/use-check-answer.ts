@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { useLesson } from '../../contexts/lesson-context';
 import { MAX_ATTEMPTS } from '../../contexts/reducers/lesson-reducer';
-import { isSingleSelectCorrect, pointsForAttempt, correctOptionOf, isMultiSelectCorrect, correctOptionsOf, isDragDropCorrect, allChipsPlaced, dragDropPlacement } from './scoring';
+import { isSingleSelectCorrect, pointsForAttempt, correctOptionOf, isMultiSelectCorrect, correctOptionsOf, isDragDropCorrect, allChipsPlaced } from './scoring';
 import type { Question, MultiSelectQuestion, DragDropQuestion } from '../../types/lesson';
 
 export function useCheckAnswer() {
@@ -85,7 +85,6 @@ export function useCheckAnswer() {
           markQuestionCompleted(qid);
           showSuccessModal({ points: pts, explanation: (question as DragDropQuestion).explanation, isLastQuestion });
         } else if (attempt < MAX_ATTEMPTS) {
-          const placement = dragDropPlacement(answers);
           const correctZoneOf: Record<string, string> = {};
           for (const chip of (question as DragDropQuestion).chips) correctZoneOf[chip.id] = chip.correctZone;
           // clear any zone holding a mis-placed chip (keep correct placements)
@@ -94,7 +93,6 @@ export function useCheckAnswer() {
             const hasWrong = chips.some((c) => c && correctZoneOf[c.id] !== zoneId);
             if (hasWrong) setDropZoneAnswer(qid, zoneId, null);
           }
-          void placement;
           showRetryModal({ hint: (question as DragDropQuestion).retryHint });
         } else {
           recordQuestionScore(qid, 0);
