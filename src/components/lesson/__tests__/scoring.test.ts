@@ -1,5 +1,5 @@
-import { isSingleSelectCorrect, pointsForAttempt, correctOptionOf } from '../scoring';
-import type { SingleSelectQuestion } from '../../../types/lesson';
+import { isSingleSelectCorrect, pointsForAttempt, correctOptionOf, isMultiSelectCorrect, correctOptionsOf } from '../scoring';
+import type { SingleSelectQuestion, MultiSelectQuestion } from '../../../types/lesson';
 
 const q = {
   type: 'single_select',
@@ -27,4 +27,23 @@ test('pointsForAttempt applies the multiplier ladder', () => {
 
 test('correctOptionOf returns the correct option', () => {
   expect(correctOptionOf(q)?.id).toBe('b');
+});
+
+const mq = {
+  type: 'multi_select', q_id: 'm1', question: 'Pick all', points: 250,
+  options: [
+    { id: 'A', text: 'A', correct: true }, { id: 'B', text: 'B', correct: true },
+    { id: 'C', text: 'C', correct: true }, { id: 'D', text: 'D', correct: false },
+  ],
+} as MultiSelectQuestion;
+
+test('isMultiSelectCorrect requires the exact correct set', () => {
+  expect(isMultiSelectCorrect(mq, ['A', 'B', 'C'])).toBe(true);
+  expect(isMultiSelectCorrect(mq, ['A', 'B'])).toBe(false);        // missing C
+  expect(isMultiSelectCorrect(mq, ['A', 'B', 'C', 'D'])).toBe(false); // extra incorrect
+  expect(isMultiSelectCorrect(mq, [])).toBe(false);                // empty
+});
+
+test('correctOptionsOf returns all correct options', () => {
+  expect(correctOptionsOf(mq).map((o) => o.id)).toEqual(['A', 'B', 'C']);
 });
