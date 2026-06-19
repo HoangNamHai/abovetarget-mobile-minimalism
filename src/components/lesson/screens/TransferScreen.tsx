@@ -4,9 +4,7 @@ import type { TransferScreen as TransferScreenType } from '../../../types/lesson
 import { Txt } from '../../primitives/Txt';
 import { Button } from '../../primitives/Button';
 import { Hairline } from '../../primitives/Hairline';
-import { QuestionView } from '../questions/QuestionView';
-import { FeedbackModal } from '../FeedbackModal';
-import { useQuestionScreen } from './useQuestionScreen';
+import { QuestionRunner } from './QuestionRunner';
 
 type Props = {
   screen: TransferScreenType;
@@ -14,8 +12,6 @@ type Props = {
 
 export function TransferScreen({ screen }: Props) {
   const [started, setStarted] = useState(false);
-  const questions = screen.content.questions;
-  const { current, isLast, advance } = useQuestionScreen(questions);
 
   if (!started) {
     const { scenario } = screen.content;
@@ -44,12 +40,7 @@ export function TransferScreen({ screen }: Props) {
 
   return (
     <ScrollView className="flex-1 bg-surface" contentContainerStyle={{ padding: 24, gap: 24 }}>
-      <QuestionView question={current} isLastQuestion={isLast} />
-      <FeedbackModal
-        onSuccessNext={advance}
-        onRetry={() => {}}
-        onReveal={advance}
-      />
+      <QuestionRunner questions={screen.content.questions} />
     </ScrollView>
   );
 }
