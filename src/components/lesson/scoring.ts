@@ -1,5 +1,5 @@
 import { POINT_MULTIPLIERS } from '../../contexts/reducers/lesson-reducer';
-import type { SingleSelectQuestion, MultiSelectQuestion } from '../../types/lesson';
+import type { SingleSelectQuestion, MultiSelectQuestion, DragChip, DragDropQuestion } from '../../types/lesson';
 
 export function correctOptionOf(question: SingleSelectQuestion) {
   return question.options.find((o) => o.correct);
@@ -29,4 +29,33 @@ export function isMultiSelectCorrect(question: MultiSelectQuestion, selectedIds:
   const allCorrectSelected = correct.every((id) => selectedSet.has(id));
   const noIncorrectSelected = selectedIds.every((id) => correctSet.has(id));
   return allCorrectSelected && noIncorrectSelected;
+}
+
+export function dragDropPlacement(
+  answers: Record<string, DragChip | DragChip[]>,
+): Record<string, string> {
+  const placement: Record<string, string> = {};
+  for (const [zoneId, content] of Object.entries(answers)) {
+    const chips = Array.isArray(content) ? content : [content];
+    for (const chip of chips) {
+      if (chip) placement[chip.id] = zoneId;
+    }
+  }
+  return placement;
+}
+
+export function allChipsPlaced(
+  question: DragDropQuestion,
+  answers: Record<string, DragChip | DragChip[]>,
+): boolean {
+  const placement = dragDropPlacement(answers);
+  return question.chips.length > 0 && question.chips.every((c) => placement[c.id] !== undefined);
+}
+
+export function isDragDropCorrect(
+  question: DragDropQuestion,
+  answers: Record<string, DragChip | DragChip[]>,
+): boolean {
+  const placement = dragDropPlacement(answers);
+  return question.chips.length > 0 && question.chips.every((c) => placement[c.id] === c.correctZone);
 }
