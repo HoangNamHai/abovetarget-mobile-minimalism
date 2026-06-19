@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { useSession } from '../../contexts/session-context';
+import { useProgress } from '../../contexts/progress-context';
 import { TOKENS } from '../../theme/tokens';
 import { Button } from '../primitives/Button';
 import { Hairline } from '../primitives/Hairline';
@@ -8,17 +8,30 @@ import { Txt } from '../primitives/Txt';
 
 type Props = {
   onStartStudy: () => void;
-  onJoinArena: () => void;
+  onJoinArena?: () => void;
 };
 
-const ARENAS = [
-  { label: '01. People', pct: '72%', bar: 0.72, sub: 'Interpersonal Leadership' },
-  { label: '02. Process', pct: '45%', bar: 0.45, sub: 'Operational Optimization' },
-  { label: '03. Business', pct: '18%', bar: 0.18, sub: 'Strategic Market Growth' },
-];
+const DOMAIN_LABELS = {
+  people: { label: '01. People', sub: 'Interpersonal Leadership' },
+  process: { label: '02. Process', sub: 'Operational Optimization' },
+  business: { label: '03. Business', sub: 'Strategic Market Growth' },
+} as const;
+
+type DomainKey = keyof typeof DOMAIN_LABELS;
 
 export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
-  const { state } = useSession();
+  const { progress, getCurrentStreak, getCurrentMilestone } = useProgress();
+  const streak = getCurrentStreak();
+  const milestone = getCurrentMilestone();
+
+  const domains: Array<{ key: DomainKey; label: string; pct: string; bar: number; sub: string }> = (
+    ['people', 'process', 'business'] as DomainKey[]
+  ).map((key) => {
+    const dp = progress.domainProgress[key];
+    const bar = dp.total > 0 ? dp.completed / dp.total : 0;
+    const pct = `${Math.round(bar * 100)}%`;
+    return { key, label: DOMAIN_LABELS[key].label, pct, bar, sub: DOMAIN_LABELS[key].sub };
+  });
 
   return (
     <ScrollView
@@ -49,7 +62,7 @@ export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
             variant="display"
             style={{ fontSize: 64, lineHeight: 64, color: TOKENS['on-background'], letterSpacing: -2 }}
           >
-            {state.streak} DAYS
+            {streak} DAYS
           </Txt>
         </View>
         <View style={{ alignItems: 'flex-end', paddingBottom: 8 }}>
@@ -74,7 +87,7 @@ export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
           variant="display"
           style={{ fontSize: 40, lineHeight: 40, color: TOKENS['on-background'], letterSpacing: -1 }}
         >
-          {state.points} PTS
+          {progress.totalLessonsCompleted} PTS
         </Txt>
       </View>
 
@@ -96,14 +109,13 @@ export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
           variant="display"
           style={{ fontSize: 20, letterSpacing: -0.5, color: TOKENS['on-background'], marginBottom: 8 }}
         >
-          NEXT MILESTONE: ARCHITECT
+          NEXT MILESTONE: {milestone.name.toUpperCase()}
         </Txt>
         <Txt
           variant="body"
           style={{ fontSize: 13, lineHeight: 20, color: TOKENS.outline, marginBottom: 20 }}
         >
-          You are nearing the professional tier. 14 more strategic completions required to unlock the
-          exclusive 'Founder's Circle'.
+          You are nearing the professional tier. Keep completing lessons to unlock the next milestone.
         </Txt>
         <Button label="Start Study" onPress={onStartStudy} />
       </View>
@@ -127,9 +139,9 @@ export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
           CHALLENGE ARENAS
         </Txt>
 
-        {ARENAS.map((arena) => (
+        {domains.map((arena) => (
           <View
-            key={arena.label}
+            key={arena.key}
             style={{
               borderBottomWidth: 1,
               borderBottomColor: TOKENS['outline-variant'],
@@ -206,7 +218,7 @@ export function MonographDashboard({ onStartStudy, onJoinArena }: Props) {
         >
           JOIN THE GLOBAL ARENA. COMPETE WITH TOP-TIER MONOGRAPHS FOR INDUSTRY DOMINANCE.
         </Txt>
-        <Button label="Join Arena" onPress={onJoinArena} variant="secondary" />
+        {onJoinArena && <Button label="Join Arena" onPress={onJoinArena} variant="secondary" />}
       </View>
     </ScrollView>
   );

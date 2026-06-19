@@ -4,8 +4,8 @@ import { DashboardScreen } from '../../components/dashboard/DashboardScreen';
 export default function Home() {
   return (
     <DashboardScreen
-      onStartStudy={() => router.navigate('/(tabs)/study')}
-      onJoinArena={() => router.navigate('/(tabs)/metrics')}
+      onStartStudy={() => router.push('/(tabs)/study')}
+      onJoinArena={() => router.push('/(tabs)/study')}
     />
   );
 }
