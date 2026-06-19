@@ -33,8 +33,10 @@ export function QuestionRunner({ questions }: Props) {
   const supported = SUPPORTED_TYPES.includes(current.type);
   const done = isQuestionCompleted(current.q_id);
 
-  // C1 fix: unsupported question types (multi_select, drag_drop, text_input) get
-  // a Skip button that records 0 and marks complete so wrap scoring stays coherent.
+  // C1 fix: unsupported question types (only text_input remains — single_select,
+  // multi_select and drag_drop are all supported) get a Skip button that records 0
+  // and marks complete so wrap scoring stays coherent. No bundled lesson currently
+  // uses text_input, so this is a graceful fallback rather than a live path.
   const handleSkip = () => {
     recordQuestionScore(current.q_id, 0);
     markQuestionCompleted(current.q_id);
@@ -44,6 +46,9 @@ export function QuestionRunner({ questions }: Props) {
   return (
     <View style={{ gap: 16 }}>
       <QuestionView question={current} isLastQuestion={isLast} />
+      {/* onRetry is intentionally a no-op: tapping "Try Again" closes the modal, which
+          returns the user to the same question — the reducer keeps it incomplete with
+          choices re-enabled, so there is no screen-level action to take on retry. */}
       <FeedbackModal onSuccessNext={advance} onRetry={() => {}} onReveal={advance} />
       {/* C1: Skip button for unsupported question types */}
       {!supported && <Button label="Skip for now" onPress={handleSkip} />}
