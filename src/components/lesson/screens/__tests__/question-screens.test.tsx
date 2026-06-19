@@ -82,20 +82,20 @@ test('challenge screen renders the first question of a real lesson', async () =>
   await waitFor(() => expect(getByText(/check/i)).toBeTruthy());
 });
 
-// ─── C1: Skip button appears for unsupported question types ───────────────────
+// ─── C1: multi_select now supported — no Skip button ─────────────────────────
 
-test('C1 - Skip for now button appears when challenge q0 is multi_select (A1L3)', async () => {
-  // A1L3 challenge q0 is multi_select — should show Skip button, not Check Answer
+test('C1 - multi_select (A1L3 q0) now renders Check Answer, not Skip for now', async () => {
+  // A1L3 challenge q0 is multi_select — now fully supported, shows Check Answer
   const { getByText, queryByText } = await render(
     <ChallengeHarness lessonId="A1L3" />,
     { wrapper: lessonWrapper },
   );
 
-  await waitFor(() => expect(getByText(/skip for now/i)).toBeTruthy());
-  expect(queryByText(/check answer/i)).toBeNull();
+  await waitFor(() => expect(getByText(/check answer/i)).toBeTruthy());
+  expect(queryByText(/skip for now/i)).toBeNull();
 });
 
-test('C1 - pressing Skip advances currentQuestionIndex past the unsupported question', async () => {
+test('C1 - multi_select (A1L3) currentQuestionIndex stays at 0 before answering', async () => {
   const handlesRef: { current: LessonHandles | null } = { current: null };
 
   const { getByText } = await render(
@@ -105,17 +105,11 @@ test('C1 - pressing Skip advances currentQuestionIndex past the unsupported ques
     </LessonProvider>,
   );
 
-  // Wait for the skip button to appear (q0 = multi_select)
-  await waitFor(() => expect(getByText(/skip for now/i)).toBeTruthy());
+  // Wait for Check Answer button (multi_select now rendered properly)
+  await waitFor(() => expect(getByText(/check answer/i)).toBeTruthy());
 
-  await act(async () => {
-    fireEvent.press(getByText(/skip for now/i));
-  });
-
-  // After skip, currentQuestionIndex should have advanced to 1
-  await waitFor(() => {
-    expect(handlesRef.current!.getQuestionIndex()).toBe(1);
-  });
+  // Index should still be 0 (not yet answered/advanced)
+  expect(handlesRef.current!.getQuestionIndex()).toBe(0);
 });
 
 // ─── C2: Screen-level Continue appears after swipe-dismiss ────────────────────
