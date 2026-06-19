@@ -75,7 +75,9 @@ jest.mock('react-native-purchases', () => ({
     getOfferings: jest.fn(async () => ({ current: null })),
     purchasePackage: jest.fn(async () => ({ customerInfo: { entitlements: { active: {} } } })),
     restorePurchases: jest.fn(async () => ({ entitlements: { active: {} } })),
-    addCustomerInfoUpdateListener: jest.fn(() => jest.fn()),
+    // Real SDK: addCustomerInfoUpdateListener returns void; cleanup via removeCustomerInfoUpdateListener.
+    addCustomerInfoUpdateListener: jest.fn(),
+    removeCustomerInfoUpdateListener: jest.fn(),
   },
   LOG_LEVEL: { DEBUG: 'DEBUG' },
 }));
