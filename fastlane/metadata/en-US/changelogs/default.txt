@@ -1,0 +1,5 @@
+Initial release of PMP Exam Pro.
+• Interactive lessons covering core PMP exam topics
+• Multiple question types: single-select, multi-select, drag-and-drop, text input
+• Progress tracking with scores and streaks
+• Dark mode support

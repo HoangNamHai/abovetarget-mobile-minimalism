@@ -1,0 +1,39 @@
+default_platform(:android)
+
+platform :android do
+  desc "Upload metadata and screenshots to Google Play"
+  lane :upload_metadata do
+    supply(
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_changelogs: true,
+      sync_image_upload: true,
+      release_status: "draft"
+    )
+  end
+
+  desc "Download current metadata and screenshots from Google Play"
+  lane :download_metadata do
+    supply(
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_changelogs: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      download_metadata: true
+    )
+  end
+
+  desc "Upload screenshots only"
+  lane :upload_screenshots do
+    supply(
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      sync_image_upload: true,
+      release_status: "draft"
+    )
+  end
+end

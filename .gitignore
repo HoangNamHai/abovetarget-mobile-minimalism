@@ -31,7 +31,14 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+
+# release secrets — never commit
+*.keystore
+credentials.json
+pc-api-*.json
+fastlane/report.xml
 
 # typescript
 *.tsbuildinfo
