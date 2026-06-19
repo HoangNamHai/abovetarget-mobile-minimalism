@@ -6,7 +6,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { FontGate } from '../components/FontGate';
-import { AuthProvider } from '../contexts/auth-context';
+import { AuthProvider, ClerkGate } from '../contexts/auth-context';
 import { LessonProvider } from '../contexts/lesson-context';
 import { OnboardingProvider } from '../contexts/onboarding-context';
 import { PersistenceProvider } from '../contexts/persistence-context';
@@ -26,27 +26,29 @@ function RootLayout() {
       <SafeAreaProvider>
         <BottomSheetModalProvider>
           <NetworkProvider>
-            <BrandProvider>
-              <PersistenceProvider>
-                <SettingsProvider>
-                  <SoundProvider>
-                    <AuthProvider>
-                      <ProgressProvider>
-                        <OnboardingProvider>
-                          <SubscriptionProvider>
-                            <LessonProvider>
-                              <FontGate>
-                                <Stack screenOptions={{ headerShown: false }} />
-                              </FontGate>
-                            </LessonProvider>
-                          </SubscriptionProvider>
-                        </OnboardingProvider>
-                      </ProgressProvider>
-                    </AuthProvider>
-                  </SoundProvider>
-                </SettingsProvider>
-              </PersistenceProvider>
-            </BrandProvider>
+            <ClerkGate>
+              <BrandProvider>
+                <PersistenceProvider>
+                  <SettingsProvider>
+                    <SoundProvider>
+                      <AuthProvider>
+                        <ProgressProvider>
+                          <OnboardingProvider>
+                            <SubscriptionProvider>
+                              <LessonProvider>
+                                <FontGate>
+                                  <Stack screenOptions={{ headerShown: false }} />
+                                </FontGate>
+                              </LessonProvider>
+                            </SubscriptionProvider>
+                          </OnboardingProvider>
+                        </ProgressProvider>
+                      </AuthProvider>
+                    </SoundProvider>
+                  </SettingsProvider>
+                </PersistenceProvider>
+              </BrandProvider>
+            </ClerkGate>
           </NetworkProvider>
         </BottomSheetModalProvider>
       </SafeAreaProvider>
