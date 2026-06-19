@@ -27,6 +27,24 @@ test('records an attempt to both the aggregate and the attempts log', async () =
   expect(saved?.totalLessonsCompleted).toBe(1);
 });
 
+test('hydrates progress from the attempts log and carry-over when no v2 aggregate exists', async () => {
+  const persistence = createInMemoryPersistence();
+  await persistence.attempts.record({
+    id: 'm1', lessonId: 'A1L1', lessonTitle: 'Intro', questionCount: 5,
+    score: 100, completedAt: '2026-06-18T10:00:00.000Z', domain: 'people',
+  });
+  await persistence.kv.setJSON('@pmp/v2/carry-over', {
+    streakFreeze: { available: 1, weekStart: '', usedDates: [] },
+    bestStreak: 9,
+    activeDays: ['2026-06-18'],
+  });
+  const { result } = await renderHook(() => useProgress(), { wrapper: wrapper(persistence) });
+  await waitFor(() => expect(result.current.isLoading).toBe(false));
+  expect(result.current.progress.totalLessonsCompleted).toBe(1);
+  expect(result.current.progress.bestStreak).toBe(9);
+  expect(result.current.progress.domainProgress.people.completed).toBe(1);
+});
+
 test('resetProgress clears aggregate and attempts log', async () => {
   const persistence = createInMemoryPersistence();
   const { result } = await renderHook(() => useProgress(), { wrapper: wrapper(persistence) });

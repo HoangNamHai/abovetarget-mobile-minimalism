@@ -10,6 +10,7 @@ import React, {
 import { usePersistence } from './persistence-context';
 import { getLocalDateString } from '../utils/date';
 import { refreshFreezeIfNewWeek } from '../utils/streak';
+import type { StreakFreeze } from '../utils/streak';
 import {
   progressReducer,
   initialProgressState,
@@ -20,11 +21,39 @@ import {
   type ProgressState,
 } from './reducers/progress-reducer';
 import type { LessonAttempt } from '../types/progress';
+import { deriveDomainCompletion, deriveOverall, deriveActiveDays } from '../services/persistence';
 
 export type { Domain, DomainProgress, UserProgress } from './reducers/progress-reducer';
 export type { LessonAttempt } from '../types/progress';
 
 const PROGRESS_KEY = '@pmp/v2/user-progress';
+
+interface CarryOver {
+  streakFreeze?: StreakFreeze;
+  bestStreak?: number;
+  activeDays?: string[];
+}
+
+export function hydrateProgressFromLog(
+  loggedAttempts: LessonAttempt[],
+  carry: CarryOver | null,
+): UserProgress {
+  const overall = deriveOverall(loggedAttempts);
+  return {
+    ...DEFAULT_PROGRESS,
+    totalLessonsCompleted: overall.totalLessonsCompleted,
+    averageScore: overall.averageScore,
+    activeDays: carry?.activeDays ?? deriveActiveDays(loggedAttempts),
+    bestStreak: carry?.bestStreak ?? 0,
+    streakFreeze: carry?.streakFreeze ?? DEFAULT_PROGRESS.streakFreeze,
+    domainProgress: {
+      people: { ...DEFAULT_PROGRESS.domainProgress.people, ...deriveDomainCompletion(loggedAttempts, 'people') },
+      process: { ...DEFAULT_PROGRESS.domainProgress.process, ...deriveDomainCompletion(loggedAttempts, 'process') },
+      business: { ...DEFAULT_PROGRESS.domainProgress.business, ...deriveDomainCompletion(loggedAttempts, 'business') },
+    },
+    recentAttempts: loggedAttempts,
+  };
+}
 
 interface ProgressContextValue extends ProgressState {
   recordLessonAttempt: (attempt: Omit<LessonAttempt, 'id' | 'completedAt'>) => Promise<void>;
@@ -57,7 +86,16 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
             payload: { ...stored, streakFreeze: refreshedFreeze },
           });
         } else {
-          dispatch({ type: 'LOAD_SUCCESS', payload: DEFAULT_PROGRESS });
+          const [logged, carry] = await Promise.all([
+            attempts.listRecent(200),
+            kv.getJSON<CarryOver>('@pmp/v2/carry-over'),
+          ]);
+          if (!mounted) return;
+          const payload =
+            logged.length === 0 && !carry
+              ? DEFAULT_PROGRESS
+              : hydrateProgressFromLog(logged, carry);
+          dispatch({ type: 'LOAD_SUCCESS', payload });
         }
       } catch {
         if (mounted) dispatch({ type: 'LOAD_ERROR', payload: 'Failed to load progress' });
@@ -66,7 +104,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     return () => {
       mounted = false;
     };
-  }, [kv]);
+  }, [kv, attempts]);
 
   useEffect(() => {
     if (!state.isLoading) {

@@ -45,12 +45,8 @@ export const SoundProvider: React.FC<SoundProviderProps> = ({ children }) => {
         setError(errorMessage);
         console.error('[SoundProvider] Error initializing sounds:', err);
 
-        // Set empty state to allow app to continue without sounds
-        setSoundState({
-          isEnabled: false,
-          sounds: {},
-          availableSounds: [],
-        });
+        // initializeSoundConfig never throws, but keep a typed fallback.
+        setSoundState(await initializeSoundConfig());
       } finally {
         setIsLoading(false);
       }

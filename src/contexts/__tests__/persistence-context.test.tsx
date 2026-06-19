@@ -11,7 +11,7 @@ function Probe() {
 // React 19 surfaces render-time throws through the scheduler (not synchronously
 // at the render() callsite), so an error boundary is the reliable way to assert
 // them. RNTL's render/renderHook are async here and must be awaited.
-let captured: Error | null = null;
+let captured: Error | null = null as Error | null;
 class Boundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   state = { hasError: false };
   static getDerivedStateFromError(error: Error) {
@@ -41,6 +41,6 @@ test('usePersistence throws outside the provider', async () => {
     </Boundary>,
   );
   expect(captured).not.toBeNull();
-  expect(captured?.message).toMatch(/usePersistence/);
+  expect((captured as Error | null)?.message).toMatch(/usePersistence/);
   spy.mockRestore();
 });
