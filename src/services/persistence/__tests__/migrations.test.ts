@@ -17,7 +17,7 @@ function fakeExecutor(): SqlExecutor & { ddl: string[] } {
       }
     },
     async runAsync(sql, params) {
-      if (/insert into schema_version/i.test(sql)) version = params[0] as number;
+      if (/insert into schema_version/i.test(sql)) version = params?.[0] as number;
     },
     async getAllAsync() { return []; },
     async getFirstAsync(sql) {
