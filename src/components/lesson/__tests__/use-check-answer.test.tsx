@@ -23,13 +23,13 @@ function harness() {
   );
 }
 
-async function loadAndGetQuestion(result: ReturnType<typeof harness>['result']) {
+async function loadAndGetQuestion(result: Awaited<ReturnType<typeof harness>>['result']) {
   await act(async () => {
     await result.current.lesson.loadLesson(LESSON_ID);
   });
 
   const challengeScreen = result.current.lesson.state.lessonData!.screens.find(
-    (s) => s.screen_type === 'challenge',
+    (s: { screen_type: string }) => s.screen_type === 'challenge',
   );
   const question = (challengeScreen as any).interaction.questions.find(
     (q: any) => q.q_id === Q_ID,
