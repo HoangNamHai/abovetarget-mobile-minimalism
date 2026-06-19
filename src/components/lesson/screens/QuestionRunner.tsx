@@ -7,7 +7,7 @@ import { FeedbackModal } from '../FeedbackModal';
 import { Button } from '../../primitives/Button';
 import type { Question } from '../../../types/lesson';
 
-const SUPPORTED_TYPES = ['single_select'];
+const SUPPORTED_TYPES = ['single_select', 'multi_select'];
 
 type Props = {
   questions: Question[];
