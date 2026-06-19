@@ -53,6 +53,58 @@ test('wrong placement to MAX_ATTEMPTS reveals and scores zero', async () => {
   expect(result.current.lesson.state.questionScores['q2']).toBe(0);
 });
 
+test('retry-clear keeps correctly-placed chips in a mixed multi-chip zone, removes only the intruder', async () => {
+  const { result } = await harness();
+  await act(async () => { await result.current.lesson.loadLesson('A1L2'); });
+  const transferScreen = result.current.lesson.state.lessonData!.screens.find(
+    (s: { screen_type: string }) => s.screen_type === 'transfer',
+  );
+  const q = (transferScreen as any).content.questions.find(
+    (qq: { q_id: string }) => qq.q_id === 'transfer_q2',
+  ) as DragDropQuestion;
+
+  // Group chips by their correct zone.
+  const chipsByZone: Record<string, typeof q.chips> = {};
+  for (const chip of q.chips) {
+    (chipsByZone[chip.correctZone] ??= []).push(chip);
+  }
+  // zoneA = a zone that should hold >=2 chips (the mixed multi-chip case under test);
+  // zoneB = a different zone we steal one chip from to act as the intruder.
+  const zoneA = Object.keys(chipsByZone).sort(
+    (a, b) => chipsByZone[b].length - chipsByZone[a].length,
+  )[0];
+  const zoneB = Object.keys(chipsByZone).find((z) => z !== zoneA)!;
+  expect(chipsByZone[zoneA].length).toBeGreaterThanOrEqual(2);
+  const intruder = chipsByZone[zoneB][0];
+  const correctAChips = chipsByZone[zoneA];
+
+  // Place every chip (so allChipsPlaced is true), but drop the intruder into zoneA too,
+  // and leave it out of zoneB. The arrangement is wrong → first attempt triggers retry-clear.
+  await act(async () => {
+    result.current.lesson.setDropZoneAnswer('transfer_q2', zoneA, [...correctAChips, intruder]);
+    const restB = chipsByZone[zoneB].slice(1);
+    if (restB.length) result.current.lesson.setDropZoneAnswer('transfer_q2', zoneB, restB);
+    for (const [zoneId, chips] of Object.entries(chipsByZone)) {
+      if (zoneId !== zoneA && zoneId !== zoneB) {
+        result.current.lesson.setDropZoneAnswer('transfer_q2', zoneId, chips);
+      }
+    }
+  });
+
+  await act(async () => { result.current.check.checkAnswer(q, false); });
+
+  // Attempt 1 of 3 → retry, not reveal/success.
+  expect(result.current.lesson.state.modalType).toBe('retry');
+
+  // The correct chips in zoneA must be KEPT; only the intruder is removed.
+  const zoneAContent = result.current.lesson.state.dropZoneAnswers['transfer_q2'][zoneA];
+  const zoneAIds = (Array.isArray(zoneAContent) ? zoneAContent : zoneAContent ? [zoneAContent] : []).map(
+    (c) => c.id,
+  );
+  for (const c of correctAChips) expect(zoneAIds).toContain(c.id);
+  expect(zoneAIds).not.toContain(intruder.id);
+});
+
 test('chips>zones question (transfer_q2) is completable when all chips placed correctly', async () => {
   const { result } = await harness();
   // Load A1L2 and find the transfer screen
