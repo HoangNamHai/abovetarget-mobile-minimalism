@@ -54,3 +54,54 @@ jest.mock('expo-sqlite', () => {
   }
   return { openDatabaseAsync: jest.fn(async () => makeDb()) };
 });
+
+// --- Phase 5 infra: mock native SDKs so the JS suite never touches native code ---
+
+jest.mock('@sentry/react-native', () => ({
+  init: jest.fn(),
+  wrap: (c) => c,
+  captureException: jest.fn(),
+  captureMessage: jest.fn(),
+}));
+
+jest.mock('react-native-purchases', () => ({
+  __esModule: true,
+  default: {
+    configure: jest.fn(),
+    setLogLevel: jest.fn(),
+    logIn: jest.fn(async () => ({})),
+    logOut: jest.fn(async () => ({})),
+    getCustomerInfo: jest.fn(async () => ({ entitlements: { active: {} } })),
+    getOfferings: jest.fn(async () => ({ current: null })),
+    purchasePackage: jest.fn(async () => ({ customerInfo: { entitlements: { active: {} } } })),
+    restorePurchases: jest.fn(async () => ({ entitlements: { active: {} } })),
+    addCustomerInfoUpdateListener: jest.fn(() => jest.fn()),
+  },
+  LOG_LEVEL: { DEBUG: 'DEBUG' },
+}));
+
+jest.mock('@react-native-community/netinfo', () => ({
+  __esModule: true,
+  default: {
+    addEventListener: jest.fn(() => jest.fn()),
+    fetch: jest.fn(async () => ({ isConnected: true })),
+  },
+}));
+
+jest.mock('expo-notifications', () => ({
+  setNotificationHandler: jest.fn(),
+  setNotificationChannelAsync: jest.fn(async () => {}),
+  getPermissionsAsync: jest.fn(async () => ({ status: 'granted' })),
+  requestPermissionsAsync: jest.fn(async () => ({ status: 'granted' })),
+  scheduleNotificationAsync: jest.fn(async () => 'notif-id'),
+  cancelAllScheduledNotificationsAsync: jest.fn(async () => {}),
+  AndroidImportance: { HIGH: 4 },
+  SchedulableTriggerInputTypes: { DAILY: 'daily' },
+}));
+
+jest.mock('@clerk/clerk-expo', () => ({
+  ClerkProvider: ({ children }) => children,
+  ClerkLoaded: ({ children }) => children,
+  useAuth: () => ({ isLoaded: true, isSignedIn: false, signOut: jest.fn(async () => {}) }),
+  useUser: () => ({ isLoaded: true, user: null }),
+}));
