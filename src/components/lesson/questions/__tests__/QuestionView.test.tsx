@@ -18,8 +18,19 @@ test('renders single_select options and a check button', async () => {
   expect(getByText(/check/i)).toBeTruthy();
 });
 
-test('renders a placeholder for an unsupported type', async () => {
-  const dq = { type: 'drag_drop', q_id: 'd1', question: 'x', points: 10, chips: [], dropZones: [] } as any;
-  const { getByText } = await render(<QuestionView question={dq} isLastQuestion={false} />, { wrapper: wrap });
+test('renders a placeholder for an unsupported type (text_input)', async () => {
+  const tq = { type: 'text_input', q_id: 't1', question: 'Describe it', points: 10 } as any;
+  const { getByText } = await render(<QuestionView question={tq} isLastQuestion={false} />, { wrapper: wrap });
   expect(getByText(/isn't supported yet|not supported/i)).toBeTruthy();
+});
+
+test('renders DragDrop (not a placeholder) for drag_drop type', async () => {
+  const dq = {
+    type: 'drag_drop', q_id: 'd1', question: 'Match it', points: 10,
+    chips: [{ id: 'c1', label: 'Chip1', correctZone: 'z1' }],
+    dropZones: [{ id: 'z1', label: 'Zone1' }],
+  } as any;
+  const { getByText, queryByText } = await render(<QuestionView question={dq} isLastQuestion={false} />, { wrapper: wrap });
+  expect(getByText('Zone1')).toBeTruthy();
+  expect(queryByText(/isn't supported yet|not supported/i)).toBeNull();
 });
