@@ -38,7 +38,7 @@ interface ProgressContextValue extends ProgressState {
 const ProgressContext = createContext<ProgressContextValue | null>(null);
 
 export function ProgressProvider({ children }: { children: ReactNode }) {
-  const { kv } = usePersistence();
+  const { kv, attempts } = usePersistence();
   const [state, dispatch] = useReducer(progressReducer, initialProgressState);
 
   useEffect(() => {
@@ -74,7 +74,6 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     }
   }, [kv, state.progress, state.isLoading]);
 
-  const { attempts } = usePersistence();
   const recordLessonAttempt = useCallback(
     async (data: Omit<LessonAttempt, 'id' | 'completedAt'>) => {
       const attempt: LessonAttempt = {
@@ -84,7 +83,11 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
         completedAt: new Date().toISOString(),
       };
       dispatch({ type: 'RECORD_ATTEMPT', payload: attempt });
-      await attempts.record(attempt); // SQLite source-of-truth log
+      try {
+        await attempts.record(attempt); // SQLite source-of-truth log
+      } catch (error) {
+        console.warn('[Progress] Failed to write attempt to log:', error);
+      }
     },
     [attempts],
   );
