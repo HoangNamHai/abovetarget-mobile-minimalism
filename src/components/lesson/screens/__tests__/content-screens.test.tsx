@@ -6,7 +6,6 @@ import { ProgressProvider } from '../../../../contexts/progress-context';
 import { SubscriptionProvider } from '../../../../contexts/subscription-context';
 import { LessonProvider, useLesson } from '../../../../contexts/lesson-context';
 import { WrapScreen } from '../WrapScreen';
-import { getLessonData } from '../../../../data/lessons-data';
 
 function providers(persistence = createInMemoryPersistence()) {
   return ({ children }: { children: ReactNode }) => (
