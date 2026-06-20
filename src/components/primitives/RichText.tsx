@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextProps, TextStyle, View, ViewStyle } from 'react-native';
 import { Txt } from './Txt';
+import { RADIUS } from '../../theme/tokens';
 
 const BORDER = '#9ca3af';
 const BOLD = 'Hanken Grotesk Bold';
@@ -219,7 +220,7 @@ export function RichText({ children, className, style }: Props) {
 
         // table
         return (
-          <View key={idx} style={{ borderWidth: 1, borderColor: BORDER, borderRadius: 8, overflow: 'hidden' }}>
+          <View key={idx} style={{ borderWidth: 1, borderColor: BORDER, borderRadius: RADIUS.media, overflow: 'hidden' }}>
             {block.rows.map((row, ri) => (
               <View
                 key={ri}

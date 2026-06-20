@@ -4,7 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { useLesson } from '../../contexts/lesson-context';
-import { TOKENS } from '../../theme/tokens';
+import { TOKENS, RADIUS } from '../../theme/tokens';
 import { Txt } from '../primitives/Txt';
 import { HookScreen } from './screens/HookScreen';
 import { ChallengeScreen } from './screens/ChallengeScreen';
@@ -50,7 +50,7 @@ function LessonHeader({ progress, onExit }: { progress: number; onExit: () => vo
         style={{
           flex: 1,
           height: 6,
-          borderRadius: 3,
+          borderRadius: RADIUS.track,
           backgroundColor: TOKENS['surface-container-highest'],
           overflow: 'hidden',
         }}

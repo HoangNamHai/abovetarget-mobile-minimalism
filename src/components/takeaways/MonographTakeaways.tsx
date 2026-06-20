@@ -2,7 +2,7 @@ import { FlashList } from '@shopify/flash-list';
 import React from 'react';
 import { View } from 'react-native';
 import { MONOGRAPH_TAKEAWAYS, MonographTakeaway } from '../../data/takeaways';
-import { TOKENS } from '../../theme/tokens';
+import { TOKENS, RADIUS } from '../../theme/tokens';
 import { Icon } from '../primitives/Icon';
 import { PressableFeedback } from '../primitives/PressableFeedback';
 import { Txt } from '../primitives/Txt';
@@ -133,7 +133,7 @@ export function MonographTakeaways({ onQuickJump, activeJump }: Props) {
                     borderWidth: 1,
                     borderColor: activeJump === tab ? '#ffffff' : 'rgba(255,255,255,0.3)',
                     backgroundColor: activeJump === tab ? '#ffffff' : 'transparent',
-                    borderRadius: 6,
+                    borderRadius: RADIUS.pill,
                   }}
                 >
                   <Txt

@@ -3,7 +3,7 @@ import React from 'react';
 import { ScrollView, View } from 'react-native';
 import { useLesson } from '../../../contexts/lesson-context';
 import { getLessonImage, hasLessonImage } from '../../../data/lesson-images';
-import { TOKENS } from '../../../theme/tokens';
+import { TOKENS, RADIUS } from '../../../theme/tokens';
 import type { CharacterQuote, HookScreen as HookScreenType } from '../../../types/lesson';
 import { Appear } from '../../primitives/Appear';
 import { Button } from '../../primitives/Button';
@@ -87,7 +87,7 @@ function CharacterQuoteCard({ quote }: { quote: CharacterQuote }) {
         flexDirection: 'row',
         gap: 12,
         padding: 16,
-        borderRadius: 4,
+        borderRadius: RADIUS.card,
         backgroundColor: TOKENS['surface-container-low'],
         borderLeftWidth: 3,
         borderLeftColor: TOKENS.primary,
@@ -99,7 +99,7 @@ function CharacterQuoteCard({ quote }: { quote: CharacterQuote }) {
           style={{
             width: 48,
             height: 48,
-            borderRadius: 999,
+            borderRadius: RADIUS.pill,
             backgroundColor: TOKENS['surface-container'],
           }}
           contentFit="cover"

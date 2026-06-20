@@ -9,7 +9,7 @@ import { useProgress } from '../../../contexts/progress-context';
 import { useLessonLimit } from '../../../hooks/use-lesson-limit';
 import { getAllLessons } from '../../../data/lessons-data';
 import { getLessonThumbnail } from '../../../data/lesson-images';
-import { TOKENS } from '../../../theme/tokens';
+import { TOKENS, RADIUS } from '../../../theme/tokens';
 import { Txt } from '../../primitives/Txt';
 import { RichText } from '../../primitives/RichText';
 import { Appear } from '../../primitives/Appear';
@@ -97,7 +97,7 @@ export function WrapScreen({ screen, onFinish }: Props) {
             borderWidth: 1,
             borderColor: TOKENS['outline-variant'],
             backgroundColor: TOKENS['surface-container-lowest'],
-            borderRadius: 4,
+            borderRadius: RADIUS.card,
             padding: 24,
             alignItems: 'center',
           }}
@@ -151,7 +151,7 @@ export function WrapScreen({ screen, onFinish }: Props) {
               borderWidth: 1,
               borderColor: TOKENS['outline-variant'],
               backgroundColor: TOKENS['surface-container-lowest'],
-              borderRadius: 8,
+              borderRadius: RADIUS.media,
               overflow: 'hidden',
               marginBottom: 16,
             }}

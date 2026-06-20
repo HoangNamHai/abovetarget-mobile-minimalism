@@ -16,7 +16,7 @@ import { Hairline } from '../../components/primitives/Hairline';
 import { PressableFeedback } from '../../components/primitives/PressableFeedback';
 import { Txt } from '../../components/primitives/Txt';
 import { Button } from '../../components/primitives/Button';
-import { TOKENS } from '../../theme/tokens';
+import { TOKENS, RADIUS } from '../../theme/tokens';
 
 // ─── Dev options section ──────────────────────────────────────────────────────
 
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: TOKENS['outline-variant'],
     backgroundColor: TOKENS['surface-container-lowest'],
-    borderRadius: 4,
+    borderRadius: RADIUS.card,
   },
   row: {
     flexDirection: 'row',

@@ -7,7 +7,7 @@ import { Txt } from '../../primitives/Txt';
 import { Appear } from '../../primitives/Appear';
 import { Button } from '../../primitives/Button';
 import { QuestionPrompt } from './QuestionPrompt';
-import { TOKENS } from '../../../theme/tokens';
+import { TOKENS, RADIUS } from '../../../theme/tokens';
 import type { DragChip, DragDropQuestion } from '../../../types/lesson';
 
 export function DragDrop({
@@ -97,7 +97,7 @@ export function DragDrop({
               style={{
                 borderWidth: 1,
                 borderColor: selectedChipId && !done ? TOKENS.primary : TOKENS['outline-variant'],
-                borderRadius: 4,
+                borderRadius: RADIUS.card,
                 padding: 12,
                 minHeight: 56,
                 backgroundColor:
@@ -129,7 +129,7 @@ export function DragDrop({
                     paddingVertical: 6,
                     paddingHorizontal: 12,
                     backgroundColor: TOKENS.primary,
-                    borderRadius: 999,
+                    borderRadius: RADIUS.pill,
                     alignSelf: 'flex-start',
                   }}
                 >
@@ -166,7 +166,7 @@ export function DragDrop({
                   borderWidth: 1,
                   borderColor:
                     selectedChipId === chip.id ? TOKENS.primary : TOKENS['outline-variant'],
-                  borderRadius: 999,
+                  borderRadius: RADIUS.pill,
                 }}
               >
                 <Txt

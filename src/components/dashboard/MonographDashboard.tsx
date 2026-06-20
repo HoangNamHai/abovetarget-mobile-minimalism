@@ -3,7 +3,7 @@ import { ScrollView, View } from 'react-native';
 import { useProgress } from '../../contexts/progress-context';
 import { useLearningHome } from '../../hooks/use-learning-home';
 import { DOMAIN_ORDER } from '../../data/domains';
-import { TOKENS } from '../../theme/tokens';
+import { TOKENS, RADIUS } from '../../theme/tokens';
 import type { Domain } from '../../types/progress';
 import { Button } from '../primitives/Button';
 import { Hairline } from '../primitives/Hairline';
@@ -107,7 +107,7 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
           marginBottom: 24,
           backgroundColor: TOKENS.primary,
           padding: 28,
-          borderRadius: 4,
+          borderRadius: RADIUS.card,
         }}
       >
         <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: 'rgba(255,255,255,0.7)', marginBottom: 10 }}>
@@ -139,7 +139,7 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
           borderWidth: 1,
           borderColor: TOKENS['outline-variant'],
           backgroundColor: TOKENS['surface-container-lowest'],
-          borderRadius: 4,
+          borderRadius: RADIUS.card,
           padding: 24,
           marginTop: 24,
           marginBottom: 24,
@@ -148,11 +148,11 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
         <Txt variant="display" style={{ fontSize: 18, letterSpacing: -0.5, color: TOKENS['on-background'], marginBottom: 12 }}>
           NEXT MILESTONE: {milestone.name.toUpperCase()}
         </Txt>
-        <View style={{ width: '100%', height: 6, backgroundColor: TOKENS['surface-container-highest'], borderRadius: 3 }}>
+        <View style={{ width: '100%', height: 6, backgroundColor: TOKENS['surface-container-highest'], borderRadius: RADIUS.track }}>
           <View
             style={{
               height: '100%',
-              borderRadius: 3,
+              borderRadius: RADIUS.track,
               backgroundColor: TOKENS.primary,
               width: `${Math.round(milestone.progress)}%`,
             }}
@@ -251,7 +251,7 @@ function TodayStrip({
             style={{
               flex: 1,
               height: 6,
-              borderRadius: 3,
+              borderRadius: RADIUS.track,
               backgroundColor: i < lessonsToday ? TOKENS.primary : TOKENS['surface-container-highest'],
             }}
           />

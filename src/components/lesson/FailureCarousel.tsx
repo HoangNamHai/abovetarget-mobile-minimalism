@@ -3,7 +3,7 @@ import { Image } from 'expo-image';
 import React, { useRef, useState } from 'react';
 import { NativeScrollEvent, NativeSyntheticEvent, Pressable, ScrollView, View } from 'react-native';
 import { getLessonImage, hasLessonImage } from '../../data/lesson-images';
-import { TOKENS } from '../../theme/tokens';
+import { TOKENS, RADIUS } from '../../theme/tokens';
 import { RichText } from '../primitives/RichText';
 import { Txt } from '../primitives/Txt';
 import type { FailureCard } from '../../types/lesson';
@@ -82,7 +82,7 @@ export function FailureCarousel({ cards, showIndicators = true }: Props) {
                     style={{
                       width: i === index ? 24 : 8,
                       height: 8,
-                      borderRadius: 4,
+                      borderRadius: RADIUS.card,
                       backgroundColor: i === index ? TOKENS.primary : TOKENS['outline-variant'],
                     }}
                   />
@@ -119,7 +119,7 @@ function NavButton({
       style={{
         width: 44,
         height: 44,
-        borderRadius: 999,
+        borderRadius: RADIUS.pill,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: disabled ? TOKENS['surface-container'] : TOKENS.primary,
@@ -141,7 +141,7 @@ function FailureCardView({ card }: { card: FailureCard }) {
       style={{
         borderWidth: 1,
         borderColor: TOKENS['outline-variant'],
-        borderRadius: 4,
+        borderRadius: RADIUS.card,
         overflow: 'hidden',
         backgroundColor: TOKENS['surface-container-lowest'],
       }}

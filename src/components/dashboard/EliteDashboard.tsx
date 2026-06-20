@@ -225,7 +225,7 @@ export function EliteDashboard({ onStartStudy }: Props) {
           borderWidth: 1,
           borderColor: TOKENS['outline-variant'],
           backgroundColor: TOKENS['surface-container-lowest'],
-          borderRadius: 4,
+          borderRadius: 0,
           overflow: 'hidden',
         }}
       >
@@ -265,7 +265,7 @@ export function EliteDashboard({ onStartStudy }: Props) {
           marginTop: 32,
           backgroundColor: TOKENS.primary,
           padding: 32,
-          borderRadius: 4,
+          borderRadius: 0,
         }}
       >
         <Txt

@@ -8,7 +8,7 @@ import { useProgress } from '../../contexts/progress-context';
 import { Txt } from '../primitives/Txt';
 import { Hairline } from '../primitives/Hairline';
 import { PressableFeedback } from '../primitives/PressableFeedback';
-import { TOKENS } from '../../theme/tokens';
+import { TOKENS, RADIUS } from '../../theme/tokens';
 import type { Domain } from '../../types/progress';
 import type { Lesson } from '../../types/lesson';
 import { DOMAIN_OF, DOMAIN_TITLE } from '../../data/domains';
@@ -98,7 +98,7 @@ export function LessonsList({ domainFilter }: Props) {
                   style={{
                     marginHorizontal: 16,
                     marginTop: 16,
-                    borderRadius: 8,
+                    borderRadius: RADIUS.media,
                     overflow: 'hidden',
                     borderWidth: 1,
                     borderColor: TOKENS['outline-variant'],
@@ -127,7 +127,7 @@ export function LessonsList({ domainFilter }: Props) {
                           right: 10,
                           paddingHorizontal: 10,
                           paddingVertical: 4,
-                          borderRadius: 999,
+                          borderRadius: RADIUS.pill,
                           backgroundColor: TOKENS.primary,
                         }}
                       >
