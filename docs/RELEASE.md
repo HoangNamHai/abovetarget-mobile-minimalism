@@ -1,5 +1,10 @@
 # Release Guide — PMP Exam Pro
 
+> **Doing a local build + Play upload?** See `docs/android-release-runbook.md` for the
+> battle-tested step-by-step (the exact commands + every gotcha that bit during a real run:
+> missing babel plugin, Sentry token, remote version-code auto-increment, supply `--version_code`,
+> Genymotion ANRs). This file is the high-level overview.
+
 This app ships as an **update to the existing `PMP Exam Pro` store listing** (it replaces
 `pmp-prod-v3`). Identity is locked in `app.json` and guarded by
 `src/app/__tests__/app-config.test.ts`:

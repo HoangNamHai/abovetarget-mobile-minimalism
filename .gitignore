@@ -46,3 +46,7 @@ fastlane/report.xml
 # generated native folders
 /ios
 /android
+
+# Build artifacts
+*.aab
+*.apks
