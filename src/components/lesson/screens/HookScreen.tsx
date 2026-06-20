@@ -11,6 +11,7 @@ import { Hairline } from '../../primitives/Hairline';
 import { RichText } from '../../primitives/RichText';
 import { Txt } from '../../primitives/Txt';
 import { FailureCarousel } from '../FailureCarousel';
+import { QuickJump } from '../QuickJump';
 
 type Props = {
   screen: HookScreenType;
@@ -70,6 +71,10 @@ export function HookScreen({ screen }: Props) {
 
       <Appear index={step++}>
         <Button label="Continue" onPress={nextScreen} />
+      </Appear>
+
+      <Appear index={step++}>
+        <QuickJump config={screen.content.quick_nav} />
       </Appear>
     </ScrollView>
   );
