@@ -85,6 +85,19 @@ wire the real RC project so production is one flag away once store products exis
 - Unit tests: provider purchase/restore/entitlement transitions; paywall render + interactions;
   lesson-gate routes free+limited users to the paywall and lets premium through.
 
+## Dashboard — created (2026-06-20)
+
+RevenueCat project **"PMP Exam Pro"** (project id `0a64724c`):
+- **Test Store** app + public SDK key `test_UFxNiXpKqWHIZlleFrlzORuIAgL` (wired into
+  `src/config/revenuecat.ts` for both iOS and Android — works in dev with no store products).
+- Entitlement **`pro`**.
+- Test Store products: `monthly`, `yearly`, `lifetime` (each grants `pro`).
+- Offering **`default`** (set as current) with 3 packages: `$rc_monthly`→monthly,
+  `$rc_annual`→yearly, `$rc_lifetime`→lifetime.
+
+A dev/preview build (flag on) configures against this Test Store, loads the `default`
+offering, and renders the 3 packages in the paywall; purchases run through the Test Store.
+
 ## Out of scope (follow-ups)
 
 - Creating Play / App Store Connect subscription products, pricing, and sandbox testers.

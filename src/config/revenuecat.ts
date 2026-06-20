@@ -20,14 +20,18 @@ export const REVENUECAT_DISABLED = !REVENUECAT_ENABLED;
 
 /**
  * RevenueCat API Keys
- * Replace these placeholder values with your actual RevenueCat API keys
- * before App Store submission.
+ *
+ * Currently the "PMP Exam Pro" RevenueCat project's **Test Store** public key
+ * (project id 0a64724c). The Test Store works for both iOS and Android in dev
+ * builds and needs no App Store / Play products, so the paywall + purchase flow
+ * can be exercised end-to-end before store products exist.
+ *
+ * Before App Store / Play release, swap these for the production platform keys
+ * (appl_xxx for iOS, goog_xxx for Android) from the same project's API keys page.
  */
 export const REVENUECAT_API_KEYS = {
-  // Test Store API key - works for both iOS and Android during development
-  // Replace with production keys (appl_xxx, goog_xxx) before App Store release
-  ios: 'test_MTgcqlwcATwVgTGtFSbyOlqlPtS',
-  android: 'test_MTgcqlwcATwVgTGtFSbyOlqlPtS',
+  ios: 'test_UFxNiXpKqWHIZlleFrlzORuIAgL',
+  android: 'test_UFxNiXpKqWHIZlleFrlzORuIAgL',
 } as const;
 
 /**
