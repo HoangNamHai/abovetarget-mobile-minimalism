@@ -36,5 +36,6 @@ test('eas.json defines the four build profiles and a production submit target', 
   expect(easJson.build.production.distribution).toBe('store');
   expect(easJson.build.production.android.buildType).toBe('app-bundle');
   expect(easJson.build.production.android.credentialsSource).toBe('local');
-  expect(easJson.submit.production.android.track).toBe('internal');
+  expect(easJson.submit.production.android.track).toBe('production');
+  expect(easJson.submit.production.android.releaseStatus).toBe('draft');
 });
