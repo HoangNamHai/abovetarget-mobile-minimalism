@@ -9,6 +9,7 @@ import { Txt } from '../primitives/Txt';
 import { Hairline } from '../primitives/Hairline';
 import { PressableFeedback } from '../primitives/PressableFeedback';
 import { TOKENS, RADIUS } from '../../theme/tokens';
+import { ACCENTS } from '../../theme/accents';
 import type { Domain } from '../../types/progress';
 import type { Lesson } from '../../types/lesson';
 import { DOMAIN_OF, DOMAIN_TITLE } from '../../data/domains';
@@ -128,7 +129,7 @@ export function LessonsList({ domainFilter }: Props) {
                           paddingHorizontal: 10,
                           paddingVertical: 4,
                           borderRadius: RADIUS.pill,
-                          backgroundColor: TOKENS.primary,
+                          backgroundColor: ACCENTS.success,
                         }}
                       >
                         <Txt
