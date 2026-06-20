@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     gap: 10,
     paddingVertical: 18,
     paddingHorizontal: 12,
-    borderRadius: RADIUS.pill,
+    borderRadius: RADIUS.card,
     borderWidth: 1,
     borderColor: TOKENS['outline-variant'],
     backgroundColor: TOKENS['surface-container-lowest'],
