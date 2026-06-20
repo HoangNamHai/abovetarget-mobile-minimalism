@@ -1,3 +1,8 @@
+jest.mock('expo-router', () => ({
+  router: { replace: jest.fn(), push: jest.fn(), navigate: jest.fn() },
+  useRouter: () => ({ replace: jest.fn(), push: jest.fn(), navigate: jest.fn() }),
+}));
+
 import React, { type ReactNode } from 'react';
 import { render, waitFor } from '@testing-library/react-native';
 import { createInMemoryPersistence } from '../../../services/persistence';

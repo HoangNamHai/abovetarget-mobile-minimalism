@@ -1,5 +1,6 @@
 import Constants from 'expo-constants';
 import { reloadAppAsync } from 'expo';
+import { router } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import React, { useState } from 'react';
 import { Alert, Linking, ScrollView, StyleSheet, Switch, View } from 'react-native';
@@ -173,7 +174,15 @@ export default function Profile() {
   const handleSignOut = () => {
     Alert.alert('Sign out', 'Are you sure you want to sign out?', [
       { text: 'Cancel', style: 'cancel' },
-      { text: 'Sign Out', style: 'destructive', onPress: () => signOut() },
+      {
+        text: 'Sign Out',
+        style: 'destructive',
+        onPress: async () => {
+          await signOut();
+          // Bounce through the root gate, which redirects to the auth screen.
+          router.replace('/');
+        },
+      },
     ]);
   };
 

@@ -55,6 +55,11 @@ jest.mock('expo-image', () => {
   };
 });
 
+jest.mock('expo-router', () => ({
+  router: { replace: jest.fn(), push: jest.fn(), navigate: jest.fn() },
+  useRouter: () => ({ replace: jest.fn(), push: jest.fn(), navigate: jest.fn() }),
+}));
+
 import { render, screen, waitFor } from '@testing-library/react-native';
 import { TestProviders } from '../../../test-utils';
 import Profile from '../profile';

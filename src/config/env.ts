@@ -11,6 +11,15 @@ export function hasClerkKey(): boolean {
   return CLERK_PUBLISHABLE_KEY.length > 0;
 }
 
+/**
+ * Whether the auth gate is enforced. Tied to Clerk being configured: with no
+ * key, the app runs key-less (no sign-in required) so local/CI flows are
+ * unaffected and the app never traps on the auth screen.
+ */
+export function authRequired(): boolean {
+  return hasClerkKey();
+}
+
 /** Sentry only reports outside dev and only when a DSN is configured. */
 export function sentryEnabled(): boolean {
   return !__DEV__ && SENTRY_DSN.length > 0;

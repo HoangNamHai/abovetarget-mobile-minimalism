@@ -28,7 +28,9 @@ export default function QuestionReminder() {
     setIsSubmitting(true);
     try {
       await completeOnboarding();
-      router.replace('/(tabs)/home');
+      // Route through the root gate so it decides tabs vs. auth (when a Clerk
+      // key is configured, a new user must sign in before reaching the app).
+      router.replace('/');
     } finally {
       setIsSubmitting(false);
     }
