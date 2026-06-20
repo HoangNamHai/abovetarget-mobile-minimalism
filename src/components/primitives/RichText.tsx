@@ -1,10 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, TextProps, TextStyle, View, ViewStyle } from 'react-native';
+import { ScrollView, StyleSheet, Text, TextProps, TextStyle, View, ViewStyle } from 'react-native';
 import { Txt } from './Txt';
 import { RADIUS } from '../../theme/tokens';
 
 const BORDER = '#9ca3af';
 const BOLD = 'Hanken Grotesk Bold';
+// Fixed table column width — wide enough to avoid mid-word wraps ("Channel\ns")
+// while keeping columns aligned across rows inside the horizontal scroll.
+const TABLE_COL_WIDTH = 150;
 
 // Lesson content is authored in lightweight markdown. We render a small subset
 // natively: **bold** emphasis (inline), bullet/numbered lists, pipe tables, and
@@ -218,34 +221,48 @@ export function RichText({ children, className, style }: Props) {
           );
         }
 
-        // table
+        // table — horizontally scrollable so columns get natural width instead
+        // of being crushed to fit the screen. Fixed column width keeps cells
+        // aligned across rows (flex can't bound inside a horizontal ScrollView).
         return (
-          <View key={idx} style={{ borderWidth: 1, borderColor: BORDER, borderRadius: RADIUS.media, overflow: 'hidden' }}>
-            {block.rows.map((row, ri) => (
-              <View
-                key={ri}
-                style={{
-                  flexDirection: 'row',
-                  backgroundColor: ri === 0 ? 'rgba(127,127,127,0.12)' : undefined,
-                }}
-              >
-                {row.map((cell, ci) => (
-                  <View
-                    key={ci}
-                    style={{
-                      flex: 1,
-                      padding: 8,
-                      borderLeftWidth: ci === 0 ? 0 : 1,
-                      borderTopWidth: ri === 0 ? 0 : 1,
-                      borderColor: BORDER,
-                    }}
-                  >
-                    {renderText(parseInlineMarkdown(cell), ri === 0 ? { fontFamily: BOLD } : undefined)}
-                  </View>
-                ))}
-              </View>
-            ))}
-          </View>
+          <ScrollView
+            key={idx}
+            horizontal
+            showsHorizontalScrollIndicator
+            contentContainerStyle={{
+              borderWidth: 1,
+              borderColor: BORDER,
+              borderRadius: RADIUS.media,
+              overflow: 'hidden',
+            }}
+          >
+            <View>
+              {block.rows.map((row, ri) => (
+                <View
+                  key={ri}
+                  style={{
+                    flexDirection: 'row',
+                    backgroundColor: ri === 0 ? 'rgba(127,127,127,0.12)' : undefined,
+                  }}
+                >
+                  {row.map((cell, ci) => (
+                    <View
+                      key={ci}
+                      style={{
+                        width: TABLE_COL_WIDTH,
+                        padding: 10,
+                        borderLeftWidth: ci === 0 ? 0 : 1,
+                        borderTopWidth: ri === 0 ? 0 : 1,
+                        borderColor: BORDER,
+                      }}
+                    >
+                      {renderText(parseInlineMarkdown(cell), ri === 0 ? { fontFamily: BOLD } : undefined)}
+                    </View>
+                  ))}
+                </View>
+              ))}
+            </View>
+          </ScrollView>
         );
       })}
     </View>
