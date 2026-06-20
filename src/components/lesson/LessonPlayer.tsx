@@ -25,15 +25,7 @@ type Props = {
   lessonId: string;
 };
 
-function LessonHeader({
-  progress,
-  onExit,
-  lessonId,
-}: {
-  progress: number;
-  onExit: () => void;
-  lessonId?: string;
-}) {
+function LessonHeader({ progress, onExit }: { progress: number; onExit: () => void }) {
   return (
     <View
       style={{
@@ -73,15 +65,6 @@ function LessonHeader({
           }}
         />
       </View>
-      {/* Dev-only lesson ID badge to identify the current lesson while testing. */}
-      {__DEV__ && lessonId ? (
-        <Txt
-          variant="label"
-          style={{ fontSize: 11, letterSpacing: 1, color: TOKENS.outline }}
-        >
-          {lessonId}
-        </Txt>
-      ) : null}
     </View>
   );
 }
@@ -96,9 +79,16 @@ export function LessonPlayer({ lessonId }: Props) {
     };
   }, [lessonId, loadLesson, exitLesson]);
 
-  const handleExit = () => {
+  // Leave the lesson. Guard router.back() — when the lesson was opened via a
+  // deep link there's no history, and back() throws a GO_BACK navigator warning;
+  // fall back to the Lessons tab in that case.
+  const leaveLesson = () => {
     exitLesson();
-    router.back();
+    if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace('/(tabs)/lessons');
+    }
   };
 
   let content: React.ReactNode;
@@ -132,7 +122,7 @@ export function LessonPlayer({ lessonId }: Props) {
         content = (
           <WrapScreen
             screen={currentScreen as WrapScreenType}
-            onFinish={() => router.back()}
+            onFinish={leaveLesson}
           />
         );
         break;
@@ -152,7 +142,7 @@ export function LessonPlayer({ lessonId }: Props) {
   // A persistent header gives the user a way out and shows lesson progress.
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: TOKENS.surface }}>
-      <LessonHeader progress={progress} onExit={handleExit} lessonId={lessonId} />
+      <LessonHeader progress={progress} onExit={leaveLesson} />
       <View style={{ flex: 1 }}>{content}</View>
     </SafeAreaView>
   );
