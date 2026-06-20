@@ -90,7 +90,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each team challenge to the Agile Manifesto value that addresses it:",
+            "question": "Sort each team challenge to the Agile Manifesto value that addresses it:",
             "points": 125,
             "scenario_name": "Manifesto Values in Action",
             "situation": "Carlos challenges Taylor: \"Prove to me these 'Agile values' actually work. Show me how they apply to our Menu Innovation Lab.\" Taylor needs to match each real team challenge to the Agile Manifesto value that addresses it.",
@@ -346,7 +346,7 @@
           {
             "q_id": "transfer_q1",
             "type": "drag_drop",
-            "question": "Drag each statement to the correct category — Agile Discipline or Agile Myth:",
+            "question": "Sort each statement to the correct category — Agile Discipline or Agile Myth:",
             "points": 100,
             "scenario_name": "Discipline vs Chaos",
             "situation": "A board member says: \"Agile is just 'no rules.' Anyone does whatever they want.\" Taylor needs to separate disciplined Agile practices from common myths about Agile being chaotic.",

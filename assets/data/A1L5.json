@@ -92,7 +92,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each scenario to the correct organizational structure:",
+            "question": "Sort each scenario to the correct organizational structure:",
             "points": 270,
             "scenario_name": "Structure Identification",
             "situation": "Match each scenario to its organizational structure based on reporting relationships and PM authority.",

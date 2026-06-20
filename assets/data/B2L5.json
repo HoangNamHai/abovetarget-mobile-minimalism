@@ -221,7 +221,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each motivation concept to the correct theory:",
+            "question": "Sort each motivation concept to the correct theory:",
             "points": 125,
             "scenario_name": "Motivation Theory Matching",
             "situation": "Dr. Foster tests your understanding of the motivation theories you've just applied. \"Match each concept to the correct theory framework.\"",

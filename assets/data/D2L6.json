@@ -146,7 +146,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag each criterion to the correct category — Acceptance Criteria or Definition of Done:",
+            "question": "Sort each criterion to the correct category — Acceptance Criteria or Definition of Done:",
             "points": 100,
             "scenario_name": "DoD vs Acceptance Criteria",
             "situation": "The team is working on Story US-120: \"As a customer, I want to filter the menu by dietary restrictions.\" Alex needs the team to understand which criteria are story-specific (Acceptance Criteria) versus universal quality standards (Definition of Done).",
@@ -257,7 +257,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each DoD item to the correct maturity phase:",
+            "question": "Sort each DoD item to the correct maturity phase:",
             "points": 100,
             "scenario_name": "DoD Evolution Over Sprints",
             "situation": "Alex is planning how the team's DoD should evolve over their first 10 sprints. Some items are achievable immediately (Sprint 1), others require intermediate capability (Sprint 5), and advanced items need mature tooling (Sprint 10).",

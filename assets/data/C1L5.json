@@ -144,7 +144,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag each action to the correct category: CORRECTIVE (fix current) or PREVENTIVE (prevent future).",
+            "question": "Sort each action to the correct category: CORRECTIVE (fix current) or PREVENTIVE (prevent future).",
             "points": 150,
             "scenario_name": "Corrective vs Preventive Actions",
             "situation": "Alex and Dr. Foster have identified six proposed actions to address the variances. Before implementing them, each action must be classified correctly — because corrective actions fix CURRENT problems (bring performance back to baseline) while preventive actions prevent FUTURE problems (avoid new variances from occurring).",

@@ -222,7 +222,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each stakeholder to the correct Power-Interest Grid quadrant:",
+            "question": "Sort each stakeholder to the correct Power-Interest Grid quadrant:",
             "points": 130,
             "scenario_name": "Power-Interest Grid Placement",
             "situation": "Now that you've classified each stakeholder using the Salience Model, map them to the Power-Interest Grid. Remember: Power determines the vertical axis (high/low), and Interest (a combination of Legitimacy and Urgency) determines the horizontal axis.",

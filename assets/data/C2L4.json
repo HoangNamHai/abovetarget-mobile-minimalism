@@ -325,7 +325,7 @@
           {
             "q_id": "transfer_q2",
             "type": "drag_drop",
-            "question": "Drag each compression approach to the correct activity:",
+            "question": "Sort each compression approach to the correct activity:",
             "points": 150,
             "scenario_name": "Why Not Compress Furniture?",
             "situation": "Carlos asks: \"Why aren't we compressing ALL three remaining activities? Aren't we leaving time on the table?\" You need to explain why each activity gets a different treatment.",

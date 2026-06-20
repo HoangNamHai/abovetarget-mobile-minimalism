@@ -275,7 +275,7 @@
           {
             "q_id": "q5",
             "type": "drag_drop",
-            "question": "Drag each Sprint Planning activity to the correct position in the sequence:",
+            "question": "Sort each Sprint Planning activity to the correct position in the sequence:",
             "points": 100,
             "scenario_name": "Sprint Planning Sequence",
             "situation": "Alex is coaching a new Scrum team on Sprint Planning. They've never done formal Sprint Planning before and need to understand the correct sequence of activities — starting with the PO presenting priorities through to the team breaking stories into tasks.",

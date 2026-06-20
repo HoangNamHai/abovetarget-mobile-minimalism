@@ -92,7 +92,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each communication example into the correct method category:",
+            "question": "Sort each communication example into the correct method category:",
             "points": 100,
             "scenario_name": "Categorize Communication Examples",
             "situation": "The PMI framework defines three communication methods. You need to sort real-world examples into the correct category.",
@@ -162,7 +162,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag the correct components to build Ava's communication plan:",
+            "question": "Choose the correct components to build Ava's communication plan:",
             "points": 100,
             "scenario_name": "Build the Investor Communication Plan",
             "situation": "Ava Thompson's investor group (9 investors) is high-power and time-constrained. Ava gets 300+ emails per day. Your CC-all approach buried a critical $85K budget variance for 2 weeks.",
@@ -273,7 +273,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each communication approach into SYNCHRONOUS or ASYNCHRONOUS:",
+            "question": "Sort each communication approach into SYNCHRONOUS or ASYNCHRONOUS:",
             "points": 100,
             "scenario_name": "Sync vs Async for Distributed Teams",
             "situation": "The Location Managers span 3 time zones (ET, CT, PT). You need to choose the right mix of synchronous and asynchronous communication.",
@@ -333,7 +333,7 @@
           {
             "q_id": "q5",
             "type": "drag_drop",
-            "question": "Drag each communication scenario into FORMAL or INFORMAL:",
+            "question": "Sort each communication scenario into FORMAL or INFORMAL:",
             "points": 100,
             "scenario_name": "Formal vs Informal Communication",
             "situation": "As PM, you need to know when communication creates an official record and when it builds relationships informally.",

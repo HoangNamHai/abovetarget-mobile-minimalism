@@ -371,7 +371,7 @@
           {
             "q_id": "transfer_q2",
             "type": "drag_drop",
-            "question": "Drag each closure activity into the correct order:",
+            "question": "Sort each closure activity into the correct order:",
             "points": 150,
             "scenario_name": "Closure Sequence",
             "situation": "You've identified the five closure activities. Now you need to arrange them in the proper sequence for effective project closure.",

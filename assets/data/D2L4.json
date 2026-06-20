@@ -137,7 +137,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag each estimation technique to the work type it's best suited for:",
+            "question": "Sort each estimation technique to the work type it's best suited for:",
             "points": 100,
             "scenario_name": "Technique Selection",
             "situation": "The backlog contains two types of work: 18 sprint-ready user stories with clear acceptance criteria, and 5 high-level epics that span multiple sprints. Alex needs the team to use the right estimation technique for each type.",

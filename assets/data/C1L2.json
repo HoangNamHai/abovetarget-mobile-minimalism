@@ -388,7 +388,7 @@
           {
             "q_id": "transfer_q2",
             "type": "drag_drop",
-            "question": "Drag each update to the correct PM Plan component:",
+            "question": "Sort each update to the correct PM Plan component:",
             "points": 150,
             "scenario_name": "Match Updates to Components",
             "situation": "You've identified all the cascade updates. Now match each specific update to the correct PM Plan component it belongs to.",

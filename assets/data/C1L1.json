@@ -190,7 +190,7 @@
           {
             "q_id": "q3",
             "type": "drag_drop",
-            "question": "Drag each item to the correct document — Charter or Project Management Plan:",
+            "question": "Sort each item to the correct document — Charter or Project Management Plan:",
             "points": 150,
             "scenario_name": "Charter vs Project Management Plan",
             "situation": "Morgan asks: \"I see the charter has high-level requirements like 'seat 120 customers.' Should we add the detailed menu specifications, kitchen workflow diagrams, and staffing schedules to the charter too?\" Alex needs to sort which items belong in the charter versus the project management plan.",

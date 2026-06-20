@@ -421,7 +421,7 @@
           {
             "q_id": "transfer_q2",
             "type": "drag_drop",
-            "question": "Drag each intervention to the gap it addresses:",
+            "question": "Sort each intervention to the gap it addresses:",
             "points": 200,
             "scenario_name": "Build the Improvement Plan",
             "situation": "Alex needs to address both the Psychological Safety Gap and the Visibility Gap. He has six interventions available. Each intervention targets one specific gap.",

@@ -135,7 +135,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag each value to the correct CPM date field for Activity D:",
+            "question": "Sort each value to the correct CPM date field for Activity D:",
             "points": 200,
             "scenario_name": "Forward and Backward Pass Calculation",
             "situation": "Activity D (Stage Construction) is on the CRITICAL PATH. Its predecessor B (Permit Acquisition) finishes at Day 35. Activity D has a duration of 28 days (4 weeks). The project duration is 84 days (12 weeks). Jordan asks you to calculate D's schedule dates using Forward Pass and Backward Pass.",

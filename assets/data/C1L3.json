@@ -146,7 +146,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag each statement to the correct category: DATA (raw observation) or INFORMATION (analyzed comparison).",
+            "question": "Sort each statement to the correct category: DATA (raw observation) or INFORMATION (analyzed comparison).",
             "points": 150,
             "scenario_name": "DATA vs INFORMATION — Classification",
             "situation": "Alex is collecting observations from the construction site. Dr. Foster draws two columns on the whiteboard: \"DATA (Raw Observations)\" and \"INFORMATION (Analyzed).\" She challenges Alex: \"Sort these statements correctly. This distinction shows up constantly on the PMP exam.\"",
@@ -254,7 +254,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each item to its correct output category.",
+            "question": "Sort each item to its correct output category.",
             "points": 100,
             "scenario_name": "Identify the 4 Key Outputs",
             "situation": "Dr. Foster puts four labeled boxes on the whiteboard: Deliverables, Work Performance Data, Change Requests, and Document Updates. She places eight example items on the table: \"Match each example to the correct output category.\"",

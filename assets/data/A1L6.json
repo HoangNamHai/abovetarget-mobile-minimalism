@@ -91,7 +91,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each factor to its constraint category:",
+            "question": "Sort each factor to its constraint category:",
             "points": 180,
             "scenario_name": "Constraint Identification",
             "situation": "Match each project factor to the correct constraint category.",

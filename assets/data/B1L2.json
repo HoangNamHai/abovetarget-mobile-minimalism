@@ -93,7 +93,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each stakeholder to the correct category — does this person belong in \"Manage Closely\" (High Power + High Interest) or NOT?",
+            "question": "Sort each stakeholder to the correct category — does this person belong in \"Manage Closely\" (High Power + High Interest) or NOT?",
             "points": 80,
             "scenario_name": "High Power + High Interest — Manage Closely",
             "situation": "The Power/Interest Grid has 4 quadrants. The top-right quadrant is \"Manage Closely\" — for stakeholders with BOTH high power AND high interest. These people can make or break your project AND care deeply about outcomes.",
@@ -153,7 +153,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag each stakeholder to the correct category — \"Keep Satisfied\" or NOT?",
+            "question": "Sort each stakeholder to the correct category — \"Keep Satisfied\" or NOT?",
             "points": 80,
             "scenario_name": "High Power + Low Interest — Keep Satisfied",
             "situation": "The top-left quadrant is \"Keep Satisfied\" — stakeholders with high power but low interest. They CAN stop your project but don't want to be bothered with details.",

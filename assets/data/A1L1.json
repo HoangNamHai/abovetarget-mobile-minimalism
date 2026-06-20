@@ -158,7 +158,7 @@
           {
             "q_id": "q3",
             "type": "drag_drop",
-            "question": "Drag each constraint to match the project detail:",
+            "question": "Sort each constraint to match the project detail:",
             "points": 85,
             "scenario_name": "Match the Triple Constraint",
             "situation": "Now that you identified this as a project, let's break down the constraints.",

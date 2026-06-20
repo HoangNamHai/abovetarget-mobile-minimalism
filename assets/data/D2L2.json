@@ -91,7 +91,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each filter story to the correct MoSCoW category based on usage data and MVP criticality:",
+            "question": "Sort each filter story to the correct MoSCoW category based on usage data and MVP criticality:",
             "points": 125,
             "scenario_name": "MoSCoW Prioritization",
             "situation": "Morgan has 6 menu filtering user stories. Sprint capacity allows only 3. Marketing says \"We need ALL filters!\" Taylor says \"MoSCoW helps separate must-haves from nice-to-haves.\" Usage data shows: Category filter (87% users), Dietary restriction filter (42%), Price range filter (18%), Chef recommendation filter (9%), Spice level filter (7%), Cuisine origin filter (5%).",
@@ -212,7 +212,7 @@
           {
             "q_id": "q3",
             "type": "drag_drop",
-            "question": "Drag each feature to its correct Kano classification:",
+            "question": "Sort each feature to its correct Kano classification:",
             "points": 125,
             "scenario_name": "Kano Model Classification",
             "situation": "Marketing proposes 6 features for the digital ordering system. Morgan needs to classify them using the Kano Model to determine MVP priorities. Basic Expectations must come first (absence = dissatisfaction), Performance Payoffs add competitive parity, and Delighters are unexpected wow features.",
@@ -484,7 +484,7 @@
           {
             "q_id": "transfer_q3",
             "type": "drag_drop",
-            "question": "Drag each Tokyo feature to its correct Kano classification:",
+            "question": "Sort each Tokyo feature to its correct Kano classification:",
             "points": 100,
             "scenario_name": "Kano Classification for Tokyo",
             "situation": "Morgan must classify 4 Tokyo-specific features using the Kano Model to set MVP priorities. The Tokyo market expects native language support and local confirmation standards. Payment options vary by local preference. Seasonal theming is unique to Japanese culture.",

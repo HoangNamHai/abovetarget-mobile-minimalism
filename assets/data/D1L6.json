@@ -184,7 +184,7 @@
           {
             "q_id": "q3",
             "type": "drag_drop",
-            "question": "Drag each retrospective phase into the correct sequence position:",
+            "question": "Sort each retrospective phase into the correct sequence position:",
             "points": 200,
             "scenario_name": "Retrospective Facilitation Phases",
             "situation": "Alex is structuring the retrospective facilitation. The Agile Practice Guide describes five phases that retrospectives should follow in a specific order. Alex needs to arrange them correctly to ensure psychological safety comes before data gathering, and actions come after insights.",

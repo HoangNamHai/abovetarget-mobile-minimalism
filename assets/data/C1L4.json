@@ -91,7 +91,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each knowledge example into the correct category: EXPLICIT or TACIT.",
+            "question": "Sort each knowledge example into the correct category: EXPLICIT or TACIT.",
             "points": 100,
             "scenario_name": "Classify the Knowledge",
             "situation": "Dr. Foster explains: \"Explicit knowledge is documented and codified — you can write it in a manual and someone can follow it exactly. Tacit knowledge is personal, experience-based know-how — hard to articulate, learned through practice and observation.\" She presents eight examples from the Riverside Plaza project and asks you to sort them.",
@@ -369,7 +369,7 @@
           {
             "q_id": "transfer_q1",
             "type": "drag_drop",
-            "question": "Drag each knowledge example into the correct category: EXPLICIT or TACIT.",
+            "question": "Sort each knowledge example into the correct category: EXPLICIT or TACIT.",
             "points": 100,
             "scenario_name": "Identify Knowledge at Risk",
             "situation": "Before planning the transfer, you need to assess what types of knowledge the senior developer holds. Some can be documented quickly; others require hands-on transfer methods.",

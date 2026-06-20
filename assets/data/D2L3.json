@@ -85,7 +85,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each Kanban principle to its correct definition:",
+            "question": "Sort each Kanban principle to its correct definition:",
             "points": 100,
             "scenario_name": "The Visibility Crisis",
             "situation": "Carlos interrupts the team 8 times per day asking: \"What's the status of the truffle dish? Is the vegan burger ready?\" Each interruption takes 10 minutes. The team spends 2 hours daily just answering status questions. Taylor proposes matching each Kanban principle to the right definition so the team understands what they're implementing.",
@@ -288,7 +288,7 @@
           {
             "q_id": "q5",
             "type": "drag_drop",
-            "question": "Drag each metric to the correct definition and the matching calculation for the vegan burger experiment:",
+            "question": "Sort each metric to the correct definition and the matching calculation for the vegan burger experiment:",
             "points": 100,
             "scenario_name": "Kanban Metrics",
             "situation": "Carlos asks: \"How do we measure if Kanban is working?\" Taylor introduces two key metrics. A vegan burger experiment was requested on Monday Week 1, started on Thursday Week 1 (moved to In Progress), and completed on Friday Week 2. Taylor needs to teach the team which metric measures what.",
@@ -415,7 +415,7 @@
           {
             "q_id": "transfer_q1",
             "type": "drag_drop",
-            "question": "Drag each column to the correct WIP limit category — \"Needs WIP Limit\" (active work columns) or \"No WIP Limit Needed\" (backlog and completion columns):",
+            "question": "Sort each column to the correct WIP limit category — \"Needs WIP Limit\" (active work columns) or \"No WIP Limit Needed\" (backlog and completion columns):",
             "points": 100,
             "scenario_name": "Designing the Support Board",
             "situation": "Jordan's support team needs a Kanban board. Taylor explains: \"Your board columns should match YOUR actual workflow stages — not a generic To Do/Doing/Done.\" The team identified five stages: New Tickets arrive in a backlog, agents Investigate the issue, some tickets go to Awaiting Customer Response, then Resolved, then Closed. Taylor needs help deciding which columns need WIP limits and which don't.",

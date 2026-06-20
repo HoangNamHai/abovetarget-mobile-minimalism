@@ -94,7 +94,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag each stage to its correct position in the sequence:",
+            "question": "Sort each stage to its correct position in the sequence:",
             "points": 100,
             "scenario_name": "Tuckman's Stages in Order",
             "situation": "Before diving into the team scenarios, Elena tests your foundational knowledge. She draws five boxes on the whiteboard and hands you five sticky notes. \"Put Tuckman's 5 stages in the correct order, from team formation to disbandment.\"",

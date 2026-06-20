@@ -221,7 +221,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each budget component to its correct position in the hierarchy (1 = bottom/foundation, 5 = top/total):",
+            "question": "Sort each budget component to its correct position in the hierarchy (1 = bottom/foundation, 5 = top/total):",
             "points": 100,
             "scenario_name": "Budget Hierarchy",
             "situation": "Alex has $2.5M in cost estimates. Elena asks: \"Now show me the budget hierarchy — from your detailed estimates up to total funding.\" Alex must arrange the five budget components in the correct order from foundation (bottom) to total (top).",
@@ -354,7 +354,7 @@
           {
             "q_id": "transfer_q1",
             "type": "drag_drop",
-            "question": "Drag each characteristic to the correct reserve type — Contingency Reserve or Management Reserve:",
+            "question": "Sort each characteristic to the correct reserve type — Contingency Reserve or Management Reserve:",
             "points": 100,
             "scenario_name": "Reserve Classification",
             "situation": "Ava asks Alex to explain the difference between the two types of reserves. Alex needs to match each characteristic to the correct reserve type to demonstrate that the reserves serve distinct, justified purposes.",

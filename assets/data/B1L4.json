@@ -184,7 +184,7 @@
           {
             "q_id": "q3",
             "type": "drag_drop",
-            "question": "Drag each communication need to the correct approach: SYNCHRONOUS (real-time) or ASYNCHRONOUS (delayed).",
+            "question": "Sort each communication need to the correct approach: SYNCHRONOUS (real-time) or ASYNCHRONOUS (delayed).",
             "points": 90,
             "scenario_name": "Synchronous vs Asynchronous",
             "situation": "Alex's distributed team spans Manhattan (EST), Mexico City (CST), and Tokyo (JST — 14 hours ahead). Different communication needs require different approaches. Not everything can be a meeting.",
@@ -249,7 +249,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each communication need to the appropriate channel: RICH (video/in-person) or LEAN (email/document).",
+            "question": "Sort each communication need to the appropriate channel: RICH (video/in-person) or LEAN (email/document).",
             "points": 85,
             "scenario_name": "Rich vs Lean Channel Matching",
             "situation": "Different communication needs require different channel \"bandwidth.\" Rich channels (video, in-person) carry more information. Lean channels (email, text) are more efficient for simple messages.",

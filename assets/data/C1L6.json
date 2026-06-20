@@ -93,7 +93,7 @@
           {
             "q_id": "q1",
             "type": "drag_drop",
-            "question": "Drag the 5 change control steps into the correct sequence:",
+            "question": "Sort the 5 change control steps into the correct sequence:",
             "points": 100,
             "scenario_name": "Change Control Process Sequence",
             "situation": "Dr. Foster has written the 5 steps of the Integrated Change Control process on index cards and shuffled them. She places an empty timeline on the whiteboard with 5 positions. \"Every change request follows the same governance path. Put these steps in the correct order.\"",
@@ -168,7 +168,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag each change request to the correct approval authority:",
+            "question": "Sort each change request to the correct approval authority:",
             "points": 100,
             "scenario_name": "Baseline vs Within-Baseline Classification",
             "situation": "Alex receives several change requests in one week. Dr. Foster challenges him: \"Not every change needs CCB approval. The key question is: Does this change affect a frozen baseline?\" Sort these changes into the correct approval path.",
@@ -271,7 +271,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each impact to the knowledge area it affects:",
+            "question": "Sort each impact to the knowledge area it affects:",
             "points": 100,
             "scenario_name": "Integrated Impact Assessment",
             "situation": "Alex is preparing the impact assessment for the chef's table change request. Dr. Foster emphasizes: \"This is called INTEGRATED change control because you assess impact across ALL knowledge areas — not just the area where the change originated.\" Match each impact to the correct knowledge area.",

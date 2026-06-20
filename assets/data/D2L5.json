@@ -137,7 +137,7 @@
           {
             "q_id": "q2",
             "type": "drag_drop",
-            "question": "Drag each chart type to the stakeholder whose need it best serves:",
+            "question": "Sort each chart type to the stakeholder whose need it best serves:",
             "points": 100,
             "scenario_name": "Burn-down vs Burn-up Chart Selection",
             "situation": "Two stakeholders need different types of progress visibility. Carlos wants a simple \"are we on track?\" view showing work remaining each day. Morgan needs to explain to executives why the team completed 18 points but didn't finish the sprint scope of 25 — because 7 new stories were added mid-sprint.",

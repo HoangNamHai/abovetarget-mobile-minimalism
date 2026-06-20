@@ -436,7 +436,7 @@
           {
             "q_id": "transfer_q2",
             "type": "drag_drop",
-            "question": "Alex decides to coach Liam using influence techniques. Drag the INFLUENCE techniques to the coaching approach. Avoid COMMAND techniques.",
+            "question": "Alex decides to coach Liam using influence techniques. Sort the INFLUENCE techniques to the coaching approach. Avoid COMMAND techniques.",
             "points": 150,
             "scenario_name": "Influence Techniques",
             "situation": "After deciding to coach Liam rather than escalate to his functional manager, Alex prepares for a one-on-one conversation. Dr. Amelia Foster advises Alex to use influence-based coaching techniques rather than command-based approaches.",

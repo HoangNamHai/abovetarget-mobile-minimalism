@@ -471,7 +471,7 @@
           {
             "q_id": "transfer_q3",
             "type": "drag_drop",
-            "question": "Drag each adaptation to the correct category — HELPFUL or NOT HELPFUL for distributed teams:",
+            "question": "Sort each adaptation to the correct category — HELPFUL or NOT HELPFUL for distributed teams:",
             "points": 100,
             "scenario_name": "Distributed Team Adaptations",
             "situation": "Taylor is preparing guidelines for the distributed Global Menu Localization Squad. She needs to determine which common adaptations actually help distributed Agile teams succeed versus which ones will cause problems.",

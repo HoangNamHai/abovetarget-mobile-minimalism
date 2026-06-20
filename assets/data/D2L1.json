@@ -223,7 +223,7 @@
           {
             "q_id": "q4",
             "type": "drag_drop",
-            "question": "Drag each problem to the correct INVEST violation:",
+            "question": "Sort each problem to the correct INVEST violation:",
             "points": 125,
             "scenario_name": "Dependency and Acceptance Criteria",
             "situation": "Taylor presents two more problematic stories. US-103 reads: \"Remove items from cart AFTER the Add-to-Cart feature (US-105) is complete.\" US-104 reads: \"Search the menu\" with empty acceptance criteria. The team needs to match each problem to the correct INVEST violation and fix.",

@@ -185,7 +185,7 @@
           {
             "q_id": "q3",
             "type": "drag_drop",
-            "question": "Drag each stakeholder to their correct engagement strategy:",
+            "question": "Sort each stakeholder to their correct engagement strategy:",
             "points": 100,
             "scenario_name": "Match Stakeholders to Strategies",
             "situation": "Now that Alex understands priorities, he needs to match each stakeholder to the RIGHT engagement strategy.",
@@ -296,7 +296,7 @@
           {
             "q_id": "q5",
             "type": "drag_drop",
-            "question": "Drag activities into the correct sequence:",
+            "question": "Sort activities into the correct sequence:",
             "points": 80,
             "scenario_name": "Engagement Sequence for Sam",
             "situation": "Alex needs to engage Sam Rodriguez (CFO, high-power, unaware) BEFORE the board meeting in 3 weeks. Order these engagement activities chronologically.",
