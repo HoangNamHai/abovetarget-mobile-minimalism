@@ -5,14 +5,14 @@
 /**
  * Show Developer Options section on the Profile screen.
  *
- * When false, the dev tools section is hidden even in __DEV__ builds.
- * This prevents reviewers from seeing debug controls during store review.
+ * Tied to `__DEV__`: visible only in development builds, automatically hidden in
+ * release/store builds (where `__DEV__` is false), so reviewers never see debug
+ * controls. Hard-set to `false` if you need to hide it inside a dev build too.
  *
- * Set to true during active development for access to:
- *   - Premium mode toggle
- *   - Daily limit simulation
+ * Gives access to:
  *   - Onboarding reset
- *   - Clear all data
- *   - Test local notification
+ *   - Progress reset
+ *   - Daily limit reset
+ *   - Reset all data (wipe + relaunch onboarding)
  */
-export const SHOW_DEV_OPTIONS = false;
+export const SHOW_DEV_OPTIONS = __DEV__;

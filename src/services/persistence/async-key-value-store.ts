@@ -27,4 +27,8 @@ export class AsyncKeyValueStore implements KeyValueStore {
   async remove(key: string): Promise<void> {
     await AsyncStorage.removeItem(key);
   }
+
+  async clear(): Promise<void> {
+    await AsyncStorage.clear();
+  }
 }

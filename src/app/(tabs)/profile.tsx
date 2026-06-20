@@ -1,4 +1,5 @@
 import Constants from 'expo-constants';
+import { reloadAppAsync } from 'expo';
 import * as WebBrowser from 'expo-web-browser';
 import React, { useState } from 'react';
 import { Alert, Linking, ScrollView, StyleSheet, Switch, View } from 'react-native';
@@ -7,6 +8,7 @@ import { LEGAL_LINKS } from '../../config/links';
 import { SHOW_DEV_OPTIONS } from '../../config/feature-flags';
 import { useAppAuth } from '../../contexts/auth-context';
 import { useOnboarding } from '../../contexts/onboarding-context';
+import { usePersistence } from '../../contexts/persistence-context';
 import { useProgress } from '../../contexts/progress-context';
 import { useSettings } from '../../contexts/settings-context';
 import { useSubscription } from '../../contexts/subscription-context';
@@ -24,6 +26,31 @@ function DevOptionsSection() {
   const { resetOnboarding } = useOnboarding();
   const { resetProgress } = useProgress();
   const { resetDailyLimit } = useLessonLimit();
+  const { kv, attempts } = usePersistence();
+
+  // Wipe every persisted store, then relaunch so all providers re-hydrate from
+  // an empty state — the app cold-starts straight into the onboarding flow.
+  const handleResetAll = () => {
+    Alert.alert(
+      'Reset all data?',
+      'Wipes onboarding, progress, settings, and all local data, then restarts the app. This cannot be undone.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Reset Everything',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await Promise.all([kv.clear(), attempts.clear()]);
+              await reloadAppAsync();
+            } catch {
+              Alert.alert('Reset failed', 'Could not clear local data. Please try again.');
+            }
+          },
+        },
+      ],
+    );
+  };
 
   return (
     <View style={styles.section}>
@@ -37,6 +64,9 @@ function DevOptionsSection() {
         </View>
         <View style={styles.devItem}>
           <Button label="Reset Daily Limit" onPress={() => resetDailyLimit()} />
+        </View>
+        <View style={styles.devItem}>
+          <Button label="Reset All Data" onPress={handleResetAll} />
         </View>
       </View>
     </View>
