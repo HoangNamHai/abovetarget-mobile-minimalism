@@ -4,6 +4,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { useLesson } from '../../contexts/lesson-context';
+import { useSubscription } from '../../contexts/subscription-context';
+import { useLessonLimit } from '../../hooks/use-lesson-limit';
 import { TOKENS, RADIUS } from '../../theme/tokens';
 import { Txt } from '../primitives/Txt';
 import { HookScreen } from './screens/HookScreen';
@@ -71,6 +73,13 @@ function LessonHeader({ progress, onExit }: { progress: number; onExit: () => vo
 
 export function LessonPlayer({ lessonId }: Props) {
   const { loadLesson, exitLesson, state, currentScreen, progress } = useLesson();
+  const { isPremium } = useSubscription();
+  const { limitReached, isLoading: limitLoading } = useLessonLimit();
+
+  // Free-tier gate: a non-premium user who has used today's lessons is sent to
+  // the paywall instead of into the lesson. Inert while RevenueCat is disabled
+  // (everyone is premium) and while the limit is still loading (avoids a flash).
+  const blockedByLimit = !limitLoading && !isPremium && limitReached;
 
   useEffect(() => {
     loadLesson(lessonId);
@@ -78,6 +87,13 @@ export function LessonPlayer({ lessonId }: Props) {
       exitLesson();
     };
   }, [lessonId, loadLesson, exitLesson]);
+
+  useEffect(() => {
+    if (blockedByLimit) {
+      // replace so the back gesture doesn't drop the user back into the lesson.
+      router.replace('/paywall');
+    }
+  }, [blockedByLimit]);
 
   // Leave the lesson. Guard router.back() — when the lesson was opened via a
   // deep link there's no history, and back() throws a GO_BACK navigator warning;
@@ -93,7 +109,17 @@ export function LessonPlayer({ lessonId }: Props) {
 
   let content: React.ReactNode;
 
-  if (state.loading || !currentScreen) {
+  if (blockedByLimit) {
+    // Redirecting to the paywall — hold a neutral placeholder so no lesson
+    // content flashes on screen.
+    content = (
+      <View className="flex-1 bg-surface items-center justify-center">
+        <Txt variant="body" className="text-on-surface">
+          Loading…
+        </Txt>
+      </View>
+    );
+  } else if (state.loading || !currentScreen) {
     content = (
       <View className="flex-1 bg-surface items-center justify-center">
         <Txt variant="body" className="text-on-surface">

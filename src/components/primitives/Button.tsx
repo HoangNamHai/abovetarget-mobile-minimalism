@@ -15,6 +15,7 @@ type Props = {
   disabled?: boolean;
   /** Blocks presses and shows a spinner in place of the label. */
   loading?: boolean;
+  testID?: string;
 };
 
 export function Button({
@@ -23,6 +24,7 @@ export function Button({
   variant = 'primary',
   disabled = false,
   loading = false,
+  testID,
 }: Props) {
   const isPrimary = variant === 'primary';
   const { impact } = useHaptics();
@@ -40,6 +42,7 @@ export function Button({
 
   return (
     <PressableFeedback
+      testID={testID}
       onPress={handlePress}
       disabled={inert}
       className={inert ? `${base} opacity-50` : base}

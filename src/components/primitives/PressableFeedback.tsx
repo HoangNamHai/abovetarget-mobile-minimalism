@@ -11,9 +11,10 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   disabled?: boolean;
+  testID?: string;
 };
 
-export function PressableFeedback({ onPress, children, className, disabled = false }: Props) {
+export function PressableFeedback({ onPress, children, className, disabled = false, testID }: Props) {
   const scale = useSharedValue(1);
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -22,6 +23,7 @@ export function PressableFeedback({ onPress, children, className, disabled = fal
 
   return (
     <Pressable
+      testID={testID}
       disabled={disabled}
       onPressIn={() => {
         if (disabled) return;

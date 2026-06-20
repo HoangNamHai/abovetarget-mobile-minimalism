@@ -37,7 +37,12 @@ function RootLayout() {
                             <SubscriptionProvider>
                               <LessonProvider>
                                 <FontGate>
-                                  <Stack screenOptions={{ headerShown: false }} />
+                                  <Stack screenOptions={{ headerShown: false }}>
+                                    <Stack.Screen
+                                      name="paywall"
+                                      options={{ presentation: 'modal' }}
+                                    />
+                                  </Stack>
                                 </FontGate>
                               </LessonProvider>
                             </SubscriptionProvider>

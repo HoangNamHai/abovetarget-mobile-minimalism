@@ -14,7 +14,8 @@
         "buildType": "apk"
       },
       "env": {
-        "EXPO_PUBLIC_ENV": "development"
+        "EXPO_PUBLIC_ENV": "development",
+        "EXPO_PUBLIC_REVENUECAT_ENABLED": "true"
       }
     },
     "development-device": {
@@ -27,7 +28,8 @@
         "buildType": "apk"
       },
       "env": {
-        "EXPO_PUBLIC_ENV": "development"
+        "EXPO_PUBLIC_ENV": "development",
+        "EXPO_PUBLIC_REVENUECAT_ENABLED": "true"
       }
     },
     "preview": {
@@ -39,7 +41,8 @@
         "buildType": "apk"
       },
       "env": {
-        "EXPO_PUBLIC_ENV": "preview"
+        "EXPO_PUBLIC_ENV": "preview",
+        "EXPO_PUBLIC_REVENUECAT_ENABLED": "true"
       }
     },
     "production": {

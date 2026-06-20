@@ -2,16 +2,21 @@
 // RevenueCat Configuration
 // ============================================
 
+import { REVENUECAT_ENABLED } from './env';
+
 /**
- * Feature Flag: Disable RevenueCat for first store release.
- * When true:
+ * Feature Flag: whether RevenueCat is live, driven by the env var
+ * EXPO_PUBLIC_REVENUECAT_ENABLED (set per build profile in eas.json).
+ *
+ * Default is DISABLED (env unset → REVENUECAT_ENABLED false). While disabled:
  *   - RevenueCat SDK will NOT initialize (no API calls)
  *   - All users treated as premium (no paywalls, no limits)
- *   - Subscription UI hidden on profile screen
+ *   - Subscription/paywall UI hidden on the profile screen
  *
- * To re-enable RevenueCat, set this to false.
+ * Enabled in development/preview profiles for sandbox/Test-Store testing.
+ * Production stays disabled until store subscription products exist.
  */
-export const REVENUECAT_DISABLED = true;
+export const REVENUECAT_DISABLED = !REVENUECAT_ENABLED;
 
 /**
  * RevenueCat API Keys

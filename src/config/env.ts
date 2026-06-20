@@ -6,6 +6,14 @@ export const CLERK_PUBLISHABLE_KEY: string =
 
 export const SENTRY_DSN: string = process.env.EXPO_PUBLIC_SENTRY_DSN ?? '';
 
+/**
+ * Whether RevenueCat is live. Off by default so production keeps treating every
+ * user as premium (no paywalls, no SDK calls) until store subscription products
+ * exist. Enabled per build profile (development/preview) via eas.json.
+ */
+export const REVENUECAT_ENABLED: boolean =
+  process.env.EXPO_PUBLIC_REVENUECAT_ENABLED === 'true';
+
 /** True when a Clerk publishable key is configured (else auth uses the stub). */
 export function hasClerkKey(): boolean {
   return CLERK_PUBLISHABLE_KEY.length > 0;

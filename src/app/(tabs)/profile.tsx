@@ -223,6 +223,13 @@ export default function Profile() {
               {isPremium ? 'PREMIUM' : 'FREE'}
             </Txt>
           </View>
+          {/* Upgrade — only for free users while RevenueCat is live */}
+          {!REVENUECAT_DISABLED && !isPremium && (
+            <>
+              <Hairline />
+              <LinkRow label="Upgrade to Premium" onPress={() => router.push('/paywall')} />
+            </>
+          )}
           {/* Restore Purchases — only meaningful when RevenueCat is live */}
           {!REVENUECAT_DISABLED && (
             <>
