@@ -156,29 +156,24 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
             <View
               style={{
                 flexDirection: 'row',
-                alignItems: 'center',
-                gap: 12,
+                alignItems: 'stretch',
                 borderWidth: 1,
                 borderColor: TOKENS['outline-variant'],
                 backgroundColor: TOKENS['surface-container-lowest'],
                 borderRadius: RADIUS.card,
-                padding: 16,
+                overflow: 'hidden',
                 marginTop: 24,
                 marginBottom: 24,
               }}
             >
+              {/* Full-height hero image flush to the left edge */}
               <Image
                 source={getLessonThumbnail(recentLesson.thumbnail)}
-                style={{
-                  width: 72,
-                  height: 72,
-                  borderRadius: RADIUS.card,
-                  backgroundColor: TOKENS['surface-container'],
-                }}
+                style={{ width: 110, alignSelf: 'stretch', backgroundColor: TOKENS['surface-container'] }}
                 contentFit="cover"
                 transition={200}
               />
-              <View style={{ flex: 1 }}>
+              <View style={{ flex: 1, paddingVertical: 16, paddingHorizontal: 16, justifyContent: 'center' }}>
                 <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: TOKENS.outline, marginBottom: 8 }}>
                   RECENTLY LEARNED
                 </Txt>
@@ -189,9 +184,11 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
                   {recentLesson.domain.toUpperCase()} · REVIEW
                 </Txt>
               </View>
-              <Txt variant="label" style={{ fontSize: 22, color: TOKENS.outline }}>
-                ›
-              </Txt>
+              <View style={{ justifyContent: 'center', paddingRight: 16 }}>
+                <Txt variant="label" style={{ fontSize: 22, color: TOKENS.outline }}>
+                  ›
+                </Txt>
+              </View>
             </View>
           </PressableFeedback>
 
