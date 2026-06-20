@@ -34,6 +34,7 @@ import React, { type ReactNode } from 'react';
 import { render, waitFor, fireEvent, act } from '@testing-library/react-native';
 import { LessonProvider, useLesson } from '../../../../contexts/lesson-context';
 import { ChallengeScreen } from '../ChallengeScreen';
+import { useQuestionScreen } from '../useQuestionScreen';
 
 // ─── Wrappers ─────────────────────────────────────────────────────────────────
 
@@ -179,4 +180,53 @@ test('C2 - pressing the screen-level Continue advances to the next question', as
   await waitFor(() => {
     expect(handlesRef.current!.getQuestionIndex()).toBe(1);
   });
+});
+
+// ─── Practice-loop fix ──────────────────────────────────────────────────────
+
+/** Drives the practice screen's question flow imperatively via a ref. */
+function PracticeAdvanceCapture({ handlesRef }: { handlesRef: { current: any } }) {
+  const lesson = useLesson();
+  const practice = lesson.state.lessonData?.screens.find((s) => s.screen_type === 'practice');
+  const questions = (practice?.content as { questions?: unknown[] })?.questions ?? [];
+  const qs = useQuestionScreen(questions as never);
+  handlesRef.current = {
+    load: lesson.loadLesson,
+    goToStage: lesson.goToStage,
+    setIndex: lesson.setCurrentQuestionIndex,
+    advance: qs.advance,
+    questionCount: questions.length,
+    screenType: lesson.screenType,
+    screens: lesson.state.lessonData?.screens.map((s) => s.screen_type) ?? [],
+  };
+  return null;
+}
+
+test('practice as the last screen ends on wrap instead of looping back to question 0', async () => {
+  const ref: { current: any } = { current: null };
+  await render(<PracticeAdvanceCapture handlesRef={ref} />, { wrapper: lessonWrapper });
+
+  await act(async () => {
+    ref.current.load('A1L2');
+  });
+  await waitFor(() => expect(ref.current.screens.length).toBeGreaterThan(0));
+
+  // Precondition that triggers the bug: practice is the final screen (after wrap).
+  expect(ref.current.screens[ref.current.screens.length - 1]).toBe('practice');
+
+  await act(async () => {
+    ref.current.goToStage('practice');
+  });
+  expect(ref.current.screenType).toBe('practice');
+
+  // Move to the last practice question, then advance.
+  await act(async () => {
+    ref.current.setIndex(ref.current.questionCount - 1);
+  });
+  await act(async () => {
+    ref.current.advance();
+  });
+
+  // Lands on wrap — not stuck/looping in practice.
+  expect(ref.current.screenType).toBe('wrap');
 });
