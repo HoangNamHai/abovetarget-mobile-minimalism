@@ -78,7 +78,9 @@ export function DragDrop({
 
   return (
     <View style={{ gap: 16 }}>
-      <QuestionPrompt>{question.question}</QuestionPrompt>
+      <QuestionPrompt situation={question.situation} scenarioName={question.scenario_name}>
+        {question.question}
+      </QuestionPrompt>
 
       {/* Drop Zones */}
       <View style={{ gap: 12 }}>

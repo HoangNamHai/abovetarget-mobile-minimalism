@@ -16,7 +16,9 @@ export function SingleSelect({ question, isLastQuestion }: { question: SingleSel
 
   return (
     <View style={{ gap: 16 }}>
-      <QuestionPrompt>{question.question}</QuestionPrompt>
+      <QuestionPrompt situation={question.situation} scenarioName={question.scenario_name}>
+        {question.question}
+      </QuestionPrompt>
       <View style={{ gap: 12 }}>
         {question.options.map((opt, i) => (
           <Appear key={opt.id} index={i + 1}>

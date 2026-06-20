@@ -26,6 +26,7 @@ import { SubscriptionProvider } from '../../../../contexts/subscription-context'
 import { LessonProvider, useLesson } from '../../../../contexts/lesson-context';
 import { WrapScreen } from '../WrapScreen';
 import { ReasonScreen } from '../ReasonScreen';
+import { PracticeScreen } from '../PracticeScreen';
 
 function providers(persistence = createInMemoryPersistence()) {
   return ({ children }: { children: ReactNode }) => (
@@ -73,4 +74,19 @@ test('reason screen renders ALL concept tabs, not just the first', async () => {
   expect(getByText('Synchronous vs Asynchronous')).toBeTruthy();
   expect(getByText('Rich vs Lean Channels')).toBeTruthy();
   expect(getByText('Communication Barriers')).toBeTruthy();
+});
+
+// Renders a lesson's practice screen (first question shown).
+function PracticeHarness({ lessonId }: { lessonId: string }) {
+  const { loadLesson, state } = useLesson();
+  React.useEffect(() => { loadLesson(lessonId); }, [loadLesson, lessonId]);
+  if (!state.lessonData) return null;
+  const practice = state.lessonData.screens.find((s) => s.screen_type === 'practice')!;
+  return <PracticeScreen screen={practice as never} />;
+}
+
+test('a scenario question renders its situation/context, not just the prompt', async () => {
+  const { findByText } = await render(<PracticeHarness lessonId="B2L3" />, { wrapper: providers() });
+  // The B2L3 practice question is unanswerable without its situation paragraph.
+  await findByText(/facilitating a meeting between two team members/i);
 });
