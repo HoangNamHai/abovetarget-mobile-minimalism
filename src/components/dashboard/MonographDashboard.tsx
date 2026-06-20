@@ -27,7 +27,7 @@ const DOMAIN_LABELS: Record<Domain, { label: string; sub: string }> = {
 
 export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }: Props) {
   const { progress, getCurrentStreak, getCurrentMilestone } = useProgress();
-  const { nextLesson, allCaughtUp, lessonsToday, dailyGoal, goalMet, lessonsCompleted, mastery, domainTotals } =
+  const { nextLesson, recentLesson, allCaughtUp, lessonsToday, dailyGoal, goalMet, lessonsCompleted, mastery, domainTotals } =
     useLearningHome();
   const streak = getCurrentStreak();
   const milestone = getCurrentMilestone();
@@ -48,6 +48,10 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
   const handleContinue = () => {
     if (nextLesson && onOpenLesson) onOpenLesson(nextLesson.id);
     else onStartStudy();
+  };
+
+  const handleReview = () => {
+    if (recentLesson && onOpenLesson) onOpenLesson(recentLesson.id);
   };
 
   return (
@@ -132,6 +136,45 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
       </View>
 
       <Hairline />
+
+      {/* Recently Learned — revisit the last lesson studied */}
+      {recentLesson && (
+        <>
+          <PressableFeedback onPress={handleReview}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: 12,
+                borderWidth: 1,
+                borderColor: TOKENS['outline-variant'],
+                backgroundColor: TOKENS['surface-container-lowest'],
+                borderRadius: RADIUS.card,
+                padding: 20,
+                marginTop: 24,
+                marginBottom: 24,
+              }}
+            >
+              <View style={{ flex: 1 }}>
+                <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: TOKENS.outline, marginBottom: 8 }}>
+                  RECENTLY LEARNED
+                </Txt>
+                <Txt variant="display" style={{ fontSize: 20, lineHeight: 26, color: TOKENS['on-background'], marginBottom: 6 }}>
+                  {recentLesson.title}
+                </Txt>
+                <Txt variant="label" style={{ fontSize: 11, letterSpacing: 2, color: TOKENS.outline }}>
+                  {recentLesson.domain.toUpperCase()} · REVIEW
+                </Txt>
+              </View>
+              <Txt variant="label" style={{ fontSize: 22, color: TOKENS.outline }}>
+                ›
+              </Txt>
+            </View>
+          </PressableFeedback>
+
+          <Hairline />
+        </>
+      )}
 
       {/* Next Milestone — now shows real progress to the next tier */}
       <View
