@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from 'expo-image';
 import { ScrollView, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { lessonsIndex } from '../../data/lessons-data';
 import { getLessonThumbnail } from '../../data/lesson-images';
@@ -20,6 +21,7 @@ type Props = {
 
 export function LessonsList({ domainFilter }: Props) {
   const { progress } = useProgress();
+  const insets = useSafeAreaInsets();
   const completedIds = new Set(progress.recentAttempts.map((a) => a.lessonId));
 
   const matches = (lesson: Lesson) =>
@@ -28,7 +30,7 @@ export function LessonsList({ domainFilter }: Props) {
   return (
     <ScrollView
       style={{ flex: 1, backgroundColor: TOKENS.background }}
-      contentContainerStyle={{ paddingBottom: 32 }}
+      contentContainerStyle={{ paddingTop: insets.top, paddingBottom: 32 }}
       showsVerticalScrollIndicator={false}
     >
       {domainFilter && (

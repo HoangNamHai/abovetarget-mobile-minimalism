@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Image } from 'expo-image';
 import { useProgress } from '../../contexts/progress-context';
 import { useLearningHome } from '../../hooks/use-learning-home';
@@ -33,6 +34,7 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
     useLearningHome();
   const streak = getCurrentStreak();
   const milestone = getCurrentMilestone();
+  const insets = useSafeAreaInsets();
 
   const domains = DOMAIN_ORDER.map((key) => {
     const completed = progress.domainProgress[key].completed;
@@ -60,7 +62,7 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
     <ScrollView
       style={{ flex: 1, backgroundColor: TOKENS.background }}
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 40, paddingBottom: 80 }}
+      contentContainerStyle={{ paddingHorizontal: 20, paddingTop: insets.top + 12, paddingBottom: 80 }}
     >
       {/* Header: Streak */}
       <View

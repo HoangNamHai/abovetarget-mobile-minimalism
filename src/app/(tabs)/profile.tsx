@@ -4,6 +4,7 @@ import { router } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import React, { useState } from 'react';
 import { Alert, Linking, ScrollView, StyleSheet, Switch, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { REVENUECAT_DISABLED } from '../../config/revenuecat';
 import { LEGAL_LINKS } from '../../config/links';
 import { SHOW_DEV_OPTIONS } from '../../config/feature-flags';
@@ -135,6 +136,7 @@ export default function Profile() {
   const { reminderTime, setReminderTime, isAvailable: notificationsAvailable } =
     useLocalNotifications();
   const [restoring, setRestoring] = useState(false);
+  const insets = useSafeAreaInsets();
 
   const appVersion = Constants.expoConfig?.version ?? '—';
 
@@ -204,7 +206,7 @@ export default function Profile() {
   return (
     <ScrollView
       style={styles.container}
-      contentContainerStyle={styles.content}
+      contentContainerStyle={[styles.content, { paddingTop: insets.top + 12 }]}
       showsVerticalScrollIndicator={false}
     >
       {/* Account */}
@@ -311,7 +313,6 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingHorizontal: 20,
-    paddingTop: 24,
     paddingBottom: 40,
   },
   section: {

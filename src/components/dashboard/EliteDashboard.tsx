@@ -1,6 +1,7 @@
 import { Image } from 'expo-image';
 import React from 'react';
 import { ScrollView, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { TOKENS } from '../../theme/tokens';
 import type { Domain } from '../../types/progress';
@@ -32,12 +33,13 @@ const ELITE_SESSION_STUB = { streak: 0, points: 0 };
 
 export function EliteDashboard({ onStartStudy }: Props) {
   const state = ELITE_SESSION_STUB;
+  const insets = useSafeAreaInsets();
 
   return (
     <ScrollView
       style={{ flex: 1, backgroundColor: TOKENS.background }}
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 40, paddingBottom: 80 }}
+      contentContainerStyle={{ paddingHorizontal: 20, paddingTop: insets.top + 12, paddingBottom: 80 }}
     >
       {/* Continuous Mastery Streak */}
       <View style={{ marginBottom: 32 }}>

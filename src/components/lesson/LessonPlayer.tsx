@@ -163,11 +163,13 @@ export function LessonPlayer({ lessonId }: Props) {
     }
   }
 
-  // Lesson screens render full-bleed ScrollViews; add a top safe-area inset so
-  // headings clear the status bar / dynamic island instead of rendering under it.
-  // A persistent header gives the user a way out and shows lesson progress.
+  // Lesson screens render full-bleed ScrollViews; apply top + bottom safe-area
+  // insets so headings clear the status bar / dynamic island and bottom actions
+  // (e.g. "Check Answer", "Continue") clear the Android nav bar / home indicator
+  // instead of rendering underneath it. A persistent header gives the user a way
+  // out and shows lesson progress.
   return (
-    <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: TOKENS.surface }}>
+    <SafeAreaView edges={['top', 'bottom']} style={{ flex: 1, backgroundColor: TOKENS.surface }}>
       <LessonHeader progress={progress} onExit={leaveLesson} />
       <View style={{ flex: 1 }}>{content}</View>
     </SafeAreaView>

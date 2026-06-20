@@ -11,10 +11,9 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        headerShown: true,
-        headerTitle: '',
-        headerStyle: styles.header,
-        headerShadowVisible: false,
+        // No nav header on tab roots — each screen renders its own content and
+        // handles the top safe-area inset. An empty header just wasted vertical space.
+        headerShown: false,
         tabBarActiveTintColor: '#000000',
         tabBarInactiveTintColor: '#7e7576',
         tabBarStyle: styles.tabBar,
@@ -46,9 +45,6 @@ export default function TabsLayout() {
 }
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: '#ffffff',
-  },
   tabBar: {
     backgroundColor: '#ffffff',
     borderTopColor: '#cfc4c5',
