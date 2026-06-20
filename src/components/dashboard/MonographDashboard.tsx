@@ -1,7 +1,9 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
+import { Image } from 'expo-image';
 import { useProgress } from '../../contexts/progress-context';
 import { useLearningHome } from '../../hooks/use-learning-home';
+import { getLessonThumbnail } from '../../data/lesson-images';
 import { DOMAIN_ORDER } from '../../data/domains';
 import { TOKENS, RADIUS } from '../../theme/tokens';
 import type { Domain } from '../../types/progress';
@@ -110,29 +112,39 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
           marginTop: 24,
           marginBottom: 24,
           backgroundColor: TOKENS.primary,
-          padding: 28,
           borderRadius: RADIUS.card,
+          overflow: 'hidden',
         }}
       >
-        <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: 'rgba(255,255,255,0.7)', marginBottom: 10 }}>
-          {allCaughtUp ? 'ALL CAUGHT UP' : 'CONTINUE LEARNING'}
-        </Txt>
-        <Txt
-          variant="display"
-          style={{ fontSize: 26, lineHeight: 30, color: TOKENS['on-primary'], marginBottom: allCaughtUp ? 20 : 6 }}
-        >
-          {allCaughtUp ? "YOU'VE FINISHED EVERY LESSON." : nextLesson!.title}
-        </Txt>
         {!allCaughtUp && (
-          <Txt variant="label" style={{ fontSize: 11, letterSpacing: 2, color: 'rgba(255,255,255,0.7)', marginBottom: 20 }}>
-            {nextLesson!.domain.toUpperCase()} · {nextLesson!.duration} MIN
-          </Txt>
+          <Image
+            source={getLessonThumbnail(nextLesson!.thumbnail)}
+            style={{ width: '100%', aspectRatio: 16 / 9, backgroundColor: TOKENS['surface-container'] }}
+            contentFit="cover"
+            transition={200}
+          />
         )}
-        <Button
-          label={allCaughtUp ? 'Review Lessons' : 'Continue'}
-          onPress={handleContinue}
-          variant="secondary"
-        />
+        <View style={{ padding: 28 }}>
+          <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: 'rgba(255,255,255,0.7)', marginBottom: 10 }}>
+            {allCaughtUp ? 'ALL CAUGHT UP' : 'CONTINUE LEARNING'}
+          </Txt>
+          <Txt
+            variant="display"
+            style={{ fontSize: 26, lineHeight: 30, color: TOKENS['on-primary'], marginBottom: allCaughtUp ? 20 : 6 }}
+          >
+            {allCaughtUp ? "YOU'VE FINISHED EVERY LESSON." : nextLesson!.title}
+          </Txt>
+          {!allCaughtUp && (
+            <Txt variant="label" style={{ fontSize: 11, letterSpacing: 2, color: 'rgba(255,255,255,0.7)', marginBottom: 20 }}>
+              {nextLesson!.domain.toUpperCase()} · {nextLesson!.duration} MIN
+            </Txt>
+          )}
+          <Button
+            label={allCaughtUp ? 'Review Lessons' : 'Continue'}
+            onPress={handleContinue}
+            variant="secondary"
+          />
+        </View>
       </View>
 
       <Hairline />
@@ -150,11 +162,22 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
                 borderColor: TOKENS['outline-variant'],
                 backgroundColor: TOKENS['surface-container-lowest'],
                 borderRadius: RADIUS.card,
-                padding: 20,
+                padding: 16,
                 marginTop: 24,
                 marginBottom: 24,
               }}
             >
+              <Image
+                source={getLessonThumbnail(recentLesson.thumbnail)}
+                style={{
+                  width: 72,
+                  height: 72,
+                  borderRadius: RADIUS.card,
+                  backgroundColor: TOKENS['surface-container'],
+                }}
+                contentFit="cover"
+                transition={200}
+              />
               <View style={{ flex: 1 }}>
                 <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: TOKENS.outline, marginBottom: 8 }}>
                   RECENTLY LEARNED
