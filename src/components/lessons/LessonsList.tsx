@@ -172,6 +172,17 @@ export function LessonsList({ domainFilter }: Props) {
                       <Txt variant="label" style={{ fontSize: 12, color: TOKENS.outline }}>
                         {lesson.duration} min
                       </Txt>
+                      {/* Dev-only lesson ID for testing/navigation. */}
+                      {__DEV__ ? (
+                        <>
+                          <Txt variant="label" style={{ fontSize: 12, color: TOKENS['surface-dim'] }}>
+                            •
+                          </Txt>
+                          <Txt variant="label" style={{ fontSize: 12, color: TOKENS.outline }}>
+                            {lesson.id}
+                          </Txt>
+                        </>
+                      ) : null}
                     </View>
                   </View>
                 </View>

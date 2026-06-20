@@ -25,7 +25,15 @@ type Props = {
   lessonId: string;
 };
 
-function LessonHeader({ progress, onExit }: { progress: number; onExit: () => void }) {
+function LessonHeader({
+  progress,
+  onExit,
+  lessonId,
+}: {
+  progress: number;
+  onExit: () => void;
+  lessonId?: string;
+}) {
   return (
     <View
       style={{
@@ -65,6 +73,15 @@ function LessonHeader({ progress, onExit }: { progress: number; onExit: () => vo
           }}
         />
       </View>
+      {/* Dev-only lesson ID badge to identify the current lesson while testing. */}
+      {__DEV__ && lessonId ? (
+        <Txt
+          variant="label"
+          style={{ fontSize: 11, letterSpacing: 1, color: TOKENS.outline }}
+        >
+          {lessonId}
+        </Txt>
+      ) : null}
     </View>
   );
 }
@@ -135,7 +152,7 @@ export function LessonPlayer({ lessonId }: Props) {
   // A persistent header gives the user a way out and shows lesson progress.
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: TOKENS.surface }}>
-      <LessonHeader progress={progress} onExit={handleExit} />
+      <LessonHeader progress={progress} onExit={handleExit} lessonId={lessonId} />
       <View style={{ flex: 1 }}>{content}</View>
     </SafeAreaView>
   );
