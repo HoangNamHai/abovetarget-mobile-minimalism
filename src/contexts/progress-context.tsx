@@ -22,11 +22,51 @@ import {
 } from './reducers/progress-reducer';
 import type { LessonAttempt } from '../types/progress';
 import { deriveDomainCompletion, deriveOverall, deriveActiveDays } from '../services/persistence';
+import { getAllLessons } from '../data/lessons-data';
+import { DOMAIN_OF } from '../data/domains';
 
 export type { Domain, DomainProgress, UserProgress } from './reducers/progress-reducer';
 export type { LessonAttempt } from '../types/progress';
 
 const PROGRESS_KEY = '@pmp/v2/user-progress';
+
+// ─── Sample data (dev only) ─────────────────────────────────────────────────
+//
+// Build a believable mid-journey attempt log: ~14 real lessons completed across
+// the last 6 consecutive days (→ a 6-day streak), spread over all three domains
+// with a realistic spread of scores.
+function buildSampleAttempts(): LessonAttempt[] {
+  const lessons = getAllLessons();
+  // Walk the catalog with a stride for domain/module variety.
+  const picks = [];
+  const step = Math.max(1, Math.floor(lessons.length / 14));
+  for (let i = 0; i < lessons.length && picks.length < 14; i += step) picks.push(lessons[i]);
+
+  const SCORES = [88, 72, 95, 80, 100, 76, 92, 84, 68, 90, 78, 96, 82, 86];
+  const PER_DAY = [3, 3, 2, 2, 2, 2]; // most-recent → oldest; sums to 14
+
+  const attempts: LessonAttempt[] = [];
+  let idx = 0;
+  for (let day = 0; day < PER_DAY.length; day++) {
+    for (let n = 0; n < PER_DAY[day] && idx < picks.length; n++) {
+      const lesson = picks[idx];
+      const completedAt = new Date();
+      completedAt.setDate(completedAt.getDate() - day);
+      completedAt.setHours(9 + n * 3, 15, 0, 0);
+      attempts.push({
+        id: `sample-${idx}-${completedAt.getTime()}`,
+        lessonId: lesson.id,
+        lessonTitle: lesson.title,
+        questionCount: 3,
+        score: SCORES[idx % SCORES.length],
+        completedAt: completedAt.toISOString(),
+        domain: DOMAIN_OF[lesson.domain],
+      });
+      idx++;
+    }
+  }
+  return attempts;
+}
 
 interface CarryOver {
   streakFreeze?: StreakFreeze;
@@ -58,6 +98,7 @@ export function hydrateProgressFromLog(
 interface ProgressContextValue extends ProgressState {
   recordLessonAttempt: (attempt: Omit<LessonAttempt, 'id' | 'completedAt'>) => Promise<void>;
   resetProgress: () => Promise<void>;
+  generateSampleProgress: () => Promise<void>;
   refreshProgress: () => Promise<void>;
   getCurrentMilestone: () => { name: string; threshold: number; progress: number };
   getCurrentStreak: () => number;
@@ -136,6 +177,34 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     await attempts.clear();
   }, [kv, attempts]);
 
+  // Dev tool: replace progress with a realistic sample so screens have data to
+  // render. Writes the sample attempts to the log, derives progress from them,
+  // and stamps a multi-day streak. Updates state immediately (no reload needed).
+  const generateSampleProgress = useCallback(async () => {
+    const sample = buildSampleAttempts();
+    await attempts.clear();
+    for (const a of sample) {
+      try {
+        await attempts.record(a);
+      } catch (error) {
+        console.warn('[Progress] Failed to write sample attempt:', error);
+      }
+    }
+    const activeDays = Array.from(
+      new Set(sample.map((a) => getLocalDateString(new Date(a.completedAt)))),
+    ).sort();
+    const streak = activeDays.length; // days are consecutive by construction
+    const progress: UserProgress = {
+      ...hydrateProgressFromLog(sample, null),
+      dailyStreak: streak,
+      lastActiveDate: getLocalDateString(),
+      bestStreak: streak,
+      activeDays,
+    };
+    await kv.setJSON(PROGRESS_KEY, progress);
+    dispatch({ type: 'LOAD_SUCCESS', payload: progress });
+  }, [kv, attempts]);
+
   const refreshProgress = useCallback(async () => {
     dispatch({ type: 'LOAD_START' });
     const stored = await kv.getJSON<UserProgress>(PROGRESS_KEY);
@@ -178,12 +247,13 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       ...state,
       recordLessonAttempt,
       resetProgress,
+      generateSampleProgress,
       refreshProgress,
       getCurrentMilestone: getMilestone,
       getCurrentStreak,
       getStreakMessage,
     }),
-    [state, recordLessonAttempt, resetProgress, refreshProgress, getMilestone, getCurrentStreak, getStreakMessage],
+    [state, recordLessonAttempt, resetProgress, generateSampleProgress, refreshProgress, getMilestone, getCurrentStreak, getStreakMessage],
   );
 
   return <ProgressContext.Provider value={value}>{children}</ProgressContext.Provider>;

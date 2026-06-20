@@ -24,9 +24,18 @@ import { TOKENS, RADIUS } from '../../theme/tokens';
 
 function DevOptionsSection() {
   const { resetOnboarding } = useOnboarding();
-  const { resetProgress } = useProgress();
+  const { resetProgress, generateSampleProgress } = useProgress();
   const { resetDailyLimit } = useLessonLimit();
   const { kv, attempts } = usePersistence();
+
+  const handleGenerateSample = async () => {
+    try {
+      await generateSampleProgress();
+      Alert.alert('Sample progress generated', 'Home and Profile now show sample data.');
+    } catch {
+      Alert.alert('Could not generate sample progress');
+    }
+  };
 
   // Wipe every persisted store, then relaunch so all providers re-hydrate from
   // an empty state — the app cold-starts straight into the onboarding flow.
@@ -64,6 +73,9 @@ function DevOptionsSection() {
         </View>
         <View style={styles.devItem}>
           <Button label="Reset Daily Limit" onPress={() => resetDailyLimit()} />
+        </View>
+        <View style={styles.devItem}>
+          <Button label="Generate Sample Progress" onPress={handleGenerateSample} />
         </View>
         <View style={styles.devItem}>
           <Button label="Reset All Data" onPress={handleResetAll} />

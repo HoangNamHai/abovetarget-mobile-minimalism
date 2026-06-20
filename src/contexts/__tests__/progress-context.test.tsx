@@ -45,6 +45,28 @@ test('hydrates progress from the attempts log and carry-over when no v2 aggregat
   expect(result.current.progress.domainProgress.people.completed).toBe(1);
 });
 
+test('generateSampleProgress populates a realistic multi-day, multi-domain log', async () => {
+  const persistence = createInMemoryPersistence();
+  const { result } = await renderHook(() => useProgress(), { wrapper: wrapper(persistence) });
+  await waitFor(() => expect(result.current.isLoading).toBe(false));
+  await act(async () => {
+    await result.current.generateSampleProgress();
+  });
+  const { progress } = result.current;
+  expect(progress.totalLessonsCompleted).toBe(14);
+  expect(await persistence.attempts.count()).toBe(14);
+  // 6 consecutive days → a 6-day streak surfaced today.
+  expect(progress.activeDays).toHaveLength(6);
+  expect(result.current.getCurrentStreak()).toBe(6);
+  // All three domains have completions.
+  expect(progress.domainProgress.people.completed).toBeGreaterThan(0);
+  expect(progress.domainProgress.process.completed).toBeGreaterThan(0);
+  expect(progress.domainProgress.business.completed).toBeGreaterThan(0);
+  // Persisted to the aggregate so a reload keeps the sample.
+  const saved = await persistence.kv.getJSON<{ totalLessonsCompleted: number }>('@pmp/v2/user-progress');
+  expect(saved?.totalLessonsCompleted).toBe(14);
+});
+
 test('resetProgress clears aggregate and attempts log', async () => {
   const persistence = createInMemoryPersistence();
   const { result } = await renderHook(() => useProgress(), { wrapper: wrapper(persistence) });
