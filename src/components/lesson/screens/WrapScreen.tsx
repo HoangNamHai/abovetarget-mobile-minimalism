@@ -10,11 +10,13 @@ import { useLessonLimit } from '../../../hooks/use-lesson-limit';
 import { getAllLessons } from '../../../data/lessons-data';
 import { getLessonThumbnail } from '../../../data/lesson-images';
 import { TOKENS, RADIUS } from '../../../theme/tokens';
+import { authRequired } from '../../../config/env';
 import { Txt } from '../../primitives/Txt';
 import { RichText } from '../../primitives/RichText';
 import { Appear } from '../../primitives/Appear';
 import { Button } from '../../primitives/Button';
 import { Hairline } from '../../primitives/Hairline';
+import { SaveProgressCard } from '../../auth/SaveProgressCard';
 
 // Maps lesson domain strings to progress Domain type
 const DOMAIN_MAP: Record<string, Domain> = {
@@ -138,6 +140,13 @@ export function WrapScreen({ screen, onFinish }: Props) {
             </Appear>
           ))}
         </View>
+      ) : null}
+
+      {/* Sign-in nudge for anonymous users (only when Clerk is configured). */}
+      {authRequired() ? (
+        <Appear index={step++}>
+          <SaveProgressCard />
+        </Appear>
       ) : null}
 
       {/* Next lesson */}

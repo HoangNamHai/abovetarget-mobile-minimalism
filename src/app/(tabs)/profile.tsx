@@ -7,6 +7,7 @@ import { Alert, Linking, ScrollView, StyleSheet, Switch, View } from 'react-nati
 import { REVENUECAT_DISABLED } from '../../config/revenuecat';
 import { LEGAL_LINKS } from '../../config/links';
 import { SHOW_DEV_OPTIONS } from '../../config/feature-flags';
+import { authRequired } from '../../config/env';
 import { useAppAuth } from '../../contexts/auth-context';
 import { useOnboarding } from '../../contexts/onboarding-context';
 import { usePersistence } from '../../contexts/persistence-context';
@@ -230,6 +231,13 @@ export default function Profile() {
                 label={restoring ? 'Restoring…' : 'Restore Purchases'}
                 onPress={restoring ? () => {} : handleRestore}
               />
+            </>
+          )}
+          {/* Sign In — anonymous users (auth configured but not signed in) */}
+          {!isSignedIn && authRequired() && (
+            <>
+              <Hairline />
+              <LinkRow label="Sign In" onPress={() => router.push('/(auth)/sign-in')} />
             </>
           )}
           {/* Sign Out — only when authenticated (Clerk active) */}

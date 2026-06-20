@@ -1,31 +1,24 @@
 // Pure routing decision for the app's landing redirect (app/index.tsx).
-// Kept free of React/Clerk so it can be unit-tested in isolation.
+// Kept free of React so it can be unit-tested in isolation.
+//
+// Auth is OPTIONAL (anonymous mode): the app is fully usable signed-out, so the
+// landing gate only depends on onboarding. Signing in is offered later (after a
+// completed unit, or from Profile), never forced here.
 
 export interface LandingRouteInput {
   /** Onboarding context still hydrating from storage. */
   onboardingLoading: boolean;
-  /** Clerk still determining the session (only meaningful when authRequired). */
-  authLoading: boolean;
   hasCompletedOnboarding: boolean;
-  /** Whether auth is enforced at all (false when no Clerk key is configured). */
-  authRequired: boolean;
-  isSignedIn: boolean;
 }
 
-export type LandingRoute = '/(onboarding)' | '/(auth)/sign-in' | '/(tabs)/home';
+export type LandingRoute = '/(onboarding)' | '/(tabs)/home';
 
 /**
  * Decide where the root index route should send the user.
  * Returns `null` while we should render nothing (still loading).
- *
- * Order: wait for state → onboarding → auth → app.
  */
 export function resolveLandingRoute(input: LandingRouteInput): LandingRoute | null {
-  const { onboardingLoading, authLoading, hasCompletedOnboarding, authRequired, isSignedIn } =
-    input;
-
-  if (onboardingLoading || (authRequired && authLoading)) return null;
-  if (!hasCompletedOnboarding) return '/(onboarding)';
-  if (authRequired && !isSignedIn) return '/(auth)/sign-in';
+  if (input.onboardingLoading) return null;
+  if (!input.hasCompletedOnboarding) return '/(onboarding)';
   return '/(tabs)/home';
 }
