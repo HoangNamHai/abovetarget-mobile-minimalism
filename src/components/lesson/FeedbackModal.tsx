@@ -11,7 +11,7 @@ import { FireworkBurst } from './FireworkBurst';
 
 const SUCCESS_GREEN = ACCENTS.success;
 const RETRY_RED = ACCENTS.error;
-const REVEAL_INK = ACCENTS.revealInk;
+const REVEAL_ORANGE = ACCENTS.reveal;
 
 // ─── Props ────────────────────────────────────────────────────────────────────
 
@@ -51,7 +51,7 @@ export function FeedbackModal({ onSuccessNext, onRetry, onReveal }: Props) {
       ? SUCCESS_GREEN
       : state.modalType === 'retry'
         ? RETRY_RED
-        : REVEAL_INK;
+        : REVEAL_ORANGE;
 
   return (
     <Modal

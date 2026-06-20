@@ -8,6 +8,6 @@ export const ACCENTS = {
   success: '#16A34A',
   /** Wrong / try again. */
   error: '#DC2626',
-  /** Neutral answer reveal. */
-  revealInk: '#1a1c1c',
+  /** Answer reveal — dark burnt orange. */
+  reveal: '#C2410C',
 } as const;

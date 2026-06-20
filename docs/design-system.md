@@ -64,7 +64,7 @@ These are **the only** non-greyscale colors, centralized in `src/theme/accents.t
 | Selection blue | `#2563EB` | "Your current pick" (pre-check) | `QuizOption` selected |
 | Success green | `#16A34A` | Correct answer | `FeedbackModal` success sheet |
 | Error red | `#DC2626` | Wrong / try again | `FeedbackModal` retry sheet |
-| Reveal ink | `#1a1c1c` | Neutral answer reveal | `FeedbackModal` reveal sheet |
+| Reveal orange | `#C2410C` | Answer reveal | `FeedbackModal` reveal sheet |
 | Hairline grey | `#9ca3af` | Table borders | `RichText` tables |
 
 > Decorative only: `FireworkBurst` success particles (pastel set `#FDE68A`,
@@ -143,16 +143,24 @@ Use multiples of 4. Common values in use: **4, 6, 8, 12, 16, 20, 24, 32**.
 - Section vertical rhythm: **24** between blocks, **16** within.
 - Inline gaps: **8** (chips), **12** (options/zones), **16** (stat groups).
 
-### Radius scale (canonical — standardize toward this)
+### Radius scale (canonical)
 
-| Token | Value | Use |
-|---|---|---|
-| `radius-card` | **4** | Cards, quiz options, drop zones (= Tailwind `rounded-sm`) |
-| `radius-media` | **8** | Image cards (lesson hero), tables |
-| `radius-sheet` | **16** | Bottom-sheet top corners |
-| `radius-pill` | **999** | Buttons, chips, badges, nav buttons (`rounded-full`) |
+Source of truth in code: `RADIUS` in `src/theme/tokens.ts`. Import it — never
+hardcode a radius literal in a screen.
 
-All card containers use `radius-card` (4). Don't introduce new radii outside this scale.
+| Token | `RADIUS` key | Value | Use |
+|---|---|---|---|
+| `radius-card` | `RADIUS.card` | **4** | Cards, quiz options, drop zones (= Tailwind `rounded-sm`) |
+| `radius-media` | `RADIUS.media` | **8** | Image cards (lesson hero), tables |
+| `radius-sheet` | `RADIUS.sheet` | **16** | Bottom-sheet top corners |
+| `radius-pill` | `RADIUS.pill` | **999** | Buttons, chips, badges, nav buttons (`rounded-full`) |
+| `radius-track` | `RADIUS.track` | **3** | Thin progress-bar tracks |
+
+All card containers use `RADIUS.card` (4). Don't introduce new radii outside this
+scale. **Exception:** geometric circles use `radius = ½ · width/height` computed
+inline (selection dots, the Elite progress ring) — these are shapes, not scale
+values. The **Elite** brand is sharp (`rounded-none` / `0`), so Elite surfaces
+deliberately opt out of `RADIUS.card`.
 
 ### Layout patterns
 
@@ -208,7 +216,7 @@ Precedence: **disabled > selected > unselected**.
 - Bottom sheet, `radius-sheet` top corners, **not drag-dismissable** (no grab handle;
   dismiss via action button).
 - Three identities, all white text: **success = green**, **retry = red**,
-  **reveal = ink**. Reveal uses a `secondary` (white) button for contrast.
+  **reveal = orange**. Reveal uses a `secondary` (white) button for contrast.
 - Headline 36 display uppercase; explanation 18/28 via `RichText`.
 
 ### RichText (`primitives/RichText.tsx`)
@@ -333,4 +341,7 @@ the same `TOKENS`.
 
 _Resolved: card radius standardized to 4; stale `DEFAULT_PROGRESS` domain totals
 (`total: 50`) removed — domain progress now derives real denominators from
-`domainLessonTotals()`._
+`domainLessonTotals()`. Radius scale extracted to `RADIUS` in
+`src/theme/tokens.ts` (single source of truth) and every screen now imports it
+instead of hardcoding literals; off-scale strays fixed — Takeaways quick-jump
+chips `6 → RADIUS.pill`, Elite dashboard cards `4 → 0` (sharp, per Elite brand)._
