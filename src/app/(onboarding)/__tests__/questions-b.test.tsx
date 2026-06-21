@@ -6,6 +6,9 @@ import { OnboardingProvider } from '../../../contexts/onboarding-context';
 
 jest.mock('expo-linking', () => ({ parse: () => ({ queryParams: {} }), getInitialURL: async () => null, addEventListener: () => ({ remove: () => {} }) }));
 jest.mock('expo-router', () => ({ router: { push: jest.fn(), replace: jest.fn() } }));
+jest.mock('../../../hooks/use-local-notifications', () => ({
+  useLocalNotifications: () => ({ isAvailable: true, reminderTime: 'disabled', setReminderTime: jest.fn(async () => true) }),
+}));
 
 import Confidence from '../confidence';
 import Reminder from '../reminder';
