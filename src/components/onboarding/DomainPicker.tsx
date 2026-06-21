@@ -58,9 +58,11 @@ export function DomainPicker({
                   transition={200}
                 />
               )}
-              {/* Scrim so the white title stays readable over any illustration. */}
+              {/* Scrim so the white title stays readable — confined to the bottom
+                  band so the illustration above stays bright. */}
               <LinearGradient
-                colors={['rgba(0,0,0,0.05)', 'rgba(0,0,0,0.75)']}
+                colors={['transparent', 'transparent', 'rgba(0,0,0,0.8)']}
+                locations={[0, 0.5, 1]}
                 style={StyleSheet.absoluteFill}
               />
               <View style={{ flex: 1, padding: 14, justifyContent: 'space-between' }}>

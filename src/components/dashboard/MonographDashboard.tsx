@@ -145,9 +145,11 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain, o
               contentFit="cover"
               transition={200}
             />
-            {/* Gradient fade so the overlaid text + button stay legible */}
+            {/* Gradient fade so the overlaid text + button stay legible — kept to
+                the lower portion so the illustration stays bright. */}
             <LinearGradient
-              colors={['rgba(0,0,0,0.05)', 'rgba(0,0,0,0.92)']}
+              colors={['transparent', 'rgba(0,0,0,0.35)', 'rgba(0,0,0,0.92)']}
+              locations={[0, 0.45, 1]}
               style={StyleSheet.absoluteFill}
             />
             <View style={{ flex: 1, padding: 24, justifyContent: 'flex-end' }}>
