@@ -10,12 +10,23 @@ import React, {
 import { usePersistence } from './persistence-context';
 
 // Types
+export type Experience = 'new' | 'informal' | 'experienced';
+export type ConfidenceDomain = 'people' | 'process' | 'business';
+export type Reminder = 'morning' | 'lunch' | 'evening' | 'none';
+
 export interface UserPreferences {
   goals: string[];
   dailyGoal: number;
   focusDomain?: string;
+  examDate?: number | null;
+  reasons: string[];
+  experience: Experience;
+  confidence: { people: number; process: number; business: number };
+  reminder: Reminder;
   onboardingCompletedAt: number;
 }
+
+const DEFAULT_CONFIDENCE = { people: 3, process: 3, business: 3 };
 
 interface OnboardingContextType {
   // State
@@ -24,11 +35,21 @@ interface OnboardingContextType {
   selectedGoals: string[];
   dailyGoal: number;
   focusDomain: string | null;
+  examDate: number | null;
+  reasons: string[];
+  experience: Experience;
+  confidence: { people: number; process: number; business: number };
+  reminder: Reminder;
 
   // Actions
   toggleGoal: (goalId: string) => void;
   setDailyGoal: (goal: number) => void;
   setFocusDomain: (domain: string | null) => void;
+  setExamDate: (ts: number | null) => void;
+  toggleReason: (id: string) => void;
+  setExperience: (v: Experience) => void;
+  setConfidence: (domain: ConfidenceDomain, value: number) => void;
+  setReminder: (v: Reminder) => void;
   completeOnboarding: () => Promise<void>;
   resetOnboarding: () => Promise<void>;
 }
@@ -46,6 +67,11 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
   const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
   const [dailyGoal, setDailyGoalState] = useState(2);
   const [focusDomain, setFocusDomainState] = useState<string | null>(null);
+  const [examDate, setExamDateState] = useState<number | null>(null);
+  const [reasons, setReasons] = useState<string[]>([]);
+  const [experience, setExperienceState] = useState<Experience>('new');
+  const [confidence, setConfidenceState] = useState({ ...DEFAULT_CONFIDENCE });
+  const [reminder, setReminderState] = useState<Reminder>('morning');
 
   // Check a URL for ?skipOnboarding=true and auto-complete if found
   const handleSkipOnboardingUrl = useCallback(async (url: string) => {
@@ -55,6 +81,10 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
     const defaults: UserPreferences = {
       goals: ['pass-pmp'],
       dailyGoal: 2,
+      reasons: [],
+      experience: 'new',
+      confidence: { ...DEFAULT_CONFIDENCE },
+      reminder: 'morning',
       onboardingCompletedAt: Date.now(),
     };
     await Promise.all([
@@ -82,6 +112,11 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
             setSelectedGoals(preferences.goals || []);
             setDailyGoalState(preferences.dailyGoal || 2);
             setFocusDomainState(preferences.focusDomain || null);
+            setExamDateState(preferences.examDate ?? null);
+            setReasons(preferences.reasons || []);
+            setExperienceState(preferences.experience || 'new');
+            setConfidenceState(preferences.confidence || { ...DEFAULT_CONFIDENCE });
+            setReminderState(preferences.reminder || 'morning');
           }
           return;
         }
@@ -125,12 +160,33 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
     setFocusDomainState(domain);
   }, []);
 
+  const setExamDate = useCallback((ts: number | null) => setExamDateState(ts), []);
+
+  const toggleReason = useCallback((id: string) => {
+    setReasons((prev) =>
+      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
+    );
+  }, []);
+
+  const setExperience = useCallback((v: Experience) => setExperienceState(v), []);
+
+  const setConfidence = useCallback((domain: ConfidenceDomain, value: number) => {
+    setConfidenceState((prev) => ({ ...prev, [domain]: value }));
+  }, []);
+
+  const setReminder = useCallback((v: Reminder) => setReminderState(v), []);
+
   const completeOnboarding = useCallback(async () => {
     try {
       const preferences: UserPreferences = {
         goals: selectedGoals.length > 0 ? selectedGoals : ['pass-pmp'],
         dailyGoal,
         focusDomain: focusDomain || undefined,
+        examDate,
+        reasons,
+        experience,
+        confidence,
+        reminder,
         onboardingCompletedAt: Date.now(),
       };
 
@@ -144,7 +200,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       console.error('Error completing onboarding:', error);
       throw error;
     }
-  }, [selectedGoals, dailyGoal, focusDomain, kv]);
+  }, [selectedGoals, dailyGoal, focusDomain, examDate, reasons, experience, confidence, reminder, kv]);
 
   const resetOnboarding = useCallback(async () => {
     try {
@@ -157,6 +213,11 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       setSelectedGoals([]);
       setDailyGoalState(2);
       setFocusDomainState(null);
+      setExamDateState(null);
+      setReasons([]);
+      setExperienceState('new');
+      setConfidenceState({ ...DEFAULT_CONFIDENCE });
+      setReminderState('morning');
     } catch (error) {
       console.error('Error resetting onboarding:', error);
       throw error;
@@ -170,9 +231,19 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       selectedGoals,
       dailyGoal,
       focusDomain,
+      examDate,
+      reasons,
+      experience,
+      confidence,
+      reminder,
       toggleGoal,
       setDailyGoal,
       setFocusDomain,
+      setExamDate,
+      toggleReason,
+      setExperience,
+      setConfidence,
+      setReminder,
       completeOnboarding,
       resetOnboarding,
     }),
@@ -182,9 +253,19 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       selectedGoals,
       dailyGoal,
       focusDomain,
+      examDate,
+      reasons,
+      experience,
+      confidence,
+      reminder,
       toggleGoal,
       setDailyGoal,
       setFocusDomain,
+      setExamDate,
+      toggleReason,
+      setExperience,
+      setConfidence,
+      setReminder,
       completeOnboarding,
       resetOnboarding,
     ]

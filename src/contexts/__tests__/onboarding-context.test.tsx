@@ -41,6 +41,33 @@ test('completeOnboarding persists flag and preferences', async () => {
   expect(prefs?.dailyGoal).toBe(3);
 });
 
+test('persists the full readiness-funnel answer set', async () => {
+  const persistence = createInMemoryPersistence();
+  const { result } = await renderHook(() => useOnboarding(), { wrapper: wrapper(persistence) });
+  await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+  await act(async () => {
+    result.current.setExamDate(123456);
+    result.current.toggleReason('promotion');
+    result.current.setExperience('informal');
+    result.current.setConfidence('process', 2);
+    result.current.setReminder('lunch');
+    result.current.setFocusDomain('process');
+    result.current.setDailyGoal(2);
+  });
+  await act(async () => {
+    await result.current.completeOnboarding();
+  });
+
+  const prefs = await persistence.kv.getJSON<any>('userPreferences');
+  expect(prefs.examDate).toBe(123456);
+  expect(prefs.reasons).toEqual(['promotion']);
+  expect(prefs.experience).toBe('informal');
+  expect(prefs.confidence.process).toBe(2);
+  expect(prefs.reminder).toBe('lunch');
+  expect(prefs.focusDomain).toBe('process');
+});
+
 test('loads completed state from persistence', async () => {
   const persistence = createInMemoryPersistence();
   await persistence.kv.setString('hasCompletedOnboarding', 'true');
