@@ -3,6 +3,7 @@ import { render, fireEvent } from '@testing-library/react-native';
 import { ConfidenceRating } from '../ConfidenceRating';
 import { DomainPicker, lessonsForDomain } from '../DomainPicker';
 import { TOKENS } from '../../../theme/tokens';
+import { ACCENTS } from '../../../theme/accents';
 
 test('lessonsForDomain returns up to 3 lessons for a domain', () => {
   const lessons = lessonsForDomain('process', 3);
@@ -20,12 +21,20 @@ test('DomainPicker shows the recommended badge and fires onSelect', async () => 
   expect(onSelect).toHaveBeenCalledWith('people');
 });
 
-test('the selected card gets a highlighted background, others stay plain', async () => {
+test('the selected card gets a highlighted accent border, others stay plain', async () => {
   const { getByTestId } = await render(
     <DomainPicker recommended="process" selected="people" onSelect={() => {}} />,
   );
-  expect(getByTestId('domain-card-people').props.style.backgroundColor).toBe(TOKENS['surface-container-high']);
-  expect(getByTestId('domain-card-process').props.style.backgroundColor).toBe(TOKENS['surface-container-lowest']);
+  expect(getByTestId('domain-card-people').props.style.borderColor).toBe(ACCENTS.selection);
+  expect(getByTestId('domain-card-process').props.style.borderColor).toBe(TOKENS['outline-variant']);
+});
+
+test('the recommended domain is listed first', async () => {
+  const { getAllByTestId } = await render(
+    <DomainPicker recommended="business" selected={null} onSelect={() => {}} />,
+  );
+  const cards = getAllByTestId(/^domain-card-/);
+  expect(cards[0].props.testID).toBe('domain-card-business');
 });
 
 test('ConfidenceRating fires onChange with the tapped value', async () => {
