@@ -48,7 +48,7 @@ jest.mock('expo-router', () => ({
 }));
 
 import React, { type ReactNode } from 'react';
-import { render, waitFor } from '@testing-library/react-native';
+import { render, waitFor, fireEvent } from '@testing-library/react-native';
 import { createInMemoryPersistence } from '../../../services/persistence';
 import { PersistenceProvider } from '../../../contexts/persistence-context';
 import { ProgressProvider } from '../../../contexts/progress-context';
@@ -66,4 +66,18 @@ test('LessonPlayer loads a lesson and renders its first (hook) screen', async ()
   const { queryByText } = await render(<LessonPlayer lessonId="A1L1" />, { wrapper: wrap });
   // A1L1 screen 1 is a hook; assert some hook headline text renders (non-empty screen).
   await waitFor(() => expect(queryByText(/continue/i)).toBeTruthy());
+});
+
+test('leaving a lesson navigates to home deterministically (never router.back into onboarding)', async () => {
+  const { router } = require('expo-router');
+  (router.replace as jest.Mock).mockClear();
+  (router.back as jest.Mock).mockClear();
+  const { getByLabelText } = await render(<LessonPlayer lessonId="A1L1" />, { wrapper: wrap });
+  await waitFor(() => expect(getByLabelText('Exit lesson')).toBeTruthy());
+
+  fireEvent.press(getByLabelText('Exit lesson'));
+
+  // Must land on the app home, not pop back through history (which can be onboarding).
+  expect(router.replace).toHaveBeenCalledWith('/(tabs)/home');
+  expect(router.back).not.toHaveBeenCalled();
 });

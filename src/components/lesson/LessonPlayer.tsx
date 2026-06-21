@@ -95,16 +95,13 @@ export function LessonPlayer({ lessonId }: Props) {
     }
   }, [blockedByLimit]);
 
-  // Leave the lesson. Guard router.back() — when the lesson was opened via a
-  // deep link there's no history, and back() throws a GO_BACK navigator warning;
-  // fall back to the Lessons tab in that case.
+  // Leave the lesson → always land on the app home. We deliberately do NOT use
+  // router.back(): the first lesson after onboarding is reached via the
+  // onboarding stack, so "back" pops into onboarding instead of the app. A lesson
+  // belongs to the app shell, so leaving it has a single deterministic home.
   const leaveLesson = () => {
     exitLesson();
-    if (router.canGoBack()) {
-      router.back();
-    } else {
-      router.replace('/(tabs)/lessons');
-    }
+    router.replace('/(tabs)/home');
   };
 
   let content: React.ReactNode;

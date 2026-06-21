@@ -1,0 +1,9 @@
+# Verifies the lesson-exit fix: leaving a lesson lands on Home, never in onboarding.
+appId: com.h2ai.pmpexampro
+---
+- launchApp
+- openLink: pmp-exam-pro:///lesson/A1L2
+- assertVisible: ".*Alex.*"             # lesson hook screen is up
+- tapOn: "Exit lesson"                   # the lesson header ✕ (accessibilityLabel)
+- assertVisible: "CURRENT STREAK"        # Home dashboard header (top of screen)
+- assertNotVisible: "Where do you want to start?"  # must NOT be the onboarding domain screen
