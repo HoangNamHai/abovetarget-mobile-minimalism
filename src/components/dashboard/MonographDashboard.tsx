@@ -3,6 +3,7 @@ import { ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Image } from 'expo-image';
 import { useProgress } from '../../contexts/progress-context';
+import { useSubscription } from '../../contexts/subscription-context';
 import { useLearningHome } from '../../hooks/use-learning-home';
 import { getLessonThumbnail } from '../../data/lesson-images';
 import { DOMAIN_ORDER } from '../../data/domains';
@@ -12,6 +13,7 @@ import { Button } from '../primitives/Button';
 import { Hairline } from '../primitives/Hairline';
 import { PressableFeedback } from '../primitives/PressableFeedback';
 import { Txt } from '../primitives/Txt';
+import { UpgradeBlock } from './UpgradeBlock';
 
 type Props = {
   /** Browse the full lessons list. */
@@ -20,6 +22,8 @@ type Props = {
   onOpenLesson?: (lessonId: string) => void;
   /** Open the lessons list filtered to one domain. */
   onOpenDomain?: (domain: Domain) => void;
+  /** Open the paywall; powers the free-tier upgrade CTA. */
+  onUpgrade?: () => void;
 };
 
 const DOMAIN_LABELS: Record<Domain, { label: string; sub: string }> = {
@@ -28,8 +32,9 @@ const DOMAIN_LABELS: Record<Domain, { label: string; sub: string }> = {
   business: { label: '03. Business Env.', sub: 'Strategy, Compliance & Value' },
 };
 
-export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }: Props) {
+export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain, onUpgrade }: Props) {
   const { progress, getCurrentStreak, getCurrentMilestone } = useProgress();
+  const { isPremium } = useSubscription();
   const { nextLesson, recentLesson, allCaughtUp, lessonsToday, dailyGoal, goalMet, lessonsCompleted, mastery, domainTotals } =
     useLearningHome();
   const streak = getCurrentStreak();
@@ -150,6 +155,13 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain }:
       </View>
 
       <Hairline />
+
+      {/* Upgrade CTA — free users only; the single colored surface in the app */}
+      {!isPremium && (
+        <View style={{ marginTop: 24, marginBottom: 24 }}>
+          <UpgradeBlock onPress={() => onUpgrade?.()} />
+        </View>
+      )}
 
       {/* Recently Learned — revisit the last lesson studied */}
       {recentLesson && (

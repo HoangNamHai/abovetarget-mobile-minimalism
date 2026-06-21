@@ -58,9 +58,23 @@ jest.mock('expo-image', () => {
   };
 });
 
-import { render, screen } from '@testing-library/react-native';
+// Control the premium flag per-test so we can render both free and premium views.
+jest.mock('../../../contexts/subscription-context', () => {
+  const actual = jest.requireActual('../../../contexts/subscription-context');
+  return { ...actual, useSubscription: jest.fn() };
+});
+
+import { fireEvent, render, screen } from '@testing-library/react-native';
 import { TestProviders } from '../../../test-utils';
+import { useSubscription } from '../../../contexts/subscription-context';
 import { DashboardScreen } from '../DashboardScreen';
+
+const mockUseSubscription = useSubscription as jest.Mock;
+
+beforeEach(() => {
+  // Default: premium, so the upgrade block is hidden unless a test opts in.
+  mockUseSubscription.mockReturnValue({ isPremium: true });
+});
 
 test('shows a browse-lessons control', async () => {
   await render(
@@ -69,4 +83,29 @@ test('shows a browse-lessons control', async () => {
     </TestProviders>,
   );
   expect(screen.getByText(/browse all lessons/i)).toBeTruthy();
+});
+
+test('free users see the upgrade CTA and tapping it triggers upgrade', async () => {
+  mockUseSubscription.mockReturnValue({ isPremium: false });
+  const onUpgrade = jest.fn();
+  await render(
+    <TestProviders>
+      <DashboardScreen onStartStudy={() => {}} onUpgrade={onUpgrade} />
+    </TestProviders>,
+  );
+
+  expect(screen.getByText(/pass the pmp faster/i)).toBeTruthy();
+
+  fireEvent.press(screen.getByText(/go premium/i));
+  expect(onUpgrade).toHaveBeenCalledTimes(1);
+});
+
+test('premium users do not see the upgrade CTA', async () => {
+  mockUseSubscription.mockReturnValue({ isPremium: true });
+  await render(
+    <TestProviders>
+      <DashboardScreen onStartStudy={() => {}} onUpgrade={() => {}} />
+    </TestProviders>,
+  );
+  expect(screen.queryByText(/pass the pmp faster/i)).toBeNull();
 });
