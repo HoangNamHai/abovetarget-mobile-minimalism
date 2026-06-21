@@ -7,12 +7,12 @@ import { OnboardingProvider } from '../../../contexts/onboarding-context';
 jest.mock('expo-linking', () => ({ parse: () => ({ queryParams: {} }), getInitialURL: async () => null, addEventListener: () => ({ remove: () => {} }) }));
 jest.mock('expo-router', () => ({ router: { push: jest.fn(), replace: jest.fn() } }));
 
-const mockSetReminderTime = jest.fn(async () => true);
-jest.mock('../../../hooks/use-local-notifications', () => ({
-  useLocalNotifications: () => ({
+const mockSetSchedule = jest.fn(async () => true);
+jest.mock('../../../hooks/use-weekly-reminder', () => ({
+  useWeeklyReminder: () => ({
     isAvailable: true,
-    reminderTime: 'disabled',
-    setReminderTime: mockSetReminderTime,
+    schedule: { weekdays: [2, 3, 4, 5, 6], hour: 20, minute: 0 },
+    setSchedule: mockSetSchedule,
   }),
 }));
 
@@ -22,18 +22,16 @@ const wrap = ({ children }: { children: ReactNode }) => (
   <PersistenceProvider value={createInMemoryPersistence()}><OnboardingProvider>{children}</OnboardingProvider></PersistenceProvider>
 );
 
-test('selecting a time and continuing schedules a daily reminder', async () => {
-  const { getByText } = await render(<Reminder />, { wrapper: wrap });
-  await waitFor(() => expect(getByText('Evening')).toBeTruthy());
-  fireEvent.press(getByText('Evening'));
-  await waitFor(() => {}); // let the selection state commit before pressing Continue
-  fireEvent.press(getByText('Continue'));
-  await waitFor(() => expect(mockSetReminderTime).toHaveBeenCalledWith('evening'));
+test('renders the day picker and the default 8:00 PM time', async () => {
+  const { getByTestId, getByText } = await render(<Reminder />, { wrapper: wrap });
+  await waitFor(() => expect(getByTestId('day-2')).toBeTruthy());
+  expect(getByText('8:00 PM')).toBeTruthy();
 });
 
-test('the displayed times match what gets scheduled (9:00 / 12:00 / 8:00 PM)', async () => {
+test('continuing saves the schedule via the weekly-reminder hook', async () => {
   const { getByText } = await render(<Reminder />, { wrapper: wrap });
-  await waitFor(() => expect(getByText('9:00 AM', { exact: false })).toBeTruthy());
-  expect(getByText('12:00 PM', { exact: false })).toBeTruthy();
-  expect(getByText('8:00 PM', { exact: false })).toBeTruthy();
+  fireEvent.press(getByText('Continue'));
+  await waitFor(() =>
+    expect(mockSetSchedule).toHaveBeenCalledWith({ weekdays: [2, 3, 4, 5, 6], hour: 20, minute: 0 }),
+  );
 });
