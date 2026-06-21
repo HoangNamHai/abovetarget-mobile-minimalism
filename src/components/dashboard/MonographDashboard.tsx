@@ -10,6 +10,7 @@ import { DOMAIN_ORDER } from '../../data/domains';
 import { TOKENS, RADIUS } from '../../theme/tokens';
 import type { Domain } from '../../types/progress';
 import { Button } from '../primitives/Button';
+import { FadeInView } from '../primitives/FadeInView';
 import { Hairline } from '../primitives/Hairline';
 import { PressableFeedback } from '../primitives/PressableFeedback';
 import { Txt } from '../primitives/Txt';
@@ -64,12 +65,13 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain, o
   };
 
   return (
-    <ScrollView
-      style={{ flex: 1, backgroundColor: TOKENS.background }}
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ paddingHorizontal: 20, paddingTop: insets.top + 12, paddingBottom: 80 }}
-    >
-      {/* Header: Streak */}
+    <FadeInView style={{ flex: 1 }}>
+      <ScrollView
+        style={{ flex: 1, backgroundColor: TOKENS.background }}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 20, paddingTop: insets.top + 12, paddingBottom: 80 }}
+      >
+        {/* Header: Streak */}
       <View
         style={{
           flexDirection: 'row',
@@ -295,7 +297,8 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain, o
 
       {/* Browse all lessons */}
       <Button label="Browse All Lessons" onPress={onStartStudy} variant="secondary" />
-    </ScrollView>
+      </ScrollView>
+    </FadeInView>
   );
 }
 
