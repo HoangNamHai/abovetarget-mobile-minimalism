@@ -32,7 +32,7 @@ export default function Reveal() {
 
   async function onContinue() {
     await completeOnboarding();
-    if (REVENUECAT_ENABLED) router.push('/paywall');
+    if (REVENUECAT_ENABLED) router.push('/paywall?from=onboarding');
     else router.replace('/');
   }
 
