@@ -49,7 +49,7 @@ interface OnboardingContextType {
   toggleReason: (id: string) => void;
   setExperience: (v: Experience) => void;
   setConfidence: (domain: ConfidenceDomain, value: number) => void;
-  completeOnboarding: () => Promise<void>;
+  completeOnboarding: (overrides?: { focusDomain?: string; dailyGoal?: number }) => Promise<void>;
   resetOnboarding: () => Promise<void>;
 }
 
@@ -177,13 +177,13 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
     setConfidenceState((prev) => ({ ...prev, [domain]: value }));
   }, []);
 
-  const completeOnboarding = useCallback(async () => {
+  const completeOnboarding = useCallback(async (overrides?: { focusDomain?: string; dailyGoal?: number }) => {
     try {
       const preferences: UserPreferences = {
         goals: selectedGoals.length > 0 ? selectedGoals : ['pass-pmp'],
-        dailyGoal,
+        dailyGoal: overrides?.dailyGoal ?? dailyGoal,
         dailyMinutes,
-        focusDomain: focusDomain || undefined,
+        focusDomain: overrides?.focusDomain ?? focusDomain ?? undefined,
         examDate,
         reasons,
         experience,

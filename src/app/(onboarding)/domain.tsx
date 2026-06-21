@@ -4,23 +4,38 @@ import { View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Txt } from '../../components/primitives/Txt';
 import { TOKENS } from '../../theme/tokens';
-import { DomainPicker } from '../../components/onboarding/DomainPicker';
+import { DomainPicker, lessonsForDomain } from '../../components/onboarding/DomainPicker';
 import { useOnboarding } from '../../contexts/onboarding-context';
 import { buildPlan } from '../../lib/onboarding/onboarding-plan';
 import { getAllLessons } from '../../data/lessons-data';
+import { REVENUECAT_ENABLED } from '../../config/env';
 import type { Domain } from '../../types/progress';
 
 export default function DomainScreen() {
-  const { confidence, examDate, experience, dailyMinutes, setFocusDomain } = useOnboarding();
+  const { confidence, examDate, experience, dailyMinutes, setFocusDomain, setDailyGoal, completeOnboarding } = useOnboarding();
   const recommended = useMemo(
     () => buildPlan({ confidence, examDate, experience, dailyMinutes, chosenDomain: 'people', totalLessons: getAllLessons().length, now: Date.now() }).recommendedDomain,
     [confidence, examDate, experience, dailyMinutes],
   );
 
-  // Selecting a domain advances immediately — no Continue button.
-  function onSelect(domain: Domain) {
+  // Selecting a domain finishes onboarding and heads to the paywall (then the
+  // first lesson of the chosen domain) — no separate reveal/Continue step.
+  async function onSelect(domain: Domain) {
+    const plan = buildPlan({
+      confidence, examDate, experience, dailyMinutes,
+      chosenDomain: domain, totalLessons: getAllLessons().length, now: Date.now(),
+    });
     setFocusDomain(domain);
-    router.push('/(onboarding)/reveal');
+    setDailyGoal(plan.dailyGoal);
+    await completeOnboarding({ focusDomain: domain, dailyGoal: plan.dailyGoal });
+
+    const firstLesson = lessonsForDomain(domain, 1)[0];
+    const next = firstLesson ? `/lesson/${firstLesson.id}` : '/';
+    if (REVENUECAT_ENABLED) {
+      router.push(`/paywall?from=onboarding&next=${encodeURIComponent(next)}`);
+    } else {
+      router.replace(next);
+    }
   }
 
   return (

@@ -2,11 +2,12 @@ export const ONBOARDING_ORDER: string[] = [
   'splash', 'story-concept', 'story-cast',
   'exam-date', 'fact-exam', 'why-certified', 'fact-social',
   'experience', 'fact-content', 'confidence', 'fact-study',
-  'belief', 'reminder', 'commit', 'domain', 'reveal',
+  'belief', 'reminder', 'commit', 'domain',
 ];
 
-// Screens that show no progress bar: the opening value screens and the reveal.
-const NO_BAR = new Set(['splash', 'story-concept', 'story-cast', 'reveal']);
+// Screens that show no progress bar: the opening value screens and the domain
+// picker (which has no Continue — tapping a card finishes onboarding).
+const NO_BAR = new Set(['splash', 'story-concept', 'story-cast', 'domain']);
 
 // The progress bar spans from the first question (`exam-date`) to `domain`,
 // pre-filled to BASE so step one already feels underway (endowed progress).
