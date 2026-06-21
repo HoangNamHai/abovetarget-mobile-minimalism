@@ -1,4 +1,5 @@
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { router } from 'expo-router';
 import { Paywall } from '../Paywall';
 import type { SubscriptionValue } from '../../../contexts/subscription-context';
 
@@ -12,10 +13,15 @@ const restorePurchases = jest.fn(async () => {});
 const clearError = jest.fn();
 
 let mockValue: SubscriptionValue;
+let mockAuth: { isSignedIn: boolean };
+let mockAuthRequired = true;
 
 jest.mock('../../../contexts/subscription-context', () => ({
   useSubscription: () => mockValue,
 }));
+jest.mock('../../../contexts/auth-context', () => ({ useAppAuth: () => mockAuth }));
+jest.mock('../../../config/env', () => ({ authRequired: () => mockAuthRequired }));
+jest.mock('expo-router', () => ({ router: { push: jest.fn() } }));
 
 function pkg(identifier: string, packageType: string, priceString: string) {
   return {
@@ -31,6 +37,7 @@ const monthly = pkg('monthly', 'MONTHLY', '$9.99');
 function baseValue(overrides: Partial<SubscriptionValue> = {}): SubscriptionValue {
   return {
     isPremium: false,
+    planStatus: { label: 'Free', tone: 'free' },
     isLoading: false,
     isInitialized: true,
     error: null,
@@ -46,6 +53,8 @@ function baseValue(overrides: Partial<SubscriptionValue> = {}): SubscriptionValu
 beforeEach(() => {
   jest.clearAllMocks();
   mockValue = baseValue();
+  mockAuth = { isSignedIn: true };
+  mockAuthRequired = true;
 });
 
 test('renders a row per package with its price', async () => {
@@ -93,4 +102,21 @@ test('auto-closes once the user becomes premium', async () => {
   mockValue = baseValue({ isPremium: true });
   await render(<Paywall onClose={onClose} />);
   await waitFor(() => expect(onClose).toHaveBeenCalled());
+});
+
+test('when signed out, continue routes to sign-in instead of purchasing', async () => {
+  mockAuth = { isSignedIn: false };
+  const { getByTestId } = await render(<Paywall onClose={jest.fn()} />);
+  await fireEvent.press(getByTestId('pkg-monthly'));
+  await fireEvent.press(getByTestId('paywall-continue'));
+  expect(router.push).toHaveBeenCalledWith('/(auth)/sign-in');
+  expect(purchasePackage).not.toHaveBeenCalled();
+});
+
+test('when signed out, restore routes to sign-in instead of restoring', async () => {
+  mockAuth = { isSignedIn: false };
+  const { getByTestId } = await render(<Paywall onClose={jest.fn()} />);
+  await fireEvent.press(getByTestId('paywall-restore'));
+  expect(router.push).toHaveBeenCalledWith('/(auth)/sign-in');
+  expect(restorePurchases).not.toHaveBeenCalled();
 });

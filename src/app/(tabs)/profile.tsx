@@ -131,12 +131,16 @@ function InfoRow({ label, value }: { label: string; value: string }) {
 
 export default function Profile() {
   const { settings, setHaptics, setSounds, setNotifications } = useSettings();
-  const { isPremium, restorePurchases } = useSubscription();
+  const { isPremium, planStatus, restorePurchases } = useSubscription();
   const { isSignedIn, user, signOut } = useAppAuth();
   const { reminderTime, setReminderTime, isAvailable: notificationsAvailable } =
     useLocalNotifications();
   const [restoring, setRestoring] = useState(false);
   const insets = useSafeAreaInsets();
+
+  // No anonymous premium: upgrading requires an account, so a signed-out user is
+  // pointed at sign-in (below) rather than the paywall.
+  const mustSignIn = authRequired() && !isSignedIn;
 
   const appVersion = Constants.expoConfig?.version ?? '—';
 
@@ -220,13 +224,21 @@ export default function Profile() {
             </>
           ) : null}
           <View style={styles.row}>
-            <Txt variant="body" style={styles.rowLabel}>Status</Txt>
-            <Txt variant="label" style={[styles.statusBadge, isPremium ? styles.premium : styles.free]}>
-              {isPremium ? 'PREMIUM' : 'FREE'}
-            </Txt>
+            <Txt variant="body" style={styles.rowLabel}>Plan</Txt>
+            <View style={styles.planValue}>
+              <Txt
+                variant="label"
+                style={[styles.statusBadge, planStatus.tone === 'premium' ? styles.premium : styles.free]}
+              >
+                {planStatus.label}
+              </Txt>
+              {planStatus.detail ? (
+                <Txt variant="label" style={styles.planDetail}>{planStatus.detail}</Txt>
+              ) : null}
+            </View>
           </View>
-          {/* Upgrade — only for free users while RevenueCat is live */}
-          {!REVENUECAT_DISABLED && !isPremium && (
+          {/* Upgrade — only for signed-in free users while RevenueCat is live */}
+          {!REVENUECAT_DISABLED && !isPremium && !mustSignIn && (
             <>
               <Hairline />
               <LinkRow label="Upgrade to Premium" onPress={() => router.push('/paywall')} />
@@ -350,12 +362,23 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: TOKENS.outline,
   },
+  planValue: {
+    alignItems: 'flex-end',
+    gap: 2,
+  },
   statusBadge: {
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 2,
+    textTransform: 'uppercase',
+    textAlign: 'right',
     paddingHorizontal: 8,
     paddingVertical: 4,
+  },
+  planDetail: {
+    fontSize: 12,
+    color: TOKENS.outline,
+    paddingHorizontal: 8,
   },
   premium: {
     color: TOKENS.primary,

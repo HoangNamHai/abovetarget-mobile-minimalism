@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { router } from 'expo-router';
 import type { PurchasesPackage } from 'react-native-purchases';
+import { authRequired } from '../../config/env';
+import { useAppAuth } from '../../contexts/auth-context';
 import { useSubscription } from '../../contexts/subscription-context';
 import { Button } from '../primitives/Button';
 import { Hairline } from '../primitives/Hairline';
@@ -40,6 +44,11 @@ function defaultPackageId(packages: PurchasesPackage[]): string | null {
 export function Paywall({ onClose }: { onClose: () => void }) {
   const { packages, isPremium, isLoading, error, purchasePackage, restorePurchases, clearError } =
     useSubscription();
+  const { isSignedIn } = useAppAuth();
+  const insets = useSafeAreaInsets();
+  // No anonymous premium: a purchase only grants access once signed in, so both
+  // buying and restoring first require an account when auth is configured.
+  const mustSignIn = authRequired() && !isSignedIn;
   const [selectedId, setSelectedId] = useState<string | null>(() => defaultPackageId(packages));
   // Mirror the selection in a ref so handleContinue always reads the latest
   // choice even if a re-render hasn't committed yet (a single tap → buy).
@@ -62,9 +71,23 @@ export function Paywall({ onClose }: { onClose: () => void }) {
     if (isPremium) onClose();
   }, [isPremium, onClose]);
 
+  const goSignIn = () => router.push('/(auth)/sign-in');
+
   const handleContinue = () => {
+    if (mustSignIn) {
+      goSignIn();
+      return;
+    }
     const pkg = packages.find((p) => p.identifier === selectedRef.current);
     if (pkg) purchasePackage(pkg);
+  };
+
+  const handleRestore = () => {
+    if (mustSignIn) {
+      goSignIn();
+      return;
+    }
+    restorePurchases();
   };
 
   const handleClose = () => {
@@ -74,7 +97,7 @@ export function Paywall({ onClose }: { onClose: () => void }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
+      <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
         <PressableFeedback testID="paywall-close" onPress={handleClose}>
           <Txt variant="label" style={styles.close}>✕</Txt>
         </PressableFeedback>
@@ -129,18 +152,18 @@ export function Paywall({ onClose }: { onClose: () => void }) {
         ) : null}
       </ScrollView>
 
-      <View style={styles.footer}>
+      <View style={[styles.footer, { paddingBottom: Math.max(insets.bottom + 12, 28) }]}>
         {packages.length > 0 ? (
           <Button
             testID="paywall-continue"
-            label="Continue"
+            label={mustSignIn ? 'Sign in to subscribe' : 'Continue'}
             onPress={handleContinue}
             loading={isLoading}
-            disabled={!selectedId}
+            disabled={!mustSignIn && !selectedId}
           />
         ) : null}
         <Hairline />
-        <PressableFeedback testID="paywall-restore" onPress={() => restorePurchases()}>
+        <PressableFeedback testID="paywall-restore" onPress={handleRestore}>
           <Txt variant="label" style={styles.restore}>Restore Purchases</Txt>
         </PressableFeedback>
       </View>
@@ -160,8 +183,8 @@ const styles = StyleSheet.create({
     paddingTop: 12,
   },
   close: {
-    fontSize: 20,
-    color: TOKENS.outline,
+    fontSize: 22,
+    color: TOKENS['on-background'],
     paddingHorizontal: 8,
     paddingVertical: 4,
   },

@@ -87,8 +87,10 @@ jest.mock('react-native-purchases', () => ({
   default: {
     configure: jest.fn(),
     setLogLevel: jest.fn(),
-    logIn: jest.fn(async () => ({})),
-    logOut: jest.fn(async () => ({})),
+    logIn: jest.fn(async () => ({ customerInfo: { entitlements: { active: {} } }, created: false })),
+    logOut: jest.fn(async () => ({ entitlements: { active: {} } })),
+    isAnonymous: jest.fn(async () => true),
+    getAppUserID: jest.fn(async () => '$RCAnonymousID:test'),
     getCustomerInfo: jest.fn(async () => ({ entitlements: { active: {} } })),
     getOfferings: jest.fn(async () => ({ current: null })),
     purchasePackage: jest.fn(async () => ({ customerInfo: { entitlements: { active: {} } } })),

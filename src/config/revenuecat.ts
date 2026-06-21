@@ -45,10 +45,11 @@ export const ENTITLEMENTS = {
 /**
  * Product Identifiers
  * These should match the product IDs configured in App Store Connect / Google Play Console.
+ * Lineup mirrors the `default` offering (Weekly / Monthly / Lifetime — see src/config/pricing.ts).
  */
 export const PRODUCTS = {
+  WEEKLY: 'pmp_pro_weekly',
   MONTHLY: 'pmp_pro_monthly',
-  ANNUAL: 'pmp_pro_annual',
   LIFETIME: 'pmp_pro_lifetime',
 } as const;
 
