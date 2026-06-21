@@ -1,7 +1,8 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Image } from 'expo-image';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useProgress } from '../../contexts/progress-context';
 import { useSubscription } from '../../contexts/subscription-context';
 import { useLearningHome } from '../../hooks/use-learning-home';
@@ -125,35 +126,44 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain, o
           overflow: 'hidden',
         }}
       >
-        {!allCaughtUp && (
-          <Image
-            source={getLessonThumbnail(nextLesson!.thumbnail)}
-            style={{ width: '100%', aspectRatio: 16 / 9, backgroundColor: TOKENS['surface-container'] }}
-            contentFit="cover"
-            transition={200}
-          />
-        )}
-        <View style={{ padding: 28 }}>
-          <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: 'rgba(255,255,255,0.7)', marginBottom: 10 }}>
-            {allCaughtUp ? 'ALL CAUGHT UP' : 'CONTINUE LEARNING'}
-          </Txt>
-          <Txt
-            variant="display"
-            style={{ fontSize: 26, lineHeight: 30, color: TOKENS['on-primary'], marginBottom: allCaughtUp ? 20 : 6 }}
-          >
-            {allCaughtUp ? "YOU'VE FINISHED EVERY LESSON." : nextLesson!.title}
-          </Txt>
-          {!allCaughtUp && (
-            <Txt variant="label" style={{ fontSize: 11, letterSpacing: 2, color: 'rgba(255,255,255,0.7)', marginBottom: 20 }}>
-              {nextLesson!.domain.toUpperCase()} · {nextLesson!.duration} MIN
+        {allCaughtUp ? (
+          <View style={{ padding: 28 }}>
+            <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: 'rgba(255,255,255,0.7)', marginBottom: 10 }}>
+              ALL CAUGHT UP
             </Txt>
-          )}
-          <Button
-            label={allCaughtUp ? 'Review Lessons' : 'Continue'}
-            onPress={handleContinue}
-            variant="secondary"
-          />
-        </View>
+            <Txt variant="display" style={{ fontSize: 26, lineHeight: 30, color: TOKENS['on-primary'], marginBottom: 20 }}>
+              YOU'VE FINISHED EVERY LESSON.
+            </Txt>
+            <Button label="Review Lessons" onPress={handleContinue} variant="secondary" />
+          </View>
+        ) : (
+          <View style={{ height: 420 }}>
+            {/* Full-bleed illustration */}
+            <Image
+              source={getLessonThumbnail(nextLesson!.thumbnail)}
+              style={StyleSheet.absoluteFill}
+              contentFit="cover"
+              transition={200}
+            />
+            {/* Gradient fade so the overlaid text + button stay legible */}
+            <LinearGradient
+              colors={['rgba(0,0,0,0.05)', 'rgba(0,0,0,0.92)']}
+              style={StyleSheet.absoluteFill}
+            />
+            <View style={{ flex: 1, padding: 24, justifyContent: 'flex-end' }}>
+              <Txt variant="label" style={{ fontSize: 11, letterSpacing: 3, color: 'rgba(255,255,255,0.7)', marginBottom: 10 }}>
+                CONTINUE LEARNING
+              </Txt>
+              <Txt variant="display" style={{ fontSize: 26, lineHeight: 30, color: TOKENS['on-primary'], marginBottom: 6 }}>
+                {nextLesson!.title}
+              </Txt>
+              <Txt variant="label" style={{ fontSize: 11, letterSpacing: 2, color: 'rgba(255,255,255,0.7)', marginBottom: 20 }}>
+                {nextLesson!.domain.toUpperCase()} · {nextLesson!.duration} MIN
+              </Txt>
+              <Button label="Continue" onPress={handleContinue} variant="secondary" />
+            </View>
+          </View>
+        )}
       </View>
 
       <Hairline />
