@@ -7,18 +7,22 @@ export interface PlanInputs {
   chosenDomain: Domain;
   totalLessons: number;
   now: number;
+  dailyMinutes: number; // the minutes/day the user committed to (10 / 20 / 30)
 }
 
 export interface Plan {
   recommendedDomain: Domain;
   focusDomain: Domain;
   intensity: 'foundational' | 'steady' | 'accelerated';
-  dailyGoal: number;
-  readyByDate: number | null;
+  dailyMinutes: number;
+  dailyGoal: number; // lessons/day, derived from dailyMinutes
+  readyByDate: number | null; // epoch ms, capped at examDate
   rationale: string;
 }
 
 const DAY = 24 * 60 * 60 * 1000;
+// A lesson runs ~10 minutes, so the committed minutes map to lessons/day.
+const MINUTES_PER_LESSON = 10;
 const DOMAIN_LABEL: Record<Domain, string> = {
   people: 'People',
   process: 'Process',
@@ -36,14 +40,10 @@ function lowestConfidence(c: PlanInputs['confidence']): Domain {
 }
 
 export function buildPlan(inputs: PlanInputs): Plan {
-  const { examDate, experience, confidence, chosenDomain, totalLessons, now } = inputs;
+  const { examDate, experience, confidence, chosenDomain, totalLessons, now, dailyMinutes } = inputs;
   const recommendedDomain = lowestConfidence(confidence);
 
-  let dailyGoal = 2;
-  if (examDate != null && examDate > now) {
-    const daysUntil = Math.max(1, Math.floor((examDate - now) / DAY));
-    dailyGoal = clamp(Math.ceil(totalLessons / daysUntil), 1, 5);
-  }
+  const dailyGoal = clamp(Math.round(dailyMinutes / MINUTES_PER_LESSON), 1, 5);
 
   const daysToFinish = Math.ceil(totalLessons / dailyGoal);
   let readyByDate: number | null = now + daysToFinish * DAY;
@@ -56,14 +56,10 @@ export function buildPlan(inputs: PlanInputs): Plan {
 
   const focusLabel = DOMAIN_LABEL[chosenDomain];
   const matchesRecommendation = chosenDomain === recommendedDomain;
-  const timing =
-    examDate != null
-      ? `Your exam is coming up, so we’re building a ${dailyGoal}-a-day plan`
-      : `We’re building a steady ${dailyGoal}-a-day plan`;
   const why = matchesRecommendation
     ? `starting in ${focusLabel} — the area you felt least confident in.`
     : `starting where you chose: ${focusLabel}.`;
-  const rationale = `${timing}, ${why}`;
+  const rationale = `${dailyMinutes} minutes a day, ${why}`;
 
-  return { recommendedDomain, focusDomain: chosenDomain, intensity, dailyGoal, readyByDate, rationale };
+  return { recommendedDomain, focusDomain: chosenDomain, intensity, dailyMinutes, dailyGoal, readyByDate, rationale };
 }

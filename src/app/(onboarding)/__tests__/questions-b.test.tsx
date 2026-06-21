@@ -31,7 +31,9 @@ test('reminder renders the day/time scheduler', async () => {
   await waitFor(() => expect(getByText(/nudge you/i)).toBeTruthy());
   expect(getByTestId('day-2')).toBeTruthy();
 });
-test('commit renders the pledge CTA', async () => {
+test('commit renders the daily-minutes options', async () => {
   const { getByText } = await render(<Commit />, { wrapper: wrap });
-  await waitFor(() => expect(getByText('Commit to passing.')).toBeTruthy());
+  await waitFor(() => expect(getByText('20 min / day')).toBeTruthy());
+  expect(getByText('10 min / day')).toBeTruthy();
+  expect(getByText('30 min / day')).toBeTruthy();
 });

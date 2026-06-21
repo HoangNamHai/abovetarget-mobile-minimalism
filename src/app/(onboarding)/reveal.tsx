@@ -8,16 +8,16 @@ import { REVENUECAT_ENABLED } from '../../config/env';
 import type { Domain } from '../../types/progress';
 
 export default function Reveal() {
-  const { confidence, examDate, experience, focusDomain, setDailyGoal, completeOnboarding } = useOnboarding();
+  const { confidence, examDate, experience, dailyMinutes, focusDomain, setDailyGoal, completeOnboarding } = useOnboarding();
   const [preparing, setPreparing] = useState(true);
 
   const plan = useMemo(
     () => buildPlan({
-      confidence, examDate, experience,
+      confidence, examDate, experience, dailyMinutes,
       chosenDomain: (focusDomain as Domain) || 'process',
       totalLessons: getAllLessons().length, now: Date.now(),
     }),
-    [confidence, examDate, experience, focusDomain],
+    [confidence, examDate, experience, dailyMinutes, focusDomain],
   );
 
   useEffect(() => {

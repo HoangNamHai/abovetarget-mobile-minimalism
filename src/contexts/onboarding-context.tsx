@@ -16,6 +16,7 @@ export type ConfidenceDomain = 'people' | 'process' | 'business';
 export interface UserPreferences {
   goals: string[];
   dailyGoal: number;
+  dailyMinutes: number;
   focusDomain?: string;
   examDate?: number | null;
   reasons: string[];
@@ -32,6 +33,7 @@ interface OnboardingContextType {
   hasCompletedOnboarding: boolean;
   selectedGoals: string[];
   dailyGoal: number;
+  dailyMinutes: number;
   focusDomain: string | null;
   examDate: number | null;
   reasons: string[];
@@ -41,6 +43,7 @@ interface OnboardingContextType {
   // Actions
   toggleGoal: (goalId: string) => void;
   setDailyGoal: (goal: number) => void;
+  setDailyMinutes: (minutes: number) => void;
   setFocusDomain: (domain: string | null) => void;
   setExamDate: (ts: number | null) => void;
   toggleReason: (id: string) => void;
@@ -62,6 +65,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
   const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState(false);
   const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
   const [dailyGoal, setDailyGoalState] = useState(2);
+  const [dailyMinutes, setDailyMinutesState] = useState(20);
   const [focusDomain, setFocusDomainState] = useState<string | null>(null);
   const [examDate, setExamDateState] = useState<number | null>(null);
   const [reasons, setReasons] = useState<string[]>([]);
@@ -76,6 +80,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
     const defaults: UserPreferences = {
       goals: ['pass-pmp'],
       dailyGoal: 2,
+      dailyMinutes: 20,
       reasons: [],
       experience: 'new',
       confidence: { ...DEFAULT_CONFIDENCE },
@@ -105,6 +110,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
           if (preferences) {
             setSelectedGoals(preferences.goals || []);
             setDailyGoalState(preferences.dailyGoal || 2);
+            setDailyMinutesState(preferences.dailyMinutes || 20);
             setFocusDomainState(preferences.focusDomain || null);
             setExamDateState(preferences.examDate ?? null);
             setReasons(preferences.reasons || []);
@@ -149,6 +155,10 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
     setDailyGoalState(Math.max(1, Math.min(5, goal)));
   }, []);
 
+  const setDailyMinutes = useCallback((minutes: number) => {
+    setDailyMinutesState(minutes);
+  }, []);
+
   const setFocusDomain = useCallback((domain: string | null) => {
     setFocusDomainState(domain);
   }, []);
@@ -172,6 +182,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       const preferences: UserPreferences = {
         goals: selectedGoals.length > 0 ? selectedGoals : ['pass-pmp'],
         dailyGoal,
+        dailyMinutes,
         focusDomain: focusDomain || undefined,
         examDate,
         reasons,
@@ -190,7 +201,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       console.error('Error completing onboarding:', error);
       throw error;
     }
-  }, [selectedGoals, dailyGoal, focusDomain, examDate, reasons, experience, confidence, kv]);
+  }, [selectedGoals, dailyGoal, dailyMinutes, focusDomain, examDate, reasons, experience, confidence, kv]);
 
   const resetOnboarding = useCallback(async () => {
     try {
@@ -202,6 +213,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       setHasCompletedOnboarding(false);
       setSelectedGoals([]);
       setDailyGoalState(2);
+      setDailyMinutesState(20);
       setFocusDomainState(null);
       setExamDateState(null);
       setReasons([]);
@@ -219,6 +231,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       hasCompletedOnboarding,
       selectedGoals,
       dailyGoal,
+      dailyMinutes,
       focusDomain,
       examDate,
       reasons,
@@ -226,6 +239,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       confidence,
       toggleGoal,
       setDailyGoal,
+      setDailyMinutes,
       setFocusDomain,
       setExamDate,
       toggleReason,
@@ -239,6 +253,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       hasCompletedOnboarding,
       selectedGoals,
       dailyGoal,
+      dailyMinutes,
       focusDomain,
       examDate,
       reasons,
@@ -246,6 +261,7 @@ export const OnboardingProvider: React.FC<{ children: React.ReactNode }> = ({
       confidence,
       toggleGoal,
       setDailyGoal,
+      setDailyMinutes,
       setFocusDomain,
       setExamDate,
       toggleReason,

@@ -14,10 +14,10 @@ import { progressFor } from '../../lib/onboarding/onboarding-steps';
 import type { Domain } from '../../types/progress';
 
 export default function DomainScreen() {
-  const { confidence, examDate, experience, setFocusDomain } = useOnboarding();
+  const { confidence, examDate, experience, dailyMinutes, setFocusDomain } = useOnboarding();
   const recommended = useMemo(
-    () => buildPlan({ confidence, examDate, experience, chosenDomain: 'people', totalLessons: getAllLessons().length, now: Date.now() }).recommendedDomain,
-    [confidence, examDate, experience],
+    () => buildPlan({ confidence, examDate, experience, dailyMinutes, chosenDomain: 'people', totalLessons: getAllLessons().length, now: Date.now() }).recommendedDomain,
+    [confidence, examDate, experience, dailyMinutes],
   );
   const [selected, setSelected] = useState<Domain>(recommended);
 

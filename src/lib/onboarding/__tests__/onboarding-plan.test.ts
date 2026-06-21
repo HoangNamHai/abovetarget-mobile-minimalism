@@ -7,37 +7,41 @@ const base = {
   chosenDomain: 'people' as const,
   totalLessons: 50,
   now: 0,
+  examDate: null as number | null,
+  dailyMinutes: 20,
 };
 
 test('recommendedDomain is the lowest-confidence domain', () => {
-  expect(buildPlan({ ...base, examDate: null }).recommendedDomain).toBe('process');
+  expect(buildPlan(base).recommendedDomain).toBe('process');
 });
 
 test('focusDomain follows the explicit choice, not the recommendation', () => {
-  expect(buildPlan({ ...base, examDate: null }).focusDomain).toBe('people');
+  expect(buildPlan(base).focusDomain).toBe('people');
 });
 
-test('no exam date defaults to a steady 2/day plan', () => {
-  const plan = buildPlan({ ...base, examDate: null });
-  expect(plan.dailyGoal).toBe(2);
-  expect(plan.readyByDate).toBe(25 * DAY); // 50 lessons / 2 per day
+test('committed minutes set the daily pace (10→1, 20→2, 30→3 lessons)', () => {
+  expect(buildPlan({ ...base, dailyMinutes: 10 }).dailyGoal).toBe(1);
+  expect(buildPlan({ ...base, dailyMinutes: 20 }).dailyGoal).toBe(2);
+  expect(buildPlan({ ...base, dailyMinutes: 30 }).dailyGoal).toBe(3);
 });
 
-test('a near exam date forces an accelerated pace, capped at the exam date', () => {
-  const plan = buildPlan({ ...base, examDate: 20 * DAY }); // 50 lessons in 20 days -> 3/day
-  expect(plan.dailyGoal).toBeGreaterThanOrEqual(3);
-  expect(plan.intensity).toBe('accelerated');
-  expect(plan.readyByDate).toBeLessThanOrEqual(20 * DAY);
+test('30 minutes a day reads as an accelerated plan', () => {
+  expect(buildPlan({ ...base, dailyMinutes: 30 }).intensity).toBe('accelerated');
 });
 
-test('pace is clamped to a 1..5 range', () => {
-  const tight = buildPlan({ ...base, examDate: 2 * DAY }); // would need 25/day
-  expect(tight.dailyGoal).toBe(5);
-  const loose = buildPlan({ ...base, examDate: 500 * DAY });
-  expect(loose.dailyGoal).toBeGreaterThanOrEqual(1);
+test('readyByDate reflects the committed pace when there is no exam date', () => {
+  expect(buildPlan({ ...base, dailyMinutes: 20 }).readyByDate).toBe(25 * DAY); // 50 / 2 per day
+});
+
+test('the projection is capped at the exam date', () => {
+  const plan = buildPlan({ ...base, dailyMinutes: 10, examDate: 10 * DAY }); // 50 days needed, exam in 10
+  expect(plan.readyByDate).toBeLessThanOrEqual(10 * DAY);
+});
+
+test('plan echoes the committed minutes', () => {
+  expect(buildPlan({ ...base, dailyMinutes: 30 }).dailyMinutes).toBe(30);
 });
 
 test('rationale notes low confidence when the choice matches the recommendation', () => {
-  const plan = buildPlan({ ...base, chosenDomain: 'process', examDate: null });
-  expect(plan.rationale).toMatch(/confiden/i);
+  expect(buildPlan({ ...base, chosenDomain: 'process' }).rationale).toMatch(/confiden/i);
 });

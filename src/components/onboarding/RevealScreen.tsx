@@ -35,7 +35,8 @@ export function RevealScreen({ preparing, plan, readyByLabel, ctaLabel, onContin
             Starting with: <Txt style={{ fontWeight: '700' }}>{DOMAIN_TITLE[plan.focusDomain]}</Txt>
           </Txt>
           <Txt variant="body" style={{ fontSize: 16, color: TOKENS.primary }}>
-            Pace: <Txt style={{ fontWeight: '700' }}>{plan.dailyGoal} lessons/day</Txt>
+            Pace: <Txt style={{ fontWeight: '700' }}>{plan.dailyMinutes} min/day</Txt>
+            {` (~${plan.dailyGoal} ${plan.dailyGoal === 1 ? 'lesson' : 'lessons'})`}
             {readyByLabel ? ` — exam-ready by ${readyByLabel}` : ''}
           </Txt>
           <Txt variant="body" style={{ fontSize: 14, lineHeight: 21, color: TOKENS.outline }}>

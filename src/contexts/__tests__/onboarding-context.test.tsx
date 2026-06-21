@@ -53,6 +53,7 @@ test('persists the full readiness-funnel answer set', async () => {
     result.current.setConfidence('process', 2);
     result.current.setFocusDomain('process');
     result.current.setDailyGoal(2);
+    result.current.setDailyMinutes(30);
   });
   await act(async () => {
     await result.current.completeOnboarding();
@@ -64,6 +65,7 @@ test('persists the full readiness-funnel answer set', async () => {
   expect(prefs.experience).toBe('informal');
   expect(prefs.confidence.process).toBe(2);
   expect(prefs.focusDomain).toBe('process');
+  expect(prefs.dailyMinutes).toBe(30);
 });
 
 test('loads completed state from persistence', async () => {
