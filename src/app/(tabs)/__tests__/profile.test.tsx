@@ -4,7 +4,7 @@ jest.mock('expo-router', () => ({
 }));
 
 import React, { type ReactNode } from 'react';
-import { render, waitFor } from '@testing-library/react-native';
+import { render, waitFor, fireEvent } from '@testing-library/react-native';
 import { createInMemoryPersistence } from '../../../services/persistence';
 import { PersistenceProvider } from '../../../contexts/persistence-context';
 import { SettingsProvider } from '../../../contexts/settings-context';
@@ -33,4 +33,14 @@ const wrap = ({ children }: { children: ReactNode }) => (
 test('profile shows a settings control', async () => {
   const { getAllByText } = await render(<Profile />, { wrapper: wrap });
   await waitFor(() => expect(getAllByText(/haptics|sounds|notifications/i).length).toBeGreaterThan(0));
+});
+
+test('Reset Onboarding navigates into the onboarding flow (not a silent no-op)', async () => {
+  const { router } = require('expo-router');
+  (router.replace as jest.Mock).mockClear();
+  const { getByText } = await render(<Profile />, { wrapper: wrap });
+  fireEvent.press(getByText('Reset Onboarding'));
+  await waitFor(() =>
+    expect(router.replace).toHaveBeenCalledWith('/(onboarding)/splash'),
+  );
 });

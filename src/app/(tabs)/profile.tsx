@@ -69,7 +69,15 @@ function DevOptionsSection() {
       <Txt variant="label" style={styles.sectionHeader}>DEV OPTIONS</Txt>
       <View style={styles.card}>
         <View style={styles.devItem}>
-          <Button label="Reset Onboarding" onPress={() => resetOnboarding()} />
+          <Button
+            label="Reset Onboarding"
+            onPress={async () => {
+              // Clear the flag AND navigate into the funnel — otherwise the reset
+              // is silent (the user stays on the Profile tab and sees nothing).
+              await resetOnboarding();
+              router.replace('/(onboarding)/splash');
+            }}
+          />
         </View>
         <View style={styles.devItem}>
           <Button label="Reset Progress" onPress={() => resetProgress()} />
