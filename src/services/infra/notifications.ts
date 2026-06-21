@@ -9,10 +9,17 @@ export const TIME_MAPPING: Record<Exclude<ReminderTime, 'disabled'>, { hour: num
   evening: { hour: 20, minute: 0 },
 };
 
+export interface WeeklyReminderInput {
+  weekdays: number[]; // 1 = Sunday … 7 = Saturday (expo-notifications convention)
+  hour: number; // 0–23
+  minute: number; // 0–59
+}
+
 export interface NotificationService {
   isAvailable(): boolean;
   requestPermission(): Promise<boolean>;
   scheduleDailyReminder(time: ReminderTime): Promise<boolean>;
+  scheduleWeeklyReminders(input: WeeklyReminderInput): Promise<boolean>;
   cancelAll(): Promise<void>;
 }
 
@@ -64,6 +71,31 @@ export function createNativeNotificationService(): NotificationService {
       });
       return true;
     },
+    async scheduleWeeklyReminders(input) {
+      if (!available() || !N) return false;
+      await N.cancelAllScheduledNotificationsAsync();
+      if (input.weekdays.length === 0) return false;
+      const granted = await this.requestPermission();
+      if (!granted) return false;
+      if (Platform.OS === 'android') {
+        await N.setNotificationChannelAsync('daily-reminders', {
+          name: 'Daily Reminders',
+          importance: N.AndroidImportance.HIGH,
+        });
+      }
+      for (const weekday of input.weekdays) {
+        await N.scheduleNotificationAsync({
+          content: { title: 'Time to study', body: 'Keep your PMP streak alive.', sound: true },
+          trigger: {
+            type: N.SchedulableTriggerInputTypes.WEEKLY,
+            weekday,
+            hour: input.hour,
+            minute: input.minute,
+          },
+        });
+      }
+      return true;
+    },
     async cancelAll() {
       if (!available() || !N) return;
       await N.cancelAllScheduledNotificationsAsync();
@@ -75,8 +107,12 @@ export function createFakeNotificationService(opts?: { available?: boolean; perm
   const available = opts?.available ?? true;
   const permission = opts?.permission ?? true;
   const scheduled: ReminderTime[] = [];
+  const state: { weekly: WeeklyReminderInput | null } = { weekly: null };
   return {
     scheduled,
+    get weekly() {
+      return state.weekly;
+    },
     isAvailable: () => available,
     async requestPermission() {
       return available && permission;
@@ -89,8 +125,17 @@ export function createFakeNotificationService(opts?: { available?: boolean; perm
       scheduled.push(time);
       return true;
     },
+    async scheduleWeeklyReminders(input: WeeklyReminderInput) {
+      if (!available) return false;
+      state.weekly = null;
+      if (input.weekdays.length === 0) return false;
+      if (!permission) return false;
+      state.weekly = input;
+      return true;
+    },
     async cancelAll() {
       scheduled.length = 0;
+      state.weekly = null;
     },
   };
 }

@@ -19,3 +19,16 @@ test('fake service refuses to schedule when unavailable', async () => {
   expect(svc.isAvailable()).toBe(false);
   expect(await svc.scheduleDailyReminder('evening')).toBe(false);
 });
+
+test('fake service records a weekly schedule and clears when no days are selected', async () => {
+  const svc = createFakeNotificationService({ available: true, permission: true });
+  expect(await svc.scheduleWeeklyReminders({ weekdays: [2, 4, 6], hour: 20, minute: 0 })).toBe(true);
+  expect(svc.weekly).toEqual({ weekdays: [2, 4, 6], hour: 20, minute: 0 });
+  expect(await svc.scheduleWeeklyReminders({ weekdays: [], hour: 20, minute: 0 })).toBe(false);
+  expect(svc.weekly).toBeNull();
+});
+
+test('fake weekly scheduling fails without permission', async () => {
+  const svc = createFakeNotificationService({ available: true, permission: false });
+  expect(await svc.scheduleWeeklyReminders({ weekdays: [2], hour: 9, minute: 0 })).toBe(false);
+});
