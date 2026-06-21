@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from 'expo-image';
-import { ScrollView, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { lessonsIndex } from '../../data/lessons-data';
@@ -101,86 +102,81 @@ export function LessonsList({ domainFilter }: Props) {
                   style={{
                     marginHorizontal: 16,
                     marginTop: 16,
+                    height: 280,
                     borderRadius: RADIUS.media,
                     overflow: 'hidden',
                     borderWidth: 1,
                     borderColor: TOKENS['outline-variant'],
-                    backgroundColor: TOKENS['surface-container-lowest'],
+                    backgroundColor: TOKENS['surface-container'],
                   }}
                 >
-                  {/* Hero image */}
-                  <View>
-                    <Image
-                      source={getLessonThumbnail(lesson.thumbnail)}
-                      style={{
-                        width: '100%',
-                        aspectRatio: 16 / 9,
-                        backgroundColor: TOKENS['surface-container'],
-                      }}
-                      contentFit="cover"
-                      transition={200}
-                    />
+                  {/* Full-bleed illustration */}
+                  <Image
+                    source={getLessonThumbnail(lesson.thumbnail)}
+                    style={StyleSheet.absoluteFill}
+                    contentFit="cover"
+                    transition={200}
+                  />
+                  {/* Gradient fade so the overlaid text stays legible */}
+                  <LinearGradient
+                    colors={['rgba(0,0,0,0.05)', 'rgba(0,0,0,0.85)']}
+                    style={StyleSheet.absoluteFill}
+                  />
 
-                    {/* Done badge — overlaid on the image */}
-                    {done && (
-                      <View
+                  {/* Done badge — overlaid top-right */}
+                  {done && (
+                    <View
+                      style={{
+                        position: 'absolute',
+                        top: 12,
+                        right: 12,
+                        paddingHorizontal: 10,
+                        paddingVertical: 4,
+                        borderRadius: RADIUS.pill,
+                        backgroundColor: ACCENTS.success,
+                      }}
+                    >
+                      <Txt
+                        variant="label"
                         style={{
-                          position: 'absolute',
-                          top: 10,
-                          right: 10,
-                          paddingHorizontal: 10,
-                          paddingVertical: 4,
-                          borderRadius: RADIUS.pill,
-                          backgroundColor: ACCENTS.success,
+                          fontSize: 10,
+                          fontWeight: '700',
+                          color: TOKENS['on-primary'],
+                          letterSpacing: 0.5,
+                          textTransform: 'uppercase',
                         }}
                       >
-                        <Txt
-                          variant="label"
-                          style={{
-                            fontSize: 10,
-                            fontWeight: '700',
-                            color: TOKENS['on-primary'],
-                            letterSpacing: 0.5,
-                            textTransform: 'uppercase',
-                          }}
-                        >
-                          Done
-                        </Txt>
-                      </View>
-                    )}
-                  </View>
+                        Done
+                      </Txt>
+                    </View>
+                  )}
 
-                  {/* Text content */}
-                  <View style={{ paddingHorizontal: 16, paddingVertical: 14 }}>
+                  {/* Text overlaid at the bottom */}
+                  <View style={{ flex: 1, padding: 16, justifyContent: 'flex-end' }}>
                     <Txt
                       variant="label"
-                      style={{
-                        fontSize: 17,
-                        fontWeight: '700',
-                        color: TOKENS['on-background'],
-                        marginBottom: 6,
-                      }}
+                      style={{ fontSize: 19, fontWeight: '700', color: '#ffffff', marginBottom: 6 }}
                       numberOfLines={2}
                     >
                       {lesson.title}
                     </Txt>
                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                      <Txt variant="label" style={{ fontSize: 12, color: TOKENS.outline }}>
+                      <Txt variant="label" style={{ fontSize: 12, color: 'rgba(255,255,255,0.8)' }}>
                         {lesson.domain}
                       </Txt>
-                      <Txt variant="label" style={{ fontSize: 12, color: TOKENS['surface-dim'] }}>
+                      <Txt variant="label" style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)' }}>
                         •
                       </Txt>
-                      <Txt variant="label" style={{ fontSize: 12, color: TOKENS.outline }}>
+                      <Txt variant="label" style={{ fontSize: 12, color: 'rgba(255,255,255,0.8)' }}>
                         {lesson.duration} min
                       </Txt>
                       {/* Dev-only lesson ID for testing/navigation. */}
                       {__DEV__ ? (
                         <>
-                          <Txt variant="label" style={{ fontSize: 12, color: TOKENS['surface-dim'] }}>
+                          <Txt variant="label" style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)' }}>
                             •
                           </Txt>
-                          <Txt variant="label" style={{ fontSize: 12, color: TOKENS.outline }}>
+                          <Txt variant="label" style={{ fontSize: 12, color: 'rgba(255,255,255,0.8)' }}>
                             {lesson.id}
                           </Txt>
                         </>
