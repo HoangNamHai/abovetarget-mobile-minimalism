@@ -137,7 +137,7 @@ export function MonographDashboard({ onStartStudy, onOpenLesson, onOpenDomain, o
             <Button label="Review Lessons" onPress={handleContinue} variant="secondary" />
           </View>
         ) : (
-          <View style={{ height: 420 }}>
+          <View style={{ height: 360 }}>
             {/* Full-bleed illustration */}
             <Image
               source={getLessonThumbnail(nextLesson!.thumbnail)}
