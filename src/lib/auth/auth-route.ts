@@ -11,7 +11,7 @@ export interface LandingRouteInput {
   hasCompletedOnboarding: boolean;
 }
 
-export type LandingRoute = '/(onboarding)' | '/(tabs)/home';
+export type LandingRoute = '/(onboarding)/splash' | '/(tabs)/home';
 
 /**
  * Decide where the root index route should send the user.
@@ -19,6 +19,6 @@ export type LandingRoute = '/(onboarding)' | '/(tabs)/home';
  */
 export function resolveLandingRoute(input: LandingRouteInput): LandingRoute | null {
   if (input.onboardingLoading) return null;
-  if (!input.hasCompletedOnboarding) return '/(onboarding)';
+  if (!input.hasCompletedOnboarding) return '/(onboarding)/splash';
   return '/(tabs)/home';
 }
