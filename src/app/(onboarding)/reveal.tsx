@@ -4,6 +4,7 @@ import { RevealScreen } from '../../components/onboarding/RevealScreen';
 import { useOnboarding } from '../../contexts/onboarding-context';
 import { buildPlan } from '../../lib/onboarding/onboarding-plan';
 import { getAllLessons } from '../../data/lessons-data';
+import { lessonsForDomain } from '../../components/onboarding/DomainPicker';
 import { REVENUECAT_ENABLED } from '../../config/env';
 import type { Domain } from '../../types/progress';
 
@@ -32,8 +33,14 @@ export default function Reveal() {
 
   async function onContinue() {
     await completeOnboarding();
-    if (REVENUECAT_ENABLED) router.push('/paywall?from=onboarding');
-    else router.replace('/');
+    // Land the user in the first lesson of the domain they chose.
+    const firstLesson = lessonsForDomain(plan.focusDomain, 1)[0];
+    const next = firstLesson ? `/lesson/${firstLesson.id}` : '/';
+    if (REVENUECAT_ENABLED) {
+      router.push(`/paywall?from=onboarding&next=${encodeURIComponent(next)}`);
+    } else {
+      router.replace(next);
+    }
   }
 
   return (

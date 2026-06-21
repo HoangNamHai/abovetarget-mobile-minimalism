@@ -42,7 +42,7 @@ export function DomainPicker({
             <View
               testID={`domain-card-${domain}`}
               style={{
-                height: 132,
+                height: 184,
                 borderRadius: RADIUS.media,
                 overflow: 'hidden',
                 borderWidth: isSelected ? 3 : 1,
