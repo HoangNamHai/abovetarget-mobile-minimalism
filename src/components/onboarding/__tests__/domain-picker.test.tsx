@@ -36,3 +36,12 @@ test('ConfidenceRating fires onChange with the tapped value', async () => {
   fireEvent.press(getByTestId('confidence-process-5'));
   expect(onChange).toHaveBeenCalledWith('process', 5);
 });
+
+test('only the exact selected number is highlighted; the rest are white', async () => {
+  const { getByTestId } = await render(
+    <ConfidenceRating value={{ people: 1, process: 3, business: 1 }} onChange={() => {}} />,
+  );
+  expect(getByTestId('confidence-process-3').props.style.backgroundColor).toBe(TOKENS.primary);
+  // a lower number is NOT filled (no cumulative fill) and stays white
+  expect(getByTestId('confidence-process-2').props.style.backgroundColor).toBe(TOKENS['surface-container-lowest']);
+});

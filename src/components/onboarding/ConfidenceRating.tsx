@@ -19,7 +19,7 @@ export function ConfidenceRating({ value, onChange }: { value: Conf; onChange: (
           </Txt>
           <View style={{ flexDirection: 'row', gap: 8 }}>
             {[1, 2, 3, 4, 5].map((n) => {
-              const active = value[domain] >= n;
+              const selected = value[domain] === n;
               return (
                 <PressableFeedback key={n} onPress={() => onChange(domain, n)}>
                   <View
@@ -27,11 +27,11 @@ export function ConfidenceRating({ value, onChange }: { value: Conf; onChange: (
                     style={{
                       width: 44, height: 44, borderRadius: 22,
                       alignItems: 'center', justifyContent: 'center',
-                      backgroundColor: active ? TOKENS.primary : 'transparent',
-                      borderWidth: 1, borderColor: active ? TOKENS.primary : TOKENS['outline-variant'],
+                      backgroundColor: selected ? TOKENS.primary : TOKENS['surface-container-lowest'],
+                      borderWidth: 1, borderColor: selected ? TOKENS.primary : TOKENS['outline-variant'],
                     }}
                   >
-                    <Txt variant="label" style={{ fontSize: 14, color: active ? TOKENS['on-primary'] : TOKENS.outline }}>
+                    <Txt variant="label" style={{ fontSize: 14, color: selected ? TOKENS['on-primary'] : TOKENS.outline }}>
                       {n}
                     </Txt>
                   </View>
