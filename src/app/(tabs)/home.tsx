@@ -7,6 +7,7 @@ export default function Home() {
       onStartStudy={() => router.push('/(tabs)/lessons')}
       onOpenLesson={(lessonId) => router.push(`/lesson/${lessonId}`)}
       onOpenDomain={(domain) => router.push(`/(tabs)/lessons?domain=${domain}`)}
+      onUpgrade={() => router.push('/paywall')}
     />
   );
 }

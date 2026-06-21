@@ -8,9 +8,11 @@ type Props = {
   onStartStudy: () => void;
   onOpenLesson?: (lessonId: string) => void;
   onOpenDomain?: (domain: Domain) => void;
+  /** Open the paywall; powers the free-tier upgrade CTA. */
+  onUpgrade?: () => void;
 };
 
-export function DashboardScreen({ onStartStudy, onOpenLesson, onOpenDomain }: Props) {
+export function DashboardScreen({ onStartStudy, onOpenLesson, onOpenDomain, onUpgrade }: Props) {
   const { brand } = useBrand();
 
   if (brand === 'elite') {
@@ -20,6 +22,11 @@ export function DashboardScreen({ onStartStudy, onOpenLesson, onOpenDomain }: Pr
   }
 
   return (
-    <MonographDashboard onStartStudy={onStartStudy} onOpenLesson={onOpenLesson} onOpenDomain={onOpenDomain} />
+    <MonographDashboard
+      onStartStudy={onStartStudy}
+      onOpenLesson={onOpenLesson}
+      onOpenDomain={onOpenDomain}
+      onUpgrade={onUpgrade}
+    />
   );
 }
