@@ -32,7 +32,7 @@ export function DomainPicker({
   const ordered: Domain[] = [recommended, ...DOMAINS.filter((d) => d !== recommended)];
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ gap: 16, paddingBottom: 8 }}>
+    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ gap: 16, paddingBottom: 48 }}>
       {ordered.map((domain) => {
         const isSelected = selected === domain;
         const isRecommended = recommended === domain;
@@ -80,7 +80,7 @@ export function DomainPicker({
                         paddingHorizontal: 12,
                         paddingVertical: 6,
                         borderRadius: RADIUS.pill,
-                        backgroundColor: ACCENTS.premium,
+                        backgroundColor: ACCENTS.success,
                         shadowColor: '#000',
                         shadowOpacity: 0.35,
                         shadowRadius: 6,
@@ -88,7 +88,7 @@ export function DomainPicker({
                         elevation: 5,
                       }}
                     >
-                      <Txt variant="label" style={{ fontSize: 11, fontWeight: '800', color: '#1a1206', textTransform: 'uppercase', letterSpacing: 0.8 }}>
+                      <Txt variant="label" style={{ fontSize: 11, fontWeight: '800', color: '#ffffff', textTransform: 'uppercase', letterSpacing: 0.8 }}>
                         Recommended for you
                       </Txt>
                     </View>

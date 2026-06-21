@@ -39,8 +39,8 @@ export default function DomainScreen() {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: TOKENS.background }}>
-      <View style={{ flex: 1, paddingHorizontal: 24, paddingVertical: 48, gap: 24 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: TOKENS.background }} edges={['top', 'left', 'right']}>
+      <View style={{ flex: 1, paddingHorizontal: 24, paddingTop: 48, gap: 24 }}>
         <View style={{ gap: 8 }}>
           <Txt variant="label" style={{ fontSize: 11, letterSpacing: 4, color: TOKENS.outline, textTransform: 'uppercase' }}>
             Your path
