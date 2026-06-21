@@ -46,7 +46,7 @@ export default function DomainScreen() {
             Your path
           </Txt>
           <Txt variant="display" style={{ fontSize: 32, lineHeight: 36, letterSpacing: -0.5, color: TOKENS.primary }}>
-            Where do you want to start?
+            Choose a domain to start learning
           </Txt>
         </View>
         <View style={{ flex: 1 }}>

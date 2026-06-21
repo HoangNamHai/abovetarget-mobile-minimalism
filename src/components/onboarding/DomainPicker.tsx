@@ -42,7 +42,7 @@ export function DomainPicker({
             <View
               testID={`domain-card-${domain}`}
               style={{
-                height: 184,
+                height: 240,
                 borderRadius: RADIUS.media,
                 overflow: 'hidden',
                 borderWidth: isSelected ? 3 : 1,
@@ -73,8 +73,20 @@ export function DomainPicker({
                     <View />
                   )}
                   {isRecommended && (
-                    <View style={{ paddingHorizontal: 8, paddingVertical: 3, borderRadius: RADIUS.pill, backgroundColor: ACCENTS.premium }}>
-                      <Txt variant="label" style={{ fontSize: 10, fontWeight: '700', color: '#1a1206', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                    <View
+                      style={{
+                        paddingHorizontal: 12,
+                        paddingVertical: 6,
+                        borderRadius: RADIUS.pill,
+                        backgroundColor: ACCENTS.premium,
+                        shadowColor: '#000',
+                        shadowOpacity: 0.35,
+                        shadowRadius: 6,
+                        shadowOffset: { width: 0, height: 2 },
+                        elevation: 5,
+                      }}
+                    >
+                      <Txt variant="label" style={{ fontSize: 11, fontWeight: '800', color: '#1a1206', textTransform: 'uppercase', letterSpacing: 0.8 }}>
                         Recommended for you
                       </Txt>
                     </View>
