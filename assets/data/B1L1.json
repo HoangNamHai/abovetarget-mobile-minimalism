@@ -548,30 +548,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to prioritize stakeholders using the **Salience Model** (Power, Legitimacy, Urgency) and map them to the **Power-Interest Grid** for daily management. Not all stakeholders are equal — Definitive stakeholders demand closest attention, while others need proportional engagement based on their profile.",
-        "key_takeaways": [
-          "Salience Model: Assess stakeholders across 3 dimensions — Power (can they influence success?), Legitimacy (rightful stake?), Urgency (time-sensitive?)",
-          "Seven Stakeholder Types: Definitive (highest priority), Dominant, Dependent, Dangerous, Dormant, Discretionary, Demanding",
-          "Power-Interest Grid: 4 quadrants with different strategies — Manage Closely, Keep Satisfied, Keep Informed, Monitor",
-          "Common Mistake: Not all loud stakeholders are important. Urgency alone does NOT equal priority without Power and Legitimacy",
-          "Tailored Engagement: Different stakeholders need different communication strategies — frequency, content, and channel all depend on their profile",
-          "Continuous Process: Stakeholder profiles change as projects evolve — reassess regularly"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B1L2",
-          "title": "Stakeholder Power & Interest Grid",
-          "description": "Dive deeper into Power TYPES (Legitimate, Expert, Referent, Persuasive) and master advanced engagement strategies for each quadrant."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -760,6 +736,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to prioritize stakeholders using the **Salience Model** (Power, Legitimacy, Urgency) and map them to the **Power-Interest Grid** for daily management. Not all stakeholders are equal — Definitive stakeholders demand closest attention, while others need proportional engagement based on their profile.",
+        "key_takeaways": [
+          "Salience Model: Assess stakeholders across 3 dimensions — Power (can they influence success?), Legitimacy (rightful stake?), Urgency (time-sensitive?)",
+          "Seven Stakeholder Types: Definitive (highest priority), Dominant, Dependent, Dangerous, Dormant, Discretionary, Demanding",
+          "Power-Interest Grid: 4 quadrants with different strategies — Manage Closely, Keep Satisfied, Keep Informed, Monitor",
+          "Common Mistake: Not all loud stakeholders are important. Urgency alone does NOT equal priority without Power and Legitimacy",
+          "Tailored Engagement: Different stakeholders need different communication strategies — frequency, content, and channel all depend on their profile",
+          "Continuous Process: Stakeholder profiles change as projects evolve — reassess regularly"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L2",
+          "title": "Stakeholder Power & Interest Grid",
+          "description": "Dive deeper into Power TYPES (Legitimate, Expert, Referent, Persuasive) and master advanced engagement strategies for each quadrant."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

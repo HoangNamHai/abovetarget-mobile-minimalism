@@ -481,37 +481,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've mastered **motivation diagnosis** — the skill of identifying ROOT CAUSES before jumping to solutions. Most managers default to money, but extrinsic rewards don't fix intrinsic problems, and motivators don't fix hygiene issues. Diagnose FIRST, then prescribe the right intervention.",
-        "key_takeaways": [
-          "Intrinsic vs Extrinsic: Intrinsic motivation (challenge, growth, autonomy) is sustainable and self-renewing. Extrinsic motivation (money, rewards) is short-term and requires continual input. Money doesn't fix boredom.",
-          "Herzberg's Two-Factor Theory: Fix HYGIENE factors (safety, tools, fair pay) BEFORE offering motivators (recognition, advancement). Motivators on top of broken hygiene is insulting.",
-          "Maslow's Hierarchy: Lower-level needs (physiological, safety) must be met before higher-level needs (esteem, self-actualization) can motivate. You can't inspire someone who isn't safe.",
-          "McGregor's Theory X vs Y: Theory Y (trust, empowerment) unlocks motivation. Theory X (micromanagement, distrust) destroys it and creates a self-fulfilling prophecy.",
-          "Recognition Best Practices: Timely (throughout project, not just at end), specific (not generic praise), culturally appropriate (public vs private), and aligned with personal goals.",
-          "Diagnose Before You Prescribe: Different root causes need different interventions. One blanket solution (like money) will fail most of the time."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Carlos wanted to give everyone a raise. But Elena needed acknowledgment, Marco needed challenge, and Jamie needed safety. Three completely different root causes — and money would have failed all three. The diagnostic mindset changed everything: ask 'What's the root cause?' BEFORE jumping to solutions."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C1L1",
-          "title": "Project Charter Development",
-          "description": "With your team motivated and engaged, learn how to formally authorize and define projects through the Project Charter — the foundation of project integration."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -693,6 +662,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered **motivation diagnosis** — the skill of identifying ROOT CAUSES before jumping to solutions. Most managers default to money, but extrinsic rewards don't fix intrinsic problems, and motivators don't fix hygiene issues. Diagnose FIRST, then prescribe the right intervention.",
+        "key_takeaways": [
+          "Intrinsic vs Extrinsic: Intrinsic motivation (challenge, growth, autonomy) is sustainable and self-renewing. Extrinsic motivation (money, rewards) is short-term and requires continual input. Money doesn't fix boredom.",
+          "Herzberg's Two-Factor Theory: Fix HYGIENE factors (safety, tools, fair pay) BEFORE offering motivators (recognition, advancement). Motivators on top of broken hygiene is insulting.",
+          "Maslow's Hierarchy: Lower-level needs (physiological, safety) must be met before higher-level needs (esteem, self-actualization) can motivate. You can't inspire someone who isn't safe.",
+          "McGregor's Theory X vs Y: Theory Y (trust, empowerment) unlocks motivation. Theory X (micromanagement, distrust) destroys it and creates a self-fulfilling prophecy.",
+          "Recognition Best Practices: Timely (throughout project, not just at end), specific (not generic praise), culturally appropriate (public vs private), and aligned with personal goals.",
+          "Diagnose Before You Prescribe: Different root causes need different interventions. One blanket solution (like money) will fail most of the time."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Carlos wanted to give everyone a raise. But Elena needed acknowledgment, Marco needed challenge, and Jamie needed safety. Three completely different root causes — and money would have failed all three. The diagnostic mindset changed everything: ask 'What's the root cause?' BEFORE jumping to solutions."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L1",
+          "title": "Project Charter Development",
+          "description": "With your team motivated and engaged, learn how to formally authorize and define projects through the Project Charter — the foundation of project integration."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

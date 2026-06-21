@@ -202,7 +202,7 @@ function PracticeAdvanceCapture({ handlesRef }: { handlesRef: { current: any } }
   return null;
 }
 
-test('practice as the last screen ends on wrap instead of looping back to question 0', async () => {
+test('advancing past the last practice question lands on the wrap (completion) screen', async () => {
   const ref: { current: any } = { current: null };
   await render(<PracticeAdvanceCapture handlesRef={ref} />, { wrapper: lessonWrapper });
 
@@ -211,8 +211,10 @@ test('practice as the last screen ends on wrap instead of looping back to questi
   });
   await waitFor(() => expect(ref.current.screens.length).toBeGreaterThan(0));
 
-  // Precondition that triggers the bug: practice is the final screen (after wrap).
-  expect(ref.current.screens[ref.current.screens.length - 1]).toBe('practice');
+  // Corrected lesson order: practice is the final application question, immediately
+  // before the terminal wrap (completion) screen — so the wrap is never orphaned.
+  expect(ref.current.screens[ref.current.screens.length - 1]).toBe('wrap');
+  expect(ref.current.screens[ref.current.screens.length - 2]).toBe('practice');
 
   await act(async () => {
     ref.current.goToStage('practice');

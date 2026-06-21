@@ -574,37 +574,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned how to facilitate effective Sprint Planning using the two-part structure, Definition of Ready, velocity-based forecasting, and sprint backlog flexibility.",
-        "key_takeaways": [
-          "Sprint Planning has two parts — Part 1 (WHAT): PO presents priorities, team selects stories. Part 2 (HOW): Team breaks stories into tasks and self-organizes.",
-          "PO owns Product Backlog. Team owns Sprint Backlog. — Morgan decides WHAT is most valuable. The team decides HOW to execute. Never let the PO dictate sprint task order.",
-          "Definition of Ready is a gate, not a suggestion — Stories missing acceptance criteria, dependencies, or requirements do NOT enter the sprint. \"Figure it out later\" = mid-sprint failure.",
-          "Velocity = Average, not Maximum — Use 3-5 sprints of historical data. Reject pressure to overcommit. 143% of capacity = guaranteed sprint failure.",
-          "Sprint Goal is sacred. Sprint Backlog is flexible. — The goal is the team's commitment. The backlog adapts to reality with PO collaboration.",
-          "Multi-team alignment = coordinated goals, not identical commitments — Each team commits to their own velocity. Alignment comes from shared product goals and managed dependencies."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think Sprint Planning was just picking stories from the backlog. Now I know it's a structured ceremony with clear roles. Morgan owns the WHAT, the team owns the HOW. Stories must meet Definition of Ready. Velocity is our reality check — not a negotiation target. And when multiple teams are involved, alignment means coordinated goals, not identical numbers."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D1L4",
-          "title": "Daily Standup & Collaboration",
-          "description": "You've planned the sprint — now keep it on track with effective 15-minute standups, blocker identification, and sprint momentum."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -798,6 +767,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned how to facilitate effective Sprint Planning using the two-part structure, Definition of Ready, velocity-based forecasting, and sprint backlog flexibility.",
+        "key_takeaways": [
+          "Sprint Planning has two parts — Part 1 (WHAT): PO presents priorities, team selects stories. Part 2 (HOW): Team breaks stories into tasks and self-organizes.",
+          "PO owns Product Backlog. Team owns Sprint Backlog. — Morgan decides WHAT is most valuable. The team decides HOW to execute. Never let the PO dictate sprint task order.",
+          "Definition of Ready is a gate, not a suggestion — Stories missing acceptance criteria, dependencies, or requirements do NOT enter the sprint. \"Figure it out later\" = mid-sprint failure.",
+          "Velocity = Average, not Maximum — Use 3-5 sprints of historical data. Reject pressure to overcommit. 143% of capacity = guaranteed sprint failure.",
+          "Sprint Goal is sacred. Sprint Backlog is flexible. — The goal is the team's commitment. The backlog adapts to reality with PO collaboration.",
+          "Multi-team alignment = coordinated goals, not identical commitments — Each team commits to their own velocity. Alignment comes from shared product goals and managed dependencies."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think Sprint Planning was just picking stories from the backlog. Now I know it's a structured ceremony with clear roles. Morgan owns the WHAT, the team owns the HOW. Stories must meet Definition of Ready. Velocity is our reality check — not a negotiation target. And when multiple teams are involved, alignment means coordinated goals, not identical numbers."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L4",
+          "title": "Daily Standup & Collaboration",
+          "description": "You've planned the sprint — now keep it on track with effective 15-minute standups, blocker identification, and sprint momentum."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

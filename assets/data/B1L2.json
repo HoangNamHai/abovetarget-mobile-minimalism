@@ -600,30 +600,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've mastered the **Power/Interest Grid** — the essential tool for stakeholder classification. By understanding where each stakeholder falls on the grid, you can tailor your engagement strategy so everyone gets the right level of attention.",
-        "key_takeaways": [
-          "Power/Interest Grid has 4 quadrants — each requires a different engagement strategy",
-          "Manage Closely (HP+HI): Weekly meetings, involve in decisions, close collaboration",
-          "Keep Satisfied (HP+LI): Meet their needs without over-engagement",
-          "Keep Informed (LP+HI): Regular updates, don't micromanage",
-          "Monitor (LP+LI): Minimal effort, check for changes",
-          "Crisis Rule: High POWER stakeholders take priority — especially regulatory"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B1L3",
-          "title": "Stakeholder Engagement Planning",
-          "description": "You learned to CLASSIFY stakeholders. Now learn to ENGAGE them — moving stakeholders through the engagement continuum from Unaware to Resistant to Neutral to Supportive to Leading."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -793,6 +769,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered the **Power/Interest Grid** — the essential tool for stakeholder classification. By understanding where each stakeholder falls on the grid, you can tailor your engagement strategy so everyone gets the right level of attention.",
+        "key_takeaways": [
+          "Power/Interest Grid has 4 quadrants — each requires a different engagement strategy",
+          "Manage Closely (HP+HI): Weekly meetings, involve in decisions, close collaboration",
+          "Keep Satisfied (HP+LI): Meet their needs without over-engagement",
+          "Keep Informed (LP+HI): Regular updates, don't micromanage",
+          "Monitor (LP+LI): Minimal effort, check for changes",
+          "Crisis Rule: High POWER stakeholders take priority — especially regulatory"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L3",
+          "title": "Stakeholder Engagement Planning",
+          "description": "You learned to CLASSIFY stakeholders. Now learn to ENGAGE them — moving stakeholders through the engagement continuum from Unaware to Resistant to Neutral to Supportive to Leading."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

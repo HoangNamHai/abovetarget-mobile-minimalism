@@ -424,29 +424,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to transform raw work performance DATA into actionable INFORMATION through variance analysis, and to use tolerance thresholds to determine which variances require corrective action versus continued monitoring. The key insight: not every deviation from plan is a crisis — but every critical path delay and threshold breach demands a response.",
-        "key_takeaways": [
-          "Monitor + Control: Monitoring measures performance against baselines. Controlling takes corrective or preventive action. Both are required — one without the other fails.",
-          "Variance Analysis: Actual minus Baseline = Variance. Negative schedule = behind. Positive cost = over budget. Negative scope = under-delivered.",
-          "Corrective vs Preventive: Corrective actions fix CURRENT deviations (problem already exists). Preventive actions prevent FUTURE problems (problem hasn't occurred yet). Both go through the CCB.",
-          "Tolerance Thresholds: Not all variances need action. Critical path = zero tolerance. Cost under 5% = use contingency. Assess each variance against its specific threshold before acting.",
-          "DATA to INFORMATION: Execution creates DATA (raw observations). Monitoring transforms DATA into INFORMATION (analyzed against baselines). Reports communicate INFORMATION to stakeholders."
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C1L6",
-          "title": "Integrated Change Control",
-          "description": "You've identified variances and recommended corrective actions. But WHO approves changes? How do you evaluate impacts across all baselines? Learn the formal change control process that governs every corrective and preventive action."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -628,6 +605,29 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to transform raw work performance DATA into actionable INFORMATION through variance analysis, and to use tolerance thresholds to determine which variances require corrective action versus continued monitoring. The key insight: not every deviation from plan is a crisis — but every critical path delay and threshold breach demands a response.",
+        "key_takeaways": [
+          "Monitor + Control: Monitoring measures performance against baselines. Controlling takes corrective or preventive action. Both are required — one without the other fails.",
+          "Variance Analysis: Actual minus Baseline = Variance. Negative schedule = behind. Positive cost = over budget. Negative scope = under-delivered.",
+          "Corrective vs Preventive: Corrective actions fix CURRENT deviations (problem already exists). Preventive actions prevent FUTURE problems (problem hasn't occurred yet). Both go through the CCB.",
+          "Tolerance Thresholds: Not all variances need action. Critical path = zero tolerance. Cost under 5% = use contingency. Assess each variance against its specific threshold before acting.",
+          "DATA to INFORMATION: Execution creates DATA (raw observations). Monitoring transforms DATA into INFORMATION (analyzed against baselines). Reports communicate INFORMATION to stakeholders."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L6",
+          "title": "Integrated Change Control",
+          "description": "You've identified variances and recommended corrective actions. But WHO approves changes? How do you evaluate impacts across all baselines? Learn the formal change control process that governs every corrective and preventive action."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

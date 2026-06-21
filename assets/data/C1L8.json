@@ -545,30 +545,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to distinguish **project success** from **business success** — and why blaming the PM for benefits shortfalls is like blaming the builder for how the owner runs the building. Benefits realization is an operational responsibility that begins where project delivery ends.",
-        "key_takeaways": [
-          "Two Measures of Success: Project success (time, budget, scope) and business success (revenue, ROI, satisfaction) are SEPARATE measures with SEPARATE owners",
-          "Tangible vs Intangible: Tangible benefits appear on financial statements (revenue, ROI, cost savings). Intangible benefits are qualitative (brand, satisfaction, morale) — both matter",
-          "Post-Project Measurement: Benefits are measured 3 months to 5 years after delivery, NOT at project closure",
-          "Ownership Transfer: PM delivers the project, then hands off to operations/sponsor who own benefit realization",
-          "Root Cause Analysis: When benefits fall short, diagnose operational root causes (adoption, training, process) — don't blame delivery",
-          "Benefits Don't Self-Correct: Passive waiting wastes time. Identify shortfalls early, implement corrective actions, monitor monthly"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C2L1",
-          "title": "Cost Estimation & Budgeting",
-          "description": "How do you estimate project costs accurately? Learn analogous, parametric, and bottom-up estimation — plus how to build a cost baseline with contingency reserves."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -707,6 +683,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to distinguish **project success** from **business success** — and why blaming the PM for benefits shortfalls is like blaming the builder for how the owner runs the building. Benefits realization is an operational responsibility that begins where project delivery ends.",
+        "key_takeaways": [
+          "Two Measures of Success: Project success (time, budget, scope) and business success (revenue, ROI, satisfaction) are SEPARATE measures with SEPARATE owners",
+          "Tangible vs Intangible: Tangible benefits appear on financial statements (revenue, ROI, cost savings). Intangible benefits are qualitative (brand, satisfaction, morale) — both matter",
+          "Post-Project Measurement: Benefits are measured 3 months to 5 years after delivery, NOT at project closure",
+          "Ownership Transfer: PM delivers the project, then hands off to operations/sponsor who own benefit realization",
+          "Root Cause Analysis: When benefits fall short, diagnose operational root causes (adoption, training, process) — don't blame delivery",
+          "Benefits Don't Self-Correct: Passive waiting wastes time. Identify shortfalls early, implement corrective actions, monitor monthly"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C2L1",
+          "title": "Cost Estimation & Budgeting",
+          "description": "How do you estimate project costs accurately? Learn analogous, parametric, and bottom-up estimation — plus how to build a cost baseline with contingency reserves."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -527,29 +527,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that Direct & Manage Project Work is THE execution process — where the project management plan becomes real deliverables. The PM coordinates dependencies, collects work performance data, integrates changes through formal change control, and enables the team to execute in their areas of expertise. Coordination beats micromanagement every time.",
-        "key_takeaways": [
-          "THE Execution Process: Direct & Manage is where the PM plan becomes reality — deliverables created, work completed, changes surfaced",
-          "4 Key Outputs: Deliverables, work performance data, change requests, and document updates — know all four for the PMP exam",
-          "DATA vs INFORMATION: DATA = raw observations collected during execution. INFORMATION = analyzed comparisons to baselines created during monitoring. Direct & Manage produces DATA, not INFORMATION",
-          "Coordinate, Don't Micromanage: The PM manages dependencies and integration — the team executes in their domains of expertise. Coordination enables parallel work; micromanagement creates bottlenecks",
-          "Execution Reveals Changes: Surprises always emerge during execution. Submit formal change requests through Integrated Change Control — never ignore or unilaterally approve baseline changes"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C1L4",
-          "title": "Managing Project Knowledge",
-          "description": "Execution generates knowledge — lessons learned, expert judgment, tacit and explicit knowledge. How do you capture, share, and reuse this knowledge so future projects benefit from today's experiences?"
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -731,6 +708,29 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that Direct & Manage Project Work is THE execution process — where the project management plan becomes real deliverables. The PM coordinates dependencies, collects work performance data, integrates changes through formal change control, and enables the team to execute in their areas of expertise. Coordination beats micromanagement every time.",
+        "key_takeaways": [
+          "THE Execution Process: Direct & Manage is where the PM plan becomes reality — deliverables created, work completed, changes surfaced",
+          "4 Key Outputs: Deliverables, work performance data, change requests, and document updates — know all four for the PMP exam",
+          "DATA vs INFORMATION: DATA = raw observations collected during execution. INFORMATION = analyzed comparisons to baselines created during monitoring. Direct & Manage produces DATA, not INFORMATION",
+          "Coordinate, Don't Micromanage: The PM manages dependencies and integration — the team executes in their domains of expertise. Coordination enables parallel work; micromanagement creates bottlenecks",
+          "Execution Reveals Changes: Surprises always emerge during execution. Submit formal change requests through Integrated Change Control — never ignore or unilaterally approve baseline changes"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L4",
+          "title": "Managing Project Knowledge",
+          "description": "Execution generates knowledge — lessons learned, expert judgment, tacit and explicit knowledge. How do you capture, share, and reuse this knowledge so future projects benefit from today's experiences?"
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

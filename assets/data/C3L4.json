@@ -494,37 +494,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to match quality tools to specific problems and distinguish between prevention (QA) and detection (QC). Quality management is not about using ALL the tools — it is about using the RIGHT tool for the RIGHT problem.",
-        "key_takeaways": [
-          "QA Prevents, QC Detects — Quality Assurance builds quality in through training, process improvement, and error-proofing. Quality Control catches defects through inspection and testing. Prevention is more cost-effective.",
-          "Pareto Prioritizes — The Pareto Chart applies the 80/20 rule to focus limited resources on the \"vital few\" causes that create most problems.",
-          "Rule of Seven Warns — 7+ consecutive points on one side of the mean on a control chart indicate an assignable cause. Investigate immediately, even if within control limits.",
-          "Statistical Sampling is Valid — Randomly selected subsets provide statistically valid quality assessments at a fraction of 100% inspection cost.",
-          "Precision Does Not Equal Accuracy — Precision is consistency with each other. Accuracy is closeness to the target. Systematic bias means high precision but low accuracy.",
-          "CI is Quality Assurance — Continuous Integration prevents bugs from accumulating by catching them early when they are easier and cheaper to fix."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think quality management meant inspecting everything at the end. Now I know each problem needs a specific tool — Pareto for prioritization, Control Charts for stability monitoring, Statistical Sampling for cost-effective inspection. And the biggest lesson: prevention beats detection every time. Investing in QA upfront costs less than fixing defects downstream."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C3L5",
-          "title": "Quality Control & Continuous Improvement",
-          "description": "You've mastered quality planning and assurance — now apply QC tools and improvement cycles like Plan-Do-Check-Act to continuously raise the quality bar."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -706,6 +675,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to match quality tools to specific problems and distinguish between prevention (QA) and detection (QC). Quality management is not about using ALL the tools — it is about using the RIGHT tool for the RIGHT problem.",
+        "key_takeaways": [
+          "QA Prevents, QC Detects — Quality Assurance builds quality in through training, process improvement, and error-proofing. Quality Control catches defects through inspection and testing. Prevention is more cost-effective.",
+          "Pareto Prioritizes — The Pareto Chart applies the 80/20 rule to focus limited resources on the \"vital few\" causes that create most problems.",
+          "Rule of Seven Warns — 7+ consecutive points on one side of the mean on a control chart indicate an assignable cause. Investigate immediately, even if within control limits.",
+          "Statistical Sampling is Valid — Randomly selected subsets provide statistically valid quality assessments at a fraction of 100% inspection cost.",
+          "Precision Does Not Equal Accuracy — Precision is consistency with each other. Accuracy is closeness to the target. Systematic bias means high precision but low accuracy.",
+          "CI is Quality Assurance — Continuous Integration prevents bugs from accumulating by catching them early when they are easier and cheaper to fix."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think quality management meant inspecting everything at the end. Now I know each problem needs a specific tool — Pareto for prioritization, Control Charts for stability monitoring, Statistical Sampling for cost-effective inspection. And the biggest lesson: prevention beats detection every time. Investing in QA upfront costs less than fixing defects downstream."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L5",
+          "title": "Quality Control & Continuous Improvement",
+          "description": "You've mastered quality planning and assurance — now apply QC tools and improvement cycles like Plan-Do-Check-Act to continuously raise the quality bar."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

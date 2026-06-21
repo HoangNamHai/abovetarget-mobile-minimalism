@@ -465,30 +465,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that the Project Management Plan is ONE integrated document — not a stack of separate plans. It contains 10 subsidiary management plans and 3 baselines, all working together as a cohesive system. When one area changes, the PM must trace the cascade through every connected plan to maintain integration.",
-        "key_takeaways": [
-          "10 Subsidiary Plans: The PM Plan integrates Scope, Schedule, Cost, Quality, Resource, Communications, Risk, Procurement, Stakeholder Engagement, and Change Management plans into one document",
-          "3 Key Baselines: Scope (WHAT), Schedule (WHEN), Cost (HOW MUCH) — the only baselines used for performance measurement in Earned Value Management",
-          "PM Creates, Sponsor Approves: The PM integrates all subsidiary plans with team input; the sponsor authorizes execution by approving the plan",
-          "Baselines Are Change-Controlled: Baselines can only be modified through Integrated Change Control with formal approval — they are frozen references",
-          "Integration = Cascade Updates: When one plan changes, trace the impact through all dependent plans (scope → schedule → cost → risk → communications)",
-          "Charter Is NOT Part of the PM Plan: The charter is an input (created during Initiating) — the PM Plan contains planning outputs only"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C1L3",
-          "title": "Direct & Manage Project Work",
-          "description": "You've authorized the project (charter) and created the plan (PM Plan) — now execute! Learn how to coordinate work execution, manage deliverables, collect work performance data, and handle change requests during project execution."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -676,6 +652,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the Project Management Plan is ONE integrated document — not a stack of separate plans. It contains 10 subsidiary management plans and 3 baselines, all working together as a cohesive system. When one area changes, the PM must trace the cascade through every connected plan to maintain integration.",
+        "key_takeaways": [
+          "10 Subsidiary Plans: The PM Plan integrates Scope, Schedule, Cost, Quality, Resource, Communications, Risk, Procurement, Stakeholder Engagement, and Change Management plans into one document",
+          "3 Key Baselines: Scope (WHAT), Schedule (WHEN), Cost (HOW MUCH) — the only baselines used for performance measurement in Earned Value Management",
+          "PM Creates, Sponsor Approves: The PM integrates all subsidiary plans with team input; the sponsor authorizes execution by approving the plan",
+          "Baselines Are Change-Controlled: Baselines can only be modified through Integrated Change Control with formal approval — they are frozen references",
+          "Integration = Cascade Updates: When one plan changes, trace the impact through all dependent plans (scope → schedule → cost → risk → communications)",
+          "Charter Is NOT Part of the PM Plan: The charter is an input (created during Initiating) — the PM Plan contains planning outputs only"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L3",
+          "title": "Direct & Manage Project Work",
+          "description": "You've authorized the project (charter) and created the plan (PM Plan) — now execute! Learn how to coordinate work execution, manage deliverables, collect work performance data, and handle change requests during project execution."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -533,37 +533,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've mastered the science of Agile team formation — from optimal team size to cross-functional composition to the proper use of velocity metrics.",
-        "key_takeaways": [
-          "7±2 Rule: Optimal Agile team size is 5-9 members. Too small = bottlenecks and burnout. Too large = communication chaos and sub-groups.",
-          "Cross-Functional & T-Shaped: Teams need ALL skills to deliver value without external dependencies. T-shaped members have deep expertise PLUS broad collaboration ability.",
-          "Kanban = Information Radiator: Real-time, persistent work visibility beats status emails and standup memory. Anyone can glance at the board anytime.",
-          "Velocity = Completed Work Only: Partial work contributes ZERO to velocity. Only DONE stories count. The half-finished story carries over to the next sprint.",
-          "Velocity is NOT for Comparing Teams: Each team has its own estimation scale. Velocity is a planning tool for YOUR team's capacity, never a cross-team benchmark.",
-          "Distributed Teams Follow the Same Rules: The 7±2 rule, cross-functional composition, and velocity principles apply — but practices need digital equivalents (digital Kanban, async tools, video standups)."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Carlos wanted 12 specialists. Ava wanted 4 generalists. Both were wrong. Seven cross-functional, T-shaped team members delivered TWICE what the specialist group ever did. And when Carlos tried to compare velocities between teams, I finally understood: velocity is a planning tool, not a scoreboard. Every team has its own scale. Now I build teams based on the science — not opinions."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D1L3",
-          "title": "Sprint Planning & Execution",
-          "description": "You've built the team — now plan the sprint. Learn backlog refinement, capacity planning, and sprint commitment using velocity as your guide."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -757,6 +726,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered the science of Agile team formation — from optimal team size to cross-functional composition to the proper use of velocity metrics.",
+        "key_takeaways": [
+          "7±2 Rule: Optimal Agile team size is 5-9 members. Too small = bottlenecks and burnout. Too large = communication chaos and sub-groups.",
+          "Cross-Functional & T-Shaped: Teams need ALL skills to deliver value without external dependencies. T-shaped members have deep expertise PLUS broad collaboration ability.",
+          "Kanban = Information Radiator: Real-time, persistent work visibility beats status emails and standup memory. Anyone can glance at the board anytime.",
+          "Velocity = Completed Work Only: Partial work contributes ZERO to velocity. Only DONE stories count. The half-finished story carries over to the next sprint.",
+          "Velocity is NOT for Comparing Teams: Each team has its own estimation scale. Velocity is a planning tool for YOUR team's capacity, never a cross-team benchmark.",
+          "Distributed Teams Follow the Same Rules: The 7±2 rule, cross-functional composition, and velocity principles apply — but practices need digital equivalents (digital Kanban, async tools, video standups)."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Carlos wanted 12 specialists. Ava wanted 4 generalists. Both were wrong. Seven cross-functional, T-shaped team members delivered TWICE what the specialist group ever did. And when Carlos tried to compare velocities between teams, I finally understood: velocity is a planning tool, not a scoreboard. Every team has its own scale. Now I build teams based on the science — not opinions."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L3",
+          "title": "Sprint Planning & Execution",
+          "description": "You've built the team — now plan the sprint. Learn backlog refinement, capacity planning, and sprint commitment using velocity as your guide."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

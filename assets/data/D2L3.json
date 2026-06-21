@@ -571,37 +571,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned how Kanban transforms workflow chaos into visible, manageable flow. By visualizing work, limiting WIP, and using pull systems, the Innovation Lab went from 0 to 4 completed experiments per week — without adding any new team members.",
-        "key_takeaways": [
-          "Visualize the Workflow — Make work visible on a Kanban board to eliminate status meetings and interruptions (information radiator)",
-          "Limit Work In Progress — Less WIP = more completions (counterintuitive but proven). Match WIP limits to team size",
-          "Manage Flow by swarming bottlenecks — WIP limits EXPOSE bottlenecks, they don't cause them. Team swarms to clear constraints",
-          "Pull > Push — Team members self-select from prioritized backlog based on capacity and expertise, not manager assignments",
-          "Measure with Lead Time and Cycle Time — Lead Time = request to done (includes waiting). Cycle Time = start to done (active work only)",
-          "Choose Kanban for continuous, unpredictable work — Kanban suits support teams and variable workflows; Scrum suits sprint-sized deliverables"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think productivity meant keeping everyone busy. Kanban taught me the opposite: productivity means keeping work FLOWING. When we limited WIP to 3, completions went from zero to four per week. The board made bottlenecks visible so the team could swarm to fix them. And the pull system gave people ownership — no more waiting for assignments."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D2L4",
-          "title": "Agile Estimation Techniques",
-          "description": "You've mastered flow management with Kanban — now learn how Agile teams estimate work using story points, planning poker, and relative sizing to plan effectively without false precision."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -795,6 +764,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned how Kanban transforms workflow chaos into visible, manageable flow. By visualizing work, limiting WIP, and using pull systems, the Innovation Lab went from 0 to 4 completed experiments per week — without adding any new team members.",
+        "key_takeaways": [
+          "Visualize the Workflow — Make work visible on a Kanban board to eliminate status meetings and interruptions (information radiator)",
+          "Limit Work In Progress — Less WIP = more completions (counterintuitive but proven). Match WIP limits to team size",
+          "Manage Flow by swarming bottlenecks — WIP limits EXPOSE bottlenecks, they don't cause them. Team swarms to clear constraints",
+          "Pull > Push — Team members self-select from prioritized backlog based on capacity and expertise, not manager assignments",
+          "Measure with Lead Time and Cycle Time — Lead Time = request to done (includes waiting). Cycle Time = start to done (active work only)",
+          "Choose Kanban for continuous, unpredictable work — Kanban suits support teams and variable workflows; Scrum suits sprint-sized deliverables"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think productivity meant keeping everyone busy. Kanban taught me the opposite: productivity means keeping work FLOWING. When we limited WIP to 3, completions went from zero to four per week. The board made bottlenecks visible so the team could swarm to fix them. And the pull system gave people ownership — no more waiting for assignments."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L4",
+          "title": "Agile Estimation Techniques",
+          "description": "You've mastered flow management with Kanban — now learn how Agile teams estimate work using story points, planning poker, and relative sizing to plan effectively without false precision."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -1,9 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, type ImageSourcePropType } from 'react-native';
+import { Image } from 'expo-image';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button } from '../primitives/Button';
 import { Txt } from '../primitives/Txt';
-import { TOKENS } from '../../theme/tokens';
+import { TOKENS, RADIUS } from '../../theme/tokens';
 import { OnboardingProgress } from './OnboardingProgress';
 
 type Props = {
@@ -13,13 +14,28 @@ type Props = {
   ctaLabel?: string;
   onContinue: () => void;
   progress?: number | null;
+  /** Optional illustration shown above the copy, filling the upper space. */
+  image?: ImageSourcePropType;
 };
 
-export function ValueScreen({ eyebrow, title, body, ctaLabel = 'Continue', onContinue, progress }: Props) {
+export function ValueScreen({ eyebrow, title, body, ctaLabel = 'Continue', onContinue, progress, image }: Props) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: TOKENS.background }}>
       <View style={{ flex: 1, paddingHorizontal: 24, paddingVertical: 48, gap: 24 }}>
         {progress != null && <OnboardingProgress progress={progress} />}
+        {image && (
+          <View
+            style={{
+              borderRadius: RADIUS.media,
+              overflow: 'hidden',
+              backgroundColor: TOKENS['surface-container'],
+              aspectRatio: 4 / 3,
+              width: '100%',
+            }}
+          >
+            <Image source={image} style={{ width: '100%', height: '100%' }} contentFit="cover" transition={250} />
+          </View>
+        )}
         <View style={{ flex: 1, justifyContent: 'center', gap: 16 }}>
           {eyebrow ? (
             <Txt variant="label" style={{ fontSize: 11, letterSpacing: 4, color: TOKENS.outline, textTransform: 'uppercase' }}>

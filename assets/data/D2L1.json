@@ -484,37 +484,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've mastered INVEST criteria for writing sprint-ready user stories. Jordan transformed from writing vague, oversized, untestable stories to crafting specific, sprint-sized stories with clear acceptance criteria — and so can you.",
-        "key_takeaways": [
-          "INVEST is the quality checklist for sprint-ready stories: Independent, Negotiable, Valuable, Estimable, Small, Testable",
-          "Vague stories violate Estimable and Testable — replace subjective language with specific, measurable outcomes",
-          "Epics violate Small — split multi-sprint work into independent, sprint-sized stories that deliver value incrementally",
-          "Dependencies violate Independent — remove dependency clauses or combine dependent stories",
-          "Acceptance criteria define \"done\" — specific, measurable conditions that QA can verify with pass/fail tests",
-          "Story points measure effort/complexity/risk — they are abstract measures, NOT hours or days"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Before INVEST, our sprint planning meetings ran 4 hours because no one could estimate vague stories or agree on what 'done' meant. Now Jordan writes stories that pass all six INVEST criteria, Devon estimates confidently, and Maya tests efficiently. Sprint planning takes 90 minutes, and we deliver 8 stories per sprint instead of 3."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D2L2",
-          "title": "Backlog Refinement & Prioritization",
-          "description": "Now that you can write quality user stories, learn how to prioritize them using MoSCoW, Weighted Shortest Job First (WSJF), and the Kano model."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -696,6 +665,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered INVEST criteria for writing sprint-ready user stories. Jordan transformed from writing vague, oversized, untestable stories to crafting specific, sprint-sized stories with clear acceptance criteria — and so can you.",
+        "key_takeaways": [
+          "INVEST is the quality checklist for sprint-ready stories: Independent, Negotiable, Valuable, Estimable, Small, Testable",
+          "Vague stories violate Estimable and Testable — replace subjective language with specific, measurable outcomes",
+          "Epics violate Small — split multi-sprint work into independent, sprint-sized stories that deliver value incrementally",
+          "Dependencies violate Independent — remove dependency clauses or combine dependent stories",
+          "Acceptance criteria define \"done\" — specific, measurable conditions that QA can verify with pass/fail tests",
+          "Story points measure effort/complexity/risk — they are abstract measures, NOT hours or days"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Before INVEST, our sprint planning meetings ran 4 hours because no one could estimate vague stories or agree on what 'done' meant. Now Jordan writes stories that pass all six INVEST criteria, Devon estimates confidently, and Maya tests efficiently. Sprint planning takes 90 minutes, and we deliver 8 stories per sprint instead of 3."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L2",
+          "title": "Backlog Refinement & Prioritization",
+          "description": "Now that you can write quality user stories, learn how to prioritize them using MoSCoW, Weighted Shortest Job First (WSJF), and the Kano model."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

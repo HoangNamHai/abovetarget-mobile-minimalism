@@ -385,42 +385,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that stakeholders are anyone who **AFFECTS** or is **AFFECTED BY** the project. Early identification prevents costly rework, scope misalignment, and damaged relationships. Understanding stakeholder roles (sponsor, customer, end user, team member) helps you engage them appropriately.",
-        "key_takeaways": [
-          "Stakeholder Definition: Anyone who affects, is affected by, or perceives themselves affected by the project",
-          "Not Just the Team: Stakeholders include sponsors, customers, end users, regulators, investors, community, vendors",
-          "Early Identification is Critical: Missing stakeholders leads to rework ($45K redesign), scope misalignment (ROI issues), and unusable deliverables",
-          "Four Key Roles: Sponsor (authorizes), Customer (receives), End User (uses daily), Team Member (performs work)",
-          "Internal vs External: External stakeholders (regulators, investors) often have MORE power than internal ones",
-          "Create a Stakeholder Register: Document all stakeholders early and update throughout the project"
-        ],
-        "character_closing": [
-          {
-            "character": "carlos_mendez",
-            "name": "Carlos Mendez",
-            "quote": "You learned this the hard way, Alex. Missing stakeholders cost us $45K and 6 weeks. But you won't make that mistake again. EVERY person affected by or affecting the project IS a stakeholder."
-          },
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I thought stakeholders were just the core team. Now I know—regulators, investors, end users, community, vendors—they're ALL stakeholders. I'll create a stakeholder register for every project from day one."
-          }
-        ],
-        "xp_earned": 145,
-        "next_lesson": {
-          "id": "A1L4",
-          "title": "Project Life Cycles",
-          "description": "Learn how to approach projects—predictive, adaptive, or hybrid life cycles, and when to use each approach."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -590,6 +554,42 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that stakeholders are anyone who **AFFECTS** or is **AFFECTED BY** the project. Early identification prevents costly rework, scope misalignment, and damaged relationships. Understanding stakeholder roles (sponsor, customer, end user, team member) helps you engage them appropriately.",
+        "key_takeaways": [
+          "Stakeholder Definition: Anyone who affects, is affected by, or perceives themselves affected by the project",
+          "Not Just the Team: Stakeholders include sponsors, customers, end users, regulators, investors, community, vendors",
+          "Early Identification is Critical: Missing stakeholders leads to rework ($45K redesign), scope misalignment (ROI issues), and unusable deliverables",
+          "Four Key Roles: Sponsor (authorizes), Customer (receives), End User (uses daily), Team Member (performs work)",
+          "Internal vs External: External stakeholders (regulators, investors) often have MORE power than internal ones",
+          "Create a Stakeholder Register: Document all stakeholders early and update throughout the project"
+        ],
+        "character_closing": [
+          {
+            "character": "carlos_mendez",
+            "name": "Carlos Mendez",
+            "quote": "You learned this the hard way, Alex. Missing stakeholders cost us $45K and 6 weeks. But you won't make that mistake again. EVERY person affected by or affecting the project IS a stakeholder."
+          },
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I thought stakeholders were just the core team. Now I know—regulators, investors, end users, community, vendors—they're ALL stakeholders. I'll create a stakeholder register for every project from day one."
+          }
+        ],
+        "xp_earned": 145,
+        "next_lesson": {
+          "id": "A1L4",
+          "title": "Project Life Cycles",
+          "description": "Learn how to approach projects—predictive, adaptive, or hybrid life cycles, and when to use each approach."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

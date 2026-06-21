@@ -443,30 +443,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that TRADITIONAL project success (on time, on budget, meets scope) measures PROJECT EXECUTION, not BUSINESS VALUE. MODERN value-driven success measures STAKEHOLDER SATISFACTION, BUSINESS OUTCOMES, and BENEFITS REALIZATION.",
-        "key_takeaways": [
-          "TRADITIONAL SUCCESS: On time, on budget, meets scope (measures execution)",
-          "VALUE-DRIVEN SUCCESS: Stakeholder satisfaction, outcomes, benefits (measures impact)",
-          "OUTPUTS vs OUTCOMES: Outputs = what we BUILD, Outcomes = VALUE we CREATE",
-          "FOUR TYPES OF VALUE: Financial, Operational, Stakeholder, Strategic",
-          "BENEFITS REALIZATION: Track value POST-PROJECT (Expected Benefits, Baseline, Measurement, Accountability, Triggers)",
-          "THE TRAP: You can deliver the WRONG thing perfectly on time"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "A1L8",
-          "title": "Project Integration Basics",
-          "description": "Learn how to integrate all knowledge areas into a cohesive plan."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -660,6 +636,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that TRADITIONAL project success (on time, on budget, meets scope) measures PROJECT EXECUTION, not BUSINESS VALUE. MODERN value-driven success measures STAKEHOLDER SATISFACTION, BUSINESS OUTCOMES, and BENEFITS REALIZATION.",
+        "key_takeaways": [
+          "TRADITIONAL SUCCESS: On time, on budget, meets scope (measures execution)",
+          "VALUE-DRIVEN SUCCESS: Stakeholder satisfaction, outcomes, benefits (measures impact)",
+          "OUTPUTS vs OUTCOMES: Outputs = what we BUILD, Outcomes = VALUE we CREATE",
+          "FOUR TYPES OF VALUE: Financial, Operational, Stakeholder, Strategic",
+          "BENEFITS REALIZATION: Track value POST-PROJECT (Expected Benefits, Baseline, Measurement, Accountability, Triggers)",
+          "THE TRAP: You can deliver the WRONG thing perfectly on time"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L8",
+          "title": "Project Integration Basics",
+          "description": "Learn how to integrate all knowledge areas into a cohesive plan."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -448,30 +448,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned the three organizational structures: **Functional** (low PM authority), **Projectized** (high PM authority), and **Matrix** (moderate PM authority, shared). Most organizations are Matrix—which means PMs must master NEGOTIATION, not command.",
-        "key_takeaways": [
-          "FUNCTIONAL: Staff report to department heads, PM is coordinator, must REQUEST resources",
-          "PROJECTIZED: Staff report directly to PM, full authority, team disbands after project",
-          "MATRIX: Dual reporting, resource allocation NEGOTIATED, most common structure",
-          "Matrix Types: Weak (PM closer to coordinator), Balanced (equal), Strong (PM closer to manager)",
-          "Matrix Navigation: Negotiate early, build relationships, escalate strategically",
-          "PM Authority Spectrum: Functional (minimal) → Matrix (moderate) → Projectized (high)"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "A1L6",
-          "title": "Project Constraints",
-          "description": "Learn what constraints every project faces—scope, schedule, cost, quality, resources, and risk."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -641,6 +617,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the three organizational structures: **Functional** (low PM authority), **Projectized** (high PM authority), and **Matrix** (moderate PM authority, shared). Most organizations are Matrix—which means PMs must master NEGOTIATION, not command.",
+        "key_takeaways": [
+          "FUNCTIONAL: Staff report to department heads, PM is coordinator, must REQUEST resources",
+          "PROJECTIZED: Staff report directly to PM, full authority, team disbands after project",
+          "MATRIX: Dual reporting, resource allocation NEGOTIATED, most common structure",
+          "Matrix Types: Weak (PM closer to coordinator), Balanced (equal), Strong (PM closer to manager)",
+          "Matrix Navigation: Negotiate early, build relationships, escalate strategically",
+          "PM Authority Spectrum: Functional (minimal) → Matrix (moderate) → Projectized (high)"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L6",
+          "title": "Project Constraints",
+          "description": "Learn what constraints every project faces—scope, schedule, cost, quality, resources, and risk."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

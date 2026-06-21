@@ -455,37 +455,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that the **project charter** is the document that formally authorizes the project and grants the PM authority to apply organizational resources. Without it, the PM has no authority to commit budget, hire resources, or make decisions.",
-        "key_takeaways": [
-          "Charter AUTHORIZES the project AND the PM — Without it, no authority to use resources or commit budget",
-          "Created by the SPONSOR, not the PM — PM can assist in drafting, but the sponsor must authorize",
-          "HIGH-LEVEL, not detailed — Charter = strategic summary (2-5 pages). PM Plan = detailed execution (50-200+ pages)",
-          "Created during INITIATING, before Planning — Charter must be approved before the PM can create detailed plans",
-          "7 essential components: Business case, measurable objectives, high-level requirements, high-level risks, summary milestones, summary budget, PM authority and key stakeholders",
-          "NOT bureaucracy — it's authorization — The charter protects the PM, the project, and the organization"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think charters were just paperwork that slowed things down. Now I understand: the charter is my authority. Without it, I can't make decisions, commit budget, or hire resources. It protects me as much as it protects the project. And when someone says 'skip the paperwork,' I help them create a quick charter instead — because that's what lets me move fast."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C1L2",
-          "title": "Project Management Plan",
-          "description": "You've authorized the project with a charter — now create the detailed roadmap that guides execution, integrating scope, schedule, cost, quality, and risk into one cohesive plan."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -679,6 +648,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **project charter** is the document that formally authorizes the project and grants the PM authority to apply organizational resources. Without it, the PM has no authority to commit budget, hire resources, or make decisions.",
+        "key_takeaways": [
+          "Charter AUTHORIZES the project AND the PM — Without it, no authority to use resources or commit budget",
+          "Created by the SPONSOR, not the PM — PM can assist in drafting, but the sponsor must authorize",
+          "HIGH-LEVEL, not detailed — Charter = strategic summary (2-5 pages). PM Plan = detailed execution (50-200+ pages)",
+          "Created during INITIATING, before Planning — Charter must be approved before the PM can create detailed plans",
+          "7 essential components: Business case, measurable objectives, high-level requirements, high-level risks, summary milestones, summary budget, PM authority and key stakeholders",
+          "NOT bureaucracy — it's authorization — The charter protects the PM, the project, and the organization"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think charters were just paperwork that slowed things down. Now I understand: the charter is my authority. Without it, I can't make decisions, commit budget, or hire resources. It protects me as much as it protects the project. And when someone says 'skip the paperwork,' I help them create a quick charter instead — because that's what lets me move fast."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L2",
+          "title": "Project Management Plan",
+          "description": "You've authorized the project with a charter — now create the detailed roadmap that guides execution, integrating scope, schedule, cost, quality, and risk into one cohesive plan."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

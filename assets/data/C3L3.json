@@ -495,37 +495,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that **risk monitoring and control** is a continuous process of tracking risks, classifying changes, and selecting the right response. Residual, secondary, and new risks each require different handling — and knowing when to trigger a contingency versus create a workaround can save hundreds of thousands of dollars.",
-        "key_takeaways": [
-          "Monitoring is CONTINUOUS — Weekly status reviews + monthly audits + continuous vigilance. The risk register from Month 1 will look very different by Month 3.",
-          "Residual vs Secondary vs New — Residual = same risk, reduced level. Secondary = new risk from response. New = emerged independently. Classification drives the correct response.",
-          "Contingency vs Workaround — Contingency = pre-defined, trigger-based, pre-approved. Workaround = created now for unanticipated situations or failed responses.",
-          "Trigger thresholds mean ACT — When a contingency trigger is exceeded, ACTIVATE. Don't wait, don't second-guess. Triggers were set during planning for a reason.",
-          "Risk register is a living document — Updated weekly with new ratings, new risks, closed risks, and lessons learned. Filed paperwork is worthless.",
-          "Workarounds aren't failures — They're creative responses to surprises. Every project needs them. The skill is responding quickly and effectively."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "The risk register from Month 1 looked nothing like Month 3. That's not planning failure — that's reality. Five situations, five different classifications, five different responses. Secondary risks tracked separately, contingency triggered on time, workarounds created for new risks, residual risks monitored. That's systematic risk control — and it saved us from turning surprises into disasters."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C3L4",
-          "title": "Quality Planning & Assurance",
-          "description": "Risk monitoring informs quality planning — now learn how to plan quality standards, execute quality assurance, and ensure your deliverables meet stakeholder expectations from the start."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -707,6 +676,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **risk monitoring and control** is a continuous process of tracking risks, classifying changes, and selecting the right response. Residual, secondary, and new risks each require different handling — and knowing when to trigger a contingency versus create a workaround can save hundreds of thousands of dollars.",
+        "key_takeaways": [
+          "Monitoring is CONTINUOUS — Weekly status reviews + monthly audits + continuous vigilance. The risk register from Month 1 will look very different by Month 3.",
+          "Residual vs Secondary vs New — Residual = same risk, reduced level. Secondary = new risk from response. New = emerged independently. Classification drives the correct response.",
+          "Contingency vs Workaround — Contingency = pre-defined, trigger-based, pre-approved. Workaround = created now for unanticipated situations or failed responses.",
+          "Trigger thresholds mean ACT — When a contingency trigger is exceeded, ACTIVATE. Don't wait, don't second-guess. Triggers were set during planning for a reason.",
+          "Risk register is a living document — Updated weekly with new ratings, new risks, closed risks, and lessons learned. Filed paperwork is worthless.",
+          "Workarounds aren't failures — They're creative responses to surprises. Every project needs them. The skill is responding quickly and effectively."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "The risk register from Month 1 looked nothing like Month 3. That's not planning failure — that's reality. Five situations, five different classifications, five different responses. Secondary risks tracked separately, contingency triggered on time, workarounds created for new risks, residual risks monitored. That's systematic risk control — and it saved us from turning surprises into disasters."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L4",
+          "title": "Quality Planning & Assurance",
+          "description": "Risk monitoring informs quality planning — now learn how to plan quality standards, execute quality assurance, and ensure your deliverables meet stakeholder expectations from the start."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -498,36 +498,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that **procurement contract selection** is fundamentally about matching contract type to scope clarity and risk tolerance. The wrong match -- Fixed Price on unclear scope, Cost Reimbursable on clear scope, T&M without controls -- creates conflict, waste, and budget blowouts.",
-        "key_takeaways": [
-          "Match Contract to Scope Clarity -- Clear scope = Fixed Price. Evolving scope = Cost Reimbursable. Unpredictable hours = Time & Materials. Scope clarity is the primary driver.",
-          "Risk Allocation Drives Selection -- Fixed Price: seller bears overrun risk. Cost Reimbursable: buyer bears cost uncertainty. T&M: buyer has moderate risk at set rates.",
-          "Hybrid Modifications Balance Risk -- Cost ceilings, incentive fees, and performance milestones modify base types to balance buyer and seller interests.",
-          "Controls Are Non-Negotiable -- Cost Reimbursable does not mean unlimited budget. Always include ceilings, reporting, and approval thresholds to manage exposure.",
-          "Contract Administration Matters -- Selecting the right type is step one. Monitoring performance, managing changes, and maintaining vendor relationships are ongoing responsibilities."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think all contracts were basically the same -- just agree on a price and go. Now I understand that the contract TYPE determines who bears the risk. Fixed Price for clear scope, Cost Reimbursable for evolving scope, T&M for unpredictable hours. And always -- always -- add controls like cost ceilings and monthly reporting. The right contract protects both sides."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C3L7",
-          "title": "Contract Administration & Closure (future)",
-          "description": "You've selected the right contract types -- now learn how to manage vendor performance, handle contract changes, conduct procurement audits, and formally close contracts when the work is done."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -712,6 +682,36 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **procurement contract selection** is fundamentally about matching contract type to scope clarity and risk tolerance. The wrong match -- Fixed Price on unclear scope, Cost Reimbursable on clear scope, T&M without controls -- creates conflict, waste, and budget blowouts.",
+        "key_takeaways": [
+          "Match Contract to Scope Clarity -- Clear scope = Fixed Price. Evolving scope = Cost Reimbursable. Unpredictable hours = Time & Materials. Scope clarity is the primary driver.",
+          "Risk Allocation Drives Selection -- Fixed Price: seller bears overrun risk. Cost Reimbursable: buyer bears cost uncertainty. T&M: buyer has moderate risk at set rates.",
+          "Hybrid Modifications Balance Risk -- Cost ceilings, incentive fees, and performance milestones modify base types to balance buyer and seller interests.",
+          "Controls Are Non-Negotiable -- Cost Reimbursable does not mean unlimited budget. Always include ceilings, reporting, and approval thresholds to manage exposure.",
+          "Contract Administration Matters -- Selecting the right type is step one. Monitoring performance, managing changes, and maintaining vendor relationships are ongoing responsibilities."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think all contracts were basically the same -- just agree on a price and go. Now I understand that the contract TYPE determines who bears the risk. Fixed Price for clear scope, Cost Reimbursable for evolving scope, T&M for unpredictable hours. And always -- always -- add controls like cost ceilings and monthly reporting. The right contract protects both sides."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L7",
+          "title": "Contract Administration & Closure (future)",
+          "description": "You've selected the right contract types -- now learn how to manage vendor performance, handle contract changes, conduct procurement audits, and formally close contracts when the work is done."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

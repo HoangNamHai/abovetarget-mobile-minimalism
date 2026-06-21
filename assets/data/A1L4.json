@@ -375,30 +375,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned the three main project life cycles: **Predictive** (sequential, fixed requirements), **Adaptive** (iterative, uncertain requirements), and **Hybrid** (blended). The right approach depends on requirements certainty, change cost, and stakeholder involvement — not trends or personal preference.",
-        "key_takeaways": [
-          "PREDICTIVE (Waterfall): Sequential phases, upfront planning, low change tolerance. Use when requirements are CLEAR and STABLE.",
-          "ADAPTIVE (Agile): Iterative cycles, continuous planning, high change tolerance. Use when requirements are UNCERTAIN and EVOLVING.",
-          "HYBRID: Blends both — upfront planning for stable elements, iterative execution for uncertain elements.",
-          "Selection Criteria: Requirements certainty, change cost, stakeholder involvement",
-          "PMI Approach: Life cycle CONTINUUM (not one-size-fits-all). TAILOR the approach to the project context.",
-          "Common Mistake: Choosing Agile because it's trendy, or Predictive because it's familiar. Choose based on PROJECT CHARACTERISTICS."
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "A1L5",
-          "title": "Organizational Structures",
-          "description": "Learn how organizational structure affects your authority, resources, and project approach."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -568,6 +544,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the three main project life cycles: **Predictive** (sequential, fixed requirements), **Adaptive** (iterative, uncertain requirements), and **Hybrid** (blended). The right approach depends on requirements certainty, change cost, and stakeholder involvement — not trends or personal preference.",
+        "key_takeaways": [
+          "PREDICTIVE (Waterfall): Sequential phases, upfront planning, low change tolerance. Use when requirements are CLEAR and STABLE.",
+          "ADAPTIVE (Agile): Iterative cycles, continuous planning, high change tolerance. Use when requirements are UNCERTAIN and EVOLVING.",
+          "HYBRID: Blends both — upfront planning for stable elements, iterative execution for uncertain elements.",
+          "Selection Criteria: Requirements certainty, change cost, stakeholder involvement",
+          "PMI Approach: Life cycle CONTINUUM (not one-size-fits-all). TAILOR the approach to the project context.",
+          "Common Mistake: Choosing Agile because it's trendy, or Predictive because it's familiar. Choose based on PROJECT CHARACTERISTICS."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L5",
+          "title": "Organizational Structures",
+          "description": "Learn how organizational structure affects your authority, resources, and project approach."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

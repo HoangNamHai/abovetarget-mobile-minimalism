@@ -584,30 +584,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've mastered **Integrated Change Control** — the process that ensures all baseline changes are properly assessed, routed, and governed. The key insight: one change cascades across multiple baselines. That's why we assess INTEGRATED impact — not just the originating area.",
-        "key_takeaways": [
-          "5-Step Process: Receive, Log, Assess, CCB Decision, Update & Communicate — every baseline change follows this path",
-          "Baseline vs Within-Baseline: CCB approves baseline changes (scope, schedule, cost); PM approves within-baseline changes directly",
-          "Integrated Assessment: Assess impact across ALL knowledge areas — one change can cascade through scope, schedule, cost, quality, and risk",
-          "CCB Has Four Options: Approve, reject, modify, or defer — modification is often the best path for balancing value and risk",
-          "Bypass Consequences: Skipping the CCB leads to surprise costs, schedule delays, trust erosion, and authority restrictions",
-          "Configuration Management: Version your baselines, maintain the change log, trace every decision for audit readiness"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C1L7",
-          "title": "Project Closure",
-          "description": "The project is complete — deliverables accepted, opening successful. But closure isn't just \"done.\" It's formal acceptance, lessons learned, and transition to operations."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -703,6 +679,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered **Integrated Change Control** — the process that ensures all baseline changes are properly assessed, routed, and governed. The key insight: one change cascades across multiple baselines. That's why we assess INTEGRATED impact — not just the originating area.",
+        "key_takeaways": [
+          "5-Step Process: Receive, Log, Assess, CCB Decision, Update & Communicate — every baseline change follows this path",
+          "Baseline vs Within-Baseline: CCB approves baseline changes (scope, schedule, cost); PM approves within-baseline changes directly",
+          "Integrated Assessment: Assess impact across ALL knowledge areas — one change can cascade through scope, schedule, cost, quality, and risk",
+          "CCB Has Four Options: Approve, reject, modify, or defer — modification is often the best path for balancing value and risk",
+          "Bypass Consequences: Skipping the CCB leads to surprise costs, schedule delays, trust erosion, and authority restrictions",
+          "Configuration Management: Version your baselines, maintain the change log, trace every decision for audit readiness"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L7",
+          "title": "Project Closure",
+          "description": "The project is complete — deliverables accepted, opening successful. But closure isn't just \"done.\" It's formal acceptance, lessons learned, and transition to operations."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

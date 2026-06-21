@@ -37,3 +37,13 @@ test('getLessonData returns full content with screens for A1L1', () => {
 test('getLessonData returns null for an unknown id', () => {
   expect(getLessonData('NOPE-DOES-NOT-EXIST')).toBeNull();
 });
+
+test('wrap (completion) is the last screen of every lesson — no orphaned screens after it', () => {
+  for (const lesson of getAllLessons()) {
+    const data = getLessonData(lesson.id);
+    const types = (data?.screens ?? []).map((s) => s.screen_type);
+    if (types.includes('wrap')) {
+      expect(types[types.length - 1]).toBe('wrap');
+    }
+  }
+});

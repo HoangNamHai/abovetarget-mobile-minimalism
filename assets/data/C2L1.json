@@ -497,37 +497,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned how to **select estimation techniques** based on data availability and detail needs, and how to **structure a defensible budget** with proper reserves. Elena approved the $2.8M budget because Alex justified every component.",
-        "key_takeaways": [
-          "Bottom-Up — High detail, high accuracy (+/-10%). Best when scope is clear and itemized breakdown is required (construction: $1.8M)",
-          "Analogous — Quick estimate using historical data (+/-25-50%). Best when similar past projects exist (marketing: $300K)",
-          "Parametric — Cost-per-unit calculation (+/-15-20%). Best for scalable work with measurable parameters",
-          "Three-Point — Captures uncertainty with ranges (+/-15%). Best when historical data is missing and uncertainty is high (technology: $425K)",
-          "Budget Hierarchy — Cost Baseline + Contingency Reserve = Project Budget + Management Reserve = Total Funding",
-          "Reserve Control — Contingency = PM controls (known risks from risk register). Management Reserve = Sponsor controls (unknown unknowns)"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to just add 10% for contingency without thinking about it. Now I understand the difference between contingency and management reserves — and I can defend each dollar to the board. Matching the right estimation technique to each work package made the whole budget defensible. Elena approved it because I showed my work."
-          }
-        ],
-        "xp_earned": 300,
-        "next_lesson": {
-          "id": "C2L2",
-          "title": "Earned Value Management",
-          "description": "You've built the budget — now learn how to track cost performance using EVM metrics. Calculate CPI, SPI, and forecast whether you'll finish on budget using EAC and ETC."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -709,6 +678,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned how to **select estimation techniques** based on data availability and detail needs, and how to **structure a defensible budget** with proper reserves. Elena approved the $2.8M budget because Alex justified every component.",
+        "key_takeaways": [
+          "Bottom-Up — High detail, high accuracy (+/-10%). Best when scope is clear and itemized breakdown is required (construction: $1.8M)",
+          "Analogous — Quick estimate using historical data (+/-25-50%). Best when similar past projects exist (marketing: $300K)",
+          "Parametric — Cost-per-unit calculation (+/-15-20%). Best for scalable work with measurable parameters",
+          "Three-Point — Captures uncertainty with ranges (+/-15%). Best when historical data is missing and uncertainty is high (technology: $425K)",
+          "Budget Hierarchy — Cost Baseline + Contingency Reserve = Project Budget + Management Reserve = Total Funding",
+          "Reserve Control — Contingency = PM controls (known risks from risk register). Management Reserve = Sponsor controls (unknown unknowns)"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to just add 10% for contingency without thinking about it. Now I understand the difference between contingency and management reserves — and I can defend each dollar to the board. Matching the right estimation technique to each work package made the whole budget defensible. Elena approved it because I showed my work."
+          }
+        ],
+        "xp_earned": 300,
+        "next_lesson": {
+          "id": "C2L2",
+          "title": "Earned Value Management",
+          "description": "You've built the budget — now learn how to track cost performance using EVM metrics. Calculate CPI, SPI, and forecast whether you'll finish on budget using EAC and ETC."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -414,36 +414,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that **risk identification** is a systematic process: choose the right technique for your team dynamics, categorize for clear ownership, prioritize with EMV for limited resources, and escalate when something exceeds your authority.",
-        "key_takeaways": [
-          "Technique Selection = Team Dynamics — Choose identification technique based on WHO is participating, not just WHAT risks you're seeking. Delphi for dominant personalities and remote teams. Brainstorming for equal dynamics and live access.",
-          "RBS = Clear Ownership — Categorize risks as Technical (Tech Lead), External (Finance/Legal), Organizational (Operations/HR), or PM (Project Manager). Clear ownership means faster response.",
-          "EMV = Priority Order — Calculate Expected Monetary Value (Probability x Impact) to prioritize limited mitigation resources. Highest EMV gets first attention.",
-          "Escalate Appropriately — Escalate when risk exceeds your authority, threatens project objectives, or requires organizational decisions. Don't be a hero with risks above your pay grade.",
-          "Risks vs. Issues — Risks are future uncertainties requiring proactive identification. Issues are current problems requiring reactive response. Risk identification is always PROACTIVE."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think risk identification was just listing everything that could go wrong. Now I know it's about using the RIGHT technique for your team — Delphi surfaced risks that brainstorming buried. Categorizing with RBS gave every risk a clear owner. Prioritizing with EMV ensured our limited $150K budget hit the highest-impact risks first. And escalating the regulatory risk to Elena? That was the smartest move I made. She had resources I didn't — legal counsel, government relations, board connections. Risk identification isn't about being a hero. It's about being systematic."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C3L2",
-          "title": "Risk Response Planning",
-          "description": "You've identified and prioritized risks — now plan how to respond. Learn the four risk response strategies: Avoid, Mitigate, Transfer, and Accept. Which strategy fits which risk?"
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -625,6 +595,36 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **risk identification** is a systematic process: choose the right technique for your team dynamics, categorize for clear ownership, prioritize with EMV for limited resources, and escalate when something exceeds your authority.",
+        "key_takeaways": [
+          "Technique Selection = Team Dynamics — Choose identification technique based on WHO is participating, not just WHAT risks you're seeking. Delphi for dominant personalities and remote teams. Brainstorming for equal dynamics and live access.",
+          "RBS = Clear Ownership — Categorize risks as Technical (Tech Lead), External (Finance/Legal), Organizational (Operations/HR), or PM (Project Manager). Clear ownership means faster response.",
+          "EMV = Priority Order — Calculate Expected Monetary Value (Probability x Impact) to prioritize limited mitigation resources. Highest EMV gets first attention.",
+          "Escalate Appropriately — Escalate when risk exceeds your authority, threatens project objectives, or requires organizational decisions. Don't be a hero with risks above your pay grade.",
+          "Risks vs. Issues — Risks are future uncertainties requiring proactive identification. Issues are current problems requiring reactive response. Risk identification is always PROACTIVE."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think risk identification was just listing everything that could go wrong. Now I know it's about using the RIGHT technique for your team — Delphi surfaced risks that brainstorming buried. Categorizing with RBS gave every risk a clear owner. Prioritizing with EMV ensured our limited $150K budget hit the highest-impact risks first. And escalating the regulatory risk to Elena? That was the smartest move I made. She had resources I didn't — legal counsel, government relations, board connections. Risk identification isn't about being a hero. It's about being systematic."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L2",
+          "title": "Risk Response Planning",
+          "description": "You've identified and prioritized risks — now plan how to respond. Learn the four risk response strategies: Avoid, Mitigate, Transfer, and Accept. Which strategy fits which risk?"
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -488,37 +488,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that risk response planning means selecting the optimal strategy for each identified risk based on its characteristics — not applying a one-size-fits-all approach.",
-        "key_takeaways": [
-          "Match strategy to risk — Each risk needs a custom response based on probability, impact, cost, and your authority. No single strategy works for every risk.",
-          "Cost-benefit rule — If response cost is less than expected loss (P x I), consider mitigation or avoidance. If cost exceeds expected loss, consider acceptance or transfer.",
-          "Mitigate is most common — Mitigation (reducing probability or impact) is the most frequently used strategy. Cost-effective for medium-severity risks.",
-          "Check existing coverage first — ALWAYS review existing contracts, insurance, and warranties BEFORE buying new coverage. Do not pay twice for the same protection.",
-          "Escalate when appropriate — Escalate when a risk is outside project scope or beyond PM authority. It is recognition of boundaries, not admission of failure.",
-          "Opportunities need responses too — Positive risks have their own strategies: Exploit, Enhance, Share, Accept. Do not ignore upside potential."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Risk response is not about eliminating every threat — it is about choosing the RIGHT response for EACH risk. We mitigated chef illness for $8K, buffered the supplier delay for $2K, exploited the oven discount, transferred power risk through existing insurance, and escalated the permit to Carlos. $80K penalty avoided, $250K revenue secured."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C3L3",
-          "title": "Risk Monitoring & Control",
-          "description": "You have planned your risk responses — now learn how to track identified risks, watch for triggers, and execute your planned responses when risks actually occur."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -700,6 +669,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that risk response planning means selecting the optimal strategy for each identified risk based on its characteristics — not applying a one-size-fits-all approach.",
+        "key_takeaways": [
+          "Match strategy to risk — Each risk needs a custom response based on probability, impact, cost, and your authority. No single strategy works for every risk.",
+          "Cost-benefit rule — If response cost is less than expected loss (P x I), consider mitigation or avoidance. If cost exceeds expected loss, consider acceptance or transfer.",
+          "Mitigate is most common — Mitigation (reducing probability or impact) is the most frequently used strategy. Cost-effective for medium-severity risks.",
+          "Check existing coverage first — ALWAYS review existing contracts, insurance, and warranties BEFORE buying new coverage. Do not pay twice for the same protection.",
+          "Escalate when appropriate — Escalate when a risk is outside project scope or beyond PM authority. It is recognition of boundaries, not admission of failure.",
+          "Opportunities need responses too — Positive risks have their own strategies: Exploit, Enhance, Share, Accept. Do not ignore upside potential."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Risk response is not about eliminating every threat — it is about choosing the RIGHT response for EACH risk. We mitigated chef illness for $8K, buffered the supplier delay for $2K, exploited the oven discount, transferred power risk through existing insurance, and escalated the permit to Carlos. $80K penalty avoided, $250K revenue secured."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L3",
+          "title": "Risk Monitoring & Control",
+          "description": "You have planned your risk responses — now learn how to track identified risks, watch for triggers, and execute your planned responses when risks actually occur."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

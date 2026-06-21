@@ -72,8 +72,25 @@ export function ChoiceScreen({
                         </Txt>
                       ) : null}
                     </View>
-                    {selected && (
-                      <View style={{ width: 20, height: 20, borderRadius: 10, backgroundColor: TOKENS['on-primary'], marginLeft: 12 }} />
+                    {mode === 'multi' ? (
+                      // Square indicator signals multi-select ("pick all that apply").
+                      <View
+                        style={{
+                          width: 22, height: 22, borderRadius: 5, marginLeft: 12,
+                          alignItems: 'center', justifyContent: 'center',
+                          borderWidth: 2,
+                          borderColor: selected ? TOKENS['on-primary'] : TOKENS['outline-variant'],
+                          backgroundColor: selected ? TOKENS['on-primary'] : 'transparent',
+                        }}
+                      >
+                        {selected && (
+                          <Txt variant="label" style={{ fontSize: 13, fontWeight: '700', color: TOKENS.primary }}>✓</Txt>
+                        )}
+                      </View>
+                    ) : (
+                      selected && (
+                        <View style={{ width: 20, height: 20, borderRadius: 10, backgroundColor: TOKENS['on-primary'], marginLeft: 12 }} />
+                      )
                     )}
                   </View>
                 </PressableFeedback>

@@ -497,37 +497,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned the Agile mindset transformation at Savory & Co.'s Menu Innovation Lab — from command-control chaos to disciplined flexibility.",
-        "key_takeaways": [
-          "The 4 Agile Manifesto Values prioritize individuals/interactions, working product, customer collaboration, and responding to change — while still valuing processes, documentation, contracts, and plans",
-          "Servant leadership empowers and coaches — it does not command (assigning tasks) or abdicate (doing whatever the team asks)",
-          "Swarming resolves blockers immediately — do not leave team members struggling alone for days when the team can solve it in 30 minutes",
-          "Limit WIP to increase completion — \"Stop starting, start finishing\" turned 0 finished dishes into 8 by limiting each person to 2 tasks",
-          "Agile is disciplined flexibility, not chaos — standups, WIP limits, and retrospectives provide structure while empowering the team",
-          "Flexibility and adaptability are THE most important Agile characteristics — all other skills can be learned, but without the mindset, Agile fails"
-        ],
-        "character_closing": [
-          {
-            "character": "taylor_kim",
-            "name": "Taylor Kim",
-            "quote": "The transformation wasn't about teaching Scrum ceremonies. It was about shifting MINDSET. Week 1: 'Tell us what to do.' Week 5: 'Here's what we're going to try.' That's the real victory — self-organizing teams that own their work. And Carlos? He went from 'This is chaos!' to 'You showed me a better way.' That's what happens when servant leadership meets disciplined flexibility."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D1L8",
-          "title": "Predictive vs Adaptive",
-          "description": "Now that you understand the Agile mindset, learn WHEN to use Agile vs predictive approaches. Decision factors include uncertainty level, requirements clarity, stakeholder availability, and organizational culture."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -721,6 +690,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the Agile mindset transformation at Savory & Co.'s Menu Innovation Lab — from command-control chaos to disciplined flexibility.",
+        "key_takeaways": [
+          "The 4 Agile Manifesto Values prioritize individuals/interactions, working product, customer collaboration, and responding to change — while still valuing processes, documentation, contracts, and plans",
+          "Servant leadership empowers and coaches — it does not command (assigning tasks) or abdicate (doing whatever the team asks)",
+          "Swarming resolves blockers immediately — do not leave team members struggling alone for days when the team can solve it in 30 minutes",
+          "Limit WIP to increase completion — \"Stop starting, start finishing\" turned 0 finished dishes into 8 by limiting each person to 2 tasks",
+          "Agile is disciplined flexibility, not chaos — standups, WIP limits, and retrospectives provide structure while empowering the team",
+          "Flexibility and adaptability are THE most important Agile characteristics — all other skills can be learned, but without the mindset, Agile fails"
+        ],
+        "character_closing": [
+          {
+            "character": "taylor_kim",
+            "name": "Taylor Kim",
+            "quote": "The transformation wasn't about teaching Scrum ceremonies. It was about shifting MINDSET. Week 1: 'Tell us what to do.' Week 5: 'Here's what we're going to try.' That's the real victory — self-organizing teams that own their work. And Carlos? He went from 'This is chaos!' to 'You showed me a better way.' That's what happens when servant leadership meets disciplined flexibility."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L8",
+          "title": "Predictive vs Adaptive",
+          "description": "Now that you understand the Agile mindset, learn WHEN to use Agile vs predictive approaches. Decision factors include uncertainty level, requirements clarity, stakeholder availability, and organizational culture."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

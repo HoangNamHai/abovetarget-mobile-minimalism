@@ -452,37 +452,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that the **Critical Path Method** transforms a project schedule from a list of activities into a strategic decision-making tool. It identifies which activities control the finish date, where flexibility exists, and how to compress at minimum cost.",
-        "key_takeaways": [
-          "Critical Path = Longest Path = Zero Float — The longest sequence of activities controls the project finish date. Any delay on critical activities delays the project.",
-          "Float = LS - ES (or LF - EF) — Total Float shows how much an activity can be delayed without impacting the project. Zero float = critical.",
-          "Forward Pass calculates ES and EF — Move left to right: ES = predecessor's EF, EF = ES + Duration. These are the EARLIEST possible dates.",
-          "Backward Pass calculates LF and LS — Move right to left: LF = successor's LS, LS = LF - Duration. These are the LATEST allowable dates.",
-          "Only crash CRITICAL PATH activities — Crashing non-critical activities wastes money because they have float. Always compare crash cost combinations.",
-          "Recalculate after crashing — Non-critical paths may become critical. Dual critical paths mean higher risk and more activities to monitor."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think 'crash the schedule' meant 'throw money at everything.' Now I know: identify the critical path first, find the lowest-cost crash combination, and always recalculate afterward. When F couldn't be crashed, we got dual critical paths — double the risk. CPM isn't just math. It's strategic decision-making."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C2L4",
-          "title": "Schedule Compression Techniques",
-          "description": "You've learned crashing (add resources). Now learn fast-tracking (overlap activities) — and when each technique is appropriate based on risk tolerance and activity dependencies."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -676,6 +645,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **Critical Path Method** transforms a project schedule from a list of activities into a strategic decision-making tool. It identifies which activities control the finish date, where flexibility exists, and how to compress at minimum cost.",
+        "key_takeaways": [
+          "Critical Path = Longest Path = Zero Float — The longest sequence of activities controls the project finish date. Any delay on critical activities delays the project.",
+          "Float = LS - ES (or LF - EF) — Total Float shows how much an activity can be delayed without impacting the project. Zero float = critical.",
+          "Forward Pass calculates ES and EF — Move left to right: ES = predecessor's EF, EF = ES + Duration. These are the EARLIEST possible dates.",
+          "Backward Pass calculates LF and LS — Move right to left: LF = successor's LS, LS = LF - Duration. These are the LATEST allowable dates.",
+          "Only crash CRITICAL PATH activities — Crashing non-critical activities wastes money because they have float. Always compare crash cost combinations.",
+          "Recalculate after crashing — Non-critical paths may become critical. Dual critical paths mean higher risk and more activities to monitor."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think 'crash the schedule' meant 'throw money at everything.' Now I know: identify the critical path first, find the lowest-cost crash combination, and always recalculate afterward. When F couldn't be crashed, we got dual critical paths — double the risk. CPM isn't just math. It's strategic decision-making."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C2L4",
+          "title": "Schedule Compression Techniques",
+          "description": "You've learned crashing (add resources). Now learn fast-tracking (overlap activities) — and when each technique is appropriate based on risk tolerance and activity dependencies."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

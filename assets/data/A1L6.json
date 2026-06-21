@@ -498,30 +498,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that projects face SIX major constraints — Scope, Schedule, Cost, Quality, Resources, and Risk. These constraints are INTERCONNECTED: changing one affects others. Great PMs help stakeholders make INFORMED TRADE-OFFS based on priorities.",
-        "key_takeaways": [
-          "SIX MAJOR CONSTRAINTS: Scope, Schedule, Cost, Quality, Resources, Risk",
-          "IRON TRIANGLE RULE: 'Good, Fast, Cheap — Pick Two.' Can't optimize all simultaneously.",
-          "CONSTRAINTS ARE INTERCONNECTED: Increase scope → increase cost/schedule. Decrease schedule → increase cost or decrease quality.",
-          "FIXED vs FLEXIBLE: Identify which constraints CAN'T change vs CAN change.",
-          "TRADE-OFF FRAMEWORK: Identify → Determine fixed/flexible → Prioritize → Analyze → Document",
-          "NEVER COMPROMISE: Quality when regulatory/safety involved. Security when customer data involved."
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "A1L7",
-          "title": "Project Success & Value",
-          "description": "Learn what defines project success — beyond just meeting scope, time, and cost."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -691,6 +667,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that projects face SIX major constraints — Scope, Schedule, Cost, Quality, Resources, and Risk. These constraints are INTERCONNECTED: changing one affects others. Great PMs help stakeholders make INFORMED TRADE-OFFS based on priorities.",
+        "key_takeaways": [
+          "SIX MAJOR CONSTRAINTS: Scope, Schedule, Cost, Quality, Resources, Risk",
+          "IRON TRIANGLE RULE: 'Good, Fast, Cheap — Pick Two.' Can't optimize all simultaneously.",
+          "CONSTRAINTS ARE INTERCONNECTED: Increase scope → increase cost/schedule. Decrease schedule → increase cost or decrease quality.",
+          "FIXED vs FLEXIBLE: Identify which constraints CAN'T change vs CAN change.",
+          "TRADE-OFF FRAMEWORK: Identify → Determine fixed/flexible → Prioritize → Analyze → Document",
+          "NEVER COMPROMISE: Quality when regulatory/safety involved. Security when customer data involved."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L7",
+          "title": "Project Success & Value",
+          "description": "Learn what defines project success — beyond just meeting scope, time, and cost."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

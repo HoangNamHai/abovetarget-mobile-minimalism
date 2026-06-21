@@ -482,36 +482,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that Sprint Review is a COLLABORATION ceremony for demonstrating potentially shippable work and gathering stakeholder feedback — not a formal approval gate.",
-        "key_takeaways": [
-          "Sprint Review is COLLABORATION, not approval — Demo work, gather feedback, adapt the backlog. No sign-off documents required.",
-          "Sprint Review = PRODUCT, Sprint Retrospective = PROCESS — Review focuses on what we built (with stakeholders). Retrospective focuses on how we worked (team only). Keep them separate.",
-          "Only demo work that meets Definition of Done — 90% complete is not potentially shippable. Wait until ALL DoD criteria are met before demoing.",
-          "Cycle time = start-to-finish for ONE item — Different from lead time (request to delivery) and velocity (points per sprint). Match the metric to the question.",
-          "MVP = Minimum features + Viable quality — The goal is to LEARN from feedback, not to get approval. Viable means the product must work correctly."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Morgan started Sprint 3 Review with an acceptance document, expecting formal sign-off. I coached her: Sprint Review is COLLABORATION, not approval. The feedback from Carlos and Ava made our dishes better — no paperwork needed, just honest conversation. And when Maya wanted to demo 90% complete work, I held firm on Definition of Done. Quality over speed, always."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D1L6",
-          "title": "Sprint Retrospectives",
-          "description": "You've mastered Sprint Review (product feedback) — now learn Sprint Retrospective, where the team reflects on PROCESS improvements in a safe space without stakeholders."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -705,6 +675,36 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that Sprint Review is a COLLABORATION ceremony for demonstrating potentially shippable work and gathering stakeholder feedback — not a formal approval gate.",
+        "key_takeaways": [
+          "Sprint Review is COLLABORATION, not approval — Demo work, gather feedback, adapt the backlog. No sign-off documents required.",
+          "Sprint Review = PRODUCT, Sprint Retrospective = PROCESS — Review focuses on what we built (with stakeholders). Retrospective focuses on how we worked (team only). Keep them separate.",
+          "Only demo work that meets Definition of Done — 90% complete is not potentially shippable. Wait until ALL DoD criteria are met before demoing.",
+          "Cycle time = start-to-finish for ONE item — Different from lead time (request to delivery) and velocity (points per sprint). Match the metric to the question.",
+          "MVP = Minimum features + Viable quality — The goal is to LEARN from feedback, not to get approval. Viable means the product must work correctly."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Morgan started Sprint 3 Review with an acceptance document, expecting formal sign-off. I coached her: Sprint Review is COLLABORATION, not approval. The feedback from Carlos and Ava made our dishes better — no paperwork needed, just honest conversation. And when Maya wanted to demo 90% complete work, I held firm on Definition of Done. Quality over speed, always."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L6",
+          "title": "Sprint Retrospectives",
+          "description": "You've mastered Sprint Review (product feedback) — now learn Sprint Retrospective, where the team reflects on PROCESS improvements in a safe space without stakeholders."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

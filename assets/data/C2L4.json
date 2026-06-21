@@ -382,37 +382,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned the two PMI-approved schedule compression techniques and when to use each one. The key is analyzing dependencies, costs, and risks for each activity rather than applying a blanket approach.",
-        "key_takeaways": [
-          "Fast Tracking = Parallelize — Run sequential activities simultaneously. Low or no cost, but higher coordination risk. Try this FIRST.",
-          "Crashing = Add Resources — More people, overtime, or expedited delivery. Increases cost, but respects hard dependencies. Use when fast tracking is not feasible.",
-          "Critical Path Only — ONLY compress critical path activities. Compressing non-critical activities (with float) wastes resources and saves zero days on the schedule.",
-          "Respect Hard Dependencies — Some activities CANNOT be fast tracked due to technical requirements. Violating hard dependencies causes rework, safety hazards, and inspection failures.",
-          "Never Cut Quality for Schedule — Reducing scope or cutting safety content is NOT compression. It is scope reduction with unacceptable risks. PMI ethics prohibit compromising quality for schedule.",
-          "PMI Best Practice — Try fast tracking first (least costly), then crash if fast tracking is insufficient or infeasible. Choose the option that achieves the target at the lowest cost."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Carlos wanted to throw $40K at overtime — crash everything, work 24/7. I showed him a smarter approach: fast track where dependencies allow it, crash only where hard dependencies prevent parallelization, and accept constraints you can't change. We compressed 4 weeks for $27K, under budget with zero safety shortcuts. That's the difference between panic and project management."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C3L1",
-          "title": "Risk Identification & Analysis",
-          "description": "You compressed the schedule — but fast tracking and crashing both introduce new risks. Learn how to identify, analyze, and prioritize risks so you can manage the consequences of your compression decisions."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -594,6 +563,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the two PMI-approved schedule compression techniques and when to use each one. The key is analyzing dependencies, costs, and risks for each activity rather than applying a blanket approach.",
+        "key_takeaways": [
+          "Fast Tracking = Parallelize — Run sequential activities simultaneously. Low or no cost, but higher coordination risk. Try this FIRST.",
+          "Crashing = Add Resources — More people, overtime, or expedited delivery. Increases cost, but respects hard dependencies. Use when fast tracking is not feasible.",
+          "Critical Path Only — ONLY compress critical path activities. Compressing non-critical activities (with float) wastes resources and saves zero days on the schedule.",
+          "Respect Hard Dependencies — Some activities CANNOT be fast tracked due to technical requirements. Violating hard dependencies causes rework, safety hazards, and inspection failures.",
+          "Never Cut Quality for Schedule — Reducing scope or cutting safety content is NOT compression. It is scope reduction with unacceptable risks. PMI ethics prohibit compromising quality for schedule.",
+          "PMI Best Practice — Try fast tracking first (least costly), then crash if fast tracking is insufficient or infeasible. Choose the option that achieves the target at the lowest cost."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Carlos wanted to throw $40K at overtime — crash everything, work 24/7. I showed him a smarter approach: fast track where dependencies allow it, crash only where hard dependencies prevent parallelization, and accept constraints you can't change. We compressed 4 weeks for $27K, under budget with zero safety shortcuts. That's the difference between panic and project management."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L1",
+          "title": "Risk Identification & Analysis",
+          "description": "You compressed the schedule — but fast tracking and crashing both introduce new risks. Learn how to identify, analyze, and prioritize risks so you can manage the consequences of your compression decisions."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

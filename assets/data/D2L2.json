@@ -546,37 +546,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've mastered backlog refinement and prioritization using three frameworks that replace opinion-based decisions with data-driven prioritization.",
-        "key_takeaways": [
-          "MoSCoW separates must-haves from nice-to-haves — Must (>50% users, MVP critical), Should (important, workarounds exist), Could (nice-to-have), Won't (defer)",
-          "WSJF optimizes for economic value per effort — Formula: Cost of Delay / Job Duration. Higher WSJF = higher priority",
-          "Kano Model classifies by customer reaction — Basic Expectations first (absence = dissatisfaction), then Performance Payoffs, then Delighters",
-          "Definition of Ready prevents blocked sprints — Format, AC, Estimated, No Blockers — ALL must pass before a story enters the sprint",
-          "Backlog refinement is ongoing — Devote 10-15% of every sprint to grooming, not a one-time event",
-          "Data beats opinions — When stakeholders argue, show them the frameworks and the math"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to let the loudest stakeholder set priorities. Now I use MoSCoW for scope decisions, WSJF for economic ranking, and Kano for customer-centric classification. When Carlos pushes his favorites, I show him the WSJF scores. Frameworks give you the authority to say 'the data disagrees' — and that's more powerful than any argument."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D2L3",
-          "title": "Kanban Fundamentals",
-          "description": "You have a prioritized backlog — now learn to manage work flow using Kanban boards, WIP limits, and cycle time metrics."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -770,6 +739,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered backlog refinement and prioritization using three frameworks that replace opinion-based decisions with data-driven prioritization.",
+        "key_takeaways": [
+          "MoSCoW separates must-haves from nice-to-haves — Must (>50% users, MVP critical), Should (important, workarounds exist), Could (nice-to-have), Won't (defer)",
+          "WSJF optimizes for economic value per effort — Formula: Cost of Delay / Job Duration. Higher WSJF = higher priority",
+          "Kano Model classifies by customer reaction — Basic Expectations first (absence = dissatisfaction), then Performance Payoffs, then Delighters",
+          "Definition of Ready prevents blocked sprints — Format, AC, Estimated, No Blockers — ALL must pass before a story enters the sprint",
+          "Backlog refinement is ongoing — Devote 10-15% of every sprint to grooming, not a one-time event",
+          "Data beats opinions — When stakeholders argue, show them the frameworks and the math"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to let the loudest stakeholder set priorities. Now I use MoSCoW for scope decisions, WSJF for economic ranking, and Kano for customer-centric classification. When Carlos pushes his favorites, I show him the WSJF scores. Frameworks give you the authority to say 'the data disagrees' — and that's more powerful than any argument."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L3",
+          "title": "Kanban Fundamentals",
+          "description": "You have a prioritized backlog — now learn to manage work flow using Kanban boards, WIP limits, and cycle time metrics."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

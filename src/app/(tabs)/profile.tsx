@@ -102,7 +102,14 @@ function ToggleRow({
   return (
     <View style={styles.row}>
       <Txt variant="body" style={styles.rowLabel}>{label}</Txt>
-      <Switch value={value} onValueChange={onValueChange} />
+      {/* Ink-tinted to match the monochrome brand (no system green). */}
+      <Switch
+        value={value}
+        onValueChange={onValueChange}
+        trackColor={{ true: TOKENS.primary, false: TOKENS['surface-container-highest'] }}
+        thumbColor={TOKENS['on-primary']}
+        ios_backgroundColor={TOKENS['surface-container-highest']}
+      />
     </View>
   );
 }

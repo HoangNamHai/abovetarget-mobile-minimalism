@@ -521,30 +521,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to manage three types of difficult stakeholders, each with a different root cause and strategy.",
-        "key_takeaways": [
-          "Demanding stakeholders need WIN-WIN negotiation — understand underlying needs, not stated positions",
-          "Disengaged stakeholders need EMPATHY FIRST + FRICTION REDUCTION — make engagement easy",
-          "Undermining stakeholders need INFLUENCE WITHOUT AUTHORITY — acknowledge expertise, build coalition",
-          "Root cause analysis is essential — symptoms (demands, silence, missed deadlines) have deeper causes",
-          "Escalation is appropriate only when situations exceed PM authority, involve ethics violations, or after influence fails",
-          "Emotional intelligence unlocks collaboration better than pressure and threats"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B1L6",
-          "title": "Effective Communication Planning",
-          "description": "You've learned to handle difficult conversations. Now learn to PLAN communication strategies that prevent stakeholder conflicts before they happen."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -714,6 +690,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to manage three types of difficult stakeholders, each with a different root cause and strategy.",
+        "key_takeaways": [
+          "Demanding stakeholders need WIN-WIN negotiation — understand underlying needs, not stated positions",
+          "Disengaged stakeholders need EMPATHY FIRST + FRICTION REDUCTION — make engagement easy",
+          "Undermining stakeholders need INFLUENCE WITHOUT AUTHORITY — acknowledge expertise, build coalition",
+          "Root cause analysis is essential — symptoms (demands, silence, missed deadlines) have deeper causes",
+          "Escalation is appropriate only when situations exceed PM authority, involve ethics violations, or after influence fails",
+          "Emotional intelligence unlocks collaboration better than pressure and threats"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L6",
+          "title": "Effective Communication Planning",
+          "description": "You've learned to handle difficult conversations. Now learn to PLAN communication strategies that prevent stakeholder conflicts before they happen."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

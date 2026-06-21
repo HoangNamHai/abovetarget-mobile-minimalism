@@ -588,30 +588,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned the **Stakeholder Engagement Continuum** and how to design tailored strategies that move stakeholders from Unaware to Leading.",
-        "key_takeaways": [
-          "The Engagement Continuum has 5 levels: Unaware, Resistant, Neutral, Supportive, Leading",
-          "High-power + Unaware = MOST DANGEROUS — engage them immediately with proactive 1-on-1 meetings",
-          "Resistant stakeholders need TAILORED engagement plans addressing their specific concerns",
-          "Proactive engagement means early, frequent, and transparent communication BEFORE critical decisions",
-          "The engagement sequence is: Research, Prepare, Meet, Follow up, Confirm",
-          "Never ignore resistance, compromise objectives, or escalate before trying direct engagement"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B1L4",
-          "title": "Communication Methods & Channels",
-          "description": "You've learned WHO to engage and HOW to move them up the continuum. Now learn WHAT communication methods work best — push, pull, and interactive."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -781,6 +757,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the **Stakeholder Engagement Continuum** and how to design tailored strategies that move stakeholders from Unaware to Leading.",
+        "key_takeaways": [
+          "The Engagement Continuum has 5 levels: Unaware, Resistant, Neutral, Supportive, Leading",
+          "High-power + Unaware = MOST DANGEROUS — engage them immediately with proactive 1-on-1 meetings",
+          "Resistant stakeholders need TAILORED engagement plans addressing their specific concerns",
+          "Proactive engagement means early, frequent, and transparent communication BEFORE critical decisions",
+          "The engagement sequence is: Research, Prepare, Meet, Follow up, Confirm",
+          "Never ignore resistance, compromise objectives, or escalate before trying direct engagement"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L4",
+          "title": "Communication Methods & Channels",
+          "description": "You've learned WHO to engage and HOW to move them up the continuum. Now learn WHAT communication methods work best — push, pull, and interactive."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

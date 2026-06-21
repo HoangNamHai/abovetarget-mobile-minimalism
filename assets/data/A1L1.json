@@ -507,30 +507,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned the fundamental difference between **projects** and **operations**, and how the **triple constraint** governs all projects.",
-        "key_takeaways": [
-          "Projects are TEMPORARY and create UNIQUE results",
-          "Operations are ONGOING and REPETITIVE",
-          "The triple constraint: Scope, Time, Cost (with Quality at the center)",
-          "Changing one constraint affects the others",
-          "Project success = objectives + stakeholder satisfaction + value",
-          "Not all work needs project management — only projects do"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "A1L2",
-          "title": "The Project Manager's Role",
-          "description": "Learn what a PM actually does and the skills needed to succeed."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -700,6 +676,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned the fundamental difference between **projects** and **operations**, and how the **triple constraint** governs all projects.",
+        "key_takeaways": [
+          "Projects are TEMPORARY and create UNIQUE results",
+          "Operations are ONGOING and REPETITIVE",
+          "The triple constraint: Scope, Time, Cost (with Quality at the center)",
+          "Changing one constraint affects the others",
+          "Project success = objectives + stakeholder satisfaction + value",
+          "Not all work needs project management — only projects do"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "A1L2",
+          "title": "The Project Manager's Role",
+          "description": "Learn what a PM actually does and the skills needed to succeed."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

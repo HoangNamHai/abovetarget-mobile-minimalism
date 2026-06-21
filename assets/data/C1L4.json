@@ -489,29 +489,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to manage project knowledge by distinguishing **explicit** from **tacit**, applying the right **transfer techniques** for each type, capturing lessons **continuously** throughout the project, and acting as a **knowledge facilitator** who builds a sharing culture.",
-        "key_takeaways": [
-          "Two Types of Knowledge: Explicit = documented (recipes, schedules, risk registers). Tacit = experience-based (\"feels right,\" expert judgment, pattern recognition). Both are essential; tacit represents ~80% of expert knowledge.",
-          "Match Techniques to Type: Explicit transfers via documentation and databases. Tacit transfers via mentoring, shadowing, communities of practice, and pair work. A manual alone captures only the 20%.",
-          "Capture Continuously: Lessons learned happen THROUGHOUT the project (Executing process), not just at closure. Capture within 48 hours while details are fresh. Share immediately across active projects.",
-          "PM Facilitates Culture: Create routines (weekly retros), remove barriers (simple templates, short sessions), recognize contributors. The PM builds the CONDITIONS for sharing — not a one-person documentation machine.",
-          "Prevent Knowledge Loss: When experts leave, start transfer IMMEDIATELY. Use a structured plan combining explicit documentation and tacit hands-on methods. Every day you wait is a day of knowledge transfer lost."
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C1L5",
-          "title": "Monitor & Control Project Work",
-          "description": "You've executed the plan and collected work performance data. Now ANALYZE it: Are we on schedule? On budget? What variances exist? What corrective actions are needed?"
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -693,6 +670,29 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to manage project knowledge by distinguishing **explicit** from **tacit**, applying the right **transfer techniques** for each type, capturing lessons **continuously** throughout the project, and acting as a **knowledge facilitator** who builds a sharing culture.",
+        "key_takeaways": [
+          "Two Types of Knowledge: Explicit = documented (recipes, schedules, risk registers). Tacit = experience-based (\"feels right,\" expert judgment, pattern recognition). Both are essential; tacit represents ~80% of expert knowledge.",
+          "Match Techniques to Type: Explicit transfers via documentation and databases. Tacit transfers via mentoring, shadowing, communities of practice, and pair work. A manual alone captures only the 20%.",
+          "Capture Continuously: Lessons learned happen THROUGHOUT the project (Executing process), not just at closure. Capture within 48 hours while details are fresh. Share immediately across active projects.",
+          "PM Facilitates Culture: Create routines (weekly retros), remove barriers (simple templates, short sessions), recognize contributors. The PM builds the CONDITIONS for sharing — not a one-person documentation machine.",
+          "Prevent Knowledge Loss: When experts leave, start transfer IMMEDIATELY. Use a structured plan combining explicit documentation and tacit hands-on methods. Every day you wait is a day of knowledge transfer lost."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L5",
+          "title": "Monitor & Control Project Work",
+          "description": "You've executed the plan and collected work performance data. Now ANALYZE it: Are we on schedule? On budget? What variances exist? What corrective actions are needed?"
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

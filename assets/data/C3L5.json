@@ -473,37 +473,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that **quality control** finds defects through inspection, but **continuous improvement** prevents them through root cause analysis and process change. Prevention beats detection economically, and the PDCA cycle ensures improvement never stops.",
-        "key_takeaways": [
-          "Prevention beats detection — $1 in prevention saves $10 in detection and $100 in correction. Invest in stopping defects, not just catching them.",
-          "Cost of Quality has 4 categories — Conformance (prevention + appraisal) vs Nonconformance (internal + external failure). Target the largest failure cost with prevention investment.",
-          "Root cause, not symptoms — 5 Whys and Fishbone/Ishikawa find systemic causes. Recurring defects despite training mean process/equipment issues, not people problems.",
-          "Match methodology to problem — Kaizen for daily inefficiencies (team-driven, incremental). Six Sigma for critical defects (data-driven, breakthrough).",
-          "PDCA never stops — Plan-Do-Check-Act is continuous. Standardize gains, then start the next cycle. Quality improvement is a cycle, not a one-time project.",
-          "The 7 QC tools guide decisions — Pareto prioritizes, Fishbone finds root causes, Control Charts monitor stability, Check Sheets collect data, and Flowcharts map processes."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think quality meant more inspection. Now I know: inspection finds defects, but prevention stops them. A $300 scanner saved us $24K a year. PDCA keeps us improving every cycle. And when training doesn't fix a recurring defect, I stop blaming people and start analyzing the system. Quality isn't about spending more — it's about spending smart."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C3L6",
-          "title": "Procurement & Contracts",
-          "description": "You've built a quality system that prevents defects at the source. Now learn how to define quality standards in contracts and select vendors who meet them — because procurement failures create quality failures."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -697,6 +666,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **quality control** finds defects through inspection, but **continuous improvement** prevents them through root cause analysis and process change. Prevention beats detection economically, and the PDCA cycle ensures improvement never stops.",
+        "key_takeaways": [
+          "Prevention beats detection — $1 in prevention saves $10 in detection and $100 in correction. Invest in stopping defects, not just catching them.",
+          "Cost of Quality has 4 categories — Conformance (prevention + appraisal) vs Nonconformance (internal + external failure). Target the largest failure cost with prevention investment.",
+          "Root cause, not symptoms — 5 Whys and Fishbone/Ishikawa find systemic causes. Recurring defects despite training mean process/equipment issues, not people problems.",
+          "Match methodology to problem — Kaizen for daily inefficiencies (team-driven, incremental). Six Sigma for critical defects (data-driven, breakthrough).",
+          "PDCA never stops — Plan-Do-Check-Act is continuous. Standardize gains, then start the next cycle. Quality improvement is a cycle, not a one-time project.",
+          "The 7 QC tools guide decisions — Pareto prioritizes, Fishbone finds root causes, Control Charts monitor stability, Check Sheets collect data, and Flowcharts map processes."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think quality meant more inspection. Now I know: inspection finds defects, but prevention stops them. A $300 scanner saved us $24K a year. PDCA keeps us improving every cycle. And when training doesn't fix a recurring defect, I stop blaming people and start analyzing the system. Quality isn't about spending more — it's about spending smart."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C3L6",
+          "title": "Procurement & Contracts",
+          "description": "You've built a quality system that prevents defects at the source. Now learn how to define quality standards in contracts and select vendors who meet them — because procurement failures create quality failures."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

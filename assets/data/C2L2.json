@@ -457,37 +457,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that **Earned Value Management (EVM)** transforms three simple measurements into a powerful diagnostic and forecasting system. By calculating PV, EV, and AC, then deriving variances, indexes, and forecasts, you can diagnose project health and drive corrective actions -- not just report bad news.",
-        "key_takeaways": [
-          "PV is the Plan -- Planned Value = BAC x Planned % Complete. It is what SHOULD have been done by now.",
-          "EV is the Reality of Work -- Earned Value = BAC x Actual % Complete. It is the budgeted value of work ACTUALLY completed.",
-          "CV Shows Budget Status -- Cost Variance = EV - AC. Negative = over budget. Savory was -$44K over at Month 6.",
-          "CPI Predicts Efficiency -- Cost Performance Index = EV / AC. Below 1.0 = over budget. CPI stabilizes after 20-30% and reliably predicts final cost.",
-          "EAC Forecasts the Future -- Estimate at Completion = BAC / CPI. Savory's $348K forecast dropped to $212K after corrective action.",
-          "EVM Drives Action -- Calculate, Diagnose, Forecast, ACT. EVM is a decision tool, not just a reporting mechanism."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "EVM transformed my status report from 'we're 40% done' (meaningless) to 'we're trending $108K over, here's my recovery plan' (actionable). That's the difference between reporting and managing. I used the data to justify corrective actions, track recovery, and earn Elena's confidence. EVM saved Savory $136K by enabling early action."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C2L3",
-          "title": "Critical Path Method (CPM)",
-          "description": "EVM tells you about cost. Now learn to forecast and compress SCHEDULE using the Critical Path Method -- finding the longest path through your project network."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -669,6 +638,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that **Earned Value Management (EVM)** transforms three simple measurements into a powerful diagnostic and forecasting system. By calculating PV, EV, and AC, then deriving variances, indexes, and forecasts, you can diagnose project health and drive corrective actions -- not just report bad news.",
+        "key_takeaways": [
+          "PV is the Plan -- Planned Value = BAC x Planned % Complete. It is what SHOULD have been done by now.",
+          "EV is the Reality of Work -- Earned Value = BAC x Actual % Complete. It is the budgeted value of work ACTUALLY completed.",
+          "CV Shows Budget Status -- Cost Variance = EV - AC. Negative = over budget. Savory was -$44K over at Month 6.",
+          "CPI Predicts Efficiency -- Cost Performance Index = EV / AC. Below 1.0 = over budget. CPI stabilizes after 20-30% and reliably predicts final cost.",
+          "EAC Forecasts the Future -- Estimate at Completion = BAC / CPI. Savory's $348K forecast dropped to $212K after corrective action.",
+          "EVM Drives Action -- Calculate, Diagnose, Forecast, ACT. EVM is a decision tool, not just a reporting mechanism."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "EVM transformed my status report from 'we're 40% done' (meaningless) to 'we're trending $108K over, here's my recovery plan' (actionable). That's the difference between reporting and managing. I used the data to justify corrective actions, track recovery, and earn Elena's confidence. EVM saved Savory $136K by enabling early action."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C2L3",
+          "title": "Critical Path Method (CPM)",
+          "description": "EVM tells you about cost. Now learn to forecast and compress SCHEDULE using the Critical Path Method -- finding the longest path through your project network."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

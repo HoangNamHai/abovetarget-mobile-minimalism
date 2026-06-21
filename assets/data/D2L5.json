@@ -549,36 +549,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to read and use the core agile metrics that transform \"I don't know when we'll finish\" into data-driven forecasts and actionable insights.",
-        "key_takeaways": [
-          "Velocity = average COMPLETED points per sprint — Use it to forecast delivery (remaining work / velocity = sprints needed). Never use committed points.",
-          "Burn-down shows work remaining; Burn-up shows completed work AND scope changes — Use burn-up when you need to explain scope growth to stakeholders.",
-          "CFD reveals bottlenecks — A bulging band means work is piling up at that stage. Address it by swarming, limiting WIP, and investigating root cause.",
-          "Lead time = customer wait (request to done); Cycle time = team efficiency (start to done) — The gap between them is queue time you can reduce through better prioritization.",
-          "Metrics inform improvement, NOT blame — A velocity drop or CFD bulge is a process signal, not a performance judgment. Use data to solve problems together."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Before learning these metrics, I guessed at launch dates and missed bottlenecks until they killed delivery. Now I calculate velocity for forecasts, use burn-up charts to explain scope changes, read CFDs to catch bottlenecks early, and track lead time to improve customer experience. The biggest lesson? Metrics are for improvement, not punishment. When Carlos sees a velocity drop, I show him the CFD — it's not the team failing, it's a process we can fix together."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D2L6",
-          "title": "Definition of Done",
-          "description": "You've learned to measure delivery with metrics — now define what \"done\" actually means so every story point represents real, shippable value."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -772,6 +742,36 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to read and use the core agile metrics that transform \"I don't know when we'll finish\" into data-driven forecasts and actionable insights.",
+        "key_takeaways": [
+          "Velocity = average COMPLETED points per sprint — Use it to forecast delivery (remaining work / velocity = sprints needed). Never use committed points.",
+          "Burn-down shows work remaining; Burn-up shows completed work AND scope changes — Use burn-up when you need to explain scope growth to stakeholders.",
+          "CFD reveals bottlenecks — A bulging band means work is piling up at that stage. Address it by swarming, limiting WIP, and investigating root cause.",
+          "Lead time = customer wait (request to done); Cycle time = team efficiency (start to done) — The gap between them is queue time you can reduce through better prioritization.",
+          "Metrics inform improvement, NOT blame — A velocity drop or CFD bulge is a process signal, not a performance judgment. Use data to solve problems together."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Before learning these metrics, I guessed at launch dates and missed bottlenecks until they killed delivery. Now I calculate velocity for forecasts, use burn-up charts to explain scope changes, read CFDs to catch bottlenecks early, and track lead time to improve customer experience. The biggest lesson? Metrics are for improvement, not punishment. When Carlos sees a velocity drop, I show him the CFD — it's not the team failing, it's a process we can fix together."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L6",
+          "title": "Definition of Done",
+          "description": "You've learned to measure delivery with metrics — now define what \"done\" actually means so every story point represents real, shippable value."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

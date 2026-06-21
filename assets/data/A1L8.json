@@ -474,30 +474,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that Project Integration Management is the PM's CORE responsibility—seeing the WHOLE project, understanding RIPPLE EFFECTS across all 10 knowledge areas, and making HOLISTIC decisions. Changes in one area affect ALL others. Great PMs analyze integrated impacts BEFORE approving changes.",
-        "key_takeaways": [
-          "PROJECT INTEGRATION MANAGEMENT: Connects all 10 PMI knowledge areas, ensures they work together cohesively",
-          "THE 10 KNOWLEDGE AREAS: Integration, Scope, Schedule, Cost, Quality, Resources, Communications, Risk, Procurement, Stakeholders",
-          "THE RIPPLE EFFECT: Changing one knowledge area creates ripples across others (scope increase = schedule/cost/risk increases)",
-          "INTEGRATED CHANGE CONTROL: Analyze ALL impacts (10 knowledge areas) before approving/rejecting/deferring changes",
-          "PM AS INTEGRATOR: Not an expert in each area, but the ONE person who sees ALL areas and connects them (orchestra conductor)",
-          "DECISION FRAMEWORK: APPROVE if benefits outweigh costs; REJECT if constraints violated; DEFER if good idea but wrong timing"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B1L1",
-          "title": "Stakeholder Management",
-          "description": "Learn how to analyze stakeholder power/interest, engage effectively, and manage expectations."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -667,6 +643,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that Project Integration Management is the PM's CORE responsibility—seeing the WHOLE project, understanding RIPPLE EFFECTS across all 10 knowledge areas, and making HOLISTIC decisions. Changes in one area affect ALL others. Great PMs analyze integrated impacts BEFORE approving changes.",
+        "key_takeaways": [
+          "PROJECT INTEGRATION MANAGEMENT: Connects all 10 PMI knowledge areas, ensures they work together cohesively",
+          "THE 10 KNOWLEDGE AREAS: Integration, Scope, Schedule, Cost, Quality, Resources, Communications, Risk, Procurement, Stakeholders",
+          "THE RIPPLE EFFECT: Changing one knowledge area creates ripples across others (scope increase = schedule/cost/risk increases)",
+          "INTEGRATED CHANGE CONTROL: Analyze ALL impacts (10 knowledge areas) before approving/rejecting/deferring changes",
+          "PM AS INTEGRATOR: Not an expert in each area, but the ONE person who sees ALL areas and connects them (orchestra conductor)",
+          "DECISION FRAMEWORK: APPROVE if benefits outweigh costs; REJECT if constraints violated; DEFER if good idea but wrong timing"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L1",
+          "title": "Stakeholder Management",
+          "description": "Learn how to analyze stakeholder power/interest, engage effectively, and manage expectations."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -562,30 +562,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've mastered communication planning: matching **Push, Pull, and Interactive** methods to stakeholder needs, understanding the **channels formula** that shows why \"CC all\" fails, and knowing when to use **formal vs informal** communication.",
-        "key_takeaways": [
-          "PUSH for time-sensitive broadcasts (digests, SMS alerts)",
-          "PULL for reference material (knowledge bases, repositories)",
-          "INTERACTIVE for dialogue and problem-solving (calls, chat)",
-          "Channels formula: n(n-1)/2 — complexity grows exponentially",
-          "Formal creates records; Informal builds relationships",
-          "Distributed teams need async primary + rotating sync touchpoints"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B2L1",
-          "title": "Team Formation & Tuckman's Model",
-          "description": "Learn how teams evolve through Forming, Storming, Norming, and Performing stages."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -755,6 +731,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've mastered communication planning: matching **Push, Pull, and Interactive** methods to stakeholder needs, understanding the **channels formula** that shows why \"CC all\" fails, and knowing when to use **formal vs informal** communication.",
+        "key_takeaways": [
+          "PUSH for time-sensitive broadcasts (digests, SMS alerts)",
+          "PULL for reference material (knowledge bases, repositories)",
+          "INTERACTIVE for dialogue and problem-solving (calls, chat)",
+          "Channels formula: n(n-1)/2 — complexity grows exponentially",
+          "Formal creates records; Informal builds relationships",
+          "Distributed teams need async primary + rotating sync touchpoints"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L1",
+          "title": "Team Formation & Tuckman's Model",
+          "description": "Learn how teams evolve through Forming, Storming, Norming, and Performing stages."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

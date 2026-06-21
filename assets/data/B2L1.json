@@ -508,37 +508,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to recognize the 5 stages of Tuckman's team development model and apply appropriate PM interventions at each stage. You also understand that teams can REGRESS when major changes occur — and that's okay, as long as you re-facilitate.",
-        "key_takeaways": [
-          "5 Stages in Order: Forming -> Storming -> Norming -> Performing -> Adjourning — teams must progress through each stage sequentially",
-          "Forming Needs Structure: Create a team charter, clarify roles, set expectations before work begins",
-          "Storming is NECESSARY: Don't suppress, avoid, or punish conflict — facilitate resolution and help the team integrate diverse perspectives",
-          "Norming Needs Reinforcement: Recognize progress and gradually increase autonomy, but stay vigilant for regression",
-          "Performing Needs Trust: Step back, remove obstacles, and trust the team — micromanaging causes regression",
-          "Regression is Normal: Major changes (new members, departures, role changes) can push teams backward — re-facilitate earlier stages"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I watched this team transform from strangers to high performers — and then handle regression when Marco left. The key was recognizing where they were and giving them what they needed at each stage. Forming needed structure. Storming needed facilitation. Norming needed recognition. Performing needed trust. And when Devon joined, I didn't panic — I re-facilitated."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B2L2",
-          "title": "Building High-Performance Teams",
-          "description": "You understand how teams develop. Now learn how to accelerate their path to high performance through trust-building, psychological safety, and team effectiveness strategies."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -720,6 +689,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to recognize the 5 stages of Tuckman's team development model and apply appropriate PM interventions at each stage. You also understand that teams can REGRESS when major changes occur — and that's okay, as long as you re-facilitate.",
+        "key_takeaways": [
+          "5 Stages in Order: Forming -> Storming -> Norming -> Performing -> Adjourning — teams must progress through each stage sequentially",
+          "Forming Needs Structure: Create a team charter, clarify roles, set expectations before work begins",
+          "Storming is NECESSARY: Don't suppress, avoid, or punish conflict — facilitate resolution and help the team integrate diverse perspectives",
+          "Norming Needs Reinforcement: Recognize progress and gradually increase autonomy, but stay vigilant for regression",
+          "Performing Needs Trust: Step back, remove obstacles, and trust the team — micromanaging causes regression",
+          "Regression is Normal: Major changes (new members, departures, role changes) can push teams backward — re-facilitate earlier stages"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I watched this team transform from strangers to high performers — and then handle regression when Marco left. The key was recognizing where they were and giving them what they needed at each stage. Forming needed structure. Storming needed facilitation. Norming needed recognition. Performing needed trust. And when Devon joined, I didn't panic — I re-facilitated."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L2",
+          "title": "Building High-Performance Teams",
+          "description": "You understand how teams develop. Now learn how to accelerate their path to high performance through trust-building, psychological safety, and team effectiveness strategies."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -513,30 +513,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that PMs have **RESPONSIBILITY** for project success but **LIMITED AUTHORITY** to make decisions. Great PMs lead through **INFLUENCE**, using the PMI Talent Triangle (Technical, Leadership, Strategic skills) to navigate authority boundaries.",
-        "key_takeaways": [
-          "PM's Core Responsibilities: Plan, Execute, Monitor & Control",
-          "Authority Gap: Responsible for success, but can't approve budgets, hire/fire, override sponsors",
-          "Influence > Authority: Great PMs succeed through communication, negotiation, relationships",
-          "PMI Talent Triangle: Technical PM Skills + Leadership + Strategic & Business Management",
-          "Authority Boundaries: Clarify with sponsor — 'What can I decide alone? What requires approval?'",
-          "Leading Through Influence: Build relationships, communicate Why, frame choices, use data"
-        ],
-        "xp_earned": 150,
-        "next_lesson": {
-          "id": "A1L3",
-          "title": "Project Stakeholders",
-          "description": "Learn WHO you're working with — identifying stakeholders and understanding their power, interests, and expectations."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -706,6 +682,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that PMs have **RESPONSIBILITY** for project success but **LIMITED AUTHORITY** to make decisions. Great PMs lead through **INFLUENCE**, using the PMI Talent Triangle (Technical, Leadership, Strategic skills) to navigate authority boundaries.",
+        "key_takeaways": [
+          "PM's Core Responsibilities: Plan, Execute, Monitor & Control",
+          "Authority Gap: Responsible for success, but can't approve budgets, hire/fire, override sponsors",
+          "Influence > Authority: Great PMs succeed through communication, negotiation, relationships",
+          "PMI Talent Triangle: Technical PM Skills + Leadership + Strategic & Business Management",
+          "Authority Boundaries: Clarify with sponsor — 'What can I decide alone? What requires approval?'",
+          "Leading Through Influence: Build relationships, communicate Why, frame choices, use data"
+        ],
+        "xp_earned": 150,
+        "next_lesson": {
+          "id": "A1L3",
+          "title": "Project Stakeholders",
+          "description": "Learn WHO you're working with — identifying stakeholders and understanding their power, interests, and expectations."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

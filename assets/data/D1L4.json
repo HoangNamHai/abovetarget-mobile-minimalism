@@ -478,37 +478,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that the **Daily Standup** is a 15-minute team synchronization event — not a status meeting for management. The Scrum Master facilitates, enforces the timebox, and removes impediments after standup ends.",
-        "key_takeaways": [
-          "Daily Standup is TEAM synchronization — Team members share with EACH OTHER, not report to PM/PO. Management can listen but should not interrogate.",
-          "3 Questions Framework keeps it focused — \"What did I do yesterday? What will I do today? What blockers do I have?\" — 1-2 minutes per person.",
-          "15 minutes is FIXED — Non-negotiable Scrum rule. Does not change based on team size, sprint length, or team preference.",
-          "Parking lot technique defers detailed discussions to after standup with interested members only. It protects the timebox without losing important topics.",
-          "Scrum Master facilitates and removes impediments — Does NOT assign tasks, interrogate, or control. Servant leadership in action.",
-          "Compromise for time zones — When constraints are beyond team control, find a time acceptable to all, even if perfect for none. Prefer synchronous over async."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Our standup went from a 45-minute interrogation to a 13-minute team sync. Morgan listens instead of interrogating. Maya and Devon parking-lot their debates. I note blockers during standup and remove them after. The 3 Questions framework plus a strict 15-minute timebox changed everything. Daily Standup isn't about reporting UP — it's about coordinating ACROSS."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D1L5",
-          "title": "Sprint Review & Demos",
-          "description": "The sprint is ending. It's time to demonstrate what the team built, gather stakeholder feedback, and adapt the Product Backlog. Sprint Review is where the team shows working product — not a slide deck."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -702,6 +671,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **Daily Standup** is a 15-minute team synchronization event — not a status meeting for management. The Scrum Master facilitates, enforces the timebox, and removes impediments after standup ends.",
+        "key_takeaways": [
+          "Daily Standup is TEAM synchronization — Team members share with EACH OTHER, not report to PM/PO. Management can listen but should not interrogate.",
+          "3 Questions Framework keeps it focused — \"What did I do yesterday? What will I do today? What blockers do I have?\" — 1-2 minutes per person.",
+          "15 minutes is FIXED — Non-negotiable Scrum rule. Does not change based on team size, sprint length, or team preference.",
+          "Parking lot technique defers detailed discussions to after standup with interested members only. It protects the timebox without losing important topics.",
+          "Scrum Master facilitates and removes impediments — Does NOT assign tasks, interrogate, or control. Servant leadership in action.",
+          "Compromise for time zones — When constraints are beyond team control, find a time acceptable to all, even if perfect for none. Prefer synchronous over async."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Our standup went from a 45-minute interrogation to a 13-minute team sync. Morgan listens instead of interrogating. Maya and Devon parking-lot their debates. I note blockers during standup and remove them after. The 3 Questions framework plus a strict 15-minute timebox changed everything. Daily Standup isn't about reporting UP — it's about coordinating ACROSS."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L5",
+          "title": "Sprint Review & Demos",
+          "description": "The sprint is ending. It's time to demonstrate what the team built, gather stakeholder feedback, and adapt the Product Backlog. Sprint Review is where the team shows working product — not a slide deck."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

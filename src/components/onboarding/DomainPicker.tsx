@@ -73,8 +73,8 @@ export function DomainPicker({
                     <View />
                   )}
                   {isRecommended && (
-                    <View style={{ paddingHorizontal: 8, paddingVertical: 3, borderRadius: RADIUS.pill, backgroundColor: ACCENTS.selection }}>
-                      <Txt variant="label" style={{ fontSize: 10, fontWeight: '700', color: TOKENS['on-primary'], textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                    <View style={{ paddingHorizontal: 8, paddingVertical: 3, borderRadius: RADIUS.pill, backgroundColor: ACCENTS.premium }}>
+                      <Txt variant="label" style={{ fontSize: 10, fontWeight: '700', color: '#1a1206', textTransform: 'uppercase', letterSpacing: 0.5 }}>
                         Recommended for you
                       </Txt>
                     </View>

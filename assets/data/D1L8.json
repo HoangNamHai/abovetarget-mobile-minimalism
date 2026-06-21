@@ -433,37 +433,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to evaluate project dimensions and match them to the right development approach. The key insight: there's no \"best\" approach — only the RIGHT approach for the project context.",
-        "key_takeaways": [
-          "Life Cycle Continuum: Predictive, Hybrid, and Adaptive exist on a spectrum. Projects are placed based on characteristics, not preferences.",
-          "Predictive (Waterfall): Use when requirements are FIXED, change is COSTLY, and compliance requires upfront planning. Change Control Board (CCB) manages changes formally.",
-          "Adaptive (Agile): Use when requirements are UNCERTAIN, change is EXPECTED, and continuous stakeholder involvement is needed. NO CCB — Product Owner manages backlog directly.",
-          "Hybrid: Use when SOME dimensions favor Predictive (compliance, contracts) and others favor Adaptive (features, user experience). Strategic blend, not compromise.",
-          "Evaluation Dimensions: Requirements clarity, change likelihood, stakeholder engagement, risk profile, team experience, delivery preference, documentation needs, regulatory requirements.",
-          "PMI Tailoring Principle: Select approach based on PROJECT CHARACTERISTICS, not trends, team preference, or organizational pressure."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think one approach was always better. Now I evaluate each project's characteristics: requirements clarity, change cost, stakeholder needs, regulatory requirements. Menu Innovation needed Agile because you can't plan creativity. Kitchen Renovation needed Predictive because you can't iterate with inspectors. And Catering Launch needed Hybrid because the business model was fixed but the service model needed iteration. Match the approach to the context — every time."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D2L1",
-          "title": "User Story Writing & INVEST",
-          "description": "You've learned WHEN to use Agile. Now learn HOW to write effective user stories using the INVEST criteria — the building blocks of every Agile backlog."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -657,6 +626,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to evaluate project dimensions and match them to the right development approach. The key insight: there's no \"best\" approach — only the RIGHT approach for the project context.",
+        "key_takeaways": [
+          "Life Cycle Continuum: Predictive, Hybrid, and Adaptive exist on a spectrum. Projects are placed based on characteristics, not preferences.",
+          "Predictive (Waterfall): Use when requirements are FIXED, change is COSTLY, and compliance requires upfront planning. Change Control Board (CCB) manages changes formally.",
+          "Adaptive (Agile): Use when requirements are UNCERTAIN, change is EXPECTED, and continuous stakeholder involvement is needed. NO CCB — Product Owner manages backlog directly.",
+          "Hybrid: Use when SOME dimensions favor Predictive (compliance, contracts) and others favor Adaptive (features, user experience). Strategic blend, not compromise.",
+          "Evaluation Dimensions: Requirements clarity, change likelihood, stakeholder engagement, risk profile, team experience, delivery preference, documentation needs, regulatory requirements.",
+          "PMI Tailoring Principle: Select approach based on PROJECT CHARACTERISTICS, not trends, team preference, or organizational pressure."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think one approach was always better. Now I evaluate each project's characteristics: requirements clarity, change cost, stakeholder needs, regulatory requirements. Menu Innovation needed Agile because you can't plan creativity. Kitchen Renovation needed Predictive because you can't iterate with inspectors. And Catering Launch needed Hybrid because the business model was fixed but the service model needed iteration. Match the approach to the context — every time."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L1",
+          "title": "User Story Writing & INVEST",
+          "description": "You've learned WHEN to use Agile. Now learn HOW to write effective user stories using the INVEST criteria — the building blocks of every Agile backlog."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -546,37 +546,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that agile teams use **story points** (abstract complexity measure) instead of hours because relative sizing is more accurate. **Planning Poker** ensures team discussion through simultaneous reveal, **T-Shirt sizing** handles epics quickly, and **Affinity Estimation** speeds through large backlogs. Most importantly, divergence during estimation is VALUABLE — it reveals hidden assumptions that would otherwise surface mid-sprint.",
-        "key_takeaways": [
-          "Story points measure complexity, not time — 5 points is NOT 5 hours. Story points capture complexity, effort, and uncertainty as a relative measure",
-          "Planning Poker prevents anchoring bias — Simultaneous reveal ensures independent estimates. Divergence triggers discussion that uncovers hidden assumptions",
-          "Divergence is a GIFT, not a problem — When Maya estimated 2 and Devon estimated 8, the gap revealed a missing database dependency. Never average away divergence",
-          "Match technique to context — Planning Poker for sprint stories (accuracy), T-Shirt sizing for epics (speed), Affinity Estimation for large backlogs (bulk categorization)",
-          "Fibonacci forces appropriate imprecision — Gaps grow with numbers because uncertainty grows with complexity. Between 5 and 8, round up to 8",
-          "Velocity enables forecasting without hours — Track points completed per sprint, and delivery dates become predictable without micromanaging individual hours"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think estimation was about getting the 'right number.' Now I know the number is secondary — the DISCUSSION is the point. When Maya said 2 and Devon said 8, that gap revealed a hidden database dependency we would have discovered mid-sprint. Planning Poker isn't a voting mechanism. It's a structured way to surface what individuals know but the team hasn't discussed yet."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D2L5",
-          "title": "Agile Metrics & Tracking",
-          "description": "You've estimated the work — now track progress using velocity charts, burndown charts, and cumulative flow diagrams to keep stakeholders informed and the team on track."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -770,6 +739,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that agile teams use **story points** (abstract complexity measure) instead of hours because relative sizing is more accurate. **Planning Poker** ensures team discussion through simultaneous reveal, **T-Shirt sizing** handles epics quickly, and **Affinity Estimation** speeds through large backlogs. Most importantly, divergence during estimation is VALUABLE — it reveals hidden assumptions that would otherwise surface mid-sprint.",
+        "key_takeaways": [
+          "Story points measure complexity, not time — 5 points is NOT 5 hours. Story points capture complexity, effort, and uncertainty as a relative measure",
+          "Planning Poker prevents anchoring bias — Simultaneous reveal ensures independent estimates. Divergence triggers discussion that uncovers hidden assumptions",
+          "Divergence is a GIFT, not a problem — When Maya estimated 2 and Devon estimated 8, the gap revealed a missing database dependency. Never average away divergence",
+          "Match technique to context — Planning Poker for sprint stories (accuracy), T-Shirt sizing for epics (speed), Affinity Estimation for large backlogs (bulk categorization)",
+          "Fibonacci forces appropriate imprecision — Gaps grow with numbers because uncertainty grows with complexity. Between 5 and 8, round up to 8",
+          "Velocity enables forecasting without hours — Track points completed per sprint, and delivery dates become predictable without micromanaging individual hours"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think estimation was about getting the 'right number.' Now I know the number is secondary — the DISCUSSION is the point. When Maya said 2 and Devon said 8, that gap revealed a hidden database dependency we would have discovered mid-sprint. Planning Poker isn't a voting mechanism. It's a structured way to surface what individuals know but the team hasn't discussed yet."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D2L5",
+          "title": "Agile Metrics & Tracking",
+          "description": "You've estimated the work — now track progress using velocity charts, burndown charts, and cumulative flow diagrams to keep stakeholders informed and the team on track."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -418,36 +418,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to match conflict resolution strategies to context using the urgency-relationship decision matrix. PMI prefers collaborative problem-solving (win-win), but effective conflict resolution requires adapting your strategy based on urgency, relationship importance, and whether win-win is possible.",
-        "key_takeaways": [
-          "PMI prefers Collaborate/Confront (win-win), but it's not always appropriate — Time availability and cooperative parties are prerequisites for effective collaboration",
-          "Compromise is lose-lose (partial satisfaction), not win-win — Use when time pressure prevents collaboration or in zero-sum conflicts where no creative solution exists",
-          "Forcing is win-lose and should be a last resort — Appropriate for emergencies, safety issues, or when persistent conflict blocks progress past deadline",
-          "Withdrawing can be strategic, not weak — Choose the right time and place, then collaborate later when conditions improve",
-          "Use the Urgency-Relationship Matrix — High urgency + Low relationship = Force; Low urgency + High relationship = Collaborate; match strategy to context every time"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think good PMs always collaborate. Now I know good PMs always ADAPT. Four conflicts, four different strategies — collaboration, compromise, strategic withdrawal, and more collaboration. The matrix gives me a framework to justify my approach, even when Carlos wants me to force every decision."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B2L4",
-          "title": "Leadership Styles & Situational Leadership",
-          "description": "Now that you know HOW to resolve conflicts, learn how to adapt your leadership STYLE to team maturity, task complexity, and autonomy readiness. Just like conflict resolution, leadership isn't one-size-fits-all."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -629,6 +599,36 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to match conflict resolution strategies to context using the urgency-relationship decision matrix. PMI prefers collaborative problem-solving (win-win), but effective conflict resolution requires adapting your strategy based on urgency, relationship importance, and whether win-win is possible.",
+        "key_takeaways": [
+          "PMI prefers Collaborate/Confront (win-win), but it's not always appropriate — Time availability and cooperative parties are prerequisites for effective collaboration",
+          "Compromise is lose-lose (partial satisfaction), not win-win — Use when time pressure prevents collaboration or in zero-sum conflicts where no creative solution exists",
+          "Forcing is win-lose and should be a last resort — Appropriate for emergencies, safety issues, or when persistent conflict blocks progress past deadline",
+          "Withdrawing can be strategic, not weak — Choose the right time and place, then collaborate later when conditions improve",
+          "Use the Urgency-Relationship Matrix — High urgency + Low relationship = Force; Low urgency + High relationship = Collaborate; match strategy to context every time"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think good PMs always collaborate. Now I know good PMs always ADAPT. Four conflicts, four different strategies — collaboration, compromise, strategic withdrawal, and more collaboration. The matrix gives me a framework to justify my approach, even when Carlos wants me to force every decision."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L4",
+          "title": "Leadership Styles & Situational Leadership",
+          "description": "Now that you know HOW to resolve conflicts, learn how to adapt your leadership STYLE to team maturity, task complexity, and autonomy readiness. Just like conflict resolution, leadership isn't one-size-fits-all."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

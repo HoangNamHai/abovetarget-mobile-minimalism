@@ -507,37 +507,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that the **Sprint Retrospective** is the Scrum ceremony for process improvement — reflecting on HOW the team worked, not WHAT they built. Success requires psychological safety, the right facilitation technique, and SMART action items that drive real change.",
-        "key_takeaways": [
-          "Retrospective = HOW (process). Review = WHAT (product). Different purposes, different attendees. PO attends Reviews, but should NOT attend Retrospectives to preserve psychological safety.",
-          "Team-only ceremony — Product Owner and stakeholders should not attend. Share themes and actions afterward, not during the session.",
-          "Technique selection matters — Mad-Sad-Glad for low morale and conflict. Start-Stop-Continue for stable teams. Sailboat for disengaged teams. Match the technique to team dynamics.",
-          "SMART actions, not vague wishes — \"Communicate better\" fails. \"Maya and Taylor hold 15-min alignment at sprint start (Owner: Taylor, Day 1-3)\" succeeds.",
-          "Five facilitation phases — Set Stage, Gather Data, Generate Insights, Decide Actions, Close. Never skip safety or actions.",
-          "Avoid anti-patterns — Blame culture, no actions, facilitator dominates, same issues every sprint, stakeholders attend, junior members silenced."
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Before this, our retrospectives were complaint sessions. Maya blamed Morgan, Taylor got defensive, Devon said nothing. Now I structure them: safety first with ground rules, silent writing so everyone contributes, Mad-Sad-Glad to channel emotions, and always — ALWAYS — SMART actions with owners. Our Sprint 5 had zero skipped standups because Devon owned that action item. Retrospectives work when they produce change, not just conversation."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "D1L7",
-          "title": "Agile Principles & Values",
-          "description": "You've mastered Scrum ceremonies — now explore the 12 Agile Principles and 4 Agile Values that underpin everything Scrum teams do."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -731,6 +700,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **Sprint Retrospective** is the Scrum ceremony for process improvement — reflecting on HOW the team worked, not WHAT they built. Success requires psychological safety, the right facilitation technique, and SMART action items that drive real change.",
+        "key_takeaways": [
+          "Retrospective = HOW (process). Review = WHAT (product). Different purposes, different attendees. PO attends Reviews, but should NOT attend Retrospectives to preserve psychological safety.",
+          "Team-only ceremony — Product Owner and stakeholders should not attend. Share themes and actions afterward, not during the session.",
+          "Technique selection matters — Mad-Sad-Glad for low morale and conflict. Start-Stop-Continue for stable teams. Sailboat for disengaged teams. Match the technique to team dynamics.",
+          "SMART actions, not vague wishes — \"Communicate better\" fails. \"Maya and Taylor hold 15-min alignment at sprint start (Owner: Taylor, Day 1-3)\" succeeds.",
+          "Five facilitation phases — Set Stage, Gather Data, Generate Insights, Decide Actions, Close. Never skip safety or actions.",
+          "Avoid anti-patterns — Blame culture, no actions, facilitator dominates, same issues every sprint, stakeholders attend, junior members silenced."
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Before this, our retrospectives were complaint sessions. Maya blamed Morgan, Taylor got defensive, Devon said nothing. Now I structure them: safety first with ground rules, silent writing so everyone contributes, Mad-Sad-Glad to channel emotions, and always — ALWAYS — SMART actions with owners. Our Sprint 5 had zero skipped standups because Devon owned that action item. Retrospectives work when they produce change, not just conversation."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "D1L7",
+          "title": "Agile Principles & Values",
+          "description": "You've mastered Scrum ceremonies — now explore the 12 Agile Principles and 4 Agile Values that underpin everything Scrum teams do."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

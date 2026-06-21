@@ -580,30 +580,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that communication channels grow **exponentially** with team size — the formula n(n-1)/2 explains why doubling a team MORE than quadruples coordination complexity. Brooks's Law reminds us that adding people to late projects makes them later. For distributed teams, the key is selecting the right mix of synchronous vs asynchronous and rich vs lean channels.",
-        "key_takeaways": [
-          "Communication Channels Formula: n(n-1)/2 — channels grow exponentially, not linearly",
-          "Brooks's Law: Adding people increases coordination tax; more people does not mean faster delivery",
-          "Synchronous (video, phone): Use for urgent decisions, complex discussions, conflict resolution",
-          "Asynchronous (email, Slack): Use for routine updates, time zone flexibility, documentation",
-          "Rich vs Lean: Match communication bandwidth to message complexity and relationship needs",
-          "PM Adapts: Overcome barriers with visual aids, cultural learning, and technical workarounds"
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B1L5",
-          "title": "Managing Difficult Stakeholders",
-          "description": "You know HOW to communicate. Now learn how to handle stakeholders who resist, obstruct, or dominate — the difficult ones who can derail your project if not managed carefully."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -773,6 +749,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that communication channels grow **exponentially** with team size — the formula n(n-1)/2 explains why doubling a team MORE than quadruples coordination complexity. Brooks's Law reminds us that adding people to late projects makes them later. For distributed teams, the key is selecting the right mix of synchronous vs asynchronous and rich vs lean channels.",
+        "key_takeaways": [
+          "Communication Channels Formula: n(n-1)/2 — channels grow exponentially, not linearly",
+          "Brooks's Law: Adding people increases coordination tax; more people does not mean faster delivery",
+          "Synchronous (video, phone): Use for urgent decisions, complex discussions, conflict resolution",
+          "Asynchronous (email, Slack): Use for routine updates, time zone flexibility, documentation",
+          "Rich vs Lean: Match communication bandwidth to message complexity and relationship needs",
+          "PM Adapts: Overcome barriers with visual aids, cultural learning, and technical workarounds"
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B1L5",
+          "title": "Managing Difficult Stakeholders",
+          "description": "You know HOW to communicate. Now learn how to handle stakeholders who resist, obstruct, or dominate — the difficult ones who can derail your project if not managed carefully."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

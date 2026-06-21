@@ -584,32 +584,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that the **Definition of Done** is the team's quality gate — a shared checklist ensuring every story is production-ready, not just \"feature complete.\" DoD differs from Acceptance Criteria, evolves with team capability, and prevents the costly \"90% done\" syndrome.",
-        "key_takeaways": [
-          "DoD is a shared team agreement — universal quality standards that EVERY story must meet (code review, tests, deployment, verification)",
-          "Story DONE = AC Met + DoD Met — Acceptance Criteria define WHAT the story delivers; DoD defines HOW we ensure quality. Both are required.",
-          "DoD prevents \"90% done\" syndrome — features that work but aren't production-ready don't count as done and shouldn't inflate velocity",
-          "DoD evolves with capability — start basic (review, manual test, staging), add intermediate (performance), advance to mature (automation, production, monitoring)",
-          "The whole team owns DoD — developers add technical items, PO adds acceptance items, Scrum Master facilitates. It's a team agreement, not a management mandate.",
-          "\"Incrementally releasable\" requires DoD — when every completed story meets DoD, the product can potentially ship after any sprint"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think 'done' was obvious — features work, ship them. Then I saw what happens without a quality gate: code that crashes in production, velocity numbers that lie, and technical debt that compounds every sprint. The Definition of Done isn't extra work — it's the agreement that makes ALL our work actually count. Start basic, evolve as you grow, and never let 'it works on my machine' pass for done."
-          }
-        ],
-        "xp_earned": 100
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -803,6 +777,32 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that the **Definition of Done** is the team's quality gate — a shared checklist ensuring every story is production-ready, not just \"feature complete.\" DoD differs from Acceptance Criteria, evolves with team capability, and prevents the costly \"90% done\" syndrome.",
+        "key_takeaways": [
+          "DoD is a shared team agreement — universal quality standards that EVERY story must meet (code review, tests, deployment, verification)",
+          "Story DONE = AC Met + DoD Met — Acceptance Criteria define WHAT the story delivers; DoD defines HOW we ensure quality. Both are required.",
+          "DoD prevents \"90% done\" syndrome — features that work but aren't production-ready don't count as done and shouldn't inflate velocity",
+          "DoD evolves with capability — start basic (review, manual test, staging), add intermediate (performance), advance to mature (automation, production, monitoring)",
+          "The whole team owns DoD — developers add technical items, PO adds acceptance items, Scrum Master facilitates. It's a team agreement, not a management mandate.",
+          "\"Incrementally releasable\" requires DoD — when every completed story meets DoD, the product can potentially ship after any sprint"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think 'done' was obvious — features work, ship them. Then I saw what happens without a quality gate: code that crashes in production, velocity numbers that lie, and technical debt that compounds every sprint. The Definition of Done isn't extra work — it's the agreement that makes ALL our work actually count. Start basic, evolve as you grow, and never let 'it works on my machine' pass for done."
+          }
+        ],
+        "xp_earned": 100
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

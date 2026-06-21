@@ -448,30 +448,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned that project closure is a FORMAL process — not just stopping work. Every project needs proper closure with seven specific activities, contract terms determine closeout rules, and even cancelled projects require formal closure to capture valuable lessons.",
-        "key_takeaways": [
-          "Work Complete =/= Project Closed: Finishing deliverables is only one part of closure. Formal closure requires a structured process with 7 specific activities.",
-          "7 Closure Activities: Formal acceptance, contract closeout, lessons learned, resource release, documentation archive, operations transfer, team celebration.",
-          "Contract Terms Rule: Fixed-price = pay agreed price. Cost-reimbursable = pay actual costs. Always verify contract type before making closeout decisions.",
-          "ALL Projects Need Closure: Completed, cancelled, or suspended — every project outcome requires formal closure. No exceptions.",
-          "Cancelled Projects Teach Most: Failed projects have the most valuable lessons learned. Success teaches what works; failure teaches what to AVOID.",
-          "Close Before You Start: Complete formal closure of the current project before initiating the next one."
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "C1L8",
-          "title": "Benefits Realization",
-          "description": "The project delivered Riverside Plaza on time and on budget — but did it deliver BUSINESS VALUE? Revenue targets hit? Customer satisfaction high? ROI achieved? Learn how to measure post-project benefits and validate that the project created the intended value."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -610,6 +586,30 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned that project closure is a FORMAL process — not just stopping work. Every project needs proper closure with seven specific activities, contract terms determine closeout rules, and even cancelled projects require formal closure to capture valuable lessons.",
+        "key_takeaways": [
+          "Work Complete =/= Project Closed: Finishing deliverables is only one part of closure. Formal closure requires a structured process with 7 specific activities.",
+          "7 Closure Activities: Formal acceptance, contract closeout, lessons learned, resource release, documentation archive, operations transfer, team celebration.",
+          "Contract Terms Rule: Fixed-price = pay agreed price. Cost-reimbursable = pay actual costs. Always verify contract type before making closeout decisions.",
+          "ALL Projects Need Closure: Completed, cancelled, or suspended — every project outcome requires formal closure. No exceptions.",
+          "Cancelled Projects Teach Most: Failed projects have the most valuable lessons learned. Success teaches what works; failure teaches what to AVOID.",
+          "Close Before You Start: Complete formal closure of the current project before initiating the next one."
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "C1L8",
+          "title": "Benefits Realization",
+          "description": "The project delivered Riverside Plaza on time and on budget — but did it deliver BUSINESS VALUE? Revenue targets hit? Customer satisfaction high? ROI achieved? Learn how to measure post-project benefits and validate that the project created the intended value."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

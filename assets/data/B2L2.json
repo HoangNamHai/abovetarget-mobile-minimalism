@@ -488,37 +488,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to build **high-performance teams** through the 5 key characteristics: Trust, Clear Goals, Psychological Safety, Shared Accountability, and Continuous Improvement. The problem is rarely the people — it's the team dynamics. Fix the environment, and performance follows.",
-        "key_takeaways": [
-          "5 Characteristics: Trust, Clear Goals, Psychological Safety, Shared Accountability, Continuous Improvement — all five work together as a system",
-          "Psychological Safety = #1: Google's Project Aristotle proved it matters more than individual talent, resources, or workload",
-          "Leaders model vulnerability: Share your mistakes FIRST to signal that imperfection is acceptable",
-          "Transform blame to ownership: Joint root cause analysis (5 Whys) reveals systemic issues, not individual faults",
-          "Sustain, don't coast: \"Too busy for retrospectives\" is exactly when retrospectives matter most — continuous improvement is not optional",
-          "Distributed teams: Async primary + sync strategic — don't over-meet, but don't under-communicate"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "I used to think team performance was about having the right people. Now I know it's about creating the right environment — trust, safety, shared goals, accountability, and constant improvement. Build the dynamics, and performance follows."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B2L3",
-          "title": "Conflict Resolution Strategies",
-          "description": "Now that you understand high-performance team dynamics, learn how to handle conflict constructively — because healthy conflict actually BUILDS trust and performance."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -700,6 +669,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to build **high-performance teams** through the 5 key characteristics: Trust, Clear Goals, Psychological Safety, Shared Accountability, and Continuous Improvement. The problem is rarely the people — it's the team dynamics. Fix the environment, and performance follows.",
+        "key_takeaways": [
+          "5 Characteristics: Trust, Clear Goals, Psychological Safety, Shared Accountability, Continuous Improvement — all five work together as a system",
+          "Psychological Safety = #1: Google's Project Aristotle proved it matters more than individual talent, resources, or workload",
+          "Leaders model vulnerability: Share your mistakes FIRST to signal that imperfection is acceptable",
+          "Transform blame to ownership: Joint root cause analysis (5 Whys) reveals systemic issues, not individual faults",
+          "Sustain, don't coast: \"Too busy for retrospectives\" is exactly when retrospectives matter most — continuous improvement is not optional",
+          "Distributed teams: Async primary + sync strategic — don't over-meet, but don't under-communicate"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "I used to think team performance was about having the right people. Now I know it's about creating the right environment — trust, safety, shared goals, accountability, and constant improvement. Build the dynamics, and performance follows."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L3",
+          "title": "Conflict Resolution Strategies",
+          "description": "Now that you understand high-performance team dynamics, learn how to handle conflict constructively — because healthy conflict actually BUILDS trust and performance."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }

@@ -462,37 +462,6 @@
     },
     {
       "screen_number": 5,
-      "screen_type": "wrap",
-      "duration": 30,
-      "content": {
-        "title": "Lesson Complete!",
-        "summary": "You've learned to apply **Situational Leadership** by matching leadership style to team maturity, task complexity, and work type. Effective leaders don't have \"one style\" — they have a TOOLKIT of approaches and the wisdom to choose the right one for each context.",
-        "key_takeaways": [
-          "Situational Leadership = Adaptive Consistency: Consistently match style to context, not one style everywhere",
-          "Servant Leadership: PMI's preferred approach for Agile — support the team, remove impediments, don't direct",
-          "Transformational: Inspires creativity and innovation through vision; empowers safe-to-fail experimentation",
-          "Laissez-faire: ONLY for highly skilled, self-directed teams — requires HIGH maturity to work",
-          "Directive/Autocratic: Appropriate for crisis situations or novice teams — never for experts",
-          "Transactional: Short-term compliance only — kills intrinsic motivation and creativity long-term"
-        ],
-        "character_closing": [
-          {
-            "character": "alex_mitchell",
-            "name": "Alex Mitchell",
-            "quote": "Carlos wanted me to pick one style. Dr. Foster showed me that real consistency is about consistently READING the situation and ADAPTING my approach. Veterans get autonomy. Rookies get structure. Innovators get vision. Same method, different execution — that's situational leadership."
-          }
-        ],
-        "xp_earned": 100,
-        "next_lesson": {
-          "id": "B2L5",
-          "title": "Motivation & Recognition",
-          "description": "Now that you know HOW to lead different teams, learn WHAT motivates them: intrinsic vs extrinsic drivers, recognition styles, and building lasting engagement."
-        }
-      },
-      "cta": "Continue to Practice"
-    },
-    {
-      "screen_number": 6,
       "screen_type": "practice",
       "duration": 180,
       "content": {
@@ -686,6 +655,37 @@
           }
         ]
       }
+    },
+    {
+      "screen_number": 6,
+      "screen_type": "wrap",
+      "duration": 30,
+      "content": {
+        "title": "Lesson Complete!",
+        "summary": "You've learned to apply **Situational Leadership** by matching leadership style to team maturity, task complexity, and work type. Effective leaders don't have \"one style\" — they have a TOOLKIT of approaches and the wisdom to choose the right one for each context.",
+        "key_takeaways": [
+          "Situational Leadership = Adaptive Consistency: Consistently match style to context, not one style everywhere",
+          "Servant Leadership: PMI's preferred approach for Agile — support the team, remove impediments, don't direct",
+          "Transformational: Inspires creativity and innovation through vision; empowers safe-to-fail experimentation",
+          "Laissez-faire: ONLY for highly skilled, self-directed teams — requires HIGH maturity to work",
+          "Directive/Autocratic: Appropriate for crisis situations or novice teams — never for experts",
+          "Transactional: Short-term compliance only — kills intrinsic motivation and creativity long-term"
+        ],
+        "character_closing": [
+          {
+            "character": "alex_mitchell",
+            "name": "Alex Mitchell",
+            "quote": "Carlos wanted me to pick one style. Dr. Foster showed me that real consistency is about consistently READING the situation and ADAPTING my approach. Veterans get autonomy. Rookies get structure. Innovators get vision. Same method, different execution — that's situational leadership."
+          }
+        ],
+        "xp_earned": 100,
+        "next_lesson": {
+          "id": "B2L5",
+          "title": "Motivation & Recognition",
+          "description": "Now that you know HOW to lead different teams, learn WHAT motivates them: intrinsic vs extrinsic drivers, recognition styles, and building lasting engagement."
+        }
+      },
+      "cta": "Continue to Practice"
     }
   ]
 }
