@@ -117,9 +117,11 @@ export function LessonsList({ domainFilter }: Props) {
                     contentFit="cover"
                     transition={200}
                   />
-                  {/* Gradient fade so the overlaid text stays legible */}
+                  {/* Gradient fade so the overlaid text stays legible — kept to the
+                      bottom band only so the illustration above stays bright. */}
                   <LinearGradient
-                    colors={['rgba(0,0,0,0.05)', 'rgba(0,0,0,0.85)']}
+                    colors={['transparent', 'transparent', 'rgba(0,0,0,0.85)']}
+                    locations={[0, 0.55, 1]}
                     style={StyleSheet.absoluteFill}
                   />
 
