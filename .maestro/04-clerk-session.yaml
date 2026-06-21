@@ -1,0 +1,20 @@
+# Clerk — the app boots past the auth gate with an active authenticated session
+# (Clerk SDK initialized with the publishable key; profile shows the signed-in email).
+appId: com.h2ai.pmpexampro
+tags:
+  - clerk
+---
+- launchApp
+# Wait for the app to finish cold-starting before deep-linking (avoids a race
+# where the link is delivered before the router is ready, seen on Android).
+- extendedWaitUntil:
+    visible: ".*CURRENT STREAK.*|.*ACCOUNT.*"
+    timeout: 30000
+- openLink: "pmp-exam-pro://profile"
+- extendedWaitUntil:
+    visible: "ACCOUNT"
+    timeout: 15000
+- assertVisible: "Email"
+- assertVisible: ".*@.*"
+- assertVisible: ".*Sign Out.*"
+- takeScreenshot: artifacts/04-clerk-session

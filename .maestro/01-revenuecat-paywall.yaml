@@ -1,0 +1,24 @@
+# RevenueCat — paywall renders and loads the 3 Test Store packages with prices.
+appId: com.h2ai.pmpexampro
+tags:
+  - revenuecat
+---
+- launchApp
+# Wait for the app to finish cold-starting before deep-linking (avoids a race
+# where the link is delivered before the router is ready, seen on Android).
+- extendedWaitUntil:
+    visible: ".*CURRENT STREAK.*|.*ACCOUNT.*"
+    timeout: 30000
+- openLink: "pmp-exam-pro://paywall"
+- extendedWaitUntil:
+    visible: ".*Unlock Premium.*"
+    timeout: 20000
+# Offerings load async from the Test Store — wait for the first package row.
+- extendedWaitUntil:
+    visible: ".*Monthly.*[$].*"
+    timeout: 20000
+- assertVisible: ".*Monthly.*[$].*"
+- assertVisible: ".*Yearly.*[$].*"
+- assertVisible: ".*Lifetime.*[$].*"
+- assertVisible: "CONTINUE"
+- takeScreenshot: artifacts/01-paywall

@@ -1,0 +1,56 @@
+# Clerk — full email sign-up + email-code verification, ending in an active session.
+# Runs against a SIGNED-OUT app. Uses Clerk's test-mode email (`+clerk_test`),
+# which accepts the fixed verification code 424242 on development instances, so no
+# real inbox is needed. Use a strong, unique password — Clerk rejects breached ones.
+appId: com.h2ai.pmpexampro
+tags:
+  - clerk
+---
+- launchApp
+- extendedWaitUntil:
+    visible: ".*CURRENT STREAK.*|WELCOME BACK|ACCOUNT"
+    timeout: 30000
+- openLink: "pmp-exam-pro://profile"
+- runFlow:
+    when:
+      visible: ".*Sign In.*"
+    commands:
+      - tapOn: ".*Sign In.*"
+- extendedWaitUntil:
+    visible: "WELCOME BACK"
+    timeout: 10000
+# The dev-warning / WebBrowser-error toasts can overlap the link; dismiss them.
+- tapOn:
+    point: "93%, 87%"
+- tapOn:
+    point: "93%, 79%"
+- tapOn: "No account? Sign up"
+- extendedWaitUntil:
+    visible: "CREATE ACCOUNT"
+    timeout: 10000
+- tapOn: "you@example.com"
+- inputText: "pmpe2e+clerk_test@example.com"
+- tapOn: "Create a password"
+- inputText: "Zx9qP_mpVerify7723k"
+- hideKeyboard
+- takeScreenshot: artifacts/05a-signup-filled
+- tapOn:
+    text: "CREATE ACCOUNT"
+    index: 1
+- extendedWaitUntil:
+    visible: "CHECK YOUR EMAIL|VERIFICATION CODE"
+    timeout: 20000
+- tapOn: "123456"
+- inputText: "424242"
+- hideKeyboard
+- takeScreenshot: artifacts/05b-verify
+- tapOn: "VERIFY"
+- extendedWaitUntil:
+    visible: ".*CURRENT STREAK.*"
+    timeout: 20000
+- openLink: "pmp-exam-pro://profile"
+- extendedWaitUntil:
+    visible: ".*clerk_test.*"
+    timeout: 10000
+- assertVisible: ".*Sign Out.*"
+- takeScreenshot: artifacts/05c-signed-in
