@@ -37,3 +37,58 @@ platform :android do
     )
   end
 end
+
+# iOS App Store Connect metadata + screenshots (deliver).
+# iOS metadata/screenshots live under fastlane/ios/ so they don't collide with
+# the Android supply layout under fastlane/metadata.
+APP_IDENTIFIER = "com.h2ai.pmpexampro".freeze
+ASC_KEY_ID = "G3CD625ZNS".freeze
+ASC_ISSUER_ID = "48d421d0-29a7-4799-97ee-4330306500d9".freeze
+ASC_KEY_FILEPATH = File.expand_path("../AuthKey_#{ASC_KEY_ID}.p8", __dir__).freeze
+
+platform :ios do
+  def asc_api_key
+    app_store_connect_api_key(
+      key_id: ASC_KEY_ID,
+      issuer_id: ASC_ISSUER_ID,
+      key_filepath: ASC_KEY_FILEPATH,
+      in_house: false
+    )
+  end
+
+  desc "Upload iOS metadata + screenshots to App Store Connect (saves as draft, no submit)"
+  lane :upload_metadata do
+    deliver(
+      api_key: asc_api_key,
+      app_identifier: APP_IDENTIFIER,
+      metadata_path: "./fastlane/ios/metadata",
+      screenshots_path: "./fastlane/ios/screenshots",
+      skip_binary_upload: true,
+      overwrite_screenshots: true,
+      submit_for_review: false,
+      run_precheck_before_submit: false,
+      force: true,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Upload iOS screenshots only to App Store Connect"
+  lane :upload_screenshots do
+    deliver(
+      api_key: asc_api_key,
+      app_identifier: APP_IDENTIFIER,
+      screenshots_path: "./fastlane/ios/screenshots",
+      skip_binary_upload: true,
+      skip_metadata: true,
+      overwrite_screenshots: true,
+      submit_for_review: false,
+      run_precheck_before_submit: false,
+      force: true
+    )
+  end
+
+  # To pull current metadata/screenshots down from ASC, use the deliver CLI
+  # directly (it's a subcommand, not a deliver() lane option):
+  #   fastlane deliver download_metadata    -a com.h2ai.pmpexampro --api_key_path <key.json>
+  #   fastlane deliver download_screenshots -a com.h2ai.pmpexampro --api_key_path <key.json>
+end

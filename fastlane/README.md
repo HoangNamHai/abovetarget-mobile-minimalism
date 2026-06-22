@@ -41,6 +41,27 @@ Upload screenshots only
 
 ----
 
+
+## iOS
+
+### ios upload_metadata
+
+```sh
+[bundle exec] fastlane ios upload_metadata
+```
+
+Upload iOS metadata + screenshots to App Store Connect (saves as draft, no submit)
+
+### ios upload_screenshots
+
+```sh
+[bundle exec] fastlane ios upload_screenshots
+```
+
+Upload iOS screenshots only to App Store Connect
+
+----
+
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
 
 More information about _fastlane_ can be found on [fastlane.tools](https://fastlane.tools).
