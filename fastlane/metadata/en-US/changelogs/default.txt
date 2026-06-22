@@ -1,5 +1,5 @@
-Initial release of PMP Exam Pro.
-• Interactive lessons covering core PMP exam topics
-• Multiple question types: single-select, multi-select, drag-and-drop, text input
-• Progress tracking with scores and streaks
-• Dark mode support
+What's new in 1.1.0:
+• Refreshed onboarding — clearer prompts and larger, easier-to-tap domain cards
+• Smoother navigation — leaving a lesson now returns you to Home
+• Visual polish across Home, lessons, and onboarding
+• Bug fixes and stability improvements
