@@ -1,0 +1,77 @@
+# Release free build — open a sample of 2 lessons per module (16 of 51) by deep link
+# and confirm each lesson detail renders real content (no white screen / crash).
+# The other 35 lessons are covered by the JSON source audit. Free build => all unlocked.
+appId: com.h2ai.pmpexampro
+tags:
+  - release
+  - lessons
+---
+- launchApp
+- extendedWaitUntil:
+    visible: ".*Home.*|.*Lessons.*"
+    timeout: 60000
+
+# Per lesson: deep-link in, wait for body text to render, screenshot.
+# --- Module A1 (Foundation) ---
+- openLink: "pmp-exam-pro://lesson/A1L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-A1L1
+- openLink: "pmp-exam-pro://lesson/A1L5"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-A1L5
+
+# --- Module B1 ---
+- openLink: "pmp-exam-pro://lesson/B1L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-B1L1
+- openLink: "pmp-exam-pro://lesson/B1L4"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-B1L4
+
+# --- Module B2 ---
+- openLink: "pmp-exam-pro://lesson/B2L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-B2L1
+- openLink: "pmp-exam-pro://lesson/B2L4"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-B2L4
+
+# --- Module C1 ---
+- openLink: "pmp-exam-pro://lesson/C1L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-C1L1
+- openLink: "pmp-exam-pro://lesson/C1L5"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-C1L5
+
+# --- Module C2 ---
+- openLink: "pmp-exam-pro://lesson/C2L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-C2L1
+- openLink: "pmp-exam-pro://lesson/C2L3"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-C2L3
+
+# --- Module C3 ---
+- openLink: "pmp-exam-pro://lesson/C3L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-C3L1
+- openLink: "pmp-exam-pro://lesson/C3L4"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-C3L4
+
+# --- Module D1 ---
+- openLink: "pmp-exam-pro://lesson/D1L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-D1L1
+- openLink: "pmp-exam-pro://lesson/D1L5"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-D1L5
+
+# --- Module D2 ---
+- openLink: "pmp-exam-pro://lesson/D2L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-D2L1
+- openLink: "pmp-exam-pro://lesson/D2L4"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- takeScreenshot: artifacts/rel-lsn-D2L4

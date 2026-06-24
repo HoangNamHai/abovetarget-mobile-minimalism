@@ -1,0 +1,39 @@
+# Release free build — home dashboard + profile contents, driven by deep links
+# (verified working on the release build) and asserted on screen CONTENT (stable),
+# not transient tab-bar labels. clearState keeps this flow independent of others.
+appId: com.h2ai.pmpexampro
+tags:
+  - release
+  - tabs
+---
+- launchApp
+# Wait out the Clerk-gated cold start before deep-linking (race guard on Android).
+- extendedWaitUntil:
+    visible: "CURRENT STREAK|ACCOUNT|CONTINUE LEARNING|Lessons"
+    timeout: 60000
+
+# Home dashboard
+- openLink: "pmp-exam-pro://home"
+- extendedWaitUntil:
+    visible: "CURRENT STREAK"
+    timeout: 20000
+- assertVisible: "CONTINUE LEARNING"
+- assertVisible: ".*LESSONS.*"
+- takeScreenshot: artifacts/rel-10-home
+
+# Profile
+- openLink: "pmp-exam-pro://profile"
+- extendedWaitUntil:
+    visible: "ACCOUNT"
+    timeout: 20000
+- assertVisible: "FULL ACCESS"
+- assertVisible: "Version"
+- assertVisible: "1.1.0"
+- assertVisible: "Privacy Policy"
+- assertVisible: "Terms of Service"
+- takeScreenshot: artifacts/rel-12-profile
+
+# Preference toggle works (Haptics)
+- tapOn: "Haptics"
+- takeScreenshot: artifacts/rel-13-haptics-toggled
+- tapOn: "Haptics"

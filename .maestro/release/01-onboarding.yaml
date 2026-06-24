@@ -1,0 +1,99 @@
+# Release free build — full onboarding walk, ending inside the first lesson.
+# Free build has NO auth gate and NO paywall; onboarding flows straight into a lesson.
+# Option rows on the select screens expose no accessibility text, so those are tapped
+# by relative point (works across screen sizes); titles/buttons are matched by text.
+appId: com.h2ai.pmpexampro
+tags:
+  - release
+  - onboarding
+---
+- launchApp:
+    clearState: true
+    permissions:
+      notifications: deny   # we exercise the in-app permission prompt explicitly below
+
+# 1. Splash / value intro
+# NOTE: timeout is deliberately generous — cold launch hard-blocks on Clerk's
+# network load (ClerkLoaded gate), so first paint can take 20-35s on slow nets.
+- extendedWaitUntil:
+    visible: "GET STARTED"
+    timeout: 60000
+- takeScreenshot: artifacts/rel-01-splash
+- tapOn: "GET STARTED"
+
+# 2-3. Story value screens
+- assertVisible: ".*One story.*"
+- tapOn: "CONTINUE"
+- assertVisible: ".*Welcome to Savory.*"
+- tapOn: "CONTINUE"
+
+# 4. Exam date (single-select) — pick "1–3 months"
+- assertVisible: ".*your exam.*"
+- tapOn:
+    point: "28%, 39%"
+- tapOn: "CONTINUE"
+
+# 5. Fact — 180 questions
+- assertVisible: ".*180.*"
+- tapOn: "CONTINUE"
+
+# 6. Motivation (multi-select) — pick two
+- assertVisible: ".*getting.*certified.*"
+- tapOn:
+    point: "46%, 37%"
+- tapOn:
+    point: "46%, 58%"
+- tapOn: "CONTINUE"
+
+# 7. Fact — 1 million professionals
+- assertVisible: ".*million professionals.*"
+- tapOn: "CONTINUE"
+
+# 8. Experience (single-select, default preselected)
+- assertVisible: ".*experience do.*"
+- tapOn: "CONTINUE"
+
+# 9. Fact — half the exam predictive
+- assertVisible: ".*predictive.*"
+- tapOn: "CONTINUE"
+
+# 10. Confidence ratings (defaults fine)
+- assertVisible: ".*confident.*"
+- tapOn: "CONTINUE"
+
+# 11. Fact — 60-200 hours
+- assertVisible: ".*study.*hours.*|.*60.*200.*"
+- tapOn: "CONTINUE"
+
+# 12. Belief (single-select) — pick first
+- assertVisible: ".*overwhelming.*"
+- tapOn:
+    point: "42%, 35%"
+- tapOn: "CONTINUE"
+
+# 13. Reminder — keep defaults, CONTINUE triggers the OS notification prompt
+- assertVisible: ".*nudge you.*"
+- takeScreenshot: artifacts/rel-02-reminder
+- tapOn: "CONTINUE"
+# OS runtime permission dialog (Android 13+)
+- runFlow:
+    when:
+      visible: ".*notifications.*"
+    commands:
+      - tapOn: "Allow"
+
+# 14. Commit
+- assertVisible: ".*study a day.*"
+- tapOn: "I’M COMMITTED"
+
+# 15. Domain pick — tap the Process card (top)
+- assertVisible: ".*Choose a domain.*"
+- takeScreenshot: artifacts/rel-03-domain
+- tapOn:
+    point: "50%, 38%"
+
+# 16. Inside the first lesson (hook)
+- extendedWaitUntil:
+    visible: ".*Alex.*|.*charter.*|LEARNING HOOK"
+    timeout: 20000
+- takeScreenshot: artifacts/rel-04-lesson-entered

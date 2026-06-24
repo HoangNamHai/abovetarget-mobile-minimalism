@@ -1,0 +1,29 @@
+# Release free build — edge cases: hardware Back navigation + background/resume state.
+# (Rotation and offline-first-launch are exercised separately via adb in the test run.)
+appId: com.h2ai.pmpexampro
+tags:
+  - release
+  - edge
+---
+- launchApp
+- extendedWaitUntil:
+    visible: ".*Home.*|.*Lessons.*"
+    timeout: 60000
+
+# Open a lesson, then hardware Back should return to the app (not crash/exit).
+- openLink: "pmp-exam-pro://lesson/A1L1"
+- extendedWaitUntil: { visible: ".*[A-Za-z]{4,}.*", timeout: 20000 }
+- pressKey: Back
+- extendedWaitUntil:
+    visible: ".*Home.*|.*Lessons.*|.*Profile.*"
+    timeout: 15000
+- takeScreenshot: artifacts/rel-edge-back
+
+# Background the app and resume — state should be preserved, no crash/relaunch hang.
+# Generous timeout: a resume that turns into a cold start re-hits the Clerk gate.
+- pressKey: Home
+- launchApp        # resume (no clearState) — brings existing task to foreground
+- extendedWaitUntil:
+    visible: ".*Home.*|.*Lessons.*|.*Profile.*"
+    timeout: 60000
+- takeScreenshot: artifacts/rel-edge-resume
