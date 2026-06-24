@@ -30,7 +30,7 @@ These are the live blockers found at last review. Resolve before promoting the d
    `.env` has `EXPO_PUBLIC_REVENUECAT_ENABLED=true`; `src/config/revenuecat.ts` hardcodes `test_UFxNiXpKqWHIZlleFrlzORuIAgL` for both iOS and Android. The file comment itself says *"swap these for production keys (goog_… / appl_…) before release."* → With this build, the paywall initializes against the Test Store, so **real Play purchases cannot complete**. Either (a) ship the prod `goog_…` key + real Play products, or (b) set `EXPO_PUBLIC_REVENUECAT_ENABLED=false` for the production build if monetization is not meant to be live yet.
 2. ⚠️ **No Play subscription/IAP products exist** (`monetization.subscriptions.list` → 0). Products referenced in code — `pmp_pro_weekly`, `pmp_pro_monthly`, `pmp_pro_lifetime` (entitlement `pro`) — must be created and **Active** in Play Console before purchases work.
 3. ❓ **App access / test login for review.** App is gated behind Clerk auth. Google reviewers need either a demo account or login instructions in *Play Console → App content → App access*, or review will fail.
-4. ❓ **Privacy policy URL** present and live (required; not found in repo — confirm it's set in Console and reachable).
+4. ✅ **Privacy policy URL** live (200) at https://abovetarget.org/privacy/ and wired in app (`src/config/links.ts`). Terms also live at https://abovetarget.org/terms/. Set both in Play Console.
 5. ❓ **Account deletion** — app creates user accounts (Clerk), so Play requires an in-app delete path **and** a public account-deletion URL (Data safety / App content).
 6. ⚠️ **Sentry source maps not uploaded** — builds run with `SENTRY_DISABLE_AUTO_UPLOAD=true`, so production crashes won't symbolicate. Acceptable, but know that stack traces will be minified unless you upload maps out-of-band.
 7. ❓ **`SYSTEM_ALERT_WINDOW` (draw-over-other-apps) permission** is in the merged manifest. Confirm it's intended (some libs pull it in); Play can flag overlay permission and ask for justification.
@@ -112,7 +112,7 @@ These are the live blockers found at last review. Resolve before promoting the d
 
 | ✓ | Item | Status | Notes |
 |---|------|--------|-------|
-| ❓ | **Privacy policy URL** (required) | ❓ | live & accurate; covers Clerk, RevenueCat, Sentry |
+| ✅ | **Privacy policy URL** (required) | ✅ live (200) | https://abovetarget.org/privacy/ — wired in app (`src/config/links.ts`). NOTE: page doesn't name Clerk/RC/Sentry vendors (generic data/email language) — Data Safety form must still match actual collection. |
 | ❓ | **App access** (login for review) | ❓ ⚠️ | Clerk-gated app → provide demo creds or instructions, else review fails |
 | ❓ | **Ads** declaration | likely "No ads" | no ads SDK present (no AdMob) |
 | ❓ | **Content rating** (IARC questionnaire) | ❓ | already rated for v11; re-answer if content/monetization changed |
