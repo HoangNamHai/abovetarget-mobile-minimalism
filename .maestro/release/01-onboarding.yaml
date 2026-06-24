@@ -13,8 +13,9 @@ tags:
       notifications: deny   # we exercise the in-app permission prompt explicitly below
 
 # 1. Splash / value intro
-# NOTE: timeout is deliberately generous — cold launch hard-blocks on Clerk's
-# network load (ClerkLoaded gate), so first paint can take 20-35s on slow nets.
+# Generous timeout to tolerate a slow cold start / first JS bundle load.
+# (Before the ClerkLoaded fix this could block 20-35s on slow nets; now it
+# renders without waiting on the network, so this rarely needs more than a few s.)
 - extendedWaitUntil:
     visible: "GET STARTED"
     timeout: 60000
