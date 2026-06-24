@@ -8,11 +8,18 @@
 
 ---
 
-## Verdict: ⛔ NOT ready to ship as-is — one blocker to fix first
+## Verdict: ✅ Blocker fixed — release-ready pending a fresh signed AAB
 
-The app is functionally solid and the content is clean. **One high-severity issue must be fixed before release:** the app shows a **blank screen on cold launch whenever connectivity is missing or slow**, because the entire UI is gated behind Clerk's network load. After that fix, the build looks release-ready.
+The app is functionally solid and the content is clean. The one high-severity issue (blank screen on cold launch when offline/slow, caused by the whole UI being gated behind Clerk's network load) **has been fixed and verified on a rebuilt release APK** (see Blocker 1 below). Remaining before shipping: produce a fresh **signed production AAB** (`.env.production`, Play upload key) that includes this fix, and re-run the offline cold-launch check on it. Optional: address the minor accessibility gap (M1).
 
 ---
+
+## ✅ BLOCKER 1 — FIXED & VERIFIED (2026-06-24, branch `fix/clerk-offline-blank`)
+
+**Fix:** removed the `<ClerkLoaded>` wrapper in `ClerkGate` (`src/contexts/auth-context.tsx`) so the app renders immediately and Clerk hydrates in the background. Regression test added: `src/contexts/__tests__/auth-context-gate.test.tsx`.
+**Verified on a rebuilt release APK:** airplane-mode + `pm clear` + cold launch now shows the onboarding splash ("GET STARTED") in ~9s instead of a permanent blank screen (`scratchpad/offline-after-fix.png`). Online Maestro flows `01-onboarding` and `02-tabs-profile` still PASS (no regression).
+
+Original analysis below, kept for the record.
 
 ## 🔴 BLOCKER 1 — Blank/white screen on cold launch when offline or on a slow network
 
