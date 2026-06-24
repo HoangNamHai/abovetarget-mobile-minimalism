@@ -8,9 +8,15 @@
 
 ---
 
-## Verdict: ✅ Blocker fixed — release-ready pending a fresh signed AAB
+## Verdict: ✅ Blocker fixed & verified on the signed production AAB — release-ready
 
-The app is functionally solid and the content is clean. The one high-severity issue (blank screen on cold launch when offline/slow, caused by the whole UI being gated behind Clerk's network load) **has been fixed and verified on a rebuilt release APK** (see Blocker 1 below). Remaining before shipping: produce a fresh **signed production AAB** (`.env.production`, Play upload key) that includes this fix, and re-run the offline cold-launch check on it. Optional: address the minor accessibility gap (M1).
+The app is functionally solid and the content is clean. The one high-severity issue (blank screen on cold launch when offline/slow, caused by the whole UI being gated behind Clerk's network load) **has been fixed and verified on the signed production AAB that will go to Play**:
+
+- **Artifact:** `pmp-1.1.0-clerkfix.aab` (108 MB, **versionCode 17**, free build — RevenueCat OFF), signed with the production upload key `pmp-release` (`CN=Hai.Hoang`). Built locally via `eas build -p android --profile production --local`.
+- **Offline cold-launch** (airplane mode + `pm clear` + cold start): renders the onboarding splash ("GET STARTED") — no longer a blank screen. Evidence: `scratchpad/prod-offline.png`.
+- **Online cold-launch:** `TotalTime 1414ms`, GET STARTED visible, no app crash/ANR (the only logcat FATALs were the emulator's own `droid.bluetooth` stack, unrelated to `com.h2ai.pmpexampro`).
+
+Remaining before shipping is procedural only: upload `pmp-1.1.0-clerkfix.aab` to the Play production track (draft) per `docs/release/google-play-publish-checklist.md`. Optional: address the minor accessibility gap (M1).
 
 ---
 
