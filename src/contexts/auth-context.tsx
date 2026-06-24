@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useMemo, type ReactNode } from 'react';
-import { ClerkProvider, ClerkLoaded, useAuth, useUser } from '@clerk/clerk-expo';
+import { ClerkProvider, useAuth, useUser } from '@clerk/clerk-expo';
 import { CLERK_PUBLISHABLE_KEY, hasClerkKey } from '../config/env';
 import { tokenCache } from '../services/infra/clerk-token-cache';
 
@@ -12,12 +12,14 @@ export interface AppAuthValue {
 
 const AuthContext = createContext<AppAuthValue | null>(null);
 
-/** Mounts ClerkProvider only when a publishable key is configured; else passthrough. */
+/** Mounts ClerkProvider only when a publishable key is configured; else passthrough.
+ *  Renders children immediately — Clerk hydrates in the background so the app (and
+ *  onboarding) is never blocked on a network round-trip (offline = no longer blank). */
 export function ClerkGate({ children }: { children: ReactNode }) {
   if (!hasClerkKey()) return <>{children}</>;
   return (
     <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY} tokenCache={tokenCache}>
-      <ClerkLoaded>{children}</ClerkLoaded>
+      {children}
     </ClerkProvider>
   );
 }
