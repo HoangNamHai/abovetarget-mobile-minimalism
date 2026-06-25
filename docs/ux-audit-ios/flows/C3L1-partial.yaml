@@ -1,0 +1,71 @@
+appId: com.h2ai.pmpexampro
+---
+- launchApp
+- openLink: pmp-exam-pro:///lesson/C3L1
+- extendedWaitUntil:
+    visible:
+      text: "Exit lesson"
+    timeout: 40000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-01-hook
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-02-challenge
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Anonymous expert rounds via structured questi"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Anonymous expert rounds via structured questi"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-02-challenge-q0-feedback
+- tapOn:
+    text: "CONTINUE"

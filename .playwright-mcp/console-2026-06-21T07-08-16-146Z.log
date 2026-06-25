@@ -1,0 +1,11 @@
+[     469ms] [LOG] [Rise] Survey engine: v2 @ https://onboarding.risescience.com/assets/index-CFu_GGPr.js:3
+[     676ms] [LOG] 3.5.5 @ https://onboarding.risescience.com/assets/entry-vI1doHwI.js:3
+[     949ms] [WARNING] [TikTok Pixel] - Invalid Event Name Format
+Issue: 1 event name was rejected for not following TikTok format requirements.
+Suggestion: Go to your source code and update these event types according to TikTok format requirements. See https://ads.tiktok.com/help/article/custom-events?lang=en for more information. @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    1044ms] [LOG] {name: FCP, value: 1036, delta: 1036, entries: Array(1), id: v2-1782025696888-3976212429744} @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    1255ms] [WARNING] [TikTok Pixel] - Invalid Event Name Format
+Issue: 1 event name was rejected for not following TikTok format requirements.
+Suggestion: Go to your source code and update these event types according to TikTok format requirements. See https://ads.tiktok.com/help/article/custom-events?lang=en for more information. @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    1257ms] [LOG] {name: TTFB, value: 396.4000000357628, delta: 396.4000000357628, entries: Array(1), id: v2-1782025696888-4125250125133} @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    2361ms] [ERROR] Failed to load resource: the server responded with a status of 429 () @ https://o107506.ingest.us.sentry.io/api/4507862165553152/envelope/?sentry_key=e9e809f7580fb64ecb1d02c5d4f540a5&sentry_version=7&sentry_client=sentry.javascript.react%2F8.34.0:0

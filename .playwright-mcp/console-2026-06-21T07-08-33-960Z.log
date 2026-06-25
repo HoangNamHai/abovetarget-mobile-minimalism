@@ -1,0 +1,44 @@
+[     892ms] [LOG] chatgptParam: null @ https://www.speak.com/:1303
+[     961ms] [LOG] .feature-container not found, abort setting interaction @ https://speak.b-cdn.net/speak-com-2024-02-26/index.js:126
+[     962ms] [LOG] Comments per row 8 @ https://speak.b-cdn.net/speak-com-2024-02-26/index.js:256
+[    1113ms] [LOG] [Sidecar] Hooking into analytics.ready @ https://www.speak.com/:711
+[    1133ms] [LOG] Sun Jun 21 2026 14:08:35 GMT+0700 (Indochina Time) Webflow footer, $(document).ready @ https://www.speak.com/:1838
+[    1147ms] [LOG] Kakao SDK initialized @ https://www.speak.com/:528
+[    1148ms] [LOG] Kakao Pixel pageView sent @ https://www.speak.com/:532
+[    1359ms] TypeError: Cannot read properties of null (reading 'style')
+    at https://www.speak.com/:1527:14
+[    1423ms] [LOG] consent script loaded @ :1
+[    1429ms] [LOG] speak-custom-analytics-consent-hooks @ :1
+[    1430ms] [LOG] speak-custom-marketing-consent-hooks @ :1
+[    1436ms] [LOG] consent analytics @ :0
+[    1459ms] [LOG] consent advertising @ :0
+[    1478ms] [WARNING] Failed to decode downloaded font: https://www.speak.com/cdn.prod.website-files.com/61a88c135006e8345b005efd/61a9fd227ce25b19a3a46b34_Axiforma-Regular.ttf @ https://www.speak.com/:0
+[    1478ms] [WARNING] OTS parsing error: invalid sfntVersion: 1651534953 @ https://www.speak.com/:0
+[    1478ms] [WARNING] Failed to decode downloaded font: https://www.speak.com/cdn.prod.website-files.com/61a88c135006e8345b005efd/61a9fd227ce25b19a3a46b34_Axiforma-Regular.ttf @ https://www.speak.com/:0
+[    1478ms] [WARNING] OTS parsing error: invalid sfntVersion: 1651534953 @ https://www.speak.com/:0
+[    1478ms] [WARNING] Failed to decode downloaded font: https://www.speak.com/cdn.prod.website-files.com/61a88c135006e8345b005efd/61a9fd227ce25b19a3a46b34_Axiforma-Regular.ttf @ https://www.speak.com/:0
+[    1478ms] [WARNING] OTS parsing error: invalid sfntVersion: 1651534953 @ https://www.speak.com/:0
+[    1478ms] [WARNING] Failed to decode downloaded font: https://www.speak.com/cdn.prod.website-files.com/61a88c135006e8345b005efd/61a9fd227ce25b19a3a46b34_Axiforma-Regular.ttf @ https://www.speak.com/:0
+[    1478ms] [WARNING] OTS parsing error: invalid sfntVersion: 1651534953 @ https://www.speak.com/:0
+[    1481ms] [WARNING] Failed to decode downloaded font: https://www.speak.com/cdn.prod.website-files.com/61a88c135006e8345b005efd/61a9fd227ce25b19a3a46b34_Axiforma-Regular.ttf @ https://www.speak.com/:0
+[    1481ms] [WARNING] OTS parsing error: invalid sfntVersion: 1651534953 @ https://www.speak.com/:0
+[    1601ms] [LOG] [DEBUG] splitio => sync: Running splitChangesUpdater @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1602ms] [LOG] [DEBUG] splitio => sync: Running mySegmentsUpdater @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1603ms] [LOG] [DEBUG] splitio => sync: Starting impressions submitter. Running each 300000 millis @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1603ms] [LOG] [DEBUG] splitio => sync: Running impressions submitter @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1603ms] [LOG] [DEBUG] splitio => sync: Starting impression counts submitter. Running each 1800000 millis @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1603ms] [LOG] [DEBUG] splitio => sync: Running impression counts submitter @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1603ms] [LOG] [DEBUG] splitio => cleanup: Registering cleanup handler for unload page event. @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1603ms] [LOG] [INFO]  splitio => New Split SDK instance created. @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1603ms] [LOG] [DEBUG] splitio => Retrieving default SDK client. @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1603ms] [LOG] [Sidecar] analytics.ready fired @ https://www.speak.com/:713
+[    1603ms] [LOG] [Sidecar] Analytics ready with anonymousId: 80ec77f8-249f-45e2-90dc-e9d49912ae2d @ https://www.speak.com/:669
+[    1608ms] [LOG] [DEBUG] splitio => sync:featureflag-changes: Spin up feature flags update using since = -1 @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1612ms] [LOG] [INFO]  splitio => sync:streaming: Connecting streaming. @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1749ms] [WARNING] Failed to execute 'write' on 'Document': It isn't possible to write into a document from an asynchronously-loaded external script unless it is explicitly opened. @ https://cdn.jsdelivr.net/npm/statsig-sidecar/dist/index.min.js?apikey=client-y6tBYCaqW1Ny2vkzyP5Y8cr2nhO4HgKk2YFxQ2YC7y8:6
+[    1752ms] [LOG] [Sidecar] Statsig Sidecar script loaded @ https://www.speak.com/:614
+[    1756ms] [LOG] [DEBUG] splitio => sync:featureflag-changes: New feature flags 299 @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1756ms] [LOG] [DEBUG] splitio => sync:featureflag-changes: Removed feature flags 0 @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1756ms] [LOG] [DEBUG] splitio => sync:featureflag-changes: Segment names collected 29 @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1980ms] [LOG] [INFO]  splitio => Split SDK is ready @ https://cdn.split.io/sdk/split-10.22.5.min.js:1
+[    1980ms] [LOG] INSIDE HANDLE FEATURE FLAGS GLOBAL @ https://www.speak.com/:806

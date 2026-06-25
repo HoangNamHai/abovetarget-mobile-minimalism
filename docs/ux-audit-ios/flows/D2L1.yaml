@@ -1,0 +1,541 @@
+appId: com.h2ai.pmpexampro
+---
+- launchApp
+- openLink: pmp-exam-pro:///lesson/D2L1
+- extendedWaitUntil:
+    visible:
+      text: "Exit lesson"
+    timeout: 40000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-01-hook
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-02-challenge
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "the story is too vague for the team to estima"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "the story is too vague for the team to estima"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-02-challenge-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "As a customer, I want to complete checkout in"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "As a customer, I want to complete checkout in"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-02-challenge-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Split into smaller stories:"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Split into smaller stories:"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-02-challenge-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "US-103 depends on US-105 being complete first"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "US-103 depends on US-105 being complete first"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Independent"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Independent"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "US-104 has no acceptance criteria for QA to v"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "US-104 has no acceptance criteria for QA to v"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Testable"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Testable"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "search works"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "search works"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Testable"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Testable"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "t start Remove until Add-to-Cart ships"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "t start Remove until Add-to-Cart ships"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Independent"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Independent"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-02-challenge-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-03-reason
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-04-transfer-intro
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "START"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "START"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-04-transfer-questions
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "As a loyalty program member, I want to redeem"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "As a loyalty program member, I want to redeem"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-04-transfer-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "it becomes an epic that cannot be completed i"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "it becomes an epic that cannot be completed i"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-04-transfer-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Loyalty balance displays during checkout"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Loyalty balance displays during checkout"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Customer can choose to apply points via check"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Customer can choose to apply points via check"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Points convert at 100 points"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Points convert at 100 points"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Order total updates immediately when points a"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Order total updates immediately when points a"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-04-transfer-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-05-practice
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "the story is too vague for the team to estima"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "the story is too vague for the team to estima"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-05-practice-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Split the story into smaller, sprint-sized us"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Split the story into smaller, sprint-sized us"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-05-practice-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "the story lacks acceptance criteria to verify"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "the story lacks acceptance criteria to verify"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-05-practice-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "remove the dependency by testing with mock da"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "remove the dependency by testing with mock da"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-05-practice-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- extendedWaitUntil:
+    visible:
+      text: "BACK TO LESSONS"
+    timeout: 25000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/D2L1-06-wrap

@@ -1,0 +1,19 @@
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - generic [ref=e10]:
+      - img [ref=e11]
+      - img "RISE" [ref=e12]
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: START THE 3 MINUTE QUIZ
+        - heading "How do you feel in the morning?" [level=1] [ref=e17]
+      - generic [ref=e18]:
+        - button "Sluggish and foggy" [ref=e19] [cursor=pointer]:
+          - generic [ref=e21]: Sluggish and foggy
+        - button "Hectic and rushed" [ref=e22] [cursor=pointer]:
+          - generic [ref=e24]: Hectic and rushed
+        - button "Tired but functional" [ref=e25] [cursor=pointer]:
+          - generic [ref=e27]: Tired but functional
+        - button "Ready to go" [ref=e28] [cursor=pointer]:
+          - generic [ref=e30]: Ready to go
+  - img [ref=e32]

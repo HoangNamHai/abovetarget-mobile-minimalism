@@ -1,0 +1,556 @@
+appId: com.h2ai.pmpexampro
+---
+- launchApp
+- openLink: pmp-exam-pro:///lesson/C2L2
+- extendedWaitUntil:
+    visible:
+      text: "Exit lesson"
+    timeout: 40000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-01-hook
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-02-challenge
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "120,000"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "120,000"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-02-challenge-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "44,000"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "44,000"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-02-challenge-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "348,000"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "348,000"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-02-challenge-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Continue with corrective action: cut scope, r"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Continue with corrective action: cut scope, r"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-02-challenge-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-03-reason
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-04-transfer-intro
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "START"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "START"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-04-transfer-questions
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "85"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "85"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-04-transfer-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "212,000"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "212,000"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-04-transfer-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Approve the final phase with close monitoring"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Approve the final phase with close monitoring"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-04-transfer-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-05-practice
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "200,000"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "200,000"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-05-practice-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "The project is getting"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "The project is getting"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-05-practice-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "500,000"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "500,000"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-05-practice-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Implement corrective actions to improve CPI b"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Implement corrective actions to improve CPI b"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-05-practice-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- extendedWaitUntil:
+    visible:
+      text: "BACK TO LESSONS"
+    timeout: 25000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/C2L2-06-wrap

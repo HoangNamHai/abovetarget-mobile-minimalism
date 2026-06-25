@@ -50,3 +50,9 @@ fastlane/report.xml
 # Build artifacts
 *.aab
 *.apks
+
+# iOS signing material — LOCAL ONLY, never commit (private key + keychain + profile)
+/signing/
+*.p12
+*.mobileprovision
+*.keychain-db

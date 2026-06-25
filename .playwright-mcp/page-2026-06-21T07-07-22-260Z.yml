@@ -1,0 +1,44 @@
+- generic [active] [ref=e2]:
+  - alert [ref=e1]
+  - generic [ref=e137]:
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - button "Back" [ref=e142] [cursor=pointer]:
+            - img [ref=e144]
+            - text: Back
+          - img [ref=e148]
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - progressbar [ref=e165]
+            - progressbar [ref=e170]
+            - progressbar [ref=e175]
+          - paragraph [ref=e178]: Profile
+      - generic [ref=e182]:
+        - heading "Select your gender" [level=5] [ref=e184]
+        - generic [ref=e186]:
+          - button "Male" [ref=e187] [cursor=pointer]:
+            - generic [ref=e188]:
+              - img [ref=e190]: 👨‍🦰
+              - paragraph [ref=e191]: Male
+          - button "Female" [ref=e192] [cursor=pointer]:
+            - generic [ref=e193]:
+              - img [ref=e195]: 👩‍🦰
+              - paragraph [ref=e196]: Female
+          - button "Other" [ref=e197] [cursor=pointer]:
+            - generic [ref=e198]:
+              - img [ref=e200]: 👱
+              - paragraph [ref=e201]: Other
+    - generic [ref=e203]:
+      - paragraph [ref=e204]: Omonoias Avenue 13, Office 1B, Limassol 3052, Cyprus
+      - generic [ref=e205]:
+        - link "Terms of use" [ref=e206] [cursor=pointer]:
+          - /url: https://makeheadway.com/terms-and-conditions
+        - paragraph [ref=e207]: •
+        - link "Privacy policy" [ref=e208] [cursor=pointer]:
+          - /url: https://makeheadway.com/privacy-policy
+        - paragraph [ref=e209]: •
+        - link "Subscription policy" [ref=e210] [cursor=pointer]:
+          - /url: https://makeheadway.com/subscription-terms
+      - link "Do not sell or share my personal information" [ref=e211] [cursor=pointer]:
+        - /url: https://makeheadway.com/do-not-sell-or-share-my-personal-information

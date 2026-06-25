@@ -1,0 +1,586 @@
+appId: com.h2ai.pmpexampro
+---
+- launchApp
+- openLink: pmp-exam-pro:///lesson/A1L4
+- extendedWaitUntil:
+    visible:
+      text: "Exit lesson"
+    timeout: 40000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-01-hook
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-02-challenge
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Chip"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Chip"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Description"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Description"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Construction"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Construction"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Fixed requirements, sequential phases, high c"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Fixed requirements, sequential phases, high c"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Menu Lab"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Menu Lab"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Unclear requirements, needs customer feedback"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Unclear requirements, needs customer feedback"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Catering Expansion"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Catering Expansion"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Business model clear, operations uncertain"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Business model clear, operations uncertain"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-02-challenge-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Requirements are uncertain, customer feedback"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Requirements are uncertain, customer feedback"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-02-challenge-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-03-reason
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-04-transfer-intro
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "START"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "START"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-04-transfer-questions
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "fixed requirements, compliance deadline, no i"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "fixed requirements, compliance deadline, no i"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-04-transfer-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "test content, measure engagement, iterate bas"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "test content, measure engagement, iterate bas"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-04-transfer-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "predictive for business model, adaptive for o"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "predictive for business model, adaptive for o"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-04-transfer-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-05-practice
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Hybrid approach: predictive for compliance, a"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Hybrid approach: predictive for compliance, a"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-05-practice-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Changes in predictive projects are possible b"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Changes in predictive projects are possible b"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-05-practice-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Approximately 5 sprints, but this is a foreca"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Approximately 5 sprints, but this is a foreca"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-05-practice-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Analyze project characteristics: requirements"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Analyze project characteristics: requirements"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-05-practice-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- extendedWaitUntil:
+    visible:
+      text: "BACK TO LESSONS"
+    timeout: 25000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/A1L4-06-wrap

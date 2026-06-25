@@ -1,0 +1,136 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e4]:
+        - link "Back to showcase" [ref=e5] [cursor=pointer]:
+          - /url: /showcase
+          - img [ref=e6]
+        - link "screens design" [ref=e8] [cursor=pointer]:
+          - /url: https://screensdesign.com
+          - generic [ref=e9]:
+            - generic [ref=e10]: screens
+            - generic [ref=e11]: design
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e16]: productivity
+            - generic [ref=e17]: health and fitness
+          - 'heading "RISE: Sleep Tracker" [level=1] [ref=e18]'
+          - paragraph [ref=e19]: By Rise Science Inc
+          - generic [ref=e20]:
+            - generic [ref=e21]: $400.0K/mo
+            - generic [ref=e22]: 100.0K downloads
+            - generic [ref=e23]: 4.7 rating
+            - generic [ref=e24]: 47 onboarding steps
+        - generic [ref=e25]:
+          - paragraph [ref=e26]: See the full profile for app video, screenshots, paywall and onboarding context inside ScreensDesign.
+          - generic [ref=e27]:
+            - link "Open full app" [ref=e28] [cursor=pointer]:
+              - /url: https://screensdesign.com/apps/rise-sleep-tracker/
+              - text: Open full app
+              - img [ref=e29]
+            - link "Explore library" [ref=e33] [cursor=pointer]:
+              - /url: https://screensdesign.com
+      - generic [ref=e34]:
+        - 'heading "App Showcase: RISE: Sleep Tracker" [level=2] [ref=e35]'
+        - paragraph [ref=e36]:
+          - strong [ref=e37]: App info
+        - list [ref=e38]:
+          - listitem [ref=e39]:
+            - strong [ref=e40]: "App name:"
+            - text: "RISE: Sleep Tracker"
+          - listitem [ref=e41]:
+            - strong [ref=e42]: "Onboarding steps:"
+            - text: "47"
+          - listitem [ref=e43]:
+            - strong [ref=e44]: "Paywall type:"
+            - text: Free Trial - Hard Paywall
+          - listitem [ref=e45]:
+            - strong [ref=e46]: "Monthly installs:"
+            - text: 200,000
+          - listitem [ref=e47]:
+            - strong [ref=e48]: "Monthly revenue:"
+            - text: $650,000
+          - listitem [ref=e49]:
+            - strong [ref=e50]: "App category:"
+            - text: health and fitness
+      - region [ref=e52]:
+        - generic [ref=e54]:
+          - group [ref=e55]:
+            - 'img "RISE: Sleep Tracker screenshot 1" [ref=e57]'
+          - group [ref=e58]:
+            - 'img "RISE: Sleep Tracker screenshot 2" [ref=e60]'
+          - group [ref=e61]:
+            - 'img "RISE: Sleep Tracker screenshot 3" [ref=e63]'
+          - group [ref=e64]:
+            - generic [ref=e65]:
+              - 'img "RISE: Sleep Tracker screenshot 4" [ref=e66]'
+              - link "Watch full video" [ref=e68] [cursor=pointer]:
+                - /url: https://screensdesign.com/apps/rise-sleep-tracker/
+                - img [ref=e69]
+                - text: Watch full video
+          - group [ref=e73]:
+            - 'img "RISE: Sleep Tracker screenshot 5" [ref=e75]'
+          - group [ref=e76]:
+            - 'img "RISE: Sleep Tracker screenshot 6" [ref=e78]'
+          - group [ref=e79]:
+            - 'img "RISE: Sleep Tracker screenshot 7" [ref=e81]'
+        - button "Previous slide" [disabled]:
+          - img
+          - generic: Previous slide
+        - button "Next slide" [ref=e82] [cursor=pointer]:
+          - img
+          - generic [ref=e83]: Next slide
+      - generic [ref=e84]:
+        - article [ref=e85]:
+          - heading "What it does" [level=2] [ref=e86]
+          - paragraph [ref=e87]: RISE is a sleep and energy tracking application designed to help users improve their daily performance by managing their 'sleep debt' and understanding their natural energy cycles. The app calculates a personalized daily energy schedule based on sleep patterns and circadian rhythm, predicting a user's energy peaks and dips throughout the day. It provides tools and reminders to help users align their activities with their biological clock, aiming for better productivity and overall well-being.
+          - heading "Where it shines" [level=2] [ref=e88]
+          - paragraph [ref=e89]: RISE stands out by shifting the conversation from merely tracking hours slept to actively managing daily energy. The core of this is the Energy Schedule, first introduced at 02:41, which provides a simple, powerful visualization of when a user will feel their best and when they'll experience a dip. The onboarding is also exceptional, using a clever "drug" metaphor at 00:01 to frame sleep as a powerful tool for self-improvement. Finally, its commitment to transparency, shown in the "Synthesizing insights" screen at 01:57, builds significant user trust in its scientific approach.
+          - heading "UX highlights" [level=2] [ref=e90]
+          - list [ref=e91]:
+            - listitem [ref=e92]:
+              - strong [ref=e93]: "Strong Narrative Hook:"
+              - text: The onboarding (00:01) reframes sleep as a desirable product, immediately capturing user interest and establishing value.
+            - listitem [ref=e94]:
+              - strong [ref=e95]: "Transparent Data Processing:"
+              - text: Instead of a generic loading screen, the app shows how it's building a personalized plan at 01:57, which boosts credibility.
+            - listitem [ref=e96]:
+              - strong [ref=e97]: "Interactive Calibration:"
+              - text: Users can manually adjust their calculated 'sleep need' at 02:11, fostering a sense of control and partnership with the app.
+            - listitem [ref=e98]:
+              - strong [ref=e99]: "Actionable Energy Graph:"
+              - text: The main dashboard visualizes daily energy peaks and dips, providing predictive and actionable insights rather than just historical data.
+            - listitem [ref=e100]:
+              - strong [ref=e101]: "Contextual Reinforcement:"
+              - text: During the quiz, small pop-ups appear (e.g., at 00:47) to provide scientific context for the questions, reinforcing the app's authority.
+            - listitem [ref=e102]:
+              - strong [ref=e103]: "Comprehensive Tools:"
+              - text: The 'Tools' section (06:32) is well-organized, offering guides, aids, and reminders that are directly linked to the user's personalized schedule.
+          - heading "Monetization & growth" [level=2] [ref=e104]
+          - paragraph [ref=e105]: RISE uses a hard paywall with a free trial, presented after a lengthy and engaging onboarding process. At 03:19, the user is shown a single primary offer for a 7-day free trial that converts to a yearly subscription, priced at $69.99/year. The screen is supported by social proof from Apple, Editors' Choice, and the Sleep Foundation. By making users invest significant time in the personalization quiz, RISE increases their commitment, making them more likely to start a trial to see the results of their effort. The app also features a referral program, accessible from the profile screen, where users can gift a free trial to friends (05:42).
+          - heading "Who it’s for" [level=2] [ref=e106]
+          - paragraph [ref=e107]: This app is targeted at performance-oriented individuals, such as students, professionals, and athletes, who want to optimize their daily energy and productivity. The scientific framing and focus on concepts like 'sleep debt' and 'circadian rhythm' appeal to users who are data-driven and looking for a structured way to improve their well-being. It's less for casual users and more for those committed to making tangible lifestyle changes based on biological data.
+          - heading "Notes & opportunities" [level=2] [ref=e108]
+          - paragraph [ref=e109]: The onboarding flow is very long. While it's effective at building value, its length could be a point of friction for less patient users. The dashboard, while informative, has a lot of information presented at once and could benefit from progressive disclosure for new users. For example, the 'Your essential tools' overlay at 05:07 feels a bit like a patch to simplify an otherwise dense initial view. Manually adding sleep data, as shown at 11:11, is a multi-step process that could be streamlined.
+        - complementary [ref=e110]:
+          - heading "Go deeper" [level=2] [ref=e111]
+          - paragraph [ref=e112]: ScreensDesign has full app videos, paywalls, onboarding flows, and app store screenshots across 2450+ apps.
+          - link "Open ScreensDesign" [ref=e113] [cursor=pointer]:
+            - /url: https://screensdesign.com/apps/rise-sleep-tracker/
+            - text: Open ScreensDesign
+            - img [ref=e114]
+      - navigation [ref=e118]:
+        - 'link "Previous RARE: AI Dating Assistant" [ref=e119] [cursor=pointer]':
+          - /url: /showcase/rare-ai-dating-assistant
+          - img [ref=e120]
+          - generic [ref=e122]:
+            - generic [ref=e123]: Previous
+            - generic [ref=e124]: "RARE: AI Dating Assistant"
+        - link "Next RIZZ" [ref=e125] [cursor=pointer]:
+          - /url: /showcase/rizz
+          - generic [ref=e126]:
+            - generic [ref=e127]: Next
+            - generic [ref=e128]: RIZZ
+          - img [ref=e129]
+  - alert [ref=e131]

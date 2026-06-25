@@ -1,0 +1,215 @@
+appId: com.h2ai.pmpexampro
+---
+- launchApp
+- openLink: pmp-exam-pro:///lesson/B1L2
+- extendedWaitUntil:
+    visible:
+      text: "Exit lesson"
+    timeout: 40000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-01-hook
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Ava Thompson"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Ava Thompson"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Manage Closely"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Manage Closely"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Maya Rodriguez"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Maya Rodriguez"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Manage Closely"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Manage Closely"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Kiki Nguyen"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Kiki Nguyen"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Manage Closely"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Manage Closely"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Health Inspector"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Health Inspector"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Not Manage Closely"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Not Manage Closely"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Elena Vasquez"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Elena Vasquez"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "Not Manage Closely"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "Not Manage Closely"
+- repeat:
+    times: 22
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          start: 50%, 62%
+          end: 50%, 40%
+          duration: 400
+      - waitForAnimationToEnd:
+          timeout: 1500
+- waitForAnimationToEnd:
+    timeout: 2000
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge-q0-feedback
+- tapOn:
+    text: "CONTINUE"

@@ -1,0 +1,41 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - link "speak-logo" [ref=e6] [cursor=pointer]:
+          - /url: /us-en
+          - img "speak-logo" [ref=e7]
+      - main [ref=e8]:
+        - generic [ref=e9]:
+          - img "sp-coffee" [ref=e12]
+          - generic [ref=e14]:
+            - generic [ref=e15]:
+              - heading "Welcome to Speak" [level=3] [ref=e16]
+              - paragraph [ref=e17]:
+                - text: Experience a brand new way of learning languages. Speak whenever, wherever, and at your own pace!
+                - text: 2000+ interactive lessons with new courses added every month.
+            - link "Become a Premium Member" [ref=e18] [cursor=pointer]:
+              - /url: /us-en/register
+              - generic [ref=e19]: Become a Premium Member
+            - paragraph [ref=e20]:
+              - text: Already have an account?
+              - link "Sign in" [ref=e21] [cursor=pointer]:
+                - /url: /us-en/login
+    - contentinfo [ref=e22]:
+      - generic [ref=e23]:
+        - link "FAQ" [ref=e24] [cursor=pointer]:
+          - /url: https://help.speak.com
+        - link "Support" [ref=e26] [cursor=pointer]:
+          - /url: mailto:support@speak.com
+        - link "Terms" [ref=e27] [cursor=pointer]:
+          - /url: https://speak.com/terms
+        - link "Privacy" [ref=e28] [cursor=pointer]:
+          - /url: https://speak.com/privacy
+        - link "Español" [ref=e29] [cursor=pointer]:
+          - /url: /us-es
+      - paragraph [ref=e30]:
+        - strong [ref=e31]: Speakeasy Labs, Inc.
+        - text: "| CEO: Connor Nicolai Zwick"
+      - paragraph [ref=e32]: 360 Spear St, Fl 4, San Francisco, CA 94105
+      - paragraph [ref=e33]: "Email: support@speak.com"
+  - alert [ref=e34]

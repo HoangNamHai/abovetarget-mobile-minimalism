@@ -1,0 +1,103 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - img "icon" [ref=e3]
+    - generic [ref=e4]:
+      - heading "PMP Exam Pro" [level=1] [ref=e5]
+      - generic [ref=e6]: com.h2ai.pmpexampro
+    - generic [ref=e7]:
+      - generic [ref=e8]: v1.1.0
+      - generic [ref=e9]: Play vc 16
+      - generic [ref=e10]: iOS build pending
+      - generic [ref=e11]: reviewed 2026-06-22
+  - navigation [ref=e12]:
+    - button "▶ Google Play" [ref=e13] [cursor=pointer]
+    - button "Apple App Store" [ref=e14] [cursor=pointer]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - text: "⚠️ Before publishing: RevenueCat ships the test-store key while purchases are enabled, no Play IAP products exist, and privacy-policy / demo-login / account-deletion need verifying in Console. See"
+        - code [ref=e18]: docs/release/google-play-publish-checklist.md
+        - text: .
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - heading "Identity" [level=2] [ref=e21]
+          - generic [ref=e22]:
+            - term [ref=e23]: App name
+            - definition [ref=e24]: PMP Exam Pro
+            - term [ref=e25]: Package
+            - definition [ref=e26]: com.h2ai.pmpexampro
+            - term [ref=e27]: Version name
+            - definition [ref=e28]: 1.1.0
+            - term [ref=e29]: Version code
+            - definition [ref=e30]: 16 (draft)
+            - term [ref=e31]: Track
+            - definition [ref=e32]: Production · draft (alongside live v11)
+            - term [ref=e33]: Default language
+            - definition [ref=e34]: en-US
+            - term [ref=e35]: Contact email
+            - definition [ref=e36]: super.app.manager@gmail.com
+            - term [ref=e37]: Pricing
+            - definition [ref=e38]: Free · in-app purchases
+        - generic [ref=e39]:
+          - heading "Release readiness" [level=2] [ref=e40]
+          - list [ref=e41]:
+            - listitem [ref=e42]:
+              - generic [ref=e43]: ✓
+              - text: versionName 1.1.0 / versionCode 16 — draft on production track
+            - listitem [ref=e44]:
+              - generic [ref=e45]: ✓
+              - text: Changelog updated for 1.1.0 (attached to vc16)
+            - listitem [ref=e46]:
+              - generic [ref=e47]: ✓
+              - text: Icon, feature graphic, 4 phone + tablet screenshots present
+            - listitem [ref=e48]:
+              - generic [ref=e49]: "!"
+              - text: RevenueCat enabled with TEST-STORE key — real purchases can't complete
+            - listitem [ref=e50]:
+              - generic [ref=e51]: "!"
+              - text: No Play IAP/subscription products created (code expects 3)
+            - listitem [ref=e52]:
+              - generic [ref=e53]: "?"
+              - text: Privacy policy URL, App access (demo login), Account deletion — verify in Console
+        - generic [ref=e54]:
+          - heading "Graphic assets" [level=2] [ref=e55]
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - img "icon" [ref=e58]
+              - generic [ref=e59]: App icon · 512×512
+            - generic [ref=e60]:
+              - img "feature graphic" [ref=e61]
+              - generic [ref=e62]: Feature graphic · 1024×500
+          - heading "Phone screenshots · 1440×2308" [level=2] [ref=e63]
+          - paragraph [ref=e64]: Click any screenshot to enlarge. Tablet (7"/10") sets also present on Play.
+          - generic [ref=e65]:
+            - figure [ref=e66]:
+              - img "screenshot 1" [ref=e67]
+            - figure [ref=e68]:
+              - img "screenshot 2" [ref=e69]
+            - figure [ref=e70]:
+              - img "screenshot 3" [ref=e71]
+            - figure [ref=e72]:
+              - img "screenshot 4" [ref=e73]
+        - generic [ref=e74]:
+          - heading "Listing text" [level=2] [ref=e75]
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: App name (title.txt)
+              - generic [ref=e79]: 12 / 30
+            - generic [ref=e82]: PMP Exam Pro
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - generic [ref=e85]: Short description
+              - generic [ref=e86]: 68 / 80
+            - generic [ref=e89]: PMP exam prep with interactive lessons, quizzes & progress tracking.
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]: Full description
+              - generic [ref=e93]: 1304 / 4000
+            - generic [ref=e96]: "Prepare for your PMP certification exam with PMP Exam Pro — a structured, lesson-based study app designed to help you master project management concepts. <b>Structured Learning Path</b> Follow a guided curriculum covering all key PMP exam domains: People, Process, and Business Environment. Each lesson builds on the previous one so you learn in a logical sequence. <b>Interactive Question Types</b> Practice with varied question formats including single-select, multi-select, drag-and-drop, and text-input questions. Each lesson includes a quiz to test your understanding. <b>Track Your Progress</b> Monitor your learning with a scoring system, streak tracking, and lesson completion status. See how far you've come and what's left to study. <b>Topics Covered</b> • What is Project Management • The Project Manager's Role • Project Stakeholders • Project Life Cycles • Predictive, Adaptive & Hybrid Approaches • And more lessons added regularly <b>Key Features</b> • Bite-sized lessons (8–10 minutes each) • Points and scoring for each lesson • Daily streak to keep you motivated • Dark mode support • Works offline — study anywhere Whether you're just starting your PMP journey or doing a final review before the exam, PMP Exam Pro gives you the focused practice you need to pass with confidence."
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - generic [ref=e99]: What's new (changelog)
+              - generic [ref=e100]: 257 / 500
+            - generic [ref=e103]: "What's new in 1.1.0: • Refreshed onboarding — clearer prompts and larger, easier-to-tap domain cards • Smoother navigation — leaving a lesson now returns you to Home • Visual polish across Home, lessons, and onboarding • Bug fixes and stability improvements"

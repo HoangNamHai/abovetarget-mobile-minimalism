@@ -1,0 +1,129 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link [ref=e7] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e8]:
+          - text: Powered by
+          - link "Reteno" [ref=e9] [cursor=pointer]:
+            - /url: https://reteno.com/
+          - text: messaging automation platform
+      - navigation [ref=e10]:
+        - generic [ref=e11] [cursor=pointer]: App onboarding screens
+        - generic [ref=e12] [cursor=pointer]: Web onboarding screens
+        - generic [ref=e13] [cursor=pointer]: Push notifications
+        - generic [ref=e14] [cursor=pointer]: Emails
+      - link "Sign In" [ref=e16] [cursor=pointer]:
+        - /url: "#"
+  - generic [ref=e17]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: "RISE: Sleep Tracker"
+          - paragraph [ref=e26]: Mental health
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - paragraph [ref=e29]: "Category:"
+            - paragraph [ref=e30]: Mental health
+          - generic [ref=e31]:
+            - paragraph [ref=e32]: "Flow types:"
+            - paragraph [ref=e33]: App screens
+        - generic [ref=e34]:
+          - link [ref=e35] [cursor=pointer]:
+            - /url: https://apps.apple.com/us/app/rise-sleep-tracker/id1453884781
+          - link [ref=e36] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?gl=US&hl=en-US&id=com.risesci.nyx
+          - link [ref=e37] [cursor=pointer]:
+            - /url: https://www.risescience.com/
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Unlock full access
+          - paragraph [ref=e42]: Sign up for free to get unlimited access to all screenshots, push notifications, and emails
+        - form "Email Form" [ref=e44]:
+          - textbox "hello@gmail.com" [ref=e45]
+          - button "Unlock Now" [ref=e46] [cursor=pointer]
+          - link "Continue with Google" [ref=e47] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e49]: Continue with Google
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - 'img "RISE: Sleep Tracker" [ref=e56]'
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - paragraph [ref=e60]:
+                - strong [ref=e61]: "Published:"
+              - paragraph [ref=e62]: 21.07.2025
+            - generic [ref=e63]:
+              - paragraph [ref=e64]: "Features:"
+              - list [ref=e66]:
+                - listitem [ref=e67]:
+                  - generic [ref=e68]: Long flow (30+ steps)
+                - listitem [ref=e69]:
+                  - generic [ref=e70]: Free trial
+                - listitem [ref=e71]:
+                  - generic [ref=e72]: Testimonials
+                - listitem [ref=e73]:
+                  - generic [ref=e74]: Tips / Additional info
+          - generic [ref=e75]:
+            - 'heading "RISE: Sleep Tracker App Onboarding Flow Screens" [level=1] [ref=e76]':
+              - strong [ref=e77]: "RISE: Sleep Tracker App Onboarding Flow Screens"
+            - paragraph [ref=e78]: What makes a sleep app focus on energy rather than just sleep quality? RISE's onboarding demonstrates how sleep debt science and circadian rhythm optimization can transform how users think about daily energy management.
+            - paragraph [ref=e79]: RISE's approach emphasizes sleep debt calculation during setup. The onboarding explains how cumulative sleep loss affects performance while showing how the app tracks and recommends recovery strategies.
+            - paragraph [ref=e80]: Their energy timeline feature receives detailed introduction during onboarding. Users learn how circadian rhythms predict natural energy peaks and valleys throughout the day for optimal scheduling.
+            - paragraph [ref=e81]: The sleep hygiene recommendations integrate naturally with tracking features during setup. Users understand how light exposure, caffeine timing, and bedtime routines affect sleep debt accumulation.
+            - paragraph [ref=e82]: Premium features focus on detailed energy insights and personalized recommendations while ensuring free users experience the core sleep debt tracking functionality.
+            - paragraph [ref=e83]: Our comprehensive gallery shows how RISE balances sleep science education with practical daily energy management, making complex chronobiology concepts actionable.
+            - paragraph [ref=e84]: Essential viewing for health apps where scientific backing and practical application determine user trust and daily habit integration success.
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - paragraph [ref=e89]: Unlock full access
+          - paragraph [ref=e90]: Sign up for free to get unlimited access to all screenshots, push notifications, and emails
+        - form "Email Form" [ref=e92]:
+          - textbox "hello@gmail.com" [ref=e93]
+          - button "Unlock Now" [ref=e94] [cursor=pointer]
+          - link "Continue with Google" [ref=e95] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e97]: Continue with Google
+      - generic [ref=e98]:
+        - heading "More apps from this category" [level=1] [ref=e99]
+        - list [ref=e101]:
+          - listitem [ref=e102] [cursor=pointer]:
+            - paragraph [ref=e104]: Fabulous Daily Routine Planner
+          - listitem [ref=e105] [cursor=pointer]:
+            - paragraph [ref=e107]: Daylio Journal - Daily Diary
+          - listitem [ref=e108] [cursor=pointer]:
+            - paragraph [ref=e110]: "Liven: Improving Wellbeing"
+          - listitem [ref=e111] [cursor=pointer]:
+            - paragraph [ref=e113]: "Simple Habit: Meditation"
+          - listitem [ref=e114] [cursor=pointer]:
+            - paragraph [ref=e116]: "Welltory: Heart Rate Monitor"
+          - listitem [ref=e117] [cursor=pointer]:
+            - paragraph [ref=e119]: "Finch: Self-Care Pet"
+  - contentinfo [ref=e120]:
+    - generic [ref=e122]:
+      - link "Explore Reteno" [ref=e123] [cursor=pointer]:
+        - /url: https://reteno.com/
+        - heading "Explore Reteno" [level=2] [ref=e124]
+      - paragraph [ref=e125]: Drive subscriptions & prevent churn with automated messages
+      - generic [ref=e126]:
+        - link "Features" [ref=e127] [cursor=pointer]:
+          - /url: https://reteno.com/#features
+        - link "Pricing" [ref=e128] [cursor=pointer]:
+          - /url: https://reteno.com/pricing
+        - link "Book demo" [ref=e129] [cursor=pointer]:
+          - /url: https://reteno.com/request-demo
+      - generic [ref=e130]:
+        - link "Facebook" [ref=e131] [cursor=pointer]:
+          - /url: https://www.facebook.com/retenoplatform#
+          - img [ref=e133]
+          - paragraph [ref=e135]: Facebook
+        - link "Youtube" [ref=e136] [cursor=pointer]:
+          - /url: https://www.youtube.com/@reteno_com
+          - img [ref=e138]
+          - paragraph [ref=e140]: Youtube
+        - link "Linkedin" [ref=e141] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/reteno/
+          - img [ref=e143]
+          - paragraph [ref=e147]: Linkedin

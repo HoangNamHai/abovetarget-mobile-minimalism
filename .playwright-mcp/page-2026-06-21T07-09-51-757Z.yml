@@ -1,0 +1,21 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - main [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e9]:
+          - button "Back" [ref=e11] [cursor=pointer]:
+            - img [ref=e12]
+          - progressbar "Quiz progress section 1" [ref=e19]
+        - generic [ref=e22]:
+          - generic:
+            - generic:
+              - generic:
+                - heading "Which thinking style comes most naturally to you?" [level=2]
+              - generic:
+                - generic:
+                  - 'button "🔍 Analytical: I think logically and solve problems step by step"':
+                    - paragraph: "🔍 Analytical: I think logically and solve problems step by step"
+                  - 'button "🎨 Creative: I think outside the box and trust my intuition"':
+                    - paragraph: "🎨 Creative: I think outside the box and trust my intuition"
+    - img
+  - alert [ref=e6]

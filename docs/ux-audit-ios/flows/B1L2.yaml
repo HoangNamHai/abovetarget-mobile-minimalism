@@ -1,0 +1,825 @@
+appId: com.h2ai.pmpexampro
+---
+- launchApp
+- openLink: pmp-exam-pro:///lesson/B1L2
+- extendedWaitUntil:
+    visible:
+      text: "Exit lesson"
+    timeout: 40000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-01-hook
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Ava Thompson"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Ava Thompson"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Manage Closely"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Manage Closely"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Maya Rodriguez"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Maya Rodriguez"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Manage Closely"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Manage Closely"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Kiki Nguyen"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Kiki Nguyen"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Manage Closely"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Manage Closely"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Health Inspector"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Health Inspector"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Not Manage Closely"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Not Manage Closely"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Elena Vasquez"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Elena Vasquez"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Not Manage Closely"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Not Manage Closely"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Health Inspector"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Health Inspector"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Keep Satisfied"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Keep Satisfied"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "General Manager"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "General Manager"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Keep Satisfied"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Keep Satisfied"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Ava Thompson"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Ava Thompson"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Not Keep Satisfied"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Not Keep Satisfied"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Finance Manager"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Finance Manager"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Not Keep Satisfied"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Not Keep Satisfied"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "budget approval authority"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "budget approval authority"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Legitimate Power"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Legitimate Power"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "culinary expertise"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "culinary expertise"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Expert Power"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Expert Power"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "culinary world influence"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "culinary world influence"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Referent Power"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Referent Power"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "controls public messaging"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "controls public messaging"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Persuasive Power"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Persuasive Power"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "tracks budget but doesn"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "tracks budget but doesn"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "needs to train staff for upscale service"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "needs to train staff for upscale service"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "s vision, daily work affected"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "s vision, daily work affected"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "must establish new vendor relationships"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "must establish new vendor relationships"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "minimal effort, check occasionally for change"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "minimal effort, check occasionally for change"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge-q4-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Different quadrants require different engagem"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Different quadrants require different engagem"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-02-challenge-q5-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-03-reason
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-04-transfer-intro
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "START"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "START"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-04-transfer-questions
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "regulatory compliance is non-negotiable"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "regulatory compliance is non-negotiable"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-04-transfer-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Manage Closely"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Manage Closely"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Weekly 1:1 meetings + formal reports"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Weekly 1:1 meetings + formal reports"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Inspector Lee"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Inspector Lee"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "As-needed for compliance events only"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "As-needed for compliance events only"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Keep Informed"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Keep Informed"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Bi-weekly team updates + shared dashboard"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Bi-weekly team updates + shared dashboard"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Elena Vasquez"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Elena Vasquez"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Quarterly check-in or as needed"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Quarterly check-in or as needed"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-04-transfer-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-05-practice
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Provide regular project updates and solicit t"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Provide regular project updates and solicit t"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-05-practice-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Immediately brief the executive on the scope"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Immediately brief the executive on the scope"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-05-practice-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Expert Power"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Expert Power"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-05-practice-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "High Power, Low Interest"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "High Power, Low Interest"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-05-practice-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- extendedWaitUntil:
+    visible:
+      text: "BACK TO LESSONS"
+    timeout: 25000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/B1L2-06-wrap

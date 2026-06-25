@@ -1,0 +1,25 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic:
+          - link "speak-logo":
+            - /url: /us-en
+            - img "speak-logo"
+      - main [ref=e5]
+    - contentinfo [ref=e9]:
+      - generic [ref=e10]:
+        - link "FAQ" [ref=e11] [cursor=pointer]:
+          - /url: https://help.speak.com
+        - link "Support" [ref=e13] [cursor=pointer]:
+          - /url: mailto:support@speak.com
+        - link "Terms" [ref=e14] [cursor=pointer]:
+          - /url: https://speak.com/terms
+        - link "Privacy" [ref=e15] [cursor=pointer]:
+          - /url: https://speak.com/privacy
+      - paragraph [ref=e16]:
+        - strong [ref=e17]: Speakeasy Labs, Inc.
+        - text: "| CEO: Connor Nicolai Zwick"
+      - paragraph [ref=e18]: 360 Spear St, Fl 4, San Francisco, CA 94105
+      - paragraph [ref=e19]: "Email: support@speak.com"
+  - alert [ref=e20]

@@ -1,0 +1,16 @@
+[     236ms] [LOG] [Rise] Survey engine: v2 @ https://onboarding.risescience.com/assets/index-CFu_GGPr.js:3
+[     298ms] [LOG] 3.5.5 @ https://onboarding.risescience.com/assets/entry-vI1doHwI.js:3
+[     684ms] [LOG] {name: FCP, value: 676, delta: 676, entries: Array(1), id: v2-1782025778150-9909385929903} @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[     799ms] [WARNING] [TikTok Pixel] - Invalid Event Name Format
+Issue: 1 event name was rejected for not following TikTok format requirements.
+Suggestion: Go to your source code and update these event types according to TikTok format requirements. See https://ads.tiktok.com/help/article/custom-events?lang=en for more information. @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[     805ms] [WARNING] [TikTok Pixel] - Invalid Event Name Format
+Issue: 1 event name was rejected for not following TikTok format requirements.
+Suggestion: Go to your source code and update these event types according to TikTok format requirements. See https://ads.tiktok.com/help/article/custom-events?lang=en for more information. @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[     807ms] [LOG] {name: TTFB, value: 101.69999998807907, delta: 101.69999998807907, entries: Array(1), id: v2-1782025778150-3972773576224} @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    1898ms] [ERROR] Failed to load resource: the server responded with a status of 429 () @ https://o107506.ingest.us.sentry.io/api/4507862165553152/envelope/?sentry_key=e9e809f7580fb64ecb1d02c5d4f540a5&sentry_version=7&sentry_client=sentry.javascript.react%2F8.34.0:0
+[    2172ms] [LOG] {name: LCP, value: 792, delta: 792, entries: Array(2), id: v2-1782025778150-7930608090398} @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    6020ms] [ERROR] Failed to load resource: the server responded with a status of 429 () @ https://o107506.ingest.us.sentry.io/api/4507862165553152/envelope/?sentry_key=e9e809f7580fb64ecb1d02c5d4f540a5&sentry_version=7&sentry_client=sentry.javascript.react%2F8.34.0:0
+[    9073ms] [WARNING] The resource https://onboarding.risescience.com/assets/index-CL6gSBCs.tsx was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://onboarding.risescience.com/start:0
+[    9073ms] [WARNING] The resource https://onboarding.risescience.com/src/styles/index.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://onboarding.risescience.com/start:0
+[   11323ms] [LOG] {name: FID, value: 1.600000023841858, delta: 1.600000023841858, entries: Array(1), id: v2-1782025778150-3303596404827} @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39

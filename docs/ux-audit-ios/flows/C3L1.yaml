@@ -1,0 +1,433 @@
+appId: com.h2ai.pmpexampro
+---
+- launchApp
+- openLink: pmp-exam-pro:///lesson/C3L1
+- extendedWaitUntil:
+    visible:
+      text: "Exit lesson"
+    timeout: 40000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-01-hook
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-02-challenge
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Anonymous expert rounds via structured questi"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Anonymous expert rounds via structured questi"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-02-challenge-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "s a market factor outside project control"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "s a market factor outside project control"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-02-challenge-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Currency Fluctuation"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Currency Fluctuation"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-02-challenge-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "for organizational decision"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "for organizational decision"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-02-challenge-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-03-reason
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CONTINUE"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-04-transfer-intro
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "START"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "START"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-04-transfer-questions
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Anonymous expert rounds via structured questi"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Anonymous expert rounds via structured questi"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-04-transfer-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Yuki can contribute without publicly contradi"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Yuki can contribute without publicly contradi"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Asynchronous rounds eliminate 3am meeting con"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Asynchronous rounds eliminate 3am meeting con"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Written responses give Yuki time to compose t"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Written responses give Yuki time to compose t"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "s Tokyo expertise is included"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "s Tokyo expertise is included"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-04-transfer-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- waitForAnimationToEnd:
+    timeout: 4000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-05-practice
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Delphi technique"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Delphi technique"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-05-practice-q0-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "s a market/supply factor outside project cont"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "s a market/supply factor outside project cont"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-05-practice-q1-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Highest EMV"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Highest EMV"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-05-practice-q2-feedback
+- tapOn:
+    text: "CONTINUE"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          direction: DOWN
+          duration: 220
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "Document the risk and escalate to an alternat"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "Document the risk and escalate to an alternat"
+- repeat:
+    times: 16
+    while:
+      notVisible:
+        text: "CHECK ANSWER"
+    commands:
+      - swipe:
+          direction: UP
+          duration: 280
+- tapOn:
+    text: "CHECK ANSWER"
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-05-practice-q3-feedback
+- tapOn:
+    text: "CONTINUE"
+- extendedWaitUntil:
+    visible:
+      text: "BACK TO LESSONS"
+    timeout: 25000
+- waitForAnimationToEnd:
+    timeout: 4000
+- takeScreenshot: docs/ux-audit-ios/screenshots/C3L1-06-wrap

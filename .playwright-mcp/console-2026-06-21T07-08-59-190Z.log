@@ -1,0 +1,10 @@
+[     269ms] [LOG] [Rise] Survey engine: v2 @ https://onboarding.risescience.com/assets/index-CFu_GGPr.js:3
+[     359ms] [LOG] 3.5.5 @ https://onboarding.risescience.com/assets/entry-vI1doHwI.js:3
+[     881ms] [WARNING] [TikTok Pixel] - Invalid Event Name Format
+Issue: 1 event name was rejected for not following TikTok format requirements.
+Suggestion: Go to your source code and update these event types according to TikTok format requirements. See https://ads.tiktok.com/help/article/custom-events?lang=en for more information. @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    1356ms] [LOG] {name: FCP, value: 1012, delta: 1012, entries: Array(1), id: v2-1782025739841-5298584305207} @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    1506ms] [WARNING] [TikTok Pixel] - Invalid Event Name Format
+Issue: 1 event name was rejected for not following TikTok format requirements.
+Suggestion: Go to your source code and update these event types according to TikTok format requirements. See https://ads.tiktok.com/help/article/custom-events?lang=en for more information. @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39
+[    1513ms] [LOG] {name: TTFB, value: 172.5999999642372, delta: 172.5999999642372, entries: Array(1), id: v2-1782025739841-5618562968715} @ https://onboarding.risescience.com/assets/package-BkljztG0.js:39

@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - link "speak-logo" [ref=e6] [cursor=pointer]:
+          - /url: /us-en
+          - img "speak-logo" [ref=e7]
+      - main [ref=e8]:
+        - generic [ref=e36]:
+          - img "roleplay-travel" [ref=e39]
+          - generic [ref=e41]:
+            - heading "Create an account to get started" [level=3] [ref=e42]
+            - generic [ref=e45]:
+              - button "Continue with email" [ref=e46] [cursor=pointer]:
+                - img [ref=e48]
+                - generic [ref=e50]: Continue with email
+              - button "Or" [ref=e51]:
+                - paragraph [ref=e54]: Or
+              - button "Continue with Google" [ref=e55] [cursor=pointer]:
+                - img [ref=e57]
+                - generic [ref=e63]: Continue with Google
+              - button "Continue with Facebook" [ref=e64] [cursor=pointer]:
+                - img [ref=e66]
+                - generic [ref=e70]: Continue with Facebook
+              - button "Continue with Apple" [ref=e71] [cursor=pointer]:
+                - img [ref=e73]
+                - generic [ref=e75]: Continue with Apple
+            - generic [ref=e76]:
+              - text: Already have an account?
+              - link "Sign in" [ref=e77] [cursor=pointer]:
+                - /url: /us-en/login
+    - contentinfo [ref=e22]:
+      - generic [ref=e23]:
+        - link "FAQ" [ref=e24] [cursor=pointer]:
+          - /url: https://help.speak.com
+        - link "Support" [ref=e26] [cursor=pointer]:
+          - /url: mailto:support@speak.com
+        - link "Terms" [ref=e27] [cursor=pointer]:
+          - /url: https://speak.com/terms
+        - link "Privacy" [ref=e28] [cursor=pointer]:
+          - /url: https://speak.com/privacy
+        - link "Español" [ref=e29] [cursor=pointer]:
+          - /url: /us-es/register
+      - paragraph [ref=e30]:
+        - strong [ref=e31]: Speakeasy Labs, Inc.
+        - text: "| CEO: Connor Nicolai Zwick"
+      - paragraph [ref=e32]: 360 Spear St, Fl 4, San Francisco, CA 94105
+      - paragraph [ref=e33]: "Email: support@speak.com"
+  - alert [ref=e34]
+  - iframe

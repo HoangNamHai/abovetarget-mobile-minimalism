@@ -1,0 +1,14 @@
+- generic [ref=e6]:
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - button "Back" [ref=e10] [cursor=pointer]:
+        - img "Back" [ref=e11]
+      - generic [ref=e13]:
+        - img [ref=e14]
+        - img "RISE" [ref=e15]
+        - generic: My Headspace
+    - img [ref=e21]
+  - generic [ref=e31]:
+    - heading "Lightning round" [level=2] [ref=e32]
+    - paragraph [ref=e33]: Answer quick, go with your gut!
+    - generic [ref=e38]: "5"
