@@ -15,11 +15,12 @@
 // RevenueCat mapping (project "PMP Exam Pro" 0a64724c, `default` offering):
 //   weekly   → package `$rc_weekly`   → product `weekly`
 //   monthly  → package `$rc_monthly`  → product `monthly`
+//   annual   → package `$rc_annual`   → product `annual`
 //   lifetime → package `$rc_lifetime` → product `lifetime`
 
 import type { PurchasesPackage } from 'react-native-purchases';
 
-export type PricingTierId = 'free' | 'weekly' | 'monthly' | 'lifetime';
+export type PricingTierId = 'free' | 'weekly' | 'monthly' | 'annual' | 'lifetime';
 
 export interface PricingTier {
   id: PricingTierId;
@@ -73,10 +74,25 @@ export const PRICING_TIERS: PricingTier[] = [
     ],
   },
   {
-    id: 'monthly',
-    name: 'Monthly',
+    id: 'annual',
+    name: 'Yearly',
     badge: 'Best Value',
     highlighted: true,
+    cta: 'Upgrade',
+    packageId: '$rc_annual',
+    productId: 'annual',
+    fallbackPrice: '$59.99',
+    fallbackPeriod: '/year',
+    features: [
+      'All lessons unlocked',
+      'All learning paths',
+      'Best price — billed yearly',
+      'Cancel anytime',
+    ],
+  },
+  {
+    id: 'monthly',
+    name: 'Monthly',
     cta: 'Upgrade',
     packageId: '$rc_monthly',
     productId: 'monthly',
