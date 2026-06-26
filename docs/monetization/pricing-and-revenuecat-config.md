@@ -9,7 +9,7 @@
 - 4 products: Weekly **$6/wk**, Monthly **$18/mo**, Yearly **$59.99/yr**, Lifetime **$99 one-time**.
 - **No free trial** (deliberate — the "$0.00 today" CTA only shows when a trial exists, so it currently shows "Continue").
 - Priced in **all 175 App Store territories**.
-- RevenueCat is wired (products → `pro` entitlement → `default` offering). **Billing is still OFF in production** until Task 8 (flag flip + iOS key swap). **Android/Play is not set up yet.**
+- RevenueCat is wired (products → `pro` entitlement → `default` offering) on **both iOS and Android**. **Billing is ENABLED in production** (Task 8 done — flag on, live keys by build profile). Remaining store tasks: build + smoke test, Android Lifetime one-time (Play Console UI), submit for review.
 
 ---
 
@@ -127,13 +127,17 @@ Public SDK keys are safe to ship in the app. The RevenueCat **secret** API key (
 
 ---
 
-## Still pending before billing goes live (Task 8)
+## Task 8 — billing enabled (DONE in code, 2026-06-27)
 
-1. **iOS:** set `revenuecat.ts` iOS key → `appl_NymCurBoIwDypfVEFOMiENeOlxS`; flip `EXPO_PUBLIC_REVENUECAT_ENABLED=true` in `eas.json` (production profile) **and** `.env.production`. (Test-Store key crashes a production build — key + flag must flip together.)
-2. **Android/Play:** create Play Console products (same IDs), add a Play Store app + service-account in RevenueCat, get the `goog_` key. Not started.
-3. **Win-back screen compliance:** add its own Terms/Privacy/Restore (3.1.2) and point it at a genuinely-different offering (5.6).
-4. **Submit IAPs for review:** the products exist but aren't attached to an app version / submitted yet (they ride with the next binary; a review screenshot is required).
-5. Reconcile the `productId` mismatch above.
+- `EXPO_PUBLIC_REVENUECAT_ENABLED=true` in the `eas.json` production profile **and** `.env.production`.
+- Keys selected by build profile (`IS_PRODUCTION_BUILD` = `EXPO_PUBLIC_ENV === 'production'`, in `src/config/env.ts`): production → live `appl_`/`goog_`; dev/preview → Test Store. A Test-Store key can never ship in a production build.
+- iOS win-back compliance (3.1.2/5.6) and the `productId` mismatch were resolved in earlier commits.
+
+**Still needs a human / store action (does NOT block the code being live):**
+1. **Build + store-review smoke test** — production build → TestFlight / Play internal testing. Verify: paywall shows price + auto-renew + Terms/Privacy + Restore; ✕ dismisses; first dismiss → win-back once (discounted $39.99 first year); win-back exitable. **Real billing is live for that build.**
+2. **Android Lifetime** — create one-time `pmp_pro_lifetime` ($99) in the **Play Console UI** (API blocked), then add it to the `$rc_lifetime` package (Play column) + `pro` entitlement.
+3. **Win-back Android worldwide** — currently US-only.
+4. **Submit IAPs/subscriptions for review** — attach to an app version; review screenshot required.
 
 ---
 
