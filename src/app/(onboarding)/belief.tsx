@@ -4,7 +4,7 @@ import { ChoiceScreen, type ChoiceOption } from '../../components/onboarding/Cho
 import { progressFor } from '../../lib/onboarding/onboarding-steps';
 
 const OPTIONS: ChoiceOption[] = [
-  { value: 'agree', label: 'Yes — it feels like a lot', description: 'You’re not alone. We’ll break it into daily wins.' },
+  { value: 'agree', label: 'Yes — it feels like a lot', description: 'Most people who quit lose the exam fee and another year before they retake it. Daily wins keep you on track.' },
   { value: 'no', label: 'Not really', description: 'Great — we’ll keep your momentum.' },
 ];
 

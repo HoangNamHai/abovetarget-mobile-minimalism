@@ -6,6 +6,7 @@ jest.mock('expo-router', () => ({ router: { push: jest.fn(), replace: jest.fn() 
 import Splash from '../splash';
 import StoryConcept from '../story-concept';
 import StoryCast from '../story-cast';
+import Belief from '../belief';
 
 test('splash shows the learn-by-doing headline', async () => {
   const { getByText } = await render(<Splash />);
@@ -18,4 +19,8 @@ test('story-concept renders', async () => {
 test('story-cast renders the cast intro', async () => {
   const { getByText } = await render(<StoryCast />);
   expect(getByText(/Savory/i)).toBeTruthy();
+});
+test('belief option names the concrete cost of quitting (loss-framing)', async () => {
+  const { getByText } = await render(<Belief />);
+  expect(getByText(/retake/i)).toBeTruthy();
 });
