@@ -28,6 +28,14 @@ export const REVENUECAT_DISABLED = !REVENUECAT_ENABLED;
  *
  * Before App Store / Play release, swap these for the production platform keys
  * (appl_xxx for iOS, goog_xxx for Android) from the same project's API keys page.
+ *
+ * TASK 8 CUTOVER — production keys are READY (created 2026-06-27). Swap the two
+ * lines below to these AND flip EXPO_PUBLIC_REVENUECAT_ENABLED=true together (a
+ * Test-Store key in a production build crashes the SDK). Do NOT swap earlier —
+ * dev/preview run with the flag ON against the Test Store, so swapping now breaks
+ * dev. See docs/monetization/pricing-and-revenuecat-config.md.
+ *   ios:     'appl_NymCurBoIwDypfVEFOMiENeOlxS'   // App Store app appceb15304ed
+ *   android: 'goog_dxWeLkyQEgvCQPuPTVaWTJHihGs'   // Play Store app appf6471ce469
  */
 export const REVENUECAT_API_KEYS = {
   ios: 'test_UFxNiXpKqWHIZlleFrlzORuIAgL',
