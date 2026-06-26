@@ -6,6 +6,7 @@ import { AuthTextField } from '../../components/auth/AuthTextField';
 import { AuthLink } from '../../components/auth/AuthLink';
 import { Button } from '../../components/primitives/Button';
 import { useEmailAuth } from '../../hooks/use-email-auth';
+import { authDismissAction } from '../../lib/auth-dismiss';
 
 const MIN_PASSWORD = 8;
 
@@ -30,12 +31,19 @@ export default function ForgotPassword() {
     if (ok) router.replace('/');
   };
 
+  const handleDismiss = () => {
+    const action = authDismissAction({ canGoBack: router.canGoBack() });
+    if (action.type === 'back') router.back();
+    else router.replace(action.href);
+  };
+
   if (step === 'request') {
     return (
       <AuthScreenShell
         title="RESET PASSWORD"
         subtitle="Enter your email and we'll send a reset code."
         error={error}
+        onDismiss={handleDismiss}
         footer={<AuthLink action="Back to sign in" onPress={() => router.replace('/(auth)/sign-in')} />}
       >
         <AuthTextField
@@ -67,6 +75,7 @@ export default function ForgotPassword() {
       title="ENTER NEW PASSWORD"
       subtitle="Use the code from your email and choose a new password."
       error={error}
+      onDismiss={handleDismiss}
       footer={<AuthLink action="Back to sign in" onPress={() => router.replace('/(auth)/sign-in')} />}
     >
       <AuthTextField

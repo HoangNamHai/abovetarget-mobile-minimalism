@@ -6,6 +6,7 @@ import { AuthTextField } from '../../components/auth/AuthTextField';
 import { AuthLink } from '../../components/auth/AuthLink';
 import { Button } from '../../components/primitives/Button';
 import { useEmailAuth } from '../../hooks/use-email-auth';
+import { authDismissAction } from '../../lib/auth-dismiss';
 
 export default function VerifyEmail() {
   const [code, setCode] = useState('');
@@ -19,11 +20,18 @@ export default function VerifyEmail() {
     if (ok) router.replace('/');
   };
 
+  const handleDismiss = () => {
+    const action = authDismissAction({ canGoBack: router.canGoBack() });
+    if (action.type === 'back') router.back();
+    else router.replace(action.href);
+  };
+
   return (
     <AuthScreenShell
       title="CHECK YOUR EMAIL"
       subtitle="Enter the 6-digit code we sent to verify your address."
       error={error}
+      onDismiss={handleDismiss}
       footer={<AuthLink action="Resend code" onPress={() => resendEmailCode()} />}
     >
       <AuthTextField
