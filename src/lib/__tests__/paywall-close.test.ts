@@ -34,6 +34,24 @@ test('closing from onboarding without a next (offer shown) continues into the ap
   expect(paywallCloseAction({ from: 'onboarding', canGoBack: false, offerShown: true })).toEqual({ type: 'replace', href: '/' });
 });
 
+test('premium close from onboarding goes forward to next, NOT the win-back offer', () => {
+  expect(paywallCloseAction({
+    from: 'onboarding', next: '/lesson/intro', canGoBack: true, offerShown: false, isPremium: true,
+  })).toEqual({ type: 'replace', href: '/lesson/intro' });
+});
+
+test('premium close from onboarding with no next continues into the app, NOT the win-back offer', () => {
+  expect(paywallCloseAction({
+    from: 'onboarding', canGoBack: true, offerShown: false, isPremium: true,
+  })).toEqual({ type: 'replace', href: '/' });
+});
+
+test('non-premium first onboarding dismiss still routes to the win-back offer (guard regression)', () => {
+  expect(paywallCloseAction({
+    from: 'onboarding', next: '/lesson/intro', canGoBack: true, offerShown: false, isPremium: false,
+  })).toEqual({ type: 'replace', href: '/win-back?next=%2Flesson%2Fintro' });
+});
+
 test('closing elsewhere goes back when possible, else home', () => {
   expect(paywallCloseAction({ canGoBack: true })).toEqual({ type: 'back' });
   expect(paywallCloseAction({ canGoBack: false })).toEqual({ type: 'replace', href: '/' });

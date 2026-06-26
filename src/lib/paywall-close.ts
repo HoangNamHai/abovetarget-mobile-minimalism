@@ -10,8 +10,11 @@ export function paywallCloseAction(opts: {
   next?: string;
   canGoBack: boolean;
   offerShown?: boolean;
+  isPremium?: boolean;
 }): PaywallCloseAction {
-  if (opts.from === 'onboarding' && !opts.offerShown) {
+  // A premium close is a purchase/restore success, not a dismiss — never route a
+  // paying customer through the win-back offer; send them forward into the app.
+  if (opts.from === 'onboarding' && !opts.offerShown && !opts.isPremium) {
     const q = opts.next ? `?next=${encodeURIComponent(opts.next)}` : '';
     return { type: 'replace', href: `/win-back${q}` };
   }
