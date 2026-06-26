@@ -14,7 +14,7 @@ import Purchases, {
   type PurchasesPackage,
   type PurchasesOffering,
 } from 'react-native-purchases';
-import { REVENUECAT_DISABLED, REVENUECAT_API_KEYS, ENTITLEMENTS } from '../config/revenuecat';
+import { REVENUECAT_DISABLED, REVENUECAT_API_KEYS, ENTITLEMENTS, OFFERINGS } from '../config/revenuecat';
 import { authRequired } from '../config/env';
 import { isPremiumGranted } from '../lib/subscription/entitlement';
 import {
@@ -33,6 +33,11 @@ export interface SubscriptionValue {
   error: string | null;
   /** Packages from the current offering (empty until offerings load / while disabled). */
   packages: PurchasesPackage[];
+  /**
+   * Packages from the `winback` offering — the discounted second-chance offer shown
+   * ONLY on the win-back screen (empty when that offering is absent / while disabled).
+   */
+  winbackPackages: PurchasesPackage[];
   /** The current offering, or null when unavailable. */
   currentOffering: PurchasesOffering | null;
   /** Purchase a package; resolves once the entitlement state has been updated. */
@@ -79,6 +84,7 @@ export function SubscriptionProviderLive({ children }: { children: ReactNode }) 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [packages, setPackages] = useState<PurchasesPackage[]>([]);
+  const [winbackPackages, setWinbackPackages] = useState<PurchasesPackage[]>([]);
   const [currentOffering, setCurrentOffering] = useState<PurchasesOffering | null>(null);
   const [activeEntitlement, setActiveEntitlement] = useState<ActiveEntitlementSnapshot | null>(null);
   const mounted = useRef(true);
@@ -130,6 +136,9 @@ export function SubscriptionProviderLive({ children }: { children: ReactNode }) 
         const current = offerings.current ?? null;
         setCurrentOffering(current);
         setPackages(current?.availablePackages ?? []);
+        // The win-back offering is a non-current offering fetched by id; surfaced
+        // only on the win-back screen (Apple 5.6 — a genuinely different offer).
+        setWinbackPackages(offerings.all?.[OFFERINGS.WINBACK]?.availablePackages ?? []);
       })
       .catch(() => {
         /* leave packages empty; paywall shows an unavailable state */
@@ -238,6 +247,7 @@ export function SubscriptionProviderLive({ children }: { children: ReactNode }) 
       isInitialized,
       error,
       packages,
+      winbackPackages,
       currentOffering,
       purchasePackage,
       restorePurchases,
@@ -250,6 +260,7 @@ export function SubscriptionProviderLive({ children }: { children: ReactNode }) 
       isInitialized,
       error,
       packages,
+      winbackPackages,
       currentOffering,
       purchasePackage,
       restorePurchases,
@@ -272,6 +283,7 @@ function SubscriptionProviderDisabled({ children }: { children: ReactNode }) {
       isInitialized: true,
       error: null,
       packages: [],
+      winbackPackages: [],
       currentOffering: null,
       purchasePackage: async () => {},
       restorePurchases: async () => {},

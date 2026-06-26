@@ -1,4 +1,4 @@
-import { freeTrial, ctaLabel, perMonthAnchor, disclosure } from '../paywall-pricing';
+import { freeTrial, ctaLabel, perMonthAnchor, disclosure, introOffer } from '../paywall-pricing';
 
 function pkg(over: any = {}) {
   return {
@@ -17,6 +17,28 @@ function pkg(over: any = {}) {
 }
 
 const trial7 = { price: 0, priceString: '$0.00', cycles: 1, period: 'P1W', periodUnit: 'WEEK', periodNumberOfUnits: 1 };
+// Paid intro: $39.99 for the first year (PAY_UP_FRONT), then standard price.
+const intro1y = { price: 39.99, priceString: '$39.99', cycles: 1, period: 'P1Y', periodUnit: 'YEAR', periodNumberOfUnits: 1 };
+
+test('introOffer returns the paid intro price + period', () => {
+  expect(introOffer(pkg({ introPrice: intro1y }))).toEqual({ priceString: '$39.99', period: 'year' });
+});
+
+test('introOffer is null for a free trial (that is freeTrial, not a paid intro)', () => {
+  expect(introOffer(pkg({ introPrice: trial7 }))).toBeNull();
+});
+
+test('introOffer is null when there is no intro', () => {
+  expect(introOffer(pkg())).toBeNull();
+  expect(introOffer(null)).toBeNull();
+});
+
+test('disclosure names a paid intro offer then the standard price', () => {
+  const d = disclosure(pkg({ introPrice: intro1y }));
+  expect(d).toContain('$39.99 for the first year');
+  expect(d).toContain('then $59.99');
+  expect(d).toContain('auto-renews');
+});
 
 test('freeTrial returns day count for a zero-price intro', () => {
   expect(freeTrial(pkg({ introPrice: trial7 }))).toEqual({ days: 7 });

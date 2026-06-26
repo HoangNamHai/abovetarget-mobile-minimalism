@@ -50,6 +50,7 @@ function baseValue(overrides: Partial<SubscriptionValue> = {}): SubscriptionValu
     isInitialized: true,
     error: null,
     packages: [annual, monthly],
+    winbackPackages: [],
     currentOffering: null,
     purchasePackage,
     restorePurchases,

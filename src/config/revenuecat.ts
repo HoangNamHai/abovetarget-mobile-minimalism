@@ -43,6 +43,16 @@ export const ENTITLEMENTS = {
 } as const;
 
 /**
+ * Offering Identifiers (the RevenueCat `default`/`current` offering is implicit).
+ * WINBACK is a separate offering surfaced ONLY on the win-back screen — it carries
+ * the discounted intro offer so the win-back is a genuinely different offer than the
+ * main paywall (Apple 5.6). The paywall always uses the current/default offering.
+ */
+export const OFFERINGS = {
+  WINBACK: 'winback',
+} as const;
+
+/**
  * Product Identifiers
  * These should match the product IDs configured in App Store Connect / Google Play Console.
  * Lineup mirrors the `default` offering (Weekly / Monthly / Annual / Lifetime — see src/config/pricing.ts).
