@@ -42,6 +42,7 @@ function RootLayout() {
                                       name="paywall"
                                       options={{ presentation: 'modal' }}
                                     />
+                                    <Stack.Screen name="win-back" options={{ presentation: 'modal', headerShown: false }} />
                                   </Stack>
                                 </FontGate>
                               </LessonProvider>
