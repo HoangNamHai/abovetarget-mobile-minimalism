@@ -13,10 +13,12 @@
 // value when a package is available — see `displayPrice()` below.
 //
 // RevenueCat mapping (project "PMP Exam Pro" 0a64724c, `default` offering):
-//   weekly   → package `$rc_weekly`   → product `weekly`
-//   monthly  → package `$rc_monthly`  → product `monthly`
-//   annual   → package `$rc_annual`   → product `annual`
-//   lifetime → package `$rc_lifetime` → product `lifetime`
+//   weekly   → package `$rc_weekly`   → product `pmp_pro_weekly`
+//   monthly  → package `$rc_monthly`  → product `pmp_pro_monthly`
+//   annual   → package `$rc_annual`   → product `pmp_pro_annual`
+//   lifetime → package `$rc_lifetime` → product `pmp_pro_lifetime`
+// `productId` holds the LIVE App Store / Play product id. The dev Test Store still
+// uses bare ids (weekly/monthly/yearly/lifetime) — `tierForProductId` tolerates both.
 
 import type { PurchasesPackage } from 'react-native-purchases';
 
@@ -63,7 +65,7 @@ export const PRICING_TIERS: PricingTier[] = [
     name: 'Weekly',
     cta: 'Upgrade',
     packageId: '$rc_weekly',
-    productId: 'weekly',
+    productId: 'pmp_pro_weekly',
     fallbackPrice: '$6',
     fallbackPeriod: '/week',
     features: [
@@ -80,7 +82,7 @@ export const PRICING_TIERS: PricingTier[] = [
     highlighted: true,
     cta: 'Upgrade',
     packageId: '$rc_annual',
-    productId: 'annual',
+    productId: 'pmp_pro_annual',
     fallbackPrice: '$59.99',
     fallbackPeriod: '/year',
     features: [
@@ -95,7 +97,7 @@ export const PRICING_TIERS: PricingTier[] = [
     name: 'Monthly',
     cta: 'Upgrade',
     packageId: '$rc_monthly',
-    productId: 'monthly',
+    productId: 'pmp_pro_monthly',
     fallbackPrice: '$18',
     fallbackPeriod: '/month',
     features: [
@@ -111,7 +113,7 @@ export const PRICING_TIERS: PricingTier[] = [
     name: 'Lifetime',
     cta: 'Upgrade',
     packageId: '$rc_lifetime',
-    productId: 'lifetime',
+    productId: 'pmp_pro_lifetime',
     fallbackPrice: '$99',
     fallbackPeriod: 'one-time',
     features: [
@@ -140,7 +142,15 @@ export function tierForPackage(pkg: PurchasesPackage): PricingTier | undefined {
  */
 export function tierForProductId(productId: string): PricingTier | undefined {
   if (!productId) return undefined;
-  return PRICING_TIERS.find((t) => t.productId === productId);
+  return PRICING_TIERS.find(
+    (t) =>
+      // Live App Store / Play product id (e.g. "pmp_pro_annual").
+      t.productId === productId ||
+      // Dev Test Store bare ids (e.g. "monthly", "lifetime").
+      t.id === productId ||
+      // Test Store names annual "yearly", but our tier id is "annual".
+      (t.id === 'annual' && productId === 'yearly'),
+  );
 }
 
 /**
