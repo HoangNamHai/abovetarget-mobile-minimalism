@@ -56,7 +56,8 @@
         "credentialsSource": "local"
       },
       "env": {
-        "EXPO_PUBLIC_ENV": "production"
+        "EXPO_PUBLIC_ENV": "production",
+        "EXPO_PUBLIC_REVENUECAT_ENABLED": "true"
       }
     }
   },

@@ -2,7 +2,7 @@
 // RevenueCat Configuration
 // ============================================
 
-import { REVENUECAT_ENABLED } from './env';
+import { REVENUECAT_ENABLED, IS_PRODUCTION_BUILD } from './env';
 
 /**
  * Feature Flag: whether RevenueCat is live, driven by the env var
@@ -26,21 +26,22 @@ export const REVENUECAT_DISABLED = !REVENUECAT_ENABLED;
  * builds and needs no App Store / Play products, so the paywall + purchase flow
  * can be exercised end-to-end before store products exist.
  *
- * Before App Store / Play release, swap these for the production platform keys
- * (appl_xxx for iOS, goog_xxx for Android) from the same project's API keys page.
- *
- * TASK 8 CUTOVER — production keys are READY (created 2026-06-27). Swap the two
- * lines below to these AND flip EXPO_PUBLIC_REVENUECAT_ENABLED=true together (a
- * Test-Store key in a production build crashes the SDK). Do NOT swap earlier —
- * dev/preview run with the flag ON against the Test Store, so swapping now breaks
- * dev. See docs/monetization/pricing-and-revenuecat-config.md.
- *   ios:     'appl_NymCurBoIwDypfVEFOMiENeOlxS'   // App Store app appceb15304ed
- *   android: 'goog_dxWeLkyQEgvCQPuPTVaWTJHihGs'   // Play Store app appf6471ce469
+ * Keys are selected by build profile (Task 8 cutover, 2026-06-27): production
+ * builds use the LIVE store keys (App Store / Play); dev & preview keep the Test
+ * Store key so the paywall/purchase flow can be exercised without real billing.
+ * A Test-Store key in a production build crashes the SDK, so the split is by
+ * IS_PRODUCTION_BUILD (EXPO_PUBLIC_ENV === 'production'), flipped together with
+ * EXPO_PUBLIC_REVENUECAT_ENABLED. See docs/monetization/pricing-and-revenuecat-config.md.
  */
-export const REVENUECAT_API_KEYS = {
-  ios: 'test_UFxNiXpKqWHIZlleFrlzORuIAgL',
-  android: 'test_UFxNiXpKqWHIZlleFrlzORuIAgL',
+const TEST_STORE_KEY = 'test_UFxNiXpKqWHIZlleFrlzORuIAgL';
+const PRODUCTION_API_KEYS = {
+  ios: 'appl_NymCurBoIwDypfVEFOMiENeOlxS', // App Store app appceb15304ed
+  android: 'goog_dxWeLkyQEgvCQPuPTVaWTJHihGs', // Play Store app appf6471ce469
 } as const;
+
+export const REVENUECAT_API_KEYS = IS_PRODUCTION_BUILD
+  ? PRODUCTION_API_KEYS
+  : { ios: TEST_STORE_KEY, android: TEST_STORE_KEY };
 
 /**
  * Entitlement Identifiers

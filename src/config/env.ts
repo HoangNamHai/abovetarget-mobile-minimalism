@@ -14,6 +14,16 @@ export const SENTRY_DSN: string = process.env.EXPO_PUBLIC_SENTRY_DSN ?? '';
 export const REVENUECAT_ENABLED: boolean =
   process.env.EXPO_PUBLIC_REVENUECAT_ENABLED === 'true';
 
+/** Build profile env: 'development' | 'preview' | 'production' (set in eas.json). */
+export const APP_ENV: string = process.env.EXPO_PUBLIC_ENV ?? 'development';
+
+/**
+ * True only in production builds. Selects the live store RevenueCat keys
+ * (App Store / Play) over the Test Store keys, so dev/preview keep exercising the
+ * Test Store while production talks to the real stores. See src/config/revenuecat.ts.
+ */
+export const IS_PRODUCTION_BUILD: boolean = APP_ENV === 'production';
+
 /** True when a Clerk publishable key is configured (else auth uses the stub). */
 export function hasClerkKey(): boolean {
   return CLERK_PUBLISHABLE_KEY.length > 0;
