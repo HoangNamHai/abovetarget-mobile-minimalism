@@ -7,6 +7,7 @@ import { AuthLink } from '../../components/auth/AuthLink';
 import { SocialAuthButtons } from '../../components/auth/SocialAuthButtons';
 import { Button } from '../../components/primitives/Button';
 import { useEmailAuth } from '../../hooks/use-email-auth';
+import { authDismissAction } from '../../lib/auth-dismiss';
 
 const MIN_PASSWORD = 8;
 
@@ -23,11 +24,18 @@ export default function SignUp() {
     if (ok) router.push('/(auth)/verify-email');
   };
 
+  const handleDismiss = () => {
+    const action = authDismissAction({ canGoBack: router.canGoBack() });
+    if (action.type === 'back') router.back();
+    else router.replace(action.href);
+  };
+
   return (
     <AuthScreenShell
       title="CREATE ACCOUNT"
       subtitle="Start your PMP prep in minutes."
       error={error}
+      onDismiss={handleDismiss}
       footer={
         <AuthLink
           prefix="Have an account? "

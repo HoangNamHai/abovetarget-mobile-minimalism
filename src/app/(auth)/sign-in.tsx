@@ -7,6 +7,7 @@ import { AuthLink } from '../../components/auth/AuthLink';
 import { SocialAuthButtons } from '../../components/auth/SocialAuthButtons';
 import { Button } from '../../components/primitives/Button';
 import { useEmailAuth } from '../../hooks/use-email-auth';
+import { authDismissAction } from '../../lib/auth-dismiss';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -21,11 +22,18 @@ export default function SignIn() {
     if (ok) router.replace('/');
   };
 
+  const handleDismiss = () => {
+    const action = authDismissAction({ canGoBack: router.canGoBack() });
+    if (action.type === 'back') router.back();
+    else router.replace(action.href);
+  };
+
   return (
     <AuthScreenShell
       title="WELCOME BACK"
       subtitle="Sign in to continue your prep."
       error={error}
+      onDismiss={handleDismiss}
       footer={
         <>
           <AuthLink action="Forgot password?" onPress={() => router.push('/(auth)/forgot-password')} />

@@ -3,6 +3,7 @@ import { KeyboardAvoidingView, Platform, ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Txt } from '../primitives/Txt';
 import { Appear } from '../primitives/Appear';
+import { PressableFeedback } from '../primitives/PressableFeedback';
 import { TOKENS } from '../../theme/tokens';
 import { ACCENTS } from '../../theme/accents';
 
@@ -14,12 +15,17 @@ type Props = {
   children: ReactNode;
   /** Footer links area (sign-up / sign-in / forgot). */
   footer?: ReactNode;
+  /**
+   * When set, renders a ✕ dismiss control in the header so the user can leave the
+   * auth flow and keep using the app anonymously. Auth is always optional.
+   */
+  onDismiss?: () => void;
 };
 
 // Shared layout for every (auth) screen: safe-area padding, keyboard avoidance,
 // an Anton display title, optional subtitle, an inline error slot, the form body,
 // and a footer link area — all entering with the standard Appear motion.
-export function AuthScreenShell({ title, subtitle, error, children, footer }: Props) {
+export function AuthScreenShell({ title, subtitle, error, children, footer, onDismiss }: Props) {
   const insets = useSafeAreaInsets();
 
   return (
@@ -31,12 +37,25 @@ export function AuthScreenShell({ title, subtitle, error, children, footer }: Pr
         contentContainerStyle={{
           flexGrow: 1,
           paddingHorizontal: 24,
-          paddingTop: insets.top + 32,
+          paddingTop: insets.top + (onDismiss != null ? 8 : 32),
           paddingBottom: insets.bottom + 24,
         }}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
+        {onDismiss != null && (
+          <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginBottom: 16 }}>
+            <PressableFeedback testID="auth-dismiss" onPress={onDismiss}>
+              <Txt
+                variant="label"
+                style={{ fontSize: 22, color: TOKENS['on-background'], paddingHorizontal: 8, paddingVertical: 4 }}
+              >
+                ✕
+              </Txt>
+            </PressableFeedback>
+          </View>
+        )}
+
         <Appear index={0}>
           <Txt variant="display" style={{ fontSize: 34, lineHeight: 40, color: TOKENS['on-background'] }}>
             {title}
