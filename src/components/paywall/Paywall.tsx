@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Linking, ScrollView, StyleSheet, View } from 'react-native';
+import { disclosure } from '../../lib/paywall-pricing';
+import { LEGAL_URLS } from '../../config/legal';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import type { PurchasesPackage } from 'react-native-purchases';
@@ -95,6 +97,8 @@ export function Paywall({ onClose }: { onClose: () => void }) {
     onClose();
   };
 
+  const selectedPkg = packages.find((p) => p.identifier === selectedId) ?? null;
+
   return (
     <View style={styles.container}>
       <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
@@ -154,6 +158,11 @@ export function Paywall({ onClose }: { onClose: () => void }) {
 
       <View style={[styles.footer, { paddingBottom: Math.max(insets.bottom + 12, 28) }]}>
         {packages.length > 0 ? (
+          <Txt testID="paywall-disclosure" variant="body" style={styles.disclosure}>
+            {disclosure(selectedPkg)}
+          </Txt>
+        ) : null}
+        {packages.length > 0 ? (
           <Button
             testID="paywall-continue"
             label={mustSignIn ? 'Sign in to subscribe' : 'Continue'}
@@ -166,6 +175,15 @@ export function Paywall({ onClose }: { onClose: () => void }) {
         <PressableFeedback testID="paywall-restore" onPress={handleRestore}>
           <Txt variant="label" style={styles.restore}>Restore Purchases</Txt>
         </PressableFeedback>
+        <View style={styles.legalRow}>
+          <PressableFeedback testID="paywall-terms" onPress={() => Linking.openURL(LEGAL_URLS.terms)}>
+            <Txt variant="label" style={styles.legalLink}>Terms</Txt>
+          </PressableFeedback>
+          <Txt variant="label" style={styles.legalDot}>·</Txt>
+          <PressableFeedback testID="paywall-privacy" onPress={() => Linking.openURL(LEGAL_URLS.privacy)}>
+            <Txt variant="label" style={styles.legalLink}>Privacy</Txt>
+          </PressableFeedback>
+        </View>
       </View>
     </View>
   );
@@ -283,5 +301,26 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     textTransform: 'uppercase',
     letterSpacing: 2,
+  },
+  disclosure: {
+    fontSize: 16,
+    color: TOKENS.outline,
+    textAlign: 'center',
+    lineHeight: 22,
+  },
+  legalRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 8,
+  },
+  legalLink: {
+    fontSize: 13,
+    color: TOKENS.outline,
+    textDecorationLine: 'underline',
+  },
+  legalDot: {
+    fontSize: 13,
+    color: TOKENS.outline,
   },
 });

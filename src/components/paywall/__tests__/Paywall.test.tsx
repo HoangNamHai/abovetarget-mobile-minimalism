@@ -23,11 +23,15 @@ jest.mock('../../../contexts/auth-context', () => ({ useAppAuth: () => mockAuth 
 jest.mock('../../../config/env', () => ({ authRequired: () => mockAuthRequired }));
 jest.mock('expo-router', () => ({ router: { push: jest.fn() } }));
 
-function pkg(identifier: string, packageType: string, priceString: string) {
+function pkg(identifier: string, packageType: string, priceString: string, introPrice: any = null) {
   return {
     identifier,
     packageType,
-    product: { identifier: `prod_${identifier}`, title: identifier, description: '', price: 1, priceString },
+    product: {
+      identifier: `prod_${identifier}`, title: identifier, description: '', price: 1, priceString,
+      pricePerMonthString: packageType === 'ANNUAL' ? '$5.00' : null,
+      currencyCode: 'USD', introPrice,
+    },
   } as never;
 }
 
@@ -119,4 +123,15 @@ test('when signed out, restore routes to sign-in instead of restoring', async ()
   await fireEvent.press(getByTestId('paywall-restore'));
   expect(router.push).toHaveBeenCalledWith('/(auth)/sign-in');
   expect(restorePurchases).not.toHaveBeenCalled();
+});
+
+test('renders the auto-renew disclosure for the selected plan', async () => {
+  const { getByTestId } = await render(<Paywall onClose={jest.fn()} />);
+  expect(getByTestId('paywall-disclosure')).toBeTruthy();
+});
+
+test('renders Terms and Privacy links', async () => {
+  const { getByTestId } = await render(<Paywall onClose={jest.fn()} />);
+  expect(getByTestId('paywall-terms')).toBeTruthy();
+  expect(getByTestId('paywall-privacy')).toBeTruthy();
 });
