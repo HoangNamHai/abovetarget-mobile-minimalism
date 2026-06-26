@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Linking, ScrollView, StyleSheet, View } from 'react-native';
-import { disclosure } from '../../lib/paywall-pricing';
+import { ctaLabel, perMonthAnchor, disclosure } from '../../lib/paywall-pricing';
 import { LEGAL_URLS } from '../../config/legal';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
@@ -143,7 +143,14 @@ export function Paywall({ onClose }: { onClose: () => void }) {
                       <Txt variant="label" style={styles.planPeriod}>{periodLabel(pkg)}</Txt>
                       <Txt variant="body" style={styles.planProduct}>{pkg.product.title}</Txt>
                     </View>
-                    <Txt variant="label" style={styles.planPrice}>{pkg.product.priceString}</Txt>
+                    <View style={styles.planPriceCol}>
+                      <Txt variant="label" style={styles.planPrice}>{pkg.product.priceString}</Txt>
+                      {perMonthAnchor(pkg) ? (
+                        <Txt variant="label" style={styles.planAnchor}>
+                          {`${perMonthAnchor(pkg)} / mo · billed yearly`}
+                        </Txt>
+                      ) : null}
+                    </View>
                   </View>
                 </PressableFeedback>
               );
@@ -165,7 +172,7 @@ export function Paywall({ onClose }: { onClose: () => void }) {
         {packages.length > 0 ? (
           <Button
             testID="paywall-continue"
-            label={mustSignIn ? 'Sign in to subscribe' : 'Continue'}
+            label={mustSignIn ? 'Sign in to subscribe' : ctaLabel(selectedPkg)}
             onPress={handleContinue}
             loading={isLoading}
             disabled={!mustSignIn && !selectedId}
@@ -271,6 +278,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '700',
     color: TOKENS['on-background'],
+  },
+  planPriceCol: {
+    alignItems: 'flex-end',
+  },
+  planAnchor: {
+    fontSize: 12,
+    color: TOKENS.outline,
+    marginTop: 2,
   },
   unavailable: {
     borderWidth: 1,

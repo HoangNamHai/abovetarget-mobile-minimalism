@@ -37,6 +37,10 @@ function pkg(identifier: string, packageType: string, priceString: string, intro
 
 const annual = pkg('annual', 'ANNUAL', '$59.99');
 const monthly = pkg('monthly', 'MONTHLY', '$9.99');
+// periodNumberOfUnits is 1 (one WEEK = 7 days) — keep this consistent with the
+// Task 2 trial7 fixture; `periodNumberOfUnits: 7` here would mean a 49-day trial.
+const trial7 = { price: 0, priceString: '$0.00', cycles: 1, period: 'P1W', periodUnit: 'WEEK', periodNumberOfUnits: 1 };
+const annualTrial = pkg('annual', 'ANNUAL', '$59.99', trial7);
 
 function baseValue(overrides: Partial<SubscriptionValue> = {}): SubscriptionValue {
   return {
@@ -134,4 +138,19 @@ test('renders Terms and Privacy links', async () => {
   const { getByTestId } = await render(<Paywall onClose={jest.fn()} />);
   expect(getByTestId('paywall-terms')).toBeTruthy();
   expect(getByTestId('paywall-privacy')).toBeTruthy();
+});
+
+test('CTA shows the $0.00 trial label when the selected plan has a free trial', async () => {
+  mockValue = baseValue({ packages: [annualTrial, monthly] });
+  const { getByTestId, getByText } = await render(<Paywall onClose={jest.fn()} />);
+  // annual is the default selection (defaultPackageId prefers ANNUAL)
+  expect(getByText('Start — $0.00 today')).toBeTruthy();
+  // selecting monthly (no trial) reverts the CTA
+  await fireEvent.press(getByTestId('pkg-monthly'));
+  expect(getByText('Continue')).toBeTruthy();
+});
+
+test('annual row shows the per-month anchor', async () => {
+  const { getByText } = await render(<Paywall onClose={jest.fn()} />);
+  expect(getByText('$5.00 / mo · billed yearly')).toBeTruthy();
 });
