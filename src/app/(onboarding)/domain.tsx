@@ -9,6 +9,7 @@ import { useOnboarding } from '../../contexts/onboarding-context';
 import { buildPlan } from '../../lib/onboarding/onboarding-plan';
 import { getAllLessons } from '../../data/lessons-data';
 import { REVENUECAT_ENABLED } from '../../config/env';
+import { maybeAskForReview } from '../../lib/review-ask';
 import type { Domain } from '../../types/progress';
 
 export default function DomainScreen() {
@@ -28,6 +29,7 @@ export default function DomainScreen() {
     setFocusDomain(domain);
     setDailyGoal(plan.dailyGoal);
     await completeOnboarding({ focusDomain: domain, dailyGoal: plan.dailyGoal });
+    void maybeAskForReview();
 
     const firstLesson = lessonsForDomain(domain, 1)[0];
     const next = firstLesson ? `/lesson/${firstLesson.id}` : '/';
