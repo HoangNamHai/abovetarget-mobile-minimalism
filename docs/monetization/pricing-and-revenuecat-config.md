@@ -86,12 +86,14 @@ service account `ai-cli@pc-api-9211159543626347762-239.iam.gserviceaccount.com`
   - `pmp_pro_annual` — base plan `annual` (P1Y) $59.99
   - (Play requires globally-unique base-plan ids — reusing `annual` across products 500s; use suffixed ids like `annual-wb`.)
 
-- **Win-back discounted offer** ✅ — `pmp_pro_annual_winback` sub (base plan `annual-wb`, $59.99/yr, **US-only** — worldwide 500s flakily, expand later) + ACTIVE Play offer `intro-1y` ($39.99 first year, new-customer). Note: base-plan ids must be globally unique (reusing `annual` 500s → used `annual-wb`).
-- **RevenueCat Play app** ✅ — app `appf6471ce469` (pkg `com.h2ai.pmpexampro`), service-account JSON uploaded, key `goog_dxWeLkyQEgvCQPuPTVaWTJHihGs`. 4 Android products created + attached to `pro`; default offering packages (weekly/monthly/annual) + winback offering carry the Play products.
+- **Win-back discounted offer** ✅ — `pmp_pro_annual_winback` sub (base plan `annual-wb`, $59.99/yr, **worldwide** via `otherRegionsConfig` usd $59.99 / eur €59.99) + ACTIVE Play offer `intro-1y` ($39.99 first year, new-customer; **worldwide** via phase `otherRegionsPrices` usd $39.99 / eur €39.99 + `otherRegionsNewSubscriberAvailability=true`). Note: base-plan ids must be globally unique (reusing `annual` 500s → used `annual-wb`).
+- **RevenueCat Play app** ✅ — app `appf6471ce469` (pkg `com.h2ai.pmpexampro`), service-account JSON uploaded, key `goog_dxWeLkyQEgvCQPuPTVaWTJHihGs`. 4 Android products created; default offering packages (weekly/monthly/annual) + winback offering carry the Play products. (Entitlement attachment was **incomplete** — see the ⚠️ correction below; fixed 2026-06-27. Lifetime added later, see below.)
 
 **Still pending for Android:**
-- **Lifetime one-time `pmp_pro_lifetime` ($99)** — **blocked via API** (legacy `inappproducts` returns 403 "migrate"; new one-time endpoint 404s). Create it in the **Play Console UI**, then add it to the default offering's `$rc_lifetime` package (Play column) + the `pro` entitlement.
-- **Win-back worldwide pricing** — the win-back sub is US-only (the worldwide create 500s intermittently); add `otherRegionsConfig` later.
+- ~~**Lifetime one-time `pmp_pro_lifetime` ($99)**~~ ✅ DONE 2026-06-27. The **new `monetization.onetimeproducts` Play Developer API works** (old `inappproducts` 403 / one-time 404 are gone). Created + ACTIVE: purchase option `lifetime`, `legacyCompatible=true`, US $99.00, 173 regions equalized + `newRegionsConfig`. Then in RevenueCat: imported (Non-consumable), attached to `pro`, added to `$rc_lifetime` Play column in `default` offering.
+
+> ⚠️ **Correction (2026-06-27):** the 4 Android subscription products were **NOT actually attached to `pro`** (this doc previously claimed they were — see line below). Found via the RC dashboard ("Attach" shown, no entitlement) and **fixed**: all 4 (`pmp_pro_annual_winback:annual-wb`, `pmp_pro_weekly:weekly`, `pmp_pro_monthly:monthly`, `pmp_pro_annual:annual`) are now attached. Verified all 5 Android products show "1 Entitlement". This was a launch-blocker — Play purchases would not have unlocked premium.
+- ~~**Win-back worldwide pricing**~~ ✅ DONE 2026-06-27 — base plan + `intro-1y` offer now worldwide via `otherRegionsConfig`.
 - **Code** — `revenuecat.ts` android key swap to `goog_…` happens in Task 8 (with the flag flip), NOT before (dev runs flag-ON against Test Store). The cutover value is recorded in a comment there.
 
 Public SDK keys are safe to ship in the app. The RevenueCat **secret** API key (`sk_`) is a different thing — not used here.
@@ -136,7 +138,7 @@ Public SDK keys are safe to ship in the app. The RevenueCat **secret** API key (
 **Still needs a human / store action (does NOT block the code being live):**
 1. **Build + store-review smoke test** — production build → TestFlight / Play internal testing. Verify: paywall shows price + auto-renew + Terms/Privacy + Restore; ✕ dismisses; first dismiss → win-back once (discounted $39.99 first year); win-back exitable. **Real billing is live for that build.**
 2. **Android Lifetime** — create one-time `pmp_pro_lifetime` ($99) in the **Play Console UI** (API blocked), then add it to the `$rc_lifetime` package (Play column) + `pro` entitlement.
-3. **Win-back Android worldwide** — currently US-only.
+3. ~~**Win-back Android worldwide**~~ ✅ DONE 2026-06-27 (both platforms worldwide).
 4. **Submit IAPs/subscriptions for review** — attach to an app version; review screenshot required.
 
 ---
